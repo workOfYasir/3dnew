@@ -34,6 +34,7 @@
                                     <div class="tab-content" id="myTabContent">
                                         <div class="tab-pane fade active show" id="userloginModal2" role="tabpanel">
                                             <form class="row gy-4 gx-5" action="{{route('register')}}" method="post" style="padding-top: 20px;">
+                                                @csrf
                                                 <div class="row justify-content-center">
                                                     <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 mt-4">
                                                         <img id="blah" src="https://zen-boyd.161-97-115-110.plesk.page/3dorgans/public/user/assets/icons/edit-avatar.svg" class="mx-auto d-block imageupload" width="100" alt="avatar" style="clip-path: circle() !important ;height: 100% !important;">
@@ -43,11 +44,11 @@
                                                 <div class="row justify-content-center mb-4">
                                                     <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 mt-4">
                                                         <label class="form-label dot">الاسم</label>
-                                                        <input type="text" name="name" class="form-control " placeholder=".. الاسم هنا" value="user">
+                                                        <input type="text" name="name" class="form-control " placeholder=".. الاسم هنا" value="">
                                                     </div>
                                                     <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 mt-4">
                                                         <label class="form-label dot">رقم الجوال</label>
-                                                        <input type="text" name="field" class="form-control " placeholder="الجهة هنا .." value="dewh">
+                                                        <input type="text" name="field" class="form-control " placeholder="الجهة هنا .." value="">
                                                     </div>
                                                 </div>
                                                 <div class="row justify-content-center">
@@ -81,6 +82,7 @@
                                         </div>
                                         <div class="tab-pane fade " id="designerloginModal2" role="tabpanel" aria-labelledby="profile-tab">
                                             <form class="row gy-4 gx-5" method="post" style="padding-top: 20px;">
+                                                @csrf
                                                 <div class="row justify-content-center">
                                                     <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 mt-4">
                                                         <img id="blah" src="https://zen-boyd.161-97-115-110.plesk.page/3dorgans/public/user/assets/icons/edit-avatar.svg" class="mx-auto d-block imageupload" width="100" alt="avatar" style="clip-path: circle() !important ;height: 100% !important;">
