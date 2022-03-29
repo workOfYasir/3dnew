@@ -1484,7 +1484,7 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <button class="btn btn-sky invert personal-pro">
+                <button class="btn btn-sky invert personal-pro zhd-product-visit">
                     الملف الشخصي
                    
                   </button>
@@ -1728,10 +1728,8 @@
                                             <button class="btn btn-form mx-3 with-arrow carousel-next-icon-show" type="submit">تفاصيل الطلب</button>
                                             <button class="btn-form designer-btn clean-btn" data-bs-toggle="modal" data-bs-target="#designer-order">
                                  تقديم طلب </button>
-                                            <button class="btn-form designer-btn clean-btn" data-bs-toggle="modal" data-bs-target="#designer-order-upload">
-                                 تقديم طلب </button>
-                                            <button class="btn-form designer-btn clean-btn" data-bs-toggle="modal" data-bs-target="#designer-review-upload">
-                                 تقديم طلب </button>
+                                           
+                                            
                                            <p>تم رفع الطلب بنجاح</p>
                                         </div>
                                     </div>
@@ -1769,15 +1767,17 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
+                        
                             <div class="modal-header border-0">
+                            <div class="zhd-center-close">
                                 <a href="{{route('home')}}" type="button" class="btn-close" aria-label="Close"></a>
-
-                                <div style="margin-top: 1%;">
+                            </div>
+                                <div class="zhd-center-hdng" style="margin-top: 1%;">
                                     <span class="outline dot">اهلاً وسهلاً بكم</span>
                                     <h1 class="modal-title right"><span class="btm-line d-flex">طلباتي<span class="inner-line"></span></span></h1>
 
                                 </div>
-                                <div class="profile">
+                                <div class="profile zhd-box">
                                 <button class="btn btn-sky profile-btn invert">
                              المصمم
                             </button>
@@ -1863,7 +1863,7 @@
                 <div class="star-profile-txt">
                     <span>مصمم</span>
                     <h4> أسم المصمم</h4>
-                    <div class="star-reating rating">
+                    <div class="star-reating">
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
@@ -1878,7 +1878,7 @@
                                         <div class="row justify-content-center">
                                             <div class="col-md-12">
                                                 <div class="row p-xs-0 p-3 justify-content-between conditional-blur">
-                                                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 mt-4">
+                                                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3">
                         <label class="form-label dot">اختيار اللون</label>
                         <div class="color-circle-main">
                             
@@ -1915,7 +1915,7 @@
                                                         <label class="form-label">تقنية الطباعة</label>
                                                         <input type="text" class="form-control" placeholder=".. الجنس هنا" readonly value="{{@$public->gender}}">
                                                     </div>
-                                                    <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
+                                                    <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4 zhd-product-visit">
                                                     <label class="form-label"> </label>
 
                                                     <button class="btn btn-sky invert">
@@ -1975,6 +1975,8 @@
                                                             <div class="">
                                                                 <a href="{{route('payment')}}" class="btn btn-form mx-3 with-arrow mt-10">ارسال</a>
                                                                 <a href="{{route('payment')}}" class="btn btn-form mx-3 with-arrow mt-10 red-btn">رفض</a>
+                                                                <button class="btn-form designer-btn clean-btn" data-bs-toggle="modal" data-bs-target="#designer-order-upload">
+                                 تقديم طلب </button>
                                                                 <p class="mt-3">سيتم ارسال تفاصيل تنفيذ المهمة الى المستخدم للقبول او الرفض</p>
                                                             </div>
                                                         </h1>
@@ -2002,14 +2004,15 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="modal-header border-0">
+                            <div class="zhd-center-close">
                                 <a href="{{route('home')}}" type="button" class="btn-close" aria-label="Close"></a>
-
-                                <div style="margin-top: 1%;">
+                            </div>
+                                <div class="zhd-center-hdng"  style="margin-top: 1%;">
                                     <span class="outline dot">اهلاً وسهلاً بكم</span>
                                     <h1 class="modal-title right"><span class="btm-line d-flex">طلباتي<span class="inner-line"></span></span></h1>
 
                                 </div>
-                                <div class="profile">
+                                <div class="profile zhd-box">
                                 <button class="btn btn-sky profile-btn invert">
                              المصمم
                             </button>
@@ -2109,7 +2112,7 @@
                                         <div class="row justify-content-center">
                                             <div class="col-md-12">
                                                 <div class="row p-xs-0 p-3 justify-content-between conditional-blur">
-                                                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 mt-4">
+                                                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3">
                         <label class="form-label dot">اختيار اللون</label>
                         <div class="color-circle-main">
                             
@@ -2146,7 +2149,7 @@
                                                         <label class="form-label">تقنية الطباعة</label>
                                                         <input type="text" class="form-control" placeholder=".. الجنس هنا" readonly value="{{@$public->gender}}">
                                                     </div>
-                                                    <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
+                                                    <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4 zhd-product-visit">
                                                     <label class="form-label"> </label>
 
                                                     <button class="btn btn-sky invert">
@@ -2232,7 +2235,9 @@
                                                                 <a href="{{route('payment')}}" class="btn btn-form mx-3 with-arrow mt-10">ارسال</a>
                                                                 <a href="{{route('payment')}}" class="btn btn-form mx-3 with-arrow btn-uplod mt-10">الفاتورة</a>
                                                                 <a href="{{route('payment')}}" class="btn btn-form mx-3 with-arrow mt-10 red-btn">رفض</a>
-                                                               
+
+                                                                <button class="btn-form designer-btn clean-btn" data-bs-toggle="modal" data-bs-target="#designer-review-upload">
+                                 تقديم طلب </button>
                                                                 <p class="mt-3">الرجاء التأكد من ارسال كافة الملفات لتجنب تقديم بلاغ عليك</p>
                                                             </div>
                                                         </h1>
@@ -2262,17 +2267,18 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="modal-header border-0">
+                                <div class="zhd-center-close">
                                 <a href="{{route('home')}}" type="button" class="btn-close" aria-label="Close"></a>
-
-                                <div style="margin-top: 1%;">
+                                </div>
+                                <div class="zhd-center-hdng" style="margin-top: 1%;">
                                     <span class="outline dot">اهلاً وسهلاً بكم</span>
                                     <h1 class="modal-title right"><span class="btm-line d-flex">طلباتي<span class="inner-line"></span></span></h1>
 
                                 </div>
-                                <div class="profile">
-                                <button class="btn btn-sky profile-btn invert">
-                             المصمم
-                            </button>
+                                <div class="profile zhd-box">
+                                 <button class="btn btn-sky profile-btn invert">
+                                     المصمم
+                                 </button>
                                     @if(@auth()->user()->profile == null)
                                     <a href="#profile">
                                         <img src="{{asset('user/assets/icons/avatar.svg')}}" alt="avatar">
@@ -2368,7 +2374,7 @@
           <div class="row justify-content-center">
                <div class="col-md-12">
             <div class="row p-xs-0 p-3 justify-content-between conditional-blur">
-             <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 mt-4">
+             <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3">
                         <label class="form-label dot">اختيار اللون</label>
                         <div class="color-circle-main">
                             
@@ -2405,7 +2411,7 @@
                                                         <label class="form-label">تقنية الطباعة</label>
                                                         <input type="text" class="form-control" placeholder=".. الجنس هنا" readonly value="{{@$public->gender}}">
                                                     </div>
-                                                    <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
+                                                    <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4 zhd-product-visit">
                                                     <label class="form-label"> </label>
 
                                                     <button class="btn btn-sky invert">
@@ -2432,11 +2438,11 @@
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="review-text">
-                                                    <label class="form-label dot">الملاحظات</label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="   الملاحظات .."></textarea>
+                                                    <label class="form-label">تقييم المصمم</label>
+                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="  الوصف "></textarea>
                                                     
                                                     <div class="rating">
-                                                        <div class="col-md-6 m-auto">
+                                                 
                                                             <div class="star-reating">
                                                                 <i class="fa-solid fa-star"></i>
                                                                 <i class="fa-solid fa-star"></i>
@@ -2444,7 +2450,7 @@
                                                                 <i class="fa-solid fa-star"></i>
                                                                 <i class="fa-solid fa-star"></i>
                                                             </div>
-                                                        </div>
+                                                     
                                                     </div>
                                                     
                                                 </div>
@@ -2471,9 +2477,11 @@
                                                                 <input type="text" class="form-control" placeholder="تحديد التاريخ هنا .. " readonly value="{{@$public->print_resolution}}">
                                                             </div>
                                                            <div class="col-md-12 pro-bar ">
-                                                            <progress id="file" value="32" max="100"> 32% </progress>  
+                                                           <label class="form-label">مدة التنفيذة</label>
+                                                            <progress id="file" value="100" max="100"> 100% </progress>  
                                                            </div>
                                                         </div>
+                                                        
                                                         <!-- <div class="row conditional-blur">
                                                             <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                                 <label class="form-label">رفع ملف المجسم</label>
@@ -2489,7 +2497,7 @@
                                                       
                                                             <div class="col-md-6">
                                                            
-                                                   <textarea class="form-control designer-text-area" id="exampleFormControlTextarea1" rows="4" placeholder="  ..الوصف هنا" readonly>{{@$ss->discription}}</textarea>
+                                                             <textarea class="form-control designer-text-area" id="exampleFormControlTextarea1" rows="4" placeholder="  ..الوصف هنا" readonly>{{@$ss->discription}}</textarea>
                                               
                                                             </div>
                                                             <div class="col-md-6">
@@ -2499,14 +2507,36 @@
                                                             </div>
 
                                                             </div>
-                                                            <p class="mt-3" style="text-align: center;">متبقي على تسليم الطلب 24 يوم 35 دقيقة 13 ثانية</p>
                                                         </div>
-                                                        <h1 class="title text-center mt-5 no-border conditional-blur">
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <div class="review-text without-label">
+                                                                    
+                                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="  الوصف "></textarea>
+                                                                    
+                                                                    <div class="rating">
+                                                 
+                                                                        <div class="star-reating">
+                                                                            <i class="fa-solid fa-star"></i>
+                                                                            <i class="fa-solid fa-star"></i>
+                                                                            <i class="fa-solid fa-star"></i>
+                                                                            <i class="fa-solid fa-star"></i>
+                                                                            <i class="fa-solid fa-star"></i>
+                                                                        </div>
+                                                                 </div>
+                                                                
+                                                                </div>
+                                                                
+                                                            </div>
+                                                            
+                                                        </div>
+                                                        
+                                                    </div>
+                                                                    <h1 class="title text-center mt-5 no-border conditional-blur">
 
                                                             <div class="">
-                                                                <a href="{{route('payment')}}" class="btn btn-form mx-3 with-arrow mt-10">ارسال</a>
-                                                                <a href="{{route('payment')}}" class="btn btn-form mx-3 with-arrow btn-uplod mt-10">الفاتورة</a>
-                                                                <a href="{{route('payment')}}" class="btn btn-form mx-3 with-arrow mt-10 red-btn">رفض</a>
+                                                                <a href="{{route('payment')}}" class="btn btn-form mx-3 with-arrow uplod-rev-btn mt-10">منتهي</a>
+                                                    
                                                                
                                                                 <p class="mt-3">الرجاء التأكد من ارسال كافة الملفات لتجنب تقديم بلاغ عليك</p>
                                                             </div>
