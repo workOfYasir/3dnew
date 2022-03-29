@@ -596,6 +596,26 @@ almuntjat section start
     color: #E0E0DE;
 }
 
+.ahs-star {
+    color: #EEEEF0;
+}
+
+.heading__plus {
+    color: #FD354F;
+    font-size: 16px;
+    line-height: 1;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.heading__minus {
+    color: #02BB84;
+    font-size: 16px;
+    line-height: 1;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
 
 /* ******************************
 almuntjat section end

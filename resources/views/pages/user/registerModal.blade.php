@@ -90,7 +90,7 @@
                                                 <div class="row justify-content-center">
                                                     <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-3 mt-4">
                                                         <label class="form-label dot">الاسم</label>
-                                                        <input type="text" class="form-control name " placeholder="الاسم هنا .." value="">
+                                                        <input type="text" class="form-control" placeholder="الاسم هنا .." value="">
                                                     </div>
                                                     <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-3 mt-4">
                                                         <label class="form-label dot">رقم الجوال</label>
@@ -98,7 +98,7 @@
                                                     </div>
                                                     <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-3 mt-4">
                                                         <label class="form-label dot">الايميل</label>
-                                                        <input type="text" name="email" class="form-control email " placeholder="الايميل هنا .." value="">
+                                                        <input type="email" name="email" class="form-control email" placeholder="الايميل هنا .." >
                                                     </div>
                                                 </div>
                                                 <div class="row justify-content-center mb-5">
@@ -132,7 +132,7 @@
                                                     <a href="#" class="terms-link">الشروط والأحكام</a>
                                                 </div>
                                                 <div class="form-action ahs-from-action">
-                                                    <button class="btn btn-form mx-3 with-arrow " type="submit">دخول</button>
+                                                    <button class="btn btn-form mx-3 with-arrow disabled" type="submit">دخول</button>
                                                     <p>بيانات التسجيل</p>
                                                 </div>
                                             </form>
