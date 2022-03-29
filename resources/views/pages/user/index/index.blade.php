@@ -504,6 +504,7 @@
                                                 <h2 class="title no-border">
                                                     {{ $profiles->heading }}
                                                     !
+                                                    <span class="inner-line"></span>
                                                 </h2>
                                         </div>
                                             <div class="static-text">
@@ -516,6 +517,7 @@
                                                 <h2 class="title no-border">
                                                     {{ $profiles->heading }}
                                                     !
+                                                    <span class="inner-line"></span>
                                                 </h2>
                                                 </div>
                                                 <p class="description">
@@ -696,14 +698,16 @@
                             <div class="row pt-5 mt-5 align-items-end" dir="rtl">
                                 <div class="col-md-9 col-lg-7 res-width-64">
                                     <div class="about-content" id="about-us" data-aos="fade-up">
-                                        <span class="outline dot right-center">+3D</span>
+                                        <!-- <span class="outline dot right-center">+3D</span> -->
                                         @if ($about != null)
 
                                         <h1 class="modal-title color-blue text-center line-heading">
+                                        <span class="outline dot right-center">+3D</span>
                                             <span class="btm-line"><span class="inner-line"></span>{{ @$about->heading }}</span>
                                         </h1>
                                         @else
                                         <h1 class="modal-title color-blue text-center line-heading">
+                                            <span class="outline dot right-center">+3D</span>
                                             <span class="btm-line"><span class="inner-line"></span> من نحن
                                             </span>
                                         </h1>
