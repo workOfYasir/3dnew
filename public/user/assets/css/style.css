@@ -809,6 +809,11 @@ footer .right img {
     position: relative;
     z-index: 1;
     top: 0px;
+    padding-bottom: 10px;
+}
+.banner .title .inner-line{
+    position: absolute;
+    right: 0;
 }
 
 /* .black-bg {
@@ -2040,12 +2045,12 @@ right: 185px;
 }
 
 .dot-txt-main .right.left-right-h{
-    left: 17px;
+    left: 17px !important;
 }
 
 .request .dot-txt-main .outline{
     padding-right: 0px !important;
-    left: 17px;
+    left: 22px;
 }
 .dot-txt-main .right.left-right-h::before{
     left: 4px;
@@ -2072,11 +2077,14 @@ right: 185px;
 }
 
 .footer-white-heading .dot.center{
-    left: 20px;
+    /* left: 20px; */
+    left: 64px;
 }
 .footer-white-heading .dot.center::before{
     top: 0px;
-    right: -100px;
+    /* right: -100px; */
+    right: -120px;
+    
 }
 .footer-white-heading .title.white::after{
     left: 50px;

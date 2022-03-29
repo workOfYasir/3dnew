@@ -504,6 +504,7 @@
                                                 <h2 class="title no-border">
                                                     {{ $profiles->heading }}
                                                     !
+                                                    <span class="inner-line"></span>
                                                 </h2>
                                         </div>
                                             <div class="static-text">
@@ -516,6 +517,7 @@
                                                 <h2 class="title no-border">
                                                     {{ $profiles->heading }}
                                                     !
+                                                    <span class="inner-line"></span>
                                                 </h2>
                                                 </div>
                                                 <p class="description">

@@ -1076,7 +1076,12 @@
 }
 
 @media only screen and (min-width: 537px) and (max-width: 767px) {
-    
+    .res-width-64{
+        padding-top: 35px;  
+    }
+    .dot.right-center{
+        right: 159px;
+    }
     #carouselHealthIndicators .submitted-data {
         margin: auto;
         display: block;
@@ -1121,6 +1126,9 @@
 /* Tabs */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     /* asim */
+    .dot.right-center{
+        right: 61px;
+    }
     .profile-img {
         margin-left: 50px !important;
     }
@@ -1800,6 +1808,9 @@
 /* Large Devices */
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
     /* asim */
+    .dot.right-center{
+        right: 15px;
+    }
     .res-width-64 .about-content .description {
         padding: 0px;
     }
