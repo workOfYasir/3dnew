@@ -59,6 +59,7 @@
             font-family: 'JannaRegular';
         }
     </style>
+
 </head>
 
 <body>
@@ -2426,37 +2427,58 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="designer-text">
-                                                <label class="form-label dot">الملاحظات</label>
-                                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="   الملاحظات .."></textarea>
-                                                </div>
-                                            </div>  
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="review-text">
-                                                    <label class="form-label">تقييم المصمم</label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="  الوصف "></textarea>
-                                                    
-                                                    <div class="rating">
-                                                 
-                                                            <div class="star-reating">
-                                                                <i class="fa-solid fa-star"></i>
-                                                                <i class="fa-solid fa-star"></i>
-                                                                <i class="fa-solid fa-star"></i>
-                                                                <i class="fa-solid fa-star"></i>
-                                                                <i class="fa-solid fa-star"></i>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="blur-star">
+                                                        <div class="blur-star-inner">
+                                                            <div class="review-text">
+                                                                <label class="form-label">تقييم المصمم</label>
+                                                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="  الوصف "></textarea>
+                                                                
+                                                                <div class="rating">
+                                                            
+                                                                        <div class="star-reating">
+                                                                            <i class="fa-solid fa-star"></i>
+                                                                            <i class="fa-solid fa-star"></i>
+                                                                            <i class="fa-solid fa-star"></i>
+                                                                            <i class="fa-solid fa-star"></i>
+                                                                            <i class="fa-solid fa-star"></i>
+                                                                        </div>
+                                                                
+                                                                </div>
+                                                                
                                                             </div>
-                                                     
+                                                        </div>
+                                                    </div>
+                                                    <div class="designer-text">
+                                                    <label class="form-label dot">الملاحظات</label>
+                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="   الملاحظات .."></textarea>
+                                                    </div>
+                                                </div>  
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="review-text">
+                                                        <label class="form-label">تقييم المصمم</label>
+                                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="  الوصف "></textarea>
+                                                        
+                                                        <div class="rating">
+                                                    
+                                                                <div class="star-reating">
+                                                                    <i class="fa-solid fa-star"></i>
+                                                                    <i class="fa-solid fa-star"></i>
+                                                                    <i class="fa-solid fa-star"></i>
+                                                                    <i class="fa-solid fa-star"></i>
+                                                                    <i class="fa-solid fa-star"></i>
+                                                                </div>
+                                                        
+                                                        </div>
+                                                        
                                                     </div>
                                                     
                                                 </div>
                                                 
                                             </div>
-                                            
-                                        </div>
                                         <div class="row">
                                          <h1 class="title text-center mt-5 no-border conditional-blur">تقديم عرض سعر</h1>
                                             <div class="col-md-12">
@@ -2534,9 +2556,7 @@
                                                                     <h1 class="title text-center mt-5 no-border conditional-blur">
 
                                                             <div class="">
-                                                                <a href="{{route('payment')}}" class="btn btn-form mx-3 with-arrow uplod-rev-btn mt-10">منتهي</a>
-                                                    
-                                                               
+                                                                <button class="btn btn-form mx-3 with-arrow uplod-rev-btn mt-10" id="#starbluerModal">منتهي</button>                                     
                                                                 <p class="mt-3">الرجاء التأكد من ارسال كافة الملفات لتجنب تقديم بلاغ عليك</p>
                                                             </div>
                                                         </h1>
@@ -2557,6 +2577,27 @@
 
 
 <!-- zahid-designer review  upload end-->
+
+<!-- zahid-designer review upload stat-blur-modal by asim start -->
+<!-- <div class="modal page result" id="starbluerModal">
+    <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 p-0">
+                        <div class="modal-body designer-bdy">
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<!-- zahid-designer review  upload stat-blur-modal end-->
 
 
     <!-- ///////////////////////////////////// design modal start here ////////////////////////////////-->
@@ -4730,6 +4771,10 @@
 
     @include('pages.user.publicVideoModal')
     <!-- Bootstrap js -->
+
+    <script src="{{asset('user/assets/js/jquery.min.js')}}"></script>
+
+
     @if(!empty(Session::get('error_code')) && Session::get('error_code') == 5)
     <script>
         $(function() {
@@ -4753,7 +4798,7 @@
     @endif
     <script src="{{asset('user/assets/js/bootstrap.min.js')}}"></script>
     <!-- JQuery -->
-    <script src="{{asset('user/assets/js/jquery.min.js')}}"></script>
+
     <script>
         $(document).ready(function() {
             var a = 0;
@@ -4838,6 +4883,7 @@
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="{{ asset('user/assets/js/scripts.js') }}"></script>
+
 </body>
 
 </html>
