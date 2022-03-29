@@ -2186,6 +2186,9 @@
 }
 
 @media only screen and (min-width: 1600px) {
+    .dot.right-center {
+        right: 116px;
+    }
     .banner-bg.sample {
         width: 1000px;
     }
