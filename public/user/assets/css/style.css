@@ -2082,8 +2082,8 @@ right: 185px;
 }
 .footer-white-heading .dot.center::before{
     top: 0px;
-    /* right: -100px; */
-    right: -120px;
+    right: -100px;
+    /* right: -120px; */
     
 }
 .footer-white-heading .title.white::after{
