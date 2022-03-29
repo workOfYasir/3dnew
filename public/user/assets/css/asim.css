@@ -301,4 +301,8 @@ box-shadow: none;
     transition: all 0.3s ease-in-out;
     border-radius: 20px;
 }
+
+form .search-input i{
+    pointer-events: none !important;
+}
 /* ////////////////////////////////////  product add view  css end here  //////////////////////////////////// */

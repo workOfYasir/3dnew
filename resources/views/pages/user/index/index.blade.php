@@ -1091,7 +1091,7 @@
             <div class="modal-content">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-md-12">
+                        <div class="col-md-12 p-0">
                             <div class="modal-header border-0">
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 <div>
@@ -1217,7 +1217,7 @@
             <div class="modal-content">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-md-12">
+                        <div class="col-md-12 p-0">
                           
                             <div class="modal-body">
 
@@ -1674,7 +1674,7 @@
         <div class="modal-content">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-12 p-0">
                         <div class="modal-header border-0">
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             <div>
@@ -1768,7 +1768,7 @@
             <div class="modal-content">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-12">
+                        <div class="col-md-12 p-0">
                             <div class="modal-header border-0">
                                 <a href="{{route('home')}}" type="button" class="btn-close" aria-label="Close"></a>
 
@@ -2000,7 +2000,7 @@
             <div class="modal-content">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-12">
+                        <div class="col-md-12 p-0">
                             <div class="modal-header border-0">
                                 <a href="{{route('home')}}" type="button" class="btn-close" aria-label="Close"></a>
 
@@ -2260,7 +2260,7 @@
             <div class="modal-content">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-12">
+                        <div class="col-md-12 p-0">
                             <div class="modal-header border-0">
                                 <a href="{{route('home')}}" type="button" class="btn-close" aria-label="Close"></a>
 
@@ -2538,7 +2538,7 @@
             <div class="modal-content">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-md-12">
+                        <div class="col-md-12 p-0">
                           
                             <div class="modal-body">
                              
@@ -3352,7 +3352,7 @@
             <div class="modal-content">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-md-12">
+                        <div class="col-md-12 p-0">
                           
                             <div class="modal-body">
                              
@@ -3882,7 +3882,7 @@
             <div class="modal-content">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-md-12">
+                        <div class="col-md-12 p-0">
                           
                             <div class="modal-body">
                             <div class="container">
@@ -4097,7 +4097,7 @@
                     <div class="modal-content">
                         <div class="container">
                             <div class="row">
-                                <div class="col-md-12">
+                                <div class="col-md-12 p-0">
 
                                     <div class="modal-body">
                                         <div class="modal-header border-0">
@@ -4218,7 +4218,7 @@
                     <div class="modal-content">
                         <div class="container">
                             <div class="row">
-                                <div class="col-md-12">
+                                <div class="col-md-12 p-0">
 
                                     <div class="modal-body">
                                         <div class="modal-header border-0">
@@ -4382,7 +4382,7 @@
             <div class="modal-content">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-12">
+                        <div class="col-md-12 p-0">
                             <div class="modal-header border-0" style="padding: 4em 0 !important">
                                 <div class=" ahs-member-model-box">
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -4512,7 +4512,7 @@
             <div class="modal-content">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-12">
+                        <div class="col-md-12 p-0">
                             <div class="modal-header border-0" style="padding: 4em 0 !important">
                                 <div class=" ahs-member-model-box">
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>

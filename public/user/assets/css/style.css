@@ -2330,7 +2330,7 @@ position: relative;
     position: relative;
     padding: 80px 0px;
     padding-top: 237px;
-    padding-bottom: 20px;
+    padding-bottom: 0px;
     background-color: #205098;
     z-index: 1000;
     /* background:#205098 url(../images/design.png) no-repeat;
@@ -2653,6 +2653,7 @@ position: relative;
     box-shadow: none;
 }
 .design-footer{
+    padding-top: 20px;
     background-color: #1F5098 !important;
 }
 .design-footer .footer-nav .nav-link{

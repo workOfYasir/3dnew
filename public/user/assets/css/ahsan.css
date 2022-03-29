@@ -159,7 +159,7 @@ mujtmah-almusmamen section start
 .heading-box__underline {
     background-color: #fff;
     width: 58px;
-    margin-right: 16px;
+    margin-right: 0px;
     height: 2px;
     border-radius: 25%;
 }
