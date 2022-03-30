@@ -2378,7 +2378,7 @@
                            </div>
                            <div class="row">
                               <div class="col-md-12">
-                                 <div class="review-text">
+                                 <div class="review-text review-text-tog">
                                     <label class="form-label">تقييم المصمم</label>
                                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="  الوصف "></textarea>
                                     <div class="rating">
@@ -2394,11 +2394,11 @@
                               </div>
                            </div>
                            <div class="row">
-                              <h1 class="title text-center mt-5 no-border conditional-blur zhd-quote">تقديم عرض سعر</h1>
+                              <h1 class="title text-center mt-5 no-border conditional-blur zhd-quote">طلب قيد التنفيذ</h1>
                               <div class="col-md-12">
                                  <div class="row justify-content-center">
                                     <div class="col-md-12">
-                                        <div class="blur-star">
+                                        <div class="blur-star blur-bg" id="star-blur-scroll">
                                             <div class="blur-star-inner">
                                                 <div class="review-text">
                                                     <label class="form-label">تقييم المصمم</label>
@@ -2415,7 +2415,9 @@
                                                         </div>
 
                                                     </div>
-
+                                                    <div class="blur-star-bottom-btn">
+                                                    <a href="javascript:void(0);" class="btn btn-form mx-3 with-arrow mt-4">ارسال</a>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -2460,7 +2462,7 @@
                                        </div>
                                        <div class="row">
                                           <div class="col-md-12">
-                                             <div class="review-text without-label">
+                                             <div class="review-text without-label review-text-tog">
                                                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="  الوصف "></textarea>
                                                 <div class="rating">
                                                    <div class="star-reating">
@@ -2475,9 +2477,17 @@
                                           </div>
                                        </div>
                                     </div>
-                                    <h1 class="title text-center mt-5 no-border conditional-blur">
+                                    <h1 class="title text-center mt-5 no-border conditional-blur starbluerModal-btn-hide">
                                        <div class="zhd-finished">
-                                          <a href="javascript:void(0);" class="btn btn-form mx-3 with-arrow uplod-rev-btn mt-10">منتهي</a>
+                                          <a href="#star-blur-scroll" class="btn btn-form mx-3 with-arrow uplod-rev-btn mt-10 starbluerModal-btn">منتهي</a>
+                                          <p class="mt-4">الرجاء التأكد من ارسال كافة الملفات لتجنب تقديم بلاغ عليك</p>
+                                       </div>
+                                    </h1>
+                                    <h1 class="title text-center mt-5 no-border conditional-blur show-footer-btns">
+                                       <div class="zhd-finished">
+                                          <a href="javascript:void(0);" class="btn btn-form mx-3 with-arrow uplod-rev-btn mt-10 starbluerModal-btn">تم الارسال</a>
+                                          <a href="javascript:void(0);" class="btn btn-form mx-3 with-arrow red-btn mt-10 starbluerModal-btn">الفاتورة</a>
+                                          <a href="javascript:void(0);" class="btn btn-form mx-3 with-arrow mt-10 starbluerModal-btn">تقديم بلاغ</a>
                                           <p class="mt-4">الرجاء التأكد من ارسال كافة الملفات لتجنب تقديم بلاغ عليك</p>
                                        </div>
                                     </h1>
@@ -2497,29 +2507,6 @@
 
 
 <!-- zahid-designer review  upload end-->
-
-<!-- zahid-designer review upload stat-blur-modal by asim start -->
-<!-- <div class="modal page result" id="starbluerModal">
-    <div class="modal-dialog modal-fullscreen">
-        <div class="modal-content">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 p-0">
-                        <div class="modal-body designer-bdy">
-
-                        </div>
-
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-</div> -->
-
-<!-- zahid-designer review  upload stat-blur-modal end-->
-
-
     <!-- ///////////////////////////////////// design modal start here ////////////////////////////////-->
 
    
