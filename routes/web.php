@@ -75,19 +75,7 @@ Route::group(['prefix' => 'artisan'], function () {
 });
 
 Route::get('/', [RegisterController::class, 'homepage'])->name('/');
-// Route::get('/', function () {
-//     $about = AboutUs::first();
-//     $con = ContactUs::first();
-//     $tech = Tech::first();
-//     $profile = ImageSlider::first();
-//     $order = Medical::orderBy('id', 'DESC')->first();
-//     $side = SideLogo::first();
-//     $logos =Logo::first();
-//     dd($logos);
-//     $orders = [];
-//     // dd($side);
-//     return view('pages.user.index.index', compact('about', 'con', 'tech', 'profile', 'order', 'orders', 'side','logos'));
-// });
+
 Auth::routes();
 
 Route::group(['middleware' => 'auth', 'varify','cors'], function () {
