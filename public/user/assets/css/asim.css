@@ -1,10 +1,12 @@
 /* //////////////////////////////////// responsive start here ////////////////////////////////////////////////*/
+
+
 /* @media (max-width: 575px){
   
 } */
-@media (min-width: 360px) and (max-width: 767px)  {
-    
-    .designer-sec{
+
+@media (min-width: 360px) and (max-width: 767px) {
+    .designer-sec {
         padding-top: 150px;
     }
     .designer-sec::before {
@@ -19,11 +21,10 @@
         padding: 0px;
         padding-bottom: 50px;
     }
-    
-    .search-form .ps-0{
+    .search-form .ps-0 {
         padding-left: 12px !important;
     }
-    .designer-sec .sort-btn .btn{
+    .designer-sec .sort-btn .btn {
         text-align: right;
     }
     .btn-list {
@@ -38,21 +39,19 @@
         margin-left: 10px;
         margin-bottom: 30px;
     }
-   .btn-list .btn-trans:nth-child(even){
+    .btn-list .btn-trans:nth-child(even) {
         margin-left: 0px !important;
     }
-    .design-card-inner .row:first-child .col-md-6{
+    .design-card-inner .row:first-child .col-md-6 {
         width: 50%;
     }
-   
 }
 
-
 @media (min-width: 768px) and (max-width: 991px) {
-    .designer-sec{
+    .designer-sec {
         padding-top: 170px;
     }
-    .designer-sec::before{
+    .designer-sec::before {
         top: 140px;
     }
     .btn-white {
@@ -81,40 +80,48 @@
         margin-left: 10px;
     }
 }
-@media (min-width: 1400px) {
-    
-}
+
+@media (min-width: 1400px) {}
+
 
 /* //////////////////////////////////// responsive end here ////////////////////////////////////////////////*/
 
+
 /* ////////////////////////////////////  designer section start here  //////////////////////////////////// */
-#designinnerModal .designer-sec{
+
+#designinnerModal .designer-sec {
     padding-top: 150px;
 }
-#designinnerModal .designer-sec::before{
+
+#designinnerModal .designer-sec::before {
     top: 130px;
 }
-.product-1{
+
+.product-1 {
     background: url(../images/design-9.png) no-repeat;
     background-size: cover;
     background-position: center;
 }
-.product-2{
+
+.product-2 {
     background: url(../images/design-2.png) no-repeat;
     background-size: cover;
     background-position: center;
 }
-.product-3{
+
+.product-3 {
     background: url(../images/design-3.png) no-repeat;
     background-size: cover;
     background-position: center;
 }
-.product-4{
+
+.product-4 {
     background: url(../images/design-4.png) no-repeat;
     background-size: cover;
     background-position: center;
 }
-.product-5{
+
+.product-5 {
     background: url(../images/design-5.png) no-repeat;
     background-size: cover;
     background-position: center;
@@ -124,16 +131,19 @@
     padding: 0px;
     padding-right: 4rem;
 }
+
 #designinnerModal .modal-header .btn-close {
     box-shadow: none;
 }
 
-#designinnerModal .design-card-inner a{
+#designinnerModal .design-card-inner a {
     width: 100%;
 }
-.add-btn span{
+
+.add-btn span {
     color: #1EA9D4;
 }
+
 .btn-add {
     margin: 0;
     border: 1px solid #1EA9D4;
@@ -147,52 +157,61 @@
     height: 40px;
 }
 
-#productdesignModal .modal-header{
+#productdesignModal .modal-header {
     padding-left: 0px;
     padding-right: 0px;
 }
-#productdesignModal  .btn-close{
+
+#productdesignModal .btn-close {
     padding: 0px;
     width: 40px;
     height: 40px;
     transform: translate(45px);
 }
-#productdesignModal .designer-sec::before{
+
+#productdesignModal .designer-sec::before {
     background: none !important;
 }
-.design-card-right-top{
+
+.design-card-right-top {
     position: absolute;
     top: 20px;
     right: 20px;
 }
-.design-card-right-top p{
+
+.design-card-right-top p {
     font-size: 10px;
     font-weight: bold;
-    color:  #1EA9D4;
+    color: #1EA9D4;
 }
-#productdesignModal .designer-sec-1{
+
+#productdesignModal .designer-sec-1 {
     padding-bottom: 80px !important;
 }
-.txt-green{
-    color:  #1ED46B !important;
-}
-.txt-blue{
-    color:  #1EA9D4 !important;
-}
-.txt-red{
-    color:  #D83554 !important;
+
+.txt-green {
+    color: #1ED46B !important;
 }
 
+.txt-blue {
+    color: #1EA9D4 !important;
+}
 
-.product-add-link{
+.txt-red {
+    color: #D83554 !important;
+}
+
+.product-add-link {
     width: 100%;
 }
+
+
 /* ////////////////////////////////////  designer-sec-1  css end here  //////////////////////////////////// */
 
 
 /* ////////////////////////////////////  product add view  css start here  //////////////////////////////////// */
 
-.product-add-upload{
+.product-add-upload {
     background-color: #9FA5B2;
     display: block;
     position: relative;
@@ -201,7 +220,8 @@
     width: 128px;
     height: 128px;
 }
-.product-add-upload p{
+
+.product-add-upload p {
     color: #fff;
     height: 100%;
     display: flex;
@@ -213,14 +233,17 @@
     top: 0;
     opacity: 0;
 }
-.uplod-img-active p{
+
+.uplod-img-active p {
     opacity: 1;
 }
+
 .product-add-upload img {
     margin-bottom: 0px;
     height: 100%;
 }
-.product-add-upload .camera-icon{
+
+.product-add-upload .camera-icon {
     position: absolute;
     width: 34px;
     height: 34px;
@@ -231,34 +254,36 @@
     text-align: center;
     cursor: pointer;
 }
-.product-add-upload .camera-icon i{
+
+.product-add-upload .camera-icon i {
     line-height: 2;
     color: #fff;
 }
 
-.almuntjat-form-error i{
+.almuntjat-form-error i {
     font-size: 18px;
     margin-left: 20px;
     color: #fff;
 }
-.upload-cross-red{
+
+.upload-cross-red {
     background-color: #D41E1E;
 }
 
-.uplod-img-active{
+.uplod-img-active {
     border: 4px solid #1EA9D4;
-
 }
 
-.ahs-profile-plus{
+.ahs-profile-plus {
     font-size: 40px !important;
 }
 
-.switch{
+.switch {
     width: 69%;
     text-align: left;
     margin-top: 20px;
 }
+
 .switch .form-check {
     display: flex;
     justify-content: left;
@@ -266,10 +291,12 @@
     direction: ltr;
     padding-left: 0px;
 }
+
 .switch .form-check-input {
     width: 40px;
     height: 23px;
 }
+
 .switch .form-check-label {
     margin: 0px;
     padding-left: 10px;
@@ -277,21 +304,23 @@
     font-size: 14px;
     justify-content: left;
 }
-.switch .form-check-input:focus{
-box-shadow: none;
+
+.switch .form-check-input:focus {
+    box-shadow: none;
 }
-.switch p{
+
+.switch p {
     color: #9FA5B2;
     font-family: 'JannaLT-bold';
     margin-bottom: 14px;
     font-weight: 300;
 }
 
-.error-red-bg{
-    background-color:  #D83554 !important;
+.error-red-bg {
+    background-color: #D83554 !important;
 }
 
-.productadd-top-btn{
+.productadd-top-btn {
     background-color: #E0E0DE;
     color: #fff;
     height: 40px;
@@ -302,17 +331,21 @@ box-shadow: none;
     border-radius: 20px;
 }
 
-form .search-input i{
+form .search-input i {
     pointer-events: none !important;
 }
+
+
 /* ////////////////////////////////////  product add view  css end here  //////////////////////////////////// */
 
 
 /* stat blur bg */
-.blur-star{
+
+.blur-star {
     display: none;
 }
-.blur-bg{
+
+.blur-bg {
     margin: auto;
     background-color: rgb(255 255 255 / 0%);
     backdrop-filter: blur(8px);
@@ -324,7 +357,8 @@ form .search-input i{
     top: 325px;
     z-index: 1;
 }
-.blur-star-inner{
+
+.blur-star-inner {
     display: flex;
     width: 500px;
     align-content: center;
@@ -333,28 +367,34 @@ form .search-input i{
     height: 100%;
     width: 100%;
 }
-.blur-bg .review-text{
+
+.blur-bg .review-text {
     width: 500px;
 }
-.blur-star .form-control{
+
+.blur-star .form-control {
     background-color: #fff !important;
     pointer-events: auto !important;
 }
-.blur-star-bottom-btn{
+
+.blur-star-bottom-btn {
     text-align: center;
 }
-.review-text-hide{
-    display: none;
-}
-.show-footer-btns{
+
+.review-text-hide {
     display: none;
 }
 
-.credit-log{
+.show-footer-btns {
+    display: none;
+}
+
+.credit-log {
     position: relative;
     display: none;
 }
-.credit-logo-inner{
+
+.credit-logo-inner {
     border-radius: 20px!important;
     background-color: #fff;
     color: #000;
@@ -363,37 +403,43 @@ form .search-input i{
     height: 73px;
     width: 359px;
 }
-.flot-lft{
+
+.flot-lft {
     float: left;
 }
-.credit-card-icon{
+
+.credit-card-icon {
     width: 50px;
     height: 50px;
     border-radius: 50%;
     border: 5px solid #D3DADE;
     padding: 10px;
 }
-.credit-logo-inner i{
+
+.credit-logo-inner i {
     font-size: 20px;
     color: #00AE9B;
-
 }
-.credit-logo-inner .row{
+
+.credit-logo-inner .row {
     align-items: center;
 }
-.credit-logo-inner h5{
+
+.credit-logo-inner h5 {
     font-size: 14px;
     color: #003B4A;
     margin-bottom: 0px;
 }
-.green-border{
+
+.green-border {
     border-color: #00AE9B;
 }
-.gray-background{
+
+.gray-background {
     color: #D3DADE;
 }
 
-.blur-bg-1{
+.blur-bg-1 {
     background-color: rgb(255 255 255 / 0%);
     backdrop-filter: blur(8px);
     position: absolute;
@@ -403,5 +449,10 @@ form .search-input i{
     top: 0;
     bottom: 0;
     width: 100%;
+    height: 380px;
+}
+
+.blur-bg--a {
+    top: 0;
     height: 380px;
 }
