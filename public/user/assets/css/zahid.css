@@ -73,6 +73,10 @@
 .color-circle-main .color-circle {
     margin-right: 20px;
 }
+.quantity-m-50{
+    margin-right: 47px;
+    margin-left: 50px;
+}
 .color-circle-main .color-circle:first-child {
     margin-right: 0px;
 }

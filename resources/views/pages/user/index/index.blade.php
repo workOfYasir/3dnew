@@ -2331,9 +2331,9 @@
                                     </div>
 
                                 </div>
-                                <div class="col-sm-12 col-md-6 col-lg-2 col-xl-2 col-xxl-2"></div>
+                                <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div>
 
-                                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
+                                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
                                     <label class="form-label">الكمية</label>
                                     <input type="text" class="form-control" placeholder=".. رقم الهاتف هنا" readonly="" value="03084875508">
                                 </div>
@@ -2346,8 +2346,8 @@
                                     <label class="form-label">شكل الطباعة</label>
                                     <input type="text" class="form-control" placeholder=".. التخصص هنا" readonly="" value="رقم الهاتف هنا">
                                 </div>
-                                <div class="col-sm-12 col-md-6 col-lg-2 col-xl-2 col-xxl-2"></div>
-                                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
+                                <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div>
+                                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
                                     <label class="form-label">تقنية الطباعة</label>
                                     <input type="text" class="form-control" placeholder=".. الجنس هنا" readonly="" value="male">
                                 </div>
