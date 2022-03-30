@@ -843,10 +843,15 @@ $(document).ready(function() {
 
     // stat blur background
 
-    $("#starbluerModal").click(function() {
-        $(".blur-star").addClass("blur-bg");
-        console.log("clicked blur")
-    })
+    $(".starbluerModal-btn").click(function() {
+            $(".blur-star").show();
+            $(".review-text-tog").addClass("review-text-hide");
+            $(".starbluerModal-btn-hide").hide();
+            $(".show-footer-btns").show();
+        })
+        // $(".designer-review-upload").click(function() {
+        //     $(".blur-star").hide();
+        // })
 
 });
 AOS.init({

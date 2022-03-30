@@ -340,3 +340,12 @@ form .search-input i{
     background-color: #fff !important;
     pointer-events: auto !important;
 }
+.blur-star-bottom-btn{
+    text-align: center;
+}
+.review-text-hide{
+    display: none;
+}
+.show-footer-btns{
+    display: none;
+}

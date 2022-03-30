@@ -1446,8 +1446,16 @@
             <div class="row cleanshot-row align-items-end">
              
                 <div class="col-md-8">
-                    <div class="small-card">
-                         <img class="designer-8" src="{{ asset('user/assets/images/design-8.png') }}" alt="">
+                    <div class="small-card wrapper al-center">
+                        <div class="small-card__images-box">
+                            <div class="small-card__images-box-shadow"></div>
+                            <img class="designer-8" src="{{ asset('user/assets/images/design-8.png') }}" alt="">
+                            <div class="small-card__images-text al-center">
+                                 
+                                <img src="{{ asset('user/assets/images/exp.png') }}" alt="" class="small-card__images-img">
+                                <p>تكبير الصور </p>
+                            </div>
+                        </div>
                         <img src="{{ asset('user/assets/images/cleancard.png') }}"alt="">
                         <img src="{{ asset('user/assets/images/cleancard2.png') }}"alt="">
                         <img src="{{ asset('user/assets/images/cleancard3.png') }}" alt="">
@@ -1539,24 +1547,28 @@
                 </div>
             </div>
             
-                <div class="row circle-bottom">                
-                    <div class="col-md-6">
+                <div class="row circle-bottom"> 
+                <div class="col-md-1"> 
+                    </div>        
+                    <div class="col-md-5">
                       <label class="form-label dot">شكل الطباعة</label>
                         <select class="form-select gender" required name="gender" aria-label="Default select example">
                             <option selected>الاشكال هنا</option>
                                                                  
                         </select>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-5">
                        <label class="form-label dot">تقنية الطباعة</label>
                         <select class="form-select gender" required name="gender" aria-label="Default select example">
                           <option selected>  التقنية الأولي</option>
                         </select>
                    </div>
+                   <div class="col-md-1"> 
+                    </div>   
                </div>
 
            
-               <div class="row">
+               <div class="row zhd-textarea-clean">
                     <div class="col-md-12">
                         <label class="form-label dot">الملاحظات</label>
                         <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="   الملاحظات .."></textarea>
@@ -2378,7 +2390,7 @@
                            </div>
                            <div class="row">
                               <div class="col-md-12">
-                                 <div class="review-text">
+                                 <div class="review-text review-text-tog">
                                     <label class="form-label">تقييم المصمم</label>
                                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="  الوصف "></textarea>
                                     <div class="rating">
@@ -2394,11 +2406,11 @@
                               </div>
                            </div>
                            <div class="row">
-                              <h1 class="title text-center mt-5 no-border conditional-blur zhd-quote">تقديم عرض سعر</h1>
+                              <h1 class="title text-center mt-5 no-border conditional-blur zhd-quote">طلب قيد التنفيذ</h1>
                               <div class="col-md-12">
                                  <div class="row justify-content-center">
                                     <div class="col-md-12">
-                                        <div class="blur-star">
+                                        <div class="blur-star blur-bg" id="star-blur-scroll">
                                             <div class="blur-star-inner">
                                                 <div class="review-text">
                                                     <label class="form-label">تقييم المصمم</label>
@@ -2415,7 +2427,9 @@
                                                         </div>
 
                                                     </div>
-
+                                                    <div class="blur-star-bottom-btn">
+                                                    <a href="javascript:void(0);" class="btn btn-form mx-3 with-arrow mt-4">ارسال</a>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -2460,7 +2474,7 @@
                                        </div>
                                        <div class="row">
                                           <div class="col-md-12">
-                                             <div class="review-text without-label">
+                                             <div class="review-text without-label review-text-tog">
                                                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="  الوصف "></textarea>
                                                 <div class="rating">
                                                    <div class="star-reating">
@@ -2475,9 +2489,17 @@
                                           </div>
                                        </div>
                                     </div>
-                                    <h1 class="title text-center mt-5 no-border conditional-blur">
+                                    <h1 class="title text-center mt-5 no-border conditional-blur starbluerModal-btn-hide">
                                        <div class="zhd-finished">
-                                          <a href="javascript:void(0);" class="btn btn-form mx-3 with-arrow uplod-rev-btn mt-10">منتهي</a>
+                                          <a href="#star-blur-scroll" class="btn btn-form mx-3 with-arrow uplod-rev-btn mt-10 starbluerModal-btn">منتهي</a>
+                                          <p class="mt-4">الرجاء التأكد من ارسال كافة الملفات لتجنب تقديم بلاغ عليك</p>
+                                       </div>
+                                    </h1>
+                                    <h1 class="title text-center mt-5 no-border conditional-blur show-footer-btns">
+                                       <div class="zhd-finished">
+                                          <a href="javascript:void(0);" class="btn btn-form mx-3 with-arrow uplod-rev-btn mt-10 starbluerModal-btn">تم الارسال</a>
+                                          <a href="javascript:void(0);" class="btn btn-form mx-3 with-arrow red-btn mt-10 starbluerModal-btn">الفاتورة</a>
+                                          <a href="javascript:void(0);" class="btn btn-form mx-3 with-arrow mt-10 starbluerModal-btn"  data-bs-toggle="modal" data-bs-target="#designer-bid-submission">تقديم بلاغ</a>
                                           <p class="mt-4">الرجاء التأكد من ارسال كافة الملفات لتجنب تقديم بلاغ عليك</p>
                                        </div>
                                     </h1>
@@ -2498,26 +2520,6 @@
 
 <!-- zahid-designer review  upload end-->
 
-<!-- zahid-designer review upload stat-blur-modal by asim start -->
-<!-- <div class="modal page result" id="starbluerModal">
-    <div class="modal-dialog modal-fullscreen">
-        <div class="modal-content">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 p-0">
-                        <div class="modal-body designer-bdy">
-
-                        </div>
-
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-</div> -->
-
-<!-- zahid-designer review  upload stat-blur-modal end-->
 
 
     <!-- ///////////////////////////////////// design modal start here ////////////////////////////////-->
