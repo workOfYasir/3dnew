@@ -68,8 +68,13 @@
 .color-circle-main{
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-
+    justify-content: right;
+}
+.color-circle-main .color-circle {
+    margin-right: 20px;
+}
+.color-circle-main .color-circle:first-child {
+    margin-right: 0px;
 }
 .personal-pro{
     float: left !important;

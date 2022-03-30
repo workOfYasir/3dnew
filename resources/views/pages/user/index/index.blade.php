@@ -2309,56 +2309,68 @@
                                  </div>
                               </div>
                            </div>
-                           <div class="row justify-content-center">
-                              <div class="col-md-12">
-                                 <div class="row p-xs-0 p-3 justify-content-between conditional-blur">
-                                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3">
-                                       <label class="form-label dot">اختيار اللون</label>
-                                       <div class="color-circle-main">
-                                          <div  class="color-circle blue-border">
-                                          </div>
-                                          <div  class="color-circle  gray-bg">
-                                          </div>
-                                          <div  class="color-circle  gray-bg">
-                                          </div>
-                                          <div  class="color-circle gray-bg">
-                                          </div>
-                                       </div>
+                           <div class="row  p-xs-0  conditional-blur">
+
+                                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                    <label class="form-label dot">اختيار اللون</label>
+                                    <div class="color-circle-main">
+
+
+                                        <div class="color-circle blue-border">
+
+                                        </div>
+                                        <div class="color-circle  gray-bg">
+
+                                        </div>
+                                        <div class="color-circle  gray-bg">
+
+                                        </div>
+                                        <div class="color-circle gray-bg">
+
+                                        </div>
                                     </div>
-                                    <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
-                                       <label class="form-label">الكمية</label>
-                                       <input type="text" class="form-control" placeholder=".. رقم الهاتف هنا" readonly value="{{@$public->phone_num}}">
-                                    </div>
-                                    <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
-                                       <label class="form-label">المقاسات</label>
-                                       <input type="text" class="form-control" placeholder=".. الايميل هنا" readonly value="{{@$public->email}}">
-                                    </div>
-                                    <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
-                                       <label class="form-label">شكل الطباعة</label>
-                                       <input type="text" class="form-control" placeholder=".. التخصص هنا" readonly value="{{@$public->specialization}}">
-                                    </div>
-                                    <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
-                                       <label class="form-label">تقنية الطباعة</label>
-                                       <input type="text" class="form-control" placeholder=".. الجنس هنا" readonly value="{{@$public->gender}}">
-                                    </div>
-                                    <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4 zhd-product-visit">
-                                       <label class="form-label"> </label>
-                                       <button class="btn btn-sky invert">
-                                       زيارة المنتج <img src="{{ asset('user/assets/icons/arrow-right.svg') }}" alt="arrow-right">
-                                       </button>
-                                    </div>
-                                    <!-- <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
-                                       <label class="form-label">صور المجسم</label>
-                                       <div class="upload-btn-wrapper">
-                                           <button class="btn btn-upload"><img src="{{asset('user/assets/icons/uploaded-img.svg')}}" alt="upload-img"></button>
-                                       </div>
-                                       </div> -->
-                                 </div>
-                              </div>
-                           </div>
+
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-2 col-xl-2 col-xxl-2"></div>
+
+                                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
+                                    <label class="form-label">الكمية</label>
+                                    <input type="text" class="form-control" placeholder=".. رقم الهاتف هنا" readonly="" value="03084875508">
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div>
+                                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
+                                    <label class="form-label">المقاسات</label>
+                                    <input type="text" class="form-control" placeholder=".. الايميل هنا" readonly="" value="asimali7056@gmail.com">
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
+                                    <label class="form-label">شكل الطباعة</label>
+                                    <input type="text" class="form-control" placeholder=".. التخصص هنا" readonly="" value="رقم الهاتف هنا">
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-2 col-xl-2 col-xxl-2"></div>
+                                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
+                                    <label class="form-label">تقنية الطباعة</label>
+                                    <input type="text" class="form-control" placeholder=".. الجنس هنا" readonly="" value="male">
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div>
+                                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 zhd-product-visit">
+
+
+                                    <button class="btn btn-sky invert">
+                                        زيارة المنتج <img src="http://127.0.0.1:8000/user/assets/icons/arrow-right.svg" alt="arrow-right">
+                                    </button>
+                                </div>
+                                <!-- <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
+                                        <label class="form-label">صور المجسم</label>
+                                        <div class="upload-btn-wrapper">
+                                            <button class="btn btn-upload"><img src="http://127.0.0.1:8000/user/assets/icons/uploaded-img.svg" alt="upload-img"></button>
+                                        </div>
+                                    </div> -->
+
+                            </div>
+
                            <div class="row">
                               <div class="col-md-12">
-                                 <div class="designer-text">
+                                 <div class="designer-text mt-4">
                                     <label class="form-label dot">الملاحظات</label>
                                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="   الملاحظات .."></textarea>
                                  </div>
@@ -2386,6 +2398,27 @@
                               <div class="col-md-12">
                                  <div class="row justify-content-center">
                                     <div class="col-md-12">
+                                        <div class="blur-star">
+                                            <div class="blur-star-inner">
+                                                <div class="review-text">
+                                                    <label class="form-label">تقييم المصمم</label>
+                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="  الوصف "></textarea>
+
+                                                    <div class="rating">
+
+                                                        <div class="star-reating">
+                                                            <i class="fa-solid fa-star"></i>
+                                                            <i class="fa-solid fa-star"></i>
+                                                            <i class="fa-solid fa-star"></i>
+                                                            <i class="fa-solid fa-star"></i>
+                                                            <i class="fa-solid fa-star"></i>
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
                                        <div class="row mb-2 justify-content-between conditional-blur">
                                           <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
                                              <label class="form-label">تكلفة تنفيذ الخدمة</label>
@@ -2444,7 +2477,7 @@
                                     </div>
                                     <h1 class="title text-center mt-5 no-border conditional-blur">
                                        <div class="zhd-finished">
-                                          <a href="{{route('payment')}}" class="btn btn-form mx-3 with-arrow uplod-rev-btn mt-10">منتهي</a>
+                                          <a href="javascript:void(0);" class="btn btn-form mx-3 with-arrow uplod-rev-btn mt-10">منتهي</a>
                                           <p class="mt-4">الرجاء التأكد من ارسال كافة الملفات لتجنب تقديم بلاغ عليك</p>
                                        </div>
                                     </h1>
