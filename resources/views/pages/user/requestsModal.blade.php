@@ -13,8 +13,8 @@
                           
                              <div class="profile">
                                     <button class="btn btn-sky profile-btn invert">
-                             المصمم
-                  </button>
+                                        المصمم
+                                    </button>
                                  @if(@auth()->user()->profile == null)
                                  <a href="#profile">
                                      <img src="{{asset('user/assets/icons/avatar.svg')}}" alt="avatar">
