@@ -2499,7 +2499,7 @@
                                        <div class="zhd-finished">
                                           <a href="javascript:void(0);" class="btn btn-form mx-3 with-arrow uplod-rev-btn mt-10 starbluerModal-btn">تم الارسال</a>
                                           <a href="javascript:void(0);" class="btn btn-form mx-3 with-arrow red-btn mt-10 starbluerModal-btn">الفاتورة</a>
-                                          <a href="javascript:void(0);" class="btn btn-form mx-3 with-arrow mt-10 starbluerModal-btn">تقديم بلاغ</a>
+                                          <a href="javascript:void(0);" class="btn btn-form mx-3 with-arrow mt-10 starbluerModal-btn"  data-bs-toggle="modal" data-bs-target="#designer-bid-submission">تقديم بلاغ</a>
                                           <p class="mt-4">الرجاء التأكد من ارسال كافة الملفات لتجنب تقديم بلاغ عليك</p>
                                        </div>
                                     </h1>
@@ -2519,6 +2519,9 @@
 
 
 <!-- zahid-designer review  upload end-->
+
+
+
     <!-- ///////////////////////////////////// design modal start here ////////////////////////////////-->
 
    
