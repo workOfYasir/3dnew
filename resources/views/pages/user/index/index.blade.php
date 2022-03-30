@@ -6218,10 +6218,7 @@
                                             <h1 class="title text-center mt-5 no-border conditional-blur zhd-quote">معلومات المصمم</h1>
                                             <div class="col-md-12">
                                                 <div class="row justify-content-center">
-                                                    <div class="col-md-12  userreq-blur">
-                                                        <div class="userreq-blur-bg" id="star-blur-scroll">
-    
-                                                        </div>
+                                                    <div class="col-md-12 ">
                                                         {{-- user- req --}}
                                                         <div class="wrapper al-center jst-btw mb-5">
                                                             <div class="profile tag-profile designer-order">
@@ -6273,9 +6270,9 @@
 
                                                         <div class="wrapper jst-center userReq-btn-box userReq-btn-box--a">
                                                             <button class="userReq-btn-box__btn userReq-btn-box__btn--d" data-bs-toggle="modal" data-bs-target="">الفاتورة</button>
-                                                            <button class="userReq-btn-box__btn userReq-btn-box__btn--e" data-bs-toggle="modal" data-bs-target="">تقديم بلاغ</button>
+                                                            <button class="userReq-btn-box__btn userReq-btn-box__btn--e mgl-0" data-bs-toggle="modal" data-bs-target="">تقديم بلاغ</button>
                                                         </div>
-                                                        <p class="userreqFormBtn-box__text userreqFormBtn-box__text --a">تمت عملية الدفع بنجاح</p>
+                                                        <p class="userreqFormBtn-box__text userreqFormBtn-box__text--a">تمت عملية الدفع بنجاح</p>
                                                     </div>
                                                         
                                                     </div>

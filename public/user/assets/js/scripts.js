@@ -490,19 +490,19 @@ $(document).ready(function() {
     // stat blur background
 
     $(".starbluerModal-btn").click(function() {
-            $(".blur-star").show();
-            $(".review-text-tog").addClass("review-text-hide");
-            $(".starbluerModal-btn-hide").hide();
-            $(".show-footer-btns").show();
-        })
-        $(".paying-off-btn").click(function() {
-            $(".credit-log").hide();
-        })
+        $(".blur-star").show();
+        $(".review-text-tog").addClass("review-text-hide");
+        $(".starbluerModal-btn-hide").hide();
+        $(".show-footer-btns").show();
+    })
+    $(".paying-off-btn").click(function() {
+        $(".credit-log").hide();
+    })
 
 });
-// $(".userreq-blur-bg").click(function() {
-//     $(".userreq-blur-bg").css('display', 'none');
-// });
+$(".userreq-blur-bg").click(function() {
+    $(".userreq-blur-bg").css('display', 'none');
+});
 AOS.init({
     offset: 100,
     duration: 1000,
