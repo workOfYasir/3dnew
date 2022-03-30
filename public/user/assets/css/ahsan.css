@@ -292,6 +292,10 @@ mujtmah-almusmamen section start
     margin: 60px auto 130px auto;
 }
 
+.userReq-btn-box--a {
+    margin-bottom: 50px;
+}
+
 .userReq-btn-box__btn {
     border: none;
     outline: none;
@@ -661,6 +665,10 @@ almuntjat section start
     margin-top: 20px;
 }
 
+.userreqFormBtn-box__text--a {
+    text-align: center;
+}
+
 .userreqFormBtn-box {
     padding-bottom: 40px;
 }
@@ -678,6 +686,31 @@ almuntjat section start
     left: 0;
     right: 0;
     z-index: 1;
+}
+
+.prog-box__heading {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.prog-box__para {
+    font-size: 18px;
+    color: #58595B;
+    text-align: center;
+}
+
+.prog-outer--b {
+    width: 100% !important;
+    margin: 0 !important;
+}
+
+.userReq-btn-box__btn--d {
+    background-color: #1EA9D4;
+}
+
+.userReq-btn-box__btn--e {
+    background-color: #D83554;
 }
 
 
