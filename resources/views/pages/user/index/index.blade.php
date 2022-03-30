@@ -2429,27 +2429,7 @@
                                         </div>
                                             <div class="row">
                                                 <div class="col-md-12">
-                                                    <div class="blur-star">
-                                                        <div class="blur-star-inner">
-                                                            <div class="review-text">
-                                                                <label class="form-label">تقييم المصمم</label>
-                                                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="  الوصف "></textarea>
-                                                                
-                                                                <div class="rating">
-                                                            
-                                                                        <div class="star-reating">
-                                                                            <i class="fa-solid fa-star"></i>
-                                                                            <i class="fa-solid fa-star"></i>
-                                                                            <i class="fa-solid fa-star"></i>
-                                                                            <i class="fa-solid fa-star"></i>
-                                                                            <i class="fa-solid fa-star"></i>
-                                                                        </div>
-                                                                
-                                                                </div>
-                                                                
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                                   
                                                     <div class="designer-text">
                                                     <label class="form-label dot">الملاحظات</label>
                                                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="   الملاحظات .."></textarea>
