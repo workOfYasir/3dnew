@@ -6449,9 +6449,6 @@
                                                                         </div>
                                                         
                                                                     </div>
-                                                                    <div class="blur-star-bottom-btn">
-                                                                        <a href="javascript:void(0);" class="btn btn-form mx-3 with-arrow mt-4">ارسال</a>
-                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>

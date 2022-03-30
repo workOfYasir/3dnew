@@ -1,4 +1,4 @@
-/* //////////////////////////////////// responsive start here ////////////////////////////////////////////////*/
+    /* //////////////////////////////////// responsive start here ////////////////////////////////////////////////*/
 
 
 /* @media (max-width: 575px){
@@ -455,4 +455,9 @@ form .search-input i {
 .blur-bg--a {
     top: 0;
     height: 380px;
-}
+    .orange-bg {
+        background-color: #F8AC00;
+    }
+    .bill-click-show {
+        display: none;
+    }
