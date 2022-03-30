@@ -309,9 +309,9 @@ form .search-input i{
 
 
 /* stat blur bg */
-.blur-star{
+/* .blur-star{
     display: none;
-}
+} */
 .blur-bg{
     margin: auto;
     background-color: rgb(255 255 255 / 0%);
@@ -342,11 +342,46 @@ form .search-input i{
 }
 .blur-star-bottom-btn{
     text-align: center;
-    /* text-align: center; */
 }
 .review-text-hide{
     display: none;
 }
 .show-footer-btns{
     display: none;
+}
+
+
+.credit-logo-inner{
+    border-radius: 20px!important;
+    background-color: #fff;
+    color: #000;
+    border: 4px solid D3DADE;
+    padding: 8px 15px;
+    height: 73px;
+}
+.credit-card-icon{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 5px solid #D3DADE;
+    padding: 10px;
+}
+.credit-logo-inner i{
+    font-size: 20px;
+    color: #00AE9B;
+
+}
+.credit-logo-inner .row{
+    align-items: center;
+}
+.credit-logo-inner h5{
+    font-size: 14px;
+    color: #003B4A;
+    margin-bottom: 0px;
+}
+.green-border{
+    border-color: #00AE9B;
+}
+.gray-background{
+    color: #D3DADE;
 }
