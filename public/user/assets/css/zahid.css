@@ -5,6 +5,19 @@
     /* padding: 200px 0; */
     background-size: cover;
 }
+.clean-headings h3{
+    font-size:40px;
+    font-weight: bold;
+}
+.clean-headings h6{
+    font-size:16px;
+    font-weight: bold;
+    color:#58595B;
+}
+.zhd-form-clean{
+    padding: 0 50px 30px 50px !important;
+}
+
 .cleanshot-row{
     min-height: 507px;
     padding-bottom: 64px;
@@ -59,6 +72,12 @@
     margin: 3px -10px;
 
 }
+.blue-text{
+    position: absolute;
+    bottom: -25px;
+    right: 22px;
+    color:#9FA5B2;
+}
 .orange{
    background: #FC4247 !important;
 }
@@ -69,6 +88,8 @@
     display: flex;
     align-items: center;
     justify-content: right;
+    position: relative;
+  
 }
 .color-circle-main .color-circle {
     margin-right: 20px;
@@ -277,7 +298,8 @@ opacity: 0 !important;
     margin: 0 0 0 0;
 }
 .zhd-textarea-clean{
-    width: 50%;
+    padding-top: 33px;
+    width: 90%;
     /* justify-content: center; */
     /* align-items: center; */
     /* position: absolute; */
