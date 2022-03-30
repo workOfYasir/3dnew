@@ -1446,8 +1446,16 @@
             <div class="row cleanshot-row align-items-end">
              
                 <div class="col-md-8">
-                    <div class="small-card">
-                         <img class="designer-8" src="{{ asset('user/assets/images/design-8.png') }}" alt="">
+                    <div class="small-card wrapper al-center">
+                        <div class="small-card__images-box">
+                            <div class="small-card__images-box-shadow"></div>
+                            <img class="designer-8" src="{{ asset('user/assets/images/design-8.png') }}" alt="">
+                            <div class="small-card__images-text al-center">
+                                 
+                                <img src="{{ asset('user/assets/images/exp.png') }}" alt="" class="small-card__images-img">
+                                <p>تكبير الصور </p>
+                            </div>
+                        </div>
                         <img src="{{ asset('user/assets/images/cleancard.png') }}"alt="">
                         <img src="{{ asset('user/assets/images/cleancard2.png') }}"alt="">
                         <img src="{{ asset('user/assets/images/cleancard3.png') }}" alt="">
@@ -1539,24 +1547,28 @@
                 </div>
             </div>
             
-                <div class="row circle-bottom">                
-                    <div class="col-md-6">
+                <div class="row circle-bottom"> 
+                <div class="col-md-1"> 
+                    </div>        
+                    <div class="col-md-5">
                       <label class="form-label dot">شكل الطباعة</label>
                         <select class="form-select gender" required name="gender" aria-label="Default select example">
                             <option selected>الاشكال هنا</option>
                                                                  
                         </select>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-5">
                        <label class="form-label dot">تقنية الطباعة</label>
                         <select class="form-select gender" required name="gender" aria-label="Default select example">
                           <option selected>  التقنية الأولي</option>
                         </select>
                    </div>
+                   <div class="col-md-1"> 
+                    </div>   
                </div>
 
            
-               <div class="row">
+               <div class="row zhd-textarea-clean">
                     <div class="col-md-12">
                         <label class="form-label dot">الملاحظات</label>
                         <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="   الملاحظات .."></textarea>
