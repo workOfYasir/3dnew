@@ -489,7 +489,7 @@ $(document).ready(function() {
 
     // stat blur background
 
-    $(".starbluerModal-btn").click(function() {
+        $(".starbluerModal-btn").click(function() {
             $(".blur-star").show();
             $(".review-text-tog").addClass("review-text-hide");
             $(".starbluerModal-btn-hide").hide();
@@ -502,6 +502,13 @@ $(document).ready(function() {
         $(".paying-off-btn").click(function() {
             $(".credit-log").hide();
         })
+
+        $(".bill-btn").click(function() {
+            $(".bill-click-hide").hide();
+            $(".bill-click-show").show();
+        })
+        
+
 
 });
 $(".userreq-blur-bg").click(function() {

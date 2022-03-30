@@ -6263,13 +6263,33 @@
                                                             </div>
                                                             <p class="prog-box__para">متبقي على تسليم الطلب 24 يوم 35 دقيقة 13 ثانية</p>
                                                         </div>
-
+                                                        <div class="bill-click-show">
+                                                            <div class="row">
+                                                                <div class="col-md-12">
+                                                                    <label class="form-label dot">عموم الحاله الصحية</label>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <textarea class="form-control designer-text-area" id="exampleFormControlTextarea1" rows="4" placeholder="  ..الوصف هنا" readonly=""></textarea>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <div class="upload-btn-wrapper designer-upload">
+                                                                    <button class="btn btn-upload-designer health"><img src="http://127.0.0.1:8000/user/assets/icons/upload-img.svg" alt="upload-img"></button>
+                                                                    <input type="file" id="health-file" required="" name="myfile">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                         <div class="almuntjat-form-error almuntjat-form-error-2">
                                                             <img src="{{ asset('/user/assets/images/warning.png')}}" alt="" class="almuntjat-form-error__img"> بعد إضافة المنتج سيذهب الى الإدارة للمراجعة للقبول أو الرفض
                                                         </div>
 
-                                                        <div class="wrapper jst-center userReq-btn-box userReq-btn-box--a">
-                                                            <button class="userReq-btn-box__btn userReq-btn-box__btn--d" data-bs-toggle="modal" data-bs-target="">الفاتورة</button>
+                                                        <div class="wrapper jst-center userReq-btn-box userReq-btn-box--a bill-click-hide">
+                                                            <button class="userReq-btn-box__btn userReq-btn-box__btn--d bill-btn">الفاتورة</button>
+                                                            <button class="userReq-btn-box__btn userReq-btn-box__btn--e mgl-0" data-bs-toggle="modal" data-bs-target="">تقديم بلاغ</button>
+                                                        </div>
+                                                        <div class="wrapper jst-center userReq-btn-box userReq-btn-box--a bill-click-show">
+                                                            <button class="userReq-btn-box__btn userReq-btn-box__btn--d">انهاء الخدمة</button>
+                                                            <button class="userReq-btn-box__btn userReq-btn-box__btn--d orange-bg">الفاتورة</button>
                                                             <button class="userReq-btn-box__btn userReq-btn-box__btn--e mgl-0" data-bs-toggle="modal" data-bs-target="">تقديم بلاغ</button>
                                                         </div>
                                                         <p class="userreqFormBtn-box__text userreqFormBtn-box__text--a">تمت عملية الدفع بنجاح</p>
