@@ -8,17 +8,16 @@
 </head>
 
 <body>
-  {{ $details['name'] }} عزيزي 
-  <br>
-  {{ $details['body1'] }}
-  <br>
-  {{ $details['body2'] }}
-  <br>
-  {{ $details['body3'] }}
-  <br>
-  <a href="#">{{ $details['linkText'] }}</a>
-  <br>
-  {{ $details['thanks'] }}
-  <img src="{{ asset('assets/images/logo/logo-favicon.png') }}" alt=""><br>
+    {{ $details['title'] }} عزيزي 
+    <br>
+    {{ $details['adminBody'] }}
+    <br>
+    {{ $details['adminBody2'] }}
+    <br>
+   {{ $details['thanks'] }}
+   <br>
+   <img src="{{ asset('assets/images/logo/logo-favicon.png') }}" alt=""><br>
+	
+	
 </body>
 </html>	

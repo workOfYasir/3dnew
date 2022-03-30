@@ -31,6 +31,6 @@ class MedicalMail extends Mailable
      */
     public function build()
     {
-        return $this->view('emails.medical');
+        return $this->$this->from(config('mail.from.address'),config('mail.from.name'))->subject($this->detail['subject'])->view('emails.medical');
     }
 }

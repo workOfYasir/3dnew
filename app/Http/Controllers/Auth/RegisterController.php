@@ -7,6 +7,7 @@ use App\Models\Tech;
 use App\Models\User;
 use App\Models\Title;
 use App\Models\AboutUs;
+use App\Models\Counter;
 use App\Models\Medical;
 use App\Models\Mapimage;
 use App\Models\SideLogo;
@@ -14,10 +15,11 @@ use App\Models\ContactUs;
 use App\Models\Youtubeurl;
 use App\Models\ImageSlider;
 use App\Models\PublicService;
+use Spatie\Permission\Models\Role;
 use App\Http\Controllers\Controller;
-use App\Models\Counter;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Crypt;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
@@ -125,19 +127,23 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         
-
+        $roleData = Crypt::decrypt($data['role']);
         if (isset($data['profile']) && !empty($data['profile'])) {
             $datas = Storage::disk('public')->put('upload/', $data['profile']);
         } else {
             $datas = null;
         }
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'field' => $data['field'],
-            'password' => Hash::make($data['password']),
-            'role' => 'user',
-            'profile' => $datas,
-        ]);
+        // $role = Role::create(['name' => $roleData]);
+        
+            $user = User::create([
+                'name' => $data['name'],
+                'email' => $data['email'],
+                'password' => Hash::make($data['password']),
+                'role' => $roleData,
+                'profile' => $datas,
+            ]);
+   
+       $user->assignRole($roleData);
+        return $user;
     }
 }

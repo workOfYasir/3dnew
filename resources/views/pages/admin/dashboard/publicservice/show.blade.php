@@ -395,6 +395,27 @@
                         </div>
                     </div>
                 </div>
+                <div class="card medical-card">
+                    <div class="card-body p-0">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-12">
+
+                                    <div class="modal-body">
+                                  
+                                            <div class="row">
+                                                @livewire('chats',['user_id' => $order->user_id])
+                                            </div>
+                                              
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <!-- Modal -->
+                       
+                    </div>
+                </div>
             </div>
         </div>
     </div>
