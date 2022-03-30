@@ -309,9 +309,9 @@ form .search-input i{
 
 
 /* stat blur bg */
-.blur-star{
+/* .blur-star{
     display: none;
-}
+} */
 .blur-bg{
     margin: auto;
     background-color: rgb(255 255 255 / 0%);
