@@ -6,9 +6,9 @@ use App\Models\User;
 use App\Models\Invoice;
 use App\Models\Medical;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Notifications\InvoiceNotification;
-use Auth;
-use PDF;
+use Barryvdh\DomPDF\PDF;
 use App\Mail\InvoiceMail;
 
 class InvoiceController extends Controller
@@ -57,8 +57,13 @@ class InvoiceController extends Controller
             'date' => $request->date,
         ]);
         $details = [
-            'subject' =>$invoices->id,
+            'subject' =>"'".$invoices->id ."' تم اصدار فاتورة رقم",
             'name' =>$user->name ,
+            'body1' => "'".$invoices->id ."' بناء على موافقتكم على عرض السعر للطلب رقم ",
+            'body2'=> "'".$invoices->request ."'فقد تم اصدار الفاتورة بمبلغ",
+            'body3'=>'للدفع برجاء الضغط على الرابط التالي:',
+            'linkText' => 'Link is being here to go to website to pay the invoice',
+            'thanks' => 'شكراً جزيلاً',
             'orderNumber' =>$invoices->id ,
         ];
         \Mail::to($user->email)->send(new \App\Mail\InvoiceMail($details));
@@ -133,8 +138,8 @@ class InvoiceController extends Controller
      */
     public function pdfInvoice(Request $request)
     {
-        $items = Invoice::where('user_id',Auth::id())->get();
-        $users = Invoice::where('id',Auth::id())->get();
+        $items = Invoice::where('user_id',Auth::user()->id)->get();
+        $users = Invoice::where('id',Auth::user()->id)->get();
         if($request->has('download')){
             $pdf = PDF::loadView('invoice',array('items'=>$items,'users'=>$users));
             return $pdf->download('invoice.pdf');

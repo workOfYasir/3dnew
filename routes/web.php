@@ -75,19 +75,7 @@ Route::group(['prefix' => 'artisan'], function () {
 });
 
 Route::get('/', [RegisterController::class, 'homepage'])->name('/');
-// Route::get('/', function () {
-//     $about = AboutUs::first();
-//     $con = ContactUs::first();
-//     $tech = Tech::first();
-//     $profile = ImageSlider::first();
-//     $order = Medical::orderBy('id', 'DESC')->first();
-//     $side = SideLogo::first();
-//     $logos =Logo::first();
-//     dd($logos);
-//     $orders = [];
-//     // dd($side);
-//     return view('pages.user.index.index', compact('about', 'con', 'tech', 'profile', 'order', 'orders', 'side','logos'));
-// });
+
 Auth::routes();
 
 Route::group(['middleware' => 'auth', 'varify','cors'], function () {
@@ -97,7 +85,12 @@ Route::group(['middleware' => 'auth', 'varify','cors'], function () {
     Route::get('/vieworderpublic/{id}', [App\Http\Controllers\HomeController::class, 'vieworderpublic'])->name('vieworderpublic');
   
     //Resource Route
+    Route::group(['middleware' =>  'role:user'], function () {
 
+    });
+    Route::group(['middleware' =>  'role:admin'], function () {
+        
+    });
     Route::resource('about', AboutUsController::class);
     Route::resource('contact', ContactControllers::class);
     Route::resource('client', ClientController::class);

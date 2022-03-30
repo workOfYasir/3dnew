@@ -51,9 +51,20 @@ class MedicalController extends Controller
         $users->notify(new MedicalNotification($users));
         $details = [
             'title' =>$user->name,
-            'body' => 'Your medical request have been created',
+            'subject'=>"#'".$med->id."'جاري تنفيذ طلب رقم",
+            'from' => 'contact@einnovention.co.uk',
+            'adminSubject' => "#'".$med->id."' تم استلام طلب رقم ",
+            'adminBody' => "#'".$med->id."' تم استلام طلبكم رقم ",
+            'adminBody2' => 'وسيتم التواصل بكم قريباً',
+            'userBody' => "'".$med->id."'جاري العمل على طلبكم رقم ",
+            'thanks' => 'شكراً جزيلاً',
         ];
         \Mail::to($user->email)->send(new \App\Mail\MedicalMail($details));
+        $admins = User::where('role','admin')->get();
+        foreach ($admins as $key => $admin) {
+            \Mail::to($admin->email)->send(new \App\Mail\MedicalAdminMail($details));
+        }
+       
         return redirect()->route('home')->with('error_code', 5);
     }
 

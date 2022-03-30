@@ -8,9 +8,14 @@
 </head>
 
 <body>
-    <img src="{{ asset('assets/images/logo/logo-favicon.png') }}" alt=""><br>
-	<h3>{{ $details['body'] }} </h3><br>
-
+  
+    {{ $details['title'] }} عزيزي 
+    <br>
+    {{ $details['userBody'] }}
+    <br>
+   {{ $details['thanks'] }}
+   <br>
+   <img src="{{ asset('assets/images/logo/logo-favicon.png') }}" alt=""><br>
 	
 </body>
 </html>	

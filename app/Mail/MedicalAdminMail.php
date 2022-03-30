@@ -7,7 +7,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class InvoiceMail extends Mailable
+class MedicalAdminMail extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -23,6 +23,7 @@ class InvoiceMail extends Mailable
         $this->details = $details;
     }
 
+
     /**
      * Build the message.
      *
@@ -30,6 +31,6 @@ class InvoiceMail extends Mailable
      */
     public function build()
     {
-        return $this->from(config('mail.from.address'),config('mail.from.name'))->subject($this->details['subject'])->view('emails.invoice');
+        return $this->$this->from($this->details['from'],$this->details['name'])->subject($this->detail['adminSubject'])->view('emails.medicalAdmin');
     }
 }
