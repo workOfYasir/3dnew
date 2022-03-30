@@ -13,7 +13,7 @@
                           
                              <div class="profile">
                                     <button class="btn btn-sky profile-btn invert">
-                                        المصمم
+                                    المصمم
                                     </button>
                                  @if(@auth()->user()->profile == null)
                                  <a href="#profile">
@@ -32,25 +32,25 @@
                                      <ul class="nav nav-tabs" id="myTab" role="tablist">
                                          <li class="nav-item" role="presentation">
                                              @auth
-                                             <button class="nav-link active" id="medical-tab" data-bs-toggle="tab" data-bs-target="#medical-services" type="button" role="tab" aria-selected="true"><span class="notification">{{$orders->count()}}</span> الخدمات الطبية</button>
+                                             <button class="nav-link active" id="medical-tab tab tab1" data-bs-toggle="tab" data-bs-target="#medical-services" type="button" role="tab" aria-selected="true"><span class="notification">{{$orders->count()}}</span> الخدمات الطبية</button>
                                              @else
-                                             <button class="nav-link active" id="medical-tab" data-bs-toggle="tab" data-bs-target="#medical-services" type="button" role="tab" aria-selected="true"><span class="notification">0</span> الخدمات الطبية</button>
+                                             <button class="nav-link active" id="medical-tab tab tab1" data-bs-toggle="tab" data-bs-target="#medical-services" type="button" role="tab" aria-selected="true"><span class="notification">0</span> الخدمات الطبية</button>
                                              @endauth
                                          </li>
                                          <li class="nav-item" role="presentation">
                                              @auth
-                                             <button class="nav-link" id="public-tab" data-bs-toggle="tab" data-bs-target="#public-services" type="button" role="tab" aria-controls="profile" aria-selected="false"><span class="notification">{{$publics->count()}}</span>الخدمات العامة</button>
+                                             <button class="nav-link" id="public-tab tab tab2" data-bs-toggle="tab" data-bs-target="#public-services" type="button" role="tab" aria-controls="profile" aria-selected="false"><span class="notification">{{$publics->count()}}</span>الخدمات العامة</button>
                                              @else
-                                             <button class="nav-link active" id="medical-tab" data-bs-toggle="tab" data-bs-target="#medical-services" type="button" role="tab" aria-selected="true"><span class="notification">0</span> الخدمات الطبية</button>
+                                             <button class="nav-link active" id="medical-tab tab tab2" data-bs-toggle="tab" data-bs-target="#public-services" type="button" role="tab" aria-selected="true"><span class="notification">0</span> الخدمات العامة</button>
                                              @endauth
 
                                          </li>
                                          <!-- designer -->
                                          <li class="nav-item" role="presentation">
                                              @auth
-                                             <button class="nav-link" id="public-tab" data-bs-toggle="tab" data-bs-target="#public-services" type="button" role="tab" aria-controls="profile" aria-selected="false"><span class="notification">{{$publics->count()}}</span>مجتمع المصممين</button>
+                                             <button class="nav-link" id="designer-tab tab tab3" data-bs-toggle="tab" data-bs-target="#designer-services" type="button" role="tab" aria-controls="profile" aria-selected="false"><span class="notification">{{$publics->count()}}</span>مجتمع المصممين</button>
                                              @else
-                                             <button class="nav-link active" id="medical-tab" data-bs-toggle="tab" data-bs-target="#medical-services" type="button" role="tab" aria-selected="true"><span class="notification">0</span>  مجتمع المصممين</button>
+                                             <button class="nav-link active" id="designer-tab tab tab3" data-bs-toggle="tab" data-bs-target="#designer-services" type="button" role="tab" aria-selected="true"><span class="notification">0</span>  مجتمع المصممين</button>
                                              @endauth
 
                                          </li>
@@ -108,7 +108,7 @@
                                                  @endforeach
                                              </div>
                                          </div>
-                                         <div class="tab-pane fade" id="designer-service" role="tabpanel" aria-labelledby="profile-tab">
+                                         <div class="tab-pane fade" id="designer-services" role="tabpanel" aria-labelledby="profile-tab">
                                              <div class="row">
                                                  @foreach($publics as $orde)
                                                  <a class="nav-link" href="{{route('vieworderpublic',$orde->id)}}">

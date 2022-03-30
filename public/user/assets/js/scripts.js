@@ -384,7 +384,7 @@ $(function() {
         $(this).addClass('field-blue')
         $(this).removeClass('field-red');
     })
-    
+
     $('.form-control').keyup(function() {
         if ($(this).val().length === 0) {
             $(this).val($.trim($(this).val()));
@@ -842,16 +842,16 @@ $(document).ready(function() {
     })
 
     // stat blur background
-    
+
     $(".starbluerModal-btn").click(function() {
-        $(".blur-star").show();
-        $(".review-text-tog").addClass("review-text-hide");
-        $(".starbluerModal-btn-hide").hide();
-        $(".show-footer-btns").show();
-    })
-    // $(".designer-review-upload").click(function() {
-    //     $(".blur-star").hide();
-    // })
+            $(".blur-star").show();
+            $(".review-text-tog").addClass("review-text-hide");
+            $(".starbluerModal-btn-hide").hide();
+            $(".show-footer-btns").show();
+        })
+        // $(".designer-review-upload").click(function() {
+        //     $(".blur-star").hide();
+        // })
 
 });
 AOS.init({

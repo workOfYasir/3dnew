@@ -138,6 +138,7 @@ mujtmah-almusmamen section start
     font-size: 18px;
     color: #1EA9D4;
     line-height: 1;
+    font-family: 'JannaRegular';
 }
 
 .heading-box {
@@ -477,10 +478,6 @@ almuntjat section start
     width: 60px;
     box-shadow: 0 6px 6px rgb(0 0 0 / 16%);
     bottom: -7px;
-}
-
-.nav-tabs .nav-link {
-    margin: 0 -20px !important;
 }
 
 .container-x {
