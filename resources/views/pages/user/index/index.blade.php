@@ -5880,7 +5880,7 @@
                                             <div class="col-md-12">
                                                 <div class="row justify-content-center">
                                                     <div class="col-md-12  userreq-blur">
-                                                        <!-- <div class="userreq-blur-bg" id="star-blur-scroll"> </div>-->
+                                                        <div class="userreq-blur-bg" id="star-blur-scroll"> </div>
                                                         
                     <!-- blur -->
                     <div class="credit-log" id="star-blur-scroll">
@@ -5980,9 +5980,9 @@
                                                             </div>
                                                         </div>
                                                         <div class="wrapper jst-center userReq-btn-box">
-                                                            <button class="userReq-btn-box__btn userReq-btn-box__btn--a" data-bs-toggle="modal" data-bs-target="#user2RequestModal">قبول</button>
+                                                            <button class="userReq-btn-box__btn userReq-btn-box__btn--a " data-bs-toggle="modal" data-bs-target="#user2RequestModal">قبول</button>
                                                             <button class="userReq-btn-box__btn userReq-btn-box__btn--b">رفض</button>
-                                                            <button class="userReq-btn-box__btn userReq-btn-box__btn--c mgl-0">عرض السعر</button>
+                                                            <button class="userReq-btn-box__btn userReq-btn-box__btn--c mgl-0 credit-btn-blur-show">عرض السعر</button>
                                                         </div>
                                                     </div>
                                                     <div class="userreqFormBtn-box">
