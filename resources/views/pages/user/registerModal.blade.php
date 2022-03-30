@@ -8,11 +8,12 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             <div>
                                 <span class="outline dot">اهلاً وسهلاً بكم</span>
-
                                 <h1 class="modal-title right" style="color: black;">
-                                    <span class="btm-line"><span class="inner-line"></span>تسجيل عضوية جديدة
+                                    <span class="btm-line">
+                                        <span class="inner-line"></span>
+                                    </span>
+                                    تسجيل عضوية جديدة
                                 </h1>
-
                             </div>
                             <div></div>
                         </div>
