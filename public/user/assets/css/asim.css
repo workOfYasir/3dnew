@@ -385,3 +385,20 @@ form .search-input i{
 .gray-background{
     color: #D3DADE;
 }
+
+.blur-bg-1{
+    background-color: rgb(255 255 255 / 0%);
+    backdrop-filter: blur(8px);
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 360px;
+}
+.credit-log{
+    display: none;
+    position: relative;
+}
