@@ -500,6 +500,9 @@ $(document).ready(function() {
         // })
 
 });
+$(".userreq-blur-bg").click(function() {
+    $(".userreq-blur-bg").css('display', 'none');
+});
 AOS.init({
     offset: 100,
     duration: 1000,
