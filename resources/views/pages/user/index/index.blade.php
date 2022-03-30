@@ -3320,7 +3320,6 @@
                                     <h1 class="title text-center mt-5 no-border conditional-blur">
                                        <div class="zhd-finished">
                                           <a href="{{route('payment')}}" class="btn btn-form mx-3 with-arrow mt-10">طلباتي</a>
-
                                           <p class="mt-4">طلب مرفوض من قبل المصمم</p>
                                        </div>
                                     </h1>
