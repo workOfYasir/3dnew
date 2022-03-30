@@ -342,6 +342,7 @@ form .search-input i{
 }
 .blur-star-bottom-btn{
     text-align: center;
+    /* text-align: center; */
 }
 .review-text-hide{
     display: none;
