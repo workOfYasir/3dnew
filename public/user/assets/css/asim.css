@@ -311,6 +311,7 @@ form .search-input i{
 /* stat blur bg */
 .blur-star{
     display: none;
+    /* display: none; */
 }
 .blur-bg{
     margin: auto;
