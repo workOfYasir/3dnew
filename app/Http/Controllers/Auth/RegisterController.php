@@ -133,8 +133,7 @@ class RegisterController extends Controller
         } else {
             $datas = null;
         }
-        // $role = Role::create(['name' => $roleData]);
-        
+
             $user = User::create([
                 'name' => $data['name'],
                 'email' => $data['email'],

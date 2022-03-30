@@ -17,6 +17,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        
+
        $admin = User::create([
             'name' => 'Admin',
             'email' => 'admin@admin.com',
@@ -33,8 +35,8 @@ class DatabaseSeeder extends Seeder
             'email_verified_at' => '2021-10-04 00:00:00',
             'remember_token' => Str::random(10),
         ]);
-        $adminRole = Role::create(['name' => 'user']);
-        $userRole = Role::create(['name' => 'admin']);
+        $adminRole = Role::create(['name' => 'admin']);
+        $userRole = Role::create(['name' => 'user']);
         $admin->assignRole($adminRole);
         $user->assignRole($userRole);
         
