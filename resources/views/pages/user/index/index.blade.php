@@ -987,66 +987,6 @@
                         data-bs-target="#designModal">
                         تعرف أكثر
                     </button>
-
-
-
-                    <!-- blur -->
-                    <div class="credit-log " id="star-blur-scroll">
-                        <div class="credit-logos-main">
-                        <div class="blur-bg-1"></div>
-                            <div class="row">
-                                <div class="col-md-6 col-lg-6">
-                                    <div class="credit-logo-inner">
-                                        <div class="row">
-                                            <div class="col-md-3 col-lg-3">
-                                                <img src="{{ asset('user/assets/images/arrow-8.png') }}"
-                                                            class="credit-card-icon">
-                                            </div>
-                                            <div class="col-md-7 col-lg-7">
-                                                <h5>فيزا وماستر كارد</h5>
-                                            </div>
-                                            <div class="col-md-2 col-lg-2">
-                                                <i class="fa-solid fa-circle-check gray-background"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-lg-6">
-                                    <div class="credit-logo-inner">
-                                        <div class="row">
-                                            <div class="col-md-3 col-lg-3">
-                                                <img src="{{ asset('user/assets/images/arrow-8.png') }}"
-                                                            class="credit-card-icon green-border">
-                                            </div>
-                                            <div class="col-md-7 col-lg-7">
-                                                <h5>مدى</h5>
-                                            </div>
-                                            <div class="col-md-2 col-lg-2">
-                                                <i class="fa-solid fa-circle-check "></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-lg-6 mt-4">
-                                    <div class="credit-logo-inner">
-                                        <div class="row">
-                                            <div class="col-md-3 col-lg-3">
-                                                <img src="{{ asset('user/assets/images/arrow-8.png') }}"
-                                                            class="credit-card-icon">
-                                            </div>
-                                            <div class="col-md-7 col-lg-7">
-                                                <h5>آبل باي</h5>
-                                            </div>
-                                            <div class="col-md-2 col-lg-2">
-                                                <i class="fa-solid fa-circle-check gray-background"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- blur  -->
                 </div>
                 <div class="mujtmah-almusmamen-wrapper wrapper jst-btw">
                     <div class="mujtmah-box">
@@ -5940,9 +5880,68 @@
                                             <div class="col-md-12">
                                                 <div class="row justify-content-center">
                                                     <div class="col-md-12  userreq-blur">
-                                                        <div class="userreq-blur-bg" id="star-blur-scroll">
-    
-                                                        </div>
+                                                        <!-- <div class="userreq-blur-bg" id="star-blur-scroll"> </div>-->
+                                                        
+                    <!-- blur -->
+                    <div class="credit-log" id="star-blur-scroll">
+                        <div class="credit-logos-main blur-star-inner blur-bg-1">
+                     
+                            <div class="row">
+                            <div class="col-md-2 col-lg-2"></div>
+                                <div class="col-md-4 col-lg-4">
+                                    <div class="credit-logo-inner">
+                                        <div class="row">
+                                            <div class="col-md-3 col-lg-3">
+                                                <img src="{{ asset('user/assets/images/arrow-8.png') }}"
+                                                            class="credit-card-icon">
+                                            </div>
+                                            <div class="col-md-7 col-lg-7">
+                                                <h5>فيزا وماستر كارد</h5>
+                                            </div>
+                                            <div class="col-md-2 col-lg-2">
+                                                <i class="fa-solid fa-circle-check gray-background"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-lg-4">
+                                    <div class="credit-logo-inner flot-lft">
+                                        <div class="row">
+                                            <div class="col-md-3 col-lg-3">
+                                                <img src="{{ asset('user/assets/images/arrow-8.png') }}"
+                                                            class="credit-card-icon green-border">
+                                            </div>
+                                            <div class="col-md-7 col-lg-7">
+                                                <h5>مدى</h5>
+                                            </div>
+                                            <div class="col-md-2 col-lg-2">
+                                                <i class="fa-solid fa-circle-check "></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-lg-2"></div>
+                                <div class="col-md-2 col-lg-2"></div>
+                                <div class="col-md-4 col-lg-4 mt-4">
+                                    <div class="credit-logo-inner">
+                                        <div class="row">
+                                            <div class="col-md-3 col-lg-3">
+                                                <img src="{{ asset('user/assets/images/arrow-8.png') }}"
+                                                            class="credit-card-icon">
+                                            </div>
+                                            <div class="col-md-7 col-lg-7">
+                                                <h5>آبل باي</h5>
+                                            </div>
+                                            <div class="col-md-2 col-lg-2">
+                                                <i class="fa-solid fa-circle-check gray-background"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- blur  -->
                                                         {{-- user- req --}}
                                                         <div class="wrapper al-center jst-btw mb-5">
                                                             <div class="profile tag-profile designer-order">
@@ -5987,7 +5986,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="userreqFormBtn-box">
-                                                        <button class="btn btn-form ">
+                                                        <button class="btn btn-form paying-off-btn">
                                                 طلباتي
                                             </button>
                                                         <p class="userreqFormBtn-box__text">سيتم تحديث حالة الطلب من قبل المصمم</p>

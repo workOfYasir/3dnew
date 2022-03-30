@@ -309,9 +309,9 @@ form .search-input i{
 
 
 /* stat blur bg */
-/* .blur-star{
+.blur-star{
     display: none;
-} */
+}
 .blur-bg{
     margin: auto;
     background-color: rgb(255 255 255 / 0%);
@@ -350,14 +350,20 @@ form .search-input i{
     display: none;
 }
 
-
+.credit-log{
+    position: relative;
+}
 .credit-logo-inner{
     border-radius: 20px!important;
     background-color: #fff;
     color: #000;
-    border: 4px solid D3DADE;
+    border: 4px solid #D3DADE;
     padding: 8px 15px;
     height: 73px;
+    width: 359px;
+}
+.flot-lft{
+    float: left;
 }
 .credit-card-icon{
     width: 50px;
@@ -396,9 +402,5 @@ form .search-input i{
     top: 0;
     bottom: 0;
     width: 100%;
-    height: 360px;
-}
-.credit-log{
-    display: none;
-    position: relative;
+    height: 380px;
 }
