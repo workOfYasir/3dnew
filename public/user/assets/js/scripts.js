@@ -384,7 +384,7 @@ $(function() {
         $(this).addClass('field-blue')
         $(this).removeClass('field-red');
     })
-    
+
     $('.form-control').keyup(function() {
         if ($(this).val().length === 0) {
             $(this).val($.trim($(this).val()));
@@ -842,7 +842,7 @@ $(document).ready(function() {
     })
 
     // stat blur background
-    
+
     $("#starbluerModal").click(function() {
         $(".blur-star").addClass("blur-bg");
         console.log("clicked blur")
