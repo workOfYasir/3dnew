@@ -10,8 +10,11 @@
                                 <span class="outline dot">اهلاً وسهلاً بكم</span>
 
                                 <h1 class="modal-title right" style="color: black;">
-                                    <span class="btm-line"><span class="inner-line"></span>تسجيل دخول</h1>
-
+                                    <span class="btm-line">
+                                        <span class="inner-line"></span>
+                                    </span>
+                                    تسجيل دخول
+                                </h1>
                             </div>
                             <div></div>
                         </div>
@@ -36,7 +39,7 @@
                                                 @csrf
                                                 <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3">
                                                     <label class="form-label dot">الايميل</label>
-                                                    <input type="email" name="email" class="form-control email" placeholder="الاسم هنا .." value="">
+                                                    <input type="email" name="email" class="form-control email" placeholder="الايميل هنا .." value="">
                                                 </div>
                                                 <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3">
                                                     <label class="form-label dot">كلمة المرور</label>
@@ -61,7 +64,7 @@
                                                 @csrf
                                                 <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3">
                                                     <label class="form-label dot">الايميل</label>
-                                                    <input type="email" name="email" class="form-control email" placeholder="الاسم هنا .." value="">
+                                                    <input type="email" name="email" class="form-control email" placeholder="الايميل هنا .." value="">
                                                 </div>
                                                 <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3">
                                                     <label class="form-label dot">كلمة المرور</label>
@@ -74,11 +77,9 @@
                                             </form>
                                         </div>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>

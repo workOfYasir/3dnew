@@ -434,21 +434,13 @@ $(function() {
             }
         })
     })
-    $('#designerloginModal2 .email').keyup(function() {
-        var email = $(this).val();
-        if ($('#designerloginModal2 .pass').val().length > 0) {
-            $('#designerloginModal2 .btn-form').removeClass('disabled');
-        } else {
-            $('#designerloginModal2 .btn-form').addClass('disabled');
-        }
-        loginModal2LoginValidateEmail(email)
-    })
 
     function designerloginModal2ValidateEmail(email) {
         var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
         if ($('#designerloginModal2 .email').val().length === 0) {
             $('#designerloginModal2 .email').removeClass('field-blue');
             $('#designerloginModal2 .email').removeClass('field-red');
+            $('#designerloginModal2 .btn-form').addClass('disabled');
         } else if (!emailReg.test(email)) {
             $('#designerloginModal2 .email').removeClass('field-blue');
             $('#designerloginModal2 .email').addClass('field-red');
@@ -462,6 +454,16 @@ $(function() {
 
 
     }
+
+    $('#designerloginModal2 .email').keyup(function() {
+        var email = $(this).val();
+        if ($('#designerloginModal2 .pass').val().length > 0) {
+            $('#designerloginModal2 .btn-form').removeClass('disabled');
+        } else {
+            $('#designerloginModal2 .btn-form').addClass('disabled');
+        }
+        designerloginModal2ValidateEmail(email)
+    })
 
     $('#userloginModal2 .form-control').each(function() {
         $(this).keyup(function() {
@@ -485,7 +487,7 @@ $(function() {
 
     function loginModal2LoginValidateEmail(email) {
         var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-        if (!emailReg.test(email) || $('#userloginModal2 .email').val().length == 0) {
+        if (!emailReg.test(email) && $('#userloginModal2 .email').val().length === 0) {
             $('#userloginModal2 .email').removeClass('field-blue');
             $('#userloginModal2 .email').addClass('field-red');
             $('#userloginModal2 .btn-form').addClass('disabled');
@@ -852,4 +854,5 @@ AOS.init({
     duration: 1000,
     once: true,
 });
+window.addEventListener('load', AOS.refresh);
 window.addEventListener('load', AOS.refresh);
