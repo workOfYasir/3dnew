@@ -352,6 +352,7 @@ form .search-input i{
 
 .credit-log{
     position: relative;
+    display: none;
 }
 .credit-logo-inner{
     border-radius: 20px!important;

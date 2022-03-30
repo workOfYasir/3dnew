@@ -495,14 +495,18 @@ $(document).ready(function() {
             $(".starbluerModal-btn-hide").hide();
             $(".show-footer-btns").show();
         })
+        
+        $(".credit-btn-blur-show").click(function() {
+            $(".credit-log").show();
+        })
         $(".paying-off-btn").click(function() {
             $(".credit-log").hide();
         })
 
 });
-// $(".userreq-blur-bg").click(function() {
-//     $(".userreq-blur-bg").css('display', 'none');
-// });
+$(".userreq-blur-bg").click(function() {
+    $(".userreq-blur-bg").css('display', 'none');
+});
 AOS.init({
     offset: 100,
     duration: 1000,
