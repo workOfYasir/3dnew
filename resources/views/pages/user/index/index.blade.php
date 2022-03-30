@@ -59,6 +59,7 @@
             font-family: 'JannaRegular';
         }
     </style>
+
 </head>
 
 <body>
@@ -504,6 +505,7 @@
                                                 <h2 class="title no-border">
                                                     {{ $profiles->heading }}
                                                     !
+                                                    <span class="inner-line"></span>
                                                 </h2>
                                         </div>
                                             <div class="static-text">
@@ -516,6 +518,7 @@
                                                 <h2 class="title no-border">
                                                     {{ $profiles->heading }}
                                                     !
+                                                    <span class="inner-line"></span>
                                                 </h2>
                                                 </div>
                                                 <p class="description">
@@ -696,14 +699,16 @@
                             <div class="row pt-5 mt-5 align-items-end" dir="rtl">
                                 <div class="col-md-9 col-lg-7 res-width-64">
                                     <div class="about-content" id="about-us" data-aos="fade-up">
-                                        <span class="outline dot right-center">+3D</span>
+                                        <!-- <span class="outline dot right-center">+3D</span> -->
                                         @if ($about != null)
 
                                         <h1 class="modal-title color-blue text-center line-heading">
+                                        <span class="outline dot right-center">+3D</span>
                                             <span class="btm-line"><span class="inner-line"></span>{{ @$about->heading }}</span>
                                         </h1>
                                         @else
                                         <h1 class="modal-title color-blue text-center line-heading">
+                                            <span class="outline dot right-center">+3D</span>
                                             <span class="btm-line"><span class="inner-line"></span> من نحن
                                             </span>
                                         </h1>
@@ -943,13 +948,13 @@
                                 هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.
                             </p>
                             <div class="mujtmah-box-btn-wrapper wrapper al-center">
-                                <a href="#" class="m-btn mujtmah-box-btn btn-white">
+                                <button data-bs-toggle="modal" data-bs-target="#financialOperations" class="m-btn mujtmah-box-btn btn-white">
                                     
                                     <img src="{{ asset('user/assets/images/arrow-8.png') }}" class="mujtmah-box-btn__img"> سجل الان
-                                </a>
-                                <a href="#" class="m-btn mujtmah-box-btn">
+                                </button>
+                                <button data-bs-toggle="modal" data-bs-target="#financialOperations2" class="m-btn mujtmah-box-btn">
                                     <img src="{{ asset('user/assets/images/video.png') }}" class="mujtmah-box-btn__img2"> سجل الان
-                                </a>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -1087,7 +1092,7 @@
             <div class="modal-content">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-md-12">
+                        <div class="col-md-12 p-0">
                             <div class="modal-header border-0">
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 <div>
@@ -1213,7 +1218,7 @@
             <div class="modal-content">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-md-12">
+                        <div class="col-md-12 p-0">
                           
                             <div class="modal-body">
 
@@ -1493,15 +1498,15 @@
                 <h3>عنوان التصميم يكتب هنا ويستوعب سطرين كحد اقصى ..</h3>
                 <h6>27 ديسمبر 2021</h6>
             
-            <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.</p>
-        </div>
+                <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.</p>
+            </div>
         </div>
         
             <div class="form form-clean">
                 <div class="row">
                     <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 mt-4">
                         <label class="form-label dot">اختيار اللون</label>
-                        <div class="color-circle-main">
+                            <div class="color-circle-main">
                             
                         
                                 <div  class="color-circle">
@@ -1516,27 +1521,23 @@
                                 <div  class="color-circle">
                                 
                                 </div>
+                         </div>
                     </div>
-                       
-                </div>
-
-                 
-                        
-                    
-                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 mt-4">
+                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 mt-4">
                     <label class="form-label dot">الكمية</label>
                     <select class="form-select gender" required name="gender" aria-label="Default select example">
                         <option selected>1</option>
                        
                     </select>   
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 mt-4">
+                 </div>
+                  <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 mt-4">
                     <label class="form-label dot">المقاسات</label>
                     <select class="form-select gender" required name="gender" aria-label="Default select example">
                         <option selected>اختيار المقاس</option>
                        
                     </select>  
                 </div>
+            </div>
             
                 <div class="row circle-bottom">                
                     <div class="col-md-6">
@@ -1554,7 +1555,7 @@
                    </div>
                </div>
 
-            </div> 
+           
                <div class="row">
                     <div class="col-md-12">
                         <label class="form-label dot">الملاحظات</label>
@@ -1665,7 +1666,7 @@
         <div class="modal-content">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-12 p-0">
                         <div class="modal-header border-0">
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             <div>
@@ -1755,7 +1756,7 @@
       <div class="modal-content">
          <div class="container">
             <div class="row">
-               <div class="col-md-12">
+               <div class="col-md-12 p-0">
                   <div class="modal-header border-0">
                      <div class="zhd-center-close">
                         <a href="{{route('home')}}" type="button" class="btn-close" aria-label="Close"></a>
@@ -1969,7 +1970,7 @@
     <div class="modal-content">
       <div class="container">
         <div class="row">
-          <div class="col-md-12">
+          <div class="col-md-12 p-0">
             <div class="modal-header border-0">
               <div class="zhd-center-close">
                 <a href="{{route('home')}}" type="button" class="btn-close" aria-label="Close"></a>
@@ -2203,7 +2204,7 @@
       <div class="modal-content">
          <div class="container">
             <div class="row">
-               <div class="col-md-12">
+               <div class="col-md-12 p-0">
                   <div class="modal-header border-0">
                      <div class="zhd-center-close">
                         <a href="{{route('home')}}" type="button" class="btn-close" aria-label="Close"></a>
@@ -2464,6 +2465,27 @@
 
 <!-- zahid-designer review  upload end-->
 
+<!-- zahid-designer review upload stat-blur-modal by asim start -->
+<!-- <div class="modal page result" id="starbluerModal">
+    <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 p-0">
+                        <div class="modal-body designer-bdy">
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<!-- zahid-designer review  upload stat-blur-modal end-->
+
 
     <!-- ///////////////////////////////////// design modal start here ////////////////////////////////-->
 
@@ -2473,7 +2495,7 @@
             <div class="modal-content">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-md-12">
+                        <div class="col-md-12 p-0">
                           
                             <div class="modal-body">
                              
@@ -3287,7 +3309,7 @@
             <div class="modal-content">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-md-12">
+                        <div class="col-md-12 p-0">
                           
                             <div class="modal-body">
                              
@@ -3817,7 +3839,7 @@
             <div class="modal-content">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-md-12">
+                        <div class="col-md-12 p-0">
                           
                             <div class="modal-body">
                             <div class="container">
@@ -4032,7 +4054,7 @@
                     <div class="modal-content">
                         <div class="container">
                             <div class="row">
-                                <div class="col-md-12">
+                                <div class="col-md-12 p-0">
 
                                     <div class="modal-body">
                                         <div class="modal-header border-0">
@@ -4153,7 +4175,7 @@
                     <div class="modal-content">
                         <div class="container">
                             <div class="row">
-                                <div class="col-md-12">
+                                <div class="col-md-12 p-0">
 
                                     <div class="modal-body">
                                         <div class="modal-header border-0">
@@ -4312,6 +4334,231 @@
 
 <!-- ///////////////////////////////////////////////////////// product design productaddformModal end here /////////////////////////////////////////////// -->
 
+    <div class="modal fade page register" id="financialOperations" tabindex="-1" aria-labelledby="financialOperationsLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 p-0">
+                            <div class="modal-header border-0" style="padding: 4em 0 !important">
+                                <div class=" ahs-member-model-box">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class=" ahs-member-model-box">
+                                    <span class="outline dot">اهلاً وسهلاً بكم</span>
+                                    <h1 class="modal-title right" style="color: black;">
+                                        <span class="btm-line"></span><span class="inner-line"></span> العمليات المالية</h1>
+                                </div>
+                                <div class="profile ahs-member-model-box2">
+                                    <button class="btn btn-sky edit-profile edit-profile--ahs">المنتجات</button>
+                                    <button class="btn btn-sky membership-edit">تعديل</button>
+                                </div>
+                            </div>
+                            <div class="modal-body">
+                                <div class="profile wrapper al-center jst-center">
+                                    @if(@auth()->user()->profile == null)
+                                    <a href="#profile">
+                                        <img src="{{asset('user/assets/icons/avatar.svg')}}" alt="avatar" style="height:100px; width:100px; border-radius: 50%">
+                                    </a>
+                                    @else
+                                    <a href="#profile">
+                                        <img src="{{ asset( auth()->user()->profile) }}" style="height:100px; width:100px; border-radius: 50%">
+                                    </a> @endif
+                                </div>
+
+                                <div class="ahs-form-box1-box">
+                                    <button class="btn btn-sky profile-btn invert">
+                                        المصمم
+                                    </button>
+                                </div>
+                                <div class="wrapper al-center ahs-form-box1">
+                                    <span class="ahs-form-head1"> الرصيد الحالي </span>
+                                    <span class="ahs-form-head2"> 750 ريال </span>
+                                    <img src="{{asset('user/assets/images/ar.png')}}" alt="" class="ahs-form-img1">
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12 wrapper jst-center">
+                                        <div class="star-reating">
+                                            <i class="fa-solid fa-star star-active  ahs-star"></i>
+                                            <i class="fa-solid fa-star star-active ahs-star"></i>
+                                            <i class="fa-solid fa-star star-active ahs-star"></i>
+                                            <i class="fa-solid fa-star star-active ahs-star"></i>
+                                            <i class="fa-solid fa-star star-active ahs-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="tab-content" id="myTabContent">
+                                            <div class="tab-pane fade show active" id="medical-services" role="tabpanel">
+                                                <div class="row">
+                                                    <div class="nav-link">
+                                                        <div class="col-md-12">
+                                                            <div data-id='' class="request-box editProduct">
+                                                                <div class="heading">
+                                                                    <i class="fa fa-circle-minus heading__minus" aria-hidden="true"></i>
+                                                                    <h5>رقم الطلب:</h5>
+                                                                    <span>307</span>
+                                                                </div>
+                                                                <div class="data">
+                                                                    <p>حالة الطلب:</p>
+                                                                    <span>تحت المراجعة</span>
+                                                                    <p>اسم المريض:</p>
+                                                                    <span>سحب أموال</span>
+                                                                    <p>اسم الطبيب:</p>
+                                                                    <span>750 ريال</span>
+                                                                    <p>تاريخ الطلب:</p>
+                                                                    <span class="dateTime">11/01/2022 - 03:00PM</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="tab-content" id="myTabContent">
+                                            <div class="tab-pane fade show active" id="medical-services" role="tabpanel">
+                                                <div class="row">
+                                                    <div class="nav-link">
+                                                        <div class="col-md-12">
+                                                            <div data-id='' class="request-box editProduct">
+                                                                <div class="heading">
+                                                                    <i class="fa-solid fa-circle-plus heading__plus"></i>
+                                                                    <h5>رقم الطلب:</h5>
+                                                                    <span>304</span>
+                                                                </div>
+                                                                <div class="data">
+                                                                    <p>حالة الطلب:</p>
+                                                                    <span>تم التنفيذ</span>
+                                                                    <p>اسم المريض:</p>
+                                                                    <span>مرتجع</span>
+                                                                    <p>اسم الطبيب:</p>
+                                                                    <span>750 ريال</span>
+                                                                    <p>تاريخ الطلب:</p>
+                                                                    <span class="dateTime">11/01/2022 - 03:00PM</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-action mb-5">
+                                    <button class="btn btn-form mx-3 with-arrow" type="submit">سحب أموال</button>
+                                    <p class="">يتفعل هذا الخيار في حال كان لديك رصيد</p>
+                                    <p class="d-none">هناك طلب جاري معالجته</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade page register" id="financialOperations2" tabindex="-1" aria-labelledby="financialOperations2Label" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 p-0">
+                            <div class="modal-header border-0" style="padding: 4em 0 !important">
+                                <div class=" ahs-member-model-box">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class=" ahs-member-model-box2">
+                                    <span class="outline dot">اهلاً وسهلاً بكم</span>
+                                    <h1 class="modal-title right" style="color: black;">
+                                        <span class="btm-line"></span><span class="inner-line"></span> طلب سحب أموال</h1>
+                                </div>
+                                <div class="profile ahs-member-model-box2">
+                                    <button class="btn btn-sky edit-profile edit-profile--ahs">المنتجات</button>
+                                    <button class="btn btn-sky membership-edit">تعديل</button>
+                                </div>
+                            </div>
+                            <div class="modal-body">
+                                <div class="profile wrapper al-center jst-center">
+                                    @if(@auth()->user()->profile == null)
+                                    <a href="#profile">
+                                        <img src="{{asset('user/assets/icons/avatar.svg')}}" alt="avatar" style="height:100px; width:100px; border-radius: 50%">
+                                    </a>
+                                    @else
+                                    <a href="#profile">
+                                                <img src="{{ asset( auth()->user()->profile) }}" style="height:100px; width:100px; border-radius: 50%">
+                                            </a> @endif
+                                </div>
+
+                                <div class="ahs-form-box1-box">
+                                    <button class="btn btn-sky profile-btn invert">
+                                                المصمم
+                                            </button>
+                                </div>
+                                <div class="wrapper al-center ahs-form-box1">
+                                    <span class="ahs-form-head1"> الرصيد الحالي </span>
+                                    <span class="ahs-form-head2"> 750 ريال </span>
+                                    <img src="{{asset('user/assets/images/ar.png')}}" alt="" class="ahs-form-img1">
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12 wrapper jst-center">
+                                        <div class="star-reating">
+                                            <i class="fa-solid fa-star star-active  ahs-star"></i>
+                                            <i class="fa-solid fa-star star-active ahs-star"></i>
+                                            <i class="fa-solid fa-star star-active ahs-star"></i>
+                                            <i class="fa-solid fa-star star-active ahs-star"></i>
+                                            <i class="fa-solid fa-star star-active ahs-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="modal-body">
+                                <form class="gy-4 gx-5" method="post">
+                                    <div class="row justify-content-center">
+                                        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-3 mt-4">
+                                            <label class="form-label dot">المبلغ المطلوب</label>
+                                            <input type="text" class="form-control  " placeholder="المبلغ .." value="">
+                                        </div>
+                                        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-3 mt-4">
+                                            <label class="form-label dot">اسم صاحب الحساب</label>
+                                            <input type="text" class="form-control " placeholder="اسم صاحب الحساب هنا .." value="">
+                                        </div>
+                                        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-3 mt-4">
+                                            <label class="form-label dot">اسم البنك</label>
+                                            <input type="text" name="" class="form-control  " placeholder="اسم البنك .." value="">
+                                        </div>
+                                    </div>
+                                    <div class="row  mb-5">
+                                        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-3 mt-4">
+                                            <label class="form-label dot">الآيبان</label>
+                                            <input type="text" name="" class="form-control  " placeholder="الآيبان" value="">
+                                        </div>
+
+                                        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-3 mt-4 ahs-from-box">
+                                            <label class="form-label dot">رقم الجوال</label>
+                                            <input type="" name="" class="form-control " placeholder="رقم الجوال هنا .." value="">
+                                            <img src="assets/images/arrow-5.png" alt="" class="input-holder__img">
+                                        </div>
+                                    </div>
+                                    <div class="form-action mb-5">
+                                        <button class="btn btn-form mx-3 with-arrow " type="submit">ارسال</button>
+                                        <p>عند ارسال طلب لا يمكن انشاء طلب آخر حتى تتم معالجة طلبك الحالي</p>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- About US -->
 
@@ -4411,6 +4658,10 @@
 
     @include('pages.user.publicVideoModal')
     <!-- Bootstrap js -->
+
+    <script src="{{asset('user/assets/js/jquery.min.js')}}"></script>
+
+
     @if(!empty(Session::get('error_code')) && Session::get('error_code') == 5)
     <script>
         $(function() {
@@ -4434,7 +4685,7 @@
     @endif
     <script src="{{asset('user/assets/js/bootstrap.min.js')}}"></script>
     <!-- JQuery -->
-    <script src="{{asset('user/assets/js/jquery.min.js')}}"></script>
+
     <script>
         $(document).ready(function() {
             var a = 0;
@@ -4519,6 +4770,7 @@
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="{{ asset('user/assets/js/scripts.js') }}"></script>
+
 </body>
 
 </html>

@@ -301,4 +301,42 @@ box-shadow: none;
     transition: all 0.3s ease-in-out;
     border-radius: 20px;
 }
+
+form .search-input i{
+    pointer-events: none !important;
+}
 /* ////////////////////////////////////  product add view  css end here  //////////////////////////////////// */
+
+
+/* stat blur bg */
+.blur-star{
+    display: none;
+}
+.blur-bg{
+    margin: auto;
+    background-color: rgb(255 255 255 / 0%);
+    backdrop-filter: blur(8px);
+    width: 100%;
+    height: 662px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 325px;
+    z-index: 1;
+}
+.blur-star-inner{
+    display: flex;
+    width: 500px;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+.blur-bg .review-text{
+    width: 500px;
+}
+.blur-star .form-control{
+    background-color: #fff !important;
+    pointer-events: auto !important;
+}

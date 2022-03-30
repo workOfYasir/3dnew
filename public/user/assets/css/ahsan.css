@@ -159,7 +159,7 @@ mujtmah-almusmamen section start
 .heading-box__underline {
     background-color: #fff;
     width: 58px;
-    margin-right: 16px;
+    margin-right: 0px;
     height: 2px;
     border-radius: 25%;
 }
@@ -594,6 +594,26 @@ almuntjat section start
 
 .ahs-profile-plus-btn.disabled {
     color: #E0E0DE;
+}
+
+.ahs-star {
+    color: #EEEEF0;
+}
+
+.heading__plus {
+    color: #FD354F;
+    font-size: 16px;
+    line-height: 1;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.heading__minus {
+    color: #02BB84;
+    font-size: 16px;
+    line-height: 1;
+    margin-left: 10px;
+    margin-top: 5px;
 }
 
 

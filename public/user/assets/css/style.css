@@ -124,7 +124,7 @@ nav .left-side a:last-child {
     margin: -15px auto;
     position: absolute;
     left: 0;
-    top: 5px;
+    top: 0;
     right: -95px;
 }
 .dot.left {
@@ -135,6 +135,7 @@ nav .left-side a:last-child {
     position: absolute;
     left: 0;
     right: -155px;
+    top: -4px;
 }
 .register-icon {
 	    position: relative;
@@ -199,13 +200,13 @@ nav .left-side a:last-child {
 }
 */
 .btm-line{
-/* position:relative; */
+    position:relative;
 	text-align:right;
 }
 
 .inner-line{
     border: 1px solid #215099;
-	    background-color: #215099;
+	background-color: #215099;
     position: absolute;
     width: 60px;
     box-shadow: 0 6px 6px rgb(0 0 0 / 16%);
@@ -275,7 +276,8 @@ nav .left-side a:last-child {
     text-shadow: 0 6px 6px rgb(0 0 0 / 16%);
     font-family: 'JannaRegular';
     position: relative;
-	    font-weight: bold;
+	font-weight: bold;
+    position: relative;
 }
 
 .border-blue {
@@ -704,7 +706,7 @@ footer .right img {
 
 .banner-bg.sample {
     position: absolute;
-    z-index: 1;
+    /* z-index: 1; */
     top: 136px;
     width: 1040px;
     right: 3px;
@@ -713,7 +715,7 @@ footer .right img {
 .black-bg.sample {
     position: absolute;
     top: 96px;
-    z-index: -2;
+    /* z-index: -2; */
     width: 650px;
     left: 164px;
 }
@@ -808,15 +810,20 @@ footer .right img {
     position: relative;
     z-index: 1;
     top: 0px;
+    padding-bottom: 10px;
+}
+.banner .title .inner-line{
+    position: absolute;
+    right: 0;
 }
 
-.black-bg {
+/* .black-bg {
     position: absolute;
     top: -150px;
     z-index: -2;
     width: 650px;
     left: 20px;
-}
+} */
 
 .hands {
     position: absolute;
@@ -827,7 +834,7 @@ footer .right img {
 }
 
 .img-behind {
-    z-index: -2;
+    /* z-index: -2; */
     position: relative;
 }
 
@@ -1593,9 +1600,13 @@ textarea {
 .dot.right-center {
     display: block;
     text-align: center;
-    position: relative;
-    left: 40px;
-    top: 12px;
+    /* position: relative; */
+    /* left: 40px;
+    top: 12px; */
+
+    position: absolute;
+    right: 106px;
+    top: -35px;
 }
 
 .about-content {
@@ -1620,7 +1631,7 @@ textarea {
     width: 60px;
     height: 60px;
     position: absolute;
-    z-index: -2;
+    /* z-index: -2; */
 }
 
 .top.boxContainer .blue-box {
@@ -2035,15 +2046,16 @@ right: 185px;
 }
 
 .dot-txt-main .right.left-right-h{
-    left: 17px;
+    left: 17px !important;
 }
 
 .request .dot-txt-main .outline{
     padding-right: 0px !important;
-    left: 17px;
+    left: 22px;
 }
 .dot-txt-main .right.left-right-h::before{
     left: 4px;
+    top: -4px;
 }
 .request .dot-txt-main .modal-title{
     padding-right: 0px;
@@ -2067,11 +2079,14 @@ right: 185px;
 }
 
 .footer-white-heading .dot.center{
-    left: 20px;
+    /* left: 20px; */
+    left: 64px;
 }
 .footer-white-heading .dot.center::before{
     top: 0px;
-    right: -100px;
+    /* right: -100px; */
+    right: -120px;
+    
 }
 .footer-white-heading .title.white::after{
     left: 50px;
@@ -2087,6 +2102,7 @@ right: 185px;
 .heart-img img{
     max-width: 256px;
     max-height: 653px;
+    position: relative;
 }
 
 .profile-icon img{
@@ -2249,6 +2265,7 @@ input[type=number] {
 
 .map-place.boxContainer img {
     width: 330px;
+    position: relative;
 }
 
 .animate-left {
@@ -2315,7 +2332,7 @@ position: relative;
     position: relative;
     padding: 80px 0px;
     padding-top: 237px;
-    padding-bottom: 20px;
+    padding-bottom: 0px;
     background-color: #205098;
     z-index: 1000;
     /* background:#205098 url(../images/design.png) no-repeat;
@@ -2638,6 +2655,7 @@ position: relative;
     box-shadow: none;
 }
 .design-footer{
+    padding-top: 20px;
     background-color: #1F5098 !important;
 }
 .design-footer .footer-nav .nav-link{

@@ -33,6 +33,7 @@
                                     <div class="tab-content" id="myTabContent">
                                         <div class="tab-pane fade show active" id="userloginModal" role="tabpanel">
                                             <form action="{{route('login')}}" class="row gy-4 gx-5" method="post">
+                                                @csrf
                                                 <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3">
                                                     <label class="form-label dot">الايميل</label>
                                                     <input type="email" name="email" class="form-control email" placeholder="الاسم هنا .." value="">
@@ -57,6 +58,7 @@
                                         </div>
                                         <div class="tab-pane fade designerModel" id="designerloginModal" role="tabpanel" aria-labelledby="profile-tab">
                                             <form class="row gy-4 gx-5" method="post">
+                                                @csrf
                                                 <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3">
                                                     <label class="form-label dot">الايميل</label>
                                                     <input type="email" name="email" class="form-control email" placeholder="الاسم هنا .." value="">
