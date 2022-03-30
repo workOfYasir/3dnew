@@ -97,7 +97,12 @@ Route::group(['middleware' => 'auth', 'varify','cors'], function () {
     Route::get('/vieworderpublic/{id}', [App\Http\Controllers\HomeController::class, 'vieworderpublic'])->name('vieworderpublic');
   
     //Resource Route
+    Route::group(['middleware' =>  'role:user'], function () {
 
+    });
+    Route::group(['middleware' =>  'role:admin'], function () {
+        
+    });
     Route::resource('about', AboutUsController::class);
     Route::resource('contact', ContactControllers::class);
     Route::resource('client', ClientController::class);

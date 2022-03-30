@@ -10,7 +10,7 @@
 <body>
     <img src="{{ asset('assets/images/logo/logo-favicon.png') }}" alt=""><br>
 	<h3>{{ $details['body'] }} </h3><br>
-	<hr>
+	<hr>question
 	<a href="{{$link}}">{{$link}}</a><br>
 	
 </body>
