@@ -23,12 +23,12 @@
                                 <div class="col-md-12">
                                     <ul class="nav nav-tabs" id="myTab" role="tablist">
                                         <li class="nav-item" role="presentation">
-                                            <button class="nav-link active" id="medical-tab" data-bs-toggle="tab" data-bs-target="#userloginModal" type="button" role="tab" aria-selected="true">
+                                            <button class="nav-link active" id="" data-bs-toggle="tab" data-bs-target="#userloginModal" type="button" role="tab" aria-selected="true">
                                                 مستخدم
                                             </button>
                                         </li>
                                         <li class="nav-item" role="presentation">
-                                            <button class="nav-link" id="public-tab" data-bs-toggle="tab" data-bs-target="#designerloginModal" type="button" role="tab" aria-controls="profile" aria-selected="false">
+                                            <button class="nav-link" id="" data-bs-toggle="tab" data-bs-target="#designerloginModal" type="button" role="tab" aria-controls="profile" aria-selected="false">
                                                 مصمم 
                                             </button>
                                         </li>

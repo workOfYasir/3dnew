@@ -5,6 +5,19 @@
     /* padding: 200px 0; */
     background-size: cover;
 }
+.clean-headings h3{
+    font-size:40px;
+    font-weight: bold;
+}
+.clean-headings h6{
+    font-size:16px;
+    font-weight: bold;
+    color:#58595B;
+}
+.zhd-form-clean{
+    padding: 0 50px 30px 50px !important;
+}
+
 .cleanshot-row{
     min-height: 507px;
     padding-bottom: 64px;
@@ -59,6 +72,12 @@
     margin: 3px -10px;
 
 }
+.blue-text{
+    position: absolute;
+    bottom: -25px;
+    right: 22px;
+    color:#9FA5B2;
+}
 .orange{
    background: #FC4247 !important;
 }
@@ -68,8 +87,19 @@
 .color-circle-main{
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-
+    justify-content: right;
+    position: relative;
+  
+}
+.color-circle-main .color-circle {
+    margin-right: 20px;
+}
+.quantity-m-50{
+    margin-right: 47px;
+    margin-left: 50px;
+}
+.color-circle-main .color-circle:first-child {
+    margin-right: 0px;
 }
 .personal-pro{
     float: left !important;
@@ -227,5 +257,55 @@ opacity: 0 !important;
 .requests p{
     padding-top: 25px !important;
 }
+.small-card__images-text{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position:absolute;
+    width:100%;
+    height: 100%;
+    top:0;
+    left:0;
+    z-index:99;
+    justify-content: center;
+}
+.small-card__images-box{
+    position: relative;
+    width:128px;
+    height:128px;
+    z-index:0;
+    margin-left: 30px;
+}
+.small-card__images-box-shadow{
+    position: absolute;
+    width: 94%;
+    height: 95%;
+    top: 4px;
+    left: 4px;
+    z-index: 9;
+    /* margin-left: 30px !important; */
+    background: #000;
+    opacity: .5;
+    border-radius: 10px;
+}
+.small-card__images-img{
+    margin: 0 0 0 0 !important;
 
-/* kkkkk */
+}
+.small-card__images-text p {
+    color: #fff;
+    margin: 0 0 0 0;
+}
+.zhd-textarea-clean{
+    padding-top: 33px;
+    width: 90%;
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* position: absolute; */
+    /* text-align: center; */
+    left: 0;
+    right: 0;
+    margin: auto;
+
+}
