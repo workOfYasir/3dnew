@@ -965,7 +965,7 @@
         <!-- ahsan html start here -->
         <section class="mujtmah-almusmamen" id="design">
             <div class="container-m">
-                <div class="mujtmah-almusmamen-heading-wrapper">
+                <div class="mujtmah-almusmamen-heading-wrapper" data-aos="fade-up">
                     <div class="mujtmah-heading-box">
                         <div class="sub-heading-box">
                             <div class="red-dot"></div>
@@ -990,7 +990,7 @@
                 </div>
                 <div class="mujtmah-almusmamen-wrapper wrapper jst-btw">
                     <div class="mujtmah-box">
-                        <div class="mujtmah-box__content">
+                        <div class="mujtmah-box__content" data-aos="fade-up" data-aos-offset="200">
                             <h1 class="mujtmah-box__heading">هل أنت مصمم 3D ؟</h1>
                             <p class="mujtmah-box__para">
                                 هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص
@@ -1009,7 +1009,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="mujtmah-box__media">
+                        <div class="mujtmah-box__media" data-aos="zoom-in" data-aos-offset="500">
                             <img src="{{ asset('user/assets/images/mujtmah-box__image.png') }}"
                                 class="mujtmah-box__image">
                             <div class="mujtmah-box__count">
@@ -1019,7 +1019,7 @@
                         </div>
                     </div>
                     <div class="mujtmah-box2">
-                        <div class="mujtmah-box__media">
+                        <div class="mujtmah-box__media" data-aos="zoom-in" data-aos-offset="500">
                             <div class="mujtmah-box__count2">
                                 <h1 class="mujtmah-box__count-heading">+40</h1>
                                 <p class="mujtmah-box__count-sub-heading">مصمم</p>
@@ -1027,7 +1027,7 @@
                             <img src="{{ asset('user/assets/images/mujtmah-box__image3.png') }}"
                                 class="mujtmah-box__image">
                         </div>
-                        <div class="mujtmah-box__content">
+                        <div class="mujtmah-box__content" data-aos="fade-up" data-aos-offset="200">
                             <h1 class="mujtmah-box__heading">هل تحتاج مصمم 3D ؟</h1>
                             <p class="mujtmah-box__para">
                                 هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص
