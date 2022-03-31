@@ -1005,7 +1005,7 @@
                                 </a>
                                 <a href="#" class="m-btn mujtmah-box-btn" data-bs-toggle="modal" data-bs-target="#userRequestModal">
                                     <img src="{{ asset('user/assets/images/video.png') }}"
-                                        class="mujtmah-box-btn__img2"> سجل الان
+                                        class="mujtmah-box-btn__img2">فيديو تعريفي
                                 </a>
                             </div>
                         </div>
@@ -1034,18 +1034,23 @@
                                 العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد
                                 الحروف التى يولدها التطبيق.
                             </p>
-                            <div class="mujtmah-box-btn-wrapper wrapper al-center">
+                            <div class="mujtmah-box-btn-wrapper wrapper al-center mb-3">
+                                <button data-bs-toggle="modal" data-bs-target="#financialOperations2"
+                                    class="m-btn mujtmah-box-btn ml-2">
+                                    <img src="{{ asset('user/assets/images/video.png') }}"
+                                        class="mujtmah-box-btn__img2">فيديو تعريفي
+                                </button>
+
                                 <button data-bs-toggle="modal" data-bs-target="#financialOperations"
-                                    class="m-btn mujtmah-box-btn btn-white">
+                                    class="m-btn mujtmah-box-btn btn-white ml-2">
 
                                     <img src="{{ asset('user/assets/images/arrow-8.png') }}"
-                                        class="mujtmah-box-btn__img"> سجل الان
+                                        class="mujtmah-box-btn__img">أطلب الان
                                 </button>
-                                <button data-bs-toggle="modal" data-bs-target="#financialOperations2"
-                                    class="m-btn mujtmah-box-btn">
-                                    <img src="{{ asset('user/assets/images/video.png') }}"
-                                        class="mujtmah-box-btn__img2"> سجل الان
-                                </button>
+                            </div>
+                            <div class="mujtmah-box__wrapper wrapper al-center">
+                                <p class="mujtmah-box__link1 mgl-2">يتطلب تسجيل</p>
+                                <button class="mujtmah-box__link2" data-bs-toggle="modal" data-bs-target="#registerModal">للتسجيل اضغط هنا</button>
                             </div>
                         </div>
                     </div>
@@ -3401,9 +3406,6 @@
                         <div class="col-md-12 p-0">
 
                             <div class="modal-body">
-
-
-
                                 <!-- header designer start here -->
                                 <div class="toggle-overlay"></div>
                                 <div class="content-wrapper hide-on-load">
@@ -3745,6 +3747,7 @@
                                                         <button class="btn btn-trans">نوع البرنامج</button>
                                                         <button class="btn btn-trans">نوع البرنامج</button>
                                                         <button class="btn btn-trans">نوع البرنامج</button>
+                                                        <span class="blur-part"></span>
                                                     </div>
                                                 </div>
                                             </div>
