@@ -2959,13 +2959,13 @@ input[type=number] {
 
 /* designer-sec-1  css end here*/
 
-#designModal {
+/* #designModal {
     direction: ltr;
 }
 
 #designModal .modal-dialog {
     direction: rtl;
-}
+} */
 
 .btn-list .blur-part {
     background: #205098;

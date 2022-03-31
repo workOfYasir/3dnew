@@ -388,6 +388,7 @@
 
     .details p {
         width: 100%!important;
+        font-size: 13px;
     }
 
     /* Banner */
@@ -1812,6 +1813,9 @@
 /* Large Devices */
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
     /* asim */
+    .black-bg.sample{
+        right: 500px !important;
+    }
     .dot.right-center{
         right: 15px;
     }
@@ -2011,7 +2015,9 @@
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
- 
+    .black-bg.sample{
+        right: 500px !important;
+    }
     .banner .carousel-indicators{
         top: 500px;
     }
