@@ -241,7 +241,7 @@ mujtmah-almusmamen section start
     transition: all 0.5s ease-in-out;
 }
 
-.btn-white {
+.btn-white-1 {
     background-color: #fff;
     color: #1F5098;
     margin-left: 30px;
@@ -738,7 +738,7 @@ almuntjat section start
     font-size: 18px;
     color: #D83554;
     text-decoration: none;
-    margin: 0 0 0 30px;
+    margin: 0 0 0 45px;
     line-height: 1;
 }
 

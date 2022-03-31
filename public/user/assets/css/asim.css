@@ -1,7 +1,4 @@
     /* //////////////////////////////////// responsive start here ////////////////////////////////////////////////*/
-    /* @media (max-width: 575px){
-  
-} */
     
     @media (min-width: 360px) and (max-width: 767px) {
         .designer-sec {
@@ -44,7 +41,15 @@
             width: 50%;
         }
     }
+
+    /* ////////////////////////////////////////// mobile landscape responsive //////////////////////////////////////////////////////// */
+
+    @media (min-width: 576px) and (max-width: 767px) {
+        
+    }
     
+    /* ////////////////////////////////////////// tab landscape responsive //////////////////////////////////////////////////////// */
+
     @media (min-width: 768px) and (max-width: 991px) {
         .designer-sec {
             padding-top: 170px;
@@ -62,7 +67,10 @@
         }
     }
     
-    @media (min-width:992px) and (max-width: 1200px) {
+    /* ////////////////////////////////////////// Large landscape responsive //////////////////////////////////////////////////////// */
+
+
+    @media (min-width:992px) and (max-width: 1199px) {
         .search-form {
             padding: 0px 7px;
             padding-bottom: 50px;
@@ -79,7 +87,17 @@
         }
     }
     
-    @media (min-width: 1400px) {}
+
+    @media (min-width:1200px) and (max-width: 1300px) {
+
+    }
+
+    /* ////////////////////////////////////////// Extra Large landscape responsive //////////////////////////////////////////////////////// */
+
+    @media (min-width: 1400px) {
+
+
+    }
     /* //////////////////////////////////// responsive end here ////////////////////////////////////////////////*/
     /* ////////////////////////////////////  designer section start here  //////////////////////////////////// */
     
@@ -458,3 +476,6 @@
     .blur-bg-1.d-block{
         height: 250px;
     }
+
+
+    /* styling end here */

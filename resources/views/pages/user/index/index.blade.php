@@ -998,7 +998,7 @@
                                 الحروف التى يولدها التطبيق.
                             </p>
                             <div class="mujtmah-box-btn-wrapper wrapper al-center">
-                                <button  class="m-btn mujtmah-box-btn btn-white" data-bs-toggle="modal"
+                                <button  class="m-btn mujtmah-box-btn btn-white-1" data-bs-toggle="modal"
                                     data-bs-target="#registerModal">
                                     <img src="{{ asset('user/assets/images/arrow-8.png') }}"
                                         class="mujtmah-box-btn__img"> سجل الان
@@ -1042,7 +1042,7 @@
                                 </button>
 
                                 <button data-bs-toggle="modal" data-bs-target="#financialOperations"
-                                    class="m-btn mujtmah-box-btn btn-white">
+                                    class="m-btn mujtmah-box-btn btn-white-1">
                                 أطلب الان                                       
                                     <img src="{{ asset('user/assets/images/arrow-8.png') }}"
                                     class="mujtmah-box-btn__img mgl-0 mujtmah-box-btn__img2">

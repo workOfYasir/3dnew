@@ -388,6 +388,7 @@
 
     .details p {
         width: 100%!important;
+        font-size: 13px;
     }
 
     /* Banner */
