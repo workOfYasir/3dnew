@@ -1896,8 +1896,7 @@
                         <h1 class="modal-title right"><span class="btm-line d-flex">طلباتي<span class="inner-line"></span></span></h1>
                      </div>
                      <div class="profile zhd-box">
-                        <button class="btn btn-sky profile-btn invert">
-                        المصمم
+                        <button class="btn btn-sky profile-btn invert">                        المصمم
                         </button>
                         @if(@auth()->user()->profile == null)
                         <a href="#profile">
@@ -2061,9 +2060,13 @@
                                  <div class="row justify-content-center">
                                     <div class="col-md-12">
                                        <div class="row mb-2 justify-content-between conditional-blur">
-                                          <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
+                                          <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 service-fee-zhd">
                                              <label class="form-label">تكلفة تنفيذ الخدمة</label>
                                              <input type="text" class="form-control" placeholder="كتابة القيمة هنا .." readonly value="{{@$public->print_type}}">
+                                             <div class="service-fee-text">
+                                                    <span> سيتم اضافة رسوم الخدمة 10% وقيمة الضريبة المضافة 15% تلقائياً</span>
+                                                </div>
+
                                           </div>
                                           <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
                                              <label class="form-label">تاريخ البداية</label>
