@@ -2122,8 +2122,7 @@
                 <h1 class="modal-title right"><span class="btm-line d-flex">طلباتي<span class="inner-line"></span></span></h1>
               </div>
               <div class="profile zhd-box">
-                <button class="btn btn-sky profile-btn invert">
-                  المصمم
+                <button class="btn btn-sky profile-btn invert">                المصمم
                 </button>
                 @if(@auth()->user()->profile == null)
                 <a href="#profile">
@@ -2299,6 +2298,11 @@
                             </div>
                             <div class="prog-outer wrapper al-center">
                               <div class="prog-inner"></div>
+                              
+
+                            </div>
+                            <div class="service-fee-text prog-fee">
+                                <span> متبقي على تسليم الطلب 24 يوم 35 دقيقة 13 ثانية</span>
                             </div>
                           </div>
                         </div>
@@ -2589,8 +2593,11 @@
                                              <label class="form-label">تاريخ التسليم</label>
                                              <input type="text" class="form-control" placeholder="تحديد التاريخ هنا .. " readonly value="{{@$public->print_resolution}}">
                                           </div>
-                                          <div class="prog-outer wrapper al-center  ">
+                                          <div class="prog-outer wrapper al-center ">
                                             <div class="prog-inner full-prog"></div>
+                                            </div>
+                                            <div class="service-fee-text prog-fee">
+                                                <span>تم التسليم</span>
                                             </div>
                                        </div>
                                        <!-- <div class="row conditional-blur">
@@ -2644,7 +2651,7 @@
                                           <a href="javascript:void(0);" class="btn btn-form mx-3 with-arrow red-btn mt-10 starbluerModal-btn">الفاتورة</a>
                                           <!-- <a href="javascript:void(0);" class="btn btn-form mx-3 with-arrow mt-10 starbluerModal-btn"  data-bs-toggle="modal" data-bs-target="#designer-bid-submission">تقديم بلاغ</a> -->
                                           <button class="btn-form designer-btn clean-btn" data-bs-toggle="modal" data-bs-target="#designer-bid-submission">
-                                          تقديم بلاغ</button>
+                             تقديم بلاغ</button>
                                           <p class="mt-4">الرجاء التأكد من ارسال كافة الملفات لتجنب تقديم بلاغ عليك</p>
                                        </div>
                                     </h1>
@@ -2847,6 +2854,9 @@
                                           <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
                                              <label class="form-label">تكلفة تنفيذ الخدمة</label>
                                              <input type="text" class="form-control" placeholder="كتابة القيمة هنا .." readonly value="{{@$public->print_type}}">
+                                             <div class="service-fee-text">
+                                                <span>شامل رسوم الخدمة + قيمة الضريبة المضافة</span>
+                                            </div>
                                           </div>
                                           <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
                                              <label class="form-label">تاريخ البداية</label>
@@ -2862,9 +2872,7 @@
                                     <h1 class="title text-center mt-5 no-border conditional-blur">
                                        <div class="zhd-finished">
                                           <a href="javascript:void(0);" class="btn btn-form mx-3 with-arrow uplod-rev-btn mt-10">تم الارسال</a>
-                                          <a href="{{route('payment')}}" class="btn btn-form mx-3 with-arrow mt-10 red-btn">رفض</a>
-                                          <button class="btn-form designer-btn clean-btn" data-bs-toggle="modal" data-bs-target="#designer-bid-rejected">
-                              تقديم طلب </button>
+                                          <a href="javascript:void(0);" class="btn btn-form mx-3 with-arrow mt-10 red-btn" data-bs-toggle="modal" data-bs-target="#designer-bid-rejected">رفض</a>
 
                                           <p class="mt-4">سيتم ارسال تفاصيل تنفيذ المهمة الى المستخدم للقبول او الرفض</p>
                                        </div>
@@ -3075,6 +3083,9 @@
                                           <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
                                              <label class="form-label">تكلفة تنفيذ الخدمة</label>
                                              <input type="text" class="form-control" placeholder="كتابة القيمة هنا .." readonly value="{{@$public->print_type}}">
+                                             <div class="service-fee-text">
+                                                <span>شامل رسوم الخدمة + قيمة الضريبة المضافة</span>
+                                            </div>
                                           </div>
                                           <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
                                              <label class="form-label">تاريخ البداية</label>
