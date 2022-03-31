@@ -998,15 +998,15 @@
                                 الحروف التى يولدها التطبيق.
                             </p>
                             <div class="mujtmah-box-btn-wrapper wrapper al-center">
-                                <a href="#register" class="m-btn mujtmah-box-btn btn-white" data-bs-toggle="modal"
+                                <button  class="m-btn mujtmah-box-btn btn-white" data-bs-toggle="modal"
                                     data-bs-target="#registerModal">
                                     <img src="{{ asset('user/assets/images/arrow-8.png') }}"
                                         class="mujtmah-box-btn__img"> سجل الان
-                                </a>
-                                <a href="#" class="m-btn mujtmah-box-btn" data-bs-toggle="modal" data-bs-target="#userRequestModal">
+                                </button>
+                                <button class="m-btn mujtmah-box-btn" data-bs-toggle="modal" data-bs-target="#userRequestModal">
                                     <img src="{{ asset('user/assets/images/video.png') }}"
                                         class="mujtmah-box-btn__img2">فيديو تعريفي
-                                </a>
+                                </button>
                             </div>
                         </div>
                         <div class="mujtmah-box__media" data-aos="zoom-in" data-aos-offset="500">
@@ -1036,16 +1036,16 @@
                             </p>
                             <div class="mujtmah-box-btn-wrapper wrapper al-center mb-3">
                                 <button data-bs-toggle="modal" data-bs-target="#financialOperations2"
-                                    class="m-btn mujtmah-box-btn ml-2">
+                                    class="m-btn mujtmah-box-btn ml-3">
                                     <img src="{{ asset('user/assets/images/video.png') }}"
                                         class="mujtmah-box-btn__img2">فيديو تعريفي
                                 </button>
 
                                 <button data-bs-toggle="modal" data-bs-target="#financialOperations"
-                                    class="m-btn mujtmah-box-btn btn-white ml-2">
-
+                                    class="m-btn mujtmah-box-btn btn-white">
+                                أطلب الان                                       
                                     <img src="{{ asset('user/assets/images/arrow-8.png') }}"
-                                        class="mujtmah-box-btn__img">أطلب الان
+                                    class="mujtmah-box-btn__img mgl-0 mujtmah-box-btn__img2">
                                 </button>
                             </div>
                             <div class="mujtmah-box__wrapper wrapper al-center">
