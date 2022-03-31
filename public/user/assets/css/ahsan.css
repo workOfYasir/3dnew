@@ -714,6 +714,12 @@ almuntjat section start
     background-color: #D83554;
 }
 
+#user3RequestModal .almuntjat-form-error,
+#user4RequestModal .almuntjat-form-error {
+    width: 828px;
+    margin: auto;
+}
+
 
 /* ******************************
 almuntjat section end
