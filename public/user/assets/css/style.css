@@ -225,7 +225,7 @@ nav .left-side a:last-child {
 */
 
 .btm-line {
-    position: relative;
+    /* position: relative; */
     text-align: right;
 }
 
@@ -1692,9 +1692,9 @@ textarea {
     text-align: center;
 }
 
-.about-content .description {
+/* .about-content .description {
     padding: 0rem 9rem;
-}
+} */
 
 .boxContainer {
     position: relative;
@@ -2191,7 +2191,9 @@ textarea {
 
 .footer-white-heading .dot.center {
     /* left: 20px; */
-    left: 64px;
+    right: 0;
+    margin: auto;
+    display: block;
 }
 
 .footer-white-heading .dot.center::before {
@@ -2956,4 +2958,11 @@ input[type=number] {
 
 #designModal .modal-dialog {
     direction: rtl;
+}
+
+/* Safari */
+@media screen and (-webkit-min-device-pixel-ratio:0) { 
+    .mujtmah-heading-box {
+        width: 250px !important;
+    }
 }

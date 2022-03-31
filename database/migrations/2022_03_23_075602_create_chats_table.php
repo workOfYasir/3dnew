@@ -17,6 +17,9 @@ class CreateChatsTable extends Migration
             $table->id();
             $table->integer('user_id');
             $table->text('message');
+            $table->text('photo')->nullable();
+            $table->integer('reciever_id');
+            $table->tinyInteger('is_seen')->default('0');;
             $table->timestamps();
         });
     }

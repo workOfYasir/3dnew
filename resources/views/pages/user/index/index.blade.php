@@ -965,7 +965,7 @@
         <!-- ahsan html start here -->
         <section class="mujtmah-almusmamen" id="design">
             <div class="container-m">
-                <div class="mujtmah-almusmamen-heading-wrapper">
+                <div class="mujtmah-almusmamen-heading-wrapper" data-aos="fade-up">
                     <div class="mujtmah-heading-box">
                         <div class="sub-heading-box">
                             <div class="red-dot"></div>
@@ -987,12 +987,10 @@
                         data-bs-target="#designModal">
                         تعرف أكثر
                     </button>
-
-
                 </div>
                 <div class="mujtmah-almusmamen-wrapper wrapper jst-btw">
                     <div class="mujtmah-box">
-                        <div class="mujtmah-box__content">
+                        <div class="mujtmah-box__content" data-aos="fade-up" data-aos-offset="200">
                             <h1 class="mujtmah-box__heading">هل أنت مصمم 3D ؟</h1>
                             <p class="mujtmah-box__para">
                                 هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص
@@ -1005,13 +1003,13 @@
                                     <img src="{{ asset('user/assets/images/arrow-8.png') }}"
                                         class="mujtmah-box-btn__img"> سجل الان
                                 </a>
-                                <a href="#" class="m-btn mujtmah-box-btn">
+                                <a href="#" class="m-btn mujtmah-box-btn" data-bs-toggle="modal" data-bs-target="#userRequestModal">
                                     <img src="{{ asset('user/assets/images/video.png') }}"
                                         class="mujtmah-box-btn__img2"> سجل الان
                                 </a>
                             </div>
                         </div>
-                        <div class="mujtmah-box__media">
+                        <div class="mujtmah-box__media" data-aos="zoom-in" data-aos-offset="500">
                             <img src="{{ asset('user/assets/images/mujtmah-box__image.png') }}"
                                 class="mujtmah-box__image">
                             <div class="mujtmah-box__count">
@@ -1021,7 +1019,7 @@
                         </div>
                     </div>
                     <div class="mujtmah-box2">
-                        <div class="mujtmah-box__media">
+                        <div class="mujtmah-box__media" data-aos="zoom-in" data-aos-offset="500">
                             <div class="mujtmah-box__count2">
                                 <h1 class="mujtmah-box__count-heading">+40</h1>
                                 <p class="mujtmah-box__count-sub-heading">مصمم</p>
@@ -1029,7 +1027,7 @@
                             <img src="{{ asset('user/assets/images/mujtmah-box__image3.png') }}"
                                 class="mujtmah-box__image">
                         </div>
-                        <div class="mujtmah-box__content">
+                        <div class="mujtmah-box__content" data-aos="fade-up" data-aos-offset="200">
                             <h1 class="mujtmah-box__heading">هل تحتاج مصمم 3D ؟</h1>
                             <p class="mujtmah-box__para">
                                 هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص
@@ -3323,7 +3321,6 @@
                                     <h1 class="title text-center mt-5 no-border conditional-blur">
                                        <div class="zhd-finished">
                                           <a href="{{route('payment')}}" class="btn btn-form mx-3 with-arrow mt-10">طلباتي</a>
-
                                           <p class="mt-4">طلب مرفوض من قبل المصمم</p>
                                        </div>
                                     </h1>
@@ -5742,7 +5739,806 @@
             </div>
         </div>
     </div>
+    <div class="modal page result" id="userRequestModal">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 p-0">
+                            <div class="modal-header border-0">
+                                <div class="zhd-center-close">
+                                    <a href="{{route('home')}}" type="button" class="btn-close" aria-label="Close"></a>
+                                </div>
+                                <div class="zhd-center-hdng" style="margin-top: 1%;">
+                                    <span class="outline dot">اهلاً وسهلاً بكم</span>
+                                    <h1 class="modal-title right"><span class="btm-line d-flex">طلباتي<span class="inner-line"></span></span>
+                                    </h1>
+                                </div>
+                                <div class="profile zhd-box">
+                                    <button class="btn btn-sky profile-btn invert">
+                             المصمم
+                             </button> @if(@auth()->user()->profile == null)
+                                    <a href="#profile">
+                                        <img src="{{asset('user/assets/icons/avatar.svg')}}" alt="avatar">
+                                    </a>
+                                    @else
+                                    <a href="#profile">
+                             <img src="{{ asset('storage/' . auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
+                             </a> @endif
+                                </div>
+                            </div>
+                            <div class="modal-body designer-bdy">
+                                <div class="payment d-none" id="payment">
+                                    <div class="form-check">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                   <img src="{{asset('user/assets/images/mada-logo.svg')}}" alt="">
+                                   <p>مدى</p>
+                                   <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                </label>
+                                        <label class="form-check-label" for="flexRadioDefault2">
+                                   <img src="{{asset('user/assets/images/masterCard.svg')}}" alt="">
+                                   <p>فيزا وماستر كارد</p>
+                                   <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label" for="flexRadioDefault3">
+                                   <img src="{{asset('user/assets/images/apple-pay.svg')}}" alt="">
+                                   <p>آبل باي</p>
+                                   <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+                                </label>
+                                    </div>
+                                </div>
+                                <div class="reject-reason d-none" id="reject-reason">
+                                    <div class="row mt-1 justify-content-center">
+                                        <div class="col-md-8">
+                                            <label class="form-label dot">سبب الرفض</label>
+                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="  الوصف هنا"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-top">
+                                            <span>رقم الطلب :</span>
+                                            <span class="id">{{@$public->id}}</span>
+                                            <div class="dateTime">{{@$public->created_at}}</div>
+                                            <!-- <div class="dateTime small">11/01/2022 - 03:00PM</div> -->
+                                        </div>
+                                        <div class="">
+                                            <div class="row final two justify-content-center text-center">
+                                                <div class="col-auto">
+                                                    <div class="dateTime small">{{@$public->created_at}}</div>
+                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
+                                                    <div>
+                                                        <p>رفع الطلب</p>
+                                                    </div>
+                                                </div>
+                                                <img src="{{asset('user/assets/icons/redline.svg')}}" class="single" alt="">
+                                                <div class="col-auto">
+                                                    <div class="dateTime small text-white">{{@$public->created_at}}</div>
+                                                    @if(@$public->status == 2)
+                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle"> @else
+                                                    <img src="{{asset('user/assets/icons/red-circle.svg')}}" alt="red-circle"> @endif
+                                                    <div>
+                                                        <p>الدفع</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h1 class="title text-center no-border conditional-blur">معلومات الطلب</h1>
+    
+                                        <div class="row  p-xs-0  conditional-blur">
+                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                                <label class="form-label dot">اختيار اللون</label>
+                                                <div class="color-circle-main">
+                                                    <div class="color-circle blue-border">
+                                                    </div>
+                                                    <div class="color-circle  gray-bg">
+                                                    </div>
+                                                    <div class="color-circle  gray-bg">
+                                                    </div>
+                                                    <div class="color-circle gray-bg">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div>
+                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
+                                                <label class="form-label">الكمية</label>
+                                                <input type="text" class="form-control" placeholder=".. رقم الهاتف هنا" readonly="" value="03084875508">
+                                            </div>
+                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div>
+                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
+                                                <label class="form-label">المقاسات</label>
+                                                <input type="text" class="form-control" placeholder=".. الايميل هنا" readonly="" value="asimali7056@gmail.com">
+                                            </div>
+                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
+                                                <label class="form-label">شكل الطباعة</label>
+                                                <input type="text" class="form-control" placeholder=".. التخصص هنا" readonly="" value="رقم الهاتف هنا">
+                                            </div>
+                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div>
+                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
+                                                <label class="form-label">تقنية الطباعة</label>
+                                                <input type="text" class="form-control" placeholder=".. الجنس هنا" readonly="" value="male">
+                                            </div>
+                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div>
+                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 zhd-product-visit">
+    
+                                                <button class="btn btn-sky invert">
+                                             زيارة المنتج <img src="http://127.0.0.1:8000/user/assets/icons/arrow-right.svg" alt="arrow-right">
+                                         </button>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="designer-text mt-4">
+                                                    <label class="form-label dot">الملاحظات</label>
+                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="   الملاحظات .."></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+    
+                                        <div class="row">
+                                            <h1 class="title text-center mt-5 no-border conditional-blur zhd-quote">معلومات المصمم</h1>
+                                            <div class="col-md-12">
+                                                <div class="row justify-content-center">
+                                                    <div class="col-md-12  userreq-blur">
+                                                        <div class="userreq-blur-bg" id="star-blur-scroll"> </div>
+                                                        
+                    <!-- blur -->
+                    <div class="credit-log" id="star-blur-scroll">
+                        <div class="credit-logos-main blur-star-inner blur-bg-1">
+                     
+                            <div class="row">
+                            <div class="col-md-2 col-lg-2"></div>
+                                <div class="col-md-4 col-lg-4">
+                                    <div class="credit-logo-inner">
+                                        <div class="row">
+                                            <div class="col-md-3 col-lg-3">
+                                                <img src="{{ asset('user/assets/images/arrow-8.png') }}"
+                                                            class="credit-card-icon">
+                                            </div>
+                                            <div class="col-md-7 col-lg-7">
+                                                <h5>فيزا وماستر كارد</h5>
+                                            </div>
+                                            <div class="col-md-2 col-lg-2">
+                                                <i class="fa-solid fa-circle-check gray-background"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-lg-4">
+                                    <div class="credit-logo-inner flot-lft">
+                                        <div class="row">
+                                            <div class="col-md-3 col-lg-3">
+                                                <img src="{{ asset('user/assets/images/arrow-8.png') }}"
+                                                            class="credit-card-icon green-border">
+                                            </div>
+                                            <div class="col-md-7 col-lg-7">
+                                                <h5>مدى</h5>
+                                            </div>
+                                            <div class="col-md-2 col-lg-2">
+                                                <i class="fa-solid fa-circle-check "></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-lg-2"></div>
+                                <div class="col-md-2 col-lg-2"></div>
+                                <div class="col-md-4 col-lg-4 mt-4">
+                                    <div class="credit-logo-inner">
+                                        <div class="row">
+                                            <div class="col-md-3 col-lg-3">
+                                                <img src="{{ asset('user/assets/images/arrow-8.png') }}"
+                                                            class="credit-card-icon">
+                                            </div>
+                                            <div class="col-md-7 col-lg-7">
+                                                <h5>آبل باي</h5>
+                                            </div>
+                                            <div class="col-md-2 col-lg-2">
+                                                <i class="fa-solid fa-circle-check gray-background"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- blur  -->
+                                                        {{-- user- req --}}
+                                                        <div class="wrapper al-center jst-btw mb-5">
+                                                            <div class="profile tag-profile designer-order">
+                                                                <a href="#profile">
+                                                                    <img src="{{ asset('/user/assets/icons/avatar.svg')}}" alt="avatar"> </a>
+                                                                <div class="star-profile-txt">
+                                                                    <span>مصمم</span>
+                                                                    <h4> أسم المصمم</h4>
+                                                                    <div class="star-reating">
+                                                                        <i class="fa-solid fa-star"></i>
+                                                                        <i class="fa-solid fa-star"></i>
+                                                                        <i class="fa-solid fa-star"></i>
+                                                                        <i class="fa-solid fa-star"></i>
+                                                                        <i class="fa-solid fa-star"></i>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <button class="btn btn-sky invert">
+                                                    زيارة المنتج <img src="http://127.0.0.1:8000/user/assets/icons/arrow-right.svg" alt="arrow-right">
+                                                </button>
+                                                        </div>
+                                                        {{-- user- req --}}
+                                                        <div class="row mb-2 justify-content-between mb-5 conditional-blur">
+                                                            <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
+                                                                <label class="form-label">تكلفة تنفيذ الخدمة</label>
+                                                                <input type="text" class="form-control" placeholder="كتابة القيمة هنا .." readonly value="{{@$public->print_type}}">
+                                                                <p class="user-req-p">شامل رسوم الخدمة + قيمة الضريبة المضافة</p>
+                                                            </div>
+                                                            <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
+                                                                <label class="form-label">تاريخ البداية</label>
+                                                                <input type="text" class="form-control" placeholder="تحديد التاريخ هنا .." readonly value="{{@$public->print_color}}">
+                                                            </div>
+                                                            <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
+                                                                <label class="form-label">تاريخ التسليم</label>
+                                                                <input type="text" class="form-control" placeholder="تحديد التاريخ هنا .. " readonly value="{{@$public->print_resolution}}">
+                                                            </div>
+                                                        </div>
+                                                        <div class="wrapper jst-center userReq-btn-box">
+                                                            <button class="userReq-btn-box__btn userReq-btn-box__btn--a" data-bs-toggle="modal" data-bs-target="#user2RequestModal">قبول</button>
+                                                            <button class="userReq-btn-box__btn userReq-btn-box__btn--b" data-bs-toggle="modal" data-bs-target="#user3RequestModal">رفض</button>
+                                                            <button class="userReq-btn-box__btn userReq-btn-box__btn--c mgl-0 credit-btn-blur-show">عرض السعر</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="userreqFormBtn-box">
+                                                        <button class="btn btn-form paying-off-btn">
+                                                طلباتي
+                                            </button>
+                                                        <p class="userreqFormBtn-box__text">سيتم تحديث حالة الطلب من قبل المصمم</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{-- user request modal end --}}
+    <div class="modal page" id="user2RequestModal">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12 p-0">
+                            <div class="modal-header border-0">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                <div>
+                                    <span class="outline dot">أكثر 20 خدمة مختلفة</span>
+                                    <h1 class="modal-title right"><span class="btm-line"><span class="inner-line"></span>الخدمات العامة
+                                        </span>
+                                    </h1>
+                                </div>
+                                <div class="profile">
+                                    <button class="btn btn-sky profile-btn invert">
+                                        مستخدم
+                             </button> @if(@auth()->user()->profile == null)
+                                    <a href="#profile">
+                                        <img src="{{asset('user/assets/icons/avatar.svg')}}" alt="avatar">
+                                    </a>
+                                    @else
+                                    <a href="#profile">
+                                        <img src="{{ asset('storage/' . auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
+                                    </a> @endif
+                                </div>
+                            </div>
+    
+                            <div class="modal-body">
+                                <div id="carouselIndicators" class="carousel slide" data-bs-ride="carousel">
+    
+                                    <div class="carousel-inner">
+    
+                                        <div class="row align-items-center">
+                                            <div class="col-md-5">
+                                                <div class="submitted-data">
+                                                    <h6>رقم الطلب</h6>
+    
+                                                    <h1></h1>
+    
+                                                    <h1>406</h1>
+    
+                                                    <p><img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle"> رفع الطلب</p>
+                                                    <p><img src="{{asset('user/assets/icons/green-circle.png')}}" alt="red-circle">تقديم عرض سعر من قبل المصمم</p>
+                                                    <p><img src="{{asset('user/assets/icons/green-circle.png')}}" alt="red-circle"> الدفع</p>
+                                                    <!-- <span>سيتم تحديث حالة الطلب من قبل الإدارة</span> -->
+                                                </div>
+                                            </div>
+                                            <div class="col-md-7">
+                                                <img src="{{ asset('user/assets/images/mujtmah-box__image.png') }}" class="mujtmah-box__image">
+    
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-action designer-btn">
+                                                    <!-- data-bs-toggle="modal" data-bs-target="#publicServiesFinalModal"  / carousel-next-icon-show-->
+                                                    <button class="btn btn-form mx-3 with-arrow carousel-next-icon-show" type="submit">تفاصيل الطلب</button>
+                                                    <p>تم رفع الطلب بنجاح</p>
+                                                </div>
+                                            </div>
+    
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{-- user 2 request modal end --}}
+    <div class="modal page result" id="user3RequestModal">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 p-0">
+                            <div class="modal-header border-0">
+                                <div class="zhd-center-close">
+                                    <a href="{{route('home')}}" type="button" class="btn-close" aria-label="Close"></a>
+                                </div>
+                                <div class="zhd-center-hdng" style="margin-top: 1%;">
+                                    <span class="outline dot">اهلاً وسهلاً بكم</span>
+                                    <h1 class="modal-title right"><span class="btm-line d-flex">طلباتي<span class="inner-line"></span></span>
+                                    </h1>
+                                </div>
+                                <div class="profile zhd-box">
+                                    <button class="btn btn-sky profile-btn invert">
+                             المصمم
+                             </button> @if(@auth()->user()->profile == null)
+                                    <a href="#profile">
+                                        <img src="{{asset('user/assets/icons/avatar.svg')}}" alt="avatar">
+                                    </a>
+                                    @else
+                                    <a href="#profile">
+                             <img src="{{ asset('storage/' . auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
+                             </a> @endif
+                                </div>
+                            </div>
+                            <div class="modal-body designer-bdy">
+                                <div class="payment d-none" id="payment">
+                                    <div class="form-check">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                   <img src="{{asset('user/assets/images/mada-logo.svg')}}" alt="">
+                                   <p>مدى</p>
+                                   <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                </label>
+                                        <label class="form-check-label" for="flexRadioDefault2">
+                                   <img src="{{asset('user/assets/images/masterCard.svg')}}" alt="">
+                                   <p>فيزا وماستر كارد</p>
+                                   <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label" for="flexRadioDefault3">
+                                   <img src="{{asset('user/assets/images/apple-pay.svg')}}" alt="">
+                                   <p>آبل باي</p>
+                                   <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+                                </label>
+                                    </div>
+                                </div>
+                                <div class="reject-reason d-none" id="reject-reason">
+                                    <div class="row mt-1 justify-content-center">
+                                        <div class="col-md-8">
+                                            <label class="form-label dot">سبب الرفض</label>
+                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="  الوصف هنا"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-top">
+                                            <span>رقم الطلب :</span>
+                                            <span class="id">{{@$public->id}}</span>
+                                            <div class="dateTime">{{@$public->created_at}}</div>
+                                            <!-- <div class="dateTime small">11/01/2022 - 03:00PM</div> -->
+                                        </div>
+                                        <div class="">
+                                            <div class="row final two justify-content-center text-center">
+                                                <div class="col-auto">
+                                                    <div class="dateTime small">{{@$public->created_at}}</div>
+                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
+                                                    <div>
+                                                        <p>رفع الطلب</p>
+                                                    </div>
+                                                </div>
+                                                <img src="{{asset('user/assets/icons/redline.svg')}}" class="single" alt="">
+                                                <div class="col-auto">
+                                                    <div class="dateTime small text-white">{{@$public->created_at}}</div>
+                                                    @if(@$public->status == 2)
+                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle"> @else
+                                                    <img src="{{asset('user/assets/icons/red-circle.svg')}}" alt="red-circle"> @endif
+                                                    <div>
+                                                        <p>الدفع</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h1 class="title text-center no-border conditional-blur">معلومات الطلب</h1>
+    
+                                        <div class="row  p-xs-0  conditional-blur">
+                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                                <label class="form-label dot">اختيار اللون</label>
+                                                <div class="color-circle-main">
+                                                    <div class="color-circle blue-border">
+                                                    </div>
+                                                    <div class="color-circle  gray-bg">
+                                                    </div>
+                                                    <div class="color-circle  gray-bg">
+                                                    </div>
+                                                    <div class="color-circle gray-bg">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div>
+                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
+                                                <label class="form-label">الكمية</label>
+                                                <input type="text" class="form-control" placeholder=".. رقم الهاتف هنا" readonly="" value="03084875508">
+                                            </div>
+                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div>
+                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
+                                                <label class="form-label">المقاسات</label>
+                                                <input type="text" class="form-control" placeholder=".. الايميل هنا" readonly="" value="asimali7056@gmail.com">
+                                            </div>
+                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
+                                                <label class="form-label">شكل الطباعة</label>
+                                                <input type="text" class="form-control" placeholder=".. التخصص هنا" readonly="" value="رقم الهاتف هنا">
+                                            </div>
+                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div>
+                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
+                                                <label class="form-label">تقنية الطباعة</label>
+                                                <input type="text" class="form-control" placeholder=".. الجنس هنا" readonly="" value="male">
+                                            </div>
+                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div>
+                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 zhd-product-visit">
+    
+                                                <button class="btn btn-sky invert">
+                                             زيارة المنتج <img src="http://127.0.0.1:8000/user/assets/icons/arrow-right.svg" alt="arrow-right">
+                                         </button>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="designer-text mt-4">
+                                                    <label class="form-label dot">الملاحظات</label>
+                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="   الملاحظات .."></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+    
+                                        <div class="row">
+                                            <h1 class="title text-center mt-5 no-border conditional-blur zhd-quote">معلومات المصمم</h1>
+                                            <div class="col-md-12">
+                                                <div class="row justify-content-center">
+                                                    <div class="col-md-12 ">
+                                                        {{-- user- req --}}
+                                                        <div class="wrapper al-center jst-btw mb-5">
+                                                            <div class="profile tag-profile designer-order">
+                                                                <a href="#profile">
+                                                                    <img src="{{ asset('/user/assets/icons/avatar.svg')}}" alt="avatar"> </a>
+                                                                <div class="star-profile-txt">
+                                                                    <span>مصمم</span>
+                                                                    <h4> أسم المصمم</h4>
+                                                                    <div class="star-reating">
+                                                                        <i class="fa-solid fa-star"></i>
+                                                                        <i class="fa-solid fa-star"></i>
+                                                                        <i class="fa-solid fa-star"></i>
+                                                                        <i class="fa-solid fa-star"></i>
+                                                                        <i class="fa-solid fa-star"></i>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <button class="btn btn-sky invert">
+                                                    زيارة المنتج <img src="http://127.0.0.1:8000/user/assets/icons/arrow-right.svg" alt="arrow-right">
+                                                </button>
+                                                        </div>
+                                                        {{-- user- req --}}
+                                                        <div class="row mb-2 justify-content-between mb-5 conditional-blur">
+                                                            <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
+                                                                <label class="form-label">تكلفة تنفيذ الخدمة</label>
+                                                                <input type="text" class="form-control" placeholder="كتابة القيمة هنا .." readonly value="{{@$public->print_type}}">
+                                                                <p class="user-req-p">شامل رسوم الخدمة + قيمة الضريبة المضافة</p>
+                                                            </div>
+                                                            <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
+                                                                <label class="form-label">تاريخ البداية</label>
+                                                                <input type="text" class="form-control" placeholder="تحديد التاريخ هنا .." readonly value="{{@$public->print_color}}">
+                                                            </div>
+                                                            <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
+                                                                <label class="form-label">تاريخ التسليم</label>
+                                                                <input type="text" class="form-control" placeholder="تحديد التاريخ هنا .. " readonly value="{{@$public->print_resolution}}">
+                                                            </div>
+                                                        </div>
+                                                        <div class="prog-box mb-5">
+                                                            <h6 class="prog-box__heading">مدة التنفيذة</h6>
+                                                            <div class="prog-outer prog-outer--b wrapper al-center">
+                                                                <div class="prog-inner"></div>
+                                                            </div>
+                                                            <p class="prog-box__para">متبقي على تسليم الطلب 24 يوم 35 دقيقة 13 ثانية</p>
+                                                        </div>
+                                                        <div class="bill-click-show">
+                                                            <div class="row">
+                                                                <div class="col-md-12">
+                                                                    <label class="form-label dot">عموم الحاله الصحية</label>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <textarea class="form-control designer-text-area" id="exampleFormControlTextarea1" rows="4" placeholder="  ..الوصف هنا" readonly=""></textarea>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <div class="upload-btn-wrapper designer-upload">
+                                                                    <button class="btn btn-upload-designer health"><img src="http://127.0.0.1:8000/user/assets/icons/upload-img.svg" alt="upload-img"></button>
+                                                                    <input type="file" id="health-file" required="" name="myfile">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="almuntjat-form-error almuntjat-form-error-2">
+                                                            <img src="{{ asset('/user/assets/images/warning.png')}}" alt="" class="almuntjat-form-error__img"> بعد إضافة المنتج سيذهب الى الإدارة للمراجعة للقبول أو الرفض
+                                                        </div>
 
+                                                        <div class="wrapper jst-center userReq-btn-box userReq-btn-box--a bill-click-hide">
+                                                            <button class="userReq-btn-box__btn userReq-btn-box__btn--d bill-btn">الفاتورة</button>
+                                                            <button class="userReq-btn-box__btn userReq-btn-box__btn--e mgl-0" data-bs-toggle="modal" data-bs-target="#user4RequestModal">تقديم بلاغ</button>
+                                                        </div>
+                                                        <div class="wrapper jst-center userReq-btn-box userReq-btn-box--a bill-click-show">
+                                                            <button class="userReq-btn-box__btn userReq-btn-box__btn--d">انهاء الخدمة</button>
+                                                            <button class="userReq-btn-box__btn userReq-btn-box__btn--d orange-bg">الفاتورة</button>
+                                                            <button class="userReq-btn-box__btn userReq-btn-box__btn--e mgl-0" data-bs-toggle="modal" data-bs-target="">تقديم بلاغ</button>
+                                                        </div>
+                                                        <p class="userreqFormBtn-box__text userreqFormBtn-box__text--a">تمت عملية الدفع بنجاح</p>
+                                                    </div>
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{-- user 3 requestmodal end --}}
+    <div class="modal page result" id="user4RequestModal">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 p-0">
+                            <div class="modal-header border-0">
+                                <div class="zhd-center-close">
+                                    <a href="{{route('home')}}" type="button" class="btn-close" aria-label="Close"></a>
+                                </div>
+                                <div class="zhd-center-hdng" style="margin-top: 1%;">
+                                    <span class="outline dot">اهلاً وسهلاً بكم</span>
+                                    <h1 class="modal-title right"><span class="btm-line d-flex">طلباتي<span class="inner-line"></span></span>
+                                    </h1>
+                                </div>
+                                <div class="profile zhd-box">
+                                    <button class="btn btn-sky profile-btn invert">
+                             المصمم
+                             </button> @if(@auth()->user()->profile == null)
+                                    <a href="#profile">
+                                        <img src="{{asset('user/assets/icons/avatar.svg')}}" alt="avatar">
+                                    </a>
+                                    @else
+                                    <a href="#profile">
+                             <img src="{{ asset('storage/' . auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
+                             </a> @endif
+                                </div>
+                            </div>
+                            <div class="modal-body designer-bdy">
+                                <div class="payment d-none" id="payment">
+                                    <div class="form-check">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                   <img src="{{asset('user/assets/images/mada-logo.svg')}}" alt="">
+                                   <p>مدى</p>
+                                   <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                </label>
+                                        <label class="form-check-label" for="flexRadioDefault2">
+                                   <img src="{{asset('user/assets/images/masterCard.svg')}}" alt="">
+                                   <p>فيزا وماستر كارد</p>
+                                   <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label" for="flexRadioDefault3">
+                                   <img src="{{asset('user/assets/images/apple-pay.svg')}}" alt="">
+                                   <p>آبل باي</p>
+                                   <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+                                </label>
+                                    </div>
+                                </div>
+                                <div class="reject-reason d-none" id="reject-reason">
+                                    <div class="row mt-1 justify-content-center">
+                                        <div class="col-md-8">
+                                            <label class="form-label dot">سبب الرفض</label>
+                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="  الوصف هنا"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-top">
+                                            <span>رقم الطلب :</span>
+                                            <span class="id">{{@$public->id}}</span>
+                                            <div class="dateTime">{{@$public->created_at}}</div>
+                                            <!-- <div class="dateTime small">11/01/2022 - 03:00PM</div> -->
+                                        </div>
+                                        <div class="">
+                                            <div class="row final two justify-content-center text-center">
+                                                <div class="col-auto">
+                                                    <div class="dateTime small">{{@$public->created_at}}</div>
+                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
+                                                    <div>
+                                                        <p>رفع الطلب</p>
+                                                    </div>
+                                                </div>
+                                                <img src="{{asset('user/assets/icons/redline.svg')}}" class="single" alt="">
+                                                <div class="col-auto">
+                                                    <div class="dateTime small text-white">{{@$public->created_at}}</div>
+                                                    @if(@$public->status == 2)
+                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle"> @else
+                                                    <img src="{{asset('user/assets/icons/red-circle.svg')}}" alt="red-circle"> @endif
+                                                    <div>
+                                                        <p>الدفع</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h1 class="title text-center no-border conditional-blur">معلومات الطلب</h1>
+    
+                                        <div class="row  p-xs-0  conditional-blur">
+                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                                <label class="form-label dot">اختيار اللون</label>
+                                                <div class="color-circle-main">
+                                                    <div class="color-circle blue-border">
+                                                    </div>
+                                                    <div class="color-circle  gray-bg">
+                                                    </div>
+                                                    <div class="color-circle  gray-bg">
+                                                    </div>
+                                                    <div class="color-circle gray-bg">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div>
+                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
+                                                <label class="form-label">الكمية</label>
+                                                <input type="text" class="form-control" placeholder=".. رقم الهاتف هنا" readonly="" value="03084875508">
+                                            </div>
+                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div>
+                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
+                                                <label class="form-label">المقاسات</label>
+                                                <input type="text" class="form-control" placeholder=".. الايميل هنا" readonly="" value="asimali7056@gmail.com">
+                                            </div>
+                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
+                                                <label class="form-label">شكل الطباعة</label>
+                                                <input type="text" class="form-control" placeholder=".. التخصص هنا" readonly="" value="رقم الهاتف هنا">
+                                            </div>
+                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div>
+                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
+                                                <label class="form-label">تقنية الطباعة</label>
+                                                <input type="text" class="form-control" placeholder=".. الجنس هنا" readonly="" value="male">
+                                            </div>
+                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div>
+                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 zhd-product-visit">
+    
+                                                <button class="btn btn-sky invert">
+                                             زيارة المنتج <img src="http://127.0.0.1:8000/user/assets/icons/arrow-right.svg" alt="arrow-right">
+                                         </button>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="designer-text mt-4">
+                                                    <label class="form-label dot">الملاحظات</label>
+                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="   الملاحظات .."></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+    
+                                        <div class="row">
+                                            <h1 class="title text-center mt-5 no-border conditional-blur zhd-quote">معلومات المصمم</h1>
+                                            <div class="col-md-12   userreq-blur">
+                                                 <!-- blur -->
+                                                        <div class="blur-star blur-bg blur-bg--a d-block" id="star-blur-scroll">
+                                                            <div class="blur-star-inner">
+                                                                <div class="review-text">
+                                                                    <label class="form-label">تقييم المصمم</label>
+                                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="  الوصف "></textarea>
+                                                        
+                                                                    <div class="rating">
+                                                        
+                                                                        <div class="star-reating">
+                                                                            <i class="fa-solid fa-star"></i>
+                                                                            <i class="fa-solid fa-star"></i>
+                                                                            <i class="fa-solid fa-star"></i>
+                                                                            <i class="fa-solid fa-star"></i>
+                                                                            <i class="fa-solid fa-star"></i>
+                                                                        </div>
+                                                        
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- blur  -->
+                                                <div class="row justify-content-center">
+                                                    <div class="col-md-12">
+                                                       
+                                                        {{-- user- req --}}
+                                                        <div class="wrapper al-center jst-btw mb-5">
+                                                            <div class="profile tag-profile designer-order">
+                                                                <a href="#profile">
+                                                                    <img src="{{ asset('/user/assets/icons/avatar.svg')}}" alt="avatar"> </a>
+                                                                <div class="star-profile-txt">
+                                                                    <span>مصمم</span>
+                                                                    <h4> أسم المصمم</h4>
+                                                                    <div class="star-reating">
+                                                                        <i class="fa-solid fa-star"></i>
+                                                                        <i class="fa-solid fa-star"></i>
+                                                                        <i class="fa-solid fa-star"></i>
+                                                                        <i class="fa-solid fa-star"></i>
+                                                                        <i class="fa-solid fa-star"></i>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <button class="btn btn-sky invert">
+                                                    زيارة المنتج <img src="http://127.0.0.1:8000/user/assets/icons/arrow-right.svg" alt="arrow-right">
+                                                </button>
+                                                        </div>
+                                                        {{-- user- req --}}
+                                                        <div class="row mb-2 justify-content-between mb-5 conditional-blur">
+                                                            <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
+                                                                <label class="form-label">تكلفة تنفيذ الخدمة</label>
+                                                                <input type="text" class="form-control" placeholder="كتابة القيمة هنا .." readonly value="{{@$public->print_type}}">
+                                                                <p class="user-req-p">شامل رسوم الخدمة + قيمة الضريبة المضافة</p>
+                                                            </div>
+                                                            <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
+                                                                <label class="form-label">تاريخ البداية</label>
+                                                                <input type="text" class="form-control" placeholder="تحديد التاريخ هنا .." readonly value="{{@$public->print_color}}">
+                                                            </div>
+                                                            <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
+                                                                <label class="form-label">تاريخ التسليم</label>
+                                                                <input type="text" class="form-control" placeholder="تحديد التاريخ هنا .. " readonly value="{{@$public->print_resolution}}">
+                                                            </div>
+                                                        </div>
+                                                        <div class="almuntjat-form-error almuntjat-form-error-2">
+                                                            <img src="http://127.0.0.1:8000/user/assets/images/warning.png" alt="" class="almuntjat-form-error__img"> بعد إضافة المنتج سيذهب الى الإدارة للمراجعة للقبول أو الرفض
+                                                        </div>
+                                                    </div>
+                                                    <div class="userreqFormBtn-box">
+                                                        <button class="btn btn-form paying-off-btn">
+                                                            ارسال
+                                                        </button>
+                                                        <p class="userreqFormBtn-box__text">هل انت متأكد من تقديم بلاغ ؟</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{-- user 4 requestmodl end --}}
     <!-- About US -->
 
     @include('pages.user.aboutModal')
@@ -5953,6 +6749,7 @@
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="{{ asset('user/assets/js/scripts.js') }}"></script>
+    <script src="{{ asset('user/assets/js/formValidation.js') }}"></script>
 
 </body>
 

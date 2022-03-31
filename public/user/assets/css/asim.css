@@ -1,387 +1,452 @@
-/* //////////////////////////////////// responsive start here ////////////////////////////////////////////////*/
-/* @media (max-width: 575px){
+    /* //////////////////////////////////// responsive start here ////////////////////////////////////////////////*/
+    /* @media (max-width: 575px){
   
 } */
-@media (min-width: 360px) and (max-width: 767px)  {
     
-    .designer-sec{
+    @media (min-width: 360px) and (max-width: 767px) {
+        .designer-sec {
+            padding-top: 150px;
+        }
+        .designer-sec::before {
+            background-size: cover;
+            top: 140px;
+            max-height: 150px;
+        }
+        .designer-title {
+            font-size: 36px;
+        }
+        .search-form {
+            padding: 0px;
+            padding-bottom: 50px;
+        }
+        .search-form .ps-0 {
+            padding-left: 12px !important;
+        }
+        .designer-sec .sort-btn .btn {
+            text-align: right;
+        }
+        .btn-list {
+            padding: 0px;
+            text-align: center;
+        }
+        .btn-white {
+            margin-left: 10px;
+            margin-bottom: 30px;
+        }
+        .btn-trans {
+            margin-left: 10px;
+            margin-bottom: 30px;
+        }
+        .btn-list .btn-trans:nth-child(even) {
+            margin-left: 0px !important;
+        }
+        .design-card-inner .row:first-child .col-md-6 {
+            width: 50%;
+        }
+    }
+    
+    @media (min-width: 768px) and (max-width: 991px) {
+        .designer-sec {
+            padding-top: 170px;
+        }
+        .designer-sec::before {
+            top: 140px;
+        }
+        .btn-white {
+            margin-left: 10px;
+            margin-bottom: 30px;
+        }
+        .btn-trans {
+            margin-left: 10px;
+            margin-bottom: 30px;
+        }
+    }
+    
+    @media (min-width:992px) and (max-width: 1200px) {
+        .search-form {
+            padding: 0px 7px;
+            padding-bottom: 50px;
+        }
+        .btn-list {
+            margin-bottom: 52px;
+            padding-right: 28px;
+        }
+        .btn-white {
+            margin-left: 15px;
+        }
+        .btn-trans {
+            margin-left: 10px;
+        }
+    }
+    
+    @media (min-width: 1400px) {}
+    /* //////////////////////////////////// responsive end here ////////////////////////////////////////////////*/
+    /* ////////////////////////////////////  designer section start here  //////////////////////////////////// */
+    
+    #designinnerModal .designer-sec {
         padding-top: 150px;
     }
-    .designer-sec::before {
-        background-size: cover;
-        top: 140px;
-        max-height: 150px;
-    }
-    .designer-title {
-        font-size: 36px;
-    }
-    .search-form {
-        padding: 0px;
-        padding-bottom: 50px;
+    
+    #designinnerModal .designer-sec::before {
+        top: 130px;
     }
     
-    .search-form .ps-0{
-        padding-left: 12px !important;
+    .product-1 {
+        background: url(../images/design-9.png) no-repeat;
+        background-size: cover;
+        background-position: center;
     }
-    .designer-sec .sort-btn .btn{
-        text-align: right;
+    
+    .product-2 {
+        background: url(../images/design-2.png) no-repeat;
+        background-size: cover;
+        background-position: center;
     }
-    .btn-list {
+    
+    .product-3 {
+        background: url(../images/design-3.png) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .product-4 {
+        background: url(../images/design-4.png) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .product-5 {
+        background: url(../images/design-5.png) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    #designinnerModal .modal-header {
         padding: 0px;
+        padding-right: 4rem;
+    }
+    
+    #designinnerModal .modal-header .btn-close {
+        box-shadow: none;
+    }
+    
+    #designinnerModal .design-card-inner a {
+        width: 100%;
+    }
+    
+    .add-btn span {
+        color: #1EA9D4;
+    }
+    
+    .btn-add {
+        margin: 0;
+        border: 1px solid #1EA9D4;
+        background-color: #1EA9D4;
+        color: #ffffff;
+        border-radius: 50px;
+        opacity: 1;
+        font-size: 18px;
+        font-weight: bold;
+        width: 40px;
+        height: 40px;
+    }
+    
+    #productdesignModal .modal-header {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    
+    #productdesignModal .btn-close {
+        padding: 0px;
+        width: 40px;
+        height: 40px;
+        transform: translate(45px);
+    }
+    
+    #productdesignModal .designer-sec::before {
+        background: none !important;
+    }
+    
+    .design-card-right-top {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+    
+    .design-card-right-top p {
+        font-size: 10px;
+        font-weight: bold;
+        color: #1EA9D4;
+    }
+    
+    #productdesignModal .designer-sec-1 {
+        padding-bottom: 80px !important;
+    }
+    
+    .txt-green {
+        color: #1ED46B !important;
+    }
+    
+    .txt-blue {
+        color: #1EA9D4 !important;
+    }
+    
+    .txt-red {
+        color: #D83554 !important;
+    }
+    
+    .product-add-link {
+        width: 100%;
+    }
+    /* ////////////////////////////////////  designer-sec-1  css end here  //////////////////////////////////// */
+    /* ////////////////////////////////////  product add view  css start here  //////////////////////////////////// */
+    
+    .product-add-upload {
+        background-color: #9FA5B2;
+        display: block;
+        position: relative;
+        border-radius: 10px;
+        border: 4px solid #fff;
+        width: 128px;
+        height: 128px;
+    }
+    
+    .product-add-upload p {
+        color: #fff;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        opacity: 0;
+    }
+    
+    .uplod-img-active p {
+        opacity: 1;
+    }
+    
+    .product-add-upload img {
+        margin-bottom: 0px;
+        height: 100%;
+    }
+    
+    .product-add-upload .camera-icon {
+        position: absolute;
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        bottom: -20px;
+        left: -20px;
+        background-color: #1F5098;
+        text-align: center;
+        cursor: pointer;
+    }
+    
+    .product-add-upload .camera-icon i {
+        line-height: 2;
+        color: #fff;
+    }
+    
+    .almuntjat-form-error i {
+        font-size: 18px;
+        margin-left: 20px;
+        color: #fff;
+    }
+    
+    .upload-cross-red {
+        background-color: #D41E1E;
+    }
+    
+    .uplod-img-active {
+        border: 4px solid #1EA9D4;
+    }
+    
+    .ahs-profile-plus {
+        font-size: 40px !important;
+    }
+    
+    .switch {
+        width: 69%;
+        text-align: left;
+        margin-top: 20px;
+    }
+    
+    .switch .form-check {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        direction: ltr;
+        padding-left: 0px;
+    }
+    
+    .switch .form-check-input {
+        width: 40px;
+        height: 23px;
+    }
+    
+    .switch .form-check-label {
+        margin: 0px;
+        padding-left: 10px;
+        border: none;
+        font-size: 14px;
+        justify-content: left;
+    }
+    
+    .switch .form-check-input:focus {
+        box-shadow: none;
+    }
+    
+    .switch p {
+        color: #9FA5B2;
+        font-family: 'JannaLT-bold';
+        margin-bottom: 14px;
+        font-weight: 300;
+    }
+    
+    .error-red-bg {
+        background-color: #D83554 !important;
+    }
+    
+    .productadd-top-btn {
+        background-color: #E0E0DE;
+        color: #fff;
+        height: 40px;
+        width: 133px;
+        text-align: center;
+        border-radius: 25px;
+        transition: all 0.3s ease-in-out;
+        border-radius: 20px;
+    }
+    
+    form .search-input i {
+        pointer-events: none !important;
+    }
+    /* ////////////////////////////////////  product add view  css end here  //////////////////////////////////// */
+    /* stat blur bg */
+    
+    .blur-star {
+        display: none;
+    }
+    
+    .blur-bg {
+        margin: auto;
+        background-color: rgb(255 255 255 / 0%);
+        backdrop-filter: blur(8px);
+        width: 100%;
+        height: 662px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 325px;
+        z-index: 1;
+    }
+    
+    .blur-star-inner {
+        display: flex;
+        width: 500px;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+    
+    .blur-bg .review-text {
+        width: 500px;
+    }
+    
+    .blur-star .form-control {
+        background-color: #fff !important;
+        pointer-events: auto !important;
+    }
+    
+    .blur-star-bottom-btn {
         text-align: center;
     }
-    .btn-white {
-        margin-left: 10px;
-        margin-bottom: 30px;
-    }
-    .btn-trans {
-        margin-left: 10px;
-        margin-bottom: 30px;
-    }
-   .btn-list .btn-trans:nth-child(even){
-        margin-left: 0px !important;
-    }
-    .design-card-inner .row:first-child .col-md-6{
-        width: 50%;
-    }
-   
-}
-
-
-@media (min-width: 768px) and (max-width: 991px) {
-    .designer-sec{
-        padding-top: 170px;
-    }
-    .designer-sec::before{
-        top: 140px;
-    }
-    .btn-white {
-        margin-left: 10px;
-        margin-bottom: 30px;
-    }
-    .btn-trans {
-        margin-left: 10px;
-        margin-bottom: 30px;
-    }
-}
-
-@media (min-width:992px) and (max-width: 1200px) {
-    .search-form {
-        padding: 0px 7px;
-        padding-bottom: 50px;
-    }
-    .btn-list {
-        margin-bottom: 52px;
-        padding-right: 28px;
-    }
-    .btn-white {
-        margin-left: 15px;
-    }
-    .btn-trans {
-        margin-left: 10px;
-    }
-}
-@media (min-width: 1400px) {
     
-}
-
-/* //////////////////////////////////// responsive end here ////////////////////////////////////////////////*/
-
-/* ////////////////////////////////////  designer section start here  //////////////////////////////////// */
-#designinnerModal .designer-sec{
-    padding-top: 150px;
-}
-#designinnerModal .designer-sec::before{
-    top: 130px;
-}
-.product-1{
-    background: url(../images/design-9.png) no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-.product-2{
-    background: url(../images/design-2.png) no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-.product-3{
-    background: url(../images/design-3.png) no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-.product-4{
-    background: url(../images/design-4.png) no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-.product-5{
-    background: url(../images/design-5.png) no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-
-#designinnerModal .modal-header {
-    padding: 0px;
-    padding-right: 4rem;
-}
-#designinnerModal .modal-header .btn-close {
-    box-shadow: none;
-}
-
-#designinnerModal .design-card-inner a{
-    width: 100%;
-}
-.add-btn span{
-    color: #1EA9D4;
-}
-.btn-add {
-    margin: 0;
-    border: 1px solid #1EA9D4;
-    background-color: #1EA9D4;
-    color: #ffffff;
-    border-radius: 50px;
-    opacity: 1;
-    font-size: 18px;
-    font-weight: bold;
-    width: 40px;
-    height: 40px;
-}
-
-#productdesignModal .modal-header{
-    padding-left: 0px;
-    padding-right: 0px;
-}
-#productdesignModal  .btn-close{
-    padding: 0px;
-    width: 40px;
-    height: 40px;
-    transform: translate(45px);
-}
-#productdesignModal .designer-sec::before{
-    background: none !important;
-}
-.design-card-right-top{
-    position: absolute;
-    top: 20px;
-    right: 20px;
-}
-.design-card-right-top p{
-    font-size: 10px;
-    font-weight: bold;
-    color:  #1EA9D4;
-}
-#productdesignModal .designer-sec-1{
-    padding-bottom: 80px !important;
-}
-.txt-green{
-    color:  #1ED46B !important;
-}
-.txt-blue{
-    color:  #1EA9D4 !important;
-}
-.txt-red{
-    color:  #D83554 !important;
-}
-
-
-.product-add-link{
-    width: 100%;
-}
-/* ////////////////////////////////////  designer-sec-1  css end here  //////////////////////////////////// */
-
-
-/* ////////////////////////////////////  product add view  css start here  //////////////////////////////////// */
-
-.product-add-upload{
-    background-color: #9FA5B2;
-    display: block;
-    position: relative;
-    border-radius: 10px;
-    border: 4px solid #fff;
-    width: 128px;
-    height: 128px;
-}
-.product-add-upload p{
-    color: #fff;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    position: absolute;
-    width: 100%;
-    top: 0;
-    opacity: 0;
-}
-.uplod-img-active p{
-    opacity: 1;
-}
-.product-add-upload img {
-    margin-bottom: 0px;
-    height: 100%;
-}
-.product-add-upload .camera-icon{
-    position: absolute;
-    width: 34px;
-    height: 34px;
-    border-radius: 50%;
-    bottom: -20px;
-    left: -20px;
-    background-color: #1F5098;
-    text-align: center;
-    cursor: pointer;
-}
-.product-add-upload .camera-icon i{
-    line-height: 2;
-    color: #fff;
-}
-
-.almuntjat-form-error i{
-    font-size: 18px;
-    margin-left: 20px;
-    color: #fff;
-}
-.upload-cross-red{
-    background-color: #D41E1E;
-}
-
-.uplod-img-active{
-    border: 4px solid #1EA9D4;
-
-}
-
-.ahs-profile-plus{
-    font-size: 40px !important;
-}
-
-.switch{
-    width: 69%;
-    text-align: left;
-    margin-top: 20px;
-}
-.switch .form-check {
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    direction: ltr;
-    padding-left: 0px;
-}
-.switch .form-check-input {
-    width: 40px;
-    height: 23px;
-}
-.switch .form-check-label {
-    margin: 0px;
-    padding-left: 10px;
-    border: none;
-    font-size: 14px;
-    justify-content: left;
-}
-.switch .form-check-input:focus{
-box-shadow: none;
-}
-.switch p{
-    color: #9FA5B2;
-    font-family: 'JannaLT-bold';
-    margin-bottom: 14px;
-    font-weight: 300;
-}
-
-.error-red-bg{
-    background-color:  #D83554 !important;
-}
-
-.productadd-top-btn{
-    background-color: #E0E0DE;
-    color: #fff;
-    height: 40px;
-    width: 133px;
-    text-align: center;
-    border-radius: 25px;
-    transition: all 0.3s ease-in-out;
-    border-radius: 20px;
-}
-
-form .search-input i{
-    pointer-events: none !important;
-}
-/* ////////////////////////////////////  product add view  css end here  //////////////////////////////////// */
-
-
-/* stat blur bg */
-.blur-star{
-    display: none;
-}
-.blur-bg{
-    margin: auto;
-    background-color: rgb(255 255 255 / 0%);
-    backdrop-filter: blur(8px);
-    width: 100%;
-    height: 662px;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 325px;
-    z-index: 1;
-}
-.blur-star-inner{
-    display: flex;
-    width: 500px;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-}
-.blur-bg .review-text{
-    width: 500px;
-}
-.blur-star .form-control{
-    background-color: #fff !important;
-    pointer-events: auto !important;
-}
-.blur-star-bottom-btn{
-    text-align: center;
-}
-.review-text-hide{
-    display: none;
-}
-.show-footer-btns{
-    display: none;
-}
-
-
-.credit-logo-inner{
-    border-radius: 20px!important;
-    background-color: #fff;
-    color: #000;
-    border: 4px solid D3DADE;
-    padding: 8px 15px;
-    height: 73px;
-}
-.credit-card-icon{
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: 5px solid #D3DADE;
-    padding: 10px;
-}
-.credit-logo-inner i{
-    font-size: 20px;
-    color: #00AE9B;
-
-}
-.credit-logo-inner .row{
-    align-items: center;
-}
-.credit-logo-inner h5{
-    font-size: 14px;
-    color: #003B4A;
-    margin-bottom: 0px;
-}
-.green-border{
-    border-color: #00AE9B;
-}
-.gray-background{
-    color: #D3DADE;
-}
+    .review-text-hide {
+        display: none;
+    }
+    
+    .show-footer-btns {
+        display: none;
+    }
+    
+    .credit-log {
+        position: relative;
+        display: none;
+    }
+    
+    .credit-logo-inner {
+        border-radius: 20px!important;
+        background-color: #fff;
+        color: #000;
+        border: 4px solid #D3DADE;
+        padding: 8px 15px;
+        height: 73px;
+        width: 359px;
+    }
+    
+    .flot-lft {
+        float: left;
+    }
+    
+    .credit-card-icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 5px solid #D3DADE;
+        padding: 10px;
+    }
+    
+    .credit-logo-inner i {
+        font-size: 20px;
+        color: #00AE9B;
+    }
+    
+    .credit-logo-inner .row {
+        align-items: center;
+    }
+    
+    .credit-logo-inner h5 {
+        font-size: 14px;
+        color: #003B4A;
+        margin-bottom: 0px;
+    }
+    
+    .green-border {
+        border-color: #00AE9B;
+    }
+    
+    .gray-background {
+        color: #D3DADE;
+    }
+    
+    .blur-bg-1 {
+        background-color: rgb(255 255 255 / 0%);
+        backdrop-filter: blur(8px);
+        position: absolute;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 380px;
+    }
+    
+    .blur-bg--a {
+        top: 0;
+        height: 380px;
+    }
+    
+    .orange-bg {
+        background-color: #F8AC00;
+    }
+    
+    .bill-click-show {
+        display: none;
+    }
