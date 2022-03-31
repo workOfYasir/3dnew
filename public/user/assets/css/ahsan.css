@@ -753,6 +753,11 @@ almuntjat section start
     line-height: 1;
 }
 
+.mujtmah-box-btn__img2 {
+    margin-right: 10px;
+    transform: rotate(180deg);
+}
+
 
 /* ******************************
 almuntjat section end
