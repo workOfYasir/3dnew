@@ -309,3 +309,10 @@ opacity: 0 !important;
     margin: auto;
 
 }
+.service-fee-text span{
+    font-size: 10px;
+    color: #58595B;
+}
+.prog-fee {
+    text-align: center;
+}
