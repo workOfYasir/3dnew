@@ -988,6 +988,8 @@
             </div>
         </section>
         <!-- ahsan html end here -->
+       
+
     <!-- ahsan html end here -->
 
     <section class="contact section" id="contact-us">
@@ -1323,7 +1325,7 @@
                                             @endif
                                             <a href="#membership" class="dot m-0 border-bottom" data-bs-toggle="modal" data-bs-target="#memberModal">{{ auth()->user()->name }}</a>
                                             --}}
-                                            <a href="#" class="m-0" data-bs-toggle="modal" data-bs-target="#memberModal">
+                                            <a href="javascript:void(0);" class="m-0" data-bs-toggle="modal" data-bs-target="#memberModal2">
                                                 {{-- @if (auth()->user()->profile != null) --}}
                                                 @if (@auth()->user()->profile == null)
                                                 <div class="profile profile-icon">
@@ -2002,10 +2004,9 @@
                                           </div> -->
                                                         <h1 class="title text-center mt-5 no-border conditional-blur">
                                                             <div class="">
-                                                                <a href="{{route('payment')}}" class="btn btn-form mx-3 with-arrow mt-10">ارسال</a>
-                                                                <a href="{{route('payment')}}" class="btn btn-form mx-3 with-arrow mt-10 red-btn">رفض</a>
-                                                                <button class="btn-form designer-btn clean-btn" data-bs-toggle="modal" data-bs-target="#designer-order-upload">
-                                                                    تقديم طلب </button>
+                                                                <a href="javascript:void(0);" class="btn btn-form mx-3 with-arrow mt-10" data-bs-toggle="modal" data-bs-target="#designer-order-upload">ارسال</a>
+                                                                <a href="#" class="btn btn-form mx-3 with-arrow mt-10 red-btn ">رفض</a>
+                                                                
                                                                 <p class="mt-4">سيتم ارسال تفاصيل تنفيذ المهمة الى المستخدم للقبول او الرفض</p>
                                                             </div>
                                                         </h1>
@@ -2255,11 +2256,10 @@
                                                     </div>
                                                     <h1 class="title text-center mt-5 no-border conditional-blur">
                                                         <div class="">
-                                                            <a href="{{route('payment')}}" class="btn btn-form mx-3 with-arrow mt-10">ارسال</a>
-                                                            <a href="{{route('payment')}}" class="btn btn-form mx-3 with-arrow btn-uplod mt-10">الفاتورة</a>
-                                                            <a href="{{route('payment')}}" class="btn btn-form mx-3 with-arrow mt-10 red-btn">رفض</a>
-                                                            <button class="btn-form designer-btn clean-btn" data-bs-toggle="modal" data-bs-target="#designer-review-upload">
-                                                                تقديم طلب </button>
+                                                            <a href="javascript:void(0);" class="btn btn-form mx-3 with-arrow mt-10" data-bs-toggle="modal" data-bs-target="#designer-review-upload">ارسال</a>
+                                                            <a href="#" class="btn btn-form mx-3 with-arrow btn-uplod mt-10">الفاتورة</a>
+                                                            <a href="#" class="btn btn-form mx-3 with-arrow mt-10 red-btn">رفض</a>
+                                                           
                                                             <p class="mt-4">الرجاء التأكد من ارسال كافة الملفات لتجنب تقديم بلاغ عليك</p>
                                                         </div>
                                                     </h1>
@@ -2579,8 +2579,7 @@
                                                             <a href="javascript:void(0);" class="btn btn-form mx-3 with-arrow uplod-rev-btn mt-10 starbluerModal-btn">تم الارسال</a>
                                                             <a href="javascript:void(0);" class="btn btn-form mx-3 with-arrow red-btn mt-10 starbluerModal-btn">الفاتورة</a>
                                                             <!-- <a href="javascript:void(0);" class="btn btn-form mx-3 with-arrow mt-10 starbluerModal-btn"  data-bs-toggle="modal" data-bs-target="#designer-bid-submission">تقديم بلاغ</a> -->
-                                                            <button class="btn-form designer-btn clean-btn" data-bs-toggle="modal" data-bs-target="#designer-bid-submission">
-                                                                تقديم بلاغ</button>
+                                                            <button class="btn-form designer-btn clean-btn" data-bs-toggle="modal" data-bs-target="#designer-bid-submission">                                                                تقديم بلاغ</button>
                                                             <p class="mt-4">الرجاء التأكد من ارسال كافة الملفات لتجنب تقديم بلاغ عليك</p>
                                                         </div>
                                                     </h1>

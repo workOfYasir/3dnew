@@ -110,26 +110,25 @@
                                          </div>
                                          <div class="tab-pane fade" id="designer-services" role="tabpanel" aria-labelledby="profile-tab">
                                              <div class="row">
-                                                 @foreach($publics as $orde)
-                                                 <a class="nav-link" href="{{route('vieworderpublic',$orde->id)}}">
+                                                 
+                                                 <a class="nav-link" href="#">
                                                      <div class="col-md-12">
-                                                         <div class="request-box" data-bs-toggle="modal" data-bs-target="#publicServiesFinalModal">
+                                                         <div class="request-box" data-bs-toggle="modal" data-bs-target="#designer-order">
                                                              <div class="heading">
                                                                  <h5>رقم الطلب:</h5>
-                                                                 <span>{{$orde->id}}</span>
+                                                                 <span>123</span>
                                                              </div>
                                                              <div class="data">
                                                                  <p>حالة الطلب:</p>
                                                                  <span> عرض السعر</span>
                                                                  <p>اسم العميل:</p>
-                                                                 <span> {{$orde->full_name}}</span>
+                                                                 <span> العميل</span>
                                                                 <p>المنتج المطلوب:</p>
-                                                                 <span> {{$orde->specialization}}</span>
+                                                                 <span> العميل</span>
                                                              </div>
                                                          </div>
                                                      </div>
                                                  </a>
-                                                 @endforeach
                                              </div>
                                          </div>
                                      </div>
