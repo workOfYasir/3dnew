@@ -4400,19 +4400,19 @@
                                                 <div class="search-form">
                                                     <form action="#" method="">
                                                         <div class="row">
-                                                            <div class="col-md-2">
+                                                            <div class="col-md-3 col-lg-2">
                                                                 <div class="sort-btn">
                                                                     <button class="btn"> الترتيب حسب <i class="fa-solid fa-arrow-down"></i></button>
                                                                 </div>
                                                             </div>
-                                                            <div class="col-md-2">
+                                                            <div class="col-md-3 col-lg-2">
 
                                                                 <div class="sort-btn">
                                                                     <button class="btn"> تقنية الطباعة <i class="fa-solid fa-arrow-down"></i></button>
 
                                                                 </div>
                                                             </div>
-                                                            <div class="col-md-6">
+                                                            <div class="col-md-6 col-lg-6">
 
                                                                 <div class="search-input">
                                                                     <input type="text" class="form-control" id="search" placeholder="البحث">

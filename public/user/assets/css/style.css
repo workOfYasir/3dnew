@@ -2482,13 +2482,22 @@ input[type=number] {
     background-size: contain;
     background-repeat: no-repeat;
     opacity: 0.6;
-    top: 170px;
-    bottom: 0;
+    /* top: 170px; */
+    /* bottom: 0; */
     z-index: -1;
     left: 0;
-    right: 0;
-    max-height: 300px;
-    height: auto;
+    /* right: 0; */
+    /* max-height: 300px; */
+    /* height: auto; */
+    top: 0;
+    bottom: 870px;
+    left: 0;
+    right: -220px;
+    display: block;
+    margin: auto;
+    max-height: unset;
+    height: 1020px;
+    width: 1930px;
 }
 
 

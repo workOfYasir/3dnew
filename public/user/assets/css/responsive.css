@@ -1562,7 +1562,7 @@
         width: 450px;
     } */
     .black-bg.sample {
-        top: 40px;
+        top: 60px;
         width: 440px;
         left: 0;
         right: 300px;
@@ -1814,7 +1814,7 @@
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
     /* asim */
     .black-bg.sample{
-        right: 500px !important;
+        right: 270px !important;
     }
     .dot.right-center{
         right: 15px;
