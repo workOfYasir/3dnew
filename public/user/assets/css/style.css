@@ -2980,8 +2980,18 @@ input[type=number] {
     margin: auto;
 }
 
-/* Safari */
+.login .modal-header, .register .modal-header {
+    padding: 4rem 0 !important;
+}
 
+.editProduct .dateTime.small {
+    font-size: 10px;
+    position: absolute;
+    left: 20px;
+    top: 0;
+}
+
+/* Safari */
 @media screen and (-webkit-min-device-pixel-ratio:0) {
     .mujtmah-heading-box {
         width: 315px !important;

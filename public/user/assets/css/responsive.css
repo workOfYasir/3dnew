@@ -2071,6 +2071,10 @@
     .details p {
         width: 68%;
     }
+
+    .btn-list .blur-part {
+        right: 995px;
+    }
 }
 
 /* Extra Large Devices */
@@ -2174,6 +2178,7 @@
         position: relative;
         z-index: 9;
     }
+    
 }
 
 @media only screen and (min-width: 1400px) {
