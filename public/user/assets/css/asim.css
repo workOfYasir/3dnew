@@ -384,7 +384,9 @@
     .blur-bg-1.d-block{
         height: 250px;
     }
-
+.productdesign-main::before{
+    display: none;
+}
 
     /* styling end here */
 
@@ -465,16 +467,20 @@
         #productdesignModal .btn-close{
             transform: translate(10px);
         }
-        .almuntjat-form {
+        /* .almuntjat-form {
             padding: 50px 100px 150px 100px !important;
-        }
-        
+        } */
+
         #designinnerModal .designer-sec {
             padding-top: 0px;
         }
 
         #designinnerModal .modal-header{
             padding-top: 140px;
+        }
+
+        #productaddModal .almuntjat-form{
+            padding: 0px !important;
         }
         /* #designinnerModal css start here */
         /* .btn-list .btn{
@@ -516,7 +522,8 @@
             transform: translate(10px);
         }
         .almuntjat-form {
-            padding: 50px 100px 150px 100px !important;
+            padding: 0px !important;
+            /* padding: 50px 100px 150px 100px !important; */
         }
         
     }
@@ -569,6 +576,9 @@
         }
         .almuntjat-form {
             padding: 50px 100px 150px 100px !important;
+        }
+        .m-l-20{
+            margin-left: 20px;
         }
     }
     
