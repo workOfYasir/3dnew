@@ -3018,6 +3018,10 @@ input[type=number] {
 
 }
 
+#cleanshotModal .modal-body {
+    padding: 0 !important;
+}
+
 /* Safari */
 @media screen and (-webkit-min-device-pixel-ratio:0) {
     .mujtmah-heading-box {
