@@ -4041,6 +4041,7 @@
 
                                                 </div>
                                             </div>
+                                            <div class="blurText"></div>
                                         </div>
 
                                         <!-- <div class="design-bottom-btn">
@@ -4432,6 +4433,7 @@
                                                     <button class="btn btn-trans">نوع البرنامج</button>
                                                     <button class="btn btn-trans">نوع البرنامج</button>
                                                     <button class="btn btn-trans">نوع البرنامج</button>
+                                                    <span class="blur-part white"></span>
                                                 </div>
                                             </div>
                                         </div>

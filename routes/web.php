@@ -81,48 +81,46 @@ Auth::routes();
 Route::group(['middleware' => 'auth', 'varify','cors'], function () {
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
     
-    Route::get('/vieworder/{id}', [App\Http\Controllers\HomeController::class, 'vieworder'])->name('vieworder');
-    Route::get('/vieworderpublic/{id}', [App\Http\Controllers\HomeController::class, 'vieworderpublic'])->name('vieworderpublic');
-  
     //Resource Route
     Route::group(['middleware' =>  'role:user'], function () {
-
+        Route::get('/vieworder/{id}', [App\Http\Controllers\HomeController::class, 'vieworder'])->name('vieworder');
+        Route::get('/vieworderpublic/{id}', [App\Http\Controllers\HomeController::class, 'vieworderpublic'])->name('vieworderpublic');    
     });
     Route::group(['middleware' =>  'role:admin'], function () {
-        
+        Route::resource('about', AboutUsController::class);
+        Route::resource('contact', ContactControllers::class);
+        Route::resource('client', ClientController::class);
+        Route::resource('image', ImageSlideController::class);
+        Route::resource('publics', PublicServiceController::class);
+        Route::resource('social', SocialMediaController::class);
+        Route::resource('tech', TechController::class);
+        Route::resource('medical', MedicalController::class);
+        Route::resource('title', TitleController::class);
+        Route::resource('map', MapimageController::class);
+        Route::resource('youtubeurl', YoutubeurlController::class);
+        Route::resource('counter', CounterController::class);
+        Route::resource('invoicess', InvoiceController::class);
+        Route::resource('perposal', PerposalController::class);
+    
+        Route::get('payment', [MedicalController::class, 'payment'])->name('payment');
+        Route::get('ProfileUpdate/view', [HomeController::class, 'viewSetting'])->name('profileupdate.view');
+        Route::post('profile/setting', [HomeController::class, 'updateprofile'])->name('profile.setting');
+        Route::get('editpassword', [HomeController::class, 'passView'])->name('editpassword');
+        Route::get('medi/index', [MedicalController::class, 'index'])->name('medi.index');
+        Route::get('medi/show/{id}', [MedicalController::class, 'show'])->name('medi.show');
+        Route::post('updated.status', [MedicalController::class, 'updated'])->name('updated.status');
+        Route::post('public/updated/status', [MedicalController::class, 'updatedpublic'])->name('public.updated.status');
+        Route::post('password/updates', [HomeController::class, 'password_updates'])->name('password_updates');
+        Route::resource('side', SideImageController::class);
+    
+        Route::resource('logo', LogoController::class);
+        Route::get('logout', [App\Http\Controllers\Auth\LoginController::class, 'logout']);
+        Route::post('edituser_profile/{id}', [HomeController::class, 'edituser'])->name('edituser_profile');
+        Route::get('view/{id}', [ImageSlideController::class, 'view'])->name('view');
+        Route::get('register_profile', [HomeController::class, 'register_profile'])->name('register_profile');
+        Route::post('send/question', [MedicalController::class, 'askQuestion'])->name('ask.question');
     });
-    Route::resource('about', AboutUsController::class);
-    Route::resource('contact', ContactControllers::class);
-    Route::resource('client', ClientController::class);
-    Route::resource('image', ImageSlideController::class);
-    Route::resource('publics', PublicServiceController::class);
-    Route::resource('social', SocialMediaController::class);
-    Route::resource('tech', TechController::class);
-    Route::resource('medical', MedicalController::class);
-    Route::resource('title', TitleController::class);
-    Route::resource('map', MapimageController::class);
-    Route::resource('youtubeurl', YoutubeurlController::class);
-    Route::resource('counter', CounterController::class);
-    Route::resource('invoicess', InvoiceController::class);
-    Route::resource('perposal', PerposalController::class);
 
-    Route::get('payment', [MedicalController::class, 'payment'])->name('payment');
-    Route::get('ProfileUpdate/view', [HomeController::class, 'viewSetting'])->name('profileupdate.view');
-    Route::post('profile/setting', [HomeController::class, 'updateprofile'])->name('profile.setting');
-    Route::get('editpassword', [HomeController::class, 'passView'])->name('editpassword');
-    Route::get('medi/index', [MedicalController::class, 'index'])->name('medi.index');
-    Route::get('medi/show/{id}', [MedicalController::class, 'show'])->name('medi.show');
-    Route::post('updated.status', [MedicalController::class, 'updated'])->name('updated.status');
-    Route::post('public/updated/status', [MedicalController::class, 'updatedpublic'])->name('public.updated.status');
-    Route::post('password/updates', [HomeController::class, 'password_updates'])->name('password_updates');
-    Route::resource('side', SideImageController::class);
-
-    Route::resource('logo', LogoController::class);
-    Route::get('logout', [App\Http\Controllers\Auth\LoginController::class, 'logout']);
-    Route::post('edituser_profile/{id}', [HomeController::class, 'edituser'])->name('edituser_profile');
-    Route::get('view/{id}', [ImageSlideController::class, 'view'])->name('view');
-    Route::get('register_profile', [HomeController::class, 'register_profile'])->name('register_profile');
-    Route::post('send/question', [MedicalController::class, 'askQuestion'])->name('ask.question');
     Route::get('feedback', [MedicalController::class, 'feedback'])->name('feedback');
     Route::post('feedback/store', [MedicalController::class, 'feedbackStore'])->name('feedbackStore');
 

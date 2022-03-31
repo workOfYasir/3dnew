@@ -122,7 +122,15 @@
     }
     
     #designinnerModal .designer-sec::before {
-        top: 130px;
+        top: 0;
+        bottom: 370px;
+        left: 0;
+        right: -236px;
+        display: block;
+        margin: auto;
+        max-height: unset;
+        height: 1020px;
+        width: 1800px;
     }
     
     .product-1 {
