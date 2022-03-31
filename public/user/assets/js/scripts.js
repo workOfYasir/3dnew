@@ -509,7 +509,6 @@ $(document).ready(function() {
         })
         
 
-
 });
 $(".userreq-blur-bg").click(function() {
     $(".userreq-blur-bg").css('display', 'none');
