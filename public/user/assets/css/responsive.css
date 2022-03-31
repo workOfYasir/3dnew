@@ -458,6 +458,7 @@
         top: 200px;
         width: 360px;
         left: 0;
+        right: 0;
     }
 
     .carousel-item .btn {
@@ -655,6 +656,7 @@
         /* width: 1040px; */
         width: 350px;
         right: 0px;
+        left: 0;
         max-width: 350px;
     }
 
@@ -1549,6 +1551,7 @@
         top: 85px;
         width: 550px;
         right: 0;
+        left: 170px;
         min-width: 630px;
         /* max-width: 630px; */
     }
@@ -1558,9 +1561,10 @@
         width: 450px;
     } */
     .black-bg.sample {
-        top: 125px;
+        top: 40px;
         width: 440px;
         left: 0;
+        right: 300px;
     }
 
     .tab-content .data {
