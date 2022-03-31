@@ -5739,7 +5739,7 @@
             </div>
         </div>
     </div>
-    <div class="modal page result" id="userRequestModal">
+    <div class="modal fade page result" id="userRequestModal">
         <div class="modal-dialog modal-fullscreen">
             <div class="modal-content">
                 <div class="container">
@@ -5747,7 +5747,8 @@
                         <div class="col-md-12 p-0">
                             <div class="modal-header border-0">
                                 <div class="zhd-center-close">
-                                    <a href="{{route('home')}}" type="button" class="btn-close" aria-label="Close"></a>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
                                 </div>
                                 <div class="zhd-center-hdng" style="margin-top: 1%;">
                                     <span class="outline dot">اهلاً وسهلاً بكم</span>
@@ -5812,6 +5813,16 @@
                                                     <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
                                                     <div>
                                                         <p>رفع الطلب</p>
+                                                    </div>
+                                                </div>
+                                                <img src="{{asset('user/assets/icons/redline.svg')}}" class="single" alt="">
+                                                <div class="col-auto">
+                                                    <div class="dateTime small text-white">{{@$public->created_at}}</div>
+                                                    @if(@$public->status == 2)
+                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle"> @else
+                                                    <img src="{{asset('user/assets/icons/red-circle.svg')}}" alt="red-circle"> @endif
+                                                    <div>
+                                                        <p>عرض سعر</p>
                                                     </div>
                                                 </div>
                                                 <img src="{{asset('user/assets/icons/redline.svg')}}" class="single" alt="">
@@ -6007,14 +6018,15 @@
         </div>
     </div>
     {{-- user request modal end --}}
-    <div class="modal page" id="user2RequestModal">
+    <div class="modal fade page" id="user2RequestModal">
         <div class="modal-dialog modal-fullscreen">
             <div class="modal-content">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-12 p-0">
                             <div class="modal-header border-0">
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
                                 <div>
                                     <span class="outline dot">أكثر 20 خدمة مختلفة</span>
                                     <h1 class="modal-title right"><span class="btm-line"><span class="inner-line"></span>الخدمات العامة
@@ -6050,8 +6062,8 @@
                                                     <h1>406</h1>
     
                                                     <p><img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle"> رفع الطلب</p>
-                                                    <p><img src="{{asset('user/assets/icons/green-circle.png')}}" alt="red-circle">تقديم عرض سعر من قبل المصمم</p>
-                                                    <p><img src="{{asset('user/assets/icons/green-circle.png')}}" alt="red-circle"> الدفع</p>
+                                                    <p><img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">تقديم عرض سعر من قبل المصمم</p>
+                                                    <p><img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle"> الدفع</p>
                                                     <!-- <span>سيتم تحديث حالة الطلب من قبل الإدارة</span> -->
                                                 </div>
                                             </div>
@@ -6078,7 +6090,7 @@
         </div>
     </div>
     {{-- user 2 request modal end --}}
-    <div class="modal page result" id="user3RequestModal">
+    <div class="modal fade page result" id="user3RequestModal">
         <div class="modal-dialog modal-fullscreen">
             <div class="modal-content">
                 <div class="container">
@@ -6086,7 +6098,8 @@
                         <div class="col-md-12 p-0">
                             <div class="modal-header border-0">
                                 <div class="zhd-center-close">
-                                    <a href="{{route('home')}}" type="button" class="btn-close" aria-label="Close"></a>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
                                 </div>
                                 <div class="zhd-center-hdng" style="margin-top: 1%;">
                                     <span class="outline dot">اهلاً وسهلاً بكم</span>
@@ -6151,6 +6164,16 @@
                                                     <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
                                                     <div>
                                                         <p>رفع الطلب</p>
+                                                    </div>
+                                                </div>
+                                                <img src="{{asset('user/assets/icons/redline.svg')}}" class="single" alt="">
+                                                <div class="col-auto">
+                                                    <div class="dateTime small text-white">{{@$public->created_at}}</div>
+                                                    @if(@$public->status == 2)
+                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle"> @else
+                                                    <img src="{{asset('user/assets/icons/red-circle.svg')}}" alt="red-circle"> @endif
+                                                    <div>
+                                                        <p>عرض سعر</p>
                                                     </div>
                                                 </div>
                                                 <img src="{{asset('user/assets/icons/redline.svg')}}" class="single" alt="">
@@ -6312,7 +6335,7 @@
         </div>
     </div>
     {{-- user 3 requestmodal end --}}
-    <div class="modal page result" id="user4RequestModal">
+    <div class="modal fade page result" id="user4RequestModal">
         <div class="modal-dialog modal-fullscreen">
             <div class="modal-content">
                 <div class="container">
@@ -6320,7 +6343,8 @@
                         <div class="col-md-12 p-0">
                             <div class="modal-header border-0">
                                 <div class="zhd-center-close">
-                                    <a href="{{route('home')}}" type="button" class="btn-close" aria-label="Close"></a>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
                                 </div>
                                 <div class="zhd-center-hdng" style="margin-top: 1%;">
                                     <span class="outline dot">اهلاً وسهلاً بكم</span>
@@ -6385,6 +6409,16 @@
                                                     <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
                                                     <div>
                                                         <p>رفع الطلب</p>
+                                                    </div>
+                                                </div>
+                                                <img src="{{asset('user/assets/icons/redline.svg')}}" class="single" alt="">
+                                                <div class="col-auto">
+                                                    <div class="dateTime small text-white">{{@$public->created_at}}</div>
+                                                    @if(@$public->status == 2)
+                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle"> @else
+                                                    <img src="{{asset('user/assets/icons/red-circle.svg')}}" alt="red-circle"> @endif
+                                                    <div>
+                                                        <p>عرض سعر</p>
                                                     </div>
                                                 </div>
                                                 <img src="{{asset('user/assets/icons/redline.svg')}}" class="single" alt="">
