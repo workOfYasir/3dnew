@@ -316,3 +316,8 @@ opacity: 0 !important;
 .prog-fee {
     text-align: center;
 }
+
+.ff{
+    display: flex;
+    justify-content: center;
+}
