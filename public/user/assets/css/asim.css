@@ -441,6 +441,7 @@
     .blur-bg--a {
         top: 0;
         height: 380px;
+        display: block;
     }
     
     .orange-bg {
