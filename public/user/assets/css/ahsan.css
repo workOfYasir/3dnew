@@ -16,7 +16,7 @@ html {
     font-weight: 500;
     letter-spacing: 0.3px;
     white-space: 1px;
-    font-family: 'JannaLT-Regular';
+    font-family: 'JannaRegular';
 }
 
 img {
@@ -46,6 +46,14 @@ a {
 
 .jst-btw {
     justify-content: space-between;
+}
+
+.ml-2 {
+    margin-left: 20px !important;
+}
+
+.ml-3 {
+    margin-left: 30px !important;
 }
 
 .mgb-0 {
@@ -147,14 +155,15 @@ mujtmah-almusmamen section start
 
 .mujtmah-heading-box {
     margin: 0 auto;
-    width: 242px;
+    width: 315px;
 }
 
 .mujtmah-almusmamen__heading {
     font-size: 43px;
-    font-family: 'JannaLT-Bold';
+    font-family: 'JannaRegular';
     color: #fff;
     text-shadow: 0 6px 6px rgb(0 0 0 / 16%);
+    font-weight: 700;
 }
 
 .heading-box__underline {
@@ -200,16 +209,17 @@ mujtmah-almusmamen section start
 }
 
 .mujtmah-box__content {
-    max-width: 374px;
+    max-width: 390px;
     margin-bottom: 35px;
 }
 
 .mujtmah-box__heading {
     font-size: 43px;
     color: #1EA9D4;
-    font-family: 'JannaLT-Bold';
+    font-family: 'JannaRegular';
     text-shadow: 0 6px 6px rgb(0 0 0 / 16%);
     margin-bottom: 20px;
+    font-weight: 600;
 }
 
 .mujtmah-box__para {
@@ -253,7 +263,7 @@ mujtmah-almusmamen section start
 .mujtmah-box__count-heading {
     color: #fff;
     font-size: 43px;
-    font-family: 'JannaLT-Bold';
+    font-family: 'JannaRegular';
     line-height: 1;
 }
 
@@ -270,7 +280,7 @@ mujtmah-almusmamen section start
 
 .mujtmah-box__count-sub-heading {
     font-size: 18px;
-    font-family: 'JannaLT-Regular';
+    font-family: 'JannaRegular';
     line-height: 1;
     color: #1EA9D4;
 }
@@ -345,7 +355,7 @@ almuntjat section start
 
 .sub-heading-box__heading--b {
     color: #000;
-    font-family: 'JannaLT-bold';
+    font-family: 'JannaRegular';
     margin-bottom: 15px;
 }
 
@@ -722,6 +732,24 @@ almuntjat section start
 
 .rating2 {
     width: 100%;
+}
+
+.mujtmah-box__link1 {
+    font-size: 18px;
+    color: #D83554;
+    text-decoration: none;
+    margin: 0 0 0 30px;
+    line-height: 1;
+}
+
+.mujtmah-box__link2 {
+    font-size: 18px;
+    color: #fff;
+    background: none;
+    border: none;
+    outline: none;
+    text-decoration: underline;
+    line-height: 1;
 }
 
 

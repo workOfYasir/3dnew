@@ -1005,7 +1005,7 @@
                                 </a>
                                 <a href="#" class="m-btn mujtmah-box-btn" data-bs-toggle="modal" data-bs-target="#userRequestModal">
                                     <img src="{{ asset('user/assets/images/video.png') }}"
-                                        class="mujtmah-box-btn__img2"> سجل الان
+                                        class="mujtmah-box-btn__img2">فيديو تعريفي
                                 </a>
                             </div>
                         </div>
@@ -1034,18 +1034,23 @@
                                 العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد
                                 الحروف التى يولدها التطبيق.
                             </p>
-                            <div class="mujtmah-box-btn-wrapper wrapper al-center">
+                            <div class="mujtmah-box-btn-wrapper wrapper al-center mb-3">
+                                <button data-bs-toggle="modal" data-bs-target="#financialOperations2"
+                                    class="m-btn mujtmah-box-btn ml-2">
+                                    <img src="{{ asset('user/assets/images/video.png') }}"
+                                        class="mujtmah-box-btn__img2">فيديو تعريفي
+                                </button>
+
                                 <button data-bs-toggle="modal" data-bs-target="#financialOperations"
-                                    class="m-btn mujtmah-box-btn btn-white">
+                                    class="m-btn mujtmah-box-btn btn-white ml-2">
 
                                     <img src="{{ asset('user/assets/images/arrow-8.png') }}"
-                                        class="mujtmah-box-btn__img"> سجل الان
+                                        class="mujtmah-box-btn__img">أطلب الان
                                 </button>
-                                <button data-bs-toggle="modal" data-bs-target="#financialOperations2"
-                                    class="m-btn mujtmah-box-btn">
-                                    <img src="{{ asset('user/assets/images/video.png') }}"
-                                        class="mujtmah-box-btn__img2"> سجل الان
-                                </button>
+                            </div>
+                            <div class="mujtmah-box__wrapper wrapper al-center">
+                                <p class="mujtmah-box__link1 mgl-2">يتطلب تسجيل</p>
+                                <button class="mujtmah-box__link2" data-bs-toggle="modal" data-bs-target="#registerModal">للتسجيل اضغط هنا</button>
                             </div>
                         </div>
                     </div>
@@ -1946,12 +1951,20 @@
                            </div>
                            <div class="">
                               <div class="row final two justify-content-center text-center">
-                                 <div class="col-auto">
-                                    <div class="dateTime small">{{@$public->created_at}}</div>
-                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
-                                    <div>
-                                       <p>رفع الطلب</p>
-                                    </div>
+                                  <div class="col-auto">
+                                        <div class="dateTime small">{{@$public->created_at}}</div>
+                                         <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
+                                        <div>
+                                        <p>رفع الطلب</p>
+                                        </div>
+                                 </div>
+                                 <img src="{{asset('user/assets/icons/green-line.svg')}}" class="single" alt="">
+                                  <div class="col-auto">
+                                        <div class="dateTime small">{{@$public->created_at}}</div>
+                                         <img src="{{asset('user/assets/icons/red-circle.svg')}}" alt="red-circle">
+                                        <div>
+                                        <p>عرض سعر</p>
+                                        </div>
                                  </div>
                                  <img src="{{asset('user/assets/icons/redline.svg')}}" class="single" alt="">
                                  <div class="col-auto">
@@ -1959,7 +1972,7 @@
                                     @if(@$public->status == 2)
                                     <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
                                     @else
-                                    <img src="{{asset('user/assets/icons/red-circle.svg')}}" alt="green-circle">
+                                    <img src="{{asset('user/assets/icons/red-circle.svg')}}" alt="red-circle">
                                     @endif
                                     <div>
                                        <p>الدفع</p>
@@ -2181,14 +2194,20 @@
                           <p>رفع الطلب</p>
                         </div>
                       </div>
-                      <img src="{{asset('user/assets/icons/redline.svg')}}" class="single" alt="">
+                      <img src="{{asset('user/assets/icons/green-line.svg')}}" class="single" alt="">
+                      <div class="col-auto">
+                        <div class="dateTime small">{{@$public->created_at}}</div>
+                        <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
+                        <div>
+                          <p>عرض سعر</p>
+                        </div>
+                      </div>
+                      <img src="{{asset('user/assets/icons/green-line.svg')}}" class="single" alt="">
                       <div class="col-auto">
                         <div class="dateTime small text-white">{{@$public->created_at}}</div>
-                        @if(@$public->status == 2)
+                      
                         <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
-                        @else
-                        <img src="{{asset('user/assets/icons/red-circle.svg')}}" alt="red-circle">
-                        @endif
+                    
                         <div>
                           <p>الدفع</p>
                         </div>
@@ -2423,27 +2442,33 @@
                               <!-- <div class="dateTime small">11/01/2022 - 03:00PM</div> -->
                            </div>
                            <div class="">
-                              <div class="row final two justify-content-center text-center">
-                                 <div class="col-auto">
-                                    <div class="dateTime small">{{@$public->created_at}}</div>
-                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
-                                    <div>
-                                       <p>رفع الطلب</p>
-                                    </div>
-                                 </div>
-                                 <img src="{{asset('user/assets/icons/redline.svg')}}" class="single" alt="">
-                                 <div class="col-auto">
-                                    <div class="dateTime small text-white">{{@$public->created_at}}</div>
-                                    @if(@$public->status == 2)
-                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
-                                    @else
-                                    <img src="{{asset('user/assets/icons/red-circle.svg')}}" alt="red-circle">
-                                    @endif
-                                    <div>
-                                       <p>الدفع</p>
-                                    </div>
-                                 </div>
-                              </div>
+                           <div class="row final two justify-content-center text-center">
+                      <div class="col-auto">
+                        <div class="dateTime small">{{@$public->created_at}}</div>
+                        <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
+                        <div>
+                          <p>رفع الطلب</p>
+                        </div>
+                      </div>
+                      <img src="{{asset('user/assets/icons/green-line.svg')}}" class="single" alt="">
+                      <div class="col-auto">
+                        <div class="dateTime small">{{@$public->created_at}}</div>
+                        <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
+                        <div>
+                          <p>عرض سعر</p>
+                        </div>
+                      </div>
+                      <img src="{{asset('user/assets/icons/green-line.svg')}}" class="single" alt="">
+                      <div class="col-auto">
+                        <div class="dateTime small text-white">{{@$public->created_at}}</div>
+                      
+                        <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
+                    
+                        <div>
+                          <p>الدفع</p>
+                        </div>
+                      </div>
+                    </div>
                            </div>
                            <h1 class="title text-center no-border conditional-blur">معلومات الطلب</h1>
                            <div class="row">
@@ -2748,6 +2773,14 @@
                                        <p>رفع الطلب</p>
                                     </div>
                                  </div>
+                                 <img src="{{asset('user/assets/icons/green-line.svg')}}" class="single" alt="">
+                                 <div class="col-auto">
+                                    <div class="dateTime small">{{@$public->created_at}}</div>
+                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
+                                    <div>
+                                      <p>عرض سعر</p>
+                                    </div>
+                                 </div>
                                  <img src="{{asset('user/assets/icons/redline.svg')}}" class="single" alt="">
                                  <div class="col-auto">
                                     <div class="dateTime small text-white">{{@$public->created_at}}</div>
@@ -2971,12 +3004,19 @@
                                  </div>
                                  <img src="{{asset('user/assets/icons/redline.svg')}}" class="single" alt="">
                                  <div class="col-auto">
-                                    <div class="dateTime small text-white">{{@$public->created_at}}</div>
-                                    @if(@$public->status == 2)
-                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
-                                    @else
+                                    <div class="dateTime small">{{@$public->created_at}}</div>
                                     <img src="{{asset('user/assets/icons/red-circle.svg')}}" alt="red-circle">
-                                    @endif
+                                    <div>
+                                       <p>عرض سعر</p>
+                                    </div>
+                                 </div>
+                                 <img src="{{asset('user/assets/icons/redline.svg')}}" class="single" alt="">
+                                 <div class="col-auto">
+                                    <div class="dateTime small text-white">{{@$public->created_at}}</div>
+                                 
+                                  
+                                    <img src="{{asset('user/assets/icons/red-circle.svg')}}" alt="red-circle">
+                                  
                                     <div>
                                        <p>الدفع</p>
                                     </div>
@@ -3099,11 +3139,7 @@
 
                                     <h1 class="title text-center mt-5 no-border conditional-blur">
                                        <div class="zhd-finished">
-                                          <a href="javascript:void(0);" class="btn btn-form mx-3 with-arrow uplod-rev-btn mt-10">تم الارسال</a>
-                                          <a href="{{route('payment')}}" class="btn btn-form mx-3 with-arrow mt-10 red-btn">رفض</a>
-                                          <button class="btn-form designer-btn clean-btn" data-bs-toggle="modal" data-bs-target="#designer-information">
-                              تقديم طلب </button>
-
+                                          <a href="javascript:void(0);" class="btn btn-form mx-3 with-arrow mt-10"  data-bs-toggle="modal" data-bs-target="#designer-information">طلباتي</a>
                                           <p class="mt-4">طلب مرفوض من قبل المستخدم</p>
                                        </div>
                                     </h1>
@@ -3204,12 +3240,19 @@
                                  </div>
                                  <img src="{{asset('user/assets/icons/redline.svg')}}" class="single" alt="">
                                  <div class="col-auto">
-                                    <div class="dateTime small text-white">{{@$public->created_at}}</div>
-                                    @if(@$public->status == 2)
-                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
-                                    @else
+                                    <div class="dateTime small">{{@$public->created_at}}</div>
                                     <img src="{{asset('user/assets/icons/red-circle.svg')}}" alt="red-circle">
-                                    @endif
+                                    <div>
+                                     <p>عرض سعر</p>
+                                    </div>
+                                 </div>
+                                 <img src="{{asset('user/assets/icons/redline.svg')}}" class="single" alt="">
+                                 <div class="col-auto">
+                                    <div class="dateTime small text-white">{{@$public->created_at}}</div>
+                        
+                                   
+                                    <img src="{{asset('user/assets/icons/red-circle.svg')}}" alt="red-circle">
+                              
                                     <div>
                                        <p>الدفع</p>
                                     </div>
@@ -3330,7 +3373,7 @@
 
                                     <h1 class="title text-center mt-5 no-border conditional-blur">
                                        <div class="zhd-finished">
-                                          <a href="{{route('payment')}}" class="btn btn-form mx-3 with-arrow mt-10">طلباتي</a>
+                                          <a href="#" class="btn btn-form mx-3 with-arrow mt-10">طلباتي</a>
                                           <p class="mt-4">طلب مرفوض من قبل المصمم</p>
                                        </div>
                                     </h1>
@@ -6901,6 +6944,7 @@
         </div>
      </div>
     {{-- user5requestmodal --}}
+
     <!-- About US -->
 
     @include('pages.user.aboutModal')
