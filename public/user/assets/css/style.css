@@ -1316,6 +1316,8 @@ textarea {
 }
 
 .tab-content h5 {
+    color: #101E40;
+    font-weight: bold;
     font-size: 18px;
 }
 
@@ -2963,6 +2965,21 @@ input[type=number] {
 #designModal .modal-dialog {
     direction: rtl;
 }
+
+.btn-list .blur-part {
+    background: #205098;
+    width: 170px;
+    display: block;
+    height: 100px;
+    position: absolute;
+    left: 0;
+    top: 550px;
+    right: 810px;
+    filter: blur(7px);
+    margin: auto;
+}
+
+
 
 /* Safari */
 @media screen and (-webkit-min-device-pixel-ratio:0) { 

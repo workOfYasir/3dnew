@@ -3363,9 +3363,6 @@
                         <div class="col-md-12 p-0">
 
                             <div class="modal-body">
-
-
-
                                 <!-- header designer start here -->
                                 <div class="toggle-overlay"></div>
                                 <div class="content-wrapper hide-on-load">
@@ -3707,6 +3704,7 @@
                                                         <button class="btn btn-trans">نوع البرنامج</button>
                                                         <button class="btn btn-trans">نوع البرنامج</button>
                                                         <button class="btn btn-trans">نوع البرنامج</button>
+                                                        <span class="blur-part"></span>
                                                     </div>
                                                 </div>
                                             </div>
