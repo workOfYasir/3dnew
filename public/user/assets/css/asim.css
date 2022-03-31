@@ -403,11 +403,13 @@
     @media (min-width: 360px) and (max-width: 767px) {
         .designer-sec {
             padding-top: 150px;
+            margin-top: 60px;
         }
         .designer-sec::before {
             background-size: cover;
             top: 140px;
             max-height: 150px;
+            background: none !important;
         }
         .designer-title {
             font-size: 36px;
@@ -454,10 +456,25 @@
             height: 180px !important;
             width: 327px !important;
             overflow: hidden;
-            background: url(../images/design-mob.png) no-repeat !important;
+            background: none !important;
+            /* background: url(../images/design-mob.png) no-repeat !important; */
             background-position: top center;
             background-size: cover;
             background-repeat: no-repeat;
+        }
+        #productdesignModal .btn-close{
+            transform: translate(10px);
+        }
+        .almuntjat-form {
+            padding: 50px 100px 150px 100px !important;
+        }
+        
+        #designinnerModal .designer-sec {
+            padding-top: 0px;
+        }
+
+        #designinnerModal .modal-header{
+            padding-top: 140px;
         }
         /* #designinnerModal css start here */
         /* .btn-list .btn{
@@ -477,6 +494,7 @@
     @media (min-width: 768px) and (max-width: 991px) {
         .designer-sec {
             padding-top: 170px;
+            margin-top: 60px;
         }
         .designer-sec::before {
             top: 140px;
@@ -489,6 +507,18 @@
             margin-left: 10px;
             margin-bottom: 30px;
         }
+
+        #designinnerModal .designer-sec::before{
+            width: 1220px;
+            bottom: 500px;
+        }
+        #productdesignModal .btn-close{
+            transform: translate(10px);
+        }
+        .almuntjat-form {
+            padding: 50px 100px 150px 100px !important;
+        }
+        
     }
     
     /* ////////////////////////////////////////// Large landscape responsive //////////////////////////////////////////////////////// */
@@ -517,11 +547,36 @@
             width: 250px;
             right: 700px;
         }
+
+        #designinnerModal .designer-sec::before {
+            top: 0;
+            bottom: 370px;
+            left: 0;
+            right: -336px;
+            display: block;
+            margin: auto;
+            max-height: unset;
+            height: 1020px;
+            width: 1650px;
+        }
+
+        #productdesignModal .btn-close{
+            transform: translate(10px);
+        }
+
+        .modal.page .modal-header {
+            padding: 4rem !important;
+        }
+        .almuntjat-form {
+            padding: 50px 100px 150px 100px !important;
+        }
     }
     
 
     @media (min-width:1200px) and (max-width: 1300px) {
-
+        #designinnerModal .designer-sec::before {
+            right: -306px;
+        }
     }
 
     /* ////////////////////////////////////////// Extra Large landscape responsive //////////////////////////////////////////////////////// */
