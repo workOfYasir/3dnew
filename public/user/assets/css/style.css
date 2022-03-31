@@ -1696,6 +1696,7 @@ textarea {
     text-align: center;
 }
 
+
 /* .about-content .description {
     padding: 0rem 9rem;
 } */
@@ -2964,9 +2965,11 @@ input[type=number] {
     direction: rtl;
 }
 
+
 /* Safari */
-@media screen and (-webkit-min-device-pixel-ratio:0) { 
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
     .mujtmah-heading-box {
-        width: 250px !important;
+        width: 315px !important;
     }
 }
