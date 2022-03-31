@@ -1651,7 +1651,6 @@
                     <label class="form-label dot">الكمية</label>
                     <select class="form-select gender" required name="gender" aria-label="Default select example">
                         <option selected>1</option>
-                       
                     </select>   
                  </div>
                   <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 mt-4">

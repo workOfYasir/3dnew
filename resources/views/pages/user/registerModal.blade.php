@@ -28,7 +28,7 @@
                                         </li>
                                         <li class="nav-item" role="presentation">
                                             <button class="nav-link" id="public-tab" data-bs-toggle="tab" data-bs-target="#designerloginModal2" type="button" aria-controls="profile" aria-selected="false">
-                                                مصمم 
+                                                مصمم
                                             </button>
                                         </li>
                                     </ul>
@@ -65,7 +65,7 @@
                                                 <div class="row justify-content-center">
                                                     <div class="container container-x container-x2">
                                                         <div class="almuntjat-form-error almuntjat-form-error-2">
-                                                            <img src="assets/images/warning.png" alt="" class="almuntjat-form-error__img"> بعد إضافة المنتج سيذهب الى الإدارة للمراجعة للقبول أو الرفض
+                                                            <img src="{{ asset('user/assets/images/warning.png') }}" alt="" class="almuntjat-form-error__img"> بعد إضافة المنتج سيذهب الى الإدارة للمراجعة للقبول أو الرفض
                                                         </div>
                                                     </div>
                                                 </div>
@@ -101,30 +101,34 @@
                                                     </div>
                                                     <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-3 mt-4">
                                                         <label class="form-label dot">الايميل</label>
-                                                        <input type="email" name="email" class="form-control email" placeholder="الايميل هنا .." >
+                                                        <input type="email" name="email" class="form-control email" placeholder="الايميل هنا ..">
                                                     </div>
                                                 </div>
                                                 <div class="row justify-content-center mb-5">
                                                     <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-3 mt-4">
                                                         <label class="form-label dot">كلمة المرور</label>
-                                                        <input type="text" name="password" class="form-control pass " placeholder="كلمة المرور هنا .." value="">
+                                                        <input type="password" name="password" class="form-control pass " placeholder="كلمة المرور هنا .." value="">
                                                     </div>
 
                                                     <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-3 mt-4 ahs-from-box">
                                                         <label class="form-label dot">تقنية الطباعة</label>
-                                                        <input type="" name="" class="form-control " placeholder="اختيار التقنية" value="">
-                                                        <img src="assets/images/arrow-5.png" alt="" class="input-holder__img">
+                                                        <select class="form-select" required name="" aria-label="Default select example">
+                                                            <option selected>اختيار التقنية</option>
+                                                            <option>اختيار</option>
+                                                        </select>
                                                     </div>
                                                     <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-3 mt-4 ahs-from-box">
                                                         <label class="form-label dot">أنواع البرامج المستخدمة</label>
-                                                        <input type="" name="" class="form-control " placeholder="اختاير البرامج المستخدمة" value="">
-                                                        <img src="assets/images/arrow-5.png" alt="" class="input-holder__img">
+                                                        <select class="form-select" required name="" aria-label="Default select example">
+                                                            <option selected>اختاير البرامج المستخدمة</option>
+                                                            <option>اختاير البرامج</option>
+                                                        </select>
                                                     </div>
                                                 </div>
                                                 <div class="row justify-content-center">
                                                     <div class="container container-x">
                                                         <div class="almuntjat-form-error almuntjat-form-error-2">
-                                                            <img src="assets/images/warning.png" alt="" class="almuntjat-form-error__img"> بعد إضافة المنتج سيذهب الى الإدارة للمراجعة للقبول أو الرفض
+                                                            <img src="{{ asset('user/assets/images/warning.png') }}" alt="" class="almuntjat-form-error__img"> بعد إضافة المنتج سيذهب الى الإدارة للمراجعة للقبول أو الرفض
                                                         </div>
                                                     </div>
                                                 </div>
