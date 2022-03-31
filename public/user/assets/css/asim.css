@@ -40,12 +40,20 @@
         .design-card-inner .row:first-child .col-md-6 {
             width: 50%;
         }
+
+
+
+        /* #designinnerModal css start here */
+        /* .btn-list .btn{
+            margin-left: 0px;
+        } */
+        /* #designinnerModal css end here */
     }
 
     /* ////////////////////////////////////////// mobile landscape responsive //////////////////////////////////////////////////////// */
 
     @media (min-width: 576px) and (max-width: 767px) {
-        
+
     }
     
     /* ////////////////////////////////////////// tab landscape responsive //////////////////////////////////////////////////////// */
@@ -80,10 +88,18 @@
             padding-right: 28px;
         }
         .btn-white {
-            margin-left: 15px;
+            margin-left: 10px;
         }
         .btn-trans {
             margin-left: 10px;
+        }
+        .btn-blue{
+            margin-left: 10px;
+        }
+
+        .btn-list .blur-part {
+            width: 250px;
+            right: 700px;
         }
     }
     
