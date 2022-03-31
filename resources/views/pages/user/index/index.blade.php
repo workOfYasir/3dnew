@@ -896,54 +896,28 @@
 
     <!-- ahsan html start here -->
     <section class="mujtmah-almusmamen" id="design">
-        <div class="container-m">
-            <div class="mujtmah-almusmamen-heading-wrapper" data-aos="fade-up">
-                <div class="mujtmah-heading-box">
-                    <div class="sub-heading-box">
-                        <div class="red-dot"></div>
-                        <p class="sub-heading-box__heading">إختيار نوع الخدمة</p>
-                    </div>
-                    <div class="heading-box">
-                        <h1 class="mujtmah-almusmamen__heading">مجتمع المصممين</h1>
-                        <div class="heading-box__underline"></div>
-                    </div>
-                </div>
-
-                <p class="mujtmah-almusmamen__para">
-                    هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى،
-                    حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها
-                    التطبيق.
-                </p>
-                <!-- <a href="#" class="m-btn mujtmah-almusmamen-btn">تعرف أكثر</a> -->
-                <button type="button" class="m-btn mujtmah-almusmamen-btn" data-bs-toggle="modal" data-bs-target="#designModal">
-                    تعرف أكثر
-                </button>
-            </div>
-            <div class="mujtmah-almusmamen-wrapper wrapper jst-btw">
-                <div class="mujtmah-box">
-                    <div class="mujtmah-box__content" data-aos="fade-up" data-aos-offset="200">
-                        <h1 class="mujtmah-box__heading">هل أنت مصمم 3D ؟</h1>
-                        <p class="mujtmah-box__para">
-                            هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص
-                            العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد
-                            الحروف التى يولدها التطبيق.
-                        </p>
-                        <div class="mujtmah-box-btn-wrapper wrapper al-center">
-                            <a href="#register" class="m-btn mujtmah-box-btn btn-white" data-bs-toggle="modal" data-bs-target="#registerModal">
-                                <img src="{{ asset('user/assets/images/arrow-8.png') }}" class="mujtmah-box-btn__img"> سجل الان
-                            </a>
-                            <a href="#" class="m-btn mujtmah-box-btn" data-bs-toggle="modal" data-bs-target="#userRequestModal">
-                                <img src="{{ asset('user/assets/images/video.png') }}" class="mujtmah-box-btn__img2">فيديو تعريفي
-                            </a>
+            <div class="container-m">
+                <div class="mujtmah-almusmamen-heading-wrapper" data-aos="fade-up">
+                    <div class="mujtmah-heading-box">
+                        <div class="sub-heading-box">
+                            <div class="red-dot"></div>
+                            <p class="sub-heading-box__heading">إختيار نوع الخدمة</p>
+                        </div>
+                        <div class="heading-box">
+                            <h1 class="mujtmah-almusmamen__heading">مجتمع المصممين</h1>
+                            <div class="heading-box__underline"></div>
                         </div>
                     </div>
-                    <div class="mujtmah-box__media" data-aos="zoom-in" data-aos-offset="500">
-                        <img src="{{ asset('user/assets/images/mujtmah-box__image.png') }}" class="mujtmah-box__image">
-                        <div class="mujtmah-box__count">
-                            <h1 class="mujtmah-box__count-heading">+50</h1>
-                            <p class="mujtmah-box__count-sub-heading">مصمم</p>
-                        </div>
-                    </div>
+                    <p class="mujtmah-almusmamen__para">
+                        هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى،
+                        حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها
+                        التطبيق.
+                    </p>
+                    <!-- <a href="#" class="m-btn mujtmah-almusmamen-btn">تعرف أكثر</a> -->
+                    <button type="button" class="m-btn mujtmah-almusmamen-btn" data-bs-toggle="modal"
+                        data-bs-target="#designModal">
+                        تعرف أكثر
+                    </button>
                 </div>
                 <div class="mujtmah-almusmamen-wrapper wrapper jst-btw">
                     <div class="mujtmah-box">
@@ -974,24 +948,15 @@
                                 <p class="mujtmah-box__count-sub-heading">مصمم</p>
                             </div>
                         </div>
-                        <img src="{{ asset('user/assets/images/mujtmah-box__image3.png') }}" class="mujtmah-box__image">
                     </div>
-                    <div class="mujtmah-box__content" data-aos="fade-up" data-aos-offset="200">
-                        <h1 class="mujtmah-box__heading">هل تحتاج مصمم 3D ؟</h1>
-                        <p class="mujtmah-box__para">
-                            هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص
-                            العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد
-                            الحروف التى يولدها التطبيق.
-                        </p>
-                        <div class="mujtmah-box-btn-wrapper wrapper al-center mb-3">
-                            <button data-bs-toggle="modal" data-bs-target="#financialOperations2" class="m-btn mujtmah-box-btn ml-2">
-                                <img src="{{ asset('user/assets/images/video.png') }}" class="mujtmah-box-btn__img2">فيديو تعريفي
-                            </button>
-
-                            <button data-bs-toggle="modal" data-bs-target="#financialOperations" class="m-btn mujtmah-box-btn btn-white ml-2">
-
-                                <img src="{{ asset('user/assets/images/arrow-8.png') }}" class="mujtmah-box-btn__img">أطلب الان
-                            </button>
+                    <div class="mujtmah-box2">
+                        <div class="mujtmah-box__media" data-aos="zoom-in" data-aos-offset="500">
+                            <div class="mujtmah-box__count2">
+                                <h1 class="mujtmah-box__count-heading">+40</h1>
+                                <p class="mujtmah-box__count-sub-heading">مصمم</p>
+                            </div>
+                            <img src="{{ asset('user/assets/images/mujtmah-box__image3.png') }}"
+                                class="mujtmah-box__image">
                         </div>
                         <div class="mujtmah-box__content" data-aos="fade-up" data-aos-offset="200">
                             <h1 class="mujtmah-box__heading">هل تحتاج مصمم 3D ؟</h1>
@@ -1006,10 +971,9 @@
                                     <img src="{{ asset('user/assets/images/video.png') }}"
                                         class="mujtmah-box-btn__img2">فيديو تعريفي
                                 </button>
-
                                 <button data-bs-toggle="modal" data-bs-target="#financialOperations"
                                     class="m-btn mujtmah-box-btn btn-white">
-                                أطلب الان                                       
+                                أطلب الان
                                     <img src="{{ asset('user/assets/images/arrow-8.png') }}"
                                     class="mujtmah-box-btn__img mgl-0 mujtmah-box-btn__img2">
                                 </button>
@@ -1022,8 +986,8 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+        <!-- ahsan html end here -->
     <!-- ahsan html end here -->
 
     <section class="contact section" id="contact-us">
