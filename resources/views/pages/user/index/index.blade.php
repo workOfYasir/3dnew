@@ -743,7 +743,7 @@
                                         <h6>مقر العمل</h6>
                                         <p>الرياض، المونسية، شارع احمد بن حنبل</p>
                                     </figcaption>
-                                    <div class="map-place boxContainer">
+                                    <div class="map-place boxContainer" data-aos="zoom-in">
                                         <div class="blue-box move-box"></div>
                                         @if (@$map->map_image != null)
 
