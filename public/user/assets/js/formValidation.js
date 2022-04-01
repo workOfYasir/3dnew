@@ -1,14 +1,14 @@
-$(document).ready(function() {
+$(document).ready(function () {
     // $('.register-icon').click(function() {
     //     $('.btn-form').addClass('disabled');
     // })
     // Form Validation
-    $('.form-select').change(function() {
+    $('.form-select').change(function () {
         $(this).addClass('field-blue')
         $(this).removeClass('field-red');
     })
-    
-    $('.form-control:not(.email)').keyup(function() {
+
+    $('.form-control:not(.email)').keyup(function () {
         if ($(this).val().length === 0) {
             $(this).val($.trim($(this).val()));
             $(this).removeClass('field-blue');
@@ -33,7 +33,7 @@ $(document).ready(function() {
             $('.email-error').addClass('d-none');
         }
     }
-    
+
     function registerValidateEmail(email) {
         var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
         if (!emailReg.test(email) || $('#registerModal .email').val().length == 0) {
@@ -70,12 +70,12 @@ $(document).ready(function() {
             $('#designerloginModal2 .email').removeClass('field-blue');
             $('#designerloginModal2 .email').removeClass('field-red');
             $('#designerloginModal2 .btn-form').addClass('disabled');
-        } 
+        }
         else if (!emailReg.test(email)) {
             $('#designerloginModal2 .email').removeClass('field-blue');
             $('#designerloginModal2 .email').addClass('field-red');
             $('#designerloginModal2 .btn-form').addClass('disabled');
-        } 
+        }
         else {
             $('#designerloginModal2 .email').addClass('field-blue');
             $('#designerloginModal2 .email').removeClass('field-red');
@@ -85,7 +85,7 @@ $(document).ready(function() {
 
     function loginModal2LoginValidateEmail(email) {
         var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-        if($('#userloginModal2 .email').val().length === 0){
+        if ($('#userloginModal2 .email').val().length === 0) {
             $('#userloginModal2 .email').removeClass('field-blue');
             $('#userloginModal2 .email').removeClass('field-red');
             $('#userloginModal2 .btn-form').addClass('disabled');
@@ -104,7 +104,7 @@ $(document).ready(function() {
 
     function userLoginValidateEmail(email) {
         var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-        if($('#userloginModal .email').val().length === 0){
+        if ($('#userloginModal .email').val().length === 0) {
             $('#userloginModal .email').removeClass('field-blue');
             $('#userloginModal .email').removeClass('field-red');
             $('#userloginModal .btn-form').addClass('disabled');
@@ -123,7 +123,7 @@ $(document).ready(function() {
 
     function desLoginValidateEmail(email) {
         var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-        if($('#designerloginModal .email').val().length === 0){
+        if ($('#designerloginModal .email').val().length === 0) {
             $('#designerloginModal .email').removeClass('field-blue');
             $('#designerloginModal .email').removeClass('field-red');
             $('#designerloginModal .btn-form').addClass('disabled');
@@ -185,7 +185,7 @@ $(document).ready(function() {
     //     loginValidateEmail(email)
     // })
 
-    $('#healthServiesModal .age').keyup(function() {
+    $('#healthServiesModal .age').keyup(function () {
         if ($(this).val().length > 0) {
             $(this).addClass('field-blue');
             $(this).removeClass('field-red');
@@ -199,7 +199,7 @@ $(document).ready(function() {
 
         }
     })
-    $('#healthServiesModal .carousel-item.one .form-control').keyup(function() {
+    $('#healthServiesModal .carousel-item.one .form-control').keyup(function () {
         if ($('#healthServiesModal .carousel-item.one .name').val().length > 1 && $('#healthServiesModal .carousel-item.one .spec').val().length > 1 &&
             $('#healthServiesModal .carousel-item.one .email').hasClass('field-blue') && $('#healthServiesModal .carousel-item.one .phone').val().length > 1 && $('#healthServiesModal .carousel-item.one .hospital').val().length > 1 &&
             $('#healthServiesModal .carousel-item.one .p_name').val().length > 1 && $('#healthServiesModal .carousel-item.one .age').val().length < 3 && $('#healthServiesModal .carousel-item.one .desc').val().length > 1 &&
@@ -211,8 +211,8 @@ $(document).ready(function() {
     })
 
     // /* Designer Register Validation
-    $('#designerloginModal2 .form-control').each(function() {
-        $(this).keyup(function() {
+    $('#designerloginModal2 .form-control').each(function () {
+        $(this).keyup(function () {
             if ($(this).val().length > 1 && $(this).hasClass('field-blue') && $('#designerloginModal2 .pass').val().length > 1 && $('#designerloginModal2 .email').hasClass('field-blue')) {
                 $('#designerloginModal2 .btn-form').removeClass('disabled');
             } else {
@@ -221,7 +221,7 @@ $(document).ready(function() {
         })
     })
 
-    $('#designerloginModal2 .email').keyup(function() {
+    $('#designerloginModal2 .email').keyup(function () {
         var email = $(this).val();
         if ($('#designerloginModal2 .pass').val().length > 1 && $('#designerloginModal2 .form-control:not(.email)').val().length > 1 && $('#designerloginModal2 .form-control').hasClass('field-blue') && $(this).hasClass('field-blue')) {
             $('#designerloginModal2 .btn-form').removeClass('disabled');
@@ -233,8 +233,8 @@ $(document).ready(function() {
     // Designer Register Validation */
 
     // /* User Register Validation
-    $('#userloginModal2 .form-control').each(function() {
-        $(this).keyup(function() {
+    $('#userloginModal2 .form-control').each(function () {
+        $(this).keyup(function () {
             if ($(this).val().length > 1 && $(this).hasClass('field-blue') && $('#userloginModal2 .pass').val().length > 1 && $('#userloginModal2 .email').hasClass('field-blue')) {
                 $('#userloginModal2 .btn-form').removeClass('disabled');
             } else {
@@ -243,7 +243,7 @@ $(document).ready(function() {
         })
     })
 
-    $('#userloginModal2 .email').keyup(function() {
+    $('#userloginModal2 .email').keyup(function () {
         var email = $(this).val();
         if ($('#userloginModal2 .pass').val().length > 1 && $('#userloginModal2 .form-control:not(.email)').val().length > 1 && $('#userloginModal2 .form-control').hasClass('field-blue') && $(this).hasClass('field-blue')) {
             $('#userloginModal2 .btn-form').removeClass('disabled');
@@ -255,14 +255,14 @@ $(document).ready(function() {
     // /* User Register Validation
 
     // /* User Login Validation
-    $('#userloginModal .pass').keyup(function() {
+    $('#userloginModal .pass').keyup(function () {
         if ($(this).val().length > 1 && $('#userloginModal .email').hasClass('field-blue')) {
             $('#userloginModal .btn-form').removeClass('disabled');
         } else {
             $('#userloginModal .btn-form').addClass('disabled');
         }
     })
-    $('#userloginModal .email').keyup(function() {
+    $('#userloginModal .email').keyup(function () {
         var email = $(this).val();
         if ($('#userloginModal .pass').val().length > 1 && $(this).hasClass('field-blue')) {
             $('#userloginModal .btn-form').removeClass('disabled');
@@ -274,14 +274,14 @@ $(document).ready(function() {
     // /* User Login Validation
 
     // /* Designer Login Validation
-    $('#designerloginModal .pass').keyup(function() {
+    $('#designerloginModal .pass').keyup(function () {
         if ($(this).val().length > 1 && $('#designerloginModal .email').hasClass('field-blue')) {
             $('#designerloginModal .btn-form').removeClass('disabled');
         } else {
             $('#designerloginModal .btn-form').addClass('disabled');
         }
     })
-    $('#designerloginModal .email').keyup(function() {
+    $('#designerloginModal .email').keyup(function () {
         var email = $(this).val();
         if ($('#designerloginModal .pass').val().length > 1 && $(this).hasClass('field-blue')) {
             $('#designerloginModal .btn-form').removeClass('disabled');
@@ -291,7 +291,7 @@ $(document).ready(function() {
         desLoginValidateEmail(email);
     })
     // /* Designer Login Validation
-    
+
     // $('#userloginModal2 .form-control').each(function() {
     //     $(this).keyup(function() {
     //         if ($(this).val().length != 0) {
@@ -322,7 +322,7 @@ $(document).ready(function() {
     //     desLoginValidateEmail(email)
     // })
 
-    $('#healthServiesModal .email').keyup(function() {
+    $('#healthServiesModal .email').keyup(function () {
         var email = $(this).val();
         if ($('#healthServiesModal .carousel-item.one .name').val().length > 1 && $(this).hasClass('field-blue') &&
             $('#healthServiesModal .carousel-item.one .spec').val().length > 1 && $('#healthServiesModal .carousel-item.one .phone').val().length > 1 &&
@@ -335,7 +335,7 @@ $(document).ready(function() {
         healthValidateEmail(email);
     })
 
-    $('#publicServiesModal .carousel-item.one .form-control').keyup(function() {
+    $('#publicServiesModal .carousel-item.one .form-control').keyup(function () {
         if ($('#publicServiesModal .carousel-item.one .name').val().length > 1 && $('#publicServiesModal .carousel-item.one .email').val().length > 1 &&
             $('#publicServiesModal .carousel-item.one .phone').val().length > 1 && $('#publicServiesModal .carousel-item.one .gender').hasClass('field-blue') &&
             $('#publicServiesModal .carousel-item.one .spec').hasClass('field-blue')) {
@@ -345,7 +345,7 @@ $(document).ready(function() {
         }
     })
 
-    $('#publicServiesModal .form-select.gender').change(function() {
+    $('#publicServiesModal .form-select.gender').change(function () {
         if ($('#publicServiesModal .carousel-item.one .name').val().length > 1 && $('#publicServiesModal .carousel-item.one .email').hasClass('field-blue') &&
             $('#publicServiesModal .carousel-item.one .phone').val().length > 1 && $('#publicServiesModal .carousel-item.one .spec').hasClass('field-blue')) {
             $('#publicServiesModal .carousel-item.one .btn-form').removeClass('disabled');
@@ -354,7 +354,7 @@ $(document).ready(function() {
         }
     })
 
-    $('#publicServiesModal .form-select.spec').change(function() {
+    $('#publicServiesModal .form-select.spec').change(function () {
         if ($('#publicServiesModal .carousel-item.one .name').val().length > 1 && $('#publicServiesModal .carousel-item.one .email').hasClass('field-blue') &&
             $('#publicServiesModal .carousel-item.one .phone').val().length > 1 && $('#publicServiesModal .carousel-item.one .gender').hasClass('field-blue')) {
             $('#publicServiesModal .carousel-item.one .btn-form').removeClass('disabled');
@@ -362,7 +362,7 @@ $(document).ready(function() {
             $('#publicServiesModal .carousel-item.one .btn-form').addClass('disabled');
         }
     })
-    $('#publicServiesModal .carousel-item.two .form-control').keyup(function() {
+    $('#publicServiesModal .carousel-item.two .form-control').keyup(function () {
         if ($('#publicServiesModal .carousel-item.two .type').val().length > 1 && $('#publicServiesModal .carousel-item.two .email').val().length > 1 &&
             $('#publicServiesModal .carousel-item.two .spec').val().length > 1 && $('#publicServiesModal .carousel-item.two .btn-upload.public').hasClass('field-blue')) {
             $('#publicServiesModal .carousel-item.two .btn-form').removeClass('disabled');
@@ -371,7 +371,7 @@ $(document).ready(function() {
         }
     })
 
-    $('#public-file').change(function() {
+    $('#public-file').change(function () {
         var fileName = $(this).val();
         $('.btn-upload.public').addClass('field-blue');
         if (fileName && $('#publicServiesModal .carousel-item.two .type').val().length > 1 && $('#publicServiesModal .carousel-item.two .email').val().length > 1 &&
@@ -381,13 +381,13 @@ $(document).ready(function() {
             $('#publicServiesModal .carousel-item.two .btn-form').addClass('disabled');
         }
     })
-    $('#healthServiesModal .carousel-item.three .procedure').change(function() {
+    $('#healthServiesModal .carousel-item.three .procedure').change(function () {
         if ($('.btn-upload.health').hasClass('field-blue')) {
             $('#healthServiesModal .carousel-item.three .btn-form').removeClass('disabled');
         }
     })
 
-    $('#health-file').change(function() {
+    $('#health-file').change(function () {
         var fileName = $(this).val();
         $('.btn-upload.health').addClass('field-blue');
         if (fileName && $('#healthServiesModal .carousel-item.three .procedure').hasClass('field-blue')) { // returns true if the string is not empty
@@ -397,7 +397,7 @@ $(document).ready(function() {
         }
     })
 
-    $('#publicServiesModal .email').keyup(function() {
+    $('#publicServiesModal .email').keyup(function () {
         var email = $(this).val();
         if ($('#publicServiesModal .carousel-item.one .name').val().length > 1 && $(this).hasClass('field-blue') &&
             $('#publicServiesModal .carousel-item.one .phone').val().length > 1 && $('#publicServiesModal .carousel-item.one .gender').hasClass('field-blue') &&
@@ -409,5 +409,28 @@ $(document).ready(function() {
         publicValidateEmail(email);
     })
 
-   
+    // Products Modal Form
+        $('#productaddModal .form-control').keyup(function () {
+            if ($('#productaddModal input').val().length < 1 && $('#productaddModal textarea').val().length < 1) {
+                $('.ahs-profile-plus-btn').addClass('disabled');
+            }
+            else if ($('#productaddModal .form-control').val().length > 1 && $('#productaddModal textarea').val().length > 1 && $('#productaddModal .form-select.a').hasClass('field-blue') && $('#productaddModal .form-select.b').hasClass('field-blue') && $('#productaddModal .form-select.c').hasClass('field-blue') && $('#productaddModal .form-select.d').hasClass('field-blue')) {
+                $('.ahs-profile-plus-btn').removeClass('disabled');
+            }
+            else if ($('#productaddModal .form-control').val().length > 1 && $('#productaddModal textarea').val().length > 1 && $('#productaddModal .form-select.a').hasClass('field-blue') && $('#productaddModal .form-select.b').hasClass('field-blue') && $('#productaddModal .form-select.c').hasClass('field-blue') && $('#productaddModal .form-select.d').hasClass('field-blue')) {
+                $('.ahs-profile-plus-btn').removeClass('disabled');
+            }
+            else {
+                $('.ahs-profile-plus-btn').addClass('disabled');
+            }
+        })
+
+    // $('#productaddModal .form-select').each(function () {
+        $('#productaddModal .form-select').change(function () {
+            if ($('#productaddModal .form-control').val().length > 1 && $('#productaddModal textarea').val().length > 1 && $('#productaddModal .form-select.a').hasClass('field-blue') && $('#productaddModal .form-select.b').hasClass('field-blue') && $('#productaddModal .form-select.c').hasClass('field-blue') && $('#productaddModal .form-select.d').hasClass('field-blue')) {
+                $('#productaddModal .ahs-profile-plus-btn').removeClass('disabled');
+            }
+        })
+    // })
+
 })

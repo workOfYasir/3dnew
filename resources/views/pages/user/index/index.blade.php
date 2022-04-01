@@ -4924,7 +4924,7 @@
                                             <span class="outline dot">اهلاً وسهلاً بكم</span>
                                             <h1 class="modal-title right centr-main-title">المنتجات </h1>
                                         </div>
-                                        <button class="ahs-profile-plus-btn ">
+                                        <button class="ahs-profile-plus-btn disabled">
                                             <i class="fa fa-plus-circle fa-lg ahs-profile-plus"></i>
                                             إضافة منتج
                                         </button>
@@ -4955,7 +4955,7 @@
                                                 <p class="sub-heading-box__heading sub-heading-box__heading--b">العنوان
                                                 </p>
                                             </div>
-                                            <input type="text" class="almuntjat-form__input" placeholder="الاسم هنا ..">
+                                            <input type="text" class="almuntjat-form__input form-control" placeholder="الاسم هنا ..">
                                         </div>
                                         <!-- alunwan end -->
                                         <div class="almuntjat-form__input-wrapper">
@@ -4965,8 +4965,7 @@
                                                 </p>
                                             </div>
                                             <label for="almuntjat-form__wasaf" class="almuntjat-form__wasaf-label"></label>
-                                            <textarea placeholder="الوصف هنا .." name="almuntjat-form__wasaf" id="almuntjat-form__wasaf" class="almuntjat-form__wasaf-input">
-                                                </textarea>
+                                            <textarea placeholder="الوصف هنا .." name="almuntjat-form__wasaf" value="" id="almuntjat-form__wasaf" class="almuntjat-form__wasaf-input form-control"></textarea>
                                         </div>
                                         <div class="form-inner-wrapper wrapper jst-btw">
                                             <div class="almuntjat-form__box ">
@@ -4978,7 +4977,7 @@
                                                 <div class="input-holder">
                                                     <!-- <input type="text" placeholder="كلمة المرور هنا .." class="almuntjat-form__input">
                                                     <img src="assets/images/arrow-5.png" alt="" class="input-holder__img"> -->
-                                                    <select class="form-select" required name="">
+                                                    <select class="form-select a" required name="">
                                                         <option selected>اختيار التقنية</option>
                                                         <option>A</option>
                                                     </select>
@@ -4993,7 +4992,7 @@
                                                 <div class="input-holder">
                                                     <!-- <input type="text" placeholder="اختيار التقنية" class="almuntjat-form__input">
                                                     <img src="assets/images/arrow-5.png" alt="" class="input-holder__img"> -->
-                                                    <select class="form-select" required name="">
+                                                    <select class="form-select b" required name="">
                                                         <option selected>اختيار التقنية</option>
                                                         <option>A</option>
                                                     </select>
@@ -5008,7 +5007,7 @@
                                                 <div class="input-holder">
                                                     <!-- <input type="text" placeholder="اختاير البرامج المستخدمة" class="almuntjat-form__input">
                                                     <img src="assets/images/arrow-5.png" alt="" class="input-holder__img"> -->
-                                                    <select class="form-select" required name="">
+                                                    <select class="form-select c" required name="">
                                                         <option selected>اختاير البرامج المستخدمة</option>
                                                         <option>A</option>
                                                     </select>
@@ -5023,7 +5022,7 @@
                                                 <div class="input-holder">
                                                     <!-- <input type="text" placeholder="اختاير البرامج المستخدمة" class="almuntjat-form__input">
                                                     <img src="assets/images/arrow-5.png" alt="" class="input-holder__img"> -->
-                                                    <select class="form-select" required name="">
+                                                    <select class="form-select d" required name="">
                                                         <option selected>اختاير البرامج المستخدمة</option>
                                                         <option>A</option>
                                                     </select>

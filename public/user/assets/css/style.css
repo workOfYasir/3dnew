@@ -2526,8 +2526,18 @@ input[type=number] {
     max-height: unset;
     height: 1020px;
     width: 1280px;
-
-
+}
+.designer-sec::after{
+    content: "";
+    position: absolute;
+    background: linear-gradient(360deg, rgba(33, 80, 153, 100%), transparent);
+    background-repeat: no-repeat;
+    top: 420px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 130px;
+    z-index: -1;
 }
 
 /* .designer-sec::before {
@@ -3053,6 +3063,11 @@ input[type=number] {
     padding: 2rem 0px;
     position: relative;
     z-index: 9;
+}
+
+.ahs-profile-plus-btn.disabled{
+    color: #E0E0DE;
+    background-color: unset;
 }
 
 /* Safari */
