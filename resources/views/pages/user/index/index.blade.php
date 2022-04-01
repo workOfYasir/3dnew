@@ -2235,14 +2235,14 @@
                                        </div> -->
                                                     <div class="row">
                                                         <div class="col-md-12">
-                                                            <label class="form-label dot">عموم الحاله الصحية</label>
+                                                            <label class="form-label dot">ملاحظات</label>
                                                         </div>
                                                         <div class="col-md-6">
-                                                            <textarea class="form-control designer-text-area" id="exampleFormControlTextarea1" rows="4" placeholder="  ..الوصف هنا" readonly>{{@$ss->discription}}</textarea>
+                                                            <textarea class="form-control designer-text-area " id="exampleFormControlTextarea1" rows="4" placeholder="  ..الوصف هنا" readonly>{{@$ss->discription}}</textarea>
                                                         </div>
                                                         <div class="col-md-6">
                                                             <div class="upload-btn-wrapper designer-upload">
-                                                                <button class="btn btn-upload-designer health"><img src="{{asset('user/assets/icons/upload-img.svg')}}" alt="upload-img"></button>
+                                                                <button class="btn btn-upload-designer health"><img src="{{asset('user/assets/icons/upload-atachment.png')}}" alt="upload-img"> <p>صور بصيغة STL,PNG,JPG</p></button>
                                                                 <input type="file" id="health-file" required name="myfile" />
                                                             </div>
                                                         </div>
@@ -2537,11 +2537,11 @@
                                                                 <label class="form-label dot">عموم الحاله الصحية</label>
                                                             </div>
                                                             <div class="col-md-6">
-                                                                <textarea class="form-control designer-text-area" id="exampleFormControlTextarea1" rows="4" placeholder="  ..الوصف هنا" readonly>{{@$ss->discription}}</textarea>
+                                                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="  ..الوصف هنا" readonly>{{@$ss->discription}}</textarea>
                                                             </div>
                                                             <div class="col-md-6">
                                                                 <div class="upload-btn-wrapper designer-upload">
-                                                                    <button class="btn btn-upload-designer health"><img src="{{asset('user/assets/icons/upload-img.svg')}}" alt="upload-img"></button>
+                                                                    <button class="btn btn-upload-designer health"><img src="{{asset('user/assets/icons/download-attachments.png')}}" alt="upload-img"> <h5>تحميل المرفقات</h5></button>
                                                                     <input type="file" id="health-file" required name="myfile" />
                                                                 </div>
                                                             </div>
@@ -5976,7 +5976,7 @@
                                                                     <label class="form-label dot">عموم الحاله الصحية</label>
                                                                 </div>
                                                                 <div class="col-md-6">
-                                                                    <textarea class="form-control designer-text-area" id="exampleFormControlTextarea1" rows="4" placeholder="  ..الوصف هنا" readonly=""></textarea>
+                                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="  ..الوصف هنا" readonly=""></textarea>
                                                                 </div>
                                                                 <div class="col-md-6">
                                                                     <div class="upload-btn-wrapper designer-upload">
@@ -6522,7 +6522,7 @@
                                                                 <label class="form-label dot">ملاحظات</label>
                                                             </div>
                                                             <div class="col-md-6">
-                                                                <textarea class="form-control designer-text-area" id="exampleFormControlTextarea1" rows="4" placeholder="  ..الوصف هنا" readonly>{{@$ss->discription}}</textarea>
+                                                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="  ..الوصف هنا" readonly>{{@$ss->discription}}</textarea>
                                                             </div>
                                                             <div class="col-md-6">
                                                                 <div class="upload-btn-wrapper designer-upload">
