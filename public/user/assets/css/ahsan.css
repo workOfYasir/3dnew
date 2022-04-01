@@ -260,7 +260,11 @@ mujtmah-almusmamen section start
     width: 15px;
     margin-left: 10px;
 }
-
+.mujtmah-box-btn__img3{
+    width: 12px; 
+    margin-right: 10px;
+    transform: rotate(180deg);
+}
 .mujtmah-box__count-heading {
     color: #fff;
     font-size: 43px;
@@ -739,7 +743,8 @@ almuntjat section start
     font-size: 18px;
     color: #D83554;
     text-decoration: none;
-    margin: 0 0 0 45px;
+    margin: 0 23px;
+    margin-left: 5px;
     line-height: 1;
 }
 

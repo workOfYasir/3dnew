@@ -29,7 +29,7 @@
                          <div class="modal-body">
                              <div class="row">
                                  <div class="col-md-12">
-                                     <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                     <ul class="nav nav-tabs designer-tabs" id="myTab" role="tablist">
                                          <li class="nav-item" role="presentation">
                                              @auth
                                              <button class="nav-link active" id="medical-tab tab tab1" data-bs-toggle="tab" data-bs-target="#medical-services" type="button" role="tab" aria-selected="true"><span class="notification">{{$orders->count()}}</span> الخدمات الطبية</button>

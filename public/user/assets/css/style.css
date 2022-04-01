@@ -2743,7 +2743,7 @@ input[type=number] {
 }
 
 .design-card-left-top p {
-    color: #1EA9D4;
+    color: #FFFFFF;
     padding: 1px 11px;
     font-size: 10px;
     font-weight: bold;
@@ -2870,6 +2870,7 @@ input[type=number] {
 
 .design-footer .footer-nav .nav-link {
     font-size: 15px;
+    text-decoration: underline;
 }
 
 .design-footer footer {
@@ -2930,6 +2931,7 @@ input[type=number] {
 }
 .designer-sec-1-title .designer-title {
     padding-bottom: 0px !important;
+    text-shadow: 0 6px 6px rgb(0 0 0 / 16%);
 }
 .designer-profile .design-txt {
     color: #1F5098;
@@ -3048,7 +3050,7 @@ input[type=number] {
 }
 
 #designinnerModal .navbar {
-    padding: 2rem;
+    padding: 2rem 0px;
     position: relative;
     z-index: 9;
 }

@@ -1,3 +1,8 @@
+/* .designer-tabs .nav-link{
+    margin: 0 10px !important;
+
+} */
+
 .cleanshot{
     background-image: url(../images/cleanshot.png);
     background-repeat: no-repeat;
@@ -8,11 +13,14 @@
 .clean-headings h3{
     font-size:40px;
     font-weight: bold;
+    margin: 23px 0 33px 0;
 }
 .clean-headings h6{
     font-size:16px;
     font-weight: bold;
     color:#58595B;
+    margin-bottom: 30px;
+
 }
 .zhd-form-clean{
     padding: 0 50px 30px 50px !important;
@@ -170,10 +178,16 @@ opacity: 0 !important;
 }
 .btn-upload-designer h5{
     color:#215099;
+    font-size: 14px;
+    margin-top: 11px;
+    font-weight: 400;
     
 }
 .btn-upload-designer p{
     color: #9FA5B2;
+    font-size: 14px;
+    padding-top: 10px;
+    font-weight: 400;
 }
 .designer-text-area{
     background-color:#ffffff !important;
@@ -329,4 +343,13 @@ opacity: 0 !important;
 .ff{
     display: flex;
     justify-content: center;
+}
+
+
+/* asim changes */
+.centr-main-title{
+    color: #000;
+}
+.zhd-bt-p {
+    color: #1F5098 !important;
 }
