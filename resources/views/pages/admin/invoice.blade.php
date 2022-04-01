@@ -5,19 +5,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{asset('invoice/assets/css/style2.css')}}">
+    <link href="{{ public_path('assets/css/bootstrap.min.css') }}" rel="stylesheet" >
+    <link rel="stylesheet" href="{{public_path('invoice/assets/css/style2.css')}}">
     <title>3D Organs</title>
+    <style>@page {
+        margin: 0px 0px 0px 0px !important;
+        padding: 0px 0px 0px 0px !important;
+        width:960px;
+        font-size:0.8rem;
+    } 
+    * { font-family: DejaVu Sans, sans-serif; }
+ 
+    tbody tr:nth-child(odd){
+  background-color: #e6e6e6;
+
+  color: rgb(75, 74, 74);
+}
+    </style>
 </head>
 
-<body>
-    <section class="content-container">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="heading">
-                        <h3><span>3D+</span> Innovative Solutions</h3>
-                        <p class="muted">شركة ثلاثة أبعاد والقيمة المضافة</p>
+<body style="margin: 0px;size:a4; font-size:0.8rem">
+    <img src="{{ public_path('invoice/assets/Quotation.png') }}" style="width:18%">
+    <section style="margin-top: -100px;margin-left:60px">
+        <div >
+            <div class="" style="width:80%;display: table;">
+                <div class="col-md-6"style=";display:table-cell">
+                    <div class="heading" style="  font-size: 18px;">
+                        <div style=""><span style="     color: #4d9bd2;
+                            font-weight: 600;
+                        }">3D+</span> <span style="color: #000">Innovative Solutions</span></div>
+                        {{-- <p class="muted">شركة ثلاثة أبعاد والقيمة المضافة</p> --}}
 
                     </div>
                     <div>
@@ -27,25 +44,25 @@
                     <p>00 (966) 555855519</p>
                     <p>CR 4030606386</p> -->
                         <p class="muted">3Dplus.sa | <u>Info@3Dplus.sa</u> <br> Prince Abdulaziz Ibn Musaid <br>
-                            Ibn Jalawi St, St ،Riyadh 12231 <br>
+                            Ibn Jalawi St, St ,Riyadh 12231 <br>
                             00 (966) 555855519 <br>
                             CR 4030606386
                         </p>
                     </div>
 
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6" style="display:table-cell">
                     <div class="side-logo">
-                        <img src="{{asset('invoice/assets/logo.svg')}}" alt="">
+                        <img src="{{public_path('invoice/assets/logo.png')}}" alt="">
                     </div>
 
                 </div>
 
             </div>
-            <div class="row">
-                <div class="col-md-4">
+            <div class=""style="width:100%;display: table;">
+                <div class="col-md-4"style="display:table-cell">
                     <div class="heding">
-                        <h4>Bill To</h4>
+                        <div style="     color: #4d9bd2;" >Bill To</div>
                     </div>
                     <div class="text">
                         <p>Shuttle <br>
@@ -56,9 +73,9 @@
 
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4"style="display:table-cell">
                     <div class="heding">
-                        <h4>Ship To</h4>
+                        <div style="     color: #4d9bd2;">Ship To</div>
                     </div>
                     <div class="text">
                         <p>{{$user->name}} <br>
@@ -66,9 +83,9 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4"style="display:table-cell">
                     <div class="heding">
-                        <h4>Dates</h4>
+                        <div style="     color: #4d9bd2;">Dates</div>
                     </div>
                     <div class="text">
                         <p>Quote: {{$invoice->date}} <br>
@@ -79,13 +96,13 @@
 
             </div>
 
-            <table class="table table-bordered table-striped">
+            <table class="table table-bordered table-striped" style="width: 700px;table-layout:fixed;">
                 <thead>
                     <tr>
-                        <th scope="col">Description</th>
+                        <th scope="col" style="width:50%">Description</th>
                         <th scope="col">Deliverable</th>
                         <th scope="col">Quantity</th>
-                        <th scope="col">Price/unit</th>
+                        <th scope="col" style="20%">Price/unit</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -123,7 +140,7 @@
                         <td>{{$invoice->qty_model}}</td>
                         <td> <span>{{$invoice->price_model}} SR</span>
                             <div class="">
-                                <img src="{{asset('invoice/assets/logo.svg')}}" alt="">
+                                <img src="{{public_path('invoice/assets/logo.png')}}" alt="">
 
                             </div>
                         </td>
@@ -158,9 +175,11 @@
                     </tr>
                 </tbody>
             </table>
-            <div class="terms">
+
+            <div style="display: table">
+            <div class="terms" style="width:85%;display:table-cell">
                 <div class="col-md-6 tc">
-                    <h4> Terms & Conditions </h4>
+                    <div> Terms & Conditions </div>
                 </div>
                 <p class="muted">Payment due before delivery, The timeline starts from order confirmation by the customer, and it will
                     be
@@ -181,18 +200,22 @@
                 </p>
 
             </div>
+            <div style="width: 10%;display:table-cell;padding-top:15px" >
+                <img src="{{public_path('invoice/assets/Quotation2.png')}}" class="img-fluid"  alt="">
+            </div>
+
+        </div>
         </div>
     </section>
-    <img src="{{asset('invoice/assets/Quotation.png')}}" class="side-imag" alt="top">
 
 
 
-    <section class="footer-wrap">
+    {{-- <section class="footer-wrap" style="width: 90%">
         <footer>
             <div class="col-md-12">
-                <img src="{{asset('invoice/assets/Quotation2.png')}}" class="footer-img" alt="">
+                <img src="{{public_path('invoice/assets/Quotation2.png')}}" class="footer-img" alt="">
             </div>
-        </footer>
+        </footer> --}}
 
     </section>
 
@@ -200,8 +223,12 @@
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-    <script src="{{asset('invoice/assets/js/jquery.min.js')}}"></script>
+    {{-- <script src="{{ public_path('assets/js/bootstrap/bootstrap.min.js') }}" ></script> --}}
+    {{-- <script src="{{public_path('invoice/assets/js/jquery.min.js')}}"></script>
+    <script>
+        
+
+    </script> --}}
 </body>
 
 </html>

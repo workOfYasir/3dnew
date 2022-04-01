@@ -6,11 +6,38 @@
                      <div class="col-md-12">
                          <div class="modal-header border-0">
                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                             <div class="dropdown">
+                                <button class="btn bg-light dropdown" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fas fa-file-pdf" style="color:#1F5098; font-size:35px"></i>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                  
+                                    @if(@$user->purposals)
+                                    <li>
+                                        <a class="dropdown-item" href="{{ route('purposal.pdf',$user->purposals->id) }}" >
+                                        New Purposal
+                                        </a>
+                                    </li>
+                                 @endif
+                                 @if(@$user->invoices)
+                                 <li>
+                                     <a class="dropdown-item" href="{{ route('invoice.pdf',$user->purposals->id) }}">
+                                         New Invoice
+                                         </a>
+                                </li>
+                              @endif
+
+                                </ul>
+                              </div>
+                            
+
+                         
+                       
                              <div>
                                  <span class="outline dot">اهلاً وسهلاً بكم</span>
                                  <h1 class="modal-title right centr-main-title"><span class="btm-line d-flex">طلباتي<span class="inner-line"></span></span></h1>
                              </div>
-                          
+                     
                              <div class="profile">
                                     <button class="btn btn-sky profile-btn invert">
                                     المصمم

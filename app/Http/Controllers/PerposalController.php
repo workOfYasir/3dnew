@@ -7,8 +7,8 @@ use App\Models\Medical;
 use App\Models\Perposal;
 use Illuminate\Http\Request;
 use App\Notifications\ProposelNotification;
-use PDF;
-use Auth;
+use Barryvdh\DomPDF\Facade\Pdf;
+use Illuminate\Support\Facades\Auth;
 use App\Mail\ProposelMail;
 
 class PerposalController extends Controller
@@ -73,7 +73,6 @@ class PerposalController extends Controller
     public function show($id)
     {
         $invoice = Perposal::find($id);
-     
         $user = User::find($invoice->user_id);
         return view('pages.admin.invoice', compact('invoice', 'user'));
     }
@@ -129,14 +128,15 @@ class PerposalController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function pdfProposal(Request $request)
+    public function pdfProposal($id)
     {
-        $items = Perposal::where('user_id',Auth::user()->id)->get();
-        view()->share('items',$items);
-        if($request->has('download')){
-            $pdf = PDF::loadView('proposel');
+        $invoice = Perposal::find($id);
+        $user = User::find($invoice->user_id);
+
+        // if($request->has('download')){
+            $pdf = PDF::loadView('pages.admin.invoice',compact('invoice', 'user'));
             return $pdf->download('proposel.pdf');
-        }
-        return view('pdfview');
+        // }
+        // return  $pdf->download('pages.admin.invoice');
     }
 }
