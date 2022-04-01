@@ -936,7 +936,7 @@
                             </button>
                             
                         </div>
-                        <div class="notification-box">
+                        <div class="notification-box me-0 notification-box-wdt">
                             <p><span class="notification">
                                 1</span>طلبات قائمة</p>
                         </div>
@@ -984,7 +984,7 @@
                                 <p class="mujtmah-box__link1 mgl-2">يتطلب تسجيل</p>
                                 <button class="mujtmah-box__link2" data-bs-toggle="modal" data-bs-target="#registerModal">للتسجيل اضغط هنا</button>
                             </div>
-                            <div class="notification-box">
+                            <div class="notification-box me-0 notification-box-wdt">
                             <p><span class="notification">
                                 1</span>طلبات قائمة</p>
                         </div>

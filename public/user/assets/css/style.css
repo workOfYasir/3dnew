@@ -2870,6 +2870,7 @@ input[type=number] {
 
 .design-footer .footer-nav .nav-link {
     font-size: 15px;
+    text-decoration: underline;
 }
 
 .design-footer footer {

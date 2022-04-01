@@ -62,6 +62,7 @@
     
     #designinnerModal .modal-header .btn-close {
         box-shadow: none;
+        z-index: 9999;
     }
     
     #designinnerModal .design-card-inner a {
@@ -83,6 +84,7 @@
         font-weight: bold;
         width: 40px;
         height: 40px;
+        box-shadow: 0 12px 12px rgb(0 0 0 / 16%);
     }
     
     #productdesignModal .modal-header {
@@ -133,6 +135,11 @@
         width: 100%;
     }
     /* ////////////////////////////////////  designer-sec-1  css end here  //////////////////////////////////// */
+
+    .notification-box.notification-box-wdt{
+        width: 427px;
+    }
+
     /* ////////////////////////////////////  product add view  css start here  //////////////////////////////////// */
     
     .product-add-upload {
@@ -513,6 +520,9 @@
     /* ////////////////////////////////////////// tab landscape responsive //////////////////////////////////////////////////////// */
 
     @media (min-width: 768px) and (max-width: 991px) {
+        .notification-box.notification-box-wdt{
+            width: 300px;
+        }
         .designer-sec {
             padding-top: 170px;
             margin-top: 60px;
@@ -547,6 +557,9 @@
 
 
     @media (min-width:992px) and (max-width: 1199px) {
+        .notification-box.notification-box-wdt{
+            width: 300px;
+        }
         .search-form {
             padding: 0px 7px;
             padding-bottom: 50px;
