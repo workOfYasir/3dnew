@@ -566,11 +566,11 @@
         padding-right: 0;
     }
 
-    #requestsModal .nav-tabs .nav-item {
+    #requestsModal .nav-tabs .nav-item, .onTab .nav-tabs .nav-item {
         width: 100%;
     }
     
-    #requestsModal .nav-tabs .nav-link {
+    #requestsModal .nav-tabs .nav-link, .onTab .nav-tabs .nav-link {
         /* border: 4px solid #E3E9EC; */
         /* border-radius: 60px; */
         color: #9FA5B2;
@@ -936,7 +936,7 @@
         width: 100%;
     }
 
-    #requestsModal .nav-tabs {
+    #requestsModal .nav-tabs, .onTab .nav-tabs {
         border-radius: 20px;
         width: 100%;
     }
@@ -1805,7 +1805,7 @@
         width: 100%;
     }
 
-    #requestsModal .nav-tabs .nav-link {
+    #requestsModal .nav-tabs .nav-link, .onTab .nav-tabs .nav-link {
         padding: 3px 65px;
     }
     

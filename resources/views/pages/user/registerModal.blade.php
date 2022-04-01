@@ -1,4 +1,4 @@
-<div class="modal fade page register animate__animated animate__fadeInRight" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+<div class="modal fade page register animate__animated animate__fadeInRight onTab" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-fullscreen">
         <div class="modal-content">
             <div class="container">

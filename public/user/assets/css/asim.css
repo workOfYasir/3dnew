@@ -1,6 +1,6 @@
     
     /* ////////////////////////////////////  designer section start here  //////////////////////////////////// */
-    
+    #productdesignModal .designer-sec::after{display:none;}
     #designinnerModal .designer-sec {
         padding-top: 50px;
     }
@@ -208,7 +208,7 @@
     }
     
     .ahs-profile-plus {
-        font-size: 40px !important;
+        font-size: 38px !important;
     }
     
     .switch {
@@ -228,6 +228,8 @@
     .switch .form-check-input {
         width: 40px;
         height: 23px;
+        background-color: #02BB84;
+        border-color: #02BB84;
     }
     
     .switch .form-check-label {
@@ -564,6 +566,8 @@
             padding: 0px !important;
             /* padding: 50px 100px 150px 100px !important; */
         }
+
+
         
     }
     
@@ -622,6 +626,10 @@
         /* .m-l-20{
             margin-left: 20px;
         } */
+
+           /* productaddformModal style */
+
+           
     }
     
 
