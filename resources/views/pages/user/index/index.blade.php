@@ -977,6 +977,12 @@
                                     <img src="{{ asset('user/assets/images/arrow-8.png') }}"
                                     class="mujtmah-box-btn__img mgl-0 mujtmah-box-btn__img2">
                                 </button>
+                                <button data-bs-toggle="modal" data-bs-target="#financialOperations"
+                                    class="m-btn mujtmah-box-btn btn-white-1">
+                                أطلب الان
+                                    <img src="{{ asset('user/assets/images/arrow-8.png') }}"
+                                    class="mujtmah-box-btn__img mgl-0 mujtmah-box-btn__img2">
+                                </button>
                             </div>
                             <div class="mujtmah-box__wrapper wrapper al-center">
                                 <p class="mujtmah-box__link1 mgl-2">يتطلب تسجيل</p>
@@ -1757,7 +1763,7 @@
                                                 <div class="form-action designer-btn">
                                                     <!-- data-bs-toggle="modal" data-bs-target="#publicServiesFinalModal"  / carousel-next-icon-show-->
                                                     <button class="btn btn-form mx-3 with-arrow carousel-next-icon-show" type="submit">تفاصيل الطلب</button>
-                                                    <button class="btn-form designer-btn clean-btn" data-bs-toggle="modal" data-bs-target="#designer-order"> تقديم طلب </button>
+                                                    <!-- <button class="btn-form designer-btn clean-btn" data-bs-toggle="modal" data-bs-target="#designer-order"> تقديم طلب </button> -->
 
                                                     <p>تم رفع الطلب بنجاح</p>
                                                 </div>

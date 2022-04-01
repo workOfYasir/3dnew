@@ -95,7 +95,7 @@
                                 <div class="ahs-img-uploder-cam__holder">
                                         <input type="hidden" name="_token" value="p2TteENBnXmCNv1w9tEpQy6RpYxRAWKo1snBkO2f"> <img id="blah1" src="https://zen-boyd.161-97-115-110.plesk.page/3dorgans/public/upload/images/1648128609.png" alt="dashboard_logo"
                                             class="mx-auto d-block imageupload1" style="clip-path: circle() !important ;height:150% !important;" width="150">
-                                        <img src="assets/images/camera.png" alt="" class="ahs-img-uploder-cam">
+                                        <img src="{{ asset('user/assets/images/camera.png') }}" alt="camera" class="ahs-img-uploder-cam">
                                         <input id="imgInp1" type="file" class="chose1" value="upload/images/1648128609.png" name="profile" accept="image/*" style="display: none;">
                                     </div>
                                 <div class="ahs-form-box1-box">
@@ -104,7 +104,7 @@
                                 <div class="wrapper al-center ahs-form-box1">
                                     <span class="ahs-form-head1"> الرصيد الحالي </span>
                                     <span class="ahs-form-head2"> 750 ريال </span>
-                                    <img src="assets/images/ar.png" alt="" class="ahs-form-img1">
+                                    <img src="{{ asset('user/assets/images/ar.png') }}" alt="" class="ahs-form-img1">
                                 </div>
                                 <div class="ff">
                                 <div class="star-reating">
