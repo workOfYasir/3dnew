@@ -896,99 +896,89 @@
 
     <!-- ahsan html start here -->
     <section class="mujtmah-almusmamen" id="design">
-            <div class="container-m">
-                <div class="mujtmah-almusmamen-heading-wrapper" data-aos="fade-up">
-                    <div class="mujtmah-heading-box">
-                        <div class="sub-heading-box">
-                            <div class="red-dot"></div>
-                            <p class="sub-heading-box__heading">إختيار نوع الخدمة</p>
-                        </div>
-                        <div class="heading-box">
-                            <h1 class="mujtmah-almusmamen__heading">مجتمع المصممين</h1>
-                            <div class="heading-box__underline"></div>
-                        </div>
+        <div class="container-m">
+            <div class="mujtmah-almusmamen-heading-wrapper" data-aos="fade-up">
+                <div class="mujtmah-heading-box">
+                    <div class="sub-heading-box">
+                        <div class="red-dot"></div>
+                        <p class="sub-heading-box__heading">إختيار نوع الخدمة</p>
                     </div>
-                    <p class="mujtmah-almusmamen__para">
-                        هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى،
-                        حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها
-                        التطبيق.
-                    </p>
-                    <!-- <a href="#" class="m-btn mujtmah-almusmamen-btn">تعرف أكثر</a> -->
-                    <button type="button" class="m-btn mujtmah-almusmamen-btn" data-bs-toggle="modal"
-                        data-bs-target="#designModal">
-                        تعرف أكثر
-                    </button>
+                    <div class="heading-box">
+                        <h1 class="mujtmah-almusmamen__heading">مجتمع المصممين</h1>
+                        <div class="heading-box__underline"></div>
+                    </div>
                 </div>
-                <div class="mujtmah-almusmamen-wrapper wrapper jst-btw">
-                    <div class="mujtmah-box">
-                        <div class="mujtmah-box__content" data-aos="fade-up" data-aos-offset="200">
-                            <h1 class="mujtmah-box__heading">هل أنت مصمم 3D ؟</h1>
-                            <p class="mujtmah-box__para">
-                                هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص
-                                العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد
-                                الحروف التى يولدها التطبيق.
-                            </p>
-                            <div class="mujtmah-box-btn-wrapper wrapper al-center">
-                                <button  class="m-btn mujtmah-box-btn btn-white-1" data-bs-toggle="modal"
-                                    data-bs-target="#registerModal">
-                                    <img src="{{ asset('user/assets/images/arrow-8.png') }}"
-                                        class="mujtmah-box-btn__img"> سجل الان
-                                </button>
-                                <button class="m-btn mujtmah-box-btn" data-bs-toggle="modal" data-bs-target="#userRequestModal">
-                                    <img src="{{ asset('user/assets/images/video.png') }}"
-                                        class="mujtmah-box-btn__img2">فيديو تعريفي
-                                </button>
-                            </div>
-                        </div>
-                        <div class="mujtmah-box__media" data-aos="zoom-in" data-aos-offset="500">
-                            <img src="{{ asset('user/assets/images/mujtmah-box__image.png') }}"
-                                class="mujtmah-box__image">
-                            <div class="mujtmah-box__count">
-                                <h1 class="mujtmah-box__count-heading">+50</h1>
-                                <p class="mujtmah-box__count-sub-heading">مصمم</p>
-                            </div>
+                <p class="mujtmah-almusmamen__para">
+                    هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى،
+                    حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها
+                    التطبيق.
+                </p>
+                <!-- <a href="#" class="m-btn mujtmah-almusmamen-btn">تعرف أكثر</a> -->
+                <button type="button" class="m-btn mujtmah-almusmamen-btn" data-bs-toggle="modal" data-bs-target="#designModal">
+                    تعرف أكثر
+                </button>
+            </div>
+            <div class="mujtmah-almusmamen-wrapper wrapper jst-btw">
+                <div class="mujtmah-box">
+                    <div class="mujtmah-box__content" data-aos="fade-up" data-aos-offset="200">
+                        <h1 class="mujtmah-box__heading">هل أنت مصمم 3D ؟</h1>
+                        <p class="mujtmah-box__para">
+                            هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص
+                            العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد
+                            الحروف التى يولدها التطبيق.
+                        </p>
+                        <div class="mujtmah-box-btn-wrapper wrapper al-center">
+                            <button class="m-btn mujtmah-box-btn btn-white-1" data-bs-toggle="modal" data-bs-target="#registerModal">
+                                <img src="{{ asset('user/assets/images/arrow-8.png') }}" class="mujtmah-box-btn__img"> سجل الان
+                            </button>
+                            <button class="m-btn mujtmah-box-btn" data-bs-toggle="modal" data-bs-target="#userRequestModal">
+                                <img src="{{ asset('user/assets/images/video.png') }}" class="mujtmah-box-btn__img2">فيديو تعريفي
+                            </button>
                         </div>
                     </div>
-                    <div class="mujtmah-box2">
-                        <div class="mujtmah-box__media" data-aos="zoom-in" data-aos-offset="500">
-                            <div class="mujtmah-box__count2">
-                                <h1 class="mujtmah-box__count-heading">+40</h1>
-                                <p class="mujtmah-box__count-sub-heading">مصمم</p>
-                            </div>
-                            <img src="{{ asset('user/assets/images/mujtmah-box__image3.png') }}"
-                                class="mujtmah-box__image">
+                    <div class="mujtmah-box__media" data-aos="zoom-in" data-aos-offset="500">
+                        <img src="{{ asset('user/assets/images/mujtmah-box__image.png') }}" class="mujtmah-box__image">
+                        <div class="mujtmah-box__count">
+                            <h1 class="mujtmah-box__count-heading">+50</h1>
+                            <p class="mujtmah-box__count-sub-heading">مصمم</p>
                         </div>
-                        <div class="mujtmah-box__content" data-aos="fade-up" data-aos-offset="200">
-                            <h1 class="mujtmah-box__heading">هل تحتاج مصمم 3D ؟</h1>
-                            <p class="mujtmah-box__para">
-                                هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص
-                                العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد
-                                الحروف التى يولدها التطبيق.
-                            </p>
-                            <div class="mujtmah-box-btn-wrapper wrapper al-center mb-3">
-                                <button data-bs-toggle="modal" data-bs-target="#financialOperations2"
-                                    class="m-btn mujtmah-box-btn ml-3">
-                                    <img src="{{ asset('user/assets/images/video.png') }}"
-                                        class="mujtmah-box-btn__img2">فيديو تعريفي
-                                </button>
-                                <button data-bs-toggle="modal" data-bs-target="#financialOperations"
-                                    class="m-btn mujtmah-box-btn btn-white-1">
+                    </div>
+                </div>
+                <div class="mujtmah-box2">
+                    <div class="mujtmah-box__media" data-aos="zoom-in" data-aos-offset="500">
+                        <div class="mujtmah-box__count2">
+                            <h1 class="mujtmah-box__count-heading">+40</h1>
+                            <p class="mujtmah-box__count-sub-heading">مصمم</p>
+                        </div>
+                        <img src="{{ asset('user/assets/images/mujtmah-box__image3.png') }}" class="mujtmah-box__image">
+                    </div>
+                    <div class="mujtmah-box__content" data-aos="fade-up" data-aos-offset="200">
+                        <h1 class="mujtmah-box__heading">هل تحتاج مصمم 3D ؟</h1>
+                        <p class="mujtmah-box__para">
+                            هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص
+                            العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد
+                            الحروف التى يولدها التطبيق.
+                        </p>
+                        <div class="mujtmah-box-btn-wrapper wrapper al-center mb-3">
+                            <button data-bs-toggle="modal" data-bs-target="#financialOperations2" class="m-btn mujtmah-box-btn ml-3">
+                                <img src="{{ asset('user/assets/images/video.png') }}" class="mujtmah-box-btn__img2">فيديو تعريفي
+                            </button>
+                            <button data-bs-toggle="modal" data-bs-target="#financialOperations" class="m-btn mujtmah-box-btn btn-white-1">
                                 أطلب الان
-                                    <img src="{{ asset('user/assets/images/arrow-8.png') }}"
-                                    class="mujtmah-box-btn__img mgl-0 mujtmah-box-btn__img2">
-                                </button>
-                            </div>
-                            <div class="mujtmah-box__wrapper wrapper al-center">
-                                <p class="mujtmah-box__link1 mgl-2">يتطلب تسجيل</p>
-                                <button class="mujtmah-box__link2" data-bs-toggle="modal" data-bs-target="#registerModal">للتسجيل اضغط هنا</button>
-                            </div>
+                                <img src="{{ asset('user/assets/images/arrow-8.png') }}" class="mujtmah-box-btn__img mgl-0 mujtmah-box-btn__img2">
+                            </button>
+                        </div>
+                        <div class="mujtmah-box__wrapper wrapper al-center">
+                            <p class="mujtmah-box__link1 mgl-2">يتطلب تسجيل</p>
+                            <button class="mujtmah-box__link2" data-bs-toggle="modal" data-bs-target="#registerModal">للتسجيل اضغط هنا</button>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- ahsan html end here -->
-       
+        </div>
+    </section>
+    <!-- ahsan html end here -->
+
 
     <!-- ahsan html end here -->
 
@@ -1909,7 +1899,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="row  p-xs-0  conditional-blur">
+                                        <div class="row p-4 conditional-blur justify-content-between">
 
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
                                                 <label class="form-label dot">اختيار اللون</label>
@@ -1933,27 +1923,29 @@
                                                 </div>
 
                                             </div>
-                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div>
+                                            <!-- <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div> -->
 
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
                                                 <label class="form-label">الكمية</label>
                                                 <input type="text" class="form-control" placeholder=".. رقم الهاتف هنا" readonly="" value="03084875508">
                                             </div>
-                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div>
+                                            <!-- <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div> -->
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                 <label class="form-label">المقاسات</label>
                                                 <input type="text" class="form-control" placeholder=".. الايميل هنا" readonly="" value="asimali7056@gmail.com">
                                             </div>
+                                        </div>
+                                        <div class="row p-xs-0 conditional-blur justify-content-between">
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                 <label class="form-label">شكل الطباعة</label>
                                                 <input type="text" class="form-control" placeholder=".. التخصص هنا" readonly="" value="رقم الهاتف هنا">
                                             </div>
-                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div>
+                                            <!-- <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div> -->
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
                                                 <label class="form-label">تقنية الطباعة</label>
                                                 <input type="text" class="form-control" placeholder=".. الجنس هنا" readonly="" value="male">
                                             </div>
-                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div>
+                                            <!-- <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div> -->
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 zhd-product-visit">
 
 
@@ -1961,40 +1953,35 @@
                                                     زيارة المنتج <img src="http://127.0.0.1:8000/user/assets/icons/arrow-right.svg" alt="arrow-right">
                                                 </button>
                                             </div>
-
                                         </div>
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="designer-text">
-                                                    <label class="form-label dot">الملاحظات</label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="   الملاحظات .."></textarea>
-                                                </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="designer-text">
+                                                <label class="form-label dot">الملاحظات</label>
+                                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="   الملاحظات .."></textarea>
                                             </div>
                                         </div>
-                                        <div class="row">
-                                            <h1 class="title text-center mt-5 no-border conditional-blur zhd-quote">تقديم عرض سعر</h1>
-                                            <div class="col-md-12">
-                                                <div class="row justify-content-center">
-                                                    <div class="col-md-12">
-                                                        <div class="row mb-2 justify-content-between conditional-blur">
-                                                            <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 service-fee-zhd">
-                                                                <label class="form-label">تكلفة تنفيذ الخدمة</label>
-                                                                <input type="text" class="form-control" placeholder="كتابة القيمة هنا .." readonly value="{{@$public->print_type}}">
-                                                                <div class="service-fee-text">
-                                                                    <span> سيتم اضافة رسوم الخدمة 10% وقيمة الضريبة المضافة 15% تلقائياً</span>
-                                                                </div>
+                                    </div>
+                                    <div class="row justify-content-between conditional-blur">
+                                        <h1 class="title text-center mt-5 no-border conditional-blur zhd-quote">تقديم عرض سعر</h1>
+                                        <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 service-fee-zhd">
+                                            <label class="form-label">تكلفة تنفيذ الخدمة</label>
+                                            <input type="text" class="form-control" placeholder="كتابة القيمة هنا .." readonly value="{{@$public->print_type}}">
+                                            <div class="service-fee-text">
+                                                <span> سيتم اضافة رسوم الخدمة 10% وقيمة الضريبة المضافة 15% تلقائياً</span>
+                                            </div>
 
-                                                            </div>
-                                                            <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
-                                                                <label class="form-label">تاريخ البداية</label>
-                                                                <input type="text" class="form-control" placeholder="تحديد التاريخ هنا .." readonly value="{{@$public->print_color}}">
-                                                            </div>
-                                                            <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
-                                                                <label class="form-label">تاريخ التسليم</label>
-                                                                <input type="text" class="form-control" placeholder="تحديد التاريخ هنا .. " readonly value="{{@$public->print_resolution}}">
-                                                            </div>
-                                                        </div>
-                                                        <!-- <div class="row conditional-blur">
+                                        </div>
+                                        <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
+                                            <label class="form-label">تاريخ البداية</label>
+                                            <input type="text" class="form-control" placeholder="تحديد التاريخ هنا .." readonly value="{{@$public->print_color}}">
+                                        </div>
+                                        <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
+                                            <label class="form-label">تاريخ التسليم</label>
+                                            <input type="text" class="form-control" placeholder="تحديد التاريخ هنا .. " readonly value="{{@$public->print_resolution}}">
+                                        </div>
+                                        <!-- <div class="row conditional-blur">
                                           <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                               <label class="form-label">رفع ملف المجسم</label>
                                               <div class="upload-btn-wrapper">
@@ -2002,17 +1989,16 @@
                                               </div>
                                           </div>
                                           </div> -->
-                                                        <h1 class="title text-center mt-5 no-border conditional-blur">
-                                                            <div class="">
-                                                                <a href="javascript:void(0);" class="btn btn-form mx-3 with-arrow mt-10" data-bs-toggle="modal" data-bs-target="#designer-order-upload">ارسال</a>
-                                                                <a href="#" class="btn btn-form mx-3 with-arrow mt-10 red-btn ">رفض</a>
-                                                                
-                                                                <p class="mt-4">سيتم ارسال تفاصيل تنفيذ المهمة الى المستخدم للقبول او الرفض</p>
-                                                            </div>
-                                                        </h1>
-                                                    </div>
+                                        <div class="col-md-12">
+
+                                            <h1 class="title text-center mt-5 no-border conditional-blur">
+                                                <div class="">
+                                                    <a href="javascript:void(0);" class="btn btn-form mx-3 with-arrow mt-10" data-bs-toggle="modal" data-bs-target="#designer-order-upload">ارسال</a>
+                                                    <a href="#" class="btn btn-form mx-3 with-arrow mt-10 red-btn ">رفض</a>
+
+                                                    <p class="mt-4">سيتم ارسال تفاصيل تنفيذ المهمة الى المستخدم للقبول او الرفض</p>
                                                 </div>
-                                            </div>
+                                            </h1>
                                         </div>
                                     </div>
                                 </div>
@@ -2022,6 +2008,7 @@
                 </div>
             </div>
         </div>
+    </div>
     </div>
     <!-- zahid-designer order  end-->
     <!-- zahid-designer order upload  start-->
@@ -2259,7 +2246,7 @@
                                                             <a href="javascript:void(0);" class="btn btn-form mx-3 with-arrow mt-10" data-bs-toggle="modal" data-bs-target="#designer-review-upload">ارسال</a>
                                                             <a href="#" class="btn btn-form mx-3 with-arrow btn-uplod mt-10">الفاتورة</a>
                                                             <a href="#" class="btn btn-form mx-3 with-arrow mt-10 red-btn">رفض</a>
-                                                           
+
                                                             <p class="mt-4">الرجاء التأكد من ارسال كافة الملفات لتجنب تقديم بلاغ عليك</p>
                                                         </div>
                                                     </h1>
@@ -2579,7 +2566,7 @@
                                                             <a href="javascript:void(0);" class="btn btn-form mx-3 with-arrow uplod-rev-btn mt-10 starbluerModal-btn">تم الارسال</a>
                                                             <a href="javascript:void(0);" class="btn btn-form mx-3 with-arrow red-btn mt-10 starbluerModal-btn">الفاتورة</a>
                                                             <!-- <a href="javascript:void(0);" class="btn btn-form mx-3 with-arrow mt-10 starbluerModal-btn"  data-bs-toggle="modal" data-bs-target="#designer-bid-submission">تقديم بلاغ</a> -->
-                                                            <button class="btn-form designer-btn clean-btn" data-bs-toggle="modal" data-bs-target="#designer-bid-submission">                                                                تقديم بلاغ</button>
+                                                            <button class="btn-form designer-btn clean-btn" data-bs-toggle="modal" data-bs-target="#designer-bid-submission"> تقديم بلاغ</button>
                                                             <p class="mt-4">الرجاء التأكد من ارسال كافة الملفات لتجنب تقديم بلاغ عليك</p>
                                                         </div>
                                                     </h1>
@@ -7057,8 +7044,8 @@
                                                     </div>
                                                     <div class="userreqFormBtn-box">
                                                         <button class="btn btn-form" data-bs-toggle="modal" data-bs-target="#user8RequestModal">
-                                                طلباتي
-                                            </button>
+                                                            طلباتي
+                                                        </button>
                                                         <p class="userreqFormBtn-box__text">سيتم تحديث حالة الطلب من قبل المصمم</p>
                                                     </div>
                                                 </div>
@@ -7076,8 +7063,8 @@
     <!-- user 7 requestmodal end -->
 
     <!-- user 8 requestmodal start -->
-    
-    
+
+
     <div class="modal fade page result" id="user8RequestModal">
         <div class="modal-dialog modal-fullscreen">
             <div class="modal-content">
@@ -7086,8 +7073,7 @@
                         <div class="col-md-12 p-0">
                             <div class="modal-header border-0">
                                 <div class="zhd-center-close">
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="zhd-center-hdng" style="margin-top: 1%;">
                                     <span class="outline dot">اهلاً وسهلاً بكم</span>
@@ -7096,37 +7082,37 @@
                                 </div>
                                 <div class="profile zhd-box">
                                     <button class="btn btn-sky profile-btn invert">
-                             المصمم
-                             </button> @if(@auth()->user()->profile == null)
+                                        المصمم
+                                    </button> @if(@auth()->user()->profile == null)
                                     <a href="#profile">
                                         <img src="{{asset('user/assets/icons/avatar.svg')}}" alt="avatar">
                                     </a>
                                     @else
                                     <a href="#profile">
-                             <img src="{{ asset('storage/' . auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
-                             </a> @endif
+                                        <img src="{{ asset('storage/' . auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
+                                    </a> @endif
                                 </div>
                             </div>
                             <div class="modal-body designer-bdy">
                                 <div class="payment d-none" id="payment">
                                     <div class="form-check">
                                         <label class="form-check-label" for="flexRadioDefault1">
-                                   <img src="{{asset('user/assets/images/mada-logo.svg')}}" alt="">
-                                   <p>مدى</p>
-                                   <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                </label>
+                                            <img src="{{asset('user/assets/images/mada-logo.svg')}}" alt="">
+                                            <p>مدى</p>
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                        </label>
                                         <label class="form-check-label" for="flexRadioDefault2">
-                                   <img src="{{asset('user/assets/images/masterCard.svg')}}" alt="">
-                                   <p>فيزا وماستر كارد</p>
-                                   <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
-                                </label>
+                                            <img src="{{asset('user/assets/images/masterCard.svg')}}" alt="">
+                                            <p>فيزا وماستر كارد</p>
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                        </label>
                                     </div>
                                     <div class="form-check">
                                         <label class="form-check-label" for="flexRadioDefault3">
-                                   <img src="{{asset('user/assets/images/apple-pay.svg')}}" alt="">
-                                   <p>آبل باي</p>
-                                   <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
-                                </label>
+                                            <img src="{{asset('user/assets/images/apple-pay.svg')}}" alt="">
+                                            <p>آبل باي</p>
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+                                        </label>
                                     </div>
                                 </div>
                                 <div class="reject-reason d-none" id="reject-reason">
@@ -7177,7 +7163,7 @@
                                             </div>
                                         </div>
                                         <h1 class="title text-center no-border conditional-blur">معلومات الطلب</h1>
-    
+
                                         <div class="row  p-xs-0  conditional-blur">
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
                                                 <label class="form-label dot">اختيار اللون</label>
@@ -7213,10 +7199,10 @@
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 zhd-product-visit">
-    
+
                                                 <button class="btn btn-sky invert">
-                                             زيارة المنتج <img src="http://127.0.0.1:8000/user/assets/icons/arrow-right.svg" alt="arrow-right">
-                                         </button>
+                                                    زيارة المنتج <img src="http://127.0.0.1:8000/user/assets/icons/arrow-right.svg" alt="arrow-right">
+                                                </button>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -7227,13 +7213,13 @@
                                                 </div>
                                             </div>
                                         </div>
-    
+
                                         <div class="row">
                                             <h1 class="title text-center mt-5 no-border conditional-blur zhd-quote">معلومات المصمم</h1>
                                             <div class="col-md-12">
                                                 <div class="row justify-content-center">
                                                     <div class="col-md-12">
-                                                     
+
                                                         {{-- user- req --}}
                                                         <div class="wrapper al-center jst-btw mb-5">
                                                             <div class="profile tag-profile designer-order">
@@ -7252,8 +7238,8 @@
                                                                 </div>
                                                             </div>
                                                             <button class="btn btn-sky invert">
-                                                    زيارة المنتج <img src="http://127.0.0.1:8000/user/assets/icons/arrow-right.svg" alt="arrow-right">
-                                                </button>
+                                                                زيارة المنتج <img src="http://127.0.0.1:8000/user/assets/icons/arrow-right.svg" alt="arrow-right">
+                                                            </button>
                                                         </div>
                                                         {{-- user- req --}}
                                                         <div class="row mb-2 justify-content-between mb-5 conditional-blur">
@@ -7274,8 +7260,8 @@
                                                     </div>
                                                     <div class="userreqFormBtn-box">
                                                         <button class="btn btn-form" data-bs-toggle="modal" data-bs-target="#user9RequestModal">
-                                                طلباتي
-                                            </button>
+                                                            طلباتي
+                                                        </button>
                                                         <p class="userreqFormBtn-box__text">تم رفض عرض السعر</p>
                                                     </div>
                                                 </div>
@@ -7293,16 +7279,15 @@
 
     <!-- user 8 requestmodal end -->
 
-<!-- user 9 requestmodal start -->
-<div class="modal fade page" id="user9RequestModal">
+    <!-- user 9 requestmodal start -->
+    <div class="modal fade page" id="user9RequestModal">
         <div class="modal-dialog modal-fullscreen">
             <div class="modal-content">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-12 p-0">
                             <div class="modal-header border-0">
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 <div>
                                     <span class="outline dot">أكثر 20 خدمة مختلفة</span>
                                     <h1 class="modal-title right"><span class="btm-line"><span class="inner-line"></span>الخدمات العامة
@@ -7312,7 +7297,7 @@
                                 <div class="profile">
                                     <button class="btn btn-sky profile-btn invert">
                                         مستخدم
-                             </button> @if(@auth()->user()->profile == null)
+                                    </button> @if(@auth()->user()->profile == null)
                                     <a href="#profile">
                                         <img src="{{asset('user/assets/icons/avatar.svg')}}" alt="avatar">
                                     </a>
@@ -7322,21 +7307,21 @@
                                     </a> @endif
                                 </div>
                             </div>
-    
+
                             <div class="modal-body">
                                 <div id="carouselIndicators" class="carousel slide" data-bs-ride="carousel">
-    
+
                                     <div class="carousel-inner">
-    
+
                                         <div class="row align-items-center">
                                             <div class="col-md-5">
                                                 <div class="submitted-data">
                                                     <h6>رقم الطلب</h6>
-    
+
                                                     <h1></h1>
-    
+
                                                     <h1>406</h1>
-    
+
                                                     <p><img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle"> رفع الطلب</p>
                                                     <p><img src="{{asset('user/assets/icons/red-circle.svg')}}" alt="green-circle">رفض عرض السعر</p>
                                                     <!-- <span>سيتم تحديث حالة الطلب من قبل الإدارة</span> -->
@@ -7344,7 +7329,7 @@
                                             </div>
                                             <div class="col-md-7">
                                                 <img src="{{ asset('user/assets/images/mujtmah-box__image.png') }}" class="mujtmah-box__image">
-    
+
                                             </div>
                                             <div class="col-md-12">
                                                 <div class="form-action designer-btn">
@@ -7353,7 +7338,7 @@
                                                     <p>تم رفع الطلب بنجاح</p>
                                                 </div>
                                             </div>
-    
+
                                         </div>
                                     </div>
                                 </div>
@@ -7365,7 +7350,7 @@
         </div>
     </div>
 
-<!-- user 9 requestmodal end -->
+    <!-- user 9 requestmodal end -->
 
     <!-- About US -->
 
