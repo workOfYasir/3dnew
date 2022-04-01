@@ -3065,6 +3065,11 @@ input[type=number] {
     z-index: 9;
 }
 
+.ahs-profile-plus-btn.disabled{
+    color: #E0E0DE;
+    background-color: unset;
+}
+
 /* Safari */
 @media screen and (-webkit-min-device-pixel-ratio:0) {
     .mujtmah-heading-box {
