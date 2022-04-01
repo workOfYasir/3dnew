@@ -78,13 +78,19 @@ Route::get('/', [RegisterController::class, 'homepage'])->name('/');
 
 Auth::routes();
 
+        Route::resource('invoicess', InvoiceController::class);
+        Route::resource('perposal', PerposalController::class);
 Route::group(['middleware' => 'auth', 'varify','cors'], function () {
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-    
+
     //Resource Route
     Route::group(['middleware' =>  'role:user'], function () {
         Route::get('/vieworder/{id}', [App\Http\Controllers\HomeController::class, 'vieworder'])->name('vieworder');
-        Route::get('/vieworderpublic/{id}', [App\Http\Controllers\HomeController::class, 'vieworderpublic'])->name('vieworderpublic');    
+        Route::get('/vieworderpublic/{id}', [App\Http\Controllers\HomeController::class, 'vieworderpublic'])->name('vieworderpublic'); 
+        Route::get('invoices/{id}', [InvoiceController::class,'show'])->name('invoice');
+        Route::get('perposal/{id}', [PerposalController::class,'show'])->name('purposal');    
+        Route::get('invoices/pdf/{id}', [InvoiceController::class,'pdfInvoice'])->name('invoice.pdf');
+        Route::get('perposal/pdf/{id}', [PerposalController::class,'pdfProposal'])->name('purposal.pdf');           
     });
     Route::group(['middleware' =>  'role:admin'], function () {
         Route::resource('about', AboutUsController::class);
@@ -99,8 +105,7 @@ Route::group(['middleware' => 'auth', 'varify','cors'], function () {
         Route::resource('map', MapimageController::class);
         Route::resource('youtubeurl', YoutubeurlController::class);
         Route::resource('counter', CounterController::class);
-        Route::resource('invoicess', InvoiceController::class);
-        Route::resource('perposal', PerposalController::class);
+
     
         Route::get('payment', [MedicalController::class, 'payment'])->name('payment');
         Route::get('ProfileUpdate/view', [HomeController::class, 'viewSetting'])->name('profileupdate.view');
@@ -124,8 +129,8 @@ Route::group(['middleware' => 'auth', 'varify','cors'], function () {
     Route::get('feedback', [MedicalController::class, 'feedback'])->name('feedback');
     Route::post('feedback/store', [MedicalController::class, 'feedbackStore'])->name('feedbackStore');
 
-    Route::get('pdf/proposal', [PerposalController::class,'pdfProposal'])->name('proposel.pdf');
-    Route::get('pdf/invoice', [ InvoiceController::class,'pdfInvoice'])->name('invoice.pdf');
+    // Route::get('pdf/proposal', [PerposalController::class,'pdfProposal'])->name('proposel.pdf');
+    // Route::get('pdf/invoice', [ InvoiceController::class,'pdfInvoice'])->name('invoice.pdf');
     
     
     Route::get('/chats', [ChatController::class,'index']);

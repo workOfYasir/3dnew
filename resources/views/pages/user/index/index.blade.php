@@ -1263,7 +1263,9 @@
                                 @auth
                                 <a href="#membership" class="dot m-0 border-bottom" data-bs-toggle="modal" data-bs-target="#memberModal">{{ auth()->user()->name }}!</a>
                                 @endauth
-                                <a href="#requests" class="ms-auto dot border-bottom " data-bs-toggle="modal" data-bs-target="#requestsModal">طلباتي</a>
+                                <a href="#requests" class="ms-auto dot border-bottom " data-bs-toggle="modal" data-bs-target="#requestsModal">طلباتي    {</a>
+                             
+                               
                                 <span>
                                     <a href="#"><img src="{{ asset('user/assets/icons/twitter.svg') }}" alt="twitter"></a>
                                     <a href="#"><img src="{{ asset('user/assets/icons/instagram.svg') }}" alt="instagram"></a>

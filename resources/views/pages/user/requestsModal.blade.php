@@ -1,4 +1,4 @@
- <div class="modal fade page" id="requestsModal" tabindex="-1" aria-labelledby="requestsModalLabel" aria-hidden="true">
+a <div class="modal fade page" id="requestsModal" tabindex="-1" aria-labelledby="requestsModalLabel" aria-hidden="true">
      <div class="modal-dialog modal-fullscreen">
          <div class="modal-content">
              <div class="container-fluid">
@@ -6,11 +6,27 @@
                      <div class="col-md-12">
                          <div class="modal-header border-0">
                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                             @if(@$user->purposals)
+                                <div class="text-dark">
+                                    <a href="{{ route('purposal.pdf',$user->purposals->id) }}" >
+                                    New Purposal
+                                    </a>
+                                </div>
+                             @endif
+
+                             @if(@$user->invoices)
+                                <div class="text-dark">
+                                    <a href="{{ route('invoice.pdf',$user->purposals->id) }}">
+                                        New Invoice
+                                        </a>
+                                </div>
+                             @endif
+                       
                              <div>
                                  <span class="outline dot">اهلاً وسهلاً بكم</span>
                                  <h1 class="modal-title right"><span class="btm-line d-flex">طلباتي<span class="inner-line"></span></span></h1>
                              </div>
-                          
+                     
                              <div class="profile">
                                     <button class="btn btn-sky profile-btn invert">
                                     المصمم
