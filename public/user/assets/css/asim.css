@@ -200,7 +200,7 @@
     }
     
     .upload-cross-red {
-        background-color: #D41E1E;
+        background-color: #D41E1E !important;
     }
     
     .uplod-img-active {
@@ -522,9 +522,19 @@
             font-size: 32px;
         }
         /* #designinnerModal css start here */
-        /* .btn-list .btn{
-            margin-left: 0px;
-        } */
+        .product-add-upload{
+            margin-top: 30px;
+        }
+
+        .switch{
+            text-align: right;
+        }
+        .switch .form-check {
+            justify-content: right;
+        }
+        .almuntjat-form-error{
+            font-size: 15px;
+        }
         /* #designinnerModal css end here */
     }
 
@@ -568,7 +578,9 @@
             /* padding: 50px 100px 150px 100px !important; */
         }
 
-
+        .product-add-upload{
+            margin-top: 30px;
+        }
         
     }
     
