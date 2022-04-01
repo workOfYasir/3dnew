@@ -1,4 +1,4 @@
-a <div class="modal fade page" id="requestsModal" tabindex="-1" aria-labelledby="requestsModalLabel" aria-hidden="true">
+ <div class="modal fade page" id="requestsModal" tabindex="-1" aria-labelledby="requestsModalLabel" aria-hidden="true">
      <div class="modal-dialog modal-fullscreen">
          <div class="modal-content">
              <div class="container-fluid">
@@ -6,21 +6,32 @@ a <div class="modal fade page" id="requestsModal" tabindex="-1" aria-labelledby=
                      <div class="col-md-12">
                          <div class="modal-header border-0">
                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                             @if(@$user->purposals)
-                                <div class="text-dark">
-                                    <a href="{{ route('purposal.pdf',$user->purposals->id) }}" >
-                                    New Purposal
-                                    </a>
-                                </div>
-                             @endif
-
-                             @if(@$user->invoices)
-                                <div class="text-dark">
-                                    <a href="{{ route('invoice.pdf',$user->purposals->id) }}">
-                                        New Invoice
+                             <div class="dropdown">
+                                <button class="btn bg-light dropdown" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fas fa-file-pdf" style="color:#1F5098; font-size:35px"></i>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                  
+                                    @if(@$user->purposals)
+                                    <li>
+                                        <a class="dropdown-item" href="{{ route('purposal.pdf',$user->purposals->id) }}" >
+                                        New Purposal
                                         </a>
-                                </div>
-                             @endif
+                                    </li>
+                                 @endif
+                                 @if(@$user->invoices)
+                                 <li>
+                                     <a class="dropdown-item" href="{{ route('invoice.pdf',$user->purposals->id) }}">
+                                         New Invoice
+                                         </a>
+                                </li>
+                              @endif
+
+                                </ul>
+                              </div>
+                            
+
+                         
                        
                              <div>
                                  <span class="outline dot">اهلاً وسهلاً بكم</span>
