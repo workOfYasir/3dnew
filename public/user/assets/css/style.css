@@ -1328,7 +1328,7 @@ textarea {
 }
 
 .request-box::after {
-    content: url('/assets/icons/arrow-right-blue.svg');
+    content: url('../icons/arrow-right-blue.svg');
     position: absolute;
     left: 0px;
     padding: 0px 30px;
@@ -2526,8 +2526,18 @@ input[type=number] {
     max-height: unset;
     height: 1020px;
     width: 1280px;
-
-
+}
+.designer-sec::after{
+    content: "";
+    position: absolute;
+    background: linear-gradient(360deg, rgba(33, 80, 153, 100%), transparent);
+    background-repeat: no-repeat;
+    top: 420px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 130px;
+    z-index: -1;
 }
 
 /* .designer-sec::before {

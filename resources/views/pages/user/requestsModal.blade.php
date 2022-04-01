@@ -8,7 +8,7 @@
                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                              <div>
                                  <span class="outline dot">اهلاً وسهلاً بكم</span>
-                                 <h1 class="modal-title right"><span class="btm-line d-flex">طلباتي<span class="inner-line"></span></span></h1>
+                                 <h1 class="modal-title right centr-main-title"><span class="btm-line d-flex">طلباتي<span class="inner-line"></span></span></h1>
                              </div>
                           
                              <div class="profile">
@@ -116,15 +116,37 @@
                                                          <div class="request-box" data-bs-toggle="modal" data-bs-target="#designer-order">
                                                              <div class="heading">
                                                                  <h5>رقم الطلب:</h5>
-                                                                 <span>123</span>
+                                                                 <span>412</span>
                                                              </div>
                                                              <div class="data">
                                                                  <p>حالة الطلب:</p>
                                                                  <span> عرض السعر</span>
                                                                  <p>اسم العميل:</p>
-                                                                 <span> العميل</span>
+                                                                 <span> غير معروف</span>
                                                                 <p>المنتج المطلوب:</p>
-                                                                 <span> العميل</span>
+                                                                 <span> عنوان التصميم يكتب هنا ويستوعب سطرين كحد اقصى ..</span>
+                                                             </div>
+                                                         </div>
+                                                     </div>
+                                                 </a>
+                                             </div>
+                                         </div>
+                                             <div class="row">
+                                                 
+                                                 <a class="nav-link" href="#">
+                                                     <div class="col-md-12">
+                                                         <div class="request-box" data-bs-toggle="modal" data-bs-target="#designer-order">
+                                                             <div class="heading">
+                                                                 <h5>رقم الطلب:</h5>
+                                                                 <span>406</span>
+                                                             </div>
+                                                             <div class="data">
+                                                                 <p>حالة الطلب:</p>
+                                                                 <span>جديد</span>
+                                                                 <p>اسم العميل:</p>
+                                                                 <span> غير معروف</span>
+                                                                <p>المنتج المطلوب:</p>
+                                                                 <span> عنوان التصميم يكتب هنا ويستوعب سطرين كحد اقصى ..</span>
                                                              </div>
                                                          </div>
                                                      </div>
