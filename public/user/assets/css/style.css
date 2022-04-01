@@ -1328,7 +1328,7 @@ textarea {
 }
 
 .request-box::after {
-    content: url('/assets/icons/arrow-right-blue.svg');
+    content: url('../icons/arrow-right-blue.svg');
     position: absolute;
     left: 0px;
     padding: 0px 30px;
