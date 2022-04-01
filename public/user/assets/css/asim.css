@@ -535,6 +535,25 @@
             font-size: 15px;
         }
         /* #designinnerModal css end here */
+
+        #userRequestModal .modal-header{
+            padding-bottom: 4rem;
+        }
+        #userRequestModal .profile  .btn-sky.profile-btn{
+            display: none;
+        }
+        #userRequestModal .profile{
+            text-align: left;
+        }
+        .zhd-product-visit .btn{
+            margin-top: 30px;
+        }
+        .designer-text {
+            width: 20rem;
+        }
+        .jst-btw{
+            flex-direction: column;
+        }
     }
 
     /* ////////////////////////////////////////// mobile landscape responsive //////////////////////////////////////////////////////// */
@@ -580,7 +599,14 @@
         .product-add-upload{
             margin-top: 30px;
         }
-        
+
+        /* userRequestModal */
+        #userRequestModal .modal-header{
+            padding-bottom: 4rem;
+        }
+        .hide-tab{
+            display: none;
+        }
     }
     
     /* ////////////////////////////////////////// Large landscape responsive //////////////////////////////////////////////////////// */
