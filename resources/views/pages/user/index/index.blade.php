@@ -966,14 +966,14 @@
                             <button data-bs-toggle="modal" data-bs-target="#financialOperations" class="m-btn mujtmah-box-btn btn-white-1">
                                 أطلب الان
                                     <img src="{{ asset('user/assets/images/arrow-8.png') }}"
-                                    class="mujtmah-box-btn__img mgl-0 mujtmah-box-btn__img2">
+                                    class="mujtmah-box-btn__img mgl-0 mujtmah-box-btn__img3">
                                 </button>
-                                <button data-bs-toggle="modal" data-bs-target="#designModal"
+                                <!-- <button data-bs-toggle="modal" data-bs-target="#designModal"
                                     class="m-btn mujtmah-box-btn btn-white-1">
                                 أطلب الان
                                     <img src="{{ asset('user/assets/images/arrow-8.png') }}"
                                     class="mujtmah-box-btn__img mgl-0 mujtmah-box-btn__img2">
-                                </button>
+                                </button> -->
                             </div>
                             <div class="mujtmah-box__wrapper wrapper al-center">
                                 <p class="mujtmah-box__link1 mgl-2">يتطلب تسجيل</p>
