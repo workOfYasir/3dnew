@@ -565,14 +565,19 @@
     .nav-tabs {
         padding-right: 0;
     }
+
+    #requestsModal .nav-tabs .nav-item {
+        width: 100%;
+    }
     
-    .nav-tabs .nav-link {
-        border: 4px solid #E3E9EC;
-        border-radius: 60px;
+    #requestsModal .nav-tabs .nav-link {
+        /* border: 4px solid #E3E9EC; */
+        /* border-radius: 60px; */
         color: #9FA5B2;
         padding: 3px 50px;
-        margin: 0 -25px;
+        /* margin: 0 -25px; */
         font-size: 12px;
+        width: 100%;
     }
     
     .nav-tabs .nav-link.active .notification {
@@ -928,6 +933,11 @@
         top: 75px;
         margin: auto;
         display: block;
+        width: 100%;
+    }
+
+    #requestsModal .nav-tabs {
+        border-radius: 20px;
         width: 100%;
     }
 
@@ -1793,6 +1803,10 @@
     
     .pay.payment .form-check:last-child label {
         width: 100%;
+    }
+
+    #requestsModal .nav-tabs .nav-link {
+        padding: 3px 65px;
     }
     
     /* Footer */

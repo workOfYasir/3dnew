@@ -2,19 +2,27 @@
     /* ////////////////////////////////////  designer section start here  //////////////////////////////////// */
     
     #designinnerModal .designer-sec {
-        padding-top: 150px;
+        padding-top: 50px;
     }
     
-    #designinnerModal .designer-sec::before {
-        top: 0;
-        bottom: 370px;
+    #designinnerModal .designer-sec::before {      
+        content: "";
+        position: absolute;
+        background: url(../images/design-bg.png) no-repeat;
+        background-position: top center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        opacity: 0.6;
+        z-index: -1;
         left: 0;
-        right: -236px;
+        top: 0;
+        bottom: 450px;
+        right: 0;
         display: block;
         margin: auto;
         max-height: unset;
         height: 1020px;
-        width: 1800px;
+        width: 1280px;
     }
     
     .product-1 {
@@ -155,8 +163,10 @@
     }
     
     .product-add-upload img {
-        margin-bottom: 0px;
+        margin-bottom: 0px !important;
+        margin-top: 0px !important;
         height: 100%;
+        width: 100% !important;
     }
     
     .product-add-upload .camera-icon {
@@ -477,10 +487,15 @@
 
         #designinnerModal .modal-header{
             padding-top: 140px;
+            padding-right: 20px;
         }
 
         #productaddModal .almuntjat-form{
             padding: 0px !important;
+        }
+
+        .ahs-profile-plus {
+            font-size: 32px;
         }
         /* #designinnerModal css start here */
         /* .btn-list .btn{
@@ -577,9 +592,9 @@
         .almuntjat-form {
             padding: 50px 100px 150px 100px !important;
         }
-        .m-l-20{
+        /* .m-l-20{
             margin-left: 20px;
-        }
+        } */
     }
     
 
