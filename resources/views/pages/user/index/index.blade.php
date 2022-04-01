@@ -5069,21 +5069,21 @@
                                                 <div class="col-md-2 m-l-20">
                                                     <div class="product-add-upload uplod-img-active">
                                                         <img src="{{ asset('user/assets/images/design-8.png') }}" class="img-fluid" alt="">
-                                                        <p class="">إضافة</p>
+                                                        <!-- <p class="">إضافة</p> -->
                                                         <span class="camera-icon upload-cross-red"><i class="fa-solid fa-xmark"></i></span>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-2 m-l-20">
                                                     <div class="product-add-upload">
                                                         <img src="{{ asset('user/assets/images/cleancard.png') }}" class="img-fluid" alt="">
-                                                        <p class="">إضافة</p>
+                                                        <!-- <p class="">إضافة</p> -->
                                                         <span class="camera-icon upload-cross-red"><i class="fa-solid fa-xmark"></i></span>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-2 m-l-20">
                                                     <div class="product-add-upload">
                                                         <img src="{{ asset('user/assets/images/cleancard2.png') }}" class="img-fluid" alt="">
-                                                        <p class="">إضافة</p>
+                                                        <!-- <p class="">إضافة</p> -->
                                                         <span class="camera-icon upload-cross-red"><i class="fa-solid fa-xmark"></i></span>
                                                     </div>
                                                 </div>
