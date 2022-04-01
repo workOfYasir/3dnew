@@ -388,6 +388,7 @@
 
     .details p {
         width: 100%!important;
+        font-size: 13px;
     }
 
     /* Banner */
@@ -458,6 +459,7 @@
         top: 200px;
         width: 360px;
         left: 0;
+        right: 0;
     }
 
     .carousel-item .btn {
@@ -563,14 +565,19 @@
     .nav-tabs {
         padding-right: 0;
     }
+
+    #requestsModal .nav-tabs .nav-item, .onTab .nav-tabs .nav-item {
+        width: 100%;
+    }
     
-    .nav-tabs .nav-link {
-        border: 4px solid #E3E9EC;
-        border-radius: 60px;
+    #requestsModal .nav-tabs .nav-link, .onTab .nav-tabs .nav-link {
+        /* border: 4px solid #E3E9EC; */
+        /* border-radius: 60px; */
         color: #9FA5B2;
         padding: 3px 50px;
-        margin: 0 -25px;
+        /* margin: 0 -25px; */
         font-size: 12px;
+        width: 100%;
     }
     
     .nav-tabs .nav-link.active .notification {
@@ -655,6 +662,7 @@
         /* width: 1040px; */
         width: 350px;
         right: 0px;
+        left: 0;
         max-width: 350px;
     }
 
@@ -925,6 +933,11 @@
         top: 75px;
         margin: auto;
         display: block;
+        width: 100%;
+    }
+
+    #requestsModal .nav-tabs, .onTab .nav-tabs {
+        border-radius: 20px;
         width: 100%;
     }
 
@@ -1549,6 +1562,7 @@
         top: 85px;
         width: 550px;
         right: 0;
+        left: 170px;
         min-width: 630px;
         /* max-width: 630px; */
     }
@@ -1558,9 +1572,10 @@
         width: 450px;
     } */
     .black-bg.sample {
-        top: 125px;
+        top: 60px;
         width: 440px;
         left: 0;
+        right: 300px;
     }
 
     .tab-content .data {
@@ -1789,6 +1804,10 @@
     .pay.payment .form-check:last-child label {
         width: 100%;
     }
+
+    #requestsModal .nav-tabs .nav-link, .onTab .nav-tabs .nav-link {
+        padding: 3px 65px;
+    }
     
     /* Footer */
     footer {
@@ -1808,6 +1827,9 @@
 /* Large Devices */
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
     /* asim */
+    .black-bg.sample{
+        right: 270px !important;
+    }
     .dot.right-center{
         right: 15px;
     }
@@ -2007,7 +2029,9 @@
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
- 
+    .black-bg.sample{
+        right: 500px !important;
+    }
     .banner .carousel-indicators{
         top: 500px;
     }
@@ -2065,6 +2089,10 @@
     
     .details p {
         width: 68%;
+    }
+
+    .btn-list .blur-part {
+        right: 995px;
     }
 }
 
@@ -2169,6 +2197,7 @@
         position: relative;
         z-index: 9;
     }
+    
 }
 
 @media only screen and (min-width: 1400px) {

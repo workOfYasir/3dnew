@@ -35,7 +35,7 @@
                        
                              <div>
                                  <span class="outline dot">اهلاً وسهلاً بكم</span>
-                                 <h1 class="modal-title right"><span class="btm-line d-flex">طلباتي<span class="inner-line"></span></span></h1>
+                                 <h1 class="modal-title right centr-main-title"><span class="btm-line d-flex">طلباتي<span class="inner-line"></span></span></h1>
                              </div>
                      
                              <div class="profile">
@@ -56,7 +56,7 @@
                          <div class="modal-body">
                              <div class="row">
                                  <div class="col-md-12">
-                                     <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                     <ul class="nav nav-tabs designer-tabs" id="myTab" role="tablist">
                                          <li class="nav-item" role="presentation">
                                              @auth
                                              <button class="nav-link active" id="medical-tab tab tab1" data-bs-toggle="tab" data-bs-target="#medical-services" type="button" role="tab" aria-selected="true"><span class="notification">{{$orders->count()}}</span> الخدمات الطبية</button>
@@ -137,26 +137,47 @@
                                          </div>
                                          <div class="tab-pane fade" id="designer-services" role="tabpanel" aria-labelledby="profile-tab">
                                              <div class="row">
-                                                 @foreach($publics as $orde)
-                                                 <a class="nav-link" href="{{route('vieworderpublic',$orde->id)}}">
+                                                 
+                                                 <a class="nav-link" href="#">
                                                      <div class="col-md-12">
-                                                         <div class="request-box" data-bs-toggle="modal" data-bs-target="#publicServiesFinalModal">
+                                                         <div class="request-box" data-bs-toggle="modal" data-bs-target="#designer-order">
                                                              <div class="heading">
                                                                  <h5>رقم الطلب:</h5>
-                                                                 <span>{{$orde->id}}</span>
+                                                                 <span>412</span>
                                                              </div>
                                                              <div class="data">
                                                                  <p>حالة الطلب:</p>
                                                                  <span> عرض السعر</span>
                                                                  <p>اسم العميل:</p>
-                                                                 <span> {{$orde->full_name}}</span>
+                                                                 <span> غير معروف</span>
                                                                 <p>المنتج المطلوب:</p>
-                                                                 <span> {{$orde->specialization}}</span>
+                                                                 <span> عنوان التصميم يكتب هنا ويستوعب سطرين كحد اقصى ..</span>
                                                              </div>
                                                          </div>
                                                      </div>
                                                  </a>
-                                                 @endforeach
+                                             </div>
+                                         </div>
+                                             <div class="row">
+                                                 
+                                                 <a class="nav-link" href="#">
+                                                     <div class="col-md-12">
+                                                         <div class="request-box" data-bs-toggle="modal" data-bs-target="#designer-order">
+                                                             <div class="heading">
+                                                                 <h5>رقم الطلب:</h5>
+                                                                 <span>406</span>
+                                                             </div>
+                                                             <div class="data">
+                                                                 <p>حالة الطلب:</p>
+                                                                 <span>جديد</span>
+                                                                 <p>اسم العميل:</p>
+                                                                 <span> غير معروف</span>
+                                                                <p>المنتج المطلوب:</p>
+                                                                 <span> عنوان التصميم يكتب هنا ويستوعب سطرين كحد اقصى ..</span>
+                                                             </div>
+                                                         </div>
+                                                     </div>
+                                                 </a>
                                              </div>
                                          </div>
                                      </div>

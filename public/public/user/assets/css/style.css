@@ -46,6 +46,7 @@ nav .nav-link {
     padding-right: 0.7rem!important;
     padding-left: 0.7rem!important;
     border-bottom: 2px solid transparent;
+    scroll-behavior: smooth !important;
 }
 
 nav .nav-link.active {
@@ -217,8 +218,11 @@ nav .left-side a:last-child {
     background-color: #215099;
     position: absolute;
     width: 60px;
+    margin: auto;
+    display: block;
     box-shadow: 0 6px 6px rgb(0 0 0 / 16%);
-    bottom: -10px;
+    right: 0;
+    bottom: -7px;
 }
 
 .footer-white-heading .inner-line {
