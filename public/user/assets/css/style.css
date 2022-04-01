@@ -1214,12 +1214,17 @@ textarea {
 }
 
 .nav-tabs .nav-link {
-    /* border: 4px solid #E3E9EC; */
+    border: 4px solid #E3E9EC;
     border-radius: 50px;
     color: #9FA5B2;
     padding: 3px 90px;
-    /* margin: 0 -20px; */
+    margin: 0 -20px;
     height: 100%;
+}
+
+#requestsModal .nav-tabs .nav-link {
+    border-color: transparent!important;
+    margin: 0;
 }
 
 #requestsModal .nav-tabs {
@@ -3024,7 +3029,7 @@ input[type=number] {
 }
 
 .login .modal-header, .register .modal-header {
-    padding: 4rem 0 !important;
+    padding: 4rem 1rem !important;
 }
 
 .editProduct .dateTime.small {
