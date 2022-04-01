@@ -934,6 +934,11 @@
                             <button class="m-btn mujtmah-box-btn" data-bs-toggle="modal" data-bs-target="#userRequestModal">
                                 <img src="{{ asset('user/assets/images/video.png') }}" class="mujtmah-box-btn__img2">فيديو تعريفي
                             </button>
+                            
+                        </div>
+                        <div class="notification-box">
+                            <p><span class="notification">
+                                1</span>طلبات قائمة</p>
                         </div>
                     </div>
                     <div class="mujtmah-box__media" data-aos="zoom-in" data-aos-offset="500">
@@ -948,7 +953,7 @@
                     <div class="mujtmah-box__media" data-aos="zoom-in" data-aos-offset="500">
                         <div class="mujtmah-box__count2">
                             <h1 class="mujtmah-box__count-heading">+40</h1>
-                            <p class="mujtmah-box__count-sub-heading">مصمم</p>
+                            <p class="mujtmah-box__count-sub-heading">عميل</p>
                         </div>
                         <img src="{{ asset('user/assets/images/mujtmah-box__image3.png') }}" class="mujtmah-box__image">
                     </div>
@@ -979,6 +984,10 @@
                                 <p class="mujtmah-box__link1 mgl-2">يتطلب تسجيل</p>
                                 <button class="mujtmah-box__link2" data-bs-toggle="modal" data-bs-target="#registerModal">للتسجيل اضغط هنا</button>
                             </div>
+                            <div class="notification-box">
+                            <p><span class="notification">
+                                1</span>طلبات قائمة</p>
+                        </div>
                         </div>
                     </div>
                 </div>
@@ -1576,14 +1585,14 @@
                                         <div class="row circle-bottom">
                                             <div class="col-md-2">
                                             </div>
-                                            <div class="col-md-4">
+                                            <div class="col-md-4 mt-5">
                                                 <label class="form-label dot">شكل الطباعة</label>
                                                 <select class="form-select gender" required name="gender" aria-label="Default select example">
                                                     <option selected>الاشكال هنا</option>
 
                                                 </select>
                                             </div>
-                                            <div class="col-md-4">
+                                            <div class="col-md-4 mt-5">
                                                 <label class="form-label dot">تقنية الطباعة</label>
                                                 <select class="form-select gender" required name="gender" aria-label="Default select example">
                                                     <option selected> التقنية الأولي</option>
@@ -4676,7 +4685,7 @@
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         <div>
                                             <span class="outline dot">اهلاً وسهلاً بكم</span>
-                                            <h1 class="modal-title right"><span class="btm-line d-flex">المنتجات<span class="inner-line"></span></span></h1>
+                                            <h1 class="modal-title right centr-main-title"><span class="btm-line d-flex">المنتجات<span class="inner-line"></span></span></h1>
                                         </div>
 
                                         <div class="add-btn">
