@@ -2876,7 +2876,11 @@ input[type=number] {
 
 .design-footer {
     padding-top: 20px;
-    background-color: #1F5098 !important;
+    /* background-color: #1F5098 !important; */
+}
+
+.design-footer p {
+    color: white;
 }
 
 .design-footer .footer-nav .nav-link {
@@ -3069,6 +3073,9 @@ input[type=number] {
 .ahs-profile-plus-btn.disabled{
     color: #E0E0DE;
     background-color: unset;
+}
+.blue-bg {
+    background-color: #1F5098 !important;
 }
 
 /* Safari */
