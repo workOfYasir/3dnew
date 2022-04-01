@@ -965,12 +965,20 @@
                             </button>
                             <button data-bs-toggle="modal" data-bs-target="#financialOperations" class="m-btn mujtmah-box-btn btn-white-1">
                                 أطلب الان
-                                <img src="{{ asset('user/assets/images/arrow-8.png') }}" class="mujtmah-box-btn__img mgl-0 mujtmah-box-btn__img2">
-                            </button>
-                        </div>
-                        <div class="mujtmah-box__wrapper wrapper al-center">
-                            <p class="mujtmah-box__link1 mgl-2">يتطلب تسجيل</p>
-                            <button class="mujtmah-box__link2" data-bs-toggle="modal" data-bs-target="#registerModal">للتسجيل اضغط هنا</button>
+                                    <img src="{{ asset('user/assets/images/arrow-8.png') }}"
+                                    class="mujtmah-box-btn__img mgl-0 mujtmah-box-btn__img2">
+                                </button>
+                                <button data-bs-toggle="modal" data-bs-target="#designModal"
+                                    class="m-btn mujtmah-box-btn btn-white-1">
+                                أطلب الان
+                                    <img src="{{ asset('user/assets/images/arrow-8.png') }}"
+                                    class="mujtmah-box-btn__img mgl-0 mujtmah-box-btn__img2">
+                                </button>
+                            </div>
+                            <div class="mujtmah-box__wrapper wrapper al-center">
+                                <p class="mujtmah-box__link1 mgl-2">يتطلب تسجيل</p>
+                                <button class="mujtmah-box__link2" data-bs-toggle="modal" data-bs-target="#registerModal">للتسجيل اضغط هنا</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1747,7 +1755,7 @@
                                                 <div class="form-action designer-btn">
                                                     <!-- data-bs-toggle="modal" data-bs-target="#publicServiesFinalModal"  / carousel-next-icon-show-->
                                                     <button class="btn btn-form mx-3 with-arrow carousel-next-icon-show" type="submit">تفاصيل الطلب</button>
-                                                    <button class="btn-form designer-btn clean-btn" data-bs-toggle="modal" data-bs-target="#designer-order"> تقديم طلب </button>
+                                                    <!-- <button class="btn-form designer-btn clean-btn" data-bs-toggle="modal" data-bs-target="#designer-order"> تقديم طلب </button> -->
 
                                                     <p>تم رفع الطلب بنجاح</p>
                                                 </div>
@@ -2227,14 +2235,14 @@
                                        </div> -->
                                                     <div class="row">
                                                         <div class="col-md-12">
-                                                            <label class="form-label dot">عموم الحاله الصحية</label>
+                                                            <label class="form-label dot">ملاحظات</label>
                                                         </div>
                                                         <div class="col-md-6">
-                                                            <textarea class="form-control designer-text-area" id="exampleFormControlTextarea1" rows="4" placeholder="  ..الوصف هنا" readonly>{{@$ss->discription}}</textarea>
+                                                            <textarea class="form-control designer-text-area " id="exampleFormControlTextarea1" rows="4" placeholder="  ..الوصف هنا" readonly>{{@$ss->discription}}</textarea>
                                                         </div>
                                                         <div class="col-md-6">
                                                             <div class="upload-btn-wrapper designer-upload">
-                                                                <button class="btn btn-upload-designer health"><img src="{{asset('user/assets/icons/upload-img.svg')}}" alt="upload-img"></button>
+                                                                <button class="btn btn-upload-designer health"><img src="{{asset('user/assets/icons/upload-atachment.png')}}" alt="upload-img"> <p>صور بصيغة STL,PNG,JPG</p></button>
                                                                 <input type="file" id="health-file" required name="myfile" />
                                                             </div>
                                                         </div>
@@ -2529,11 +2537,11 @@
                                                                 <label class="form-label dot">عموم الحاله الصحية</label>
                                                             </div>
                                                             <div class="col-md-6">
-                                                                <textarea class="form-control designer-text-area" id="exampleFormControlTextarea1" rows="4" placeholder="  ..الوصف هنا" readonly>{{@$ss->discription}}</textarea>
+                                                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="  ..الوصف هنا" readonly>{{@$ss->discription}}</textarea>
                                                             </div>
                                                             <div class="col-md-6">
                                                                 <div class="upload-btn-wrapper designer-upload">
-                                                                    <button class="btn btn-upload-designer health"><img src="{{asset('user/assets/icons/upload-img.svg')}}" alt="upload-img"></button>
+                                                                    <button class="btn btn-upload-designer health"><img src="{{asset('user/assets/icons/download-attachments.png')}}" alt="upload-img"> <h5>تحميل المرفقات</h5></button>
                                                                     <input type="file" id="health-file" required name="myfile" />
                                                                 </div>
                                                             </div>
@@ -5968,7 +5976,7 @@
                                                                     <label class="form-label dot">عموم الحاله الصحية</label>
                                                                 </div>
                                                                 <div class="col-md-6">
-                                                                    <textarea class="form-control designer-text-area" id="exampleFormControlTextarea1" rows="4" placeholder="  ..الوصف هنا" readonly=""></textarea>
+                                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="  ..الوصف هنا" readonly=""></textarea>
                                                                 </div>
                                                                 <div class="col-md-6">
                                                                     <div class="upload-btn-wrapper designer-upload">
@@ -6514,7 +6522,7 @@
                                                                 <label class="form-label dot">ملاحظات</label>
                                                             </div>
                                                             <div class="col-md-6">
-                                                                <textarea class="form-control designer-text-area" id="exampleFormControlTextarea1" rows="4" placeholder="  ..الوصف هنا" readonly>{{@$ss->discription}}</textarea>
+                                                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="  ..الوصف هنا" readonly>{{@$ss->discription}}</textarea>
                                                             </div>
                                                             <div class="col-md-6">
                                                                 <div class="upload-btn-wrapper designer-upload">

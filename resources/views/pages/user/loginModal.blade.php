@@ -69,6 +69,9 @@
                                                 <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
                                                     <label class="form-label dot">كلمة المرور</label>
                                                     <input type="password" name="password" class="form-control pass" placeholder="التخصص هنا .." value="">
+                                                    <div class="forget-password-box">
+                                                        <a href="#" class="forget-password">نسيك كلمة المرور</a>
+                                                    </div>
                                                 </div>
                                                 <div class="form-action">
                                                     <button class="btn btn-form mx-3 with-arrow disabled" type="submit">دخول</button>
