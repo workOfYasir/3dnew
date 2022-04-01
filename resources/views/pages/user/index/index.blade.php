@@ -1134,7 +1134,7 @@
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 <div>
                                     <span class="outline dot">إختيار نوع الخدمة</span>
-                                    <h1 class="modal-title right">
+                                    <h1 class="modal-title right centr-main-title">
                                         <span class="btm-line"> <span class="inner-line"> </span>
                                             قدم طلبك
                                         </span>
@@ -1615,8 +1615,12 @@
                                                     <div class="form-action requests">
                                                         <button class="btn-form designer-btn clean-btn" data-bs-toggle="modal" data-bs-target="#designerPublicServiesModal">
                                                             تقديم طلب </button>
-                                                        <p>يتطلب تسجيل للتسجيل اضغط هنا </p>
+                                                        <!-- <p>يتطلب تسجيل للتسجيل اضغط هنا </p> -->
                                                     </div>
+                                                    <div class="mujtmah-box__wrapper wrapper al-center mt-4">
+                                <p class="mujtmah-box__link1 mgl-2">يتطلب تسجيل</p>
+                                <button class="mujtmah-box__link2 zhd-bt-p " data-bs-toggle="modal" data-bs-target="#registerModal">للتسجيل اضغط هنا</button>
+                            </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -1643,6 +1647,11 @@
                                                         <li class="nav-item">
                                                             <a class="nav-link" href="#about-us">
                                                                 من نحن
+                                                            </a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link" href="#">
+                                                            ماهي تقنية الـ 3D
                                                             </a>
                                                         </li>
                                                         <li class="nav-item">
@@ -1809,7 +1818,7 @@
                                 </div>
                                 <div class="zhd-center-hdng" style="margin-top: 1%;">
                                     <span class="outline dot">اهلاً وسهلاً بكم</span>
-                                    <h1 class="modal-title right"><span class="btm-line d-flex">طلباتي<span class="inner-line"></span></span></h1>
+                                    <h1 class="modal-title right centr-main-title"><span class="btm-line d-flex">طلباتي<span class="inner-line"></span></span></h1>
                                 </div>
                                 <div class="profile zhd-box">
                                     <button class="btn btn-sky profile-btn invert"> المصمم
@@ -2041,7 +2050,7 @@
                                 </div>
                                 <div class="zhd-center-hdng" style="margin-top: 1%;">
                                     <span class="outline dot">اهلاً وسهلاً بكم</span>
-                                    <h1 class="modal-title right"><span class="btm-line d-flex">طلباتي<span class="inner-line"></span></span></h1>
+                                    <h1 class="modal-title right centr-main-title"><span class="btm-line d-flex">طلباتي<span class="inner-line"></span></span></h1>
                                 </div>
                                 <div class="profile zhd-box">
                                     <button class="btn btn-sky profile-btn invert"> المصمم
@@ -2295,7 +2304,7 @@
                                 </div>
                                 <div class="zhd-center-hdng" style="margin-top: 1%;">
                                     <span class="outline dot">اهلاً وسهلاً بكم</span>
-                                    <h1 class="modal-title right"><span class="btm-line d-flex">طلباتي<span class="inner-line"></span></span></h1>
+                                    <h1 class="modal-title right centr-main-title"><span class="btm-line d-flex">طلباتي<span class="inner-line"></span></span></h1>
                                 </div>
                                 <div class="profile zhd-box">
                                     <button class="btn btn-sky profile-btn invert">
@@ -2617,7 +2626,7 @@
                                 </div>
                                 <div class="zhd-center-hdng" style="margin-top: 1%;">
                                     <span class="outline dot">اهلاً وسهلاً بكم</span>
-                                    <h1 class="modal-title right"><span class="btm-line d-flex">طلباتي<span class="inner-line"></span></span></h1>
+                                    <h1 class="modal-title right centr-main-title"><span class="btm-line d-flex">طلباتي<span class="inner-line"></span></span></h1>
                                 </div>
                                 <div class="profile zhd-box">
                                     <button class="btn btn-sky profile-btn invert">
@@ -2846,7 +2855,7 @@
                                 </div>
                                 <div class="zhd-center-hdng" style="margin-top: 1%;">
                                     <span class="outline dot">اهلاً وسهلاً بكم</span>
-                                    <h1 class="modal-title right"><span class="btm-line d-flex">طلباتي<span class="inner-line"></span></span></h1>
+                                    <h1 class="modal-title right centr-main-title"><span class="btm-line d-flex">طلباتي<span class="inner-line"></span></span></h1>
                                 </div>
                                 <div class="profile zhd-box">
                                     <button class="btn btn-sky profile-btn invert">
@@ -3082,7 +3091,7 @@
                                 </div>
                                 <div class="zhd-center-hdng" style="margin-top: 1%;">
                                     <span class="outline dot">اهلاً وسهلاً بكم</span>
-                                    <h1 class="modal-title right"><span class="btm-line d-flex">طلباتي<span class="inner-line"></span></span></h1>
+                                    <h1 class="modal-title right centr-main-title"><span class="btm-line d-flex">طلباتي<span class="inner-line"></span></span></h1>
                                 </div>
                                 <div class="profile zhd-box">
                                     <button class="btn btn-sky profile-btn invert">
@@ -4075,6 +4084,11 @@
                                                                 </a>
                                                             </li>
                                                             <li class="nav-item">
+                                                            <a class="nav-link" href="#">
+                                                            ماهي تقنية الـ 3D
+                                                            </a>
+                                                        </li>
+                                                            <li class="nav-item">
                                                                 <a class="nav-link" href="#services-section">الخدمات</a>
                                                             </li>
                                                             <li class="nav-item">
@@ -4615,6 +4629,11 @@
                                                                 </a>
                                                             </li>
                                                             <li class="nav-item">
+                                                            <a class="nav-link" href="#">
+                                                            ماهي تقنية الـ 3D
+                                                            </a>
+                                                        </li>
+                                                            <li class="nav-item">
                                                                 <a class="nav-link" href="#services-section">الخدمات</a>
                                                             </li>
                                                             <li class="nav-item">
@@ -4694,7 +4713,7 @@
                                             </button>
 
                                             <span>
-                                                المصمم
+                                            إضافة منتج
                                             </span>
                                         </div>
                                     </div>
@@ -4903,7 +4922,7 @@
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         <div>
                                             <span class="outline dot">اهلاً وسهلاً بكم</span>
-                                            <h1 class="modal-title right">المنتجات </h1>
+                                            <h1 class="modal-title right centr-main-title">المنتجات </h1>
                                         </div>
                                         <button class="ahs-profile-plus-btn ">
                                             <i class="fa fa-plus-circle fa-lg ahs-profile-plus"></i>
@@ -5048,7 +5067,7 @@
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         <div>
                                             <span class="outline dot">اهلاً وسهلاً بكم</span>
-                                            <h1 class="modal-title right">المنتجات </h1>
+                                            <h1 class="modal-title right centr-main-title">المنتجات </h1>
                                         </div>
                                         <button class="ahs-profile-plus-btn productadd-top-btn">
                                             إضافة منتج
