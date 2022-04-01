@@ -2511,59 +2511,43 @@ input[type=number] {
 .designer-sec::before {
     content: "";
     position: absolute;
+    background: url(../images/design-bg.png) no-repeat;
+    background-position: top center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.6;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    bottom: 881px;
+    right: 0;
+    display: block;
+    margin: auto;
+    max-height: unset;
+    height: 1020px;
+    width: 1280px;
+
+
+}
+
+/* .designer-sec::before {
+    content: "";
+    position: absolute;
     background: url(../images/design.png) no-repeat;
     background-position: top center;
     background-size: contain;
     background-repeat: no-repeat;
     opacity: 0.6;
-    /* top: 170px; */
-    /* bottom: 0; */
-    z-index: -1;
+    z-index: -1; 
     left: 0;
-    /* right: 0; */
-    /* max-height: 300px; */
-    /* height: auto; */
     top: 0;
     bottom: 870px;
-    left: 0;
     right: -220px;
     display: block;
     margin: auto;
     max-height: unset;
     height: 1020px;
     width: 1930px;
-}
-
-
-/* .designer-sec::after{
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 300px;
-    height: 200px;
-    background-color: red;
-} */
-
-
-/* .container{
-    position: relative;
-} */
-
-
-/* .container::after{
-    content: "";
-    position: absolute;
-    top: 380px;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 260px;
-    background-image: linear-gradient(45deg, red, transparent);
-    background-image: linear-gradient(45deg, #215099, transparent);
 } */
 
 .design-txt {
@@ -2649,6 +2633,7 @@ input[type=number] {
     border: 4px solid #fff;
     border-radius: 20px;
     box-shadow: none;
+    height: 44px;
 }
 
 .designer-sec .search-input ::placeholder {
@@ -2919,7 +2904,7 @@ input[type=number] {
 }
 
 .designer-profile .btn {
-    margin-top: 10px;
+    margin-top: 30px;
     color: #fff;
     width: 96px;
     height: 30px;
@@ -2940,7 +2925,12 @@ input[type=number] {
 .designer-sec-1 .designer-profile .star-reating .star-active {
     color: #F8AC00 !important;
 }
-
+.designer-sec-1-title{
+    padding-bottom: 44px !important;
+}
+.designer-sec-1-title .designer-title {
+    padding-bottom: 0px !important;
+}
 .designer-profile .design-txt {
     color: #1F5098;
     text-align: center;
@@ -3025,7 +3015,8 @@ input[type=number] {
 
 .btn-list .blur-part.white {
     background: white;
-    top: 590px;
+    /* top: 590px; */
+    top: 440px;
 }
 
 .login .modal-header, .register .modal-header {

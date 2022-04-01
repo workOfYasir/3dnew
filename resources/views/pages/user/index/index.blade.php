@@ -4375,8 +4375,8 @@
                                                         <i class="fa-solid fa-star"></i>
                                                         <i class="fa-solid fa-star"></i>
                                                     </div>
-                                                    <div class="design-txt">
-                                                        <h1 class="designer-title">
+                                                    <div class="design-txt designer-sec-1-title">
+                                                        <h1 class="designer-title ">
                                                             أسم المصمم
                                                         </h1>
                                                     </div>
@@ -5061,35 +5061,35 @@
                                                     <p class="almuntjat-form__img-label-text">إضافة</p>
                                                 </label> -->
                                             <div class="row">
-                                                <div class="col-md-2 m-l-20">
+                                                <div class="col-auto">
                                                     <div class="product-add-upload uplod-img-active">
                                                         <img src="{{ asset('user/assets/images/design-8.png') }}" class="img-fluid" alt="">
                                                         <!-- <p class="">إضافة</p> -->
                                                         <span class="camera-icon upload-cross-red"><i class="fa-solid fa-xmark"></i></span>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-2 m-l-20">
+                                                <div class="col-auto">
                                                     <div class="product-add-upload">
                                                         <img src="{{ asset('user/assets/images/cleancard.png') }}" class="img-fluid" alt="">
                                                         <!-- <p class="">إضافة</p> -->
                                                         <span class="camera-icon upload-cross-red"><i class="fa-solid fa-xmark"></i></span>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-2 m-l-20">
+                                                <div class="col-auto">
                                                     <div class="product-add-upload">
                                                         <img src="{{ asset('user/assets/images/cleancard2.png') }}" class="img-fluid" alt="">
                                                         <!-- <p class="">إضافة</p> -->
                                                         <span class="camera-icon upload-cross-red"><i class="fa-solid fa-xmark"></i></span>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-2 m-l-20">
+                                                <div class="col-auto">
                                                     <div class="product-add-upload">
                                                         <img src="{{ asset('user/assets/images/cleancard2.png') }}" class="img-fluid" alt="">
                                                         <p class="">إضافة</p>
                                                         <span class="camera-icon upload-cross-red"><i class="fa-solid fa-xmark"></i></span>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-2 m-l-20">
+                                                <div class="col-auto">
                                                     <div class="product-add-upload">
                                                         <!-- <img src="{{ asset('user/assets/images/cleancard3.png') }}" class="img-fluid" alt=""> -->
                                                         <p class="">إضافة</p>
