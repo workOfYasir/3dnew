@@ -1222,19 +1222,20 @@ textarea {
     height: 100%;
 }
 
-#requestsModal .nav-tabs .nav-link {
+#requestsModal .nav-tabs .nav-link, .onTab .nav-tabs .nav-link {
     border-color: transparent!important;
     margin: 0;
 }
 
-#requestsModal .nav-tabs {
+#requestsModal .nav-tabs, .onTab .nav-tabs {
     border: 4px solid #E3E9EC;
     border-radius: 50px;
     width: max-content;
     margin: auto;
 }
 
-#requestsModal .nav-tabs .nav-link:focus, #requestsModal .nav-tabs .nav-link:hover {
+#requestsModal .nav-tabs .nav-link:focus, #requestsModal .nav-tabs .nav-link:hover, 
+.onTab .nav-tabs .nav-link:hover {
     border-color: transparent;
 }
 

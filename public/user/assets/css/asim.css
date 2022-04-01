@@ -1,6 +1,6 @@
     
     /* ////////////////////////////////////  designer section start here  //////////////////////////////////// */
-    
+    #productdesignModal .designer-sec::after{display:none;}
     #designinnerModal .designer-sec {
         padding-top: 50px;
     }
