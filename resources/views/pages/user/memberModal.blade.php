@@ -151,7 +151,7 @@
                                         <img src="assets/images/warning.png" alt="" class="almuntjat-form-error__img"> بعد إضافة المنتج سيذهب الى الإدارة للمراجعة للقبول أو الرفض
                                     </div>
                                     <div class="almuntjat-form-error almuntjat-form-error-2">
-                                                            <img src="http://127.0.0.1:8000/user/assets/images/warning.png" alt="" class="almuntjat-form-error__img"> بعد إضافة المنتج سيذهب الى الإدارة للمراجعة للقبول أو الرفض
+                                                            <img src="{{ asset('/user/assets/images/warning.png')}}" alt="" class="almuntjat-form-error__img"> بعد إضافة المنتج سيذهب الى الإدارة للمراجعة للقبول أو الرفض
                                                         </div>
                                     <div class="form-action">
                                         <button class="btn btn-form mx-3 with-arrow disabled" type="submit">حفظ</button>

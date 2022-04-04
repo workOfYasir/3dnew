@@ -2027,7 +2027,7 @@
 
 
                                                 <button class="btn btn-sky invert">
-                                                    زيارة المنتج <img src="http://127.0.0.1:8000/user/assets/icons/arrow-right.svg" alt="arrow-right">
+                                                    زيارة المنتج <img src="{{ asset('/user/assets/icons/arrow-right.svg')}}" alt="arrow-right">
                                                 </button>
                                             </div>
                                         </div>
@@ -2253,7 +2253,7 @@
 
 
                                                 <button class="btn btn-sky invert">
-                                                    زيارة المنتج <img src="http://127.0.0.1:8000/user/assets/icons/arrow-right.svg" alt="arrow-right">
+                                                    زيارة المنتج <img src="{{ asset('/user/assets/icons/arrow-right.svg')}}" alt="arrow-right">
                                                 </button>
                                             </div>
 
@@ -2510,7 +2510,7 @@
 
 
                                                 <button class="btn btn-sky invert">
-                                                    زيارة المنتج <img src="http://127.0.0.1:8000/user/assets/icons/arrow-right.svg" alt="arrow-right">
+                                                    زيارة المنتج <img src="{{ asset('/user/assets/icons/arrow-right.svg')}}" alt="arrow-right">
                                                 </button>
                                             </div>
                                             <!-- <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
@@ -2836,7 +2836,7 @@
 
 
                                                 <button class="btn btn-sky invert">
-                                                    زيارة المنتج <img src="http://127.0.0.1:8000/user/assets/icons/arrow-right.svg" alt="arrow-right">
+                                                    زيارة المنتج <img src="{{ asset('/user/assets/icons/arrow-right.svg')}}" alt="arrow-right">
                                                 </button>
                                             </div>
 
@@ -3064,7 +3064,7 @@
 
 
                                                 <button class="btn btn-sky invert">
-                                                    زيارة المنتج <img src="http://127.0.0.1:8000/user/assets/icons/arrow-right.svg" alt="arrow-right">
+                                                    زيارة المنتج <img src="{{ asset('/user/assets/icons/arrow-right.svg')}}" alt="arrow-right">
                                                 </button>
                                             </div>
 
@@ -3300,7 +3300,7 @@
 
 
                                                 <button class="btn btn-sky invert">
-                                                    زيارة المنتج <img src="http://127.0.0.1:8000/user/assets/icons/arrow-right.svg" alt="arrow-right">
+                                                    زيارة المنتج <img src="{{ asset('/user/assets/icons/arrow-right.svg')}}" alt="arrow-right">
                                                 </button>
                                             </div>
 
@@ -3532,7 +3532,7 @@
 
 
                                                 <button class="btn btn-sky invert">
-                                                    زيارة المنتج <img src="http://127.0.0.1:8000/user/assets/icons/arrow-right.svg" alt="arrow-right">
+                                                    زيارة المنتج <img src="{{ asset('/user/assets/icons/arrow-right.svg')}}" alt="arrow-right">
                                                 </button>
                                             </div>
 
@@ -4695,7 +4695,7 @@
                                             <div class="col-md-12">
 
                                                 <div class="designer-profile">
-                                                    <img id="blah" src="http://127.0.0.1:8000/user/assets/icons/edit-avatar.svg" class="mx-auto d-block imageupload" width="100" alt="avatar" style="clip-path: circle() !important;">
+                                                    <img id="blah" src="{{ asset('/user/assets/icons/edit-avatar.svg')}}" class="mx-auto d-block imageupload" width="100" alt="avatar" style="clip-path: circle() !important;">
                                                     <input id="imgInp" type="file" class="chose" name="profile" accept="image/*" style="display: none;">
                                                     <button class="btn btn-blue">مصمم</button>
                                                     <div class="star-reating">
@@ -5896,7 +5896,7 @@
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 zhd-product-visit">
 
                                                 <button class="btn btn-sky invert">
-                                                    زيارة المنتج <img src="http://127.0.0.1:8000/user/assets/icons/arrow-right.svg" alt="arrow-right">
+                                                    زيارة المنتج <img src="{{ asset('/user/assets/icons/arrow-right.svg')}}" alt="arrow-right">
                                                 </button>
                                             </div>
                                         </div>
@@ -5991,7 +5991,7 @@
                                                                 </div>
                                                             </div>
                                                             <button class="btn btn-sky invert">
-                                                                زيارة المنتج <img src="http://127.0.0.1:8000/user/assets/icons/arrow-right.svg" alt="arrow-right">
+                                                                زيارة المنتج <img src="{{ asset('/user/assets/icons/arrow-right.svg')}}" alt="arrow-right">
                                                             </button>
                                                         </div>
                                                         {{-- user- req --}}
@@ -6242,7 +6242,7 @@
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 zhd-product-visit">
 
                                                 <button class="btn btn-sky invert">
-                                                    زيارة المنتج <img src="http://127.0.0.1:8000/user/assets/icons/arrow-right.svg" alt="arrow-right">
+                                                    زيارة المنتج <img src="{{ asset('/user/assets/icons/arrow-right.svg')}}" alt="arrow-right">
                                                 </button>
                                             </div>
                                         </div>
@@ -6278,7 +6278,7 @@
                                                                 </div>
                                                             </div>
                                                             <button class="btn btn-sky invert">
-                                                                زيارة المنتج <img src="http://127.0.0.1:8000/user/assets/icons/arrow-right.svg" alt="arrow-right">
+                                                                زيارة المنتج <img src="{{ asset('/user/assets/icons/arrow-right.svg')}}" alt="arrow-right">
                                                             </button>
                                                         </div>
                                                         {{-- user- req --}}
@@ -6314,7 +6314,7 @@
                                                                 </div>
                                                                 <div class="col-md-6">
                                                                     <div class="upload-btn-wrapper designer-upload">
-                                                                        <button class="btn btn-upload-designer health"><img src="http://127.0.0.1:8000/user/assets/icons/upload-img.svg" alt="upload-img"></button>
+                                                                        <button class="btn btn-upload-designer health"><img src="{{ asset('/user/assets/icons/upload-img.svg')}}" alt="upload-img"></button>
                                                                         <input type="file" id="health-file" required="" name="myfile">
                                                                     </div>
                                                                 </div>
@@ -6486,7 +6486,7 @@
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 zhd-product-visit">
 
                                                 <button class="btn btn-sky invert" data-bs-toggle="modal" data-bs-target="#user5RequestModal">
-                                                    زيارة المنتج <img src="http://127.0.0.1:8000/user/assets/icons/arrow-right.svg" alt="arrow-right">
+                                                    زيارة المنتج <img src="{{ asset('/user/assets/icons/arrow-right.svg')}}" alt="arrow-right">
                                                 </button>
                                             </div>
                                         </div>
@@ -6545,7 +6545,7 @@
                                                                 </div>
                                                             </div>
                                                             <button class="btn btn-sky invert">
-                                                                زيارة المنتج <img src="http://127.0.0.1:8000/user/assets/icons/arrow-right.svg" alt="arrow-right">
+                                                                زيارة المنتج <img src="{{ asset('/user/assets/icons/arrow-right.svg')}}" alt="arrow-right">
                                                             </button>
                                                         </div>
                                                         {{-- user- req --}}
@@ -6565,7 +6565,7 @@
                                                             </div>
                                                         </div>
                                                         <div class="almuntjat-form-error almuntjat-form-error-2">
-                                                            <img src="http://127.0.0.1:8000/user/assets/images/warning.png" alt="" class="almuntjat-form-error__img"> بعد إضافة المنتج سيذهب الى الإدارة للمراجعة للقبول أو الرفض
+                                                            <img src="{{ asset('/user/assets/images/warning.png')}}" alt="" class="almuntjat-form-error__img"> بعد إضافة المنتج سيذهب الى الإدارة للمراجعة للقبول أو الرفض
                                                         </div>
                                                     </div>
                                                     <div class="userreqFormBtn-box">
@@ -6756,7 +6756,7 @@
 
 
                                                 <button class="btn btn-sky invert">
-                                                    زيارة المنتج <img src="http://127.0.0.1:8000/user/assets/icons/arrow-right.svg" alt="arrow-right">
+                                                    زيارة المنتج <img src="{{ asset('/user/assets/icons/arrow-right.svg')}}" alt="arrow-right">
                                                 </button>
                                             </div>
                                             <!-- <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
@@ -7047,7 +7047,7 @@
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 zhd-product-visit">
 
                                                 <button class="btn btn-sky invert">
-                                                    زيارة المنتج <img src="http://127.0.0.1:8000/user/assets/icons/arrow-right.svg" alt="arrow-right">
+                                                    زيارة المنتج <img src="{{ asset('/user/assets/icons/arrow-right.svg')}}" alt="arrow-right">
                                                 </button>
                                             </div>
                                         </div>
@@ -7084,7 +7084,7 @@
                                                                 </div>
                                                             </div>
                                                             <button class="btn btn-sky invert">
-                                                                زيارة المنتج <img src="http://127.0.0.1:8000/user/assets/icons/arrow-right.svg" alt="arrow-right">
+                                                                زيارة المنتج <img src="{{ asset('/user/assets/icons/arrow-right.svg')}}" alt="arrow-right">
                                                             </button>
                                                         </div>
                                                         {{-- user- req --}}
@@ -7271,7 +7271,7 @@
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 zhd-product-visit">
 
                                                 <button class="btn btn-sky invert">
-                                                    زيارة المنتج <img src="http://127.0.0.1:8000/user/assets/icons/arrow-right.svg" alt="arrow-right">
+                                                    زيارة المنتج <img src="{{ asset('/user/assets/icons/arrow-right.svg')}}" alt="arrow-right">
                                                 </button>
                                             </div>
                                         </div>
@@ -7296,7 +7296,7 @@
                                                                 <div class="credit-logo-inner">
                                                                     <div class="row">
                                                                         <div class="col-md-3 col-lg-3">
-                                                                            <img src="http://127.0.0.1:8000/user/assets/images/arrow-8.png" class="credit-card-icon">
+                                                                            <img src="{{ asset('/user/assets/images/arrow-8.png')}}" class="credit-card-icon">
                                                                         </div>
                                                                         <div class="col-md-7 col-lg-7">
                                                                             <h5>فيزا وماستر كارد</h5>
@@ -7311,7 +7311,7 @@
                                                                 <div class="credit-logo-inner flot-lft">
                                                                     <div class="row">
                                                                         <div class="col-md-3 col-lg-3">
-                                                                            <img src="http://127.0.0.1:8000/user/assets/images/arrow-8.png" class="credit-card-icon green-border">
+                                                                            <img src="{{ asset('/user/assets/images/arrow-8.png')}}" class="credit-card-icon green-border">
                                                                         </div>
                                                                         <div class="col-md-7 col-lg-7">
                                                                             <h5>مدى</h5>
@@ -7328,7 +7328,7 @@
                                                                 <div class="credit-logo-inner">
                                                                     <div class="row">
                                                                         <div class="col-md-3 col-lg-3">
-                                                                            <img src="http://127.0.0.1:8000/user/assets/images/arrow-8.png" class="credit-card-icon">
+                                                                            <img src="{{ asset('/user/assets/images/arrow-8.png')}}" class="credit-card-icon">
                                                                         </div>
                                                                         <div class="col-md-7 col-lg-7">
                                                                             <h5>آبل باي</h5>
@@ -7363,7 +7363,7 @@
                                                                 </div>
                                                             </div>
                                                             <button class="btn btn-sky invert">
-                                                                زيارة المنتج <img src="http://127.0.0.1:8000/user/assets/icons/arrow-right.svg" alt="arrow-right">
+                                                                زيارة المنتج <img src="{{ asset('/user/assets/icons/arrow-right.svg')}}" alt="arrow-right">
                                                             </button>
                                                         </div>
                                                         {{-- user- req --}}
@@ -7543,7 +7543,7 @@
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 zhd-product-visit">
 
                                                 <button class="btn btn-sky invert">
-                                                    زيارة المنتج <img src="http://127.0.0.1:8000/user/assets/icons/arrow-right.svg" alt="arrow-right">
+                                                    زيارة المنتج <img src="{{ asset('/user/assets/icons/arrow-right.svg')}}" alt="arrow-right">
                                                 </button>
                                             </div>
                                         </div>
@@ -7580,7 +7580,7 @@
                                                                 </div>
                                                             </div>
                                                             <button class="btn btn-sky invert">
-                                                                زيارة المنتج <img src="http://127.0.0.1:8000/user/assets/icons/arrow-right.svg" alt="arrow-right">
+                                                                زيارة المنتج <img src="{{ asset('/user/assets/icons/arrow-right.svg')}}" alt="arrow-right">
                                                             </button>
                                                         </div>
                                                         {{-- user- req --}}
