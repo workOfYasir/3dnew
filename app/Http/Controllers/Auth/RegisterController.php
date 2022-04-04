@@ -112,6 +112,7 @@ class RegisterController extends Controller
             'password' => ['required'],
         ]);
         if (isset($data['profile']) && !empty($data['profile'])) {
+            $datas = $data['profile']->move(storage_path('app/upload/'), $data['profile']);
             $datas = Storage::disk('public')->put('upload/', $data['profile']);
         } else {
             $datas = null;
@@ -129,6 +130,7 @@ class RegisterController extends Controller
         
         $roleData = Crypt::decrypt($data['role']);
         if (isset($data['profile']) && !empty($data['profile'])) {
+            $datas = $data['profile']->move(storage_path('app/upload/'), $data['profile']);
             $datas = Storage::disk('public')->put('upload/', $data['profile']);
         } else {
             $datas = null;

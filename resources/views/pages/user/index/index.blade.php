@@ -123,7 +123,7 @@
                 </div>
                 @else
                 <div class="profile-img">
-                    <img src="{{ asset('storage/' . auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
+                    <img src="{{ asset(  auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
 
                 </div>
                 @endif
@@ -575,7 +575,7 @@
                                 <div class="bottom boxContainer sample heart-img">
                                     <div class="blue-box move-box"></div>
                                     @if (@$side->side_image != null)
-                                    <img src="{{ asset('storage/' . $side->side_image) }}" alt="side-img">
+                                    <img src="{{ asset(  $side->side_image) }}" alt="side-img">
                                     @else
                                     <img src="{{ asset('user/assets/images/side-img.jpg') }}" alt="side-img">
                                     @endif
@@ -619,7 +619,7 @@
                             <div class="main-slide sample">
                                 @if (@$logos->logo1 != null)
                                 <div class="slide-logos">
-                                    <img style="width: 120px;" src="{{ asset('storage/' . $logos->logo1) }}">
+                                    <img style="width: 120px;" src="{{ asset( $logos->logo1) }}">
                                 </div>
                                 @else
                                 <div class="slide-logos">
@@ -629,7 +629,7 @@
 
                                 @if (@$logos->logo2 != null)
                                 <div class="slide-logos">
-                                    <img style="width: 120px;" src="{{ asset('storage/' . $logos->logo2) }}">
+                                    <img style="width: 120px;" src="{{ asset( $logos->logo2) }}">
                                 </div>
                                 @else
                                 <div class="slide-logos">
@@ -639,7 +639,7 @@
 
                                 @if (@$logos->logo3 != null)
                                 <div class="slide-logos">
-                                    <img style="width: 120px;" src="{{ asset('storage/' . $logos->logo3) }}">
+                                    <img style="width: 120px;" src="{{ asset( $logos->logo3) }}">
                                 </div>
                                 @else
                                 <div class="slide-logos">
@@ -649,7 +649,7 @@
 
                                 @if (@$logos->logo4 != null)
                                 <div class="slide-logos">
-                                    <img style="width: 120px;" src="{{ asset('storage/' . $logos->logo4) }}">
+                                    <img style="width: 120px;" src="{{ asset( $logos->logo4) }}">
                                 </div>
                                 @else
                                 <div class="slide-logos">
@@ -659,7 +659,7 @@
 
                                 @if (@$logos->logo5 != null)
                                 <div class="slide-logos">
-                                    <img style="width: 120px;" src="{{ asset('storage/' . $logos->logo5) }}">
+                                    <img style="width: 120px;" src="{{ asset( $logos->logo5) }}">
                                 </div>
                                 @else
                                 <div class="slide-logos">
@@ -669,7 +669,7 @@
 
                                 @if (@$logos->logo6 != null)
                                 <div class="slide-logos">
-                                    <img style="width: 120px;" src="{{ asset('storage/' . $logos->logo6) }}">
+                                    <img style="width: 120px;" src="{{ asset( $logos->logo6) }}">
                                 </div>
                                 @else
                                 <div class="slide-logos">
@@ -679,7 +679,7 @@
 
                                 @if (@$logos->logo7 != null)
                                 <div class="slide-logos">
-                                    <img style="width: 120px;" src="{{ asset('storage/' . $logos->logo7) }}">
+                                    <img style="width: 120px;" src="{{ asset( $logos->logo7) }}">
                                 </div>
                                 @else
                                 <div class="slide-logos">
@@ -689,7 +689,7 @@
 
                                 @if (@$logos->logo8 != null)
                                 <div class="slide-logos">
-                                    <img style="width: 120px;" src="{{ asset('storage/' . $logos->logo8) }}">
+                                    <img style="width: 120px;" src="{{ asset( $logos->logo8) }}">
                                 </div>
                                 @else
                                 <div class="slide-logos">
@@ -747,7 +747,7 @@
                                         <div class="blue-box move-box"></div>
                                         @if (@$map->map_image != null)
 
-                                        <img src="{{ asset('storage/' . $map->map_image) }}" width="550" height="300" style="border:0;" allowfullscreen="" loading="lazy"></img>
+                                        <img src="{{ asset( $map->map_image) }}" width="550" height="300" style="border:0;" allowfullscreen="" loading="lazy"></img>
 
                                         @else
                                         <img src="{{ asset('user/assets/images/world-map.jpg') }}" width="550" height="300" style="border:0;" allowfullscreen="" loading="lazy"></img>
@@ -1377,7 +1377,7 @@
                                             </div>
                                             @else
                                             <div class="profile-img">
-                                                <img src="{{ asset('storage/' . auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
+                                                <img src="{{ asset( auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
 
                                             </div>
                                             @endif
@@ -1790,7 +1790,7 @@
                                     </a>
                                     @else
                                     <a href="#profile">
-                                        <img src="{{ asset('storage/' . auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
+                                        <img src="{{ asset( auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
                                     </a>
                                     @endif
                                 </div>
@@ -1880,7 +1880,7 @@
                                     </a>
                                     @else
                                     <a href="#profile">
-                                        <img src="{{ asset('storage/' . auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
+                                        <img src="{{ asset( auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
                                     </a>
                                     @endif
                                 </div>
@@ -2027,7 +2027,7 @@
 
 
                                                 <button class="btn btn-sky invert">
-                                                    زيارة المنتج <img src="http://127.0.0.1:8000/user/assets/icons/arrow-right.svg" alt="arrow-right">
+                                                    زيارة المنتج <img src="{{ asset('/user/assets/icons/arrow-right.svg')}}" alt="arrow-right">
                                                 </button>
                                             </div>
                                         </div>
@@ -2062,7 +2062,7 @@
                                           <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                               <label class="form-label">رفع ملف المجسم</label>
                                               <div class="upload-btn-wrapper">
-                                                  <a class="btn btn-upload" href="{{ asset('storage/' . @$public->print_img) }}" download=" {{ @$public->print_img }}"><img src="{{asset('user/assets/icons/uploaded-img.svg')}}" alt="upload-img"></a>
+                                                  <a class="btn btn-upload" href="{{ asset( @$public->print_img) }}" download=" {{ @$public->print_img }}"><img src="{{asset('user/assets/icons/uploaded-img.svg')}}" alt="upload-img"></a>
                                               </div>
                                           </div>
                                           </div> -->
@@ -2112,7 +2112,7 @@
                                     </a>
                                     @else
                                     <a href="#profile">
-                                        <img src="{{ asset('storage/' . auth()->user()->profile) }}" alt="" style="height:40px; width:40px; border-radius: 50%">
+                                        <img src="{{ asset( auth()->user()->profile) }}" alt="" style="height:40px; width:40px; border-radius: 50%">
                                     </a>
                                     @endif
                                 </div>
@@ -2253,7 +2253,7 @@
 
 
                                                 <button class="btn btn-sky invert">
-                                                    زيارة المنتج <img src="http://127.0.0.1:8000/user/assets/icons/arrow-right.svg" alt="arrow-right">
+                                                    زيارة المنتج <img src="{{ asset('/user/assets/icons/arrow-right.svg')}}" alt="arrow-right">
                                                 </button>
                                             </div>
 
@@ -2298,7 +2298,7 @@
                                        <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                            <label class="form-label">رفع ملف المجسم</label>
                                            <div class="upload-btn-wrapper">
-                                               <a class="btn btn-upload" href="{{ asset('storage/' . @$public->print_img) }}" download=" {{ @$public->print_img }}"><img src="{{asset('user/assets/icons/uploaded-img.svg')}}" alt="upload-img"></a>
+                                               <a class="btn btn-upload" href="{{ asset( @$public->print_img) }}" download=" {{ @$public->print_img }}"><img src="{{asset('user/assets/icons/uploaded-img.svg')}}" alt="upload-img"></a>
                                            </div>
                                        </div>
                                        </div> -->
@@ -2369,7 +2369,7 @@
                                     </a>
                                     @else
                                     <a href="#profile">
-                                        <img src="{{ asset('storage/' . auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
+                                        <img src="{{ asset( auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
                                     </a>
                                     @endif
                                 </div>
@@ -2510,7 +2510,7 @@
 
 
                                                 <button class="btn btn-sky invert">
-                                                    زيارة المنتج <img src="http://127.0.0.1:8000/user/assets/icons/arrow-right.svg" alt="arrow-right">
+                                                    زيارة المنتج <img src="{{ asset('/user/assets/icons/arrow-right.svg')}}" alt="arrow-right">
                                                 </button>
                                             </div>
                                             <!-- <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
@@ -2599,7 +2599,7 @@
                                           <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                               <label class="form-label">رفع ملف المجسم</label>
                                               <div class="upload-btn-wrapper">
-                                                  <a class="btn btn-upload" href="{{ asset('storage/' . @$public->print_img) }}" download=" {{ @$public->print_img }}"><img src="{{asset('user/assets/icons/uploaded-img.svg')}}" alt="upload-img"></a>
+                                                  <a class="btn btn-upload" href="{{ asset( @$public->print_img) }}" download=" {{ @$public->print_img }}"><img src="{{asset('user/assets/icons/uploaded-img.svg')}}" alt="upload-img"></a>
                                               </div>
                                           </div>
                                           </div> -->
@@ -2693,7 +2693,7 @@
                                     </a>
                                     @else
                                     <a href="#profile">
-                                        <img src="{{ asset('storage/' . auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
+                                        <img src="{{ asset( auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
                                     </a>
                                     @endif
                                 </div>
@@ -2836,7 +2836,7 @@
 
 
                                                 <button class="btn btn-sky invert">
-                                                    زيارة المنتج <img src="http://127.0.0.1:8000/user/assets/icons/arrow-right.svg" alt="arrow-right">
+                                                    زيارة المنتج <img src="{{ asset('/user/assets/icons/arrow-right.svg')}}" alt="arrow-right">
                                                 </button>
                                             </div>
 
@@ -2922,7 +2922,7 @@
                                     </a>
                                     @else
                                     <a href="#profile">
-                                        <img src="{{ asset('storage/' . auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
+                                        <img src="{{ asset( auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
                                     </a>
                                     @endif
                                 </div>
@@ -3064,7 +3064,7 @@
 
 
                                                 <button class="btn btn-sky invert">
-                                                    زيارة المنتج <img src="http://127.0.0.1:8000/user/assets/icons/arrow-right.svg" alt="arrow-right">
+                                                    زيارة المنتج <img src="{{ asset('/user/assets/icons/arrow-right.svg')}}" alt="arrow-right">
                                                 </button>
                                             </div>
 
@@ -3158,7 +3158,7 @@
                                     </a>
                                     @else
                                     <a href="#profile">
-                                        <img src="{{ asset('storage/' . auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
+                                        <img src="{{ asset( auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
                                     </a>
                                     @endif
                                 </div>
@@ -3300,7 +3300,7 @@
 
 
                                                 <button class="btn btn-sky invert">
-                                                    زيارة المنتج <img src="http://127.0.0.1:8000/user/assets/icons/arrow-right.svg" alt="arrow-right">
+                                                    زيارة المنتج <img src="{{ asset('/user/assets/icons/arrow-right.svg')}}" alt="arrow-right">
                                                 </button>
                                             </div>
 
@@ -3389,7 +3389,7 @@
                                     </a>
                                     @else
                                     <a href="#profile">
-                                        <img src="{{ asset('storage/' . auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
+                                        <img src="{{ asset( auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
                                     </a>
                                     @endif
                                 </div>
@@ -3532,7 +3532,7 @@
 
 
                                                 <button class="btn btn-sky invert">
-                                                    زيارة المنتج <img src="http://127.0.0.1:8000/user/assets/icons/arrow-right.svg" alt="arrow-right">
+                                                    زيارة المنتج <img src="{{ asset('/user/assets/icons/arrow-right.svg')}}" alt="arrow-right">
                                                 </button>
                                             </div>
 
@@ -3692,7 +3692,7 @@
                                             </div>
                                             @else
                                             <div class="profile-img">
-                                                <img src="{{ asset('storage/' . auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
+                                                <img src="{{ asset(  auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
 
                                             </div>
                                             @endif
@@ -3852,7 +3852,7 @@
 
                                     <section class="designer-sec" id="">
 
-                                        <!-- <img src="./user/assets/images/design.png" class="design-bg" class="img-fluid" alt=""> -->
+                                        <!-- <img src="{{asset('user/assets/images/design.png')}}" class="design-bg" class="img-fluid" alt=""> -->
 
                                         <div class="container">
                                             <div class="row">
@@ -3927,7 +3927,7 @@
                                                                     <div class="star-profile">
                                                                         <a href="#" data-bs-toggle="modal" data-bs-target="#">
                                                                             <div class="star-profile-icon">
-                                                                                <img src="./assets/images/dashboard/1.png" alt="">
+                                                                                <img src="{{asset('assets/images/dashboard/1.png')}}" alt="">
                                                                             </div>
                                                                         </a>
                                                                         <div class="star-profile-txt">
@@ -3975,7 +3975,7 @@
                                                                     <div class="star-profile">
                                                                         <a href="#" data-bs-toggle="modal" data-bs-target="#">
                                                                             <div class="star-profile-icon">
-                                                                                <img src="./assets/images/dashboard/1.png" alt="">
+                                                                                <img src="{{asset('assets/images/dashboard/1.png')}}" alt="">
                                                                             </div>
                                                                         </a>
                                                                         <div class="star-profile-txt">
@@ -4023,7 +4023,7 @@
                                                                     <div class="star-profile">
                                                                         <a href="#" data-bs-toggle="modal" data-bs-target="#">
                                                                             <div class="star-profile-icon">
-                                                                                <img src="./assets/images/dashboard/1.png" alt="">
+                                                                                <img src="{{asset('assets/images/dashboard/1.png')}}" alt="">
                                                                             </div>
                                                                         </a>
                                                                         <div class="star-profile-txt">
@@ -4073,7 +4073,7 @@
                                                                     <div class="star-profile">
                                                                         <a href="#" data-bs-toggle="modal" data-bs-target="#">
                                                                             <div class="star-profile-icon">
-                                                                                <img src="./assets/images/dashboard/1.png" alt="">
+                                                                                <img src="{{asset('assets/images/dashboard/1.png')}}" alt="">
                                                                             </div>
                                                                         </a>
                                                                         <div class="star-profile-txt">
@@ -4121,7 +4121,7 @@
                                                                     <div class="star-profile">
                                                                         <a href="#" data-bs-toggle="modal" data-bs-target="#">
                                                                             <div class="star-profile-icon">
-                                                                                <img src="./assets/images/dashboard/1.png" alt="">
+                                                                                <img src="{{asset('assets/images/dashboard/1.png')}}" alt="">
                                                                             </div>
                                                                         </a>
                                                                         <div class="star-profile-txt">
@@ -4169,7 +4169,7 @@
                                                                     <div class="star-profile">
                                                                         <a href="#" data-bs-toggle="modal" data-bs-target="#">
                                                                             <div class="star-profile-icon">
-                                                                                <img src="./assets/images/dashboard/1.png" alt="">
+                                                                                <img src="{{asset('assets/images/dashboard/1.png')}}" alt="">
                                                                             </div>
                                                                         </a>
                                                                         <div class="star-profile-txt">
@@ -4218,7 +4218,7 @@
                                                                     <div class="star-profile">
                                                                         <a href="#" data-bs-toggle="modal" data-bs-target="#">
                                                                             <div class="star-profile-icon">
-                                                                                <img src="./assets/images/dashboard/1.png" alt="">
+                                                                                <img src="{{asset('assets/images/dashboard/1.png')}}" alt="">
                                                                             </div>
                                                                         </a>
                                                                         <div class="star-profile-txt">
@@ -4266,7 +4266,7 @@
                                                                     <div class="star-profile">
                                                                         <a href="#" data-bs-toggle="modal" data-bs-target="#">
                                                                             <div class="star-profile-icon">
-                                                                                <img src="./assets/images/dashboard/1.png" alt="">
+                                                                                <img src="{{asset('assets/images/dashboard/1.png')}}" alt="">
                                                                             </div>
                                                                         </a>
                                                                         <div class="star-profile-txt">
@@ -4318,7 +4318,7 @@
                                                                     <div class="star-profile">
                                                                         <a href="#" data-bs-toggle="modal" data-bs-target="#">
                                                                             <div class="star-profile-icon">
-                                                                                <img src="./assets/images/dashboard/1.png" alt="">
+                                                                                <img src="{{asset('assets/images/dashboard/1.png')}}" alt="">
                                                                             </div>
                                                                         </a>
                                                                         <div class="star-profile-txt">
@@ -4526,7 +4526,7 @@
                                             </div>
                                             @else
                                             <div class="profile-img">
-                                                <img src="{{ asset('storage/' . auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
+                                                <img src="{{ asset(  auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
 
                                             </div>
                                             @endif
@@ -4695,7 +4695,7 @@
                                             <div class="col-md-12">
 
                                                 <div class="designer-profile">
-                                                    <img id="blah" src="http://127.0.0.1:8000/user/assets/icons/edit-avatar.svg" class="mx-auto d-block imageupload" width="100" alt="avatar" style="clip-path: circle() !important;">
+                                                    <img id="blah" src="{{ asset('/user/assets/icons/edit-avatar.svg')}}" class="mx-auto d-block imageupload" width="100" alt="avatar" style="clip-path: circle() !important;">
                                                     <input id="imgInp" type="file" class="chose" name="profile" accept="image/*" style="display: none;">
                                                     <button class="btn btn-blue">مصمم</button>
                                                     <div class="star-reating">
@@ -5784,7 +5784,7 @@
                                     </a>
                                     @else
                                     <a href="#profile">
-                                        <img src="{{ asset('storage/' . auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
+                                        <img src="{{ asset( auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
                                     </a> @endif
                                 </div>
                             </div>
@@ -5896,7 +5896,7 @@
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 zhd-product-visit">
 
                                                 <button class="btn btn-sky invert">
-                                                    زيارة المنتج <img src="http://127.0.0.1:8000/user/assets/icons/arrow-right.svg" alt="arrow-right">
+                                                    زيارة المنتج <img src="{{ asset('/user/assets/icons/arrow-right.svg')}}" alt="arrow-right">
                                                 </button>
                                             </div>
                                         </div>
@@ -5991,7 +5991,7 @@
                                                                 </div>
                                                             </div>
                                                             <button class="btn btn-sky invert">
-                                                                زيارة المنتج <img src="http://127.0.0.1:8000/user/assets/icons/arrow-right.svg" alt="arrow-right">
+                                                                زيارة المنتج <img src="{{ asset('/user/assets/icons/arrow-right.svg')}}" alt="arrow-right">
                                                             </button>
                                                         </div>
                                                         {{-- user- req --}}
@@ -6058,7 +6058,7 @@
                                     </a>
                                     @else
                                     <a href="#profile">
-                                        <img src="{{ asset('storage/' . auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
+                                        <img src="{{ asset( auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
                                     </a> @endif
                                 </div>
                             </div>
@@ -6130,7 +6130,7 @@
                                     </a>
                                     @else
                                     <a href="#profile">
-                                        <img src="{{ asset('storage/' . auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
+                                        <img src="{{ asset( auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
                                     </a> @endif
                                 </div>
                             </div>
@@ -6242,7 +6242,7 @@
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 zhd-product-visit">
 
                                                 <button class="btn btn-sky invert">
-                                                    زيارة المنتج <img src="http://127.0.0.1:8000/user/assets/icons/arrow-right.svg" alt="arrow-right">
+                                                    زيارة المنتج <img src="{{ asset('/user/assets/icons/arrow-right.svg')}}" alt="arrow-right">
                                                 </button>
                                             </div>
                                         </div>
@@ -6278,7 +6278,7 @@
                                                                 </div>
                                                             </div>
                                                             <button class="btn btn-sky invert">
-                                                                زيارة المنتج <img src="http://127.0.0.1:8000/user/assets/icons/arrow-right.svg" alt="arrow-right">
+                                                                زيارة المنتج <img src="{{ asset('/user/assets/icons/arrow-right.svg')}}" alt="arrow-right">
                                                             </button>
                                                         </div>
                                                         {{-- user- req --}}
@@ -6314,7 +6314,7 @@
                                                                 </div>
                                                                 <div class="col-md-6">
                                                                     <div class="upload-btn-wrapper designer-upload">
-                                                                        <button class="btn btn-upload-designer health"><img src="http://127.0.0.1:8000/user/assets/icons/upload-img.svg" alt="upload-img"></button>
+                                                                        <button class="btn btn-upload-designer health"><img src="{{ asset('/user/assets/icons/upload-img.svg')}}" alt="upload-img"></button>
                                                                         <input type="file" id="health-file" required="" name="myfile">
                                                                     </div>
                                                                 </div>
@@ -6374,7 +6374,7 @@
                                     </a>
                                     @else
                                     <a href="#profile">
-                                        <img src="{{ asset('storage/' . auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
+                                        <img src="{{ asset( auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
                                     </a> @endif
                                 </div>
                             </div>
@@ -6486,7 +6486,7 @@
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 zhd-product-visit">
 
                                                 <button class="btn btn-sky invert" data-bs-toggle="modal" data-bs-target="#user5RequestModal">
-                                                    زيارة المنتج <img src="http://127.0.0.1:8000/user/assets/icons/arrow-right.svg" alt="arrow-right">
+                                                    زيارة المنتج <img src="{{ asset('/user/assets/icons/arrow-right.svg')}}" alt="arrow-right">
                                                 </button>
                                             </div>
                                         </div>
@@ -6545,7 +6545,7 @@
                                                                 </div>
                                                             </div>
                                                             <button class="btn btn-sky invert">
-                                                                زيارة المنتج <img src="http://127.0.0.1:8000/user/assets/icons/arrow-right.svg" alt="arrow-right">
+                                                                زيارة المنتج <img src="{{ asset('/user/assets/icons/arrow-right.svg')}}" alt="arrow-right">
                                                             </button>
                                                         </div>
                                                         {{-- user- req --}}
@@ -6565,7 +6565,7 @@
                                                             </div>
                                                         </div>
                                                         <div class="almuntjat-form-error almuntjat-form-error-2">
-                                                            <img src="http://127.0.0.1:8000/user/assets/images/warning.png" alt="" class="almuntjat-form-error__img"> بعد إضافة المنتج سيذهب الى الإدارة للمراجعة للقبول أو الرفض
+                                                            <img src="{{ asset('/user/assets/images/warning.png')}}" alt="" class="almuntjat-form-error__img"> بعد إضافة المنتج سيذهب الى الإدارة للمراجعة للقبول أو الرفض
                                                         </div>
                                                     </div>
                                                     <div class="userreqFormBtn-box">
@@ -6611,7 +6611,7 @@
                                     </a>
                                     @else
                                     <a href="#profile">
-                                        <img src="{{ asset('storage/' . auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
+                                        <img src="{{ asset(auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
                                     </a>
                                     @endif
                                 </div>
@@ -6756,7 +6756,7 @@
 
 
                                                 <button class="btn btn-sky invert">
-                                                    زيارة المنتج <img src="http://127.0.0.1:8000/user/assets/icons/arrow-right.svg" alt="arrow-right">
+                                                    زيارة المنتج <img src="{{ asset('/user/assets/icons/arrow-right.svg')}}" alt="arrow-right">
                                                 </button>
                                             </div>
                                             <!-- <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
@@ -6847,7 +6847,7 @@
                                                <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                    <label class="form-label">رفع ملف المجسم</label>
                                                    <div class="upload-btn-wrapper">
-                                                       <a class="btn btn-upload" href="{{ asset('storage/' . @$public->print_img) }}" download=" {{ @$public->print_img }}"><img src="{{asset('user/assets/icons/uploaded-img.svg')}}" alt="upload-img"></a>
+                                                       <a class="btn btn-upload" href="{{ asset( @$public->print_img) }}" download=" {{ @$public->print_img }}"><img src="{{asset('user/assets/icons/uploaded-img.svg')}}" alt="upload-img"></a>
                                                    </div>
                                                </div>
                                                </div> -->
@@ -6935,7 +6935,7 @@
                                     </a>
                                     @else
                                     <a href="#profile">
-                                        <img src="{{ asset('storage/' . auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
+                                        <img src="{{ asset( auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
                                     </a> @endif
                                 </div>
                             </div>
@@ -7047,7 +7047,7 @@
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 zhd-product-visit">
 
                                                 <button class="btn btn-sky invert">
-                                                    زيارة المنتج <img src="http://127.0.0.1:8000/user/assets/icons/arrow-right.svg" alt="arrow-right">
+                                                    زيارة المنتج <img src="{{ asset('/user/assets/icons/arrow-right.svg')}}" alt="arrow-right">
                                                 </button>
                                             </div>
                                         </div>
@@ -7084,7 +7084,7 @@
                                                                 </div>
                                                             </div>
                                                             <button class="btn btn-sky invert">
-                                                                زيارة المنتج <img src="http://127.0.0.1:8000/user/assets/icons/arrow-right.svg" alt="arrow-right">
+                                                                زيارة المنتج <img src="{{ asset('/user/assets/icons/arrow-right.svg')}}" alt="arrow-right">
                                                             </button>
                                                         </div>
                                                         {{-- user- req --}}
@@ -7159,7 +7159,7 @@
                                     </a>
                                     @else
                                     <a href="#profile">
-                                        <img src="{{ asset('storage/' . auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
+                                        <img src="{{ asset(  auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
                                     </a> @endif
                                 </div>
                             </div>
@@ -7271,7 +7271,7 @@
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 zhd-product-visit">
 
                                                 <button class="btn btn-sky invert">
-                                                    زيارة المنتج <img src="http://127.0.0.1:8000/user/assets/icons/arrow-right.svg" alt="arrow-right">
+                                                    زيارة المنتج <img src="{{ asset('/user/assets/icons/arrow-right.svg')}}" alt="arrow-right">
                                                 </button>
                                             </div>
                                         </div>
@@ -7296,7 +7296,7 @@
                                                                 <div class="credit-logo-inner">
                                                                     <div class="row">
                                                                         <div class="col-md-3 col-lg-3">
-                                                                            <img src="http://127.0.0.1:8000/user/assets/images/arrow-8.png" class="credit-card-icon">
+                                                                            <img src="{{ asset('/user/assets/images/arrow-8.png')}}" class="credit-card-icon">
                                                                         </div>
                                                                         <div class="col-md-7 col-lg-7">
                                                                             <h5>فيزا وماستر كارد</h5>
@@ -7311,7 +7311,7 @@
                                                                 <div class="credit-logo-inner flot-lft">
                                                                     <div class="row">
                                                                         <div class="col-md-3 col-lg-3">
-                                                                            <img src="http://127.0.0.1:8000/user/assets/images/arrow-8.png" class="credit-card-icon green-border">
+                                                                            <img src="{{ asset('/user/assets/images/arrow-8.png')}}" class="credit-card-icon green-border">
                                                                         </div>
                                                                         <div class="col-md-7 col-lg-7">
                                                                             <h5>مدى</h5>
@@ -7328,7 +7328,7 @@
                                                                 <div class="credit-logo-inner">
                                                                     <div class="row">
                                                                         <div class="col-md-3 col-lg-3">
-                                                                            <img src="http://127.0.0.1:8000/user/assets/images/arrow-8.png" class="credit-card-icon">
+                                                                            <img src="{{ asset('/user/assets/images/arrow-8.png')}}" class="credit-card-icon">
                                                                         </div>
                                                                         <div class="col-md-7 col-lg-7">
                                                                             <h5>آبل باي</h5>
@@ -7363,7 +7363,7 @@
                                                                 </div>
                                                             </div>
                                                             <button class="btn btn-sky invert">
-                                                                زيارة المنتج <img src="http://127.0.0.1:8000/user/assets/icons/arrow-right.svg" alt="arrow-right">
+                                                                زيارة المنتج <img src="{{ asset('/user/assets/icons/arrow-right.svg')}}" alt="arrow-right">
                                                             </button>
                                                         </div>
                                                         {{-- user- req --}}
@@ -7431,7 +7431,7 @@
                                     </a>
                                     @else
                                     <a href="#profile">
-                                        <img src="{{ asset('storage/' . auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
+                                        <img src="{{ asset(  auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
                                     </a> @endif
                                 </div>
                             </div>
@@ -7543,7 +7543,7 @@
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 zhd-product-visit">
 
                                                 <button class="btn btn-sky invert">
-                                                    زيارة المنتج <img src="http://127.0.0.1:8000/user/assets/icons/arrow-right.svg" alt="arrow-right">
+                                                    زيارة المنتج <img src="{{ asset('/user/assets/icons/arrow-right.svg')}}" alt="arrow-right">
                                                 </button>
                                             </div>
                                         </div>
@@ -7580,7 +7580,7 @@
                                                                 </div>
                                                             </div>
                                                             <button class="btn btn-sky invert">
-                                                                زيارة المنتج <img src="http://127.0.0.1:8000/user/assets/icons/arrow-right.svg" alt="arrow-right">
+                                                                زيارة المنتج <img src="{{ asset('/user/assets/icons/arrow-right.svg')}}" alt="arrow-right">
                                                             </button>
                                                         </div>
                                                         {{-- user- req --}}
@@ -7645,7 +7645,7 @@
                                     </a>
                                     @else
                                     <a href="#profile">
-                                        <img src="{{ asset('storage/' . auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
+                                        <img src="{{ asset(  auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
                                     </a> @endif
                                 </div>
                             </div>

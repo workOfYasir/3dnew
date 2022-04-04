@@ -50,7 +50,7 @@
                                     </a>
                                     @else
                                     <a href="#profile">
-                                        <img src="{{ asset('storage/' . auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
+                                        <img src="{{ asset(  auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
                                     </a>
                                     @endif
                                 </div>
@@ -174,7 +174,7 @@
                                                             <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                                 <label class="form-label">رفع ملف المجسم</label>
                                                                 <div class="upload-btn-wrapper">
-                                                                    <a class="btn btn-upload" href="{{ asset('storage/' . @$public->print_img) }}" download=" {{ @$public->print_img }}"><img src="{{asset('user/assets/icons/uploaded-img.svg')}}" alt="upload-img"></a>
+                                                                    <a class="btn btn-upload" href="{{ asset(  @$public->print_img) }}" download=" {{ @$public->print_img }}"><img src="{{asset('user/assets/icons/uploaded-img.svg')}}" alt="upload-img"></a>
                                                                 </div>
                                                             </div>
                                                         </div>

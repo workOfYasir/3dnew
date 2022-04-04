@@ -30,7 +30,7 @@
                                        @if(@auth()->user()->profile == null)
                                         <img class="img-70 rounded-circle" src="{{asset('assets/images/dashboard/1.png')}}" alt="">
                                         @else
-                                        <img class="img-70 rounded-circle" alt="" src="{{ asset('storage/' . auth()->user()->profile) }}">
+                                        <img class="img-70 rounded-circle" alt="" src="{{ asset(  auth()->user()->profile) }}">
                                         @endif
                                         <!-- <p class="f-12">جائزة الأميرعبدالله الفيصل</p> -->
                                         <div class="badge-bottom"><span class="badge badge-primary"></span></div>

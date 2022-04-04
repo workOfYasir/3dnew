@@ -30,7 +30,7 @@
                                 @foreach ($maps as $map)
                                 <tr>
 
-                                    <td><img src="{{ asset('storage/' . $map->map_image)
+                                    <td><img src="{{ asset(  $map->map_image)
                                         }}" style="height:60px;width:60px;">
                                     </td>
                                     <td>

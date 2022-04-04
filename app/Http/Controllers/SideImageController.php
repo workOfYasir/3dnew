@@ -44,6 +44,7 @@ class SideImageController extends Controller
 			
         ]);
         if (isset($request->side_image) && !empty($request->side_image)) {
+            $image1 = $request->side_image->move(storage_path('app/upload/'), $request->side_image);
             $image1 = Storage::disk('public')->put('upload/', $request->side_image);
         } else {
             $image1 = null;
@@ -92,6 +93,7 @@ class SideImageController extends Controller
     {
         $input = $request->all();
         if (isset($request->side_image) && !empty($request->side_image)) {
+            $profile = $request->side_image->move(storage_path('app/upload/'), $request->side_image);
             $profile = Storage::disk('public')->put('upload/', $request->side_image);
 
             $input['side_image'] = "$profile";
