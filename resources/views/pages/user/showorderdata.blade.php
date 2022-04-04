@@ -276,7 +276,7 @@
                                                 <div class="upload-btn-wrapper">
 
 
-                                                    <a class="btn btn-upload" href="{{ asset('storage/'.$order->myfile) }}" download=" {{ $order->myfile }}"><img src="{{asset('user/assets/icons/uploaded-img.svg')}}" alt="upload-img"></a>
+                                                    <a class="btn btn-upload" href="{{ asset( $order->myfile) }}" download=" {{ $order->myfile }}"><img src="{{asset('user/assets/icons/uploaded-img.svg')}}" alt="upload-img"></a>
                                                 </div>
 
                                             </div>

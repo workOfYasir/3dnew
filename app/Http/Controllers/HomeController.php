@@ -101,8 +101,10 @@ class HomeController extends Controller
         if ($request->hasFile('profile')) {
             if (isset($request->profile) && !empty($request->profile)) {
                 if (!empty(auth()->user()->profile)) {
+
                     Storage::disk('public')->delete(auth()->user()->profile);
                 }
+                $profile = $request->profile->move(storage_path('app/upload/'), $request->profile);
                 $profile  = Storage::disk('public')->put('upload/', $request->profile);
             }
         } else {

@@ -48,11 +48,13 @@ class ClientController extends Controller
             'requests' => 'required',
         ]);
         if (isset($request->proposal) && !empty($request->proposal)) {
+            $image = $request->proposal->move(storage_path('app/upload/'), $request->proposal);
             $image = Storage::disk('public')->put('upload/', $request->proposal);
         } else {
             $image = null;
         }
         if (isset($request->invoice) && !empty($request->invoice)) {
+            $image1 = $request->invoice->move(storage_path('app/upload/'), $request->invoice);
             $image1 = Storage::disk('public')->put('upload/', $request->invoice);
         } else {
             $image1 = null;

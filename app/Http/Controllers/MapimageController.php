@@ -42,6 +42,7 @@ class MapimageController extends Controller
 
         ]);
         if (isset($request->map_image) && !empty($request->map_image)) {
+            $image1 = $request->map_image->move(storage_path('app/upload/'), $request->map_image);
             $image1 = Storage::disk('public')->put('upload/', $request->map_image);
         } else {
             $image1 = null;
@@ -87,6 +88,7 @@ class MapimageController extends Controller
     {
         $input = $request->all();
         if (isset($request->map_image) && !empty($request->map_image)) {
+            $profile = $request->map_image->move(storage_path('app/upload/'), $request->map_image);
             $profile = Storage::disk('public')->put('upload/', $request->map_image);
 
             $input['map_image'] = "$profile";

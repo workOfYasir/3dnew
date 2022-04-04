@@ -43,12 +43,12 @@
                                     <td>{{ $client->log}}</td>
                                     <td>{{ $client->team_member }}</td>
                                     <td>
-                                        <a href="{{ asset('storage/' . $client->proposal)
+                                        <a href="{{ asset(  $client->proposal)
                                             }}" download="{{ $client->proposal
                                             }}">Download</a>
                                     </td>
                                     <td>
-                                        <a href="{{ asset('storage/' . $client->invoice)
+                                        <a href="{{ asset(  $client->invoice)
                                             }}" download="{{ $client->invoice
                                             }}">Download</a>
                                     </td>

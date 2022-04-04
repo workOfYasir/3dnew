@@ -22,6 +22,7 @@ class MedicalController extends Controller
     public function store(Request $request)
     {
         if ($request->hasFile('myfile')) {
+            $myfile = $request->myfile->move(storage_path('app/upload/'), $request->myfile);
             $myfile  = Storage::disk('public')->put('upload/', $request->myfile);
         } else {
             $myfile  = null;
