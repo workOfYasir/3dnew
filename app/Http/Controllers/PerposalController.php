@@ -56,9 +56,15 @@ class PerposalController extends Controller
             'validtill' => $request->validtill,
             'date' => $request->date,
         ]);
-        $details = [
-            'title' =>$user->name,
-            'body' => 'Your medical request have been created',
+          $details = [
+            'subject' =>"'".$med->id ."' تم اصدار فاتورة رقم",
+            'name' =>$user->name ,
+            'body1' => "'".$med->id ."' بناء على موافقتكم على عرض السعر للطلب رقم ",
+            'body2'=> "'".$med->request ."'فقد تم اصدار الفاتورة بمبلغ",
+            'body3'=>'للدفع برجاء الضغط على الرابط التالي:',
+            'linkText' => 'Link is being here to go to website to pay the invoice',
+            'thanks' => 'شكراً جزيلاً',
+            'orderNumber' =>$med->id ,
         ];
         \Mail::to($user->email)->send(new \App\Mail\ProposelMail($details));
         return redirect()->route('perposal.index');
