@@ -508,6 +508,30 @@ $(document).ready(function() {
             $(".bill-click-show").show();
         })
         
+   // Accept button click function
+   $('#userRequestModal .credit-btn-blur-show').click(function() {
+    $('#userRequestModal').find('.conditional-blur.design-payment-blur').addClass('blur');
+    $('#userRequestModal').find('.payment.credit-payment').removeClass('d-none');
+    // $('#userRequestModal').find('.credit-btn-blur-show, .reject, .offer-price, .reject-reason, .submit').addClass('d-none');
+    // $('#userRequestModal').find('.next-one').removeClass('d-none');
+    // $('#userRequestModal').find('.conditional-hide').addClass('d-xs-none');
+    })
+
+    $(".paying-off-btn").click(function() {
+        $(".conditional-blur.design-payment-blur").removeClass('blur');
+        $(".payment.credit-payment").addClass('d-none');
+    })
+ 
+
+    // product-save-btn change icon, color etc
+
+    $(".product-save-btn").click(function() {
+    $(".add-red-dot").removeClass('red-dot');
+    $(".show-bg-pink").addClass('pink-btn-bg');
+    $("#productaddformModal .camera-icon").removeClass('d-none');
+    $("#productaddformModal .camera-icon.upload-cross-red").addClass('d-none');
+    $(this).addClass('uplod-rev-btn');
+    })
 
 });
 $(".userreq-blur-bg").click(function() {

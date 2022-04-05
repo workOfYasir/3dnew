@@ -2176,13 +2176,13 @@
                                                 </div>
 
                                             </div>
-                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div>
+                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
 
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
                                                 <label class="form-label">الكمية</label>
                                                 <input type="text" class="form-control" placeholder=".. رقم الهاتف هنا" readonly="" value="03084875508">
                                             </div>
-                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div>
+                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                 <label class="form-label">المقاسات</label>
                                                 <input type="text" class="form-control" placeholder=".. الايميل هنا" readonly="" value="asimali7056@gmail.com">
@@ -2191,12 +2191,12 @@
                                                 <label class="form-label">شكل الطباعة</label>
                                                 <input type="text" class="form-control" placeholder=".. التخصص هنا" readonly="" value="رقم الهاتف هنا">
                                             </div>
-                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div>
+                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
                                                 <label class="form-label">تقنية الطباعة</label>
                                                 <input type="text" class="form-control" placeholder=".. الجنس هنا" readonly="" value="male">
                                             </div>
-                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div>
+                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 zhd-product-visit">
 
 
@@ -2433,13 +2433,13 @@
                                                 </div>
 
                                             </div>
-                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div>
+                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
 
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
                                                 <label class="form-label">الكمية</label>
                                                 <input type="text" class="form-control" placeholder=".. رقم الهاتف هنا" readonly="" value="03084875508">
                                             </div>
-                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div>
+                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                 <label class="form-label">المقاسات</label>
                                                 <input type="text" class="form-control" placeholder=".. الايميل هنا" readonly="" value="asimali7056@gmail.com">
@@ -2448,12 +2448,12 @@
                                                 <label class="form-label">شكل الطباعة</label>
                                                 <input type="text" class="form-control" placeholder=".. التخصص هنا" readonly="" value="رقم الهاتف هنا">
                                             </div>
-                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div>
+                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
                                                 <label class="form-label">تقنية الطباعة</label>
                                                 <input type="text" class="form-control" placeholder=".. الجنس هنا" readonly="" value="male">
                                             </div>
-                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div>
+                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 zhd-product-visit">
 
 
@@ -2759,13 +2759,13 @@
                                                 </div>
 
                                             </div>
-                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div>
+                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
 
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
                                                 <label class="form-label">الكمية</label>
                                                 <input type="text" class="form-control" placeholder=".. رقم الهاتف هنا" readonly="" value="03084875508">
                                             </div>
-                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div>
+                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                 <label class="form-label">المقاسات</label>
                                                 <input type="text" class="form-control" placeholder=".. الايميل هنا" readonly="" value="asimali7056@gmail.com">
@@ -2774,12 +2774,12 @@
                                                 <label class="form-label">شكل الطباعة</label>
                                                 <input type="text" class="form-control" placeholder=".. التخصص هنا" readonly="" value="رقم الهاتف هنا">
                                             </div>
-                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div>
+                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
                                                 <label class="form-label">تقنية الطباعة</label>
                                                 <input type="text" class="form-control" placeholder=".. الجنس هنا" readonly="" value="male">
                                             </div>
-                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div>
+                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 zhd-product-visit">
 
 
@@ -2987,13 +2987,13 @@
                                                 </div>
 
                                             </div>
-                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div>
+                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
 
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
                                                 <label class="form-label">الكمية</label>
                                                 <input type="text" class="form-control" placeholder=".. رقم الهاتف هنا" readonly="" value="03084875508">
                                             </div>
-                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div>
+                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                 <label class="form-label">المقاسات</label>
                                                 <input type="text" class="form-control" placeholder=".. الايميل هنا" readonly="" value="asimali7056@gmail.com">
@@ -3002,12 +3002,12 @@
                                                 <label class="form-label">شكل الطباعة</label>
                                                 <input type="text" class="form-control" placeholder=".. التخصص هنا" readonly="" value="رقم الهاتف هنا">
                                             </div>
-                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div>
+                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
                                                 <label class="form-label">تقنية الطباعة</label>
                                                 <input type="text" class="form-control" placeholder=".. الجنس هنا" readonly="" value="male">
                                             </div>
-                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div>
+                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 zhd-product-visit">
 
 
@@ -3223,13 +3223,13 @@
                                                 </div>
 
                                             </div>
-                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div>
+                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
 
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
                                                 <label class="form-label">الكمية</label>
                                                 <input type="text" class="form-control" placeholder=".. رقم الهاتف هنا" readonly="" value="03084875508">
                                             </div>
-                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div>
+                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                 <label class="form-label">المقاسات</label>
                                                 <input type="text" class="form-control" placeholder=".. الايميل هنا" readonly="" value="asimali7056@gmail.com">
@@ -3238,12 +3238,12 @@
                                                 <label class="form-label">شكل الطباعة</label>
                                                 <input type="text" class="form-control" placeholder=".. التخصص هنا" readonly="" value="رقم الهاتف هنا">
                                             </div>
-                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div>
+                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
                                                 <label class="form-label">تقنية الطباعة</label>
                                                 <input type="text" class="form-control" placeholder=".. الجنس هنا" readonly="" value="male">
                                             </div>
-                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div>
+                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 zhd-product-visit">
 
 
@@ -3455,13 +3455,13 @@
                                                 </div>
 
                                             </div>
-                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div>
+                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
 
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
                                                 <label class="form-label">الكمية</label>
                                                 <input type="text" class="form-control" placeholder=".. رقم الهاتف هنا" readonly="" value="03084875508">
                                             </div>
-                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div>
+                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                 <label class="form-label">المقاسات</label>
                                                 <input type="text" class="form-control" placeholder=".. الايميل هنا" readonly="" value="asimali7056@gmail.com">
@@ -3470,12 +3470,12 @@
                                                 <label class="form-label">شكل الطباعة</label>
                                                 <input type="text" class="form-control" placeholder=".. التخصص هنا" readonly="" value="رقم الهاتف هنا">
                                             </div>
-                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div>
+                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
                                                 <label class="form-label">تقنية الطباعة</label>
                                                 <input type="text" class="form-control" placeholder=".. الجنس هنا" readonly="" value="male">
                                             </div>
-                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div>
+                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 zhd-product-visit">
 
 
@@ -3897,6 +3897,7 @@
                                                                 </div>
                                                             </div>
                                                             <div class="design-card-body">
+                                                                <img src="{{ asset('user/assets/images/design-1.png') }}" class="design-img img-fluid" alt="">
                                                                 <div class="design-card-left-top">
                                                                     <p>تقنية الطباعة</p>
                                                                 </div>
@@ -3944,7 +3945,8 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="design-card-body design-2">
+                                                            <div class="design-card-body">
+                                                            <img src="{{ asset('user/assets/images/design-2.png') }}" class="design-img img-fluid" alt="">
                                                                 <div class="design-card-left-top">
                                                                     <p>تقنية الطباعة</p>
                                                                 </div>
@@ -3992,7 +3994,8 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="design-card-body design-3">
+                                                            <div class="design-card-body">
+                                                            <img src="{{ asset('user/assets/images/design-3.png') }}" class="design-img img-fluid" alt="">
                                                                 <div class="design-card-left-top">
                                                                     <p>تقنية الطباعة</p>
                                                                 </div>
@@ -4042,7 +4045,8 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="design-card-body design-4">
+                                                            <div class="design-card-body">
+                                                            <img src="{{ asset('user/assets/images/design-4.png') }}" class="design-img img-fluid" alt="">
                                                                 <div class="design-card-left-top">
                                                                     <p>تقنية الطباعة</p>
                                                                 </div>
@@ -4090,7 +4094,8 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="design-card-body design-5">
+                                                            <div class="design-card-body">
+                                                            <img src="{{ asset('user/assets/images/design-5.png') }}" class="design-img img-fluid" alt="">
                                                                 <div class="design-card-left-top">
                                                                     <p>تقنية الطباعة</p>
                                                                 </div>
@@ -4138,7 +4143,8 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="design-card-body design-6">
+                                                            <div class="design-card-body">
+                                                            <img src="{{ asset('user/assets/images/design-6.png') }}" class="design-img img-fluid" alt="">
                                                                 <div class="design-card-left-top">
                                                                     <p>تقنية الطباعة</p>
                                                                 </div>
@@ -4187,7 +4193,8 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="design-card-body design-7">
+                                                            <div class="design-card-body">
+                                                            <img src="{{ asset('user/assets/images/design-7.png') }}" class="design-img img-fluid" alt="">
                                                                 <div class="design-card-left-top">
                                                                     <p>تقنية الطباعة</p>
                                                                 </div>
@@ -4237,8 +4244,8 @@
                                                             </div>
                                                             <a href="javascript:void(0);" class="" data-bs-toggle="modal" data-bs-target="#cleanshotModal">
 
-                                                                <div class="design-card-body design-8">
-
+                                                                <div class="design-card-body">
+                                                                <img src="{{ asset('user/assets/images/design-8.png') }}" class="design-img img-fluid" alt="">
                                                                     <div class="design-card-left-top">
                                                                         <p>تقنية الطباعة</p>
                                                                     </div>
@@ -4287,7 +4294,8 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="design-card-body design-9">
+                                                            <div class="design-card-body">
+                                                            <img src="{{ asset('user/assets/images/design-9.png') }}" class="design-img img-fluid" alt="">
                                                                 <div class="design-card-left-top">
                                                                     <p>تقنية الطباعة</p>
                                                                 </div>
@@ -4717,7 +4725,8 @@
                                                     <div class="design-card-inner">
 
                                                         <a href="javascript:void(0);" type="button" class="" data-bs-toggle="modal" data-bs-target="#productdesignModal">
-                                                            <div class="design-card-body product-1">
+                                                            <div class="design-card-body">
+                                                            <img src="{{ asset('user/assets/images/design-9.png') }}" class="design-img img-fluid" alt="">
                                                                 <div class="design-card-left-top">
                                                                     <p>تقنية الطباعة</p>
                                                                 </div>
@@ -4742,7 +4751,8 @@
                                                 <div class="col-md-4">
                                                     <div class="design-card-inner">
 
-                                                        <div class="design-card-body product-2">
+                                                        <div class="design-card-body">
+                                                        <img src="{{ asset('user/assets/images/design-2.png') }}" class="design-img img-fluid" alt="">
                                                             <div class="design-card-left-top">
                                                                 <p>تقنية الطباعة</p>
                                                             </div>
@@ -4765,7 +4775,8 @@
                                                 <div class="col-md-4">
                                                     <div class="design-card-inner">
 
-                                                        <div class="design-card-body product-3">
+                                                        <div class="design-card-body">
+                                                        <img src="{{ asset('user/assets/images/design-3.png') }}" class="design-img img-fluid" alt="">
                                                             <div class="design-card-left-top">
                                                                 <p>تقنية الطباعة</p>
                                                             </div>
@@ -4791,7 +4802,8 @@
                                                 <div class="col-md-4">
                                                     <div class="design-card-inner">
 
-                                                        <div class="design-card-body product-4">
+                                                        <div class="design-card-body">
+                                                        <img src="{{ asset('user/assets/images/design-4.png') }}" class="design-img img-fluid" alt="">
                                                             <div class="design-card-left-top">
                                                                 <p>تقنية الطباعة</p>
                                                             </div>
@@ -4816,8 +4828,8 @@
 
                                                         <a href="javascript:void(0);" type="button" class="" data-bs-toggle="modal" data-bs-target="#productdesignModal">
 
-                                                            <div class="design-card-body product-5">
-
+                                                            <div class="design-card-body">
+                                                            <img src="{{ asset('user/assets/images/design-5.png') }}" class="design-img img-fluid" alt="">
                                                                 <div class="design-card-left-top">
                                                                     <p>تقنية الطباعة</p>
                                                                 </div>
@@ -4841,7 +4853,8 @@
                                                 <div class="col-md-4">
                                                     <div class="design-card-inner">
 
-                                                        <div class="design-card-body product-1">
+                                                        <div class="design-card-body">
+                                                        <img src="{{ asset('user/assets/images/design-1.png') }}" class="design-img img-fluid" alt="">
                                                             <div class="design-card-left-top">
                                                                 <p>تقنية الطباعة</p>
                                                             </div>
@@ -4962,7 +4975,11 @@
                                             <h1 class="modal-title right centr-main-title"><span class="btm-line d-flex">المنتجات<span class="inner-line"></span></span></h1>
                                         </div>
 
-                                        <div class="add-btn">
+                                        <button class="ahs-profile-plus-btn plus-bton" data-bs-toggle="modal" data-bs-target="#productaddModal">
+                                            <i class="fa fa-plus-circle fa-lg ahs-profile-plus"></i>
+                                            <span class="hide-mobile">إضافة منتج</span>
+                                        </button>
+                                        <!-- <div class="add-btn">
                                             <button type="button" class="btn-add" data-bs-toggle="modal" data-bs-target="#productaddModal">
                                                 <i class="fa-solid fa-plus"></i>
                                             </button>
@@ -4970,7 +4987,7 @@
                                             <span>
                                                 إضافة منتج
                                             </span>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
 
@@ -4988,7 +5005,8 @@
                                                         <div class="col-md-4">
                                                             <div class="design-card-inner">
 
-                                                                <div class="design-card-body product-1">
+                                                                <div class="design-card-body">
+                                                            <img src="{{ asset('user/assets/images/design-9.png') }}" class="design-img img-fluid" alt="">
                                                                     <div class="design-card-right-top">
                                                                         <p class="txt-green">مفعل</p>
                                                                     </div>
@@ -5014,7 +5032,8 @@
                                                         <div class="col-md-4">
                                                             <div class="design-card-inner">
 
-                                                                <div class="design-card-body product-2">
+                                                                <div class="design-card-body">
+                                                            <img src="{{ asset('user/assets/images/design-2.png') }}" class="design-img img-fluid" alt="">
                                                                     <div class="design-card-right-top">
                                                                         <p class="txt-green">مفعل</p>
                                                                     </div>
@@ -5040,7 +5059,8 @@
                                                         <div class="col-md-4">
                                                             <div class="design-card-inner">
 
-                                                                <div class="design-card-body product-3">
+                                                                <div class="design-card-body">
+                                                            <img src="{{ asset('user/assets/images/design-3.png') }}" class="design-img img-fluid" alt="">
                                                                     <div class="design-card-right-top">
                                                                         <p class="txt-green">مفعل</p>
                                                                     </div>
@@ -5069,7 +5089,8 @@
                                                         <div class="col-md-4">
                                                             <div class="design-card-inner">
 
-                                                                <div class="design-card-body product-4">
+                                                                <div class="design-card-body">
+                                                            <img src="{{ asset('user/assets/images/design-4.png') }}" class="design-img img-fluid" alt="">
                                                                     <div class="design-card-right-top">
                                                                         <p class="txt-red">مفعل</p>
                                                                     </div>
@@ -5095,7 +5116,8 @@
                                                         <div class="col-md-4">
                                                             <div class="design-card-inner">
 
-                                                                <div class="design-card-body product-5">
+                                                                <div class="design-card-body">
+                                                            <img src="{{ asset('user/assets/images/design-5.png') }}" class="design-img img-fluid" alt="">
                                                                     <div class="design-card-right-top">
                                                                         <p class="txt-green">مفعل</p>
                                                                     </div>
@@ -5121,7 +5143,8 @@
                                                         <div class="col-md-4">
                                                             <div class="design-card-inner">
 
-                                                                <div class="design-card-body product-1">
+                                                                <div class="design-card-body">
+                                                            <img src="{{ asset('user/assets/images/design-9.png') }}" class="design-img img-fluid" alt="">
                                                                     <div class="design-card-right-top">
                                                                         <p class="txt-red">مفعل</p>
                                                                     </div>
@@ -5177,7 +5200,8 @@
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         <div>
                                             <span class="outline dot">اهلاً وسهلاً بكم</span>
-                                            <h1 class="modal-title right centr-main-title">المنتجات </h1>
+                                            <h1 class="modal-title right centr-main-title"><span class="btm-line d-flex">المنتجات<span class="inner-line"></span></span></h1>
+
                                         </div>
                                         <button class="ahs-profile-plus-btn disabled">
                                             <i class="fa fa-plus-circle fa-lg ahs-profile-plus"></i>
@@ -5321,23 +5345,25 @@
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         <div>
                                             <span class="outline dot">اهلاً وسهلاً بكم</span>
-                                            <h1 class="modal-title right centr-main-title">المنتجات </h1>
+                                            <h1 class="modal-title right centr-main-title"><span class="btm-line d-flex">المنتجات<span class="inner-line"></span></span></h1>
+                                        
                                         </div>
-                                        <button class="ahs-profile-plus-btn productadd-top-btn">
-                                            إضافة منتج
+                                        <button class="ahs-profile-plus-btn productadd-top-btn show-bg-pink">
+                                        تعديل
                                         </button>
 
                                     </div>
+                            
+                                    <form action="" class="almuntjat-form">
                                     <div class="almuntjat-form-error error-red-bg">
-                                        <i class="fa-solid fa-triangle-exclamation"></i> بعد إضافة المنتج سيذهب الى
+                                        <img src="{{ asset('user/assets/icons/message-icon.png') }}" class="message-error-icon img-fluid" alt=""> بعد إضافة المنتج سيذهب الى
                                         الإدارة للمراجعة للقبول أو الرفض
                                     </div>
-                                    <form action="" class="almuntjat-form">
                                         <div class="almuntjat-form__input-wrapper">
                                             <div class="sub-heading-box">
-                                                <div class="red-dot"></div>
+                                                <div class="red-dot add-red-dot"></div>
                                                 <p class="sub-heading-box__heading b2 sub-heading-box__heading--b">
-                                                    إختيار نوع الخدمة</p>
+                                                صور المنتج</p>
                                             </div>
                                             <!-- <label for="almuntjat-form__img" class="almuntjat-form__img-label">
                                                     <p class="almuntjat-form__img-label-text">إضافة</p>
@@ -5345,9 +5371,11 @@
                                             <div class="row">
                                                 <div class="col-auto">
                                                     <div class="product-add-upload uplod-img-active">
+                                                        <div class="overlay"></div>
                                                         <img src="{{ asset('user/assets/images/design-8.png') }}" class="img-fluid" alt="">
-                                                        <!-- <p class="">إضافة</p> -->
+                                                        <p class="">الغلاف</p>
                                                         <span class="camera-icon upload-cross-red"><i class="fa-solid fa-xmark"></i></span>
+                                                         <span class="camera-icon d-none"><i class="fa fa-camera"></i></span>
                                                     </div>
                                                 </div>
                                                 <div class="col-auto">
@@ -5355,6 +5383,7 @@
                                                         <img src="{{ asset('user/assets/images/cleancard.png') }}" class="img-fluid" alt="">
                                                         <!-- <p class="">إضافة</p> -->
                                                         <span class="camera-icon upload-cross-red"><i class="fa-solid fa-xmark"></i></span>
+                                                         <span class="camera-icon d-none"><i class="fa fa-camera"></i></span>
                                                     </div>
                                                 </div>
                                                 <div class="col-auto">
@@ -5362,6 +5391,8 @@
                                                         <img src="{{ asset('user/assets/images/cleancard2.png') }}" class="img-fluid" alt="">
                                                         <!-- <p class="">إضافة</p> -->
                                                         <span class="camera-icon upload-cross-red"><i class="fa-solid fa-xmark"></i></span>
+
+                                                         <span class="camera-icon d-none"><i class="fa fa-camera"></i></span>
                                                     </div>
                                                 </div>
                                                 <div class="col-auto">
@@ -5369,6 +5400,8 @@
                                                         <img src="{{ asset('user/assets/images/cleancard2.png') }}" class="img-fluid" alt="">
                                                         <!-- <p class="">إضافة</p> -->
                                                         <span class="camera-icon upload-cross-red"><i class="fa-solid fa-xmark"></i></span>
+
+                                                         <span class="camera-icon d-none"><i class="fa fa-camera"></i></span>
                                                     </div>
                                                 </div>
                                                 <div class="col-auto">
@@ -5386,7 +5419,7 @@
                                         <!-- img input end -->
                                         <div class="almuntjat-form__input-wrapper">
                                             <div class="sub-heading-box">
-                                                <div class="red-dot"></div>
+                                                <div class="red-dot add-red-dot"></div>
                                                 <p class="sub-heading-box__heading sub-heading-box__heading--b">العنوان
                                                 </p>
                                             </div>
@@ -5395,18 +5428,18 @@
                                         <!-- alunwan end -->
                                         <div class="almuntjat-form__input-wrapper">
                                             <div class="sub-heading-box">
-                                                <div class="red-dot"></div>
+                                                <div class="red-dot add-red-dot"></div>
                                                 <p class="sub-heading-box__heading sub-heading-box__heading--b">الوصف
                                                 </p>
                                             </div>
-                                            <label for="almuntjat-form__wasaf" class="almuntjat-form__wasaf-label"></label>
+                                            <!-- <label for="almuntjat-form__wasaf" class="almuntjat-form__wasaf-label"></label> -->
                                             <textarea placeholder="الوصف هنا .." name="almuntjat-form__wasaf" id="almuntjat-form__wasaf" class="almuntjat-form__wasaf-input">
                                                 </textarea>
                                         </div>
                                         <div class="form-inner-wrapper wrapper jst-btw">
                                             <div class="almuntjat-form__box ">
                                                 <div class="sub-heading-box">
-                                                    <div class="red-dot"></div>
+                                                    <div class="red-dot add-red-dot"></div>
                                                     <p class="sub-heading-box__heading sub-heading-box__heading--b">
                                                         تقنية الطباعة</p>
                                                 </div>
@@ -5417,7 +5450,7 @@
                                             </div>
                                             <div class="almuntjat-form__box">
                                                 <div class="sub-heading-box">
-                                                    <div class="red-dot"></div>
+                                                    <div class="red-dot add-red-dot"></div>
                                                     <p class="sub-heading-box__heading sub-heading-box__heading--b">
                                                         البرامج المستخدم</p>
                                                 </div>
@@ -5428,7 +5461,7 @@
                                             </div>
                                             <div class="almuntjat-form__box">
                                                 <div class="sub-heading-box">
-                                                    <div class="red-dot"></div>
+                                                    <div class="red-dot add-red-dot"></div>
                                                     <p class="sub-heading-box__heading sub-heading-box__heading--b">
                                                         الألوان</p>
                                                 </div>
@@ -5439,7 +5472,7 @@
                                             </div>
                                             <div class="almuntjat-form__box">
                                                 <div class="sub-heading-box">
-                                                    <div class="red-dot"></div>
+                                                    <div class="red-dot add-red-dot"></div>
                                                     <p class="sub-heading-box__heading sub-heading-box__heading--b">
                                                         المقاسات</p>
                                                 </div>
@@ -5464,7 +5497,7 @@
                                             <i class="fa-solid fa-triangle-exclamation"></i> بعد إضافة المنتج سيذهب الى
                                             الإدارة للمراجعة للقبول أو الرفض
                                         </div>
-                                        <button type="button" class="almuntjat-form__btn m-btn" data-bs-toggle="modal" data-bs-target="#productaddform1Modal">
+                                        <button type="button" class="almuntjat-form__btn m-btn product-save-btn">
                                             حفظ
                                         </button>
                                         <p class="almuntjat-form__text">
@@ -5737,7 +5770,7 @@
                                 </div>
                             </div>
                             <div class="modal-body designer-bdy">
-                                <div class="payment d-none" id="payment">
+                                <!-- <div class="payment d-none" id="payment">
                                     <div class="form-check">
                                         <label class="form-check-label" for="flexRadioDefault1">
                                             <img src="{{asset('user/assets/images/mada-logo.svg')}}" alt="">
@@ -5765,7 +5798,7 @@
                                             <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="  الوصف هنا"></textarea>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-top">
@@ -5858,69 +5891,32 @@
                                         </div>
 
                                         <div class="row">
+                                            
+                                            <div class="payment pay credit-payment d-none" id="payment">
+                                                <div class="form-check">
+                                                            <label class="form-check-label" for="flexRadioDefault1">
+                                                                <img src="{{ asset('user/assets/images/mada-logo.svg') }}" alt="">
+                                                                <p>مدى</p>
+                                                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                                            </label>
+                                                            <label class="form-check-label" for="flexRadioDefault2">
+                                                                <img src="{{ asset('user/assets/images/masterCard.svg') }}" alt="">
+                                                                <p>فيزا وماستر كارد</p>
+                                                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                                            </label>
+                                                            </div>
+                                                            <div class="form-check">
+                                                            <label class="form-check-label" for="flexRadioDefault3">
+                                                                <img src="{{ asset('user/assets/images/apple-pay.svg') }}" alt="">
+                                                                <p>آبل باي</p>
+                                                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+                                                            </label>
+                                                            </div>
+                                                </div>
                                             <h1 class="title text-center mt-5 no-border conditional-blur zhd-quote">معلومات المصمم</h1>
                                             <div class="col-md-12">
                                                 <div class="row justify-content-center">
-                                                    <div class="col-md-12  userreq-blur">
-                                                        <div class="userreq-blur-bg" id="star-blur-scroll"> </div>
-
-                                                        <!-- blur -->
-                                                        <div class="credit-log" id="star-blur-scroll">
-                                                            <div class="credit-logos-main blur-star-inner blur-bg-1">
-
-                                                                <div class="row">
-                                                                    <div class="col-md-2 col-lg-2"></div>
-                                                                    <div class="col-md-4 col-lg-4">
-                                                                        <div class="credit-logo-inner">
-                                                                            <div class="row">
-                                                                                <div class="col-md-3 col-lg-3">
-                                                                                    <img src="{{ asset('user/assets/images/arrow-8.png') }}" class="credit-card-icon">
-                                                                                </div>
-                                                                                <div class="col-md-7 col-lg-7">
-                                                                                    <h5>فيزا وماستر كارد</h5>
-                                                                                </div>
-                                                                                <div class="col-md-2 col-lg-2">
-                                                                                    <i class="fa-solid fa-circle-check gray-background"></i>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-4 col-lg-4">
-                                                                        <div class="credit-logo-inner flot-lft">
-                                                                            <div class="row">
-                                                                                <div class="col-md-3 col-lg-3">
-                                                                                    <img src="{{ asset('user/assets/images/arrow-8.png') }}" class="credit-card-icon green-border">
-                                                                                </div>
-                                                                                <div class="col-md-7 col-lg-7">
-                                                                                    <h5>مدى</h5>
-                                                                                </div>
-                                                                                <div class="col-md-2 col-lg-2">
-                                                                                    <i class="fa-solid fa-circle-check "></i>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-2 col-lg-2"></div>
-                                                                    <div class="col-md-2 col-lg-2"></div>
-                                                                    <div class="col-md-4 col-lg-4 mt-4">
-                                                                        <div class="credit-logo-inner">
-                                                                            <div class="row">
-                                                                                <div class="col-md-3 col-lg-3">
-                                                                                    <img src="{{ asset('user/assets/images/arrow-8.png') }}" class="credit-card-icon">
-                                                                                </div>
-                                                                                <div class="col-md-7 col-lg-7">
-                                                                                    <h5>آبل باي</h5>
-                                                                                </div>
-                                                                                <div class="col-md-2 col-lg-2">
-                                                                                    <i class="fa-solid fa-circle-check gray-background"></i>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <!-- blur  -->
+                                                    <div class="col-md-12 conditional-blur design-payment-blur">
                                                         {{-- user- req --}}
                                                         <div class="wrapper al-center jst-btw mb-5">
                                                             <div class="profile tag-profile designer-order">
@@ -5959,7 +5955,7 @@
                                                             </div>
                                                         </div>
                                                         <div class="wrapper jst-center userReq-btn-box">
-                                                            <button class="userReq-btn-box__btn userReq-btn-box__btn--a" data-bs-toggle="modal" data-bs-target="#user2RequestModal">قبول</button>
+                                                            <button class="userReq-btn-box__btn userReq-btn-box__btn--a " data-bs-toggle="modal" data-bs-target="#user2RequestModal">قبول</button>
                                                             <button class="userReq-btn-box__btn userReq-btn-box__btn--b" data-bs-toggle="modal" data-bs-target="#user3RequestModal">رفض</button>
                                                             <button class="userReq-btn-box__btn userReq-btn-box__btn--c mgl-0 credit-btn-blur-show">عرض السعر</button>
                                                         </div>
@@ -6167,12 +6163,12 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div>
+                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
                                                 <label class="form-label">الكمية</label>
                                                 <input type="text" class="form-control" placeholder=".. رقم الهاتف هنا" readonly="" value="03084875508">
                                             </div>
-                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div>
+                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                 <label class="form-label">المقاسات</label>
                                                 <input type="text" class="form-control" placeholder=".. الايميل هنا" readonly="" value="asimali7056@gmail.com">
@@ -6181,12 +6177,12 @@
                                                 <label class="form-label">شكل الطباعة</label>
                                                 <input type="text" class="form-control" placeholder=".. التخصص هنا" readonly="" value="رقم الهاتف هنا">
                                             </div>
-                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div>
+                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
                                                 <label class="form-label">تقنية الطباعة</label>
                                                 <input type="text" class="form-control" placeholder=".. الجنس هنا" readonly="" value="male">
                                             </div>
-                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div>
+                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 zhd-product-visit">
 
                                                 <button class="btn btn-sky invert">
@@ -6258,7 +6254,7 @@
                                                                     <label class="form-label dot">عموم الحاله الصحية</label>
                                                                 </div>
                                                                 <div class="col-md-6">
-                                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="  ..الوصف هنا" readonly=""></textarea>
+                                                                    <textarea class="form-control text-area-input" id="exampleFormControlTextarea1" rows="4" placeholder="  ..الوصف هنا" readonly=""></textarea>
                                                                 </div>
                                                                 <div class="col-md-6">
                                                                     <div class="upload-btn-wrapper designer-upload">
@@ -6411,12 +6407,12 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div>
+                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
                                                 <label class="form-label">الكمية</label>
                                                 <input type="text" class="form-control" placeholder=".. رقم الهاتف هنا" readonly="" value="03084875508">
                                             </div>
-                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div>
+                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                 <label class="form-label">المقاسات</label>
                                                 <input type="text" class="form-control" placeholder=".. الايميل هنا" readonly="" value="asimali7056@gmail.com">
@@ -6425,12 +6421,12 @@
                                                 <label class="form-label">شكل الطباعة</label>
                                                 <input type="text" class="form-control" placeholder=".. التخصص هنا" readonly="" value="رقم الهاتف هنا">
                                             </div>
-                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div>
+                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
                                                 <label class="form-label">تقنية الطباعة</label>
                                                 <input type="text" class="form-control" placeholder=".. الجنس هنا" readonly="" value="male">
                                             </div>
-                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div>
+                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 zhd-product-visit">
 
                                                 <button class="btn btn-sky invert" data-bs-toggle="modal" data-bs-target="#user5RequestModal">
@@ -6679,13 +6675,13 @@
                                                 </div>
 
                                             </div>
-                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div>
+                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
 
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
                                                 <label class="form-label">الكمية</label>
                                                 <input type="text" class="form-control" placeholder=".. رقم الهاتف هنا" readonly="" value="03084875508">
                                             </div>
-                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div>
+                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                 <label class="form-label">المقاسات</label>
                                                 <input type="text" class="form-control" placeholder=".. الايميل هنا" readonly="" value="asimali7056@gmail.com">
@@ -6694,12 +6690,12 @@
                                                 <label class="form-label">شكل الطباعة</label>
                                                 <input type="text" class="form-control" placeholder=".. التخصص هنا" readonly="" value="رقم الهاتف هنا">
                                             </div>
-                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div>
+                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
                                                 <label class="form-label">تقنية الطباعة</label>
                                                 <input type="text" class="form-control" placeholder=".. الجنس هنا" readonly="" value="male">
                                             </div>
-                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div>
+                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 zhd-product-visit">
 
 
@@ -6972,12 +6968,12 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div>
+                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
                                                 <label class="form-label">الكمية</label>
                                                 <input type="text" class="form-control" placeholder=".. رقم الهاتف هنا" readonly="" value="03084875508">
                                             </div>
-                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div>
+                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                 <label class="form-label">المقاسات</label>
                                                 <input type="text" class="form-control" placeholder=".. الايميل هنا" readonly="" value="asimali7056@gmail.com">
@@ -6986,12 +6982,12 @@
                                                 <label class="form-label">شكل الطباعة</label>
                                                 <input type="text" class="form-control" placeholder=".. التخصص هنا" readonly="" value="رقم الهاتف هنا">
                                             </div>
-                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div>
+                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
                                                 <label class="form-label">تقنية الطباعة</label>
                                                 <input type="text" class="form-control" placeholder=".. الجنس هنا" readonly="" value="male">
                                             </div>
-                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div>
+                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 zhd-product-visit">
 
                                                 <button class="btn btn-sky invert">
@@ -7112,35 +7108,7 @@
                                 </div>
                             </div>
                             <div class="modal-body designer-bdy">
-                                <div class="payment d-none" id="payment">
-                                    <div class="form-check">
-                                        <label class="form-check-label" for="flexRadioDefault1">
-                                            <img src="{{asset('user/assets/images/mada-logo.svg')}}" alt="">
-                                            <p>مدى</p>
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                        </label>
-                                        <label class="form-check-label" for="flexRadioDefault2">
-                                            <img src="{{asset('user/assets/images/masterCard.svg')}}" alt="">
-                                            <p>فيزا وماستر كارد</p>
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <label class="form-check-label" for="flexRadioDefault3">
-                                            <img src="{{asset('user/assets/images/apple-pay.svg')}}" alt="">
-                                            <p>آبل باي</p>
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="reject-reason d-none" id="reject-reason">
-                                    <div class="row mt-1 justify-content-center">
-                                        <div class="col-md-8">
-                                            <label class="form-label dot">سبب الرفض</label>
-                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="  الوصف هنا"></textarea>
-                                        </div>
-                                    </div>
-                                </div>
+                                
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-top">
@@ -7196,12 +7164,12 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div>
+                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
                                                 <label class="form-label">الكمية</label>
                                                 <input type="text" class="form-control" placeholder=".. رقم الهاتف هنا" readonly="" value="03084875508">
                                             </div>
-                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div>
+                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                 <label class="form-label">المقاسات</label>
                                                 <input type="text" class="form-control" placeholder=".. الايميل هنا" readonly="" value="asimali7056@gmail.com">
@@ -7210,12 +7178,12 @@
                                                 <label class="form-label">شكل الطباعة</label>
                                                 <input type="text" class="form-control" placeholder=".. التخصص هنا" readonly="" value="رقم الهاتف هنا">
                                             </div>
-                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div>
+                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
                                                 <label class="form-label">تقنية الطباعة</label>
                                                 <input type="text" class="form-control" placeholder=".. الجنس هنا" readonly="" value="male">
                                             </div>
-                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div>
+                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 zhd-product-visit">
 
                                                 <button class="btn btn-sky invert">
@@ -7232,66 +7200,34 @@
                                             </div>
                                         </div>
 
-                                        <div class="row">
-                                            <h1 class="title text-center mt-5 no-border conditional-blur zhd-quote">معلومات المصمم</h1>
-                                            <div class="col-md-12 userreq-blur">
-                                                <div class="credit-log d-block" id="star-blur-scroll">
-                                                    <div class="credit-logos-main blur-star-inner blur-bg-1 d-block">
 
-                                                        <div class="row">
-                                                            <div class="col-md-2 col-lg-2"></div>
-                                                            <div class="col-md-4 col-lg-4">
-                                                                <div class="credit-logo-inner">
-                                                                    <div class="row">
-                                                                        <div class="col-md-3 col-lg-3">
-                                                                            <img src="http://127.0.0.1:8000/user/assets/images/arrow-8.png" class="credit-card-icon">
-                                                                        </div>
-                                                                        <div class="col-md-7 col-lg-7">
-                                                                            <h5>فيزا وماستر كارد</h5>
-                                                                        </div>
-                                                                        <div class="col-md-2 col-lg-2">
-                                                                            <i class="fa-solid fa-circle-check gray-background"></i>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-4 col-lg-4">
-                                                                <div class="credit-logo-inner flot-lft">
-                                                                    <div class="row">
-                                                                        <div class="col-md-3 col-lg-3">
-                                                                            <img src="http://127.0.0.1:8000/user/assets/images/arrow-8.png" class="credit-card-icon green-border">
-                                                                        </div>
-                                                                        <div class="col-md-7 col-lg-7">
-                                                                            <h5>مدى</h5>
-                                                                        </div>
-                                                                        <div class="col-md-2 col-lg-2">
-                                                                            <i class="fa-solid fa-circle-check "></i>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-2 col-lg-2"></div>
-                                                            <div class="col-md-2 col-lg-2"></div>
-                                                            <div class="col-md-4 col-lg-4 mt-4">
-                                                                <div class="credit-logo-inner">
-                                                                    <div class="row">
-                                                                        <div class="col-md-3 col-lg-3">
-                                                                            <img src="http://127.0.0.1:8000/user/assets/images/arrow-8.png" class="credit-card-icon">
-                                                                        </div>
-                                                                        <div class="col-md-7 col-lg-7">
-                                                                            <h5>آبل باي</h5>
-                                                                        </div>
-                                                                        <div class="col-md-2 col-lg-2">
-                                                                            <i class="fa-solid fa-circle-check gray-background"></i>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
+                                        <div class="row">
+                                            <h1 class="title text-center mt-5 no-border zhd-quote">معلومات المصمم</h1>
+                                            <div class="col-md-12 ">
+                                                <div class="row justify-content-center">
+                                                     <!-- payment blur -->
+                                        <div class="payment pay credit-payment d-block" id="payment">
+                                                    <div class="form-check">
+                                                        <label class="form-check-label" for="flexRadioDefault1">
+                                                            <img src="{{ asset('user/assets/images/mada-logo.svg') }}" alt="">
+                                                            <p>مدى</p>
+                                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                                        </label>
+                                                        <label class="form-check-label" for="flexRadioDefault2">
+                                                            <img src="{{ asset('user/assets/images/masterCard.svg') }}" alt="">
+                                                            <p>فيزا وماستر كارد</p>
+                                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label" for="flexRadioDefault3">
+                                                            <img src="{{ asset('user/assets/images/apple-pay.svg') }}" alt="">
+                                                            <p>آبل باي</p>
+                                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+                                                        </label>
                                                     </div>
                                                 </div>
-                                                <div class="row justify-content-center">
-                                                    <div class="col-md-12">
+                                                    <div class="col-md-12 blur">
 
                                                         {{-- user- req --}}
                                                         <div class="wrapper al-center jst-btw mb-5">
@@ -7468,12 +7404,12 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div>
+                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
                                                 <label class="form-label">الكمية</label>
                                                 <input type="text" class="form-control" placeholder=".. رقم الهاتف هنا" readonly="" value="03084875508">
                                             </div>
-                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div>
+                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                 <label class="form-label">المقاسات</label>
                                                 <input type="text" class="form-control" placeholder=".. الايميل هنا" readonly="" value="asimali7056@gmail.com">
@@ -7482,12 +7418,12 @@
                                                 <label class="form-label">شكل الطباعة</label>
                                                 <input type="text" class="form-control" placeholder=".. التخصص هنا" readonly="" value="رقم الهاتف هنا">
                                             </div>
-                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div>
+                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
                                                 <label class="form-label">تقنية الطباعة</label>
                                                 <input type="text" class="form-control" placeholder=".. الجنس هنا" readonly="" value="male">
                                             </div>
-                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div>
+                                            <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 zhd-product-visit">
 
                                                 <button class="btn btn-sky invert">
