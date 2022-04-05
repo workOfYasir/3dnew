@@ -5661,7 +5661,8 @@
 
                                         <button class="ahs-profile-plus-btn plus-bton" data-bs-toggle="modal"
                                             data-bs-target="#productaddModal">
-                                            <i class="fa fa-plus-circle fa-lg ahs-profile-plus"></i>
+                                            <i class="fa-solid fa-circle-plus circle-plus-icon"></i>
+                                            <!-- <i class="fa fa-plus-circle fa-lg ahs-profile-plus"></i> -->
                                             <span class="hide-mobile">إضافة منتج</span>
                                         </button>
                                         <!-- <div class="add-btn">
@@ -5917,7 +5918,8 @@
 
                                         </div>
                                         <button class="ahs-profile-plus-btn disabled">
-                                            <i class="fa fa-plus-circle fa-lg ahs-profile-plus"></i>
+                                            <i class="fa-solid fa-circle-plus circle-plus-icon"></i>
+                                            <!-- <i class="fa fa-plus-circle fa-lg ahs-profile-plus"></i> -->
                                             إضافة منتج
                                         </button>
                                     </div>
