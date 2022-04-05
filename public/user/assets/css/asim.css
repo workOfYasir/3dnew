@@ -211,6 +211,9 @@
     .mujtmah-almusmamen  .sub-heading-box__heading{
         margin-right: 0px !important;
     }
+    .mujtmah-heading-box .red-dot{
+        transform: translate(10px) !important;
+    }
     /* #productaddModal .red-dot , #productaddformModal .red-dot{
         transform: translate(0px);
     } */
