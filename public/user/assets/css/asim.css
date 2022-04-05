@@ -208,6 +208,9 @@
     .sub-heading-box__heading{
         margin-right: 10px !important;
     }
+    .mujtmah-almusmamen  .sub-heading-box__heading{
+        margin-right: 0px !important;
+    }
     /* #productaddModal .red-dot , #productaddformModal .red-dot{
         transform: translate(0px);
     } */

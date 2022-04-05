@@ -1707,7 +1707,7 @@ textarea {
 
 .dot.right-center::before {
     position: relative;
-    right: -20px !important;
+    right: -23px !important;
     margin: auto;
 }
 
@@ -2244,7 +2244,7 @@ textarea {
 .footer-white-heading .dot.center::before {
     top: 0px;
     /* right: -100px; */
-    right: -120px;
+    right: -100px;
 }
 
 .footer-white-heading .title.white::after {
