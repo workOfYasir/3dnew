@@ -4,8 +4,15 @@ $(document).ready(function () {
     // })
     // Form Validation
     $('.form-select').change(function () {
-        $(this).addClass('field-blue')
-        $(this).removeClass('field-red');
+        var option = $(this).find(':selected').text();
+        if(option ==='') {
+            $(this).removeClass('field-blue')
+            $(this).addClass('field-red');
+        }
+        else {
+            $(this).addClass('field-blue')
+            $(this).removeClass('field-red');
+        }
     })
 
     $('.form-control:not(.email)').keyup(function () {

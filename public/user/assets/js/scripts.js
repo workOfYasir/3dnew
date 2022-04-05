@@ -1,4 +1,4 @@
-$(function() {
+$(function () {
 
     // window.scrollTo(0, 0);
     if ($(window).width() < 768) {
@@ -54,37 +54,37 @@ $(function() {
         slidesToShow: 5,
         slidesToScroll: 1,
         responsive: [{
-                breakpoint: 992,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 1,
-                    infinite: true,
-                    dots: false,
-                },
+            breakpoint: 992,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                infinite: true,
+                dots: false,
             },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 1,
-                    infinite: true,
-                    dots: false,
-                },
+        },
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                infinite: true,
+                dots: false,
             },
-            {
-                breakpoint: 767,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 1,
-                },
+        },
+        {
+            breakpoint: 767,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
             },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 1,
-                },
+        },
+        {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
             },
+        },
             // You can unslick at a given breakpoint now by adding:
             // settings: "unslick"
             // instead of a settings object
@@ -102,7 +102,7 @@ $(function() {
     // });
 
     // Radio button active functionality 
-    $('.payment .form-check-label').click(function() {
+    $('.payment .form-check-label').click(function () {
         $(this).addClass('active');
         $(this).parent().prev().find('.form-check-label').removeClass('active');
         $(this).parent().next().find('.form-check-label').removeClass('active');
@@ -111,7 +111,7 @@ $(function() {
     })
 
     // Accept button click function
-    $('#allRequestsResultModal .accept').click(function() {
+    $('#allRequestsResultModal .accept').click(function () {
         $('#allRequestsResultModal').find('.conditional-blur').addClass('blur');
         $('#allRequestsResultModal').find('.payment').removeClass('d-none');
         $('#allRequestsResultModal').find('.accept, .reject, .offer-price, .reject-reason, .submit').addClass('d-none');
@@ -120,7 +120,7 @@ $(function() {
     })
 
     // Reject button click function
-    $('#allRequestsResultModal .reject').click(function() {
+    $('#allRequestsResultModal .reject').click(function () {
         $('#allRequestsResultModal .conditional-blur').addClass('blur');
         $('#allRequestsResultModal .reject-reason').removeClass('d-none');
         $('#allRequestsResultModal').find('.accept, .reject, .offer-price, .payment, .next-one').addClass('d-none');
@@ -128,31 +128,31 @@ $(function() {
         $('#allRequestsResultModal').find('.conditional-hide').addClass('d-xs-none');
     })
 
-    $('#allRequestsResultModal .next-one').click(function() {
-        setTimeout(function() {
+    $('#allRequestsResultModal .next-one').click(function () {
+        setTimeout(function () {
             $('#loaderModal').modal('hide');
             $('#healthPaymentAfterModal').modal('show');
         }, 1000);
     })
 
-    $('.orderDetails-btn').click(function() {
+    $('.orderDetails-btn').click(function () {
         $('#allrequestsModal').modal('hide');
         $('#healthPaymentResultModal').modal('show');
     })
 
-    $('.showRequests').click(function() {
+    $('.showRequests').click(function () {
         $('#allRequestsModal').modal('hide');
         $('#allRequestsResultModal').modal('hide');
         $('#requestsModal').modal('show');
     })
 
-    $('.showHealthRequests').click(function() {
+    $('.showHealthRequests').click(function () {
         $('.modal').modal('hide');
         $('#requestsModal').modal('show');
     })
 
-    $('.complete-other').click(function() {
-        setTimeout(function() {
+    $('.complete-other').click(function () {
+        setTimeout(function () {
             $('#otherLoaderModal').modal('hide');
             $('#otherStageOneModal').modal('show');
         }, 1000);
@@ -160,7 +160,7 @@ $(function() {
 
     let vW = $(document).width();
     if ($(window).width() > 768) {
-        $(document).on("mousemove", function(event) {
+        $(document).on("mousemove", function (event) {
             let mW = ((((event.pageX) * 100) / vW).toFixed(2)) - 200;
             // $(".main").css('transform',	'translate(scale(1.2)');
             $(".move").css('transform', 'translateX(' + (mW / 30) + '%)');
@@ -172,7 +172,7 @@ $(function() {
             $(".move-black").css('transform', 'translateX(' + (mBlack / 30) + '%)');
             let mBlue = ((((event.pageX) * 100) / vW).toFixed(2)) - 30;
             $(".move-blue").css('transform', 'translateX(' + (mBlue / 30) + '%)');
-        }).on("mouseleave", function() {
+        }).on("mouseleave", function () {
             $(".move").css('transform', 'translateX(1)');
         })
     }
@@ -186,7 +186,7 @@ $(function() {
     $('.select2-selection--multiple').addClass('select-disabled');
 
     // Health Services Radio buttons functionality
-    $('.male-back .pointer').click(function() {
+    $('.male-back .pointer').click(function () {
         $('.male-front').find('.pointer').css({ 'opacity': '0', 'transition': 'none' });
         $('.male-front').addClass('blur');
         $('#healthServiesModal .carousel-item.two .btn-form').removeClass('disabled');
@@ -208,7 +208,7 @@ $(function() {
         }
     });
 
-    $('.male-front .pointer').click(function() {
+    $('.male-front .pointer').click(function () {
         $('.male-back').find('.pointer').css({ 'opacity': '0', 'transition': 'none' });
         $('.male-back').addClass('blur');
         $('#healthServiesModal .carousel-item.two .btn-form').removeClass('disabled');
@@ -220,11 +220,11 @@ $(function() {
         }
     });
 
-    $('.body-parts').change(function() {
+    $('.body-parts').change(function () {
         $('.select2-container--default .select2-selection--multiple').addClass('active-select');
         $('#healthServiesModal .carousel-item.two .btn-form').removeClass('disabled');
         var data = $('.body-parts').select2('data');
-        data.forEach(function(item, index) {
+        data.forEach(function (item, index) {
             if (item.id === 'skull') {
                 $('.male-front').find('.pointer').css({ 'opacity': '0', 'transition': 'none' });
                 $('.male-front').find('.selected').css({ 'opacity': '1' });
@@ -288,21 +288,21 @@ $(function() {
 
 
     // Close Modal when click on contact us link
-    $('.nav-link.close-modal').click(function() {
+    $('.nav-link.close-modal').click(function () {
         $('#contact-us')[0].scrollIntoView();
         $('.modal').modal('hide');
     })
 
 
     // Edit Profile
-    $('.edit-profile').click(function() {
+    $('.edit-profile').click(function () {
         $('#memberModal .form-control').removeClass('disabled');
         $('#memberModal .form-action').find('.disabled').removeClass('disabled');
         $(this).addClass('disabled').css('transition', '.6s')
     })
 
     // Public Services
-    $('.btn.public-service').click(function() {
+    $('.btn.public-service').click(function () {
         $('#myTab li:first-child .nav-link').removeClass('active');
         $('#myTab li:last-child .nav-link').addClass('active');
         $('#myTabContent #medical-services').removeClass('active show');
@@ -310,7 +310,7 @@ $(function() {
         window.scrollTo(0, 0);
     })
 
-    $('.public-offerPrice').click(function() {
+    $('.public-offerPrice').click(function () {
         $('.publicServiesFinalModal .form-action').addClass('d-none');
         $('.publicServiesFinalModal .form-action.payment-public').removeClass('d-none');
         $('#publicPaymentModal').find('.reject-text').addClass('d-none');
@@ -318,7 +318,7 @@ $(function() {
     })
 
     // Public Services Final Modal payment and rejection
-    $('#publicPaymentModal .accept').click(function() {
+    $('#publicPaymentModal .accept').click(function () {
         $('#publicPaymentModal').find('.payment').removeClass('d-none');
         $('#publicPaymentModal').find('.payment-public').addClass('d-none');
         $('#publicPaymentModal').find('.conditional-blur').addClass('blur');
@@ -328,7 +328,7 @@ $(function() {
     })
 
     // Public Services Reject button click function
-    $('#publicPaymentModal .reject').click(function() {
+    $('#publicPaymentModal .reject').click(function () {
         $('#publicPaymentModal .conditional-blur').addClass('blur');
         $('#publicPaymentModal .reject-reason').removeClass('d-none');
         $('#publicPaymentModal').find('.accept, .reject, .offer-price, .payment, .next-one').addClass('d-none');
@@ -337,32 +337,32 @@ $(function() {
         $('#publicPaymentModal').find('.conditional-hide').addClass('d-xs-none');
     })
 
-    $('#publicPaymentModal .next').click(function() {
-        setTimeout(function() {
+    $('#publicPaymentModal .next').click(function () {
+        setTimeout(function () {
             $('#loaderModal').modal('hide');
             $('#publicFullSubmittedModal').modal('show');
         }, 1000);
     })
 
-    $('.register-btn').click(function() {
-        setTimeout(function() {
+    $('.register-btn').click(function () {
+        setTimeout(function () {
             $('#registerLoaderModal').modal('hide');
         }, 1000);
     })
 
     // Navigation responsive
-    $('.nav-link').click(function() {
+    $('.nav-link').click(function () {
         $('.navbar-collapse').removeClass('show');
     })
 
     function normalizeSlideHeights() {
-        $('.carousel').each(function() {
+        $('.carousel').each(function () {
             var items = $('.carousel-item', this);
             // reset the height
             items.css('min-height', 0);
             // set the height
             var maxHeight = Math.max.apply(null,
-                items.map(function() {
+                items.map(function () {
                     return $(this).outerHeight()
                 }).get());
             items.css('min-height', maxHeight + 'px');
@@ -371,20 +371,20 @@ $(function() {
 
     normalizeSlideHeights()
 
-    $('#publicVideoModal .btn-close').click(function() {
+    $('#publicVideoModal .btn-close').click(function () {
         $('#publicVideoModal iframe').attr('src', $('#publicVideoModal iframe').attr('src'));
     })
 
-    $('#healthVideoModal .btn-close').click(function() {
+    $('#healthVideoModal .btn-close').click(function () {
         $('#healthVideoModal iframe').attr('src', $('#healthVideoModal iframe').attr('src'));
     })
 
     // asim
-    $(".authmasg").click(function() {
+    $(".authmasg").click(function () {
         $(".koib").toggleClass("d-none");
     });
 
-    $(".authmasg-health").click(function() {
+    $(".authmasg-health").click(function () {
         $(".koib-health").toggleClass("d-none");
     });
 
@@ -409,7 +409,7 @@ $(function() {
         interval: false,
     });
 
-    $(".imageupload").click(function() {
+    $(".imageupload").click(function () {
         $(".chose").click();
     });
     // imgInp.onchange = (evt) => {
@@ -429,7 +429,7 @@ $(function() {
     //     }
     // };
 
-    $('body').click(function() {
+    $('body').click(function () {
         if ($('.modal.video').hasClass('show')) {
             $('#healthVideoModal iframe').attr('src', $('#healthVideoModal iframe').attr('src'));
             $('#publicVideoModal iframe').attr('src', $('#publicVideoModal iframe').attr('src'));
@@ -439,8 +439,8 @@ $(function() {
 })
 
 // new-nav
-$(document).ready(function() {
-    $("#menu-toggle").click(function(e) {
+$(document).ready(function () {
+    $("#menu-toggle").click(function (e) {
         e.preventDefault();
         $("#wrapper").toggleClass("menuDisplayed");
         $(".sec-main").toggleClass("sec-main-pos");
@@ -448,11 +448,11 @@ $(document).ready(function() {
 
     });
 
-    $('#wrapper .nav-item').click(function() {
+    $('#wrapper .nav-item').click(function () {
         $("#wrapper").toggleClass("menuDisplayed");
     })
     const menu = $('#menu-toggle');
-    $('body').click(function(e) {
+    $('body').click(function (e) {
         // $("#wrapper").removeClass("menuDisplayed");
         if (!menu.is(e.target) // if the target of the click isn't the container...
             &&
@@ -467,12 +467,12 @@ $(document).ready(function() {
 
     // navbar active class
 
-    $("#navbarNav .nav-item").click(function() {
+    $("#navbarNav .nav-item").click(function () {
         $(this).addClass("active");
         $(this).nextAll().removeClass("active");
         $(this).prevAll().removeClass("active");
     })
-    $(".mobile-nav .nav-item").click(function() {
+    $(".mobile-nav .nav-item").click(function () {
         $(this).addClass("active");
         $(this).nextAll().removeClass("active");
         $(this).prevAll().removeClass("active");
@@ -481,7 +481,7 @@ $(document).ready(function() {
 
 
     // star rating
-    $(".star-reating i").click(function() {
+    $(".star-reating i").click(function () {
         $(this).addClass("star-active");
         $(this).prevAll().removeClass("star-active");
         $(this).nextAll().addClass("star-active");
@@ -489,58 +489,65 @@ $(document).ready(function() {
 
     // stat blur background
 
-        $(".starbluerModal-btn").click(function() {
-            $(".blur-star").show();
-            $(".review-text-tog").addClass("review-text-hide");
-            $(".starbluerModal-btn-hide").hide();
-            $(".show-footer-btns").show();
-        })
-        
-        $(".credit-btn-blur-show").click(function() {
-            $(".credit-log").show();
-        })
-        $(".paying-off-btn").click(function() {
-            $(".credit-log").hide();
-        })
-
-        $(".bill-btn").click(function() {
-            $(".bill-click-hide").hide();
-            $(".bill-click-show").show();
-        })
-        
-   // Accept button click function
-   $('#userRequestModal .credit-btn-blur-show').click(function() {
-    $('#userRequestModal').find('.conditional-blur.design-payment-blur').addClass('blur');
-    $('#userRequestModal').find('.payment.credit-payment').removeClass('d-none');
-    // $('#userRequestModal').find('.credit-btn-blur-show, .reject, .offer-price, .reject-reason, .submit').addClass('d-none');
-    // $('#userRequestModal').find('.next-one').removeClass('d-none');
-    // $('#userRequestModal').find('.conditional-hide').addClass('d-xs-none');
+    $(".starbluerModal-btn").click(function () {
+        $(".blur-star").show();
+        $(".review-text-tog").addClass("review-text-hide");
+        $(".starbluerModal-btn-hide").hide();
+        $(".show-footer-btns").show();
     })
 
-    $(".paying-off-btn").click(function() {
+    $(".credit-btn-blur-show").click(function () {
+        $(".credit-log").show();
+    })
+    $(".paying-off-btn").click(function () {
+        $(".credit-log").hide();
+    })
+
+    $(".bill-btn").click(function () {
+        $(".bill-click-hide").hide();
+        $(".bill-click-show").show();
+    })
+
+    // Accept button click function
+    $('#userRequestModal .credit-btn-blur-show').click(function () {
+        $('#userRequestModal').find('.conditional-blur.design-payment-blur').addClass('blur');
+        $('#userRequestModal').find('.payment.credit-payment').removeClass('d-none');
+        // $('#userRequestModal').find('.credit-btn-blur-show, .reject, .offer-price, .reject-reason, .submit').addClass('d-none');
+        // $('#userRequestModal').find('.next-one').removeClass('d-none');
+        // $('#userRequestModal').find('.conditional-hide').addClass('d-xs-none');
+    })
+
+    $(".paying-off-btn").click(function () {
         $(".conditional-blur.design-payment-blur").removeClass('blur');
         $(".payment.credit-payment").addClass('d-none');
     })
- 
+
 
     // product-save-btn change icon, color etc
 
-    $(".product-save-btn").click(function() {
-    $(".add-red-dot").removeClass('red-dot');
-    $(".show-bg-pink").addClass('pink-btn-bg');
-    $("#productaddformModal .camera-icon").removeClass('d-none');
-    $("#productaddformModal .camera-icon.upload-cross-red").addClass('d-none');
-    $(this).addClass('uplod-rev-btn');
+    $(".product-save-btn").click(function () {
+        $(".add-red-dot").removeClass('red-dot');
+        $(".show-bg-pink").addClass('pink-btn-bg');
+        $("#productaddformModal .camera-icon").removeClass('d-none');
+        $("#productaddformModal .camera-icon.upload-cross-red").addClass('d-none');
+        $(this).addClass('uplod-rev-btn');
     })
 
-    $(".btn-close").click(function() {
+    $(".btn-close").click(function () {
         $('.modal').modal('hide');
         // $(".modal-backdrop").removeClass('show');
         // $(".modal-backdrop").addClass('d-none');
     })
-    
+
+    $('.reg-des').click(function () {
+        $('#myTab .nav-item .nav-link').removeClass('active');
+        $('#myTab .nav-item:last-child .nav-link').addClass('active');
+        $('#myTabContent .tab-pane').removeClass('active show');
+        $('#myTabContent .tab-pane:last-child').addClass('active show');
+    })
+
 });
-$(".userreq-blur-bg").click(function() {
+$(".userreq-blur-bg").click(function () {
     $(".userreq-blur-bg").css('display', 'none');
 });
 AOS.init({
