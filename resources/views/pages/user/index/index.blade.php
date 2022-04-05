@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
-
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/> -->
     <!-- StyleSheet -->
     <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700&display=swap" rel="stylesheet">
 
@@ -5659,9 +5659,9 @@
                                                         class="inner-line"></span></span></h1>
                                         </div>
 
-                                        <button class="ahs-profile-plus-btn plus-bton" data-bs-toggle="modal"
+                                        <button class="ahs-profile-plus-btn plus-bton circle-plus-icon" data-bs-toggle="modal"
                                             data-bs-target="#productaddModal">
-                                            <i class="fa-solid fa-circle-plus circle-plus-icon"></i>
+                                            <i class="fa-solid fa-circle-plus"></i>
                                             <!-- <i class="fa fa-plus-circle fa-lg ahs-profile-plus"></i> -->
                                             <span class="hide-mobile">إضافة منتج</span>
                                         </button>
@@ -5917,11 +5917,13 @@
                                                         class="inner-line"></span></span></h1>
 
                                         </div>
-                                        <button class="ahs-profile-plus-btn disabled">
-                                            <i class="fa-solid fa-circle-plus circle-plus-icon"></i>
+                                        <button class="ahs-profile-plus-btn disabled circle-plus-icon">
+                                            <i class="fa-solid fa-circle-plus"></i>
                                             <!-- <i class="fa fa-plus-circle fa-lg ahs-profile-plus"></i> -->
+                                            <span>
                                             إضافة منتج
-                                        </button>
+                                        </span>
+                                     </button>
                                     </div>
                                     <form action="" class="almuntjat-form">
                                         <div class="almuntjat-form__input-wrapper">
@@ -8895,9 +8897,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
         crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"
         integrity="sha512-Tn2m0TIpgVyTzzvmxLNuqbSJH3JP8jm+Cy3hvHrW7ndTDcJ1w5mBiksqDBb8GpE2ksktFvDB/ykZ0mDpsZj20w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="{{ asset('user/assets/js/scripts.js') }}"></script>
