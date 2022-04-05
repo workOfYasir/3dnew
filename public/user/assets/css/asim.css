@@ -191,12 +191,26 @@
         background-color: #1F5098;
         text-align: center;
         cursor: pointer;
+        line-height: 2.3;
+        font-size: 15px;
         z-index: 9999;
     }
     
     .product-add-upload .camera-icon i {
-        line-height: 2;
+        line-height: 2.3;
         color: #fff;
+        font-size: 16px;
+    }
+    .product-add-upload .camera-icon svg {
+        color: #fff;
+        font-size: 16px;
+    }
+
+    .sub-heading-box__heading{
+        margin-right: 10px !important;
+    }
+    #productaddModal .red-dot ,   #productaddformModal .red-dot{
+        transform: translate(0px);
     }
     .overlay{
         position: absolute;

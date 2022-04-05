@@ -151,7 +151,7 @@ nav .left-side a:last-child {
     margin: -15px auto;
     position: absolute;
     left: 0;
-    right: -155px;
+    right: -160px;
     top: -4px;
 }
 
@@ -2188,7 +2188,7 @@ textarea {
 }
 
 .dot-txt-main .dot.center::before {
-    right: -125px !important;
+    right: -130px !important;
 }
 
 .dot-txt-main .dot.center {
@@ -2206,7 +2206,7 @@ textarea {
 }
 
 .dot-txt-main .right.left-right-h::before {
-    left: 4px;
+    left: 10px;
     top: -4px;
 }
 

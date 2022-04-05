@@ -533,6 +533,12 @@ $(document).ready(function() {
     $(this).addClass('uplod-rev-btn');
     })
 
+    $(".btn-close").click(function() {
+        $('.modal').modal('hide');
+        // $(".modal-backdrop").removeClass('show');
+        // $(".modal-backdrop").addClass('d-none');
+    })
+    
 });
 $(".userreq-blur-bg").click(function() {
     $(".userreq-blur-bg").css('display', 'none');

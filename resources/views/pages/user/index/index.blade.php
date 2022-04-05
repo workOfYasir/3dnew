@@ -12,13 +12,16 @@
     @endif
     <link rel="icon" href="{{ asset('assets/images/logo/logo-favicon.png') }}" type="image/x-icon">
     <link rel="shortcut icon" href="{{ asset('user/assets/icons/logo.svg') }}" type="image/x-icon" />
-    <meta property="og:image" itemprop="image" content="https://zen-boyd.161-97-115-110.plesk.page/3dorgans/public/user/assets/icons/logo.png">
+    <meta property="og:image" itemprop="image"
+        content="https://zen-boyd.161-97-115-110.plesk.page/3dorgans/public/user/assets/icons/logo.png">
     @if(@$title->discription != null)
     <meta name="description" content="{{$title->discription}}" />
     @else
     <meta name="description" content="شركة إدراك للإستشارات الإدارية والتدريب الإستشاري" />
     @endif
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
     <!-- Bootstrap css -->
     <link rel="stylesheet" href="{{ asset('user/assets/css/bootstrap.min.css') }}">
 
@@ -68,9 +71,11 @@
         <nav class="navbar navbar-expand-lg navbar-light desktop-nav">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
-                    <img src="{{ asset('user/assets/icons/logo.svg') }}" alt="3dOrgans-logo" width="150" class="d-inline-block align-text-top">
+                    <img src="{{ asset('user/assets/icons/logo.svg') }}" alt="3dOrgans-logo" width="150"
+                        class="d-inline-block align-text-top">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
@@ -98,14 +103,20 @@
                         </li>
                         <li class="mobile-menu">
                             <div class="left-side">
-                                <a href="#membership" class="m-0" data-bs-toggle="modal" data-bs-target="#memberModal"><img src="{{ asset('user/assets/icons/avatar.svg') }}" class="profile-img" alt="avatar"></a>
+                                <a href="#membership" class="m-0" data-bs-toggle="modal"
+                                    data-bs-target="#memberModal"><img src="{{ asset('user/assets/icons/avatar.svg') }}"
+                                        class="profile-img" alt="avatar"></a>
                                 @auth
-                                <a href="#membership" class="dot m-0 border-bottom" data-bs-toggle="modal" data-bs-target="#memberModal">{{ auth()->user()->name }}!</a>
+                                <a href="#membership" class="dot m-0 border-bottom" data-bs-toggle="modal"
+                                    data-bs-target="#memberModal">{{ auth()->user()->name }}!</a>
                                 @endauth
-                                <a href="#requests" class="ms-auto dot border-bottom " data-bs-toggle="modal" data-bs-target="#requestsModal">طلباتي</a>
+                                <a href="#requests" class="ms-auto dot border-bottom " data-bs-toggle="modal"
+                                    data-bs-target="#requestsModal">طلباتي</a>
                                 <span>
-                                    <a href="#"><img src="{{ asset('user/assets/icons/twitter.svg') }}" alt="twitter"></a>
-                                    <a href="#"><img src="{{ asset('user/assets/icons/instagram.svg') }}" alt="instagram"></a>
+                                    <a href="#"><img src="{{ asset('user/assets/icons/twitter.svg') }}"
+                                            alt="twitter"></a>
+                                    <a href="#"><img src="{{ asset('user/assets/icons/instagram.svg') }}"
+                                            alt="instagram"></a>
                                 </span>
                             </div>
                         </li>
@@ -120,164 +131,184 @@
                         @if (@auth()->user()->profile == null)
                         <div class="profile-img">
                             <img src="{{ asset('assets/images/dashboard/1.png') }}" alt="">
+                        </div>
+                        @else
+                        <div class="profile-img">
+                            <img src="{{ asset(  auth()->user()->profile) }}"
+                                style="height:40px; width:40px; border-radius: 50%">
+
+                        </div>
+                        @endif
+                        <a href="#membership" class="dot m-0 border-bottom" data-bs-toggle="modal"
+                            data-bs-target="#memberModal">{{ auth()->user()->name }}</a>
+                        --}}
+                        <a href="#" class="m-0" data-bs-toggle="modal" data-bs-target="#memberModal">
+                            {{-- @if (auth()->user()->profile != null) --}}
+                            @if (@auth()->user()->profile == null)
+                            <div class="profile profile-icon">
+                                <img src="{{ asset('assets/images/dashboard/1.png') }}" alt="">
+                            </div>
+                            @else
+                            <img class="" style="width:30px;height:30px;" alt=""
+                                src="{{ asset(Auth::user()->profile) }}">
+                            @endif
+
+                            <a href="#membership" class="dot ms-auto border-bottom" data-bs-toggle="modal"
+                                data-bs-target="#memberModal">{{ auth()->user()->name }}</a>
+
+                            <a href="#requests" class="ms-auto dot border-bottom " data-bs-toggle="modal"
+                                data-bs-target="#requestsModal">طلباتي</a>
+
+
+                            <a href="{{route('logout')}}" onclick="return logout(event);"
+                                class="ms-auto dot border-bottom" class="dot m-0 border-bottom">
+                                تسجيل خروج
+                            </a>
+                            <script type="text/javascript">
+                                function logout(event) {
+                                    event.preventDefault();
+                                    var check = confirm("هل تريد حقا الخروج؟");
+                                    if (check) {
+                                        document.getElementById('logout-form').submit();
+                                    }
+                                }
+                            </script>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                                @csrf
+
+                                <button hidden type="submit" class=" sub-slide-item"
+                                    style=" color:red; background-color: Transparent; background-repeat:no-repeat; border: none; cursor:pointer; overflow: hidden; outline:none;">Log
+                                    Out</button>
+
+                            </form>
+                            <span>
+
+                                <a href="#"><img src="{{ asset('user/assets/icons/twitter.svg') }}" alt="twitter"></a>
+                                <a href="#"><img src="{{ asset('user/assets/icons/instagram.svg') }}"
+                                        alt="instagram"></a>
+                            </span>
                 </div>
                 @else
-                <div class="profile-img">
-                    <img src="{{ asset(  auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
-
-                </div>
-                @endif
-                <a href="#membership" class="dot m-0 border-bottom" data-bs-toggle="modal" data-bs-target="#memberModal">{{ auth()->user()->name }}</a>
-                --}}
-                <a href="#" class="m-0" data-bs-toggle="modal" data-bs-target="#memberModal">
-                    {{-- @if (auth()->user()->profile != null) --}}
-                    @if (@auth()->user()->profile == null)
-                    <div class="profile profile-icon">
-                        <img src="{{ asset('assets/images/dashboard/1.png') }}" alt="">
-                    </div>
-                    @else
-                    <img class="" style="width:30px;height:30px;" alt="" src="{{ asset(Auth::user()->profile) }}">
-                    @endif
-
-                    <a href="#membership" class="dot ms-auto border-bottom" data-bs-toggle="modal" data-bs-target="#memberModal">{{ auth()->user()->name }}</a>
-
-                    <a href="#requests" class="ms-auto dot border-bottom " data-bs-toggle="modal" data-bs-target="#requestsModal">طلباتي</a>
-
-
-                    <a href="{{route('logout')}}" onclick="return logout(event);" class="ms-auto dot border-bottom" class="dot m-0 border-bottom">
-                        تسجيل خروج
-                    </a>
-                    <script type="text/javascript">
-                        function logout(event) {
-                            event.preventDefault();
-                            var check = confirm("هل تريد حقا الخروج؟");
-                            if (check) {
-                                document.getElementById('logout-form').submit();
-                            }
-                        }
-                    </script>
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST">
-                        @csrf
-
-                        <button hidden type="submit" class=" sub-slide-item" style=" color:red; background-color: Transparent; background-repeat:no-repeat; border: none; cursor:pointer; overflow: hidden; outline:none;">Log
-                            Out</button>
-
-                    </form>
+                <div class="left-side">
+                    <a href="#login" data-bs-toggle="modal" class="register-icon" data-bs-target="#loginModal">تسجيل
+                        دخول</a>
+                    <a href="#register" class="ms-auto register-icon" data-bs-toggle="modal"
+                        data-bs-target="#registerModal">التسجيل</a>
                     <span>
-
                         <a href="#"><img src="{{ asset('user/assets/icons/twitter.svg') }}" alt="twitter"></a>
                         <a href="#"><img src="{{ asset('user/assets/icons/instagram.svg') }}" alt="instagram"></a>
                     </span>
+                </div>
+                @endauth
             </div>
-            @else
-            <div class="left-side">
-                <a href="#login" data-bs-toggle="modal" class="register-icon" data-bs-target="#loginModal">تسجيل
-                    دخول</a>
-                <a href="#register" class="ms-auto register-icon" data-bs-toggle="modal" data-bs-target="#registerModal">التسجيل</a>
-                <span>
-                    <a href="#"><img src="{{ asset('user/assets/icons/twitter.svg') }}" alt="twitter"></a>
-                    <a href="#"><img src="{{ asset('user/assets/icons/instagram.svg') }}" alt="instagram"></a>
-                </span>
-            </div>
-            @endauth
-    </div>
-    </nav>
+        </nav>
 
-    <div id="wrapper" class="mobile-nav">
-        <div id="sidebar-wrapper">
-            <div class="area-brand">
-                <a class="" href="#">
-                    <img src="{{ asset('user/assets/icons/logo.svg') }}" alt="3dOrgans-logo" width="150" class="d-inline-block align-text-top">
-                </a>
-            </div>
-            <div class="mmnue">
-                <ul class="sidebar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">الرئيسية</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about-us">
-                            من نحن
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">ماهي
-                            تقنية الـ 3D</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#services-section" class="nav-link">الخدمات</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">مجتمع المصممين</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link close-modal" href="#contact-us">اتصل بنا</a>
-                    </li>
-                    @if(Auth::user())
-                    <li class="nav-item pt-0"> <a href="#requests" class="nav-link ms-auto dot " data-bs-toggle="modal" data-bs-target="#requestsModal">طلباتي</a></li>
-                    <li class="nav-item pt-0">
-                        <a class="nav-link dot" href="{{ route('logout') }} " onclick="event.preventDefault(); document.getElementById('frm-logout').submit();"><i data-feather="log-out"></i>تسجيل الخروج</a>
-                        <form id="frm-logout" action="{{ route('logout') }}" method="POST" style="display: none;">
-                            @csrf
-                        </form>
-                    </li>
-                    @else
-                    <li class="nav-item">
-
-                        <a href="#login" class="nav-link dot" data-bs-toggle="modal" data-bs-target="#loginModal">تسجيل دخول</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#register" class="nav-link dot" data-bs-toggle="modal" data-bs-target="#registerModal">التسجيل</a>
-
-                    </li>
-                    @endif
-                    <li class="">
-                        <div class="mobile-social-icon">
-
-                            <a href="#"><img src="{{ asset('user/assets/icons/twitter.svg') }}" alt="twitter"></a>
-                            <a href="#"><img src="{{ asset('user/assets/icons/instagram.svg') }}" alt="instagram"></a>
-
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <div id="page-content-wrapper">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-6 col-sm-3 mobile-logo">
-
-                        <div class="area-brand">
-                            <a class="" href="#">
-                                <img src="{{ asset('user/assets/icons/logo.svg') }}" alt="3dOrgans-logo" width="150" class="d-inline-block align-text-top">
+        <div id="wrapper" class="mobile-nav">
+            <div id="sidebar-wrapper">
+                <div class="area-brand">
+                    <a class="" href="#">
+                        <img src="{{ asset('user/assets/icons/logo.svg') }}" alt="3dOrgans-logo" width="150"
+                            class="d-inline-block align-text-top">
+                    </a>
+                </div>
+                <div class="mmnue">
+                    <ul class="sidebar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">الرئيسية</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about-us">
+                                من نحن
                             </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">ماهي
+                                تقنية الـ 3D</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#services-section" class="nav-link">الخدمات</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">مجتمع المصممين</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link close-modal" href="#contact-us">اتصل بنا</a>
+                        </li>
+                        @if(Auth::user())
+                        <li class="nav-item pt-0"> <a href="#requests" class="nav-link ms-auto dot "
+                                data-bs-toggle="modal" data-bs-target="#requestsModal">طلباتي</a></li>
+                        <li class="nav-item pt-0">
+                            <a class="nav-link dot" href="{{ route('logout') }} "
+                                onclick="event.preventDefault(); document.getElementById('frm-logout').submit();"><i
+                                    data-feather="log-out"></i>تسجيل الخروج</a>
+                            <form id="frm-logout" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form>
+                        </li>
+                        @else
+                        <li class="nav-item">
+
+                            <a href="#login" class="nav-link dot" data-bs-toggle="modal"
+                                data-bs-target="#loginModal">تسجيل دخول</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#register" class="nav-link dot" data-bs-toggle="modal"
+                                data-bs-target="#registerModal">التسجيل</a>
+
+                        </li>
+                        @endif
+                        <li class="">
+                            <div class="mobile-social-icon">
+
+                                <a href="#"><img src="{{ asset('user/assets/icons/twitter.svg') }}" alt="twitter"></a>
+                                <a href="#"><img src="{{ asset('user/assets/icons/instagram.svg') }}"
+                                        alt="instagram"></a>
+
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="page-content-wrapper">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-3 mobile-logo">
+
+                            <div class="area-brand">
+                                <a class="" href="#">
+                                    <img src="{{ asset('user/assets/icons/logo.svg') }}" alt="3dOrgans-logo" width="150"
+                                        class="d-inline-block align-text-top">
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-6 col-sm-9 mobile-pro-icon">
-                        <button class="btn mob-tog-btn" id="menu-toggle"><i class="fa-solid fa-bars"></i></button>
+                        <div class="col-md-6 col-sm-9 mobile-pro-icon">
+                            <button class="btn mob-tog-btn" id="menu-toggle"><i class="fa-solid fa-bars"></i></button>
 
-                        <div class="mobile-profile">
+                            <div class="mobile-profile">
 
 
-                            <a href="#" class="m-0" data-bs-toggle="modal" data-bs-target="#memberModal"><img src="{{(@Auth::user()->profile == null) ?  asset('user/assets/icons/avatar.svg'): asset(Auth::user()->profile) }}" class="profile-img" alt="avatar"></a>
-                            @if(Auth::user())
-                            <a href="#" class="dot m-0 border-bottom" data-bs-toggle="modal" data-bs-target="#memberModal">{{ Auth::user()->name }}!</a>
-                            @endif
+                                <a href="#" class="m-0" data-bs-toggle="modal" data-bs-target="#memberModal"><img
+                                        src="{{(@Auth::user()->profile == null) ?  asset('user/assets/icons/avatar.svg'): asset(Auth::user()->profile) }}"
+                                        class="profile-img" alt="avatar"></a>
+                                @if(Auth::user())
+                                <a href="#" class="dot m-0 border-bottom" data-bs-toggle="modal"
+                                    data-bs-target="#memberModal">{{ Auth::user()->name }}!</a>
+                                @endif
+                            </div>
+
                         </div>
 
                     </div>
-
                 </div>
             </div>
         </div>
-    </div>
-    <!-- mobile menu start here -->
+        <!-- mobile menu start here -->
 
 
 
-    <!-- mobile menu end here -->
-    <!-- <section class="banner">
+        <!-- mobile menu end here -->
+        <!-- <section class="banner">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -473,45 +504,41 @@
       </div>
     </section> -->
 
-    <section class="banner sample">
-        <img src="{{ asset('user/assets/images/banner-bg.png') }}" class="img-fluid banner-bg sample move-blue animate__animated animate__slideInRight animate__slower animate__delay-5s" alt="banner-bg">
-        <img src="{{ asset('user/assets/images/black-bg.png') }}" class="black-bg sample move-black animate__animated animate__slideInLeft animate__slower animate__delay-5s" alt="black-bg">
-        <img src="{{ asset('user/assets/images/hands.png') }}" class="img-fluid hands sample move-hand" alt="hands">
-        <div class="container">
-            <div class="row justify-content-center">
+        <section class="banner sample">
+            <img src="{{ asset('user/assets/images/banner-bg.png') }}"
+                class="img-fluid banner-bg sample move-blue animate__animated animate__slideInRight animate__slower animate__delay-5s"
+                alt="banner-bg">
+            <img src="{{ asset('user/assets/images/black-bg.png') }}"
+                class="black-bg sample move-black animate__animated animate__slideInLeft animate__slower animate__delay-5s"
+                alt="black-bg">
+            <img src="{{ asset('user/assets/images/hands.png') }}" class="img-fluid hands sample move-hand" alt="hands">
+            <div class="container">
+                <div class="row justify-content-center">
 
-                <div class="col-md-12">
-                    <div class="carousel-inner">
-                        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-indicators">
-                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                            </div>
-                            @foreach($profile as $key=>$profiles)
-                            @if($key == 0)
-                            <div class="carousel-item active" id="{{$key}}">
-                                @else
-                                <div class="carousel-item" id="{{$key}}">
-                                    @endif
-                                    <div class="row justify-content-end">
-                                        <div class="col-md-4 col-lg-7 first-col">
+                    <div class="col-md-12">
+                        <div class="carousel-inner">
+                            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#carouselExampleIndicators"
+                                        data-bs-slide-to="0" class="active" aria-current="true"
+                                        aria-label="Slide 1"></button>
+                                    <button type="button" data-bs-target="#carouselExampleIndicators"
+                                        data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                    <button type="button" data-bs-target="#carouselExampleIndicators"
+                                        data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                    <button type="button" data-bs-target="#carouselExampleIndicators"
+                                        data-bs-slide-to="3" aria-label="Slide 4"></button>
+                                </div>
+                                @foreach($profile as $key=>$profiles)
+                                @if($key == 0)
+                                <div class="carousel-item active" id="{{$key}}">
+                                    @else
+                                    <div class="carousel-item" id="{{$key}}">
+                                        @endif
+                                        <div class="row justify-content-end">
+                                            <div class="col-md-4 col-lg-7 first-col">
 
-                                            <div class="mob-profile-heading">
-                                                <span class="outline dot d-block">{{ $profiles->sub_heading }}
-                                                </span>
-
-
-                                                <h2 class="title no-border">
-                                                    {{ $profiles->heading }}
-                                                    !
-                                                    <span class="inner-line"></span>
-                                                </h2>
-                                            </div>
-                                            <div class="static-text">
-                                                <div class="mob-profile-heading-hide">
-
+                                                <div class="mob-profile-heading">
                                                     <span class="outline dot d-block">{{ $profiles->sub_heading }}
                                                     </span>
 
@@ -522,476 +549,531 @@
                                                         <span class="inner-line"></span>
                                                     </h2>
                                                 </div>
-                                                <p class="description">
-                                                    {!!$profiles->body_text !!}
-                                                </p>
+                                                <div class="static-text">
+                                                    <div class="mob-profile-heading-hide">
+
+                                                        <span class="outline dot d-block">{{ $profiles->sub_heading }}
+                                                        </span>
 
 
-                                                <button class="btn btn-sky">المزيد</button>
-                                                <a href="#services-section" class="btn btn-grey">قدم طلبك <img src="{{ asset('user/assets/icons/arrow-down.svg') }}" alt="arrow-down"></a href="#services-section">
+                                                        <h2 class="title no-border">
+                                                            {{ $profiles->heading }}
+                                                            !
+                                                            <span class="inner-line"></span>
+                                                        </h2>
+                                                    </div>
+                                                    <p class="description">
+                                                        {!!$profiles->body_text !!}
+                                                    </p>
+
+
+                                                    <button class="btn btn-sky">المزيد</button>
+                                                    <a href="#services-section" class="btn btn-grey">قدم طلبك <img
+                                                            src="{{ asset('user/assets/icons/arrow-down.svg') }}"
+                                                            alt="arrow-down"></a href="#services-section">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-8 col-lg-5">
+                                                <div class="top boxContainer">
+                                                    <div class="blue-box"></div>
+                                                    @if (@$profiles->images != null)
+                                                    <img src="{{ asset($profiles->images) }}"
+                                                        class="img-fluid img-behind" alt="medical">
+                                                    @else
+                                                    <img src="{{ asset('user/assets/images/medical.jpg') }}"
+                                                        class="img-fluid img-behind" alt="medical">
+                                                    @endif
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-8 col-lg-5">
-                                            <div class="top boxContainer">
-                                                <div class="blue-box"></div>
-                                                @if (@$profiles->images != null)
-                                                <img src="{{ asset($profiles->images) }}" class="img-fluid img-behind" alt="medical">
-                                                @else
-                                                <img src="{{ asset('user/assets/images/medical.jpg') }}" class="img-fluid img-behind" alt="medical">
-                                                @endif
-                                            </div>
+                                    </div>
+                                    @endforeach
+                                </div>
+                                <button class="carousel-control-prev" type="button"
+                                    data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button"
+                                    data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="row align-items-center responsive-reverse" dir="ltr">
+                            <div class="col-md-4" dir="rtl">
+                                <div class="text-start">
+                                    <figcaption class="map-cap side sample">
+                                        @if (@$side->subheading != null)
+                                        <h6> {{$side->subheading}}</h6>
+                                        @else
+                                        <h6>اثناء العمل</h6>
+                                        @endif
+                                        @if (@$side->heading != null)
+                                        <p> {{$side->heading}}</p>
+                                        @else
+                                        <p>خارج الصندوق</p>
+                                        @endif
+
+
+                                    </figcaption>
+                                    <div class="bottom boxContainer sample heart-img">
+                                        <div class="blue-box move-box"></div>
+                                        @if (@$side->side_image != null)
+                                        <img src="{{ asset(  $side->side_image) }}" alt="side-img">
+                                        @else
+                                        <img src="{{ asset('user/assets/images/side-img.jpg') }}" alt="side-img">
+                                        @endif
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-8 padi-top">
+                                <!-- counter -->
+                                <div class="row">
+                                    <div class="col-md-8 tab-counter-width"></div>
+                                    <div class="col-md-2 task-number">
+                                        <div class="counter">
+                                            @if(@$counter->start != null)
+                                            <span class="client-counter">{{$counter->start}}</span><span
+                                                class="symbol">+</span>
+                                            @else
+                                            <span class="client-counter" data-count="12">0</span><span
+                                                class="symbol">+</span>
+                                            @endif
+                                            <h5>عميل</h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 task-number1">
+                                        <div class="counter">
+                                            @if(@$counter->end != null)
+                                            <span class="client-counter"
+                                                data-count="{{$counter->end}}">{{$counter->end}}</span><span
+                                                class="symbol">+</span>
+
+                                            @else
+                                            <span class="client-counter" data-count="130">0</span><span
+                                                class="symbol">+</span>
+                                            @endif
+
+                                            <h5>مشروع</h5>
                                         </div>
                                     </div>
                                 </div>
-                                @endforeach
-                            </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="row align-items-center responsive-reverse" dir="ltr">
-                        <div class="col-md-4" dir="rtl">
-                            <div class="text-start">
-                                <figcaption class="map-cap side sample">
-                                    @if (@$side->subheading != null)
-                                    <h6> {{$side->subheading}}</h6>
-                                    @else
-                                    <h6>اثناء العمل</h6>
-                                    @endif
-                                    @if (@$side->heading != null)
-                                    <p> {{$side->heading}}</p>
-                                    @else
-                                    <p>خارج الصندوق</p>
-                                    @endif
-
-
-                                </figcaption>
-                                <div class="bottom boxContainer sample heart-img">
-                                    <div class="blue-box move-box"></div>
-                                    @if (@$side->side_image != null)
-                                    <img src="{{ asset(  $side->side_image) }}" alt="side-img">
-                                    @else
-                                    <img src="{{ asset('user/assets/images/side-img.jpg') }}" alt="side-img">
-                                    @endif
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-8 padi-top">
-                            <!-- counter -->
-                            <div class="row">
-                                <div class="col-md-8 tab-counter-width"></div>
-                                <div class="col-md-2 task-number">
-                                    <div class="counter">
-                                        @if(@$counter->start != null)
-                                        <span class="client-counter">{{$counter->start}}</span><span class="symbol">+</span>
-                                        @else
-                                        <span class="client-counter" data-count="12">0</span><span class="symbol">+</span>
-                                        @endif
-                                        <h5>عميل</h5>
-                                    </div>
-                                </div>
-                                <div class="col-md-2 task-number1">
-                                    <div class="counter">
-                                        @if(@$counter->end != null)
-                                        <span class="client-counter" data-count="{{$counter->end}}">{{$counter->end}}</span><span class="symbol">+</span>
-
-                                        @else
-                                        <span class="client-counter" data-count="130">0</span><span class="symbol">+</span>
-                                        @endif
-
-                                        <h5>مشروع</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- <div class="counter">
+                                <!-- <div class="counter">
                             <div class="counter-innder">
                                 <span class="client-counter">30+</span>
                                 <h5>counter</h5>
                             </div>
 
                         </div> -->
-                            <div class="main-slide sample">
-                                @if (@$logos->logo1 != null)
-                                <div class="slide-logos">
-                                    <img style="width: 120px;" src="{{ asset( $logos->logo1) }}">
-                                </div>
-                                @else
-                                <div class="slide-logos">
-                                    <img src="{{ asset('user/assets/images/gas.png') }}">
-                                </div>
-                                @endif
+                                <div class="main-slide sample">
+                                    @if (@$logos->logo1 != null)
+                                    <div class="slide-logos">
+                                        <img style="width: 120px;" src="{{ asset( $logos->logo1) }}">
+                                    </div>
+                                    @else
+                                    <div class="slide-logos">
+                                        <img src="{{ asset('user/assets/images/gas.png') }}">
+                                    </div>
+                                    @endif
 
-                                @if (@$logos->logo2 != null)
-                                <div class="slide-logos">
-                                    <img style="width: 120px;" src="{{ asset( $logos->logo2) }}">
-                                </div>
-                                @else
-                                <div class="slide-logos">
-                                    <img src="{{ asset('user/assets/images/gas.png') }}">
-                                </div>
-                                @endif
+                                    @if (@$logos->logo2 != null)
+                                    <div class="slide-logos">
+                                        <img style="width: 120px;" src="{{ asset( $logos->logo2) }}">
+                                    </div>
+                                    @else
+                                    <div class="slide-logos">
+                                        <img src="{{ asset('user/assets/images/gas.png') }}">
+                                    </div>
+                                    @endif
 
-                                @if (@$logos->logo3 != null)
-                                <div class="slide-logos">
-                                    <img style="width: 120px;" src="{{ asset( $logos->logo3) }}">
-                                </div>
-                                @else
-                                <div class="slide-logos">
-                                    <img src="{{ asset('user/assets/images/gas.png') }}">
-                                </div>
-                                @endif
+                                    @if (@$logos->logo3 != null)
+                                    <div class="slide-logos">
+                                        <img style="width: 120px;" src="{{ asset( $logos->logo3) }}">
+                                    </div>
+                                    @else
+                                    <div class="slide-logos">
+                                        <img src="{{ asset('user/assets/images/gas.png') }}">
+                                    </div>
+                                    @endif
 
-                                @if (@$logos->logo4 != null)
-                                <div class="slide-logos">
-                                    <img style="width: 120px;" src="{{ asset( $logos->logo4) }}">
-                                </div>
-                                @else
-                                <div class="slide-logos">
-                                    <img src="{{ asset('user/assets/images/gas.png') }}">
-                                </div>
-                                @endif
+                                    @if (@$logos->logo4 != null)
+                                    <div class="slide-logos">
+                                        <img style="width: 120px;" src="{{ asset( $logos->logo4) }}">
+                                    </div>
+                                    @else
+                                    <div class="slide-logos">
+                                        <img src="{{ asset('user/assets/images/gas.png') }}">
+                                    </div>
+                                    @endif
 
-                                @if (@$logos->logo5 != null)
-                                <div class="slide-logos">
-                                    <img style="width: 120px;" src="{{ asset( $logos->logo5) }}">
-                                </div>
-                                @else
-                                <div class="slide-logos">
-                                    <img src="{{ asset('user/assets/images/mci.png') }}">
-                                </div>
-                                @endif
+                                    @if (@$logos->logo5 != null)
+                                    <div class="slide-logos">
+                                        <img style="width: 120px;" src="{{ asset( $logos->logo5) }}">
+                                    </div>
+                                    @else
+                                    <div class="slide-logos">
+                                        <img src="{{ asset('user/assets/images/mci.png') }}">
+                                    </div>
+                                    @endif
 
-                                @if (@$logos->logo6 != null)
-                                <div class="slide-logos">
-                                    <img style="width: 120px;" src="{{ asset( $logos->logo6) }}">
-                                </div>
-                                @else
-                                <div class="slide-logos">
-                                    <img src="{{ asset('user/assets/images/gas.png') }}">
-                                </div>
-                                @endif
+                                    @if (@$logos->logo6 != null)
+                                    <div class="slide-logos">
+                                        <img style="width: 120px;" src="{{ asset( $logos->logo6) }}">
+                                    </div>
+                                    @else
+                                    <div class="slide-logos">
+                                        <img src="{{ asset('user/assets/images/gas.png') }}">
+                                    </div>
+                                    @endif
 
-                                @if (@$logos->logo7 != null)
-                                <div class="slide-logos">
-                                    <img style="width: 120px;" src="{{ asset( $logos->logo7) }}">
-                                </div>
-                                @else
-                                <div class="slide-logos">
-                                    <img src="{{ asset('user/assets/images/gas.png') }}">
-                                </div>
-                                @endif
+                                    @if (@$logos->logo7 != null)
+                                    <div class="slide-logos">
+                                        <img style="width: 120px;" src="{{ asset( $logos->logo7) }}">
+                                    </div>
+                                    @else
+                                    <div class="slide-logos">
+                                        <img src="{{ asset('user/assets/images/gas.png') }}">
+                                    </div>
+                                    @endif
 
-                                @if (@$logos->logo8 != null)
-                                <div class="slide-logos">
-                                    <img style="width: 120px;" src="{{ asset( $logos->logo8) }}">
+                                    @if (@$logos->logo8 != null)
+                                    <div class="slide-logos">
+                                        <img style="width: 120px;" src="{{ asset( $logos->logo8) }}">
+                                    </div>
+                                    @else
+                                    <div class="slide-logos">
+                                        <img src="{{ asset('user/assets/images/gas.png') }}">
+                                    </div>
+                                    @endif
                                 </div>
-                                @else
-                                <div class="slide-logos">
-                                    <img src="{{ asset('user/assets/images/gas.png') }}">
-                                </div>
-                                @endif
-                            </div>
-                            <div class="row pt-5 mt-5 align-items-end" dir="rtl">
-                                <div class="col-md-9 col-lg-7 res-width-64">
-                                    <div class="about-content" id="about-us" data-aos="fade-up">
-                                        <!-- <span class="outline dot right-center">+3D</span> -->
-                                        @if ($about != null)
+                                <div class="row pt-5 mt-5 align-items-end" dir="rtl">
+                                    <div class="col-md-9 col-lg-7 res-width-64">
+                                        <div class="about-content" id="about-us" data-aos="fade-up">
+                                            <!-- <span class="outline dot right-center">+3D</span> -->
+                                            @if ($about != null)
 
-                                        <h1 class="modal-title color-blue text-center line-heading">
-                                            <span class="outline dot right-center">+3D</span>
-                                            <span class="btm-line"><span class="inner-line"></span>{{
+                                            <h1 class="modal-title color-blue text-center line-heading">
+                                                <span class="outline dot right-center">+3D</span>
+                                                <span class="btm-line"><span class="inner-line"></span>{{
                                                     @$about->heading }}</span>
-                                        </h1>
-                                        @else
-                                        <h1 class="modal-title color-blue text-center line-heading">
-                                            <span class="outline dot right-center">+3D</span>
-                                            <span class="btm-line"><span class="inner-line"></span> من نحن
-                                            </span>
-                                        </h1>
-                                        @endif
-                                        @if ($about != null)
-                                        <p class="description">
-                                            {!! @$about->bodytext !!}
+                                            </h1>
                                             @else
-                                        <div class="description text-center">
-                                            هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا
-                                            النص من
-                                            مولد النص العربى، حيث
-                                            يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة
-                                            عدد
-                                            الحروف
-                                            التى يولدها
-                                            التطبيق.
-                                        </div>
-                                        @endif
-                                        <div class="actions">
-                                            <button class="btn btn-sky invert" data-bs-toggle="modal" data-bs-target="#aboutModal">
-                                                المزيد
-                                                <img src="{{ asset('user/assets/icons/arrow-right.svg') }}" alt="arrow-right">
-                                            </button>
+                                            <h1 class="modal-title color-blue text-center line-heading">
+                                                <span class="outline dot right-center">+3D</span>
+                                                <span class="btm-line"><span class="inner-line"></span> من نحن
+                                                </span>
+                                            </h1>
+                                            @endif
+                                            @if ($about != null)
+                                            <p class="description">
+                                                {!! @$about->bodytext !!}
+                                                @else
+                                            <div class="description text-center">
+                                                هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا
+                                                النص من
+                                                مولد النص العربى، حيث
+                                                يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة
+                                                عدد
+                                                الحروف
+                                                التى يولدها
+                                                التطبيق.
+                                            </div>
+                                            @endif
+                                            <div class="actions">
+                                                <button class="btn btn-sky invert" data-bs-toggle="modal"
+                                                    data-bs-target="#aboutModal">
+                                                    المزيد
+                                                    <img src="{{ asset('user/assets/icons/arrow-right.svg') }}"
+                                                        alt="arrow-right">
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-md-12 col-lg-5 res-width-36">
-                                    <figcaption class="map-cap">
-                                        <h6>مقر العمل</h6>
-                                        <p>الرياض، المونسية، شارع احمد بن حنبل</p>
-                                    </figcaption>
-                                    <div class="map-place boxContainer" data-aos="zoom-in">
-                                        <div class="blue-box move-box"></div>
-                                        @if (@$map->map_image != null)
+                                    <div class="col-md-12 col-lg-5 res-width-36">
+                                        <figcaption class="map-cap">
+                                            <h6>مقر العمل</h6>
+                                            <p>الرياض، المونسية، شارع احمد بن حنبل</p>
+                                        </figcaption>
+                                        <div class="map-place boxContainer" data-aos="zoom-in">
+                                            <div class="blue-box move-box"></div>
+                                            @if (@$map->map_image != null)
 
-                                        <img src="{{ asset( $map->map_image) }}" width="550" height="300" style="border:0;" allowfullscreen="" loading="lazy"></img>
+                                            <img src="{{ asset( $map->map_image) }}" width="550" height="300"
+                                                style="border:0;" allowfullscreen="" loading="lazy"></img>
 
-                                        @else
-                                        <img src="{{ asset('user/assets/images/world-map.jpg') }}" width="550" height="300" style="border:0;" allowfullscreen="" loading="lazy"></img>
-                                        @endif
+                                            @else
+                                            <img src="{{ asset('user/assets/images/world-map.jpg') }}" width="550"
+                                                height="300" style="border:0;" allowfullscreen="" loading="lazy"></img>
+                                            @endif
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-    </section>
+        </section>
 
-    <section class="request section" id="services-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="main dot-txt-main" data-aos="fade-up">
-                        <span class="outline dot center">إختيار نوع الخدمة</span>
-                        <h1 class="title"><span class="btm-line"><span class="inner-line"></span>
-                                قدم طلبك
-                            </span></h1>
-                        <div class="description">
-                            <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد
-                                النص العربى، حيث
-                                يمكنك
-                                أن
-                                تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها
-                                التطبيق.</p>
+        <section class="request section" id="services-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="main dot-txt-main" data-aos="fade-up">
+                            <span class="outline dot center">إختيار نوع الخدمة</span>
+                            <h1 class="title"><span class="btm-line"><span class="inner-line"></span>
+                                    قدم طلبك
+                                </span></h1>
+                            <div class="description">
+                                <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد
+                                    النص العربى، حيث
+                                    يمكنك
+                                    أن
+                                    تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها
+                                    التطبيق.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6 dot-txt-main">
-                    <div class="image-place dot-effect" id="main-effect" data-aos="zoom-in" data-aos-offset="500">
-                        <div class="pointer head">
-                            <p>الجمجمة</p>
+                <div class="row">
+                    <div class="col-md-6 dot-txt-main">
+                        <div class="image-place dot-effect" id="main-effect" data-aos="zoom-in" data-aos-offset="500">
+                            <div class="pointer head">
+                                <p>الجمجمة</p>
+                            </div>
+                            <div class="pointer arm">
+                                <p>اليدين</p>
+                            </div>
+                            <div class="pointer chest">
+                                <p></p>
+                            </div>
+                            <div class="pointer foot">
+                                <p>الساقين</p>
+                            </div>
+                            <img src="{{ asset('user/assets/images/man-sitting.png') }}"
+                                class="img-fluid mx-auto d-block mt-5 mt-md-0 mt-lg-0 mt-xl-4" alt="man-sitting"
+                                width="500">
                         </div>
-                        <div class="pointer arm">
-                            <p>اليدين</p>
-                        </div>
-                        <div class="pointer chest">
-                            <p></p>
-                        </div>
-                        <div class="pointer foot">
-                            <p>الساقين</p>
-                        </div>
-                        <img src="{{ asset('user/assets/images/man-sitting.png') }}" class="img-fluid mx-auto d-block mt-5 mt-md-0 mt-lg-0 mt-xl-4" alt="man-sitting" width="500">
-                    </div>
-                    <div class="pt-5 pt-md-1 pt-lg-4 pt-xl-4 pt-xxl-4 medical-animate" data-aos="fade-up" data-aos-offset="200">
-                        <span class="outline dot right left-right-h">أكثر من 13 عضو اصطناعي</span>
-                        <h1 class="modal-title right-center"><span class="btm-line"><span class="inner-line"></span>
+                        <div class="pt-5 pt-md-1 pt-lg-4 pt-xl-4 pt-xxl-4 medical-animate" data-aos="fade-up"
+                            data-aos-offset="200">
+                            <span class="outline dot right left-right-h">أكثر من 13 عضو اصطناعي</span>
+                            <h1 class="modal-title right-center"><span class="btm-line"><span class="inner-line"></span>
 
-                                الخدمات الطبية
-                            </span> </h1>
-                        <div class="description">
-                            <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد
-                                النص العربى، حيث
-                                يمكنك
-                                أن
-                                تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها
-                                التطبيق.</p>
-                        </div>
-                        <div class="actions">
+                                    الخدمات الطبية
+                                </span> </h1>
+                            <div class="description">
+                                <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد
+                                    النص العربى، حيث
+                                    يمكنك
+                                    أن
+                                    تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها
+                                    التطبيق.</p>
+                            </div>
+                            <div class="actions">
+                                @auth
+                                <button class="btn btn-grey" data-bs-toggle="modal"
+                                    data-bs-target="#healthServiesModal"><img
+                                        src="{{ asset('user/assets/icons/arrow-right.svg') }}" alt="arrow-right">
+                                    طلب
+                                    الخدمة</button>
+                                @else
+                                <button class="btn btn-grey authmasg-health"><img
+                                        src="{{ asset('user/assets/icons/arrow-right.svg') }}" alt="arrow-right">
+                                    طلب
+                                    الخدمة</button>
+
+                                @endauth
+
+                                <button class="btn btn-video" data-bs-toggle="modal"
+                                    data-bs-target="#healthVideoModal"><img
+                                        src="{{ asset('user/assets/icons/video.svg') }}" alt="video"> فيديو
+                                    تعريفي</button>
+                                <p class='koib-health d-none mt-5 nav-link'><span style="color:red"> يتطلب التسجيل
+                                    </span><a href="#" data-bs-toggle="modal" data-bs-target="#loginModal"> للتسجيل اضغط
+                                        هنا</a></p>
+                            </div>
                             @auth
-                            <button class="btn btn-grey" data-bs-toggle="modal" data-bs-target="#healthServiesModal"><img src="{{ asset('user/assets/icons/arrow-right.svg') }}" alt="arrow-right">
-                                طلب
-                                الخدمة</button>
-                            @else
-                            <button class="btn btn-grey authmasg-health"><img src="{{ asset('user/assets/icons/arrow-right.svg') }}" alt="arrow-right">
-                                طلب
-                                الخدمة</button>
-
+                            @if(@$orders->count() > 0 )
+                            <div class="notification-box">
+                                <p><span class="notification">{{count($orders)}}
+                                    </span>طلبات قائمة</p>
+                            </div>
+                            @endif
                             @endauth
+                        </div>
+                    </div>
+                    <div class="col-md-6 dot-txt-main-left">
+                        <div class="image-place effect-machine" data-aos="zoom-in" data-aos-offset="500"
+                            id="main-macine">
+                            <div class="pointer top">
+                                <p>مجسمات كبيرة</p>
+                            </div>
+                            <div class="pointer bottom">
+                                <p>مجسمات صغيرة</p>
+                            </div>
+                            <img src="{{ asset('user/assets/images/machine.png') }}" class="img-fluid" alt="machine">
+                        </div>
+                        <div class="pt-5 public-animate" data-aos="fade-up" data-aos-offset="200">
+                            <span class="outline dot left left-right-h">أكثر 20 خدمة مختلفة</span>
+                            <h1 class="modal-title left"><span class="btm-line"><span class="inner-line"></span>
+                                    الخدمات العامة
+                                </span></h1>
+                            <div class="description">
+                                <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد
+                                    النص العربى، حيث
+                                    يمكنك
+                                    أن
+                                    تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها
+                                    التطبيق.</p>
+                            </div>
+                            <div class="actions">
+                                <button class="btn btn-video" data-bs-toggle="modal"
+                                    data-bs-target="#publicVideoModal"><img
+                                        src="{{ asset('user/assets/icons/video.svg') }}" alt="video"> فيديو
+                                    تعريفي</button>
+                                @auth
+                                <button class="btn btn-grey invert" data-bs-toggle="modal"
+                                    data-bs-target="#publicServiesModal"><img
+                                        src="{{ asset('user/assets/icons/arrow-right.svg') }}" alt="arrow-right">
+                                    طلب
+                                    الخدمة</button>
+                                @else
+                                <button class="btn btn-grey invert authmasg"><img
+                                        src="{{ asset('user/assets/icons/arrow-right.svg') }}" alt="arrow-right">
+                                    طلب
+                                    الخدمة</button>
 
-                            <button class="btn btn-video" data-bs-toggle="modal" data-bs-target="#healthVideoModal"><img src="{{ asset('user/assets/icons/video.svg') }}" alt="video"> فيديو
-                                تعريفي</button>
-                            <p class='koib-health d-none mt-5 nav-link'><span style="color:red"> يتطلب التسجيل
-                                </span><a href="#" data-bs-toggle="modal" data-bs-target="#loginModal"> للتسجيل اضغط
-                                    هنا</a></p>
-                        </div>
-                        @auth
-                        @if(@$orders->count() > 0 )
-                        <div class="notification-box">
-                            <p><span class="notification">{{count($orders)}}
-                                </span>طلبات قائمة</p>
-                        </div>
-                        @endif
-                        @endauth
-                    </div>
-                </div>
-                <div class="col-md-6 dot-txt-main-left">
-                    <div class="image-place effect-machine" data-aos="zoom-in" data-aos-offset="500" id="main-macine">
-                        <div class="pointer top">
-                            <p>مجسمات كبيرة</p>
-                        </div>
-                        <div class="pointer bottom">
-                            <p>مجسمات صغيرة</p>
-                        </div>
-                        <img src="{{ asset('user/assets/images/machine.png') }}" class="img-fluid" alt="machine">
-                    </div>
-                    <div class="pt-5 public-animate" data-aos="fade-up" data-aos-offset="200">
-                        <span class="outline dot left left-right-h">أكثر 20 خدمة مختلفة</span>
-                        <h1 class="modal-title left"><span class="btm-line"><span class="inner-line"></span>
-                                الخدمات العامة
-                            </span></h1>
-                        <div class="description">
-                            <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد
-                                النص العربى، حيث
-                                يمكنك
-                                أن
-                                تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها
-                                التطبيق.</p>
-                        </div>
-                        <div class="actions">
-                            <button class="btn btn-video" data-bs-toggle="modal" data-bs-target="#publicVideoModal"><img src="{{ asset('user/assets/icons/video.svg') }}" alt="video"> فيديو
-                                تعريفي</button>
+                                <p class='koib d-none mt-5 nav-link'><span style="color:red"> يتطلب التسجيل </span><a
+                                        href="#" data-bs-toggle="modal" data-bs-target="#loginModal"> للتسجيل اضغط
+                                        هنا</a></p>
+                                @endauth
+
+                            </div>
                             @auth
-                            <button class="btn btn-grey invert" data-bs-toggle="modal" data-bs-target="#publicServiesModal"><img src="{{ asset('user/assets/icons/arrow-right.svg') }}" alt="arrow-right">
-                                طلب
-                                الخدمة</button>
-                            @else
-                            <button class="btn btn-grey invert authmasg"><img src="{{ asset('user/assets/icons/arrow-right.svg') }}" alt="arrow-right">
-                                طلب
-                                الخدمة</button>
-
-                            <p class='koib d-none mt-5 nav-link'><span style="color:red"> يتطلب التسجيل </span><a href="#" data-bs-toggle="modal" data-bs-target="#loginModal"> للتسجيل اضغط
-                                    هنا</a></p>
+                            @if(@$publics->count() >0 )
+                            <div class="notification-box mobile">
+                                <p><span class="notification">{{count($publics)}}
+                                    </span>طلبات قائمة</p>
+                            </div>
+                            @endif
                             @endauth
-
                         </div>
-                        @auth
-                        @if(@$publics->count() >0 )
-                        <div class="notification-box mobile">
-                            <p><span class="notification">{{count($publics)}}
-                                </span>طلبات قائمة</p>
-                        </div>
-                        @endif
-                        @endauth
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
 
-    <!-- ahsan html start here -->
-    <section class="mujtmah-almusmamen" id="design">
-        <div class="container-m">
-            <div class="mujtmah-almusmamen-heading-wrapper" data-aos="fade-up">
-                <div class="mujtmah-heading-box">
-                    <div class="sub-heading-box">
-                        <div class="red-dot"></div>
-                        <p class="sub-heading-box__heading">إختيار نوع الخدمة</p>
+        <!-- ahsan html start here -->
+        <section class="mujtmah-almusmamen" id="design">
+            <div class="container-m">
+                <div class="mujtmah-almusmamen-heading-wrapper" data-aos="fade-up">
+                    <div class="mujtmah-heading-box">
+                        <div class="sub-heading-box">
+                            <div class="red-dot"></div>
+                            <p class="sub-heading-box__heading">إختيار نوع الخدمة</p>
+                        </div>
+                        <div class="heading-box">
+                            <h1 class="mujtmah-almusmamen__heading">مجتمع المصممين</h1>
+                            <div class="heading-box__underline"></div>
+                        </div>
                     </div>
-                    <div class="heading-box">
-                        <h1 class="mujtmah-almusmamen__heading">مجتمع المصممين</h1>
-                        <div class="heading-box__underline"></div>
-                    </div>
+                    <p class="mujtmah-almusmamen__para">
+                        هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى،
+                        حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها
+                        التطبيق.
+                    </p>
+                    <!-- <a href="#" class="m-btn mujtmah-almusmamen-btn">تعرف أكثر</a> -->
+                    <button type="button" class="m-btn mujtmah-almusmamen-btn" data-bs-toggle="modal"
+                        data-bs-target="#designModal">
+                        تعرف أكثر
+                    </button>
                 </div>
-                <p class="mujtmah-almusmamen__para">
-                    هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى،
-                    حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها
-                    التطبيق.
-                </p>
-                <!-- <a href="#" class="m-btn mujtmah-almusmamen-btn">تعرف أكثر</a> -->
-                <button type="button" class="m-btn mujtmah-almusmamen-btn" data-bs-toggle="modal" data-bs-target="#designModal">
-                    تعرف أكثر
-                </button>
-            </div>
-            <div class="mujtmah-almusmamen-wrapper wrapper jst-btw">
-                <div class="mujtmah-box">
-                    <div class="mujtmah-box__content" data-aos="fade-up" data-aos-offset="200">
-                        <h1 class="mujtmah-box__heading">هل أنت مصمم 3D ؟</h1>
-                        <p class="mujtmah-box__para">
-                            هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص
-                            العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد
-                            الحروف التى يولدها التطبيق.
-                        </p>
-                        <div class="mujtmah-box-btn-wrapper wrapper al-center">
-                            <button class="m-btn mujtmah-box-btn btn-white-1" data-bs-toggle="modal" data-bs-target="#registerModal">
-                                <img src="{{ asset('user/assets/images/arrow-8.png') }}" class="mujtmah-box-btn__img"> سجل الان
-                            </button>
-                            <button class="m-btn mujtmah-box-btn" data-bs-toggle="modal" data-bs-target="#userRequestModal">
-                                <img src="{{ asset('user/assets/images/video.png') }}" class="mujtmah-box-btn__img2">فيديو تعريفي
-                            </button>
+                <div class="mujtmah-almusmamen-wrapper wrapper jst-btw">
+                    <div class="mujtmah-box">
+                        <div class="mujtmah-box__content" data-aos="fade-up" data-aos-offset="200">
+                            <h1 class="mujtmah-box__heading">هل أنت مصمم 3D ؟</h1>
+                            <p class="mujtmah-box__para">
+                                هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص
+                                العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد
+                                الحروف التى يولدها التطبيق.
+                            </p>
+                            <div class="mujtmah-box-btn-wrapper wrapper al-center">
+                                <button class="m-btn mujtmah-box-btn btn-white-1" data-bs-toggle="modal"
+                                    data-bs-target="#registerModal">
+                                    <img src="{{ asset('user/assets/images/arrow-8.png') }}"
+                                        class="mujtmah-box-btn__img"> سجل الان
+                                </button>
+                                <button class="m-btn mujtmah-box-btn" data-bs-toggle="modal"
+                                    data-bs-target="#userRequestModal">
+                                    <img src="{{ asset('user/assets/images/video.png') }}"
+                                        class="mujtmah-box-btn__img2">فيديو تعريفي
+                                </button>
 
+                            </div>
+                            <div class="notification-box me-0 notification-box-wdt">
+                                <p><span class="notification">
+                                        1</span>طلبات قائمة</p>
+                            </div>
                         </div>
-                        <div class="notification-box me-0 notification-box-wdt">
-                            <p><span class="notification">
-                                    1</span>طلبات قائمة</p>
+                        <div class="mujtmah-box__media" data-aos="zoom-in" data-aos-offset="500">
+                            <img src="{{ asset('user/assets/images/mujtmah-box__image.png') }}"
+                                class="mujtmah-box__image">
+                            <div class="mujtmah-box__count">
+                                <h1 class="mujtmah-box__count-heading">+50</h1>
+                                <p class="mujtmah-box__count-sub-heading">مصمم</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="mujtmah-box__media" data-aos="zoom-in" data-aos-offset="500">
-                        <img src="{{ asset('user/assets/images/mujtmah-box__image.png') }}" class="mujtmah-box__image">
-                        <div class="mujtmah-box__count">
-                            <h1 class="mujtmah-box__count-heading">+50</h1>
-                            <p class="mujtmah-box__count-sub-heading">مصمم</p>
+                    <div class="mujtmah-box2">
+                        <div class="mujtmah-box__media" data-aos="zoom-in" data-aos-offset="500">
+                            <div class="mujtmah-box__count2">
+                                <h1 class="mujtmah-box__count-heading">+40</h1>
+                                <p class="mujtmah-box__count-sub-heading">عميل</p>
+                            </div>
+                            <img src="{{ asset('user/assets/images/mujtmah-box__image3.png') }}"
+                                class="mujtmah-box__image">
                         </div>
-                    </div>
-                </div>
-                <div class="mujtmah-box2">
-                    <div class="mujtmah-box__media" data-aos="zoom-in" data-aos-offset="500">
-                        <div class="mujtmah-box__count2">
-                            <h1 class="mujtmah-box__count-heading">+40</h1>
-                            <p class="mujtmah-box__count-sub-heading">عميل</p>
-                        </div>
-                        <img src="{{ asset('user/assets/images/mujtmah-box__image3.png') }}" class="mujtmah-box__image">
-                    </div>
-                    <div class="mujtmah-box__content" data-aos="fade-up" data-aos-offset="200">
-                        <h1 class="mujtmah-box__heading">هل تحتاج مصمم 3D ؟</h1>
-                        <p class="mujtmah-box__para">
-                            هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص
-                            العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد
-                            الحروف التى يولدها التطبيق.
-                        </p>
-                        <div class="mujtmah-box-btn-wrapper wrapper al-center mb-3">
-                            <button data-bs-toggle="modal" data-bs-target="#financialOperations2" class="m-btn mujtmah-box-btn ml-3">
-                                <img src="{{ asset('user/assets/images/video.png') }}" class="mujtmah-box-btn__img2">فيديو تعريفي
-                            </button>
-                            <button data-bs-toggle="modal" data-bs-target="#financialOperations" class="m-btn mujtmah-box-btn btn-white-1">
-                                أطلب الان
-                                <img src="{{ asset('user/assets/images/arrow-8.png') }}" class="mujtmah-box-btn__img mgl-0 mujtmah-box-btn__img3">
-                            </button>
-                            <!-- <button data-bs-toggle="modal" data-bs-target="#designModal"
+                        <div class="mujtmah-box__content" data-aos="fade-up" data-aos-offset="200">
+                            <h1 class="mujtmah-box__heading">هل تحتاج مصمم 3D ؟</h1>
+                            <p class="mujtmah-box__para">
+                                هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص
+                                العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد
+                                الحروف التى يولدها التطبيق.
+                            </p>
+                            <div class="mujtmah-box-btn-wrapper wrapper al-center mb-3">
+                                <button data-bs-toggle="modal" data-bs-target="#financialOperations2"
+                                    class="m-btn mujtmah-box-btn ml-3">
+                                    <img src="{{ asset('user/assets/images/video.png') }}"
+                                        class="mujtmah-box-btn__img2">فيديو تعريفي
+                                </button>
+                                <button data-bs-toggle="modal" data-bs-target="#financialOperations"
+                                    class="m-btn mujtmah-box-btn btn-white-1">
+                                    أطلب الان
+                                    <img src="{{ asset('user/assets/images/arrow-8.png') }}"
+                                        class="mujtmah-box-btn__img mgl-0 mujtmah-box-btn__img3">
+                                </button>
+                                <!-- <button data-bs-toggle="modal" data-bs-target="#designModal"
                                     class="m-btn mujtmah-box-btn btn-white-1">
                                 أطلب الان
                                     <img src="{{ asset('user/assets/images/arrow-8.png') }}"
                                     class="mujtmah-box-btn__img mgl-0 mujtmah-box-btn__img2">
                                 </button> -->
-                        </div>
-                        <div class="mujtmah-box__wrapper wrapper al-center">
-                            <p class="mujtmah-box__link1 mgl-2">يتطلب تسجيل</p>
-                            <button class="mujtmah-box__link2" data-bs-toggle="modal" data-bs-target="#registerModal">للتسجيل اضغط هنا</button>
-                        </div>
-                        <div class="notification-box me-0 notification-box-wdt">
-                            <p><span class="notification">
-                                    1</span>طلبات قائمة</p>
+                            </div>
+                            <div class="mujtmah-box__wrapper wrapper al-center">
+                                <p class="mujtmah-box__link1 mgl-2">يتطلب تسجيل</p>
+                                <button class="mujtmah-box__link2" data-bs-toggle="modal"
+                                    data-bs-target="#registerModal">للتسجيل اضغط هنا</button>
+                            </div>
+                            <div class="notification-box me-0 notification-box-wdt">
+                                <p><span class="notification">
+                                        1</span>طلبات قائمة</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        </div>
+    </div>
     </section>
     <!-- ahsan html end here -->
 
@@ -1011,7 +1093,7 @@
 
                         @if (@$con->heading != null)
                         <h1 class="title white"> <span class="btm-line"> <span class="inner-line"> </span>{{
-                                    $con->heading }}</span> </h1>
+                                $con->heading }}</span> </h1>
                         @else
                         <h1 class="title white"><span class="btm-line"> <span class="inner-line"> </span>
                                 اتصل بنا
@@ -1035,7 +1117,8 @@
                     </div>
                     <div class="map">
                         <img src="{{ asset('user/assets/images/map.svg') }}" class="img-fluid" alt="map">
-                        <button class="btn btn-sky">الخريطة <img src="{{ asset('user/assets/icons/arrow.svg') }}" alt="arrow"></button>
+                        <button class="btn btn-sky">الخريطة <img src="{{ asset('user/assets/icons/arrow.svg') }}"
+                                alt="arrow"></button>
                     </div>
                     <div class="row  justify-content-center">
                         <div class="col-6 col-md-6 col-lg-4 col-xl-3">
@@ -1097,7 +1180,8 @@
                     <div class="col-md-4 col-xl-4">
                         <div class="right">
                             <p>تصميم وتطوير شركة تيلرز</p>
-                            <a href="https://tellers.sa/"><img src="{{ asset('user/assets/icons/tellers-logo.svg') }}" alt="tellers-logo"></a>
+                            <a href="https://tellers.sa/"><img src="{{ asset('user/assets/icons/tellers-logo.svg') }}"
+                                    alt="tellers-logo"></a>
                         </div>
                     </div>
                     <div class="col-md-5 col-xl-4">
@@ -1106,7 +1190,8 @@
                     <div class="col-md-3 col-xl-4">
                         <div class="social">
                             <a href="#"><img src="{{ asset('user/assets/icons/twitter-white.svg') }}" alt="twitter"></a>
-                            <a href="#"><img src="{{ asset('user/assets/icons/instagram-white.svg') }}" alt="instagram"></a>
+                            <a href="#"><img src="{{ asset('user/assets/icons/instagram-white.svg') }}"
+                                    alt="instagram"></a>
                         </div>
                     </div>
                 </div>
@@ -1130,7 +1215,8 @@
                     <div class="row">
                         <div class="col-md-12 p-0">
                             <div class="modal-header border-0">
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
                                 <div>
                                     <span class="outline dot">إختيار نوع الخدمة</span>
                                     <h1 class="modal-title right centr-main-title">
@@ -1169,7 +1255,8 @@
                                         </div>
                                         <div class="row">
                                             <div class="col-md-6 dot-txt-main pb-4">
-                                                <div class="image-place dot-effect" data-aos="zoom-in" data-aos-offset="500">
+                                                <div class="image-place dot-effect" data-aos="zoom-in"
+                                                    data-aos-offset="500">
                                                     <div class="pointer head">
                                                         <p>الجمجمة</p>
                                                     </div>
@@ -1182,9 +1269,12 @@
                                                     <div class="pointer foot">
                                                         <p>الساقين</p>
                                                     </div>
-                                                    <img src="{{asset('user/assets/images/man-sitting.png')}}" class="img-fluid mx-auto d-block mt-5 mt-md-0 mt-lg-0 mt-xl-1" alt="man-sitting" width="500">
+                                                    <img src="{{asset('user/assets/images/man-sitting.png')}}"
+                                                        class="img-fluid mx-auto d-block mt-5 mt-md-0 mt-lg-0 mt-xl-1"
+                                                        alt="man-sitting" width="500">
                                                 </div>
-                                                <div class="pt-5 pt-md-1 pt-lg-5 pt-xl-5 pt-xxl-5 medical-animate" data-aos="fade-up" data-aos-offset="200">
+                                                <div class="pt-5 pt-md-1 pt-lg-5 pt-xl-5 pt-xxl-5 medical-animate"
+                                                    data-aos="fade-up" data-aos-offset="200">
                                                     <span class="outline dot right">أكثر من 13 عضو اصطناعي</span>
                                                     <h1 class="modal-title right-center">الخدمات الطبية
                                                     </h1>
@@ -1197,24 +1287,34 @@
                                                             عدد الحروف التى يولدها التطبيق.</p>
                                                     </div>
                                                     <div class="actions">
-                                                        <button class="btn btn-grey" data-bs-toggle="modal" data-bs-target="#healthServiesModal"><img src="{{asset('user/assets/icons/arrow-right.svg')}}" alt="arrow-right"> طلب الخدمة</button>
-                                                        <button class="btn btn-video" data-bs-toggle="modal" data-bs-target="#healthVideoModal"><img src="{{asset('user/assets/icons/video.svg')}}" alt="video"> فيديو تعريفي</button>
+                                                        <button class="btn btn-grey" data-bs-toggle="modal"
+                                                            data-bs-target="#healthServiesModal"><img
+                                                                src="{{asset('user/assets/icons/arrow-right.svg')}}"
+                                                                alt="arrow-right"> طلب الخدمة</button>
+                                                        <button class="btn btn-video" data-bs-toggle="modal"
+                                                            data-bs-target="#healthVideoModal"><img
+                                                                src="{{asset('user/assets/icons/video.svg')}}"
+                                                                alt="video"> فيديو تعريفي</button>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 dot-txt-main-left pb-4" id="macine">
-                                                <div class="image-place effect-machine" data-aos="zoom-in" data-aos-offset="500">
+                                                <div class="image-place effect-machine" data-aos="zoom-in"
+                                                    data-aos-offset="500">
                                                     <div class="pointer top">
                                                         <p>مجسمات كبيرة</p>
                                                     </div>
                                                     <div class="pointer bottom">
                                                         <p>مجسمات صغيرة</p>
                                                     </div>
-                                                    <img src="{{asset('user/assets/images/machine.png')}}" class="img-fluid" alt="machine">
+                                                    <img src="{{asset('user/assets/images/machine.png')}}"
+                                                        class="img-fluid" alt="machine">
                                                 </div>
-                                                <div class="pt-5 public-animate" data-aos="fade-up" data-aos-offset="200">
+                                                <div class="pt-5 public-animate" data-aos="fade-up"
+                                                    data-aos-offset="200">
                                                     <span class="outline dot left ">أكثر 20 خدمة مختلفة</span>
-                                                    <h1 class="modal-title left"><span class="btm-line"><span class="inner-line"></span>
+                                                    <h1 class="modal-title left"><span class="btm-line"><span
+                                                                class="inner-line"></span>
                                                             الخدمات العامة
                                                         </span> </h1>
                                                     <div class="description">
@@ -1226,8 +1326,14 @@
                                                             عدد الحروف التى يولدها التطبيق.</p>
                                                     </div>
                                                     <div class="actions">
-                                                        <button class="btn btn-video" data-bs-toggle="modal" data-bs-target="#publicVideoModal"><img src="{{asset('user/assets/icons/video.svg')}}" alt="video"> فيديو تعريفي</button>
-                                                        <button class="btn btn-grey invert" data-bs-toggle="modal" data-bs-target="#publicServiesModal"><img src="{{asset('user/assets/icons/arrow-right.svg')}}" alt="arrow-right"> طلب الخدمة</button>
+                                                        <button class="btn btn-video" data-bs-toggle="modal"
+                                                            data-bs-target="#publicVideoModal"><img
+                                                                src="{{asset('user/assets/icons/video.svg')}}"
+                                                                alt="video"> فيديو تعريفي</button>
+                                                        <button class="btn btn-grey invert" data-bs-toggle="modal"
+                                                            data-bs-target="#publicServiesModal"><img
+                                                                src="{{asset('user/assets/icons/arrow-right.svg')}}"
+                                                                alt="arrow-right"> طلب الخدمة</button>
                                                     </div>
 
                                                 </div>
@@ -1264,67 +1370,18 @@
                             <div class="modal-body">
 
 
-              
-  <!-- header designer start here -->
-  <div class="toggle-overlay"></div>
-    <div class="content-wrapper hide-on-load">
-        <nav class="navbar navbar-expand-lg navbar-light desktop-nav">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img src="{{ asset('user/assets/icons/logo.svg') }}" alt="3dOrgans-logo" width="150" class="d-inline-block align-text-top">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#">الرئيسية</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#about-us">
-                                من نحن
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">ماهي
-                                تقنية الـ 3D</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#services-section" class="nav-link">الخدمات</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">مجتمع المصممين</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link close-modal" href="#contact-us">اتصل بنا</a>
-                        </li>
-                        <li class="mobile-menu">
-                            <div class="left-side">
-                                <a href="#membership" class="m-0" data-bs-toggle="modal" data-bs-target="#memberModal"><img src="{{ asset('user/assets/icons/avatar.svg') }}" class="profile-img" alt="avatar"></a>
-                                @auth
-                                <a href="#membership" class="dot m-0 border-bottom" data-bs-toggle="modal" data-bs-target="#memberModal">{{ auth()->user()->name }}!</a>
-                                @endauth
-                                <a href="#requests" class="ms-auto dot border-bottom " data-bs-toggle="modal" data-bs-target="#requestsModal">طلباتي    {</a>
-                             
-                               
-                                <span>
-                                    <a href="#"><img src="{{ asset('user/assets/icons/twitter.svg') }}" alt="twitter"></a>
-                                    <a href="#"><img src="{{ asset('user/assets/icons/instagram.svg') }}" alt="instagram"></a>
-                                </span>
-                            </div>
-                        </li>
-
-
                                 <!-- header designer start here -->
                                 <div class="toggle-overlay"></div>
                                 <div class="content-wrapper hide-on-load">
                                     <nav class="navbar navbar-expand-lg navbar-light desktop-nav">
                                         <div class="container-fluid">
                                             <a class="navbar-brand" href="#">
-                                                <img src="{{ asset('user/assets/icons/logo.svg') }}" alt="3dOrgans-logo" width="150" class="d-inline-block align-text-top">
+                                                <img src="{{ asset('user/assets/icons/logo.svg') }}" alt="3dOrgans-logo"
+                                                    width="150" class="d-inline-block align-text-top">
                                             </a>
-                                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#navbarNav" aria-controls="navbarNav"
+                                                aria-expanded="false" aria-label="Toggle navigation">
                                                 <span class="navbar-toggler-icon"></span>
                                             </button>
                                             <div class="collapse navbar-collapse" id="navbarNav">
@@ -1352,14 +1409,25 @@
                                                     </li>
                                                     <li class="mobile-menu">
                                                         <div class="left-side">
-                                                            <a href="#membership" class="m-0" data-bs-toggle="modal" data-bs-target="#memberModal"><img src="{{ asset('user/assets/icons/avatar.svg') }}" class="profile-img" alt="avatar"></a>
+                                                            <a href="#membership" class="m-0" data-bs-toggle="modal"
+                                                                data-bs-target="#memberModal"><img
+                                                                    src="{{ asset('user/assets/icons/avatar.svg') }}"
+                                                                    class="profile-img" alt="avatar"></a>
                                                             @auth
-                                                            <a href="#membership" class="dot m-0 border-bottom" data-bs-toggle="modal" data-bs-target="#memberModal">{{ auth()->user()->name }}!</a>
+                                                            <a href="#membership" class="dot m-0 border-bottom"
+                                                                data-bs-toggle="modal" data-bs-target="#memberModal">{{
+                                                                auth()->user()->name }}!</a>
                                                             @endauth
-                                                            <a href="#requests" class="ms-auto dot border-bottom " data-bs-toggle="modal" data-bs-target="#requestsModal">طلباتي</a>
+                                                            <a href="#requests" class="ms-auto dot border-bottom "
+                                                                data-bs-toggle="modal"
+                                                                data-bs-target="#requestsModal">طلباتي</a>
                                                             <span>
-                                                                <a href="#"><img src="{{ asset('user/assets/icons/twitter.svg') }}" alt="twitter"></a>
-                                                                <a href="#"><img src="{{ asset('user/assets/icons/instagram.svg') }}" alt="instagram"></a>
+                                                                <a href="#"><img
+                                                                        src="{{ asset('user/assets/icons/twitter.svg') }}"
+                                                                        alt="twitter"></a>
+                                                                <a href="#"><img
+                                                                        src="{{ asset('user/assets/icons/instagram.svg') }}"
+                                                                        alt="instagram"></a>
                                                             </span>
                                                         </div>
                                                     </li>
@@ -1369,394 +1437,466 @@
                                             @auth
                                             <div class="left-side desktop-menu">
 
-                                                <a href="#membership" class="m-0" data-bs-toggle="modal" data-bs-target="#memberModal">
+                                                <a href="#membership" class="m-0" data-bs-toggle="modal"
+                                                    data-bs-target="#memberModal">
                                                     {{-- @if (auth()->user()->profile != null)
-                                @if (@auth()->user()->profile == null)
-                                    <div class="profile-img">
-                                        <img src="{{ asset('assets/images/dashboard/1.png') }}" alt="">
+                                                    @if (@auth()->user()->profile == null)
+                                                    <div class="profile-img">
+                                                        <img src="{{ asset('assets/images/dashboard/1.png') }}" alt="">
+                                                    </div>
+                                                    @else
+                                                    <div class="profile-img">
+                                                        <img src="{{ asset('storage/' . auth()->user()->profile) }}"
+                                                            style="height:40px; width:40px; border-radius: 50%">
+
+                                                    </div>
+                                                    @endif
+                                                    <a href="#membership" class="dot m-0 border-bottom"
+                                                        data-bs-toggle="modal" data-bs-target="#memberModal">{{
+                                                        auth()->user()->name }}</a>
+                                                    --}}
+                                                    <a href="javascript:void(0);" class="m-0" data-bs-toggle="modal"
+                                                        data-bs-target="#memberModal2">
+                                                        {{-- @if (auth()->user()->profile != null) --}}
+                                                        @if (@auth()->user()->profile == null)
+                                                        <div class="profile profile-icon">
+                                                            <img src="{{ asset('assets/images/dashboard/1.png') }}"
+                                                                alt="">
+                                                        </div>
+                                                        @else
+                                                        <img class="" style="width:30px;height:30px;" alt=""
+                                                            src="{{ asset(Auth::user()->profile) }}">
+                                                        @endif
+
+                                                        <a href="#membership" class="dot ms-auto border-bottom"
+                                                            data-bs-toggle="modal" data-bs-target="#memberModal">{{
+                                                            auth()->user()->name }}</a>
+
+                                                        <a href="#requests" class="ms-auto dot border-bottom "
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target="#requestsModal">طلباتي</a>
+
+
+                                                        <a href="{{route('logout')}}" onclick="return logout(event);"
+                                                            class="ms-auto dot border-bottom"
+                                                            class="dot m-0 border-bottom">
+                                                            تسجيل خروج
+                                                        </a>
+                                                        <script type="text/javascript">
+                                                            function logout(event) {
+                                                                event.preventDefault();
+                                                                var check = confirm("هل تريد حقا الخروج؟");
+                                                                if (check) {
+                                                                    document.getElementById('logout-form').submit();
+                                                                }
+                                                            }
+                                                        </script>
+                                                        <form id="logout-form" action="{{ route('logout') }}"
+                                                            method="POST">
+                                                            @csrf
+
+                                                            <button hidden type="submit" class=" sub-slide-item"
+                                                                style=" color:red; background-color: Transparent; background-repeat:no-repeat; border: none; cursor:pointer; overflow: hidden; outline:none;">Log
+                                                                Out</button>
+
+                                                        </form>
+                                                        <span>
+
+                                                            <a href="#"><img
+                                                                    src="{{ asset('user/assets/icons/twitter.svg') }}"
+                                                                    alt="twitter"></a>
+                                                            <a href="#"><img
+                                                                    src="{{ asset('user/assets/icons/instagram.svg') }}"
+                                                                    alt="instagram"></a>
+                                                        </span>
                                             </div>
                                             @else
-                                            <div class="profile-img">
-                                                <img src="{{ asset( auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
-
-                                            </div>
-                                            @endif
-                                            <a href="#membership" class="dot m-0 border-bottom" data-bs-toggle="modal" data-bs-target="#memberModal">{{ auth()->user()->name }}</a>
-                                            --}}
-                                            <a href="javascript:void(0);" class="m-0" data-bs-toggle="modal" data-bs-target="#memberModal2">
-                                                {{-- @if (auth()->user()->profile != null) --}}
-                                                @if (@auth()->user()->profile == null)
-                                                <div class="profile profile-icon">
-                                                    <img src="{{ asset('assets/images/dashboard/1.png') }}" alt="">
-                                                </div>
-                                                @else
-                                                <img class="" style="width:30px;height:30px;" alt="" src="{{ asset(Auth::user()->profile) }}">
-                                                @endif
-
-                                                <a href="#membership" class="dot ms-auto border-bottom" data-bs-toggle="modal" data-bs-target="#memberModal">{{ auth()->user()->name }}</a>
-
-                                                <a href="#requests" class="ms-auto dot border-bottom " data-bs-toggle="modal" data-bs-target="#requestsModal">طلباتي</a>
-
-
-                                                <a href="{{route('logout')}}" onclick="return logout(event);" class="ms-auto dot border-bottom" class="dot m-0 border-bottom">
-                                                    تسجيل خروج
-                                                </a>
-                                                <script type="text/javascript">
-                                                    function logout(event) {
-                                                        event.preventDefault();
-                                                        var check = confirm("هل تريد حقا الخروج؟");
-                                                        if (check) {
-                                                            document.getElementById('logout-form').submit();
-                                                        }
-                                                    }
-                                                </script>
-                                                <form id="logout-form" action="{{ route('logout') }}" method="POST">
-                                                    @csrf
-
-                                                    <button hidden type="submit" class=" sub-slide-item" style=" color:red; background-color: Transparent; background-repeat:no-repeat; border: none; cursor:pointer; overflow: hidden; outline:none;">Log
-                                                        Out</button>
-
-                                                </form>
+                                            <div class="left-side">
+                                                <a href="#login" data-bs-toggle="modal" class="register-icon"
+                                                    data-bs-target="#loginModal">تسجيل دخول</a>
+                                                <a href="#register" class="ms-auto register-icon" data-bs-toggle="modal"
+                                                    data-bs-target="#registerModal">التسجيل</a>
                                                 <span>
-
-                                                    <a href="#"><img src="{{ asset('user/assets/icons/twitter.svg') }}" alt="twitter"></a>
-                                                    <a href="#"><img src="{{ asset('user/assets/icons/instagram.svg') }}" alt="instagram"></a>
+                                                    <a href="#"><img src="{{ asset('user/assets/icons/twitter.svg') }}"
+                                                            alt="twitter"></a>
+                                                    <a href="#"><img
+                                                            src="{{ asset('user/assets/icons/instagram.svg') }}"
+                                                            alt="instagram"></a>
                                                 </span>
+                                            </div>
+                                            @endauth
                                         </div>
-                                        @else
-                                        <div class="left-side">
-                                            <a href="#login" data-bs-toggle="modal" class="register-icon" data-bs-target="#loginModal">تسجيل دخول</a>
-                                            <a href="#register" class="ms-auto register-icon" data-bs-toggle="modal" data-bs-target="#registerModal">التسجيل</a>
-                                            <span>
-                                                <a href="#"><img src="{{ asset('user/assets/icons/twitter.svg') }}" alt="twitter"></a>
-                                                <a href="#"><img src="{{ asset('user/assets/icons/instagram.svg') }}" alt="instagram"></a>
-                                            </span>
-                                        </div>
-                                        @endauth
-                                </div>
-                                </nav>
+                                    </nav>
 
-                                <div id="wrapper" class="mobile-nav">
-                                    <div id="sidebar-wrapper">
-                                        <div class="area-brand">
-                                            <a class="" href="#">
-                                                <img src="{{ asset('user/assets/icons/logo.svg') }}" alt="3dOrgans-logo" width="150" class="d-inline-block align-text-top">
-                                            </a>
-                                        </div>
-                                        <div class="mmnue">
-                                            <ul class="sidebar-nav">
-                                                <li class="nav-item">
-                                                    <a class="nav-link" aria-current="page" href="#">الرئيسية</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a class="nav-link" href="#about-us">
-                                                        من نحن
-                                                    </a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a href="#" class="nav-link">ماهي
-                                                        تقنية الـ 3D</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a href="#services-section" class="nav-link">الخدمات</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a class="nav-link" href="#">مجتمع المصممين</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a class="nav-link close-modal" href="#contact-us">اتصل بنا</a>
-                                                </li>
-                                                @if(Auth::user())
-                                                <li class="nav-item pt-0"> <a href="#requests" class="nav-link ms-auto dot " data-bs-toggle="modal" data-bs-target="#requestsModal">طلباتي</a></li>
-                                                <li class="nav-item pt-0">
-                                                    <a class="nav-link dot" href="{{ route('logout') }} " onclick="event.preventDefault(); document.getElementById('frm-logout').submit();"><i data-feather="log-out"></i>تسجيل الخروج</a>
-                                                    <form id="frm-logout" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                                        @csrf
-                                                    </form>
-                                                </li>
-                                                @else
-                                                <li class="nav-item">
-
-                                                    <a href="#login" class="nav-link dot" data-bs-toggle="modal" data-bs-target="#loginModal">تسجيل دخول</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a href="#register" class="nav-link dot" data-bs-toggle="modal" data-bs-target="#registerModal">التسجيل</a>
-
-                                                </li>
-                                                @endif
-                                                <li class="">
-                                                    <div class="mobile-social-icon">
-
-                                                        <a href="#"><img src="{{ asset('user/assets/icons/twitter.svg') }}" alt="twitter"></a>
-                                                        <a href="#"><img src="{{ asset('user/assets/icons/instagram.svg') }}" alt="instagram"></a>
-
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <div id="page-content-wrapper">
-                                        <div class="container-fluid">
-                                            <div class="row">
-                                                <div class="col-md-6 col-sm-3 mobile-logo">
-
-                                                    <div class="area-brand">
-                                                        <a class="" href="#">
-                                                            <img src="{{ asset('user/assets/icons/logo.svg') }}" alt="3dOrgans-logo" width="150" class="d-inline-block align-text-top">
+                                    <div id="wrapper" class="mobile-nav">
+                                        <div id="sidebar-wrapper">
+                                            <div class="area-brand">
+                                                <a class="" href="#">
+                                                    <img src="{{ asset('user/assets/icons/logo.svg') }}"
+                                                        alt="3dOrgans-logo" width="150"
+                                                        class="d-inline-block align-text-top">
+                                                </a>
+                                            </div>
+                                            <div class="mmnue">
+                                                <ul class="sidebar-nav">
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" aria-current="page" href="#">الرئيسية</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="#about-us">
+                                                            من نحن
                                                         </a>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6 col-sm-9 mobile-pro-icon">
-                                                    <button class="btn mob-tog-btn" id="menu-toggle"><i class="fa-solid fa-bars"></i></button>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a href="#" class="nav-link">ماهي
+                                                            تقنية الـ 3D</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a href="#services-section" class="nav-link">الخدمات</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="#">مجتمع المصممين</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link close-modal" href="#contact-us">اتصل بنا</a>
+                                                    </li>
+                                                    @if(Auth::user())
+                                                    <li class="nav-item pt-0"> <a href="#requests"
+                                                            class="nav-link ms-auto dot " data-bs-toggle="modal"
+                                                            data-bs-target="#requestsModal">طلباتي</a></li>
+                                                    <li class="nav-item pt-0">
+                                                        <a class="nav-link dot" href="{{ route('logout') }} "
+                                                            onclick="event.preventDefault(); document.getElementById('frm-logout').submit();"><i
+                                                                data-feather="log-out"></i>تسجيل الخروج</a>
+                                                        <form id="frm-logout" action="{{ route('logout') }}"
+                                                            method="POST" style="display: none;">
+                                                            @csrf
+                                                        </form>
+                                                    </li>
+                                                    @else
+                                                    <li class="nav-item">
 
-                                                    <div class="mobile-profile">
+                                                        <a href="#login" class="nav-link dot" data-bs-toggle="modal"
+                                                            data-bs-target="#loginModal">تسجيل دخول</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a href="#register" class="nav-link dot" data-bs-toggle="modal"
+                                                            data-bs-target="#registerModal">التسجيل</a>
 
+                                                    </li>
+                                                    @endif
+                                                    <li class="">
+                                                        <div class="mobile-social-icon">
 
-                                                        <a href="#" class="m-0" data-bs-toggle="modal" data-bs-target="#memberModal"><img src="{{(@Auth::user()->profile == null) ?  asset('user/assets/icons/avatar.svg'): asset(Auth::user()->profile) }}" class="profile-img" alt="avatar"></a>
-                                                        @if(Auth::user())
-                                                        <a href="#" class="dot m-0 border-bottom" data-bs-toggle="modal" data-bs-target="#memberModal">{{ Auth::user()->name }}!</a>
-                                                        @endif
-                                                    </div>
+                                                            <a href="#"><img
+                                                                    src="{{ asset('user/assets/icons/twitter.svg') }}"
+                                                                    alt="twitter"></a>
+                                                            <a href="#"><img
+                                                                    src="{{ asset('user/assets/icons/instagram.svg') }}"
+                                                                    alt="instagram"></a>
 
-                                                </div>
-
+                                                        </div>
+                                                    </li>
+                                                </ul>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
 
-                                <!-- zahid page modal start here -->
+                                        <div id="page-content-wrapper">
+                                            <div class="container-fluid">
+                                                <div class="row">
+                                                    <div class="col-md-6 col-sm-3 mobile-logo">
 
-
-                                <section class="cleanshot">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-md-12 cleanshot-close-btn">
-                                                <button type="button" class="btn-close " data-bs-dismiss="modal" aria-label="Close"></button>
-                                            </div>
-                                        </div>
-                                        <div class="row cleanshot-row align-items-end">
-
-                                            <div class="col-md-8">
-                                                <div class="small-card wrapper al-center">
-                                                    <div class="small-card__images-box">
-                                                        <div class="small-card__images-box-shadow"></div>
-                                                        <img class="designer-8" src="{{ asset('user/assets/images/design-8.png') }}" alt="">
-                                                        <div class="small-card__images-text al-center">
-
-                                                            <img src="{{ asset('user/assets/images/exp.png') }}" alt="" class="small-card__images-img">
-                                                            <p>تكبير الصور </p>
+                                                        <div class="area-brand">
+                                                            <a class="" href="#">
+                                                                <img src="{{ asset('user/assets/icons/logo.svg') }}"
+                                                                    alt="3dOrgans-logo" width="150"
+                                                                    class="d-inline-block align-text-top">
+                                                            </a>
                                                         </div>
                                                     </div>
-                                                    <img src="{{ asset('user/assets/images/cleancard.png') }}" alt="">
-                                                    <img src="{{ asset('user/assets/images/cleancard2.png') }}" alt="">
-                                                    <img src="{{ asset('user/assets/images/cleancard3.png') }}" alt="">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="adobe-icon">
-                                                    <h6>البرمج المستخدمة</h6>
-                                                    <img src="{{ asset('user/assets/images/ai.png') }}" alt="">
-                                                    <img src="{{ asset('user/assets/images/dn.png') }}" alt="">
-                                                    <img src="{{ asset('user/assets/images/in.png') }}" alt="">
+                                                    <div class="col-md-6 col-sm-9 mobile-pro-icon">
+                                                        <button class="btn mob-tog-btn" id="menu-toggle"><i
+                                                                class="fa-solid fa-bars"></i></button>
+
+                                                        <div class="mobile-profile">
+
+
+                                                            <a href="#" class="m-0" data-bs-toggle="modal"
+                                                                data-bs-target="#memberModal"><img
+                                                                    src="{{(@Auth::user()->profile == null) ?  asset('user/assets/icons/avatar.svg'): asset(Auth::user()->profile) }}"
+                                                                    class="profile-img" alt="avatar"></a>
+                                                            @if(Auth::user())
+                                                            <a href="#" class="dot m-0 border-bottom"
+                                                                data-bs-toggle="modal" data-bs-target="#memberModal">{{
+                                                                Auth::user()->name }}!</a>
+                                                            @endif
+                                                        </div>
+
+                                                    </div>
+
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </section>
-                                <section class="container head-clean">
-                                    <div class="row align-items-center">
-                                        <div class="col-md-6 ">
-                                            <div class="profile tag-profile">
-                                                <a href="#profile">
-                                                    <img src="{{ asset('/user/assets/icons/avatar.svg')}}" alt="avatar"> </a>
-                                                <div class="star-profile-txt">
-                                                    <span>مصمم</span>
-                                                    <h4> أسم المصمم</h4>
-                                                    <div class="star-reating">
-                                                        <i class="fa-solid fa-star"></i>
-                                                        <i class="fa-solid fa-star"></i>
-                                                        <i class="fa-solid fa-star"></i>
-                                                        <i class="fa-solid fa-star"></i>
-                                                        <i class="fa-solid fa-star"></i>
+
+                                    <!-- zahid page modal start here -->
+
+
+                                    <section class="cleanshot">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-md-12 cleanshot-close-btn">
+                                                    <button type="button" class="btn-close " data-bs-dismiss="modal"
+                                                        aria-label="Close"></button>
+                                                </div>
+                                            </div>
+                                            <div class="row cleanshot-row align-items-end">
+
+                                                <div class="col-md-8">
+                                                    <div class="small-card wrapper al-center">
+                                                        <div class="small-card__images-box">
+                                                            <div class="small-card__images-box-shadow"></div>
+                                                            <img class="designer-8"
+                                                                src="{{ asset('user/assets/images/design-8.png') }}"
+                                                                alt="">
+                                                            <div class="small-card__images-text al-center">
+
+                                                                <img src="{{ asset('user/assets/images/exp.png') }}"
+                                                                    alt="" class="small-card__images-img">
+                                                                <p>تكبير الصور </p>
+                                                            </div>
+                                                        </div>
+                                                        <img src="{{ asset('user/assets/images/cleancard.png') }}"
+                                                            alt="">
+                                                        <img src="{{ asset('user/assets/images/cleancard2.png') }}"
+                                                            alt="">
+                                                        <img src="{{ asset('user/assets/images/cleancard3.png') }}"
+                                                            alt="">
                                                     </div>
                                                 </div>
-
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <button class="btn btn-sky invert personal-pro zhd-product-visit">
-                                                الملف الشخصي
-
-                                            </button>
-                                        </div>
-
-
-                                    </div>
-                                    <div class="row clean-headings">
-                                        <div class="col-md-12">
-                                            <h3>عنوان التصميم يكتب هنا ويستوعب سطرين كحد اقصى ..</h3>
-                                            <h6>27 ديسمبر 2021</h6>
-
-                                            <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="form form-clean">
-                                        <div class="row zhd-form-clean">
-                                            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 mt-4">
-                                                <label class="form-label dot">اختيار اللون</label>
-
-                                                <div class="color-circle-main">
-                                                    <div class="blue-text">
-                                                        <span> أبيض</span>
+                                                <div class="col-md-4">
+                                                    <div class="adobe-icon">
+                                                        <h6>البرمج المستخدمة</h6>
+                                                        <img src="{{ asset('user/assets/images/ai.png') }}" alt="">
+                                                        <img src="{{ asset('user/assets/images/dn.png') }}" alt="">
+                                                        <img src="{{ asset('user/assets/images/in.png') }}" alt="">
                                                     </div>
-                                                    <div class="color-circle blue-border"></div>
-                                                    <div class="color-circle orange"></div>
-                                                    <div class="color-circle yellow"></div>
-                                                    <div class="color-circle"></div>
                                                 </div>
                                             </div>
-                                            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 mt-4">
-                                                <label class="form-label dot">الكمية</label>
-                                                <select class="form-select gender" required name="gender" aria-label="Default select example">
-                                                    <option selected>1</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 mt-4">
-                                                <label class="form-label dot">المقاسات</label>
-                                                <select class="form-select gender" required name="gender" aria-label="Default select example">
-                                                    <option selected>اختيار المقاس</option>
-
-                                                </select>
-                                            </div>
                                         </div>
+                                    </section>
+                                    <section class="container head-clean">
+                                        <div class="row align-items-center">
+                                            <div class="col-md-6 ">
+                                                <div class="profile tag-profile">
+                                                    <a href="#profile">
+                                                        <img src="{{ asset('/user/assets/icons/avatar.svg')}}"
+                                                            alt="avatar"> </a>
+                                                    <div class="star-profile-txt">
+                                                        <span>مصمم</span>
+                                                        <h4> أسم المصمم</h4>
+                                                        <div class="star-reating">
+                                                            <i class="fa-solid fa-star"></i>
+                                                            <i class="fa-solid fa-star"></i>
+                                                            <i class="fa-solid fa-star"></i>
+                                                            <i class="fa-solid fa-star"></i>
+                                                            <i class="fa-solid fa-star"></i>
+                                                        </div>
+                                                    </div>
 
-                                        <div class="row circle-bottom">
-                                            <div class="col-md-2">
+                                                </div>
                                             </div>
-                                            <div class="col-md-4 mt-5">
-                                                <label class="form-label dot">شكل الطباعة</label>
-                                                <select class="form-select gender" required name="gender" aria-label="Default select example">
-                                                    <option selected>الاشكال هنا</option>
+                                            <div class="col-md-6">
+                                                <button class="btn btn-sky invert personal-pro zhd-product-visit">
+                                                    الملف الشخصي
 
-                                                </select>
+                                                </button>
                                             </div>
-                                            <div class="col-md-4 mt-5">
-                                                <label class="form-label dot">تقنية الطباعة</label>
-                                                <select class="form-select gender" required name="gender" aria-label="Default select example">
-                                                    <option selected> التقنية الأولي</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-md-2">
-                                            </div>
+
+
                                         </div>
-
-
-                                        <div class="row zhd-textarea-clean">
+                                        <div class="row clean-headings">
                                             <div class="col-md-12">
-                                                <label class="form-label dot">الملاحظات</label>
-                                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="   الملاحظات .."></textarea>
+                                                <h3>عنوان التصميم يكتب هنا ويستوعب سطرين كحد اقصى ..</h3>
+                                                <h6>27 ديسمبر 2021</h6>
+
+                                                <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا
+                                                    النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد
+                                                    من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.</p>
                                             </div>
                                         </div>
-                                        <div class="modal-footer footer-clean">
-                                            <div class="row">
-                                                <div class="col-md-12">
-                                                    <div class="form-action requests">
-                                                        <button class="btn-form designer-btn clean-btn" data-bs-toggle="modal" data-bs-target="#designerPublicServiesModal">
-                                                            تقديم طلب </button>
-                                                        <!-- <p>يتطلب تسجيل للتسجيل اضغط هنا </p> -->
+
+                                        <div class="form form-clean">
+                                            <div class="row zhd-form-clean">
+                                                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 mt-4">
+                                                    <label class="form-label dot">اختيار اللون</label>
+
+                                                    <div class="color-circle-main">
+                                                        <div class="blue-text">
+                                                            <span> أبيض</span>
+                                                        </div>
+                                                        <div class="color-circle blue-border"></div>
+                                                        <div class="color-circle orange"></div>
+                                                        <div class="color-circle yellow"></div>
+                                                        <div class="color-circle"></div>
                                                     </div>
-                                                    <div class="mujtmah-box__wrapper wrapper al-center mt-4">
-                                                        <p class="mujtmah-box__link1 mgl-2">يتطلب تسجيل</p>
-                                                        <button class="mujtmah-box__link2 zhd-bt-p " data-bs-toggle="modal" data-bs-target="#registerModal">للتسجيل اضغط هنا</button>
+                                                </div>
+                                                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 mt-4">
+                                                    <label class="form-label dot">الكمية</label>
+                                                    <select class="form-select gender" required name="gender"
+                                                        aria-label="Default select example">
+                                                        <option selected>1</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 mt-4">
+                                                    <label class="form-label dot">المقاسات</label>
+                                                    <select class="form-select gender" required name="gender"
+                                                        aria-label="Default select example">
+                                                        <option selected>اختيار المقاس</option>
+
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="row circle-bottom">
+                                                <div class="col-md-2">
+                                                </div>
+                                                <div class="col-md-4 mt-5">
+                                                    <label class="form-label dot">شكل الطباعة</label>
+                                                    <select class="form-select gender" required name="gender"
+                                                        aria-label="Default select example">
+                                                        <option selected>الاشكال هنا</option>
+
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-4 mt-5">
+                                                    <label class="form-label dot">تقنية الطباعة</label>
+                                                    <select class="form-select gender" required name="gender"
+                                                        aria-label="Default select example">
+                                                        <option selected> التقنية الأولي</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-2">
+                                                </div>
+                                            </div>
+
+
+                                            <div class="row zhd-textarea-clean">
+                                                <div class="col-md-12">
+                                                    <label class="form-label dot">الملاحظات</label>
+                                                    <textarea class="form-control" id="exampleFormControlTextarea1"
+                                                        rows="4" placeholder="   الملاحظات .."></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer footer-clean">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="form-action requests">
+                                                            <button class="btn-form designer-btn clean-btn"
+                                                                data-bs-toggle="modal"
+                                                                data-bs-target="#designerPublicServiesModal">
+                                                                تقديم طلب </button>
+                                                            <!-- <p>يتطلب تسجيل للتسجيل اضغط هنا </p> -->
+                                                        </div>
+                                                        <div class="mujtmah-box__wrapper wrapper al-center mt-4">
+                                                            <p class="mujtmah-box__link1 mgl-2">يتطلب تسجيل</p>
+                                                            <button class="mujtmah-box__link2 zhd-bt-p "
+                                                                data-bs-toggle="modal"
+                                                                data-bs-target="#registerModal">للتسجيل اضغط
+                                                                هنا</button>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
 
 
-                            </div>
-
-                            </section>
-
-                            <!-- zahid page modal end here -->
-
-                            <!-- design footer start here -->
-                            <section class="contact design-footer design-1-footer">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="row">
-                                                <div class="col-md-12">
-                                                    <ul class="footer-nav">
-                                                        <li class="nav-item">
-                                                            <a class="nav-link active" aria-current="page" href="index.html">الرئيسية</a>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <a class="nav-link" href="#about-us">
-                                                                من نحن
-                                                            </a>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <a class="nav-link" href="#">
-                                                                ماهي تقنية الـ 3D
-                                                            </a>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <a class="nav-link" href="#services-section">الخدمات</a>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <a class="nav-link" href="#">مجتمع المصممين</a>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <a class="nav-link" href="#contact-us">اتصل بنا</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
-                                <div class="container-fluid">
-                                    <footer>
+
+                                </section>
+
+                                <!-- zahid page modal end here -->
+
+                                <!-- design footer start here -->
+                                <section class="contact design-footer design-1-footer">
+                                    <div class="container">
                                         <div class="row">
-                                            <div class="col-md-4 col-xl-4">
-                                                <div class="right">
-                                                    <p>تصميم وتطوير شركة تيلرز</p>
-                                                    <a href="https://tellers.sa/"><img src="{{ asset('user/assets/icons/tellers-logo.png') }}" alt="tellers-logo"></a>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-5 col-xl-4">
-                                                <p>جميع الحقوق محفوظة لـ &nbsp;+3D&nbsp; لعام 2022</p>
-                                            </div>
-                                            <div class="col-md-3 col-xl-4">
-                                                <div class="social">
-                                                    <a href="#"><img src="{{ asset('user/assets/icons/twitter.png') }}" alt="twitter"></a>
-                                                    <a href="#"><img src="{{ asset('user/assets/icons/instagram.png') }}" alt="instagram"></a>
+                                            <div class="col-md-12">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <ul class="footer-nav">
+                                                            <li class="nav-item">
+                                                                <a class="nav-link active" aria-current="page"
+                                                                    href="index.html">الرئيسية</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" href="#about-us">
+                                                                    من نحن
+                                                                </a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" href="#">
+                                                                    ماهي تقنية الـ 3D
+                                                                </a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" href="#services-section">الخدمات</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" href="#">مجتمع المصممين</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" href="#contact-us">اتصل بنا</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </footer>
-                                </div>
+                                    </div>
+                                    <div class="container-fluid">
+                                        <footer>
+                                            <div class="row">
+                                                <div class="col-md-4 col-xl-4">
+                                                    <div class="right">
+                                                        <p>تصميم وتطوير شركة تيلرز</p>
+                                                        <a href="https://tellers.sa/"><img
+                                                                src="{{ asset('user/assets/icons/tellers-logo.png') }}"
+                                                                alt="tellers-logo"></a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-5 col-xl-4">
+                                                    <p>جميع الحقوق محفوظة لـ &nbsp;+3D&nbsp; لعام 2022</p>
+                                                </div>
+                                                <div class="col-md-3 col-xl-4">
+                                                    <div class="social">
+                                                        <a href="#"><img
+                                                                src="{{ asset('user/assets/icons/twitter.png') }}"
+                                                                alt="twitter"></a>
+                                                        <a href="#"><img
+                                                                src="{{ asset('user/assets/icons/instagram.png') }}"
+                                                                alt="instagram"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </footer>
+                                    </div>
+                            </div>
+                            </footer>
                         </div>
-                        </footer>
+                        </section>
+
+
+                        <!-- design footer end here -->
+
+
+
+
+                        <!-- disign section end here -->
                     </div>
-                    </section>
-
-
-                    <!-- design footer end here -->
-
-
-
-
-                    <!-- disign section end here -->
                 </div>
             </div>
         </div>
-    </div>
     </div>
     </div>
     </div>
@@ -1767,17 +1907,20 @@
     <!-- ///////////////////////////////////// cleanshot Modal end here ////////////////////////////////-->
     <!-- zahid-page2 start -->
 
-    <div class="modal fade page form animate__animated animate__fadeInLeft animate__fast" id="designerPublicServiesModal" tabindex="-1" aria-labelledby="designerPublicServiesLabel" aria-hidden="true">
+    <div class="modal fade page form animate__animated animate__fadeInLeft animate__fast"
+        id="designerPublicServiesModal" tabindex="-1" aria-labelledby="designerPublicServiesLabel" aria-hidden="true">
         <div class="modal-dialog modal-fullscreen">
             <div class="modal-content">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-12 p-0">
                             <div class="modal-header border-0">
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
                                 <div>
                                     <span class="outline dot">أكثر 20 خدمة مختلفة</span>
-                                    <h1 class="modal-title right"><span class="btm-line"><span class="inner-line"></span>الخدمات العامة
+                                    <h1 class="modal-title right"><span class="btm-line"><span
+                                                class="inner-line"></span>الخدمات العامة
                                         </span></h1>
                                 </div>
                                 <div class="profile">
@@ -1790,7 +1933,8 @@
                                     </a>
                                     @else
                                     <a href="#profile">
-                                        <img src="{{ asset( auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
+                                        <img src="{{ asset( auth()->user()->profile) }}"
+                                            style="height:40px; width:40px; border-radius: 50%">
                                     </a>
                                     @endif
                                 </div>
@@ -1810,20 +1954,25 @@
 
                                                     <h1>406</h1>
 
-                                                    <p><img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle"> رفع الطلب</p>
-                                                    <p><img src="{{asset('user/assets/icons/red-circle.png')}}" alt="red-circle">تقديم عرض سعر من قبل المصمم</p>
-                                                    <p><img src="{{asset('user/assets/icons/red-circle.png')}}" alt="red-circle"> الدفع</p>
+                                                    <p><img src="{{asset('user/assets/icons/green-circle.svg')}}"
+                                                            alt="green-circle"> رفع الطلب</p>
+                                                    <p><img src="{{asset('user/assets/icons/red-circle.png')}}"
+                                                            alt="red-circle">تقديم عرض سعر من قبل المصمم</p>
+                                                    <p><img src="{{asset('user/assets/icons/red-circle.png')}}"
+                                                            alt="red-circle"> الدفع</p>
                                                     <!-- <span>سيتم تحديث حالة الطلب من قبل الإدارة</span> -->
                                                 </div>
                                             </div>
                                             <div class="col-md-7">
-                                                <img src="{{ asset('user/assets/images/mujtmah-box__image.png') }}" class="mujtmah-box__image">
+                                                <img src="{{ asset('user/assets/images/mujtmah-box__image.png') }}"
+                                                    class="mujtmah-box__image">
 
                                             </div>
                                             <div class="col-md-12">
                                                 <div class="form-action designer-btn">
                                                     <!-- data-bs-toggle="modal" data-bs-target="#publicServiesFinalModal"  / carousel-next-icon-show-->
-                                                    <button class="btn btn-form mx-3 with-arrow carousel-next-icon-show" type="submit">تفاصيل الطلب</button>
+                                                    <button class="btn btn-form mx-3 with-arrow carousel-next-icon-show"
+                                                        type="submit">تفاصيل الطلب</button>
                                                     <!-- <button class="btn-form designer-btn clean-btn" data-bs-toggle="modal" data-bs-target="#designer-order"> تقديم طلب </button> -->
 
                                                     <p>تم رفع الطلب بنجاح</p>
@@ -1869,7 +2018,8 @@
                                 </div>
                                 <div class="zhd-center-hdng" style="margin-top: 1%;">
                                     <span class="outline dot">اهلاً وسهلاً بكم</span>
-                                    <h1 class="modal-title right centr-main-title"><span class="btm-line d-flex">طلباتي<span class="inner-line"></span></span></h1>
+                                    <h1 class="modal-title right centr-main-title"><span
+                                            class="btm-line d-flex">طلباتي<span class="inner-line"></span></span></h1>
                                 </div>
                                 <div class="profile zhd-box">
                                     <button class="btn btn-sky profile-btn invert"> المصمم
@@ -1880,7 +2030,8 @@
                                     </a>
                                     @else
                                     <a href="#profile">
-                                        <img src="{{ asset( auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
+                                        <img src="{{ asset( auth()->user()->profile) }}"
+                                            style="height:40px; width:40px; border-radius: 50%">
                                     </a>
                                     @endif
                                 </div>
@@ -1891,19 +2042,22 @@
                                         <label class="form-check-label" for="flexRadioDefault1">
                                             <img src="{{asset('user/assets/images/mada-logo.svg')}}" alt="">
                                             <p>مدى</p>
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                id="flexRadioDefault1">
                                         </label>
                                         <label class="form-check-label" for="flexRadioDefault2">
                                             <img src="{{asset('user/assets/images/masterCard.svg')}}" alt="">
                                             <p>فيزا وماستر كارد</p>
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                id="flexRadioDefault2">
                                         </label>
                                     </div>
                                     <div class="form-check">
                                         <label class="form-check-label" for="flexRadioDefault3">
                                             <img src="{{asset('user/assets/images/apple-pay.svg')}}" alt="">
                                             <p>آبل باي</p>
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                id="flexRadioDefault3">
                                         </label>
                                     </div>
                                 </div>
@@ -1911,7 +2065,8 @@
                                     <div class="row mt-1 justify-content-center">
                                         <div class="col-md-8">
                                             <label class="form-label dot">سبب الرفض</label>
-                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="  الوصف هنا"></textarea>
+                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"
+                                                placeholder="  الوصف هنا"></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -1927,26 +2082,33 @@
                                             <div class="row final two justify-content-center text-center">
                                                 <div class="col-auto">
                                                     <div class="dateTime small">{{@$public->created_at}}</div>
-                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
+                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}"
+                                                        alt="green-circle">
                                                     <div>
                                                         <p>رفع الطلب</p>
                                                     </div>
                                                 </div>
-                                                <img src="{{asset('user/assets/icons/green-line.svg')}}" class="single" alt="">
+                                                <img src="{{asset('user/assets/icons/green-line.svg')}}" class="single"
+                                                    alt="">
                                                 <div class="col-auto">
                                                     <div class="dateTime small">{{@$public->created_at}}</div>
-                                                    <img src="{{asset('user/assets/icons/red-circle.svg')}}" alt="red-circle">
+                                                    <img src="{{asset('user/assets/icons/red-circle.svg')}}"
+                                                        alt="red-circle">
                                                     <div>
                                                         <p>عرض سعر</p>
                                                     </div>
                                                 </div>
-                                                <img src="{{asset('user/assets/icons/redline.svg')}}" class="single" alt="">
+                                                <img src="{{asset('user/assets/icons/redline.svg')}}" class="single"
+                                                    alt="">
                                                 <div class="col-auto">
-                                                    <div class="dateTime small text-white">{{@$public->created_at}}</div>
+                                                    <div class="dateTime small text-white">{{@$public->created_at}}
+                                                    </div>
                                                     @if(@$public->status == 2)
-                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
+                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}"
+                                                        alt="green-circle">
                                                     @else
-                                                    <img src="{{asset('user/assets/icons/red-circle.svg')}}" alt="red-circle">
+                                                    <img src="{{asset('user/assets/icons/red-circle.svg')}}"
+                                                        alt="red-circle">
                                                     @endif
                                                     <div>
                                                         <p>الدفع</p>
@@ -1960,7 +2122,8 @@
                                                 <div class="profile tag-profile designer-order">
                                                     <a href="#profile">
                                                         <!-- <img src="{{ asset('user/assets/icon/avatar.svg')}}" alt="avatar"> -->
-                                                        <img src="{{ asset('/user/assets/icons/avatar.svg')}}" alt="avatar">
+                                                        <img src="{{ asset('/user/assets/icons/avatar.svg')}}"
+                                                            alt="avatar">
                                                     </a>
                                                     <div class="star-profile-txt">
                                                         <span>مصمم</span>
@@ -2002,32 +2165,41 @@
                                             </div>
                                             <!-- <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div> -->
 
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
+                                            <div
+                                                class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
                                                 <label class="form-label">الكمية</label>
-                                                <input type="text" class="form-control" placeholder=".. رقم الهاتف هنا" readonly="" value="03084875508">
+                                                <input type="text" class="form-control" placeholder=".. رقم الهاتف هنا"
+                                                    readonly="" value="03084875508">
                                             </div>
                                             <!-- <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div> -->
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                 <label class="form-label">المقاسات</label>
-                                                <input type="text" class="form-control" placeholder=".. الايميل هنا" readonly="" value="asimali7056@gmail.com">
+                                                <input type="text" class="form-control" placeholder=".. الايميل هنا"
+                                                    readonly="" value="asimali7056@gmail.com">
                                             </div>
                                         </div>
                                         <div class="row p-xs-0 conditional-blur justify-content-between">
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                 <label class="form-label">شكل الطباعة</label>
-                                                <input type="text" class="form-control" placeholder=".. التخصص هنا" readonly="" value="رقم الهاتف هنا">
+                                                <input type="text" class="form-control" placeholder=".. التخصص هنا"
+                                                    readonly="" value="رقم الهاتف هنا">
                                             </div>
                                             <!-- <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div> -->
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
+                                            <div
+                                                class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
                                                 <label class="form-label">تقنية الطباعة</label>
-                                                <input type="text" class="form-control" placeholder=".. الجنس هنا" readonly="" value="male">
+                                                <input type="text" class="form-control" placeholder=".. الجنس هنا"
+                                                    readonly="" value="male">
                                             </div>
                                             <!-- <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div> -->
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 zhd-product-visit">
+                                            <div
+                                                class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 zhd-product-visit">
 
 
                                                 <button class="btn btn-sky invert">
-                                                    زيارة المنتج <img src="{{ asset('/user/assets/icons/arrow-right.svg')}}" alt="arrow-right">
+                                                    زيارة المنتج <img
+                                                        src="{{ asset('/user/assets/icons/arrow-right.svg')}}"
+                                                        alt="arrow-right">
                                                 </button>
                                             </div>
                                         </div>
@@ -2036,27 +2208,33 @@
                                         <div class="col-md-12">
                                             <div class="designer-text">
                                                 <label class="form-label dot">الملاحظات</label>
-                                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="   الملاحظات .."></textarea>
+                                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"
+                                                    placeholder="   الملاحظات .."></textarea>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row justify-content-between conditional-blur">
-                                        <h1 class="title text-center mt-5 no-border conditional-blur zhd-quote">تقديم عرض سعر</h1>
+                                        <h1 class="title text-center mt-5 no-border conditional-blur zhd-quote">تقديم
+                                            عرض سعر</h1>
                                         <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 service-fee-zhd">
                                             <label class="form-label">تكلفة تنفيذ الخدمة</label>
-                                            <input type="text" class="form-control" placeholder="كتابة القيمة هنا .." readonly value="{{@$public->print_type}}">
+                                            <input type="text" class="form-control" placeholder="كتابة القيمة هنا .."
+                                                readonly value="{{@$public->print_type}}">
                                             <div class="service-fee-text">
-                                                <span> سيتم اضافة رسوم الخدمة 10% وقيمة الضريبة المضافة 15% تلقائياً</span>
+                                                <span> سيتم اضافة رسوم الخدمة 10% وقيمة الضريبة المضافة 15%
+                                                    تلقائياً</span>
                                             </div>
 
                                         </div>
                                         <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
                                             <label class="form-label">تاريخ البداية</label>
-                                            <input type="text" class="form-control" placeholder="تحديد التاريخ هنا .." readonly value="{{@$public->print_color}}">
+                                            <input type="text" class="form-control" placeholder="تحديد التاريخ هنا .."
+                                                readonly value="{{@$public->print_color}}">
                                         </div>
                                         <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
                                             <label class="form-label">تاريخ التسليم</label>
-                                            <input type="text" class="form-control" placeholder="تحديد التاريخ هنا .. " readonly value="{{@$public->print_resolution}}">
+                                            <input type="text" class="form-control" placeholder="تحديد التاريخ هنا .. "
+                                                readonly value="{{@$public->print_resolution}}">
                                         </div>
                                         <!-- <div class="row conditional-blur">
                                           <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
@@ -2070,10 +2248,15 @@
 
                                             <h1 class="title text-center mt-5 no-border conditional-blur">
                                                 <div class="">
-                                                    <a href="javascript:void(0);" class="btn btn-form mx-3 with-arrow mt-10" data-bs-toggle="modal" data-bs-target="#designer-order-upload">ارسال</a>
-                                                    <a href="#" class="btn btn-form mx-3 with-arrow mt-10 red-btn ">رفض</a>
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-form mx-3 with-arrow mt-10"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#designer-order-upload">ارسال</a>
+                                                    <a href="#"
+                                                        class="btn btn-form mx-3 with-arrow mt-10 red-btn ">رفض</a>
 
-                                                    <p class="mt-4">سيتم ارسال تفاصيل تنفيذ المهمة الى المستخدم للقبول او الرفض</p>
+                                                    <p class="mt-4">سيتم ارسال تفاصيل تنفيذ المهمة الى المستخدم للقبول
+                                                        او الرفض</p>
                                                 </div>
                                             </h1>
                                         </div>
@@ -2101,7 +2284,8 @@
                                 </div>
                                 <div class="zhd-center-hdng" style="margin-top: 1%;">
                                     <span class="outline dot">اهلاً وسهلاً بكم</span>
-                                    <h1 class="modal-title right centr-main-title"><span class="btm-line d-flex">طلباتي<span class="inner-line"></span></span></h1>
+                                    <h1 class="modal-title right centr-main-title"><span
+                                            class="btm-line d-flex">طلباتي<span class="inner-line"></span></span></h1>
                                 </div>
                                 <div class="profile zhd-box">
                                     <button class="btn btn-sky profile-btn invert"> المصمم
@@ -2112,7 +2296,8 @@
                                     </a>
                                     @else
                                     <a href="#profile">
-                                        <img src="{{ asset( auth()->user()->profile) }}" alt="" style="height:40px; width:40px; border-radius: 50%">
+                                        <img src="{{ asset( auth()->user()->profile) }}" alt=""
+                                            style="height:40px; width:40px; border-radius: 50%">
                                     </a>
                                     @endif
                                 </div>
@@ -2123,19 +2308,22 @@
                                         <label class="form-check-label" for="flexRadioDefault1">
                                             <img src="{{asset('user/assets/images/mada-logo.svg')}}" alt="">
                                             <p>مدى</p>
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                id="flexRadioDefault1">
                                         </label>
                                         <label class="form-check-label" for="flexRadioDefault2">
                                             <img src="{{asset('user/assets/images/masterCard.svg')}}" alt="">
                                             <p>فيزا وماستر كارد</p>
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                id="flexRadioDefault2">
                                         </label>
                                     </div>
                                     <div class="form-check">
                                         <label class="form-check-label" for="flexRadioDefault3">
                                             <img src="{{asset('user/assets/images/apple-pay.svg')}}" alt="">
                                             <p>آبل باي</p>
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                id="flexRadioDefault3">
                                         </label>
                                     </div>
                                 </div>
@@ -2143,7 +2331,8 @@
                                     <div class="row mt-1 justify-content-center">
                                         <div class="col-md-8">
                                             <label class="form-label dot">سبب الرفض</label>
-                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="  الوصف هنا"></textarea>
+                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"
+                                                placeholder="  الوصف هنا"></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -2159,24 +2348,30 @@
                                             <div class="row final two justify-content-center text-center">
                                                 <div class="col-auto">
                                                     <div class="dateTime small">{{@$public->created_at}}</div>
-                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
+                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}"
+                                                        alt="green-circle">
                                                     <div>
                                                         <p>رفع الطلب</p>
                                                     </div>
                                                 </div>
-                                                <img src="{{asset('user/assets/icons/green-line.svg')}}" class="single" alt="">
+                                                <img src="{{asset('user/assets/icons/green-line.svg')}}" class="single"
+                                                    alt="">
                                                 <div class="col-auto">
                                                     <div class="dateTime small">{{@$public->created_at}}</div>
-                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
+                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}"
+                                                        alt="green-circle">
                                                     <div>
                                                         <p>عرض سعر</p>
                                                     </div>
                                                 </div>
-                                                <img src="{{asset('user/assets/icons/green-line.svg')}}" class="single" alt="">
+                                                <img src="{{asset('user/assets/icons/green-line.svg')}}" class="single"
+                                                    alt="">
                                                 <div class="col-auto">
-                                                    <div class="dateTime small text-white">{{@$public->created_at}}</div>
+                                                    <div class="dateTime small text-white">{{@$public->created_at}}
+                                                    </div>
 
-                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
+                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}"
+                                                        alt="green-circle">
 
                                                     <div>
                                                         <p>الدفع</p>
@@ -2189,7 +2384,8 @@
                                             <div class="col-md-12 ">
                                                 <div class="profile tag-profile designer-order">
                                                     <a href="#profile">
-                                                        <img src="{{ asset('/user/assets/icons/avatar.svg')}}" alt="avatar"> </a>
+                                                        <img src="{{ asset('/user/assets/icons/avatar.svg')}}"
+                                                            alt="avatar"> </a>
                                                     <div class="star-profile-txt">
                                                         <span>مصمم</span>
                                                         <h4> أسم المصمم</h4>
@@ -2230,30 +2426,39 @@
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
 
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
+                                            <div
+                                                class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
                                                 <label class="form-label">الكمية</label>
-                                                <input type="text" class="form-control" placeholder=".. رقم الهاتف هنا" readonly="" value="03084875508">
+                                                <input type="text" class="form-control" placeholder=".. رقم الهاتف هنا"
+                                                    readonly="" value="03084875508">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                 <label class="form-label">المقاسات</label>
-                                                <input type="text" class="form-control" placeholder=".. الايميل هنا" readonly="" value="asimali7056@gmail.com">
+                                                <input type="text" class="form-control" placeholder=".. الايميل هنا"
+                                                    readonly="" value="asimali7056@gmail.com">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                 <label class="form-label">شكل الطباعة</label>
-                                                <input type="text" class="form-control" placeholder=".. التخصص هنا" readonly="" value="رقم الهاتف هنا">
+                                                <input type="text" class="form-control" placeholder=".. التخصص هنا"
+                                                    readonly="" value="رقم الهاتف هنا">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
+                                            <div
+                                                class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
                                                 <label class="form-label">تقنية الطباعة</label>
-                                                <input type="text" class="form-control" placeholder=".. الجنس هنا" readonly="" value="male">
+                                                <input type="text" class="form-control" placeholder=".. الجنس هنا"
+                                                    readonly="" value="male">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 zhd-product-visit">
+                                            <div
+                                                class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 zhd-product-visit">
 
 
                                                 <button class="btn btn-sky invert">
-                                                    زيارة المنتج <img src="{{ asset('/user/assets/icons/arrow-right.svg')}}" alt="arrow-right">
+                                                    زيارة المنتج <img
+                                                        src="{{ asset('/user/assets/icons/arrow-right.svg')}}"
+                                                        alt="arrow-right">
                                                 </button>
                                             </div>
 
@@ -2262,27 +2467,35 @@
                                             <div class="col-md-12">
                                                 <div class="designer-text">
                                                     <label class="form-label dot">الملاحظات</label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="   الملاحظات .."></textarea>
+                                                    <textarea class="form-control" id="exampleFormControlTextarea1"
+                                                        rows="4" placeholder="   الملاحظات .."></textarea>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="row">
-                                            <h1 class="title text-center mt-5 no-border conditional-blur zhd-quote">طلب قيد التنفيذ</h1>
+                                            <h1 class="title text-center mt-5 no-border conditional-blur zhd-quote">طلب
+                                                قيد التنفيذ</h1>
                                             <div class="col-md-12">
                                                 <div class="row justify-content-center">
                                                     <div class="col-md-12">
                                                         <div class="row mb-2 justify-content-between conditional-blur">
                                                             <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
                                                                 <label class="form-label">تكلفة تنفيذ الخدمة</label>
-                                                                <input type="text" class="form-control" placeholder="كتابة القيمة هنا .." readonly value="{{@$public->print_type}}">
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="كتابة القيمة هنا .." readonly
+                                                                    value="{{@$public->print_type}}">
                                                             </div>
                                                             <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
                                                                 <label class="form-label">تاريخ البداية</label>
-                                                                <input type="text" class="form-control" placeholder="تحديد التاريخ هنا .." readonly value="{{@$public->print_color}}">
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="تحديد التاريخ هنا .." readonly
+                                                                    value="{{@$public->print_color}}">
                                                             </div>
                                                             <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
                                                                 <label class="form-label">تاريخ التسليم</label>
-                                                                <input type="text" class="form-control" placeholder="تحديد التاريخ هنا .. " readonly value="{{@$public->print_resolution}}">
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="تحديد التاريخ هنا .. " readonly
+                                                                    value="{{@$public->print_resolution}}">
                                                             </div>
                                                             <div class="prog-outer wrapper al-center">
                                                                 <div class="prog-inner"></div>
@@ -2290,7 +2503,8 @@
 
                                                             </div>
                                                             <div class="service-fee-text prog-fee">
-                                                                <span> متبقي على تسليم الطلب 24 يوم 35 دقيقة 13 ثانية</span>
+                                                                <span> متبقي على تسليم الطلب 24 يوم 35 دقيقة 13
+                                                                    ثانية</span>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -2307,14 +2521,20 @@
                                                             <label class="form-label dot">ملاحظات</label>
                                                         </div>
                                                         <div class="col-md-6">
-                                                            <textarea class="form-control designer-text-area " id="exampleFormControlTextarea1" rows="4" placeholder="  ..الوصف هنا" readonly>{{@$ss->discription}}</textarea>
+                                                            <textarea class="form-control designer-text-area "
+                                                                id="exampleFormControlTextarea1" rows="4"
+                                                                placeholder="  ..الوصف هنا"
+                                                                readonly>{{@$ss->discription}}</textarea>
                                                         </div>
                                                         <div class="col-md-6">
                                                             <div class="upload-btn-wrapper designer-upload">
-                                                                <button class="btn btn-upload-designer health"><img src="{{asset('user/assets/icons/upload-atachment.png')}}" alt="upload-img">
+                                                                <button class="btn btn-upload-designer health"><img
+                                                                        src="{{asset('user/assets/icons/upload-atachment.png')}}"
+                                                                        alt="upload-img">
                                                                     <p>صور بصيغة STL,PNG,JPG</p>
                                                                 </button>
-                                                                <input type="file" id="health-file" required name="myfile" />
+                                                                <input type="file" id="health-file" required
+                                                                    name="myfile" />
                                                             </div>
                                                         </div>
                                                         <p class="mt-3" style="    text-align: center;
@@ -2322,11 +2542,17 @@
                                                     </div>
                                                     <h1 class="title text-center mt-5 no-border conditional-blur">
                                                         <div class="">
-                                                            <a href="javascript:void(0);" class="btn btn-form mx-3 with-arrow mt-10" data-bs-toggle="modal" data-bs-target="#designer-review-upload">ارسال</a>
-                                                            <a href="#" class="btn btn-form mx-3 with-arrow btn-uplod mt-10">الفاتورة</a>
-                                                            <a href="#" class="btn btn-form mx-3 with-arrow mt-10 red-btn">رفض</a>
+                                                            <a href="javascript:void(0);"
+                                                                class="btn btn-form mx-3 with-arrow mt-10"
+                                                                data-bs-toggle="modal"
+                                                                data-bs-target="#designer-review-upload">ارسال</a>
+                                                            <a href="#"
+                                                                class="btn btn-form mx-3 with-arrow btn-uplod mt-10">الفاتورة</a>
+                                                            <a href="#"
+                                                                class="btn btn-form mx-3 with-arrow mt-10 red-btn">رفض</a>
 
-                                                            <p class="mt-4">الرجاء التأكد من ارسال كافة الملفات لتجنب تقديم بلاغ عليك</p>
+                                                            <p class="mt-4">الرجاء التأكد من ارسال كافة الملفات لتجنب
+                                                                تقديم بلاغ عليك</p>
                                                         </div>
                                                     </h1>
                                                 </div>
@@ -2357,7 +2583,8 @@
                                 </div>
                                 <div class="zhd-center-hdng" style="margin-top: 1%;">
                                     <span class="outline dot">اهلاً وسهلاً بكم</span>
-                                    <h1 class="modal-title right centr-main-title"><span class="btm-line d-flex">طلباتي<span class="inner-line"></span></span></h1>
+                                    <h1 class="modal-title right centr-main-title"><span
+                                            class="btm-line d-flex">طلباتي<span class="inner-line"></span></span></h1>
                                 </div>
                                 <div class="profile zhd-box">
                                     <button class="btn btn-sky profile-btn invert">
@@ -2369,7 +2596,8 @@
                                     </a>
                                     @else
                                     <a href="#profile">
-                                        <img src="{{ asset( auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
+                                        <img src="{{ asset( auth()->user()->profile) }}"
+                                            style="height:40px; width:40px; border-radius: 50%">
                                     </a>
                                     @endif
                                 </div>
@@ -2380,19 +2608,22 @@
                                         <label class="form-check-label" for="flexRadioDefault1">
                                             <img src="{{asset('user/assets/images/mada-logo.svg')}}" alt="">
                                             <p>مدى</p>
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                id="flexRadioDefault1">
                                         </label>
                                         <label class="form-check-label" for="flexRadioDefault2">
                                             <img src="{{asset('user/assets/images/masterCard.svg')}}" alt="">
                                             <p>فيزا وماستر كارد</p>
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                id="flexRadioDefault2">
                                         </label>
                                     </div>
                                     <div class="form-check">
                                         <label class="form-check-label" for="flexRadioDefault3">
                                             <img src="{{asset('user/assets/images/apple-pay.svg')}}" alt="">
                                             <p>آبل باي</p>
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                id="flexRadioDefault3">
                                         </label>
                                     </div>
                                 </div>
@@ -2400,7 +2631,8 @@
                                     <div class="row mt-1 justify-content-center">
                                         <div class="col-md-8">
                                             <label class="form-label dot">سبب الرفض</label>
-                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="  الوصف هنا"></textarea>
+                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"
+                                                placeholder="  الوصف هنا"></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -2416,24 +2648,30 @@
                                             <div class="row final two justify-content-center text-center">
                                                 <div class="col-auto">
                                                     <div class="dateTime small">{{@$public->created_at}}</div>
-                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
+                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}"
+                                                        alt="green-circle">
                                                     <div>
                                                         <p>رفع الطلب</p>
                                                     </div>
                                                 </div>
-                                                <img src="{{asset('user/assets/icons/green-line.svg')}}" class="single" alt="">
+                                                <img src="{{asset('user/assets/icons/green-line.svg')}}" class="single"
+                                                    alt="">
                                                 <div class="col-auto">
                                                     <div class="dateTime small">{{@$public->created_at}}</div>
-                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
+                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}"
+                                                        alt="green-circle">
                                                     <div>
                                                         <p>عرض سعر</p>
                                                     </div>
                                                 </div>
-                                                <img src="{{asset('user/assets/icons/green-line.svg')}}" class="single" alt="">
+                                                <img src="{{asset('user/assets/icons/green-line.svg')}}" class="single"
+                                                    alt="">
                                                 <div class="col-auto">
-                                                    <div class="dateTime small text-white">{{@$public->created_at}}</div>
+                                                    <div class="dateTime small text-white">{{@$public->created_at}}
+                                                    </div>
 
-                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
+                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}"
+                                                        alt="green-circle">
 
                                                     <div>
                                                         <p>الدفع</p>
@@ -2446,7 +2684,8 @@
                                             <div class="col-md-12 ">
                                                 <div class="profile tag-profile designer-order">
                                                     <a href="#profile">
-                                                        <img src="{{ asset('/user/assets/icons/avatar.svg')}}" alt="avatar"> </a>
+                                                        <img src="{{ asset('/user/assets/icons/avatar.svg')}}"
+                                                            alt="avatar"> </a>
                                                     <div class="star-profile-txt">
                                                         <span>مصمم</span>
                                                         <h4> أسم المصمم</h4>
@@ -2487,30 +2726,39 @@
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
 
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
+                                            <div
+                                                class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
                                                 <label class="form-label">الكمية</label>
-                                                <input type="text" class="form-control" placeholder=".. رقم الهاتف هنا" readonly="" value="03084875508">
+                                                <input type="text" class="form-control" placeholder=".. رقم الهاتف هنا"
+                                                    readonly="" value="03084875508">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                 <label class="form-label">المقاسات</label>
-                                                <input type="text" class="form-control" placeholder=".. الايميل هنا" readonly="" value="asimali7056@gmail.com">
+                                                <input type="text" class="form-control" placeholder=".. الايميل هنا"
+                                                    readonly="" value="asimali7056@gmail.com">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                 <label class="form-label">شكل الطباعة</label>
-                                                <input type="text" class="form-control" placeholder=".. التخصص هنا" readonly="" value="رقم الهاتف هنا">
+                                                <input type="text" class="form-control" placeholder=".. التخصص هنا"
+                                                    readonly="" value="رقم الهاتف هنا">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
+                                            <div
+                                                class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
                                                 <label class="form-label">تقنية الطباعة</label>
-                                                <input type="text" class="form-control" placeholder=".. الجنس هنا" readonly="" value="male">
+                                                <input type="text" class="form-control" placeholder=".. الجنس هنا"
+                                                    readonly="" value="male">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 zhd-product-visit">
+                                            <div
+                                                class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 zhd-product-visit">
 
 
                                                 <button class="btn btn-sky invert">
-                                                    زيارة المنتج <img src="{{ asset('/user/assets/icons/arrow-right.svg')}}" alt="arrow-right">
+                                                    زيارة المنتج <img
+                                                        src="{{ asset('/user/assets/icons/arrow-right.svg')}}"
+                                                        alt="arrow-right">
                                                 </button>
                                             </div>
                                             <!-- <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
@@ -2526,7 +2774,8 @@
                                             <div class="col-md-12">
                                                 <div class="designer-text mt-4">
                                                     <label class="form-label dot">الملاحظات</label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="   الملاحظات .."></textarea>
+                                                    <textarea class="form-control" id="exampleFormControlTextarea1"
+                                                        rows="4" placeholder="   الملاحظات .."></textarea>
                                                 </div>
                                             </div>
                                         </div>
@@ -2534,7 +2783,8 @@
                                             <div class="col-md-12">
                                                 <div class="review-text review-text-tog">
                                                     <label class="form-label">تقييم المصمم</label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="  الوصف "></textarea>
+                                                    <textarea class="form-control" id="exampleFormControlTextarea1"
+                                                        rows="4" placeholder="  الوصف "></textarea>
                                                     <div class="rating">
                                                         <div class="star-reating">
                                                             <i class="fa-solid fa-star"></i>
@@ -2548,7 +2798,8 @@
                                             </div>
                                         </div>
                                         <div class="row">
-                                            <h1 class="title text-center mt-5 no-border conditional-blur zhd-quote">طلب قيد التنفيذ</h1>
+                                            <h1 class="title text-center mt-5 no-border conditional-blur zhd-quote">طلب
+                                                قيد التنفيذ</h1>
                                             <div class="col-md-12">
                                                 <div class="row justify-content-center">
                                                     <div class="col-md-12">
@@ -2556,7 +2807,9 @@
                                                             <div class="blur-star-inner">
                                                                 <div class="review-text">
                                                                     <label class="form-label">تقييم المصمم</label>
-                                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="  الوصف "></textarea>
+                                                                    <textarea class="form-control"
+                                                                        id="exampleFormControlTextarea1" rows="4"
+                                                                        placeholder="  الوصف "></textarea>
 
                                                                     <div class="rating">
 
@@ -2570,7 +2823,8 @@
 
                                                                     </div>
                                                                     <div class="blur-star-bottom-btn">
-                                                                        <a href="javascript:void(0);" class="btn btn-form mx-3 with-arrow mt-4">ارسال</a>
+                                                                        <a href="javascript:void(0);"
+                                                                            class="btn btn-form mx-3 with-arrow mt-4">ارسال</a>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -2578,15 +2832,21 @@
                                                         <div class="row mb-2 justify-content-between conditional-blur">
                                                             <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
                                                                 <label class="form-label">تكلفة تنفيذ الخدمة</label>
-                                                                <input type="text" class="form-control" placeholder="كتابة القيمة هنا .." readonly value="{{@$public->print_type}}">
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="كتابة القيمة هنا .." readonly
+                                                                    value="{{@$public->print_type}}">
                                                             </div>
                                                             <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
                                                                 <label class="form-label">تاريخ البداية</label>
-                                                                <input type="text" class="form-control" placeholder="تحديد التاريخ هنا .." readonly value="{{@$public->print_color}}">
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="تحديد التاريخ هنا .." readonly
+                                                                    value="{{@$public->print_color}}">
                                                             </div>
                                                             <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
                                                                 <label class="form-label">تاريخ التسليم</label>
-                                                                <input type="text" class="form-control" placeholder="تحديد التاريخ هنا .. " readonly value="{{@$public->print_resolution}}">
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="تحديد التاريخ هنا .. " readonly
+                                                                    value="{{@$public->print_resolution}}">
                                                             </div>
                                                             <div class="prog-outer wrapper al-center ">
                                                                 <div class="prog-inner full-prog"></div>
@@ -2608,21 +2868,29 @@
                                                                 <label class="form-label dot">عموم الحاله الصحية</label>
                                                             </div>
                                                             <div class="col-md-6">
-                                                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="  ..الوصف هنا" readonly>{{@$ss->discription}}</textarea>
+                                                                <textarea class="form-control"
+                                                                    id="exampleFormControlTextarea1" rows="4"
+                                                                    placeholder="  ..الوصف هنا"
+                                                                    readonly>{{@$ss->discription}}</textarea>
                                                             </div>
                                                             <div class="col-md-6">
                                                                 <div class="upload-btn-wrapper designer-upload">
-                                                                    <button class="btn btn-upload-designer health"><img src="{{asset('user/assets/icons/download-attachments.png')}}" alt="upload-img">
+                                                                    <button class="btn btn-upload-designer health"><img
+                                                                            src="{{asset('user/assets/icons/download-attachments.png')}}"
+                                                                            alt="upload-img">
                                                                         <h5>تحميل المرفقات</h5>
                                                                     </button>
-                                                                    <input type="file" id="health-file" required name="myfile" />
+                                                                    <input type="file" id="health-file" required
+                                                                        name="myfile" />
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div class="row">
                                                             <div class="col-md-12">
                                                                 <div class="review-text without-label review-text-tog">
-                                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="  الوصف "></textarea>
+                                                                    <textarea class="form-control"
+                                                                        id="exampleFormControlTextarea1" rows="4"
+                                                                        placeholder="  الوصف "></textarea>
                                                                     <div class="rating">
                                                                         <div class="star-reating">
                                                                             <i class="fa-solid fa-star"></i>
@@ -2636,19 +2904,30 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <h1 class="title text-center mt-5 no-border conditional-blur starbluerModal-btn-hide">
+                                                    <h1
+                                                        class="title text-center mt-5 no-border conditional-blur starbluerModal-btn-hide">
                                                         <div class="zhd-finished">
-                                                            <a href="#star-blur-scroll" class="btn btn-form mx-3 with-arrow uplod-rev-btn mt-10 starbluerModal-btn">منتهي</a>
-                                                            <p class="mt-4">الرجاء التأكد من ارسال كافة الملفات لتجنب تقديم بلاغ عليك</p>
+                                                            <a href="#star-blur-scroll"
+                                                                class="btn btn-form mx-3 with-arrow uplod-rev-btn mt-10 starbluerModal-btn">منتهي</a>
+                                                            <p class="mt-4">الرجاء التأكد من ارسال كافة الملفات لتجنب
+                                                                تقديم بلاغ عليك</p>
                                                         </div>
                                                     </h1>
-                                                    <h1 class="title text-center mt-5 no-border conditional-blur show-footer-btns">
+                                                    <h1
+                                                        class="title text-center mt-5 no-border conditional-blur show-footer-btns">
                                                         <div class="zhd-finished">
-                                                            <a href="javascript:void(0);" class="btn btn-form mx-3 with-arrow uplod-rev-btn mt-10 starbluerModal-btn">تم الارسال</a>
-                                                            <a href="javascript:void(0);" class="btn btn-form mx-3 with-arrow red-btn mt-10 starbluerModal-btn">الفاتورة</a>
+                                                            <a href="javascript:void(0);"
+                                                                class="btn btn-form mx-3 with-arrow uplod-rev-btn mt-10 starbluerModal-btn">تم
+                                                                الارسال</a>
+                                                            <a href="javascript:void(0);"
+                                                                class="btn btn-form mx-3 with-arrow red-btn mt-10 starbluerModal-btn">الفاتورة</a>
                                                             <!-- <a href="javascript:void(0);" class="btn btn-form mx-3 with-arrow mt-10 starbluerModal-btn"  data-bs-toggle="modal" data-bs-target="#designer-bid-submission">تقديم بلاغ</a> -->
-                                                            <button class="btn-form designer-btn clean-btn" data-bs-toggle="modal" data-bs-target="#designer-bid-submission"> تقديم بلاغ</button>
-                                                            <p class="mt-4">الرجاء التأكد من ارسال كافة الملفات لتجنب تقديم بلاغ عليك</p>
+                                                            <button class="btn-form designer-btn clean-btn"
+                                                                data-bs-toggle="modal"
+                                                                data-bs-target="#designer-bid-submission"> تقديم
+                                                                بلاغ</button>
+                                                            <p class="mt-4">الرجاء التأكد من ارسال كافة الملفات لتجنب
+                                                                تقديم بلاغ عليك</p>
                                                         </div>
                                                     </h1>
                                                 </div>
@@ -2681,7 +2960,8 @@
                                 </div>
                                 <div class="zhd-center-hdng" style="margin-top: 1%;">
                                     <span class="outline dot">اهلاً وسهلاً بكم</span>
-                                    <h1 class="modal-title right centr-main-title"><span class="btm-line d-flex">طلباتي<span class="inner-line"></span></span></h1>
+                                    <h1 class="modal-title right centr-main-title"><span
+                                            class="btm-line d-flex">طلباتي<span class="inner-line"></span></span></h1>
                                 </div>
                                 <div class="profile zhd-box">
                                     <button class="btn btn-sky profile-btn invert">
@@ -2693,7 +2973,8 @@
                                     </a>
                                     @else
                                     <a href="#profile">
-                                        <img src="{{ asset( auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
+                                        <img src="{{ asset( auth()->user()->profile) }}"
+                                            style="height:40px; width:40px; border-radius: 50%">
                                     </a>
                                     @endif
                                 </div>
@@ -2704,19 +2985,22 @@
                                         <label class="form-check-label" for="flexRadioDefault1">
                                             <img src="{{asset('user/assets/images/mada-logo.svg')}}" alt="">
                                             <p>مدى</p>
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                id="flexRadioDefault1">
                                         </label>
                                         <label class="form-check-label" for="flexRadioDefault2">
                                             <img src="{{asset('user/assets/images/masterCard.svg')}}" alt="">
                                             <p>فيزا وماستر كارد</p>
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                id="flexRadioDefault2">
                                         </label>
                                     </div>
                                     <div class="form-check">
                                         <label class="form-check-label" for="flexRadioDefault3">
                                             <img src="{{asset('user/assets/images/apple-pay.svg')}}" alt="">
                                             <p>آبل باي</p>
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                id="flexRadioDefault3">
                                         </label>
                                     </div>
                                 </div>
@@ -2724,7 +3008,8 @@
                                     <div class="row mt-1 justify-content-center">
                                         <div class="col-md-8">
                                             <label class="form-label dot">سبب الرفض</label>
-                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="  الوصف هنا"></textarea>
+                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"
+                                                placeholder="  الوصف هنا"></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -2740,26 +3025,33 @@
                                             <div class="row final two justify-content-center text-center">
                                                 <div class="col-auto">
                                                     <div class="dateTime small">{{@$public->created_at}}</div>
-                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
+                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}"
+                                                        alt="green-circle">
                                                     <div>
                                                         <p>رفع الطلب</p>
                                                     </div>
                                                 </div>
-                                                <img src="{{asset('user/assets/icons/green-line.svg')}}" class="single" alt="">
+                                                <img src="{{asset('user/assets/icons/green-line.svg')}}" class="single"
+                                                    alt="">
                                                 <div class="col-auto">
                                                     <div class="dateTime small">{{@$public->created_at}}</div>
-                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
+                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}"
+                                                        alt="green-circle">
                                                     <div>
                                                         <p>عرض سعر</p>
                                                     </div>
                                                 </div>
-                                                <img src="{{asset('user/assets/icons/redline.svg')}}" class="single" alt="">
+                                                <img src="{{asset('user/assets/icons/redline.svg')}}" class="single"
+                                                    alt="">
                                                 <div class="col-auto">
-                                                    <div class="dateTime small text-white">{{@$public->created_at}}</div>
+                                                    <div class="dateTime small text-white">{{@$public->created_at}}
+                                                    </div>
                                                     @if(@$public->status == 2)
-                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
+                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}"
+                                                        alt="green-circle">
                                                     @else
-                                                    <img src="{{asset('user/assets/icons/red-circle.svg')}}" alt="red-circle">
+                                                    <img src="{{asset('user/assets/icons/red-circle.svg')}}"
+                                                        alt="red-circle">
                                                     @endif
                                                     <div>
                                                         <p>الدفع</p>
@@ -2772,7 +3064,8 @@
                                             <div class="col-md-12 ">
                                                 <div class="profile tag-profile designer-order">
                                                     <a href="#profile">
-                                                        <img src="{{ asset('/user/assets/icons/avatar.svg')}}" alt="avatar"> </a>
+                                                        <img src="{{ asset('/user/assets/icons/avatar.svg')}}"
+                                                            alt="avatar"> </a>
                                                     <div class="star-profile-txt">
                                                         <span>مصمم</span>
                                                         <h4> أسم المصمم</h4>
@@ -2813,30 +3106,39 @@
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
 
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
+                                            <div
+                                                class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
                                                 <label class="form-label">الكمية</label>
-                                                <input type="text" class="form-control" placeholder=".. رقم الهاتف هنا" readonly="" value="03084875508">
+                                                <input type="text" class="form-control" placeholder=".. رقم الهاتف هنا"
+                                                    readonly="" value="03084875508">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                 <label class="form-label">المقاسات</label>
-                                                <input type="text" class="form-control" placeholder=".. الايميل هنا" readonly="" value="asimali7056@gmail.com">
+                                                <input type="text" class="form-control" placeholder=".. الايميل هنا"
+                                                    readonly="" value="asimali7056@gmail.com">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                 <label class="form-label">شكل الطباعة</label>
-                                                <input type="text" class="form-control" placeholder=".. التخصص هنا" readonly="" value="رقم الهاتف هنا">
+                                                <input type="text" class="form-control" placeholder=".. التخصص هنا"
+                                                    readonly="" value="رقم الهاتف هنا">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
+                                            <div
+                                                class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
                                                 <label class="form-label">تقنية الطباعة</label>
-                                                <input type="text" class="form-control" placeholder=".. الجنس هنا" readonly="" value="male">
+                                                <input type="text" class="form-control" placeholder=".. الجنس هنا"
+                                                    readonly="" value="male">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 zhd-product-visit">
+                                            <div
+                                                class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 zhd-product-visit">
 
 
                                                 <button class="btn btn-sky invert">
-                                                    زيارة المنتج <img src="{{ asset('/user/assets/icons/arrow-right.svg')}}" alt="arrow-right">
+                                                    زيارة المنتج <img
+                                                        src="{{ asset('/user/assets/icons/arrow-right.svg')}}"
+                                                        alt="arrow-right">
                                                 </button>
                                             </div>
 
@@ -2846,39 +3148,53 @@
                                             <div class="col-md-12">
                                                 <div class="designer-text mt-4">
                                                     <label class="form-label dot">الملاحظات</label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="   الملاحظات .."></textarea>
+                                                    <textarea class="form-control" id="exampleFormControlTextarea1"
+                                                        rows="4" placeholder="   الملاحظات .."></textarea>
                                                 </div>
                                             </div>
                                         </div>
 
                                         <div class="row">
-                                            <h1 class="title text-center mt-5 no-border conditional-blur zhd-quote">تقديم عرض سعر</h1>
+                                            <h1 class="title text-center mt-5 no-border conditional-blur zhd-quote">
+                                                تقديم عرض سعر</h1>
 
                                             <div class="row mb-2 justify-content-between conditional-blur">
                                                 <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
                                                     <label class="form-label">تكلفة تنفيذ الخدمة</label>
-                                                    <input type="text" class="form-control" placeholder="كتابة القيمة هنا .." readonly value="{{@$public->print_type}}">
+                                                    <input type="text" class="form-control"
+                                                        placeholder="كتابة القيمة هنا .." readonly
+                                                        value="{{@$public->print_type}}">
                                                     <div class="service-fee-text">
                                                         <span>شامل رسوم الخدمة + قيمة الضريبة المضافة</span>
                                                     </div>
                                                 </div>
                                                 <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
                                                     <label class="form-label">تاريخ البداية</label>
-                                                    <input type="text" class="form-control" placeholder="تحديد التاريخ هنا .." readonly value="{{@$public->print_color}}">
+                                                    <input type="text" class="form-control"
+                                                        placeholder="تحديد التاريخ هنا .." readonly
+                                                        value="{{@$public->print_color}}">
                                                 </div>
                                                 <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
                                                     <label class="form-label">تاريخ التسليم</label>
-                                                    <input type="text" class="form-control" placeholder="تحديد التاريخ هنا .. " readonly value="{{@$public->print_resolution}}">
+                                                    <input type="text" class="form-control"
+                                                        placeholder="تحديد التاريخ هنا .. " readonly
+                                                        value="{{@$public->print_resolution}}">
                                                 </div>
 
                                             </div>
 
                                             <h1 class="title text-center mt-5 no-border conditional-blur">
                                                 <div class="zhd-finished">
-                                                    <a href="javascript:void(0);" class="btn btn-form mx-3 with-arrow uplod-rev-btn mt-10" data-bs-toggle="modal" data-bs-target="#designer-submit-quote">ارسال</a>
-                                                    <a href="javascript:void(0);" class="btn btn-form mx-3 with-arrow mt-10 red-btn" data-bs-toggle="modal" data-bs-target="#">رفض</a>
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-form mx-3 with-arrow uplod-rev-btn mt-10"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#designer-submit-quote">ارسال</a>
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-form mx-3 with-arrow mt-10 red-btn"
+                                                        data-bs-toggle="modal" data-bs-target="#">رفض</a>
 
-                                                    <p class="mt-4">سيتم ارسال تفاصيل تنفيذ المهمة الى المستخدم للقبول او الرفض</p>
+                                                    <p class="mt-4">سيتم ارسال تفاصيل تنفيذ المهمة الى المستخدم للقبول
+                                                        او الرفض</p>
                                                 </div>
                                             </h1>
                                         </div>
@@ -2910,7 +3226,8 @@
                                 </div>
                                 <div class="zhd-center-hdng" style="margin-top: 1%;">
                                     <span class="outline dot">اهلاً وسهلاً بكم</span>
-                                    <h1 class="modal-title right centr-main-title"><span class="btm-line d-flex">طلباتي<span class="inner-line"></span></span></h1>
+                                    <h1 class="modal-title right centr-main-title"><span
+                                            class="btm-line d-flex">طلباتي<span class="inner-line"></span></span></h1>
                                 </div>
                                 <div class="profile zhd-box">
                                     <button class="btn btn-sky profile-btn invert">
@@ -2922,7 +3239,8 @@
                                     </a>
                                     @else
                                     <a href="#profile">
-                                        <img src="{{ asset( auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
+                                        <img src="{{ asset( auth()->user()->profile) }}"
+                                            style="height:40px; width:40px; border-radius: 50%">
                                     </a>
                                     @endif
                                 </div>
@@ -2933,19 +3251,22 @@
                                         <label class="form-check-label" for="flexRadioDefault1">
                                             <img src="{{asset('user/assets/images/mada-logo.svg')}}" alt="">
                                             <p>مدى</p>
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                id="flexRadioDefault1">
                                         </label>
                                         <label class="form-check-label" for="flexRadioDefault2">
                                             <img src="{{asset('user/assets/images/masterCard.svg')}}" alt="">
                                             <p>فيزا وماستر كارد</p>
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                id="flexRadioDefault2">
                                         </label>
                                     </div>
                                     <div class="form-check">
                                         <label class="form-check-label" for="flexRadioDefault3">
                                             <img src="{{asset('user/assets/images/apple-pay.svg')}}" alt="">
                                             <p>آبل باي</p>
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                id="flexRadioDefault3">
                                         </label>
                                     </div>
                                 </div>
@@ -2953,7 +3274,8 @@
                                     <div class="row mt-1 justify-content-center">
                                         <div class="col-md-8">
                                             <label class="form-label dot">سبب الرفض</label>
-                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="  الوصف هنا"></textarea>
+                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"
+                                                placeholder="  الوصف هنا"></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -2969,25 +3291,31 @@
                                             <div class="row final two justify-content-center text-center">
                                                 <div class="col-auto">
                                                     <div class="dateTime small">{{@$public->created_at}}</div>
-                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
+                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}"
+                                                        alt="green-circle">
                                                     <div>
                                                         <p>رفع الطلب</p>
                                                     </div>
                                                 </div>
-                                                <img src="{{asset('user/assets/icons/redline.svg')}}" class="single" alt="">
+                                                <img src="{{asset('user/assets/icons/redline.svg')}}" class="single"
+                                                    alt="">
                                                 <div class="col-auto">
                                                     <div class="dateTime small">{{@$public->created_at}}</div>
-                                                    <img src="{{asset('user/assets/icons/red-circle.svg')}}" alt="red-circle">
+                                                    <img src="{{asset('user/assets/icons/red-circle.svg')}}"
+                                                        alt="red-circle">
                                                     <div>
                                                         <p>عرض سعر</p>
                                                     </div>
                                                 </div>
-                                                <img src="{{asset('user/assets/icons/redline.svg')}}" class="single" alt="">
+                                                <img src="{{asset('user/assets/icons/redline.svg')}}" class="single"
+                                                    alt="">
                                                 <div class="col-auto">
-                                                    <div class="dateTime small text-white">{{@$public->created_at}}</div>
+                                                    <div class="dateTime small text-white">{{@$public->created_at}}
+                                                    </div>
 
 
-                                                    <img src="{{asset('user/assets/icons/red-circle.svg')}}" alt="red-circle">
+                                                    <img src="{{asset('user/assets/icons/red-circle.svg')}}"
+                                                        alt="red-circle">
 
                                                     <div>
                                                         <p>الدفع</p>
@@ -3041,30 +3369,39 @@
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
 
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
+                                            <div
+                                                class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
                                                 <label class="form-label">الكمية</label>
-                                                <input type="text" class="form-control" placeholder=".. رقم الهاتف هنا" readonly="" value="03084875508">
+                                                <input type="text" class="form-control" placeholder=".. رقم الهاتف هنا"
+                                                    readonly="" value="03084875508">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                 <label class="form-label">المقاسات</label>
-                                                <input type="text" class="form-control" placeholder=".. الايميل هنا" readonly="" value="asimali7056@gmail.com">
+                                                <input type="text" class="form-control" placeholder=".. الايميل هنا"
+                                                    readonly="" value="asimali7056@gmail.com">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                 <label class="form-label">شكل الطباعة</label>
-                                                <input type="text" class="form-control" placeholder=".. التخصص هنا" readonly="" value="رقم الهاتف هنا">
+                                                <input type="text" class="form-control" placeholder=".. التخصص هنا"
+                                                    readonly="" value="رقم الهاتف هنا">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
+                                            <div
+                                                class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
                                                 <label class="form-label">تقنية الطباعة</label>
-                                                <input type="text" class="form-control" placeholder=".. الجنس هنا" readonly="" value="male">
+                                                <input type="text" class="form-control" placeholder=".. الجنس هنا"
+                                                    readonly="" value="male">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 zhd-product-visit">
+                                            <div
+                                                class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 zhd-product-visit">
 
 
                                                 <button class="btn btn-sky invert">
-                                                    زيارة المنتج <img src="{{ asset('/user/assets/icons/arrow-right.svg')}}" alt="arrow-right">
+                                                    زيارة المنتج <img
+                                                        src="{{ asset('/user/assets/icons/arrow-right.svg')}}"
+                                                        alt="arrow-right">
                                                 </button>
                                             </div>
 
@@ -3074,7 +3411,8 @@
                                             <div class="col-md-12">
                                                 <div class="designer-text mt-4">
                                                     <label class="form-label dot">الملاحظات</label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="   الملاحظات .."></textarea>
+                                                    <textarea class="form-control" id="exampleFormControlTextarea1"
+                                                        rows="4" placeholder="   الملاحظات .."></textarea>
                                                 </div>
                                             </div>
                                         </div>
@@ -3082,36 +3420,47 @@
                                             <div class="col-md-12">
                                                 <div class="designer-text mt-4">
                                                     <label class="form-label">سبب الرفض</label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="    الوصف هنا .."></textarea>
+                                                    <textarea class="form-control" id="exampleFormControlTextarea1"
+                                                        rows="4" placeholder="    الوصف هنا .."></textarea>
                                                 </div>
                                             </div>
                                         </div>
 
                                         <div class="row">
-                                            <h1 class="title text-center mt-5 no-border conditional-blur zhd-quote">تم رفض عرض السعر</h1>
+                                            <h1 class="title text-center mt-5 no-border conditional-blur zhd-quote">تم
+                                                رفض عرض السعر</h1>
 
                                             <div class="row mb-2 justify-content-between conditional-blur">
                                                 <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
                                                     <label class="form-label">تكلفة تنفيذ الخدمة</label>
-                                                    <input type="text" class="form-control" placeholder="كتابة القيمة هنا .." readonly value="{{@$public->print_type}}">
+                                                    <input type="text" class="form-control"
+                                                        placeholder="كتابة القيمة هنا .." readonly
+                                                        value="{{@$public->print_type}}">
                                                     <div class="service-fee-text">
                                                         <span>شامل رسوم الخدمة + قيمة الضريبة المضافة</span>
                                                     </div>
                                                 </div>
                                                 <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
                                                     <label class="form-label">تاريخ البداية</label>
-                                                    <input type="text" class="form-control" placeholder="تحديد التاريخ هنا .." readonly value="{{@$public->print_color}}">
+                                                    <input type="text" class="form-control"
+                                                        placeholder="تحديد التاريخ هنا .." readonly
+                                                        value="{{@$public->print_color}}">
                                                 </div>
                                                 <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
                                                     <label class="form-label">تاريخ التسليم</label>
-                                                    <input type="text" class="form-control" placeholder="تحديد التاريخ هنا .. " readonly value="{{@$public->print_resolution}}">
+                                                    <input type="text" class="form-control"
+                                                        placeholder="تحديد التاريخ هنا .. " readonly
+                                                        value="{{@$public->print_resolution}}">
                                                 </div>
 
                                             </div>
 
                                             <h1 class="title text-center mt-5 no-border conditional-blur">
                                                 <div class="zhd-finished">
-                                                    <a href="javascript:void(0);" class="btn btn-form mx-3 with-arrow mt-10" data-bs-toggle="modal" data-bs-target="#designer-information">طلباتي</a>
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-form mx-3 with-arrow mt-10"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#designer-information">طلباتي</a>
                                                     <p class="mt-4">طلب مرفوض من قبل المستخدم</p>
                                                 </div>
                                             </h1>
@@ -3146,7 +3495,8 @@
                                 </div>
                                 <div class="zhd-center-hdng" style="margin-top: 1%;">
                                     <span class="outline dot">اهلاً وسهلاً بكم</span>
-                                    <h1 class="modal-title right centr-main-title"><span class="btm-line d-flex">طلباتي<span class="inner-line"></span></span></h1>
+                                    <h1 class="modal-title right centr-main-title"><span
+                                            class="btm-line d-flex">طلباتي<span class="inner-line"></span></span></h1>
                                 </div>
                                 <div class="profile zhd-box">
                                     <button class="btn btn-sky profile-btn invert">
@@ -3158,7 +3508,8 @@
                                     </a>
                                     @else
                                     <a href="#profile">
-                                        <img src="{{ asset( auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
+                                        <img src="{{ asset( auth()->user()->profile) }}"
+                                            style="height:40px; width:40px; border-radius: 50%">
                                     </a>
                                     @endif
                                 </div>
@@ -3169,19 +3520,22 @@
                                         <label class="form-check-label" for="flexRadioDefault1">
                                             <img src="{{asset('user/assets/images/mada-logo.svg')}}" alt="">
                                             <p>مدى</p>
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                id="flexRadioDefault1">
                                         </label>
                                         <label class="form-check-label" for="flexRadioDefault2">
                                             <img src="{{asset('user/assets/images/masterCard.svg')}}" alt="">
                                             <p>فيزا وماستر كارد</p>
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                id="flexRadioDefault2">
                                         </label>
                                     </div>
                                     <div class="form-check">
                                         <label class="form-check-label" for="flexRadioDefault3">
                                             <img src="{{asset('user/assets/images/apple-pay.svg')}}" alt="">
                                             <p>آبل باي</p>
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                id="flexRadioDefault3">
                                         </label>
                                     </div>
                                 </div>
@@ -3189,7 +3543,8 @@
                                     <div class="row mt-1 justify-content-center">
                                         <div class="col-md-8">
                                             <label class="form-label dot">سبب الرفض</label>
-                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="  الوصف هنا"></textarea>
+                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"
+                                                placeholder="  الوصف هنا"></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -3205,25 +3560,31 @@
                                             <div class="row final two justify-content-center text-center">
                                                 <div class="col-auto">
                                                     <div class="dateTime small">{{@$public->created_at}}</div>
-                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
+                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}"
+                                                        alt="green-circle">
                                                     <div>
                                                         <p>رفع الطلب</p>
                                                     </div>
                                                 </div>
-                                                <img src="{{asset('user/assets/icons/redline.svg')}}" class="single" alt="">
+                                                <img src="{{asset('user/assets/icons/redline.svg')}}" class="single"
+                                                    alt="">
                                                 <div class="col-auto">
                                                     <div class="dateTime small">{{@$public->created_at}}</div>
-                                                    <img src="{{asset('user/assets/icons/red-circle.svg')}}" alt="red-circle">
+                                                    <img src="{{asset('user/assets/icons/red-circle.svg')}}"
+                                                        alt="red-circle">
                                                     <div>
                                                         <p>عرض سعر</p>
                                                     </div>
                                                 </div>
-                                                <img src="{{asset('user/assets/icons/redline.svg')}}" class="single" alt="">
+                                                <img src="{{asset('user/assets/icons/redline.svg')}}" class="single"
+                                                    alt="">
                                                 <div class="col-auto">
-                                                    <div class="dateTime small text-white">{{@$public->created_at}}</div>
+                                                    <div class="dateTime small text-white">{{@$public->created_at}}
+                                                    </div>
 
 
-                                                    <img src="{{asset('user/assets/icons/red-circle.svg')}}" alt="red-circle">
+                                                    <img src="{{asset('user/assets/icons/red-circle.svg')}}"
+                                                        alt="red-circle">
 
                                                     <div>
                                                         <p>الدفع</p>
@@ -3277,30 +3638,39 @@
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
 
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
+                                            <div
+                                                class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
                                                 <label class="form-label">الكمية</label>
-                                                <input type="text" class="form-control" placeholder=".. رقم الهاتف هنا" readonly="" value="03084875508">
+                                                <input type="text" class="form-control" placeholder=".. رقم الهاتف هنا"
+                                                    readonly="" value="03084875508">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                 <label class="form-label">المقاسات</label>
-                                                <input type="text" class="form-control" placeholder=".. الايميل هنا" readonly="" value="asimali7056@gmail.com">
+                                                <input type="text" class="form-control" placeholder=".. الايميل هنا"
+                                                    readonly="" value="asimali7056@gmail.com">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                 <label class="form-label">شكل الطباعة</label>
-                                                <input type="text" class="form-control" placeholder=".. التخصص هنا" readonly="" value="رقم الهاتف هنا">
+                                                <input type="text" class="form-control" placeholder=".. التخصص هنا"
+                                                    readonly="" value="رقم الهاتف هنا">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
+                                            <div
+                                                class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
                                                 <label class="form-label">تقنية الطباعة</label>
-                                                <input type="text" class="form-control" placeholder=".. الجنس هنا" readonly="" value="male">
+                                                <input type="text" class="form-control" placeholder=".. الجنس هنا"
+                                                    readonly="" value="male">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 zhd-product-visit">
+                                            <div
+                                                class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 zhd-product-visit">
 
 
                                                 <button class="btn btn-sky invert">
-                                                    زيارة المنتج <img src="{{ asset('/user/assets/icons/arrow-right.svg')}}" alt="arrow-right">
+                                                    زيارة المنتج <img
+                                                        src="{{ asset('/user/assets/icons/arrow-right.svg')}}"
+                                                        alt="arrow-right">
                                                 </button>
                                             </div>
 
@@ -3310,7 +3680,8 @@
                                             <div class="col-md-12">
                                                 <div class="designer-text mt-4">
                                                     <label class="form-label dot">الملاحظات</label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="   الملاحظات .."></textarea>
+                                                    <textarea class="form-control" id="exampleFormControlTextarea1"
+                                                        rows="4" placeholder="   الملاحظات .."></textarea>
                                                 </div>
                                             </div>
                                         </div>
@@ -3320,7 +3691,8 @@
                                             <div class="col-md-12">
                                                 <div class="designer-text mt-4">
                                                     <label class="form-label">سبب الرفض</label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="    الوصف هنا .."></textarea>
+                                                    <textarea class="form-control" id="exampleFormControlTextarea1"
+                                                        rows="4" placeholder="    الوصف هنا .."></textarea>
                                                 </div>
                                             </div>
                                         </div>
@@ -3362,10 +3734,10 @@
     </div>
     </div>
     </div>
- <!-- zahid-designer information end-->
+    <!-- zahid-designer information end-->
 
-     <!-- zahid-designer submit-quote  start-->
-     <div class="modal page result" id="designer-submit-quote">
+    <!-- zahid-designer submit-quote  start-->
+    <div class="modal page result" id="designer-submit-quote">
         <div class="modal-dialog modal-fullscreen">
             <div class="modal-content">
                 <div class="container">
@@ -3377,7 +3749,8 @@
                                 </div>
                                 <div class="zhd-center-hdng" style="margin-top: 1%;">
                                     <span class="outline dot">اهلاً وسهلاً بكم</span>
-                                    <h1 class="modal-title right centr-main-title"><span class="btm-line d-flex">طلباتي<span class="inner-line"></span></span></h1>
+                                    <h1 class="modal-title right centr-main-title"><span
+                                            class="btm-line d-flex">طلباتي<span class="inner-line"></span></span></h1>
                                 </div>
                                 <div class="profile zhd-box">
                                     <button class="btn btn-sky profile-btn invert">
@@ -3389,7 +3762,8 @@
                                     </a>
                                     @else
                                     <a href="#profile">
-                                        <img src="{{ asset( auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
+                                        <img src="{{ asset( auth()->user()->profile) }}"
+                                            style="height:40px; width:40px; border-radius: 50%">
                                     </a>
                                     @endif
                                 </div>
@@ -3400,19 +3774,22 @@
                                         <label class="form-check-label" for="flexRadioDefault1">
                                             <img src="{{asset('user/assets/images/mada-logo.svg')}}" alt="">
                                             <p>مدى</p>
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                id="flexRadioDefault1">
                                         </label>
                                         <label class="form-check-label" for="flexRadioDefault2">
                                             <img src="{{asset('user/assets/images/masterCard.svg')}}" alt="">
                                             <p>فيزا وماستر كارد</p>
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                id="flexRadioDefault2">
                                         </label>
                                     </div>
                                     <div class="form-check">
                                         <label class="form-check-label" for="flexRadioDefault3">
                                             <img src="{{asset('user/assets/images/apple-pay.svg')}}" alt="">
                                             <p>آبل باي</p>
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                id="flexRadioDefault3">
                                         </label>
                                     </div>
                                 </div>
@@ -3420,7 +3797,8 @@
                                     <div class="row mt-1 justify-content-center">
                                         <div class="col-md-8">
                                             <label class="form-label dot">سبب الرفض</label>
-                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="  الوصف هنا"></textarea>
+                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"
+                                                placeholder="  الوصف هنا"></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -3436,26 +3814,33 @@
                                             <div class="row final two justify-content-center text-center">
                                                 <div class="col-auto">
                                                     <div class="dateTime small">{{@$public->created_at}}</div>
-                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
+                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}"
+                                                        alt="green-circle">
                                                     <div>
                                                         <p>رفع الطلب</p>
                                                     </div>
                                                 </div>
-                                                <img src="{{asset('user/assets/icons/green-line.svg')}}" class="single" alt="">
+                                                <img src="{{asset('user/assets/icons/green-line.svg')}}" class="single"
+                                                    alt="">
                                                 <div class="col-auto">
                                                     <div class="dateTime small">{{@$public->created_at}}</div>
-                                                    <img src="{{asset('user/assets/icons/red-circle.svg')}}" alt="green-circle">
+                                                    <img src="{{asset('user/assets/icons/red-circle.svg')}}"
+                                                        alt="green-circle">
                                                     <div>
                                                         <p>عرض سعر</p>
                                                     </div>
                                                 </div>
-                                                <img src="{{asset('user/assets/icons/redline.svg')}}" class="single" alt="">
+                                                <img src="{{asset('user/assets/icons/redline.svg')}}" class="single"
+                                                    alt="">
                                                 <div class="col-auto">
-                                                    <div class="dateTime small text-white">{{@$public->created_at}}</div>
+                                                    <div class="dateTime small text-white">{{@$public->created_at}}
+                                                    </div>
                                                     @if(@$public->status == 2)
-                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
+                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}"
+                                                        alt="green-circle">
                                                     @else
-                                                    <img src="{{asset('user/assets/icons/red-circle.svg')}}" alt="red-circle">
+                                                    <img src="{{asset('user/assets/icons/red-circle.svg')}}"
+                                                        alt="red-circle">
                                                     @endif
                                                     <div>
                                                         <p>الدفع</p>
@@ -3468,7 +3853,8 @@
                                             <div class="col-md-12 ">
                                                 <div class="profile tag-profile designer-order">
                                                     <a href="#profile">
-                                                        <img src="{{ asset('/user/assets/icons/avatar.svg')}}" alt="avatar"> </a>
+                                                        <img src="{{ asset('/user/assets/icons/avatar.svg')}}"
+                                                            alt="avatar"> </a>
                                                     <div class="star-profile-txt">
                                                         <span>مصمم</span>
                                                         <h4> أسم المصمم</h4>
@@ -3509,30 +3895,39 @@
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
 
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
+                                            <div
+                                                class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
                                                 <label class="form-label">الكمية</label>
-                                                <input type="text" class="form-control" placeholder=".. رقم الهاتف هنا" readonly="" value="03084875508">
+                                                <input type="text" class="form-control" placeholder=".. رقم الهاتف هنا"
+                                                    readonly="" value="03084875508">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                 <label class="form-label">المقاسات</label>
-                                                <input type="text" class="form-control" placeholder=".. الايميل هنا" readonly="" value="asimali7056@gmail.com">
+                                                <input type="text" class="form-control" placeholder=".. الايميل هنا"
+                                                    readonly="" value="asimali7056@gmail.com">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                 <label class="form-label">شكل الطباعة</label>
-                                                <input type="text" class="form-control" placeholder=".. التخصص هنا" readonly="" value="رقم الهاتف هنا">
+                                                <input type="text" class="form-control" placeholder=".. التخصص هنا"
+                                                    readonly="" value="رقم الهاتف هنا">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
+                                            <div
+                                                class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
                                                 <label class="form-label">تقنية الطباعة</label>
-                                                <input type="text" class="form-control" placeholder=".. الجنس هنا" readonly="" value="male">
+                                                <input type="text" class="form-control" placeholder=".. الجنس هنا"
+                                                    readonly="" value="male">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 zhd-product-visit">
+                                            <div
+                                                class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 zhd-product-visit">
 
 
                                                 <button class="btn btn-sky invert">
-                                                    زيارة المنتج <img src="{{ asset('/user/assets/icons/arrow-right.svg')}}" alt="arrow-right">
+                                                    زيارة المنتج <img
+                                                        src="{{ asset('/user/assets/icons/arrow-right.svg')}}"
+                                                        alt="arrow-right">
                                                 </button>
                                             </div>
 
@@ -3542,52 +3937,63 @@
                                             <div class="col-md-12">
                                                 <div class="designer-text mt-4">
                                                     <label class="form-label dot">الملاحظات</label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="   الملاحظات .."></textarea>
+                                                    <textarea class="form-control" id="exampleFormControlTextarea1"
+                                                        rows="4" placeholder="   الملاحظات .."></textarea>
                                                 </div>
                                             </div>
                                         </div>
 
                                         <div class="row">
-                                            <h1 class="title text-center mt-5 no-border conditional-blur zhd-quote">تم تقديم عرض السعر</h1>
+                                            <h1 class="title text-center mt-5 no-border conditional-blur zhd-quote">تم
+                                                تقديم عرض السعر</h1>
 
                                             <div class="row mb-2 justify-content-between conditional-blur">
-                                            <div class="blur-star blur-bg submit-quote-review" id="star-blur-scroll" style="display: block;">
-                                                            <div class="blur-star-inner">
-                                                                <div class="review-text">
-                                                                    <label class="form-label">تقييم المصمم</label>
-                                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="  الوصف "></textarea>
+                                                <div class="blur-star blur-bg submit-quote-review" id="star-blur-scroll"
+                                                    style="display: block;">
+                                                    <div class="blur-star-inner">
+                                                        <div class="review-text">
+                                                            <label class="form-label">تقييم المصمم</label>
+                                                            <textarea class="form-control"
+                                                                id="exampleFormControlTextarea1" rows="4"
+                                                                placeholder="  الوصف "></textarea>
 
-                                                                    <div class="rating">
+                                                            <div class="rating">
 
-                                                                        <div class="star-reating">
-                                                                            <i class="fa-solid fa-star"></i>
-                                                                            <i class="fa-solid fa-star"></i>
-                                                                            <i class="fa-solid fa-star"></i>
-                                                                            <i class="fa-solid fa-star"></i>
-                                                                            <i class="fa-solid fa-star"></i>
-                                                                        </div>
+                                                                <div class="star-reating">
+                                                                    <i class="fa-solid fa-star"></i>
+                                                                    <i class="fa-solid fa-star"></i>
+                                                                    <i class="fa-solid fa-star"></i>
+                                                                    <i class="fa-solid fa-star"></i>
+                                                                    <i class="fa-solid fa-star"></i>
+                                                                </div>
 
-                                                                    </div>
-                                                                    <!-- <div class="blur-star-bottom-btn">
+                                                            </div>
+                                                            <!-- <div class="blur-star-bottom-btn">
                                                                         <a href="javascript:void(0);" class="btn btn-form mx-3 with-arrow mt-4">ارسال</a>
                                                                     </div> -->
-                                                                </div>
-                                                            </div>
                                                         </div>
+                                                    </div>
+                                                </div>
                                                 <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
                                                     <label class="form-label">تكلفة تنفيذ الخدمة</label>
-                                                    <input type="text" class="form-control" placeholder="كتابة القيمة هنا .." readonly value="{{@$public->print_type}}">
+                                                    <input type="text" class="form-control"
+                                                        placeholder="كتابة القيمة هنا .." readonly
+                                                        value="{{@$public->print_type}}">
                                                     <div class="service-fee-text">
                                                         <span>شامل رسوم الخدمة + قيمة الضريبة المضافة</span>
                                                     </div>
                                                 </div>
                                                 <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
                                                     <label class="form-label">تاريخ البداية</label>
-                                                    <input type="text" class="form-control" placeholder="تحديد التاريخ هنا .." readonly value="{{@$public->print_color}}">
+                                                    <input type="text" class="form-control"
+                                                        placeholder="تحديد التاريخ هنا .." readonly
+                                                        value="{{@$public->print_color}}">
                                                 </div>
                                                 <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
                                                     <label class="form-label">تاريخ التسليم</label>
-                                                    <input type="text" class="form-control" placeholder="تحديد التاريخ هنا .. " readonly value="{{@$public->print_resolution}}">
+                                                    <input type="text" class="form-control"
+                                                        placeholder="تحديد التاريخ هنا .. " readonly
+                                                        value="{{@$public->print_resolution}}">
                                                 </div>
 
                                             </div>
@@ -3595,10 +4001,15 @@
                                             <h1 class="title text-center mt-5 no-border conditional-blur">
                                                 <div class="zhd-finished">
                                                     <!-- <a href="javascript:void(0);" class="btn btn-form mx-3 with-arrow uplod-rev-btn mt-10">تم الارسال</a> -->
-                                                    <a href="javascript:void(0);" class="btn btn-form mx-3 with-arrow mt-4">ارسال</a>
-                                                    <a href="javascript:void(0);" class="btn btn-form mx-3 with-arrow mt-4 red-btn" data-bs-toggle="modal" data-bs-target="#designer-bid-rejected">رفض</a>
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-form mx-3 with-arrow mt-4">ارسال</a>
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-form mx-3 with-arrow mt-4 red-btn"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#designer-bid-rejected">رفض</a>
 
-                                                    <p class="mt-4">سيتم ارسال تفاصيل تنفيذ المهمة الى المستخدم للقبول او الرفض</p>
+                                                    <p class="mt-4">سيتم ارسال تفاصيل تنفيذ المهمة الى المستخدم للقبول
+                                                        او الرفض</p>
                                                 </div>
                                             </h1>
                                         </div>
@@ -3618,146 +4029,177 @@
 
     <!-- zahid-designer submit-quote end-->
 
+<!-- ///////////////////////////////////// design modal start here ////////////////////////////////-->
 
-    <!-- ///////////////////////////////////// design modal start here ////////////////////////////////-->
 
+<div class="modal fade page" id="designModal" tabindex="-1" aria-labelledby="designLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12 p-0">
 
-    <div class="modal fade page" id="designModal" tabindex="-1" aria-labelledby="designLabel" aria-hidden="true">
-        <div class="modal-dialog modal-fullscreen">
-            <div class="modal-content">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-md-12 p-0">
+                        <div class="modal-body">
+                            <!-- header designer start here -->
+                            <div class="toggle-overlay"></div>
+                            <div class="content-wrapper hide-on-load">
+                                <nav class="navbar navbar-expand-lg navbar-light desktop-nav">
+                                    <div class="container-fluid">
+                                        <a class="navbar-brand" href="#">
+                                            <img src="{{ asset('user/assets/icons/logo.svg') }}" alt="3dOrgans-logo"
+                                                width="150" class="d-inline-block align-text-top">
+                                        </a>
+                                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                                            aria-label="Toggle navigation">
+                                            <span class="navbar-toggler-icon"></span>
+                                        </button>
+                                        <div class="collapse navbar-collapse" id="navbarNav">
+                                            <ul class="navbar-nav">
+                                                <li class="nav-item">
+                                                    <a class="nav-link" aria-current="page" href="#">الرئيسية</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="#about-us">
+                                                        من نحن
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="#" class="nav-link">ماهي
+                                                        تقنية الـ 3D</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="#services-section" class="nav-link">الخدمات</a>
+                                                </li>
+                                                <li class="nav-item active">
+                                                    <a class="nav-link" href="#">مجتمع المصممين</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link close-modal" href="#contact-us">اتصل بنا</a>
+                                                </li>
+                                                <li class="mobile-menu">
+                                                    <div class="left-side">
+                                                        <a href="#membership" class="m-0" data-bs-toggle="modal"
+                                                            data-bs-target="#memberModal"><img
+                                                                src="{{ asset('user/assets/icons/avatar.svg') }}"
+                                                                class="profile-img" alt="avatar"></a>
+                                                        @auth
+                                                        <a href="#membership" class="dot m-0 border-bottom"
+                                                            data-bs-toggle="modal" data-bs-target="#memberModal">{{
+                                                            auth()->user()->name }}!</a>
+                                                        @endauth
+                                                        <a href="#requests" class="ms-auto dot border-bottom "
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target="#requestsModal">طلباتي</a>
+                                                        <span>
+                                                            <a href="#"><img
+                                                                    src="{{ asset('user/assets/icons/twitter.svg') }}"
+                                                                    alt="twitter"></a>
+                                                            <a href="#"><img
+                                                                    src="{{ asset('user/assets/icons/instagram.svg') }}"
+                                                                    alt="instagram"></a>
+                                                        </span>
+                                                    </div>
+                                                </li>
 
-                            <div class="modal-body">
-                                <!-- header designer start here -->
-                                <div class="toggle-overlay"></div>
-                                <div class="content-wrapper hide-on-load">
-                                    <nav class="navbar navbar-expand-lg navbar-light desktop-nav">
-                                        <div class="container-fluid">
-                                            <a class="navbar-brand" href="#">
-                                                <img src="{{ asset('user/assets/icons/logo.svg') }}" alt="3dOrgans-logo" width="150" class="d-inline-block align-text-top">
-                                            </a>
-                                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                                                <span class="navbar-toggler-icon"></span>
-                                            </button>
-                                            <div class="collapse navbar-collapse" id="navbarNav">
-                                                <ul class="navbar-nav">
-                                                    <li class="nav-item">
-                                                        <a class="nav-link" aria-current="page" href="#">الرئيسية</a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a class="nav-link" href="#about-us">
-                                                            من نحن
-                                                        </a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a href="#" class="nav-link">ماهي
-                                                            تقنية الـ 3D</a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a href="#services-section" class="nav-link">الخدمات</a>
-                                                    </li>
-                                                    <li class="nav-item active">
-                                                        <a class="nav-link" href="#">مجتمع المصممين</a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a class="nav-link close-modal" href="#contact-us">اتصل بنا</a>
-                                                    </li>
-                                                    <li class="mobile-menu">
-                                                        <div class="left-side">
-                                                            <a href="#membership" class="m-0" data-bs-toggle="modal" data-bs-target="#memberModal"><img src="{{ asset('user/assets/icons/avatar.svg') }}" class="profile-img" alt="avatar"></a>
-                                                            @auth
-                                                            <a href="#membership" class="dot m-0 border-bottom" data-bs-toggle="modal" data-bs-target="#memberModal">{{
-                                                                auth()->user()->name }}!</a>
-                                                            @endauth
-                                                            <a href="#requests" class="ms-auto dot border-bottom " data-bs-toggle="modal" data-bs-target="#requestsModal">طلباتي</a>
-                                                            <span>
-                                                                <a href="#"><img src="{{ asset('user/assets/icons/twitter.svg') }}" alt="twitter"></a>
-                                                                <a href="#"><img src="{{ asset('user/assets/icons/instagram.svg') }}" alt="instagram"></a>
-                                                            </span>
-                                                        </div>
-                                                    </li>
+                                            </ul>
+                                        </div>
+                                        @auth
+                                        <div class="left-side desktop-menu">
 
-                                                </ul>
-                                            </div>
-                                            @auth
-                                            <div class="left-side desktop-menu">
-
-                                                <a href="#membership" class="m-0" data-bs-toggle="modal" data-bs-target="#memberModal">
-                                                    {{-- @if (auth()->user()->profile != null)
-                                                    @if (@auth()->user()->profile == null)
-                                                    <div class="profile-img">
-                                                        <img src="{{ asset('assets/images/dashboard/1.png') }}" alt="">
-                                            </div>
-                                            @else
-                                            <div class="profile-img">
-                                                <img src="{{ asset(  auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
-
-                                            </div>
-                                            @endif
-                                            <a href="#membership" class="dot m-0 border-bottom" data-bs-toggle="modal" data-bs-target="#memberModal">{{
-                                                        auth()->user()->name }}</a>
-                                            --}}
-                                            <a href="#" class="m-0" data-bs-toggle="modal" data-bs-target="#memberModal">
-                                                {{-- @if (auth()->user()->profile != null) --}}
+                                            <a href="#membership" class="m-0" data-bs-toggle="modal"
+                                                data-bs-target="#memberModal">
+                                                {{-- @if (auth()->user()->profile != null)
                                                 @if (@auth()->user()->profile == null)
-                                                <div class="profile profile-icon">
+                                                <div class="profile-img">
                                                     <img src="{{ asset('assets/images/dashboard/1.png') }}" alt="">
                                                 </div>
                                                 @else
-                                                <img class="" style="width:30px;height:30px;" alt="" src="{{ asset(Auth::user()->profile) }}">
+                                                <div class="profile-img">
+                                                    <img src="{{ asset(  auth()->user()->profile) }}"
+                                                        style="height:40px; width:40px; border-radius: 50%">
+
+                                                </div>
                                                 @endif
+                                                <a href="#membership" class="dot m-0 border-bottom"
+                                                    data-bs-toggle="modal" data-bs-target="#memberModal">{{
+                                                    auth()->user()->name }}</a>
+                                                --}}
+                                                <a href="#" class="m-0" data-bs-toggle="modal"
+                                                    data-bs-target="#memberModal">
+                                                    {{-- @if (auth()->user()->profile != null) --}}
+                                                    @if (@auth()->user()->profile == null)
+                                                    <div class="profile profile-icon">
+                                                        <img src="{{ asset('assets/images/dashboard/1.png') }}" alt="">
+                                                    </div>
+                                                    @else
+                                                    <img class="" style="width:30px;height:30px;" alt=""
+                                                        src="{{ asset(Auth::user()->profile) }}">
+                                                    @endif
 
-                                                <a href="#membership" class="dot ms-auto border-bottom" data-bs-toggle="modal" data-bs-target="#memberModal">{{
-                                                            auth()->user()->name }}</a>
+                                                    <a href="#membership" class="dot ms-auto border-bottom"
+                                                        data-bs-toggle="modal" data-bs-target="#memberModal">{{
+                                                        auth()->user()->name }}</a>
 
-                                                <a href="#requests" class="ms-auto dot border-bottom " data-bs-toggle="modal" data-bs-target="#requestsModal">طلباتي</a>
+                                                    <a href="#requests" class="ms-auto dot border-bottom "
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#requestsModal">طلباتي</a>
 
 
-                                                <a href="{{route('logout')}}" onclick="return logout(event);" class="ms-auto dot border-bottom" class="dot m-0 border-bottom">
-                                                    تسجيل خروج
-                                                </a>
-                                                <script type="text/javascript">
-                                                    function logout(event) {
-                                                        event.preventDefault();
-                                                        var check = confirm("هل تريد حقا الخروج؟");
-                                                        if (check) {
-                                                            document.getElementById('logout-form').submit();
+                                                    <a href="{{route('logout')}}" onclick="return logout(event);"
+                                                        class="ms-auto dot border-bottom" class="dot m-0 border-bottom">
+                                                        تسجيل خروج
+                                                    </a>
+                                                    <script type="text/javascript">
+                                                        function logout(event) {
+                                                            event.preventDefault();
+                                                            var check = confirm("هل تريد حقا الخروج؟");
+                                                            if (check) {
+                                                                document.getElementById('logout-form').submit();
+                                                            }
                                                         }
-                                                    }
-                                                </script>
-                                                <form id="logout-form" action="{{ route('logout') }}" method="POST">
-                                                    @csrf
+                                                    </script>
+                                                    <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                                                        @csrf
 
-                                                    <button hidden type="submit" class=" sub-slide-item" style=" color:red; background-color: Transparent; background-repeat:no-repeat; border: none; cursor:pointer; overflow: hidden; outline:none;">Log
-                                                        Out</button>
+                                                        <button hidden type="submit" class=" sub-slide-item"
+                                                            style=" color:red; background-color: Transparent; background-repeat:no-repeat; border: none; cursor:pointer; overflow: hidden; outline:none;">Log
+                                                            Out</button>
 
-                                                </form>
-                                                <span>
+                                                    </form>
+                                                    <span>
 
-                                                    <a href="#"><img src="{{ asset('user/assets/icons/twitter.svg') }}" alt="twitter"></a>
-                                                    <a href="#"><img src="{{ asset('user/assets/icons/instagram.svg') }}" alt="instagram"></a>
-                                                </span>
+                                                        <a href="#"><img
+                                                                src="{{ asset('user/assets/icons/twitter.svg') }}"
+                                                                alt="twitter"></a>
+                                                        <a href="#"><img
+                                                                src="{{ asset('user/assets/icons/instagram.svg') }}"
+                                                                alt="instagram"></a>
+                                                    </span>
                                         </div>
                                         @else
                                         <div class="left-side">
-                                            <a href="#login" data-bs-toggle="modal" class="register-icon" data-bs-target="#loginModal">تسجيل دخول</a>
-                                            <a href="#register" class="ms-auto register-icon" data-bs-toggle="modal" data-bs-target="#registerModal">التسجيل</a>
+                                            <a href="#login" data-bs-toggle="modal" class="register-icon"
+                                                data-bs-target="#loginModal">تسجيل دخول</a>
+                                            <a href="#register" class="ms-auto register-icon" data-bs-toggle="modal"
+                                                data-bs-target="#registerModal">التسجيل</a>
                                             <span>
-                                                <a href="#"><img src="{{ asset('user/assets/icons/twitter.svg') }}" alt="twitter"></a>
-                                                <a href="#"><img src="{{ asset('user/assets/icons/instagram.svg') }}" alt="instagram"></a>
+                                                <a href="#"><img src="{{ asset('user/assets/icons/twitter.svg') }}"
+                                                        alt="twitter"></a>
+                                                <a href="#"><img src="{{ asset('user/assets/icons/instagram.svg') }}"
+                                                        alt="instagram"></a>
                                             </span>
                                         </div>
                                         @endauth
-                                </div>
+                                    </div>
                                 </nav>
 
                                 <div id="wrapper" class="mobile-nav">
                                     <div id="sidebar-wrapper">
                                         <div class="area-brand">
                                             <a class="" href="#">
-                                                <img src="{{ asset('user/assets/icons/logo.svg') }}" alt="3dOrgans-logo" width="150" class="d-inline-block align-text-top">
+                                                <img src="{{ asset('user/assets/icons/logo.svg') }}" alt="3dOrgans-logo"
+                                                    width="150" class="d-inline-block align-text-top">
                                             </a>
                                         </div>
                                         <div class="mmnue">
@@ -3784,28 +4226,39 @@
                                                     <a class="nav-link close-modal" href="#contact-us">اتصل بنا</a>
                                                 </li>
                                                 @if(Auth::user())
-                                                <li class="nav-item pt-0"> <a href="#requests" class="nav-link ms-auto dot " data-bs-toggle="modal" data-bs-target="#requestsModal">طلباتي</a></li>
+                                                <li class="nav-item pt-0"> <a href="#requests"
+                                                        class="nav-link ms-auto dot " data-bs-toggle="modal"
+                                                        data-bs-target="#requestsModal">طلباتي</a></li>
                                                 <li class="nav-item pt-0">
-                                                    <a class="nav-link dot" href="{{ route('logout') }} " onclick="event.preventDefault(); document.getElementById('frm-logout').submit();"><i data-feather="log-out"></i>تسجيل الخروج</a>
-                                                    <form id="frm-logout" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                                    <a class="nav-link dot" href="{{ route('logout') }} "
+                                                        onclick="event.preventDefault(); document.getElementById('frm-logout').submit();"><i
+                                                            data-feather="log-out"></i>تسجيل الخروج</a>
+                                                    <form id="frm-logout" action="{{ route('logout') }}" method="POST"
+                                                        style="display: none;">
                                                         @csrf
                                                     </form>
                                                 </li>
                                                 @else
                                                 <li class="nav-item">
 
-                                                    <a href="#login" class="nav-link dot" data-bs-toggle="modal" data-bs-target="#loginModal">تسجيل دخول</a>
+                                                    <a href="#login" class="nav-link dot" data-bs-toggle="modal"
+                                                        data-bs-target="#loginModal">تسجيل دخول</a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a href="#register" class="nav-link dot" data-bs-toggle="modal" data-bs-target="#registerModal">التسجيل</a>
+                                                    <a href="#register" class="nav-link dot" data-bs-toggle="modal"
+                                                        data-bs-target="#registerModal">التسجيل</a>
 
                                                 </li>
                                                 @endif
                                                 <li class="">
                                                     <div class="mobile-social-icon">
 
-                                                        <a href="#"><img src="{{ asset('user/assets/icons/twitter.svg') }}" alt="twitter"></a>
-                                                        <a href="#"><img src="{{ asset('user/assets/icons/instagram.svg') }}" alt="instagram"></a>
+                                                        <a href="#"><img
+                                                                src="{{ asset('user/assets/icons/twitter.svg') }}"
+                                                                alt="twitter"></a>
+                                                        <a href="#"><img
+                                                                src="{{ asset('user/assets/icons/instagram.svg') }}"
+                                                                alt="instagram"></a>
 
                                                     </div>
                                                 </li>
@@ -3820,20 +4273,27 @@
 
                                                     <div class="area-brand">
                                                         <a class="" href="#">
-                                                            <img src="{{ asset('user/assets/icons/logo.svg') }}" alt="3dOrgans-logo" width="150" class="d-inline-block align-text-top">
+                                                            <img src="{{ asset('user/assets/icons/logo.svg') }}"
+                                                                alt="3dOrgans-logo" width="150"
+                                                                class="d-inline-block align-text-top">
                                                         </a>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6 col-sm-9 mobile-pro-icon">
-                                                    <button class="btn mob-tog-btn" id="menu-toggle"><i class="fa-solid fa-bars"></i></button>
+                                                    <button class="btn mob-tog-btn" id="menu-toggle"><i
+                                                            class="fa-solid fa-bars"></i></button>
 
                                                     <div class="mobile-profile">
 
 
-                                                        <a href="#" class="m-0" data-bs-toggle="modal" data-bs-target="#memberModal"><img src="{{(@Auth::user()->profile == null) ?  asset('user/assets/icons/avatar.svg'): asset(Auth::user()->profile) }}" class="profile-img" alt="avatar"></a>
+                                                        <a href="#" class="m-0" data-bs-toggle="modal"
+                                                            data-bs-target="#memberModal"><img
+                                                                src="{{(@Auth::user()->profile == null) ?  asset('user/assets/icons/avatar.svg'): asset(Auth::user()->profile) }}"
+                                                                class="profile-img" alt="avatar"></a>
                                                         @if(Auth::user())
-                                                        <a href="#" class="dot m-0 border-bottom" data-bs-toggle="modal" data-bs-target="#memberModal">{{
-                                                                Auth::user()->name }}!</a>
+                                                        <a href="#" class="dot m-0 border-bottom" data-bs-toggle="modal"
+                                                            data-bs-target="#memberModal">{{
+                                                            Auth::user()->name }}!</a>
                                                         @endif
                                                     </div>
 
@@ -3862,9 +4322,11 @@
                                                         <h1 class="designer-title">
                                                             مجتمع المصممين
                                                         </h1>
-                                                        <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم
+                                                        <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد
+                                                            تم
                                                             توليد هذا النص من مولد النص العربى،
-                                                            حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى
+                                                            حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص
+                                                            الأخرى
                                                             إضافة إلى زيادة عدد الحروف التى يولدها
                                                             التطبيق.</p>
                                                     </div>
@@ -3883,20 +4345,23 @@
                                                             <div class="row">
                                                                 <div class="col-md-3 col-lg-2">
                                                                     <div class="sort-btn">
-                                                                        <button class="btn"> الترتيب حسب <i class="fa-solid fa-arrow-down"></i></button>
+                                                                        <button class="btn"> الترتيب حسب <i
+                                                                                class="fa-solid fa-arrow-down"></i></button>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-md-3 col-lg-2">
 
                                                                     <div class="sort-btn">
-                                                                        <button class="btn"> تقنية الطباعة <i class="fa-solid fa-arrow-down"></i></button>
+                                                                        <button class="btn"> تقنية الطباعة <i
+                                                                                class="fa-solid fa-arrow-down"></i></button>
 
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-md-6 col-lg-7 ps-0">
 
                                                                     <div class="search-input">
-                                                                        <input type="text" class="form-control" id="search" placeholder="البحث">
+                                                                        <input type="text" class="form-control"
+                                                                            id="search" placeholder="البحث">
                                                                         <i class="fa-solid fa-magnifying-glass"></i>
                                                                     </div>
                                                                 </div>
@@ -3925,9 +4390,11 @@
                                                             <div class="row">
                                                                 <div class="col-md-6">
                                                                     <div class="star-profile">
-                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#">
+                                                                        <a href="#" data-bs-toggle="modal"
+                                                                            data-bs-target="#">
                                                                             <div class="star-profile-icon">
-                                                                                <img src="{{asset('assets/images/dashboard/1.png')}}" alt="">
+                                                                                <img src="{{asset('assets/images/dashboard/1.png')}}"
+                                                                                    alt="">
                                                                             </div>
                                                                         </a>
                                                                         <div class="star-profile-txt">
@@ -3949,15 +4416,19 @@
                                                                 </div>
                                                             </div>
                                                             <div class="design-card-body">
-                                                                <img src="{{ asset('user/assets/images/design-1.png') }}" class="design-img img-fluid" alt="">
+                                                                <img src="{{ asset('user/assets/images/design-1.png') }}"
+                                                                    class="design-img img-fluid" alt="">
                                                                 <div class="design-card-left-top">
                                                                     <p>تقنية الطباعة</p>
                                                                 </div>
                                                                 <div class="design-card-left-bottom">
                                                                     <div class="card-icons">
-                                                                        <img src="{{ asset('user/assets/images/ai.png') }}" class="img-fluid" alt="">
-                                                                        <img src="{{ asset('user/assets/images/dn.png') }}" class="img-fluid" alt="">
-                                                                        <img src="{{ asset('user/assets/images/in.png') }}" class="img-fluid" alt="">
+                                                                        <img src="{{ asset('user/assets/images/ai.png') }}"
+                                                                            class="img-fluid" alt="">
+                                                                        <img src="{{ asset('user/assets/images/dn.png') }}"
+                                                                            class="img-fluid" alt="">
+                                                                        <img src="{{ asset('user/assets/images/in.png') }}"
+                                                                            class="img-fluid" alt="">
 
                                                                     </div>
                                                                 </div>
@@ -3974,9 +4445,11 @@
                                                             <div class="row">
                                                                 <div class="col-md-6">
                                                                     <div class="star-profile">
-                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#">
+                                                                        <a href="#" data-bs-toggle="modal"
+                                                                            data-bs-target="#">
                                                                             <div class="star-profile-icon">
-                                                                                <img src="{{asset('assets/images/dashboard/1.png')}}" alt="">
+                                                                                <img src="{{asset('assets/images/dashboard/1.png')}}"
+                                                                                    alt="">
                                                                             </div>
                                                                         </a>
                                                                         <div class="star-profile-txt">
@@ -3998,15 +4471,19 @@
                                                                 </div>
                                                             </div>
                                                             <div class="design-card-body">
-                                                            <img src="{{ asset('user/assets/images/design-2.png') }}" class="design-img img-fluid" alt="">
+                                                                <img src="{{ asset('user/assets/images/design-2.png') }}"
+                                                                    class="design-img img-fluid" alt="">
                                                                 <div class="design-card-left-top">
                                                                     <p>تقنية الطباعة</p>
                                                                 </div>
                                                                 <div class="design-card-left-bottom">
                                                                     <div class="card-icons">
-                                                                        <img src="{{ asset('user/assets/images/ai.png') }}" class="img-fluid" alt="">
-                                                                        <img src="{{ asset('user/assets/images/dn.png') }}" class="img-fluid" alt="">
-                                                                        <img src="{{ asset('user/assets/images/in.png') }}" class="img-fluid" alt="">
+                                                                        <img src="{{ asset('user/assets/images/ai.png') }}"
+                                                                            class="img-fluid" alt="">
+                                                                        <img src="{{ asset('user/assets/images/dn.png') }}"
+                                                                            class="img-fluid" alt="">
+                                                                        <img src="{{ asset('user/assets/images/in.png') }}"
+                                                                            class="img-fluid" alt="">
 
                                                                     </div>
                                                                 </div>
@@ -4023,9 +4500,11 @@
                                                             <div class="row">
                                                                 <div class="col-md-6">
                                                                     <div class="star-profile">
-                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#">
+                                                                        <a href="#" data-bs-toggle="modal"
+                                                                            data-bs-target="#">
                                                                             <div class="star-profile-icon">
-                                                                                <img src="{{asset('assets/images/dashboard/1.png')}}" alt="">
+                                                                                <img src="{{asset('assets/images/dashboard/1.png')}}"
+                                                                                    alt="">
                                                                             </div>
                                                                         </a>
                                                                         <div class="star-profile-txt">
@@ -4047,15 +4526,19 @@
                                                                 </div>
                                                             </div>
                                                             <div class="design-card-body">
-                                                            <img src="{{ asset('user/assets/images/design-3.png') }}" class="design-img img-fluid" alt="">
+                                                                <img src="{{ asset('user/assets/images/design-3.png') }}"
+                                                                    class="design-img img-fluid" alt="">
                                                                 <div class="design-card-left-top">
                                                                     <p>تقنية الطباعة</p>
                                                                 </div>
                                                                 <div class="design-card-left-bottom">
                                                                     <div class="card-icons">
-                                                                        <img src="{{ asset('user/assets/images/ai.png') }}" class="img-fluid" alt="">
-                                                                        <img src="{{ asset('user/assets/images/dn.png') }}" class="img-fluid" alt="">
-                                                                        <img src="{{ asset('user/assets/images/in.png') }}" class="img-fluid" alt="">
+                                                                        <img src="{{ asset('user/assets/images/ai.png') }}"
+                                                                            class="img-fluid" alt="">
+                                                                        <img src="{{ asset('user/assets/images/dn.png') }}"
+                                                                            class="img-fluid" alt="">
+                                                                        <img src="{{ asset('user/assets/images/in.png') }}"
+                                                                            class="img-fluid" alt="">
 
                                                                     </div>
                                                                 </div>
@@ -4074,9 +4557,11 @@
                                                             <div class="row">
                                                                 <div class="col-md-6">
                                                                     <div class="star-profile">
-                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#">
+                                                                        <a href="#" data-bs-toggle="modal"
+                                                                            data-bs-target="#">
                                                                             <div class="star-profile-icon">
-                                                                                <img src="{{asset('assets/images/dashboard/1.png')}}" alt="">
+                                                                                <img src="{{asset('assets/images/dashboard/1.png')}}"
+                                                                                    alt="">
                                                                             </div>
                                                                         </a>
                                                                         <div class="star-profile-txt">
@@ -4098,15 +4583,19 @@
                                                                 </div>
                                                             </div>
                                                             <div class="design-card-body">
-                                                            <img src="{{ asset('user/assets/images/design-4.png') }}" class="design-img img-fluid" alt="">
+                                                                <img src="{{ asset('user/assets/images/design-4.png') }}"
+                                                                    class="design-img img-fluid" alt="">
                                                                 <div class="design-card-left-top">
                                                                     <p>تقنية الطباعة</p>
                                                                 </div>
                                                                 <div class="design-card-left-bottom">
                                                                     <div class="card-icons">
-                                                                        <img src="{{ asset('user/assets/images/ai.png') }}" class="img-fluid" alt="">
-                                                                        <img src="{{ asset('user/assets/images/dn.png') }}" class="img-fluid" alt="">
-                                                                        <img src="{{ asset('user/assets/images/in.png') }}" class="img-fluid" alt="">
+                                                                        <img src="{{ asset('user/assets/images/ai.png') }}"
+                                                                            class="img-fluid" alt="">
+                                                                        <img src="{{ asset('user/assets/images/dn.png') }}"
+                                                                            class="img-fluid" alt="">
+                                                                        <img src="{{ asset('user/assets/images/in.png') }}"
+                                                                            class="img-fluid" alt="">
 
                                                                     </div>
                                                                 </div>
@@ -4123,9 +4612,11 @@
                                                             <div class="row">
                                                                 <div class="col-md-6">
                                                                     <div class="star-profile">
-                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#">
+                                                                        <a href="#" data-bs-toggle="modal"
+                                                                            data-bs-target="#">
                                                                             <div class="star-profile-icon">
-                                                                                <img src="{{asset('assets/images/dashboard/1.png')}}" alt="">
+                                                                                <img src="{{asset('assets/images/dashboard/1.png')}}"
+                                                                                    alt="">
                                                                             </div>
                                                                         </a>
                                                                         <div class="star-profile-txt">
@@ -4147,15 +4638,19 @@
                                                                 </div>
                                                             </div>
                                                             <div class="design-card-body">
-                                                            <img src="{{ asset('user/assets/images/design-5.png') }}" class="design-img img-fluid" alt="">
+                                                                <img src="{{ asset('user/assets/images/design-5.png') }}"
+                                                                    class="design-img img-fluid" alt="">
                                                                 <div class="design-card-left-top">
                                                                     <p>تقنية الطباعة</p>
                                                                 </div>
                                                                 <div class="design-card-left-bottom">
                                                                     <div class="card-icons">
-                                                                        <img src="{{ asset('user/assets/images/ai.png') }}" class="img-fluid" alt="">
-                                                                        <img src="{{ asset('user/assets/images/dn.png') }}" class="img-fluid" alt="">
-                                                                        <img src="{{ asset('user/assets/images/in.png') }}" class="img-fluid" alt="">
+                                                                        <img src="{{ asset('user/assets/images/ai.png') }}"
+                                                                            class="img-fluid" alt="">
+                                                                        <img src="{{ asset('user/assets/images/dn.png') }}"
+                                                                            class="img-fluid" alt="">
+                                                                        <img src="{{ asset('user/assets/images/in.png') }}"
+                                                                            class="img-fluid" alt="">
 
                                                                     </div>
                                                                 </div>
@@ -4172,9 +4667,11 @@
                                                             <div class="row">
                                                                 <div class="col-md-6">
                                                                     <div class="star-profile">
-                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#">
+                                                                        <a href="#" data-bs-toggle="modal"
+                                                                            data-bs-target="#">
                                                                             <div class="star-profile-icon">
-                                                                                <img src="{{asset('assets/images/dashboard/1.png')}}" alt="">
+                                                                                <img src="{{asset('assets/images/dashboard/1.png')}}"
+                                                                                    alt="">
                                                                             </div>
                                                                         </a>
                                                                         <div class="star-profile-txt">
@@ -4196,15 +4693,19 @@
                                                                 </div>
                                                             </div>
                                                             <div class="design-card-body">
-                                                            <img src="{{ asset('user/assets/images/design-6.png') }}" class="design-img img-fluid" alt="">
+                                                                <img src="{{ asset('user/assets/images/design-6.png') }}"
+                                                                    class="design-img img-fluid" alt="">
                                                                 <div class="design-card-left-top">
                                                                     <p>تقنية الطباعة</p>
                                                                 </div>
                                                                 <div class="design-card-left-bottom">
                                                                     <div class="card-icons">
-                                                                        <img src="{{ asset('user/assets/images/ai.png') }}" class="img-fluid" alt="">
-                                                                        <img src="{{ asset('user/assets/images/dn.png') }}" class="img-fluid" alt="">
-                                                                        <img src="{{ asset('user/assets/images/in.png') }}" class="img-fluid" alt="">
+                                                                        <img src="{{ asset('user/assets/images/ai.png') }}"
+                                                                            class="img-fluid" alt="">
+                                                                        <img src="{{ asset('user/assets/images/dn.png') }}"
+                                                                            class="img-fluid" alt="">
+                                                                        <img src="{{ asset('user/assets/images/in.png') }}"
+                                                                            class="img-fluid" alt="">
 
                                                                     </div>
                                                                 </div>
@@ -4222,9 +4723,11 @@
                                                             <div class="row">
                                                                 <div class="col-md-6">
                                                                     <div class="star-profile">
-                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#">
+                                                                        <a href="#" data-bs-toggle="modal"
+                                                                            data-bs-target="#">
                                                                             <div class="star-profile-icon">
-                                                                                <img src="{{asset('assets/images/dashboard/1.png')}}" alt="">
+                                                                                <img src="{{asset('assets/images/dashboard/1.png')}}"
+                                                                                    alt="">
                                                                             </div>
                                                                         </a>
                                                                         <div class="star-profile-txt">
@@ -4246,15 +4749,19 @@
                                                                 </div>
                                                             </div>
                                                             <div class="design-card-body">
-                                                            <img src="{{ asset('user/assets/images/design-7.png') }}" class="design-img img-fluid" alt="">
+                                                                <img src="{{ asset('user/assets/images/design-7.png') }}"
+                                                                    class="design-img img-fluid" alt="">
                                                                 <div class="design-card-left-top">
                                                                     <p>تقنية الطباعة</p>
                                                                 </div>
                                                                 <div class="design-card-left-bottom">
                                                                     <div class="card-icons">
-                                                                        <img src="{{ asset('user/assets/images/ai.png') }}" class="img-fluid" alt="">
-                                                                        <img src="{{ asset('user/assets/images/dn.png') }}" class="img-fluid" alt="">
-                                                                        <img src="{{ asset('user/assets/images/in.png') }}" class="img-fluid" alt="">
+                                                                        <img src="{{ asset('user/assets/images/ai.png') }}"
+                                                                            class="img-fluid" alt="">
+                                                                        <img src="{{ asset('user/assets/images/dn.png') }}"
+                                                                            class="img-fluid" alt="">
+                                                                        <img src="{{ asset('user/assets/images/in.png') }}"
+                                                                            class="img-fluid" alt="">
 
                                                                     </div>
                                                                 </div>
@@ -4271,9 +4778,11 @@
                                                             <div class="row">
                                                                 <div class="col-md-6">
                                                                     <div class="star-profile">
-                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#">
+                                                                        <a href="#" data-bs-toggle="modal"
+                                                                            data-bs-target="#">
                                                                             <div class="star-profile-icon">
-                                                                                <img src="{{asset('assets/images/dashboard/1.png')}}" alt="">
+                                                                                <img src="{{asset('assets/images/dashboard/1.png')}}"
+                                                                                    alt="">
                                                                             </div>
                                                                         </a>
                                                                         <div class="star-profile-txt">
@@ -4294,18 +4803,23 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <a href="javascript:void(0);" class="" data-bs-toggle="modal" data-bs-target="#cleanshotModal">
+                                                            <a href="javascript:void(0);" class=""
+                                                                data-bs-toggle="modal" data-bs-target="#cleanshotModal">
 
                                                                 <div class="design-card-body">
-                                                                <img src="{{ asset('user/assets/images/design-8.png') }}" class="design-img img-fluid" alt="">
+                                                                    <img src="{{ asset('user/assets/images/design-8.png') }}"
+                                                                        class="design-img img-fluid" alt="">
                                                                     <div class="design-card-left-top">
                                                                         <p>تقنية الطباعة</p>
                                                                     </div>
                                                                     <div class="design-card-left-bottom">
                                                                         <div class="card-icons">
-                                                                            <img src="{{ asset('user/assets/images/ai.png') }}" class="img-fluid" alt="">
-                                                                            <img src="{{ asset('user/assets/images/dn.png') }}" class="img-fluid" alt="">
-                                                                            <img src="{{ asset('user/assets/images/in.png') }}" class="img-fluid" alt="">
+                                                                            <img src="{{ asset('user/assets/images/ai.png') }}"
+                                                                                class="img-fluid" alt="">
+                                                                            <img src="{{ asset('user/assets/images/dn.png') }}"
+                                                                                class="img-fluid" alt="">
+                                                                            <img src="{{ asset('user/assets/images/in.png') }}"
+                                                                                class="img-fluid" alt="">
 
                                                                         </div>
                                                                     </div>
@@ -4323,9 +4837,11 @@
                                                             <div class="row">
                                                                 <div class="col-md-6">
                                                                     <div class="star-profile">
-                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#">
+                                                                        <a href="#" data-bs-toggle="modal"
+                                                                            data-bs-target="#">
                                                                             <div class="star-profile-icon">
-                                                                                <img src="{{asset('assets/images/dashboard/1.png')}}" alt="">
+                                                                                <img src="{{asset('assets/images/dashboard/1.png')}}"
+                                                                                    alt="">
                                                                             </div>
                                                                         </a>
                                                                         <div class="star-profile-txt">
@@ -4347,15 +4863,19 @@
                                                                 </div>
                                                             </div>
                                                             <div class="design-card-body">
-                                                            <img src="{{ asset('user/assets/images/design-9.png') }}" class="design-img img-fluid" alt="">
+                                                                <img src="{{ asset('user/assets/images/design-9.png') }}"
+                                                                    class="design-img img-fluid" alt="">
                                                                 <div class="design-card-left-top">
                                                                     <p>تقنية الطباعة</p>
                                                                 </div>
                                                                 <div class="design-card-left-bottom">
                                                                     <div class="card-icons">
-                                                                        <img src="{{ asset('user/assets/images/ai.png') }}" class="img-fluid" alt="">
-                                                                        <img src="{{ asset('user/assets/images/dn.png') }}" class="img-fluid" alt="">
-                                                                        <img src="{{ asset('user/assets/images/in.png') }}" class="img-fluid" alt="">
+                                                                        <img src="{{ asset('user/assets/images/ai.png') }}"
+                                                                            class="img-fluid" alt="">
+                                                                        <img src="{{ asset('user/assets/images/dn.png') }}"
+                                                                            class="img-fluid" alt="">
+                                                                        <img src="{{ asset('user/assets/images/in.png') }}"
+                                                                            class="img-fluid" alt="">
 
                                                                     </div>
                                                                 </div>
@@ -4375,7 +4895,8 @@
                                                     <button class="btn">المزيد</button>
                                                 </div> -->
                                             <div class="design-bottom-btn">
-                                                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#designinnerModal">
+                                                <button type="button" class="btn" data-bs-toggle="modal"
+                                                    data-bs-target="#designinnerModal">
                                                     المزيد
                                                 </button>
                                             </div>
@@ -4391,7 +4912,8 @@
                                                         <div class="col-md-12">
                                                             <ul class="footer-nav">
                                                                 <li class="nav-item">
-                                                                    <a class="nav-link active" aria-current="page" href="index.html">الرئيسية</a>
+                                                                    <a class="nav-link active" aria-current="page"
+                                                                        href="index.html">الرئيسية</a>
                                                                 </li>
                                                                 <li class="nav-item">
                                                                     <a class="nav-link" href="#about-us">
@@ -4404,13 +4926,15 @@
                                                                     </a>
                                                                 </li>
                                                                 <li class="nav-item">
-                                                                    <a class="nav-link" href="#services-section">الخدمات</a>
+                                                                    <a class="nav-link"
+                                                                        href="#services-section">الخدمات</a>
                                                                 </li>
                                                                 <li class="nav-item">
                                                                     <a class="nav-link" href="#">مجتمع المصممين</a>
                                                                 </li>
                                                                 <li class="nav-item">
-                                                                    <a class="nav-link" href="#contact-us">اتصل بنا</a>
+                                                                    <a class="nav-link" href="#contact-us">اتصل
+                                                                        بنا</a>
                                                                 </li>
                                                             </ul>
                                                         </div>
@@ -4424,7 +4948,9 @@
                                                     <div class="col-md-4 col-xl-4">
                                                         <div class="right">
                                                             <p>تصميم وتطوير شركة تيلرز</p>
-                                                            <a href="https://tellers.sa/"><img src="{{ asset('user/assets/icons/tellers-logo.svg') }}" alt="tellers-logo"></a>
+                                                            <a href="https://tellers.sa/"><img
+                                                                    src="{{ asset('user/assets/icons/tellers-logo.svg') }}"
+                                                                    alt="tellers-logo"></a>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-5 col-xl-4">
@@ -4432,8 +4958,12 @@
                                                     </div>
                                                     <div class="col-md-3 col-xl-4">
                                                         <div class="social">
-                                                            <a href="#"><img src="{{ asset('user/assets/icons/twitter-white.svg') }}" alt="twitter"></a>
-                                                            <a href="#"><img src="{{ asset('user/assets/icons/instagram-white.svg') }}" alt="instagram"></a>
+                                                            <a href="#"><img
+                                                                    src="{{ asset('user/assets/icons/twitter-white.svg') }}"
+                                                                    alt="twitter"></a>
+                                                            <a href="#"><img
+                                                                    src="{{ asset('user/assets/icons/instagram-white.svg') }}"
+                                                                    alt="instagram"></a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -4453,16 +4983,15 @@
             </div>
         </div>
     </div>
-    </div>
-    </div>
-    <!-- ///////////////////////////////////// design modal end here ////////////////////////////////-->
-
-
+</div>
+</div>
+<!-- ///////////////////////////////////// design modal end here ////////////////////////////////-->
 
     <!-- ///////////////////////////////////////////////////////// design-view-inner designinnerModal start here /////////////////////////////////////////////// -->
 
 
-    <div class="modal fade page" id="designinnerModal" tabindex="-1" aria-labelledby="designinnerLabel" aria-hidden="true">
+    <div class="modal fade page" id="designinnerModal" tabindex="-1" aria-labelledby="designinnerLabel"
+        aria-hidden="true">
         <div class="modal-dialog modal-fullscreen">
             <div class="modal-content">
                 <div class="container-fluid">
@@ -4478,9 +5007,12 @@
                                     <nav class="navbar navbar-expand-lg navbar-light desktop-nav">
                                         <div class="container-fluid">
                                             <a class="navbar-brand" href="#">
-                                                <img src="{{ asset('user/assets/icons/logo.svg') }}" alt="3dOrgans-logo" width="150" class="d-inline-block align-text-top">
+                                                <img src="{{ asset('user/assets/icons/logo.svg') }}" alt="3dOrgans-logo"
+                                                    width="150" class="d-inline-block align-text-top">
                                             </a>
-                                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#navbarNav" aria-controls="navbarNav"
+                                                aria-expanded="false" aria-label="Toggle navigation">
                                                 <span class="navbar-toggler-icon"></span>
                                             </button>
                                             <div class="collapse navbar-collapse" id="navbarNav">
@@ -4508,15 +5040,25 @@
                                                     </li>
                                                     <li class="mobile-menu">
                                                         <div class="left-side">
-                                                            <a href="#membership" class="m-0" data-bs-toggle="modal" data-bs-target="#memberModal"><img src="{{ asset('user/assets/icons/avatar.svg') }}" class="profile-img" alt="avatar"></a>
+                                                            <a href="#membership" class="m-0" data-bs-toggle="modal"
+                                                                data-bs-target="#memberModal"><img
+                                                                    src="{{ asset('user/assets/icons/avatar.svg') }}"
+                                                                    class="profile-img" alt="avatar"></a>
                                                             @auth
-                                                            <a href="#membership" class="dot m-0 border-bottom" data-bs-toggle="modal" data-bs-target="#memberModal">{{
+                                                            <a href="#membership" class="dot m-0 border-bottom"
+                                                                data-bs-toggle="modal" data-bs-target="#memberModal">{{
                                                                 auth()->user()->name }}!</a>
                                                             @endauth
-                                                            <a href="#requests" class="ms-auto dot border-bottom " data-bs-toggle="modal" data-bs-target="#requestsModal">طلباتي</a>
+                                                            <a href="#requests" class="ms-auto dot border-bottom "
+                                                                data-bs-toggle="modal"
+                                                                data-bs-target="#requestsModal">طلباتي</a>
                                                             <span>
-                                                                <a href="#"><img src="{{ asset('user/assets/icons/twitter.svg') }}" alt="twitter"></a>
-                                                                <a href="#"><img src="{{ asset('user/assets/icons/instagram.svg') }}" alt="instagram"></a>
+                                                                <a href="#"><img
+                                                                        src="{{ asset('user/assets/icons/twitter.svg') }}"
+                                                                        alt="twitter"></a>
+                                                                <a href="#"><img
+                                                                        src="{{ asset('user/assets/icons/instagram.svg') }}"
+                                                                        alt="instagram"></a>
                                                             </span>
                                                         </div>
                                                     </li>
@@ -4526,483 +5068,569 @@
                                             @auth
                                             <div class="left-side desktop-menu">
 
-                                                <a href="#membership" class="m-0" data-bs-toggle="modal" data-bs-target="#memberModal">
+                                                <a href="#membership" class="m-0" data-bs-toggle="modal"
+                                                    data-bs-target="#memberModal">
                                                     {{-- @if (auth()->user()->profile != null)
                                                     @if (@auth()->user()->profile == null)
                                                     <div class="profile-img">
                                                         <img src="{{ asset('assets/images/dashboard/1.png') }}" alt="">
-                                            </div>
-                                            @else
-                                            <div class="profile-img">
-                                                <img src="{{ asset(  auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
+                                                    </div>
+                                                    @else
+                                                    <div class="profile-img">
+                                                        <img src="{{ asset(  auth()->user()->profile) }}"
+                                                            style="height:40px; width:40px; border-radius: 50%">
 
-                                            </div>
-                                            @endif
-                                            <a href="#membership" class="dot m-0 border-bottom" data-bs-toggle="modal" data-bs-target="#memberModal">{{
+                                                    </div>
+                                                    @endif
+                                                    <a href="#membership" class="dot m-0 border-bottom"
+                                                        data-bs-toggle="modal" data-bs-target="#memberModal">{{
                                                         auth()->user()->name }}</a>
-                                            --}}
-                                            <a href="#" class="m-0" data-bs-toggle="modal" data-bs-target="#memberModal">
-                                                {{-- @if (auth()->user()->profile != null) --}}
-                                                @if (@auth()->user()->profile == null)
-                                                <div class="profile profile-icon">
-                                                    <img src="{{ asset('assets/images/dashboard/1.png') }}" alt="">
-                                                </div>
-                                                @else
-                                                <img class="" style="width:30px;height:30px;" alt="" src="{{ asset(Auth::user()->profile) }}">
-                                                @endif
+                                                    --}}
+                                                    <a href="#" class="m-0" data-bs-toggle="modal"
+                                                        data-bs-target="#memberModal">
+                                                        {{-- @if (auth()->user()->profile != null) --}}
+                                                        @if (@auth()->user()->profile == null)
+                                                        <div class="profile profile-icon">
+                                                            <img src="{{ asset('assets/images/dashboard/1.png') }}"
+                                                                alt="">
+                                                        </div>
+                                                        @else
+                                                        <img class="" style="width:30px;height:30px;" alt=""
+                                                            src="{{ asset(Auth::user()->profile) }}">
+                                                        @endif
 
-                                                <a href="#membership" class="dot ms-auto border-bottom" data-bs-toggle="modal" data-bs-target="#memberModal">{{
+                                                        <a href="#membership" class="dot ms-auto border-bottom"
+                                                            data-bs-toggle="modal" data-bs-target="#memberModal">{{
                                                             auth()->user()->name }}</a>
 
-                                                <a href="#requests" class="ms-auto dot border-bottom " data-bs-toggle="modal" data-bs-target="#requestsModal">طلباتي</a>
+                                                        <a href="#requests" class="ms-auto dot border-bottom "
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target="#requestsModal">طلباتي</a>
 
 
-                                                <a href="{{route('logout')}}" onclick="return logout(event);" class="ms-auto dot border-bottom" class="dot m-0 border-bottom">
-                                                    تسجيل خروج
-                                                </a>
-                                                <script type="text/javascript">
-                                                    function logout(event) {
-                                                        event.preventDefault();
-                                                        var check = confirm("هل تريد حقا الخروج؟");
-                                                        if (check) {
-                                                            document.getElementById('logout-form').submit();
-                                                        }
-                                                    }
-                                                </script>
-                                                <form id="logout-form" action="{{ route('logout') }}" method="POST">
-                                                    @csrf
+                                                        <a href="{{route('logout')}}" onclick="return logout(event);"
+                                                            class="ms-auto dot border-bottom"
+                                                            class="dot m-0 border-bottom">
+                                                            تسجيل خروج
+                                                        </a>
+                                                        <script type="text/javascript">
+                                                            function logout(event) {
+                                                                event.preventDefault();
+                                                                var check = confirm("هل تريد حقا الخروج؟");
+                                                                if (check) {
+                                                                    document.getElementById('logout-form').submit();
+                                                                }
+                                                            }
+                                                        </script>
+                                                        <form id="logout-form" action="{{ route('logout') }}"
+                                                            method="POST">
+                                                            @csrf
 
-                                                    <button hidden type="submit" class=" sub-slide-item" style=" color:red; background-color: Transparent; background-repeat:no-repeat; border: none; cursor:pointer; overflow: hidden; outline:none;">Log
-                                                        Out</button>
+                                                            <button hidden type="submit" class=" sub-slide-item"
+                                                                style=" color:red; background-color: Transparent; background-repeat:no-repeat; border: none; cursor:pointer; overflow: hidden; outline:none;">Log
+                                                                Out</button>
 
-                                                </form>
+                                                        </form>
+                                                        <span>
+
+                                                            <a href="#"><img
+                                                                    src="{{ asset('user/assets/icons/twitter.svg') }}"
+                                                                    alt="twitter"></a>
+                                                            <a href="#"><img
+                                                                    src="{{ asset('user/assets/icons/instagram.svg') }}"
+                                                                    alt="instagram"></a>
+                                                        </span>
+                                            </div>
+                                            @else
+                                            <div class="left-side">
+                                                <a href="#login" data-bs-toggle="modal" class="register-icon"
+                                                    data-bs-target="#loginModal">تسجيل دخول</a>
+                                                <a href="#register" class="ms-auto register-icon" data-bs-toggle="modal"
+                                                    data-bs-target="#registerModal">التسجيل</a>
                                                 <span>
-
-                                                    <a href="#"><img src="{{ asset('user/assets/icons/twitter.svg') }}" alt="twitter"></a>
-                                                    <a href="#"><img src="{{ asset('user/assets/icons/instagram.svg') }}" alt="instagram"></a>
+                                                    <a href="#"><img src="{{ asset('user/assets/icons/twitter.svg') }}"
+                                                            alt="twitter"></a>
+                                                    <a href="#"><img
+                                                            src="{{ asset('user/assets/icons/instagram.svg') }}"
+                                                            alt="instagram"></a>
                                                 </span>
+                                            </div>
+                                            @endauth
                                         </div>
-                                        @else
-                                        <div class="left-side">
-                                            <a href="#login" data-bs-toggle="modal" class="register-icon" data-bs-target="#loginModal">تسجيل دخول</a>
-                                            <a href="#register" class="ms-auto register-icon" data-bs-toggle="modal" data-bs-target="#registerModal">التسجيل</a>
-                                            <span>
-                                                <a href="#"><img src="{{ asset('user/assets/icons/twitter.svg') }}" alt="twitter"></a>
-                                                <a href="#"><img src="{{ asset('user/assets/icons/instagram.svg') }}" alt="instagram"></a>
-                                            </span>
-                                        </div>
-                                        @endauth
-                                </div>
-                                </nav>
+                                    </nav>
 
-                                <div id="wrapper" class="mobile-nav">
-                                    <div id="sidebar-wrapper">
-                                        <div class="area-brand">
-                                            <a class="" href="#">
-                                                <img src="{{ asset('user/assets/icons/logo.svg') }}" alt="3dOrgans-logo" width="150" class="d-inline-block align-text-top">
-                                            </a>
-                                        </div>
-                                        <div class="mmnue">
-                                            <ul class="sidebar-nav">
-                                                <li class="nav-item">
-                                                    <a class="nav-link" aria-current="page" href="#">الرئيسية</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a class="nav-link" href="#about-us">
-                                                        من نحن
-                                                    </a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a href="#" class="nav-link">ماهي
-                                                        تقنية الـ 3D</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a href="#services-section" class="nav-link">الخدمات</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a class="nav-link" href="#">مجتمع المصممين</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a class="nav-link close-modal" href="#contact-us">اتصل بنا</a>
-                                                </li>
-                                                @if(Auth::user())
-                                                <li class="nav-item pt-0"> <a href="#requests" class="nav-link ms-auto dot " data-bs-toggle="modal" data-bs-target="#requestsModal">طلباتي</a></li>
-                                                <li class="nav-item pt-0">
-                                                    <a class="nav-link dot" href="{{ route('logout') }} " onclick="event.preventDefault(); document.getElementById('frm-logout').submit();"><i data-feather="log-out"></i>تسجيل الخروج</a>
-                                                    <form id="frm-logout" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                                        @csrf
-                                                    </form>
-                                                </li>
-                                                @else
-                                                <li class="nav-item">
-
-                                                    <a href="#login" class="nav-link dot" data-bs-toggle="modal" data-bs-target="#loginModal">تسجيل دخول</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a href="#register" class="nav-link dot" data-bs-toggle="modal" data-bs-target="#registerModal">التسجيل</a>
-
-                                                </li>
-                                                @endif
-                                                <li class="">
-                                                    <div class="mobile-social-icon">
-
-                                                        <a href="#"><img src="{{ asset('user/assets/icons/twitter.svg') }}" alt="twitter"></a>
-                                                        <a href="#"><img src="{{ asset('user/assets/icons/instagram.svg') }}" alt="instagram"></a>
-
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <div id="page-content-wrapper">
-                                        <div class="container-fluid">
-                                            <div class="row">
-                                                <div class="col-md-6 col-sm-3 mobile-logo">
-
-                                                    <div class="area-brand">
-                                                        <a class="" href="#">
-                                                            <img src="{{ asset('user/assets/icons/logo.svg') }}" alt="3dOrgans-logo" width="150" class="d-inline-block align-text-top">
+                                    <div id="wrapper" class="mobile-nav">
+                                        <div id="sidebar-wrapper">
+                                            <div class="area-brand">
+                                                <a class="" href="#">
+                                                    <img src="{{ asset('user/assets/icons/logo.svg') }}"
+                                                        alt="3dOrgans-logo" width="150"
+                                                        class="d-inline-block align-text-top">
+                                                </a>
+                                            </div>
+                                            <div class="mmnue">
+                                                <ul class="sidebar-nav">
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" aria-current="page" href="#">الرئيسية</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="#about-us">
+                                                            من نحن
                                                         </a>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6 col-sm-9 mobile-pro-icon">
-                                                    <button class="btn mob-tog-btn" id="menu-toggle"><i class="fa-solid fa-bars"></i></button>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a href="#" class="nav-link">ماهي
+                                                            تقنية الـ 3D</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a href="#services-section" class="nav-link">الخدمات</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="#">مجتمع المصممين</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link close-modal" href="#contact-us">اتصل بنا</a>
+                                                    </li>
+                                                    @if(Auth::user())
+                                                    <li class="nav-item pt-0"> <a href="#requests"
+                                                            class="nav-link ms-auto dot " data-bs-toggle="modal"
+                                                            data-bs-target="#requestsModal">طلباتي</a></li>
+                                                    <li class="nav-item pt-0">
+                                                        <a class="nav-link dot" href="{{ route('logout') }} "
+                                                            onclick="event.preventDefault(); document.getElementById('frm-logout').submit();"><i
+                                                                data-feather="log-out"></i>تسجيل الخروج</a>
+                                                        <form id="frm-logout" action="{{ route('logout') }}"
+                                                            method="POST" style="display: none;">
+                                                            @csrf
+                                                        </form>
+                                                    </li>
+                                                    @else
+                                                    <li class="nav-item">
 
-                                                    <div class="mobile-profile">
+                                                        <a href="#login" class="nav-link dot" data-bs-toggle="modal"
+                                                            data-bs-target="#loginModal">تسجيل دخول</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a href="#register" class="nav-link dot" data-bs-toggle="modal"
+                                                            data-bs-target="#registerModal">التسجيل</a>
 
+                                                    </li>
+                                                    @endif
+                                                    <li class="">
+                                                        <div class="mobile-social-icon">
 
-                                                        <a href="#" class="m-0" data-bs-toggle="modal" data-bs-target="#memberModal"><img src="{{(@Auth::user()->profile == null) ?  asset('user/assets/icons/avatar.svg'): asset(Auth::user()->profile) }}" class="profile-img" alt="avatar"></a>
-                                                        @if(Auth::user())
-                                                        <a href="#" class="dot m-0 border-bottom" data-bs-toggle="modal" data-bs-target="#memberModal">{{
-                                                                Auth::user()->name }}!</a>
-                                                        @endif
-                                                    </div>
-
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- mobile menu start here -->
-
-
-                                <!-- header designer end here -->
-
-
-                                <div class="modal-header border-0">
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-
-
-                                <section class="designer-sec designer-sec-1" id="">
-
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-md-12">
-
-                                                <div class="designer-profile">
-                                                    <img id="blah" src="{{ asset('/user/assets/icons/edit-avatar.svg')}}" class="mx-auto d-block imageupload" width="100" alt="avatar" style="clip-path: circle() !important;">
-                                                    <input id="imgInp" type="file" class="chose" name="profile" accept="image/*" style="display: none;">
-                                                    <button class="btn btn-blue">مصمم</button>
-                                                    <div class="star-reating">
-                                                        <i class="fa-solid fa-star"></i>
-                                                        <i class="fa-solid fa-star"></i>
-                                                        <i class="fa-solid fa-star"></i>
-                                                        <i class="fa-solid fa-star"></i>
-                                                        <i class="fa-solid fa-star"></i>
-                                                    </div>
-                                                    <div class="design-txt designer-sec-1-title">
-                                                        <h1 class="designer-title ">
-                                                            أسم المصمم
-                                                        </h1>
-                                                    </div>
-                                                </div>
-
-
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="designer-search-form">
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="search-form">
-                                                    <form action="#" method="">
-                                                        <div class="row">
-                                                            <div class="col-md-3 col-lg-2">
-                                                                <div class="sort-btn">
-                                                                    <button class="btn"> الترتيب حسب <i class="fa-solid fa-arrow-down"></i></button>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-3 col-lg-2">
-
-                                                                <div class="sort-btn">
-                                                                    <button class="btn"> تقنية الطباعة <i class="fa-solid fa-arrow-down"></i></button>
-
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-6 col-lg-6">
-
-                                                                <div class="search-input">
-                                                                    <input type="text" class="form-control" id="search" placeholder="البحث">
-                                                                    <i class="fa-solid fa-magnifying-glass"></i>
-                                                                </div>
-                                                            </div>
+                                                            <a href="#"><img
+                                                                    src="{{ asset('user/assets/icons/twitter.svg') }}"
+                                                                    alt="twitter"></a>
+                                                            <a href="#"><img
+                                                                    src="{{ asset('user/assets/icons/instagram.svg') }}"
+                                                                    alt="instagram"></a>
 
                                                         </div>
-                                                    </form>
-
-                                                </div>
-
-                                                <div class="btn-list">
-                                                    <button class="btn btn-blue">الكل</button>
-                                                    <button class="btn btn-trans">نوع البرنامج</button>
-                                                    <button class="btn btn-trans">نوع البرنامج</button>
-                                                    <button class="btn btn-trans">نوع البرنامج</button>
-                                                    <button class="btn btn-trans">نوع البرنامج</button>
-                                                    <button class="btn btn-trans">نوع البرنامج</button>
-                                                    <span class="blur-part white"></span>
-                                                </div>
+                                                    </li>
+                                                </ul>
                                             </div>
                                         </div>
 
-                                        <div class="design-card-main">
-
-                                            <div class="row padd-30">
-                                                <div class="col-md-4">
-                                                    <div class="design-card-inner">
-
-                                                        <a href="javascript:void(0);" type="button" class="" data-bs-toggle="modal" data-bs-target="#productdesignModal">
-                                                            <div class="design-card-body">
-                                                            <img src="{{ asset('user/assets/images/design-9.png') }}" class="design-img img-fluid" alt="">
-                                                                <div class="design-card-left-top">
-                                                                    <p>تقنية الطباعة</p>
-                                                                </div>
-                                                                <div class="design-card-left-bottom">
-                                                                    <div class="card-icons">
-                                                                        <img src="{{ asset('user/assets/images/ai.png') }}" class="img-fluid" alt="">
-                                                                        <img src="{{ asset('user/assets/images/dn.png') }}" class="img-fluid" alt="">
-                                                                        <img src="{{ asset('user/assets/images/in.png') }}" class="img-fluid" alt="">
-
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </a>
-
-                                                        <div class="design-card-footer">
-                                                            <h4>عنوان التصميم يكتب هنا ويستوعب سطرين كحد اقصى ..
-                                                            </h4>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <div class="design-card-inner">
-
-                                                        <div class="design-card-body">
-                                                        <img src="{{ asset('user/assets/images/design-2.png') }}" class="design-img img-fluid" alt="">
-                                                            <div class="design-card-left-top">
-                                                                <p>تقنية الطباعة</p>
-                                                            </div>
-                                                            <div class="design-card-left-bottom">
-                                                                <div class="card-icons">
-                                                                    <img src="{{ asset('user/assets/images/ai.png') }}" class="img-fluid" alt="">
-                                                                    <img src="{{ asset('user/assets/images/dn.png') }}" class="img-fluid" alt="">
-                                                                    <img src="{{ asset('user/assets/images/in.png') }}" class="img-fluid" alt="">
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="design-card-footer">
-                                                            <h4>عنوان التصميم يكتب هنا ويستوعب سطرين كحد اقصى ..
-                                                            </h4>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <div class="design-card-inner">
-
-                                                        <div class="design-card-body">
-                                                        <img src="{{ asset('user/assets/images/design-3.png') }}" class="design-img img-fluid" alt="">
-                                                            <div class="design-card-left-top">
-                                                                <p>تقنية الطباعة</p>
-                                                            </div>
-                                                            <div class="design-card-left-bottom">
-                                                                <div class="card-icons">
-                                                                    <img src="{{ asset('user/assets/images/ai.png') }}" class="img-fluid" alt="">
-                                                                    <img src="{{ asset('user/assets/images/dn.png') }}" class="img-fluid" alt="">
-                                                                    <img src="{{ asset('user/assets/images/in.png') }}" class="img-fluid" alt="">
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="design-card-footer">
-                                                            <h4>عنوان التصميم يكتب هنا ويستوعب سطرين كحد اقصى ..
-                                                            </h4>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-
-                                            <div class="row padd-30">
-                                                <div class="col-md-4">
-                                                    <div class="design-card-inner">
-
-                                                        <div class="design-card-body">
-                                                        <img src="{{ asset('user/assets/images/design-4.png') }}" class="design-img img-fluid" alt="">
-                                                            <div class="design-card-left-top">
-                                                                <p>تقنية الطباعة</p>
-                                                            </div>
-                                                            <div class="design-card-left-bottom">
-                                                                <div class="card-icons">
-                                                                    <img src="{{ asset('user/assets/images/ai.png') }}" class="img-fluid" alt="">
-                                                                    <img src="{{ asset('user/assets/images/dn.png') }}" class="img-fluid" alt="">
-                                                                    <img src="{{ asset('user/assets/images/in.png') }}" class="img-fluid" alt="">
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="design-card-footer">
-                                                            <h4>عنوان التصميم يكتب هنا ويستوعب سطرين كحد اقصى ..
-                                                            </h4>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <div class="design-card-inner">
-
-                                                        <a href="javascript:void(0);" type="button" class="" data-bs-toggle="modal" data-bs-target="#productdesignModal">
-
-                                                            <div class="design-card-body">
-                                                            <img src="{{ asset('user/assets/images/design-5.png') }}" class="design-img img-fluid" alt="">
-                                                                <div class="design-card-left-top">
-                                                                    <p>تقنية الطباعة</p>
-                                                                </div>
-                                                                <div class="design-card-left-bottom">
-                                                                    <div class="card-icons">
-                                                                        <img src="{{ asset('user/assets/images/ai.png') }}" class="img-fluid" alt="">
-                                                                        <img src="{{ asset('user/assets/images/dn.png') }}" class="img-fluid" alt="">
-                                                                        <img src="{{ asset('user/assets/images/in.png') }}" class="img-fluid" alt="">
-
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </a>
-                                                        <div class="design-card-footer">
-                                                            <h4>عنوان التصميم يكتب هنا ويستوعب سطرين كحد اقصى ..
-                                                            </h4>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <div class="design-card-inner">
-
-                                                        <div class="design-card-body">
-                                                        <img src="{{ asset('user/assets/images/design-1.png') }}" class="design-img img-fluid" alt="">
-                                                            <div class="design-card-left-top">
-                                                                <p>تقنية الطباعة</p>
-                                                            </div>
-                                                            <div class="design-card-left-bottom">
-                                                                <div class="card-icons">
-                                                                    <img src="{{ asset('user/assets/images/ai.png') }}" class="img-fluid" alt="">
-                                                                    <img src="{{ asset('user/assets/images/dn.png') }}" class="img-fluid" alt="">
-                                                                    <img src="{{ asset('user/assets/images/in.png') }}" class="img-fluid" alt="">
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="design-card-footer">
-                                                            <h4>عنوان التصميم يكتب هنا ويستوعب سطرين كحد اقصى ..
-                                                            </h4>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-
-                                        </div>
-
-
-                                </section>
-
-                                <section class="contact design-footer design-1-footer">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-md-12">
+                                        <div id="page-content-wrapper">
+                                            <div class="container-fluid">
                                                 <div class="row">
-                                                    <div class="col-md-12">
-                                                        <ul class="footer-nav">
-                                                            <li class="nav-item">
-                                                                <a class="nav-link active" aria-current="page" href="index.html">الرئيسية</a>
-                                                            </li>
-                                                            <li class="nav-item">
-                                                                <a class="nav-link" href="#about-us">
-                                                                    من نحن
-                                                                </a>
-                                                            </li>
-                                                            <li class="nav-item">
-                                                                <a class="nav-link" href="#">
-                                                                    ماهي تقنية الـ 3D
-                                                                </a>
-                                                            </li>
-                                                            <li class="nav-item">
-                                                                <a class="nav-link" href="#services-section">الخدمات</a>
-                                                            </li>
-                                                            <li class="nav-item">
-                                                                <a class="nav-link" href="#">مجتمع المصممين</a>
-                                                            </li>
-                                                            <li class="nav-item">
-                                                                <a class="nav-link" href="#contact-us">اتصل بنا</a>
-                                                            </li>
-                                                        </ul>
+                                                    <div class="col-md-6 col-sm-3 mobile-logo">
+
+                                                        <div class="area-brand">
+                                                            <a class="" href="#">
+                                                                <img src="{{ asset('user/assets/icons/logo.svg') }}"
+                                                                    alt="3dOrgans-logo" width="150"
+                                                                    class="d-inline-block align-text-top">
+                                                            </a>
+                                                        </div>
                                                     </div>
+                                                    <div class="col-md-6 col-sm-9 mobile-pro-icon">
+                                                        <button class="btn mob-tog-btn" id="menu-toggle"><i
+                                                                class="fa-solid fa-bars"></i></button>
+
+                                                        <div class="mobile-profile">
+
+
+                                                            <a href="#" class="m-0" data-bs-toggle="modal"
+                                                                data-bs-target="#memberModal"><img
+                                                                    src="{{(@Auth::user()->profile == null) ?  asset('user/assets/icons/avatar.svg'): asset(Auth::user()->profile) }}"
+                                                                    class="profile-img" alt="avatar"></a>
+                                                            @if(Auth::user())
+                                                            <a href="#" class="dot m-0 border-bottom"
+                                                                data-bs-toggle="modal" data-bs-target="#memberModal">{{
+                                                                Auth::user()->name }}!</a>
+                                                            @endif
+                                                        </div>
+
+                                                    </div>
+
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="container-fluid">
-                                        <footer>
+                                    <!-- mobile menu start here -->
+
+
+                                    <!-- header designer end here -->
+
+
+                                    <div class="modal-header border-0">
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+
+
+                                    <section class="designer-sec designer-sec-1" id="">
+
+                                        <div class="container">
                                             <div class="row">
-                                                <div class="col-md-4 col-xl-4">
-                                                    <div class="right">
-                                                        <p>تصميم وتطوير شركة تيلرز</p>
-                                                        <a href="https://tellers.sa/"><img src="{{ asset('user/assets/icons/tellers-logo.png') }}" alt="tellers-logo"></a>
+                                                <div class="col-md-12">
+
+                                                    <div class="designer-profile">
+                                                        <img id="blah"
+                                                            src="{{ asset('/user/assets/icons/edit-avatar.svg')}}"
+                                                            class="mx-auto d-block imageupload" width="100" alt="avatar"
+                                                            style="clip-path: circle() !important;">
+                                                        <input id="imgInp" type="file" class="chose" name="profile"
+                                                            accept="image/*" style="display: none;">
+                                                        <button class="btn btn-blue">مصمم</button>
+                                                        <div class="star-reating">
+                                                            <i class="fa-solid fa-star"></i>
+                                                            <i class="fa-solid fa-star"></i>
+                                                            <i class="fa-solid fa-star"></i>
+                                                            <i class="fa-solid fa-star"></i>
+                                                            <i class="fa-solid fa-star"></i>
+                                                        </div>
+                                                        <div class="design-txt designer-sec-1-title">
+                                                            <h1 class="designer-title ">
+                                                                أسم المصمم
+                                                            </h1>
+                                                        </div>
                                                     </div>
+
+
                                                 </div>
-                                                <div class="col-md-5 col-xl-4">
-                                                    <p>جميع الحقوق محفوظة لـ &nbsp;+3D&nbsp; لعام 2022</p>
-                                                </div>
-                                                <div class="col-md-3 col-xl-4">
-                                                    <div class="social">
-                                                        <a href="#"><img src="{{ asset('user/assets/icons/twitter.png') }}" alt="twitter"></a>
-                                                        <a href="#"><img src="{{ asset('user/assets/icons/instagram.png') }}" alt="instagram"></a>
+                                                <div class="col-md-12">
+                                                    <div class="designer-search-form">
+
                                                     </div>
                                                 </div>
                                             </div>
-                                        </footer>
-                                    </div>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="search-form">
+                                                        <form action="#" method="">
+                                                            <div class="row">
+                                                                <div class="col-md-3 col-lg-2">
+                                                                    <div class="sort-btn">
+                                                                        <button class="btn"> الترتيب حسب <i
+                                                                                class="fa-solid fa-arrow-down"></i></button>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-3 col-lg-2">
+
+                                                                    <div class="sort-btn">
+                                                                        <button class="btn"> تقنية الطباعة <i
+                                                                                class="fa-solid fa-arrow-down"></i></button>
+
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6 col-lg-6">
+
+                                                                    <div class="search-input">
+                                                                        <input type="text" class="form-control"
+                                                                            id="search" placeholder="البحث">
+                                                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                        </form>
+
+                                                    </div>
+
+                                                    <div class="btn-list">
+                                                        <button class="btn btn-blue">الكل</button>
+                                                        <button class="btn btn-trans">نوع البرنامج</button>
+                                                        <button class="btn btn-trans">نوع البرنامج</button>
+                                                        <button class="btn btn-trans">نوع البرنامج</button>
+                                                        <button class="btn btn-trans">نوع البرنامج</button>
+                                                        <button class="btn btn-trans">نوع البرنامج</button>
+                                                        <span class="blur-part white"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="design-card-main">
+
+                                                <div class="row padd-30">
+                                                    <div class="col-md-4">
+                                                        <div class="design-card-inner">
+
+                                                            <a href="javascript:void(0);" type="button" class=""
+                                                                data-bs-toggle="modal"
+                                                                data-bs-target="#productdesignModal">
+                                                                <div class="design-card-body">
+                                                                    <img src="{{ asset('user/assets/images/design-9.png') }}"
+                                                                        class="design-img img-fluid" alt="">
+                                                                    <div class="design-card-left-top">
+                                                                        <p>تقنية الطباعة</p>
+                                                                    </div>
+                                                                    <div class="design-card-left-bottom">
+                                                                        <div class="card-icons">
+                                                                            <img src="{{ asset('user/assets/images/ai.png') }}"
+                                                                                class="img-fluid" alt="">
+                                                                            <img src="{{ asset('user/assets/images/dn.png') }}"
+                                                                                class="img-fluid" alt="">
+                                                                            <img src="{{ asset('user/assets/images/in.png') }}"
+                                                                                class="img-fluid" alt="">
+
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </a>
+
+                                                            <div class="design-card-footer">
+                                                                <h4>عنوان التصميم يكتب هنا ويستوعب سطرين كحد اقصى ..
+                                                                </h4>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="design-card-inner">
+
+                                                            <div class="design-card-body">
+                                                                <img src="{{ asset('user/assets/images/design-2.png') }}"
+                                                                    class="design-img img-fluid" alt="">
+                                                                <div class="design-card-left-top">
+                                                                    <p>تقنية الطباعة</p>
+                                                                </div>
+                                                                <div class="design-card-left-bottom">
+                                                                    <div class="card-icons">
+                                                                        <img src="{{ asset('user/assets/images/ai.png') }}"
+                                                                            class="img-fluid" alt="">
+                                                                        <img src="{{ asset('user/assets/images/dn.png') }}"
+                                                                            class="img-fluid" alt="">
+                                                                        <img src="{{ asset('user/assets/images/in.png') }}"
+                                                                            class="img-fluid" alt="">
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="design-card-footer">
+                                                                <h4>عنوان التصميم يكتب هنا ويستوعب سطرين كحد اقصى ..
+                                                                </h4>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="design-card-inner">
+
+                                                            <div class="design-card-body">
+                                                                <img src="{{ asset('user/assets/images/design-3.png') }}"
+                                                                    class="design-img img-fluid" alt="">
+                                                                <div class="design-card-left-top">
+                                                                    <p>تقنية الطباعة</p>
+                                                                </div>
+                                                                <div class="design-card-left-bottom">
+                                                                    <div class="card-icons">
+                                                                        <img src="{{ asset('user/assets/images/ai.png') }}"
+                                                                            class="img-fluid" alt="">
+                                                                        <img src="{{ asset('user/assets/images/dn.png') }}"
+                                                                            class="img-fluid" alt="">
+                                                                        <img src="{{ asset('user/assets/images/in.png') }}"
+                                                                            class="img-fluid" alt="">
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="design-card-footer">
+                                                                <h4>عنوان التصميم يكتب هنا ويستوعب سطرين كحد اقصى ..
+                                                                </h4>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                                <div class="row padd-30">
+                                                    <div class="col-md-4">
+                                                        <div class="design-card-inner">
+
+                                                            <div class="design-card-body">
+                                                                <img src="{{ asset('user/assets/images/design-4.png') }}"
+                                                                    class="design-img img-fluid" alt="">
+                                                                <div class="design-card-left-top">
+                                                                    <p>تقنية الطباعة</p>
+                                                                </div>
+                                                                <div class="design-card-left-bottom">
+                                                                    <div class="card-icons">
+                                                                        <img src="{{ asset('user/assets/images/ai.png') }}"
+                                                                            class="img-fluid" alt="">
+                                                                        <img src="{{ asset('user/assets/images/dn.png') }}"
+                                                                            class="img-fluid" alt="">
+                                                                        <img src="{{ asset('user/assets/images/in.png') }}"
+                                                                            class="img-fluid" alt="">
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="design-card-footer">
+                                                                <h4>عنوان التصميم يكتب هنا ويستوعب سطرين كحد اقصى ..
+                                                                </h4>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="design-card-inner">
+
+                                                            <a href="javascript:void(0);" type="button" class=""
+                                                                data-bs-toggle="modal"
+                                                                data-bs-target="#productdesignModal">
+
+                                                                <div class="design-card-body">
+                                                                    <img src="{{ asset('user/assets/images/design-5.png') }}"
+                                                                        class="design-img img-fluid" alt="">
+                                                                    <div class="design-card-left-top">
+                                                                        <p>تقنية الطباعة</p>
+                                                                    </div>
+                                                                    <div class="design-card-left-bottom">
+                                                                        <div class="card-icons">
+                                                                            <img src="{{ asset('user/assets/images/ai.png') }}"
+                                                                                class="img-fluid" alt="">
+                                                                            <img src="{{ asset('user/assets/images/dn.png') }}"
+                                                                                class="img-fluid" alt="">
+                                                                            <img src="{{ asset('user/assets/images/in.png') }}"
+                                                                                class="img-fluid" alt="">
+
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </a>
+                                                            <div class="design-card-footer">
+                                                                <h4>عنوان التصميم يكتب هنا ويستوعب سطرين كحد اقصى ..
+                                                                </h4>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="design-card-inner">
+
+                                                            <div class="design-card-body">
+                                                                <img src="{{ asset('user/assets/images/design-1.png') }}"
+                                                                    class="design-img img-fluid" alt="">
+                                                                <div class="design-card-left-top">
+                                                                    <p>تقنية الطباعة</p>
+                                                                </div>
+                                                                <div class="design-card-left-bottom">
+                                                                    <div class="card-icons">
+                                                                        <img src="{{ asset('user/assets/images/ai.png') }}"
+                                                                            class="img-fluid" alt="">
+                                                                        <img src="{{ asset('user/assets/images/dn.png') }}"
+                                                                            class="img-fluid" alt="">
+                                                                        <img src="{{ asset('user/assets/images/in.png') }}"
+                                                                            class="img-fluid" alt="">
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="design-card-footer">
+                                                                <h4>عنوان التصميم يكتب هنا ويستوعب سطرين كحد اقصى ..
+                                                                </h4>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+
+                                    </section>
+
+                                    <section class="contact design-footer design-1-footer">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <ul class="footer-nav">
+                                                                <li class="nav-item">
+                                                                    <a class="nav-link active" aria-current="page"
+                                                                        href="index.html">الرئيسية</a>
+                                                                </li>
+                                                                <li class="nav-item">
+                                                                    <a class="nav-link" href="#about-us">
+                                                                        من نحن
+                                                                    </a>
+                                                                </li>
+                                                                <li class="nav-item">
+                                                                    <a class="nav-link" href="#">
+                                                                        ماهي تقنية الـ 3D
+                                                                    </a>
+                                                                </li>
+                                                                <li class="nav-item">
+                                                                    <a class="nav-link"
+                                                                        href="#services-section">الخدمات</a>
+                                                                </li>
+                                                                <li class="nav-item">
+                                                                    <a class="nav-link" href="#">مجتمع المصممين</a>
+                                                                </li>
+                                                                <li class="nav-item">
+                                                                    <a class="nav-link" href="#contact-us">اتصل بنا</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="container-fluid">
+                                            <footer>
+                                                <div class="row">
+                                                    <div class="col-md-4 col-xl-4">
+                                                        <div class="right">
+                                                            <p>تصميم وتطوير شركة تيلرز</p>
+                                                            <a href="https://tellers.sa/"><img
+                                                                    src="{{ asset('user/assets/icons/tellers-logo.png') }}"
+                                                                    alt="tellers-logo"></a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-5 col-xl-4">
+                                                        <p>جميع الحقوق محفوظة لـ &nbsp;+3D&nbsp; لعام 2022</p>
+                                                    </div>
+                                                    <div class="col-md-3 col-xl-4">
+                                                        <div class="social">
+                                                            <a href="#"><img
+                                                                    src="{{ asset('user/assets/icons/twitter.png') }}"
+                                                                    alt="twitter"></a>
+                                                            <a href="#"><img
+                                                                    src="{{ asset('user/assets/icons/instagram.png') }}"
+                                                                    alt="instagram"></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </footer>
+                                        </div>
+                                </div>
+                                </footer>
                             </div>
-                            </footer>
+                            </section>
+
+                            <!-- design footer end here -->
+
+
+                            <!-- disign section end here -->
                         </div>
-                        </section>
-
-                        <!-- design footer end here -->
-
-
-                        <!-- disign section end here -->
                     </div>
                 </div>
             </div>
         </div>
-    </div>
     </div>
     </div>
 
@@ -5010,7 +5638,8 @@
 
     <!-- ///////////////////////////////////////////////////////// product design productdesignModal end here /////////////////////////////////////////////// -->
 
-    <div class="modal fade page" id="productdesignModal" tabindex="-1" aria-labelledby="productdesignLabel" aria-hidden="true">
+    <div class="modal fade page" id="productdesignModal" tabindex="-1" aria-labelledby="productdesignLabel"
+        aria-hidden="true">
         <div class="modal-dialog modal-fullscreen">
             <div class="modal-content">
                 <div class="container-fluid">
@@ -5021,13 +5650,17 @@
                                 <div class="container">
                                     <div class="modal-header border-0">
 
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
                                         <div>
                                             <span class="outline dot">اهلاً وسهلاً بكم</span>
-                                            <h1 class="modal-title right centr-main-title"><span class="btm-line d-flex">المنتجات<span class="inner-line"></span></span></h1>
+                                            <h1 class="modal-title right centr-main-title"><span
+                                                    class="btm-line d-flex">المنتجات<span
+                                                        class="inner-line"></span></span></h1>
                                         </div>
 
-                                        <button class="ahs-profile-plus-btn plus-bton" data-bs-toggle="modal" data-bs-target="#productaddModal">
+                                        <button class="ahs-profile-plus-btn plus-bton" data-bs-toggle="modal"
+                                            data-bs-target="#productaddModal">
                                             <i class="fa fa-plus-circle fa-lg ahs-profile-plus"></i>
                                             <span class="hide-mobile">إضافة منتج</span>
                                         </button>
@@ -5058,7 +5691,8 @@
                                                             <div class="design-card-inner">
 
                                                                 <div class="design-card-body">
-                                                            <img src="{{ asset('user/assets/images/design-9.png') }}" class="design-img img-fluid" alt="">
+                                                                    <img src="{{ asset('user/assets/images/design-9.png') }}"
+                                                                        class="design-img img-fluid" alt="">
                                                                     <div class="design-card-right-top">
                                                                         <p class="txt-green">مفعل</p>
                                                                     </div>
@@ -5067,9 +5701,12 @@
                                                                     </div>
                                                                     <div class="design-card-left-bottom">
                                                                         <div class="card-icons">
-                                                                            <img src="{{ asset('user/assets/images/ai.png') }}" class="img-fluid" alt="">
-                                                                            <img src="{{ asset('user/assets/images/dn.png') }}" class="img-fluid" alt="">
-                                                                            <img src="{{ asset('user/assets/images/in.png') }}" class="img-fluid" alt="">
+                                                                            <img src="{{ asset('user/assets/images/ai.png') }}"
+                                                                                class="img-fluid" alt="">
+                                                                            <img src="{{ asset('user/assets/images/dn.png') }}"
+                                                                                class="img-fluid" alt="">
+                                                                            <img src="{{ asset('user/assets/images/in.png') }}"
+                                                                                class="img-fluid" alt="">
 
                                                                         </div>
                                                                     </div>
@@ -5085,7 +5722,8 @@
                                                             <div class="design-card-inner">
 
                                                                 <div class="design-card-body">
-                                                            <img src="{{ asset('user/assets/images/design-2.png') }}" class="design-img img-fluid" alt="">
+                                                                    <img src="{{ asset('user/assets/images/design-2.png') }}"
+                                                                        class="design-img img-fluid" alt="">
                                                                     <div class="design-card-right-top">
                                                                         <p class="txt-green">مفعل</p>
                                                                     </div>
@@ -5094,9 +5732,12 @@
                                                                     </div>
                                                                     <div class="design-card-left-bottom">
                                                                         <div class="card-icons">
-                                                                            <img src="{{ asset('user/assets/images/ai.png') }}" class="img-fluid" alt="">
-                                                                            <img src="{{ asset('user/assets/images/dn.png') }}" class="img-fluid" alt="">
-                                                                            <img src="{{ asset('user/assets/images/in.png') }}" class="img-fluid" alt="">
+                                                                            <img src="{{ asset('user/assets/images/ai.png') }}"
+                                                                                class="img-fluid" alt="">
+                                                                            <img src="{{ asset('user/assets/images/dn.png') }}"
+                                                                                class="img-fluid" alt="">
+                                                                            <img src="{{ asset('user/assets/images/in.png') }}"
+                                                                                class="img-fluid" alt="">
 
                                                                         </div>
                                                                     </div>
@@ -5112,7 +5753,8 @@
                                                             <div class="design-card-inner">
 
                                                                 <div class="design-card-body">
-                                                            <img src="{{ asset('user/assets/images/design-3.png') }}" class="design-img img-fluid" alt="">
+                                                                    <img src="{{ asset('user/assets/images/design-3.png') }}"
+                                                                        class="design-img img-fluid" alt="">
                                                                     <div class="design-card-right-top">
                                                                         <p class="txt-green">مفعل</p>
                                                                     </div>
@@ -5121,9 +5763,12 @@
                                                                     </div>
                                                                     <div class="design-card-left-bottom">
                                                                         <div class="card-icons">
-                                                                            <img src="{{ asset('user/assets/images/ai.png') }}" class="img-fluid" alt="">
-                                                                            <img src="{{ asset('user/assets/images/dn.png') }}" class="img-fluid" alt="">
-                                                                            <img src="{{ asset('user/assets/images/in.png') }}" class="img-fluid" alt="">
+                                                                            <img src="{{ asset('user/assets/images/ai.png') }}"
+                                                                                class="img-fluid" alt="">
+                                                                            <img src="{{ asset('user/assets/images/dn.png') }}"
+                                                                                class="img-fluid" alt="">
+                                                                            <img src="{{ asset('user/assets/images/in.png') }}"
+                                                                                class="img-fluid" alt="">
 
                                                                         </div>
                                                                     </div>
@@ -5142,7 +5787,8 @@
                                                             <div class="design-card-inner">
 
                                                                 <div class="design-card-body">
-                                                            <img src="{{ asset('user/assets/images/design-4.png') }}" class="design-img img-fluid" alt="">
+                                                                    <img src="{{ asset('user/assets/images/design-4.png') }}"
+                                                                        class="design-img img-fluid" alt="">
                                                                     <div class="design-card-right-top">
                                                                         <p class="txt-red">مفعل</p>
                                                                     </div>
@@ -5151,9 +5797,12 @@
                                                                     </div>
                                                                     <div class="design-card-left-bottom">
                                                                         <div class="card-icons">
-                                                                            <img src="{{ asset('user/assets/images/ai.png') }}" class="img-fluid" alt="">
-                                                                            <img src="{{ asset('user/assets/images/dn.png') }}" class="img-fluid" alt="">
-                                                                            <img src="{{ asset('user/assets/images/in.png') }}" class="img-fluid" alt="">
+                                                                            <img src="{{ asset('user/assets/images/ai.png') }}"
+                                                                                class="img-fluid" alt="">
+                                                                            <img src="{{ asset('user/assets/images/dn.png') }}"
+                                                                                class="img-fluid" alt="">
+                                                                            <img src="{{ asset('user/assets/images/in.png') }}"
+                                                                                class="img-fluid" alt="">
 
                                                                         </div>
                                                                     </div>
@@ -5169,7 +5818,8 @@
                                                             <div class="design-card-inner">
 
                                                                 <div class="design-card-body">
-                                                            <img src="{{ asset('user/assets/images/design-5.png') }}" class="design-img img-fluid" alt="">
+                                                                    <img src="{{ asset('user/assets/images/design-5.png') }}"
+                                                                        class="design-img img-fluid" alt="">
                                                                     <div class="design-card-right-top">
                                                                         <p class="txt-green">مفعل</p>
                                                                     </div>
@@ -5178,9 +5828,12 @@
                                                                     </div>
                                                                     <div class="design-card-left-bottom">
                                                                         <div class="card-icons">
-                                                                            <img src="{{ asset('user/assets/images/ai.png') }}" class="img-fluid" alt="">
-                                                                            <img src="{{ asset('user/assets/images/dn.png') }}" class="img-fluid" alt="">
-                                                                            <img src="{{ asset('user/assets/images/in.png') }}" class="img-fluid" alt="">
+                                                                            <img src="{{ asset('user/assets/images/ai.png') }}"
+                                                                                class="img-fluid" alt="">
+                                                                            <img src="{{ asset('user/assets/images/dn.png') }}"
+                                                                                class="img-fluid" alt="">
+                                                                            <img src="{{ asset('user/assets/images/in.png') }}"
+                                                                                class="img-fluid" alt="">
 
                                                                         </div>
                                                                     </div>
@@ -5196,7 +5849,8 @@
                                                             <div class="design-card-inner">
 
                                                                 <div class="design-card-body">
-                                                            <img src="{{ asset('user/assets/images/design-9.png') }}" class="design-img img-fluid" alt="">
+                                                                    <img src="{{ asset('user/assets/images/design-9.png') }}"
+                                                                        class="design-img img-fluid" alt="">
                                                                     <div class="design-card-right-top">
                                                                         <p class="txt-red">مفعل</p>
                                                                     </div>
@@ -5205,9 +5859,12 @@
                                                                     </div>
                                                                     <div class="design-card-left-bottom">
                                                                         <div class="card-icons">
-                                                                            <img src="{{ asset('user/assets/images/ai.png') }}" class="img-fluid" alt="">
-                                                                            <img src="{{ asset('user/assets/images/dn.png') }}" class="img-fluid" alt="">
-                                                                            <img src="{{ asset('user/assets/images/in.png') }}" class="img-fluid" alt="">
+                                                                            <img src="{{ asset('user/assets/images/ai.png') }}"
+                                                                                class="img-fluid" alt="">
+                                                                            <img src="{{ asset('user/assets/images/dn.png') }}"
+                                                                                class="img-fluid" alt="">
+                                                                            <img src="{{ asset('user/assets/images/in.png') }}"
+                                                                                class="img-fluid" alt="">
 
                                                                         </div>
                                                                     </div>
@@ -5241,7 +5898,8 @@
 
     <!-- ///////////////////////////////////////////////////////// product design productaddModal start here /////////////////////////////////////////////// -->
     <div class="wrapper al-center">
-        <div class="modal fade page register" id="productaddModal" tabindex="-1" aria-labelledby="productaddLabel" aria-hidden="true">
+        <div class="modal fade page register" id="productaddModal" tabindex="-1" aria-labelledby="productaddLabel"
+            aria-hidden="true">
             <div class="modal-dialog modal-fullscreen">
                 <div class="modal-content">
                     <div class="container">
@@ -5249,10 +5907,13 @@
                             <div class="col-md-12 p-0">
                                 <div class="modal-body">
                                     <div class="modal-header border-0">
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
                                         <div>
                                             <span class="outline dot">اهلاً وسهلاً بكم</span>
-                                            <h1 class="modal-title right centr-main-title"><span class="btm-line d-flex">المنتجات<span class="inner-line"></span></span></h1>
+                                            <h1 class="modal-title right centr-main-title"><span
+                                                    class="btm-line d-flex">المنتجات<span
+                                                        class="inner-line"></span></span></h1>
 
                                         </div>
                                         <button class="ahs-profile-plus-btn disabled">
@@ -5286,7 +5947,8 @@
                                                 <p class="sub-heading-box__heading sub-heading-box__heading--b">العنوان
                                                 </p>
                                             </div>
-                                            <input type="text" class="almuntjat-form__input form-control" placeholder="الاسم هنا ..">
+                                            <input type="text" class="almuntjat-form__input form-control"
+                                                placeholder="الاسم هنا ..">
                                         </div>
                                         <!-- alunwan end -->
                                         <div class="almuntjat-form__input-wrapper">
@@ -5295,8 +5957,11 @@
                                                 <p class="sub-heading-box__heading sub-heading-box__heading--b">الوصف
                                                 </p>
                                             </div>
-                                            <label for="almuntjat-form__wasaf" class="almuntjat-form__wasaf-label"></label>
-                                            <textarea placeholder="الوصف هنا .." name="almuntjat-form__wasaf" value="" id="almuntjat-form__wasaf" class="almuntjat-form__wasaf-input form-control"></textarea>
+                                            <label for="almuntjat-form__wasaf"
+                                                class="almuntjat-form__wasaf-label"></label>
+                                            <textarea placeholder="الوصف هنا .." name="almuntjat-form__wasaf" value=""
+                                                id="almuntjat-form__wasaf"
+                                                class="almuntjat-form__wasaf-input form-control"></textarea>
                                         </div>
                                         <div class="form-inner-wrapper wrapper jst-btw">
                                             <div class="almuntjat-form__box ">
@@ -5364,7 +6029,8 @@
                                             <i class="fa-solid fa-triangle-exclamation"></i> بعد إضافة المنتج سيذهب الى
                                             الإدارة للمراجعة للقبول أو الرفض
                                         </div>
-                                        <button type="button" class="almuntjat-form__btn m-btn" data-bs-toggle="modal" data-bs-target="#productaddformModal">
+                                        <button type="button" class="almuntjat-form__btn m-btn" data-bs-toggle="modal"
+                                            data-bs-target="#productaddformModal">
                                             إضافة
                                         </button>
                                         <p class="almuntjat-form__text">
@@ -5385,7 +6051,8 @@
 
     <!-- ///////////////////////////////////////////////////////// product design productaddformModal start here /////////////////////////////////////////////// -->
     <div class="wrapper al-center">
-        <div class="modal fade page register" id="productaddformModal" tabindex="-1" aria-labelledby="productaddformLabel" aria-hidden="true">
+        <div class="modal fade page register" id="productaddformModal" tabindex="-1"
+            aria-labelledby="productaddformLabel" aria-hidden="true">
             <div class="modal-dialog modal-fullscreen">
                 <div class="modal-content">
                     <div class="container">
@@ -5394,28 +6061,32 @@
 
                                 <div class="modal-body">
                                     <div class="modal-header border-0">
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
                                         <div>
                                             <span class="outline dot">اهلاً وسهلاً بكم</span>
-                                            <h1 class="modal-title right centr-main-title"><span class="btm-line d-flex">المنتجات<span class="inner-line"></span></span></h1>
-                                        
+                                            <h1 class="modal-title right centr-main-title"><span
+                                                    class="btm-line d-flex">المنتجات<span
+                                                        class="inner-line"></span></span></h1>
+
                                         </div>
                                         <button class="ahs-profile-plus-btn productadd-top-btn show-bg-pink">
-                                        تعديل
+                                            تعديل
                                         </button>
 
                                     </div>
-                            
+
                                     <form action="" class="almuntjat-form">
-                                    <div class="almuntjat-form-error error-red-bg">
-                                        <img src="{{ asset('user/assets/icons/message-icon.png') }}" class="message-error-icon img-fluid" alt=""> بعد إضافة المنتج سيذهب الى
-                                        الإدارة للمراجعة للقبول أو الرفض
-                                    </div>
+                                        <div class="almuntjat-form-error error-red-bg">
+                                            <img src="{{ asset('user/assets/icons/message-icon.png') }}"
+                                                class="message-error-icon img-fluid" alt=""> بعد إضافة المنتج سيذهب الى
+                                            الإدارة للمراجعة للقبول أو الرفض
+                                        </div>
                                         <div class="almuntjat-form__input-wrapper">
                                             <div class="sub-heading-box">
                                                 <div class="red-dot add-red-dot"></div>
                                                 <p class="sub-heading-box__heading b2 sub-heading-box__heading--b">
-                                                صور المنتج</p>
+                                                    صور المنتج</p>
                                             </div>
                                             <!-- <label for="almuntjat-form__img" class="almuntjat-form__img-label">
                                                     <p class="almuntjat-form__img-label-text">إضافة</p>
@@ -5424,36 +6095,48 @@
                                                 <div class="col-auto">
                                                     <div class="product-add-upload uplod-img-active">
                                                         <div class="overlay"></div>
-                                                        <img src="{{ asset('user/assets/images/design-8.png') }}" class="img-fluid" alt="">
+                                                        <img src="{{ asset('user/assets/images/design-8.png') }}"
+                                                            class="img-fluid" alt="">
                                                         <p class="">الغلاف</p>
-                                                        <span class="camera-icon upload-cross-red"><i class="fa-solid fa-xmark"></i></span>
-                                                         <span class="camera-icon d-none"><i class="fa fa-camera"></i></span>
+                                                        <span class="camera-icon upload-cross-red"><i
+                                                                class="fa-solid fa-xmark"></i></span>
+                                                        <span class="camera-icon d-none"><i
+                                                                class="fa fa-camera"></i></span>
                                                     </div>
                                                 </div>
                                                 <div class="col-auto">
                                                     <div class="product-add-upload">
-                                                        <img src="{{ asset('user/assets/images/cleancard.png') }}" class="img-fluid" alt="">
+                                                        <img src="{{ asset('user/assets/images/cleancard.png') }}"
+                                                            class="img-fluid" alt="">
                                                         <!-- <p class="">إضافة</p> -->
-                                                        <span class="camera-icon upload-cross-red"><i class="fa-solid fa-xmark"></i></span>
-                                                         <span class="camera-icon d-none"><i class="fa fa-camera"></i></span>
+                                                        <span class="camera-icon upload-cross-red"><i
+                                                                class="fa-solid fa-xmark"></i></span>
+                                                        <span class="camera-icon d-none"><i
+                                                                class="fa fa-camera"></i></span>
                                                     </div>
                                                 </div>
                                                 <div class="col-auto">
                                                     <div class="product-add-upload">
-                                                        <img src="{{ asset('user/assets/images/cleancard2.png') }}" class="img-fluid" alt="">
+                                                        <img src="{{ asset('user/assets/images/cleancard2.png') }}"
+                                                            class="img-fluid" alt="">
                                                         <!-- <p class="">إضافة</p> -->
-                                                        <span class="camera-icon upload-cross-red"><i class="fa-solid fa-xmark"></i></span>
+                                                        <span class="camera-icon upload-cross-red"><i
+                                                                class="fa-solid fa-xmark"></i></span>
 
-                                                         <span class="camera-icon d-none"><i class="fa fa-camera"></i></span>
+                                                        <span class="camera-icon d-none"><i
+                                                                class="fa fa-camera"></i></span>
                                                     </div>
                                                 </div>
                                                 <div class="col-auto">
                                                     <div class="product-add-upload">
-                                                        <img src="{{ asset('user/assets/images/cleancard2.png') }}" class="img-fluid" alt="">
+                                                        <img src="{{ asset('user/assets/images/cleancard2.png') }}"
+                                                            class="img-fluid" alt="">
                                                         <!-- <p class="">إضافة</p> -->
-                                                        <span class="camera-icon upload-cross-red"><i class="fa-solid fa-xmark"></i></span>
+                                                        <span class="camera-icon upload-cross-red"><i
+                                                                class="fa-solid fa-xmark"></i></span>
 
-                                                         <span class="camera-icon d-none"><i class="fa fa-camera"></i></span>
+                                                        <span class="camera-icon d-none"><i
+                                                                class="fa fa-camera"></i></span>
                                                     </div>
                                                 </div>
                                                 <div class="col-auto">
@@ -5485,7 +6168,8 @@
                                                 </p>
                                             </div>
                                             <!-- <label for="almuntjat-form__wasaf" class="almuntjat-form__wasaf-label"></label> -->
-                                            <textarea placeholder="الوصف هنا .." name="almuntjat-form__wasaf" id="almuntjat-form__wasaf" class="almuntjat-form__wasaf-input">
+                                            <textarea placeholder="الوصف هنا .." name="almuntjat-form__wasaf"
+                                                id="almuntjat-form__wasaf" class="almuntjat-form__wasaf-input">
                                                 </textarea>
                                         </div>
                                         <div class="form-inner-wrapper wrapper jst-btw">
@@ -5496,8 +6180,10 @@
                                                         تقنية الطباعة</p>
                                                 </div>
                                                 <div class="input-holder">
-                                                    <input type="text" placeholder="كلمة المرور هنا .." class="almuntjat-form__input">
-                                                    <img src="assets/images/arrow-5.png" alt="" class="input-holder__img">
+                                                    <input type="text" placeholder="كلمة المرور هنا .."
+                                                        class="almuntjat-form__input">
+                                                    <img src="assets/images/arrow-5.png" alt=""
+                                                        class="input-holder__img">
                                                 </div>
                                             </div>
                                             <div class="almuntjat-form__box">
@@ -5507,8 +6193,10 @@
                                                         البرامج المستخدم</p>
                                                 </div>
                                                 <div class="input-holder">
-                                                    <input type="text" placeholder="اختيار التقنية" class="almuntjat-form__input">
-                                                    <img src="assets/images/arrow-5.png" alt="" class="input-holder__img">
+                                                    <input type="text" placeholder="اختيار التقنية"
+                                                        class="almuntjat-form__input">
+                                                    <img src="assets/images/arrow-5.png" alt=""
+                                                        class="input-holder__img">
                                                 </div>
                                             </div>
                                             <div class="almuntjat-form__box">
@@ -5518,8 +6206,10 @@
                                                         الألوان</p>
                                                 </div>
                                                 <div class="input-holder">
-                                                    <input type="text" placeholder="اختاير البرامج المستخدمة" class="almuntjat-form__input">
-                                                    <img src="assets/images/arrow-5.png" alt="" class="input-holder__img">
+                                                    <input type="text" placeholder="اختاير البرامج المستخدمة"
+                                                        class="almuntjat-form__input">
+                                                    <img src="assets/images/arrow-5.png" alt=""
+                                                        class="input-holder__img">
                                                 </div>
                                             </div>
                                             <div class="almuntjat-form__box">
@@ -5529,14 +6219,17 @@
                                                         المقاسات</p>
                                                 </div>
                                                 <div class="input-holder">
-                                                    <input type="text" placeholder="اختاير البرامج المستخدمة" class="almuntjat-form__input">
-                                                    <img src="assets/images/arrow-5.png" alt="" class="input-holder__img">
+                                                    <input type="text" placeholder="اختاير البرامج المستخدمة"
+                                                        class="almuntjat-form__input">
+                                                    <img src="assets/images/arrow-5.png" alt=""
+                                                        class="input-holder__img">
                                                 </div>
                                             </div>
 
                                             <div class="almuntjat-form__box switch">
                                                 <div class="form-check form-switch">
-                                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+                                                    <input class="form-check-input" type="checkbox"
+                                                        id="flexSwitchCheckChecked" checked>
                                                     <label class="form-check-label" for="flexSwitchCheckChecked">تفعيل
                                                         المنتج</label>
                                                 </div>
@@ -5568,7 +6261,8 @@
 
     <!-- ///////////////////////////////////////////////////////// product design productaddformModal end here /////////////////////////////////////////////// -->
 
-    <div class="modal fade page register" id="financialOperations" tabindex="-1" aria-labelledby="financialOperationsLabel" aria-hidden="true">
+    <div class="modal fade page register" id="financialOperations" tabindex="-1"
+        aria-labelledby="financialOperationsLabel" aria-hidden="true">
         <div class="modal-dialog modal-fullscreen">
             <div class="modal-content">
                 <div class="container">
@@ -5576,7 +6270,8 @@
                         <div class="col-md-12 p-0">
                             <div class="modal-header border-0" style="padding: 4em 0 !important">
                                 <div class=" ahs-member-model-box">
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
                                 </div>
                                 <div class=" ahs-member-model-box">
                                     <span class="outline dot">اهلاً وسهلاً بكم</span>
@@ -5593,11 +6288,13 @@
                                 <div class="profile wrapper al-center jst-center">
                                     @if(@auth()->user()->profile == null)
                                     <a href="#profile">
-                                        <img src="{{asset('user/assets/icons/avatar.svg')}}" alt="avatar" style="height:100px; width:100px; border-radius: 50%">
+                                        <img src="{{asset('user/assets/icons/avatar.svg')}}" alt="avatar"
+                                            style="height:100px; width:100px; border-radius: 50%">
                                     </a>
                                     @else
                                     <a href="#profile">
-                                        <img src="{{ asset( auth()->user()->profile) }}" style="height:100px; width:100px; border-radius: 50%">
+                                        <img src="{{ asset( auth()->user()->profile) }}"
+                                            style="height:100px; width:100px; border-radius: 50%">
                                     </a> @endif
                                 </div>
 
@@ -5627,13 +6324,15 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="tab-content" id="myTabContent">
-                                            <div class="tab-pane fade show active" id="medical-services" role="tabpanel">
+                                            <div class="tab-pane fade show active" id="medical-services"
+                                                role="tabpanel">
                                                 <div class="row">
                                                     <div class="nav-link">
                                                         <div class="col-md-12">
                                                             <div data-id='' class="request-box editProduct">
                                                                 <div class="heading">
-                                                                    <i class="fa fa-circle-minus heading__minus" aria-hidden="true"></i>
+                                                                    <i class="fa fa-circle-minus heading__minus"
+                                                                        aria-hidden="true"></i>
                                                                     <h5>رقم الطلب:</h5>
                                                                     <span>307</span>
                                                                 </div>
@@ -5658,13 +6357,15 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="tab-content" id="myTabContent">
-                                            <div class="tab-pane fade show active" id="medical-services" role="tabpanel">
+                                            <div class="tab-pane fade show active" id="medical-services"
+                                                role="tabpanel">
                                                 <div class="row">
                                                     <div class="nav-link">
                                                         <div class="col-md-12">
                                                             <div data-id='' class="request-box editProduct">
                                                                 <div class="heading">
-                                                                    <i class="fa-solid fa-circle-plus heading__plus"></i>
+                                                                    <i
+                                                                        class="fa-solid fa-circle-plus heading__plus"></i>
                                                                     <h5>رقم الطلب:</h5>
                                                                     <span>304</span>
                                                                 </div>
@@ -5697,7 +6398,8 @@
             </div>
         </div>
     </div>
-    <div class="modal fade page register" id="financialOperations2" tabindex="-1" aria-labelledby="financialOperations2Label" aria-hidden="true">
+    <div class="modal fade page register" id="financialOperations2" tabindex="-1"
+        aria-labelledby="financialOperations2Label" aria-hidden="true">
         <div class="modal-dialog modal-fullscreen">
             <div class="modal-content">
                 <div class="container">
@@ -5705,7 +6407,8 @@
                         <div class="col-md-12 p-0">
                             <div class="modal-header border-0" style="padding: 4em 0 !important">
                                 <div class=" ahs-member-model-box">
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
                                 </div>
                                 <div class=" ahs-member-model-box2">
                                     <span class="outline dot">اهلاً وسهلاً بكم</span>
@@ -5722,11 +6425,13 @@
                                 <div class="profile wrapper al-center jst-center">
                                     @if(@auth()->user()->profile == null)
                                     <a href="#profile">
-                                        <img src="{{asset('user/assets/icons/avatar.svg')}}" alt="avatar" style="height:100px; width:100px; border-radius: 50%">
+                                        <img src="{{asset('user/assets/icons/avatar.svg')}}" alt="avatar"
+                                            style="height:100px; width:100px; border-radius: 50%">
                                     </a>
                                     @else
                                     <a href="#profile">
-                                        <img src="{{ asset( auth()->user()->profile) }}" style="height:100px; width:100px; border-radius: 50%">
+                                        <img src="{{ asset( auth()->user()->profile) }}"
+                                            style="height:100px; width:100px; border-radius: 50%">
                                     </a> @endif
                                 </div>
 
@@ -5762,22 +6467,26 @@
                                         </div>
                                         <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-3 mt-4">
                                             <label class="form-label dot">اسم صاحب الحساب</label>
-                                            <input type="text" class="form-control " placeholder="اسم صاحب الحساب هنا .." value="">
+                                            <input type="text" class="form-control "
+                                                placeholder="اسم صاحب الحساب هنا .." value="">
                                         </div>
                                         <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-3 mt-4">
                                             <label class="form-label dot">اسم البنك</label>
-                                            <input type="text" name="" class="form-control  " placeholder="اسم البنك .." value="">
+                                            <input type="text" name="" class="form-control  " placeholder="اسم البنك .."
+                                                value="">
                                         </div>
                                     </div>
                                     <div class="row  mb-5">
                                         <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-3 mt-4">
                                             <label class="form-label dot">الآيبان</label>
-                                            <input type="text" name="" class="form-control  " placeholder="الآيبان" value="">
+                                            <input type="text" name="" class="form-control  " placeholder="الآيبان"
+                                                value="">
                                         </div>
 
                                         <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-3 mt-4 ahs-from-box">
                                             <label class="form-label dot">رقم الجوال</label>
-                                            <input type="" name="" class="form-control " placeholder="رقم الجوال هنا .." value="">
+                                            <input type="" name="" class="form-control " placeholder="رقم الجوال هنا .."
+                                                value="">
                                             <img src="assets/images/arrow-5.png" alt="" class="input-holder__img">
                                         </div>
                                     </div>
@@ -5801,11 +6510,13 @@
                         <div class="col-md-12 p-0">
                             <div class="modal-header border-0">
                                 <div class="zhd-center-close">
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
                                 </div>
                                 <div class="zhd-center-hdng" style="margin-top: 1%;">
                                     <span class="outline dot">اهلاً وسهلاً بكم</span>
-                                    <h1 class="modal-title right"><span class="btm-line d-flex">طلباتي<span class="inner-line"></span></span>
+                                    <h1 class="modal-title right"><span class="btm-line d-flex">طلباتي<span
+                                                class="inner-line"></span></span>
                                     </h1>
                                 </div>
                                 <div class="profile zhd-box">
@@ -5817,7 +6528,8 @@
                                     </a>
                                     @else
                                     <a href="#profile">
-                                        <img src="{{ asset( auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
+                                        <img src="{{ asset( auth()->user()->profile) }}"
+                                            style="height:40px; width:40px; border-radius: 50%">
                                     </a> @endif
                                 </div>
                             </div>
@@ -5863,27 +6575,36 @@
                                             <div class="row final two justify-content-center text-center">
                                                 <div class="col-auto">
                                                     <div class="dateTime small">{{@$public->created_at}}</div>
-                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
+                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}"
+                                                        alt="green-circle">
                                                     <div>
                                                         <p>رفع الطلب</p>
                                                     </div>
                                                 </div>
-                                                <img src="{{asset('user/assets/icons/redline.svg')}}" class="single" alt="">
+                                                <img src="{{asset('user/assets/icons/redline.svg')}}" class="single"
+                                                    alt="">
                                                 <div class="col-auto">
-                                                    <div class="dateTime small text-white">{{@$public->created_at}}</div>
+                                                    <div class="dateTime small text-white">{{@$public->created_at}}
+                                                    </div>
                                                     @if(@$public->status == 2)
-                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle"> @else
-                                                    <img src="{{asset('user/assets/icons/red-circle.svg')}}" alt="red-circle"> @endif
+                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}"
+                                                        alt="green-circle"> @else
+                                                    <img src="{{asset('user/assets/icons/red-circle.svg')}}"
+                                                        alt="red-circle"> @endif
                                                     <div>
                                                         <p>عرض سعر</p>
                                                     </div>
                                                 </div>
-                                                <img src="{{asset('user/assets/icons/redline.svg')}}" class="single" alt="">
+                                                <img src="{{asset('user/assets/icons/redline.svg')}}" class="single"
+                                                    alt="">
                                                 <div class="col-auto">
-                                                    <div class="dateTime small text-white">{{@$public->created_at}}</div>
+                                                    <div class="dateTime small text-white">{{@$public->created_at}}
+                                                    </div>
                                                     @if(@$public->status == 2)
-                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle"> @else
-                                                    <img src="{{asset('user/assets/icons/red-circle.svg')}}" alt="red-circle"> @endif
+                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}"
+                                                        alt="green-circle"> @else
+                                                    <img src="{{asset('user/assets/icons/red-circle.svg')}}"
+                                                        alt="red-circle"> @endif
                                                     <div>
                                                         <p>الدفع</p>
                                                     </div>
@@ -5907,29 +6628,38 @@
                                                 </div>
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
+                                            <div
+                                                class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
                                                 <label class="form-label">الكمية</label>
-                                                <input type="text" class="form-control" placeholder=".. رقم الهاتف هنا" readonly="" value="03084875508">
+                                                <input type="text" class="form-control" placeholder=".. رقم الهاتف هنا"
+                                                    readonly="" value="03084875508">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                 <label class="form-label">المقاسات</label>
-                                                <input type="text" class="form-control" placeholder=".. الايميل هنا" readonly="" value="asimali7056@gmail.com">
+                                                <input type="text" class="form-control" placeholder=".. الايميل هنا"
+                                                    readonly="" value="asimali7056@gmail.com">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                 <label class="form-label">شكل الطباعة</label>
-                                                <input type="text" class="form-control" placeholder=".. التخصص هنا" readonly="" value="رقم الهاتف هنا">
+                                                <input type="text" class="form-control" placeholder=".. التخصص هنا"
+                                                    readonly="" value="رقم الهاتف هنا">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
+                                            <div
+                                                class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
                                                 <label class="form-label">تقنية الطباعة</label>
-                                                <input type="text" class="form-control" placeholder=".. الجنس هنا" readonly="" value="male">
+                                                <input type="text" class="form-control" placeholder=".. الجنس هنا"
+                                                    readonly="" value="male">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 zhd-product-visit">
+                                            <div
+                                                class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 zhd-product-visit">
 
                                                 <button class="btn btn-sky invert">
-                                                    زيارة المنتج <img src="{{ asset('/user/assets/icons/arrow-right.svg')}}" alt="arrow-right">
+                                                    زيارة المنتج <img
+                                                        src="{{ asset('/user/assets/icons/arrow-right.svg')}}"
+                                                        alt="arrow-right">
                                                 </button>
                                             </div>
                                         </div>
@@ -5937,35 +6667,43 @@
                                             <div class="col-md-12">
                                                 <div class="designer-text mt-4">
                                                     <label class="form-label dot">الملاحظات</label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="   الملاحظات .."></textarea>
+                                                    <textarea class="form-control" id="exampleFormControlTextarea1"
+                                                        rows="4" placeholder="   الملاحظات .."></textarea>
                                                 </div>
                                             </div>
                                         </div>
 
                                         <div class="row">
-                                            
+
                                             <div class="payment pay credit-payment d-none" id="payment">
                                                 <div class="form-check">
-                                                            <label class="form-check-label" for="flexRadioDefault1">
-                                                                <img src="{{ asset('user/assets/images/mada-logo.svg') }}" alt="">
-                                                                <p>مدى</p>
-                                                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                                            </label>
-                                                            <label class="form-check-label" for="flexRadioDefault2">
-                                                                <img src="{{ asset('user/assets/images/masterCard.svg') }}" alt="">
-                                                                <p>فيزا وماستر كارد</p>
-                                                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
-                                                            </label>
-                                                            </div>
-                                                            <div class="form-check">
-                                                            <label class="form-check-label" for="flexRadioDefault3">
-                                                                <img src="{{ asset('user/assets/images/apple-pay.svg') }}" alt="">
-                                                                <p>آبل باي</p>
-                                                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
-                                                            </label>
-                                                            </div>
+                                                    <label class="form-check-label" for="flexRadioDefault1">
+                                                        <img src="{{ asset('user/assets/images/mada-logo.svg') }}"
+                                                            alt="">
+                                                        <p>مدى</p>
+                                                        <input class="form-check-input" type="radio"
+                                                            name="flexRadioDefault" id="flexRadioDefault1">
+                                                    </label>
+                                                    <label class="form-check-label" for="flexRadioDefault2">
+                                                        <img src="{{ asset('user/assets/images/masterCard.svg') }}"
+                                                            alt="">
+                                                        <p>فيزا وماستر كارد</p>
+                                                        <input class="form-check-input" type="radio"
+                                                            name="flexRadioDefault" id="flexRadioDefault2">
+                                                    </label>
                                                 </div>
-                                            <h1 class="title text-center mt-5 no-border conditional-blur zhd-quote">معلومات المصمم</h1>
+                                                <div class="form-check">
+                                                    <label class="form-check-label" for="flexRadioDefault3">
+                                                        <img src="{{ asset('user/assets/images/apple-pay.svg') }}"
+                                                            alt="">
+                                                        <p>آبل باي</p>
+                                                        <input class="form-check-input" type="radio"
+                                                            name="flexRadioDefault" id="flexRadioDefault3">
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <h1 class="title text-center mt-5 no-border conditional-blur zhd-quote">
+                                                معلومات المصمم</h1>
                                             <div class="col-md-12">
                                                 <div class="row justify-content-center">
                                                     <div class="col-md-12 conditional-blur design-payment-blur">
@@ -5973,7 +6711,8 @@
                                                         <div class="wrapper al-center jst-btw mb-5">
                                                             <div class="profile tag-profile designer-order">
                                                                 <a href="#profile">
-                                                                    <img src="{{ asset('/user/assets/icons/avatar.svg')}}" alt="avatar"> </a>
+                                                                    <img src="{{ asset('/user/assets/icons/avatar.svg')}}"
+                                                                        alt="avatar"> </a>
                                                                 <div class="star-profile-txt">
                                                                     <span>مصمم</span>
                                                                     <h4> أسم المصمم</h4>
@@ -5987,36 +6726,54 @@
                                                                 </div>
                                                             </div>
                                                             <button class="btn btn-sky invert">
-                                                                زيارة المنتج <img src="{{ asset('/user/assets/icons/arrow-right.svg')}}" alt="arrow-right">
+                                                                زيارة المنتج <img
+                                                                    src="{{ asset('/user/assets/icons/arrow-right.svg')}}"
+                                                                    alt="arrow-right">
                                                             </button>
                                                         </div>
                                                         {{-- user- req --}}
-                                                        <div class="row mb-2 justify-content-between mb-5 conditional-blur">
+                                                        <div
+                                                            class="row mb-2 justify-content-between mb-5 conditional-blur">
                                                             <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
                                                                 <label class="form-label">تكلفة تنفيذ الخدمة</label>
-                                                                <input type="text" class="form-control" placeholder="كتابة القيمة هنا .." readonly value="{{@$public->print_type}}">
-                                                                <p class="user-req-p">شامل رسوم الخدمة + قيمة الضريبة المضافة</p>
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="كتابة القيمة هنا .." readonly
+                                                                    value="{{@$public->print_type}}">
+                                                                <p class="user-req-p">شامل رسوم الخدمة + قيمة الضريبة
+                                                                    المضافة</p>
                                                             </div>
                                                             <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
                                                                 <label class="form-label">تاريخ البداية</label>
-                                                                <input type="text" class="form-control" placeholder="تحديد التاريخ هنا .." readonly value="{{@$public->print_color}}">
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="تحديد التاريخ هنا .." readonly
+                                                                    value="{{@$public->print_color}}">
                                                             </div>
                                                             <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
                                                                 <label class="form-label">تاريخ التسليم</label>
-                                                                <input type="text" class="form-control" placeholder="تحديد التاريخ هنا .. " readonly value="{{@$public->print_resolution}}">
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="تحديد التاريخ هنا .. " readonly
+                                                                    value="{{@$public->print_resolution}}">
                                                             </div>
                                                         </div>
                                                         <div class="wrapper jst-center userReq-btn-box">
-                                                            <button class="userReq-btn-box__btn userReq-btn-box__btn--a " data-bs-toggle="modal" data-bs-target="#user2RequestModal">قبول</button>
-                                                            <button class="userReq-btn-box__btn userReq-btn-box__btn--b" data-bs-toggle="modal" data-bs-target="#user3RequestModal">رفض</button>
-                                                            <button class="userReq-btn-box__btn userReq-btn-box__btn--c mgl-0 credit-btn-blur-show">عرض السعر</button>
+                                                            <button
+                                                                class="userReq-btn-box__btn userReq-btn-box__btn--a "
+                                                                data-bs-toggle="modal"
+                                                                data-bs-target="#user2RequestModal">قبول</button>
+                                                            <button class="userReq-btn-box__btn userReq-btn-box__btn--b"
+                                                                data-bs-toggle="modal"
+                                                                data-bs-target="#user3RequestModal">رفض</button>
+                                                            <button
+                                                                class="userReq-btn-box__btn userReq-btn-box__btn--c mgl-0 credit-btn-blur-show">عرض
+                                                                السعر</button>
                                                         </div>
                                                     </div>
                                                     <div class="userreqFormBtn-box">
                                                         <button class="btn btn-form paying-off-btn">
                                                             طلباتي
                                                         </button>
-                                                        <p class="userreqFormBtn-box__text">سيتم تحديث حالة الطلب من قبل المصمم</p>
+                                                        <p class="userreqFormBtn-box__text">سيتم تحديث حالة الطلب من قبل
+                                                            المصمم</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -6038,10 +6795,12 @@
                     <div class="row">
                         <div class="col-md-12 p-0">
                             <div class="modal-header border-0">
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
                                 <div>
                                     <span class="outline dot">أكثر 20 خدمة مختلفة</span>
-                                    <h1 class="modal-title right"><span class="btm-line"><span class="inner-line"></span>الخدمات العامة
+                                    <h1 class="modal-title right"><span class="btm-line"><span
+                                                class="inner-line"></span>الخدمات العامة
                                         </span>
                                     </h1>
                                 </div>
@@ -6054,7 +6813,8 @@
                                     </a>
                                     @else
                                     <a href="#profile">
-                                        <img src="{{ asset( auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
+                                        <img src="{{ asset( auth()->user()->profile) }}"
+                                            style="height:40px; width:40px; border-radius: 50%">
                                     </a> @endif
                                 </div>
                             </div>
@@ -6073,20 +6833,25 @@
 
                                                     <h1>406</h1>
 
-                                                    <p><img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle"> رفع الطلب</p>
-                                                    <p><img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">تقديم عرض سعر من قبل المصمم</p>
-                                                    <p><img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle"> الدفع</p>
+                                                    <p><img src="{{asset('user/assets/icons/green-circle.svg')}}"
+                                                            alt="green-circle"> رفع الطلب</p>
+                                                    <p><img src="{{asset('user/assets/icons/green-circle.svg')}}"
+                                                            alt="green-circle">تقديم عرض سعر من قبل المصمم</p>
+                                                    <p><img src="{{asset('user/assets/icons/green-circle.svg')}}"
+                                                            alt="green-circle"> الدفع</p>
                                                     <!-- <span>سيتم تحديث حالة الطلب من قبل الإدارة</span> -->
                                                 </div>
                                             </div>
                                             <div class="col-md-7">
-                                                <img src="{{ asset('user/assets/images/mujtmah-box__image.png') }}" class="mujtmah-box__image">
+                                                <img src="{{ asset('user/assets/images/mujtmah-box__image.png') }}"
+                                                    class="mujtmah-box__image">
 
                                             </div>
                                             <div class="col-md-12">
                                                 <div class="form-action designer-btn">
                                                     <!-- data-bs-toggle="modal" data-bs-target="#publicServiesFinalModal"  / carousel-next-icon-show-->
-                                                    <button class="btn btn-form mx-3 with-arrow carousel-next-icon-show" type="submit">تفاصيل الطلب</button>
+                                                    <button class="btn btn-form mx-3 with-arrow carousel-next-icon-show"
+                                                        type="submit">تفاصيل الطلب</button>
                                                     <p>تم رفع الطلب بنجاح</p>
                                                 </div>
                                             </div>
@@ -6110,11 +6875,13 @@
                         <div class="col-md-12 p-0">
                             <div class="modal-header border-0">
                                 <div class="zhd-center-close">
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
                                 </div>
                                 <div class="zhd-center-hdng" style="margin-top: 1%;">
                                     <span class="outline dot">اهلاً وسهلاً بكم</span>
-                                    <h1 class="modal-title right"><span class="btm-line d-flex">طلباتي<span class="inner-line"></span></span>
+                                    <h1 class="modal-title right"><span class="btm-line d-flex">طلباتي<span
+                                                class="inner-line"></span></span>
                                     </h1>
                                 </div>
                                 <div class="profile zhd-box">
@@ -6126,7 +6893,8 @@
                                     </a>
                                     @else
                                     <a href="#profile">
-                                        <img src="{{ asset( auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
+                                        <img src="{{ asset( auth()->user()->profile) }}"
+                                            style="height:40px; width:40px; border-radius: 50%">
                                     </a> @endif
                                 </div>
                             </div>
@@ -6136,19 +6904,22 @@
                                         <label class="form-check-label" for="flexRadioDefault1">
                                             <img src="{{asset('user/assets/images/mada-logo.svg')}}" alt="">
                                             <p>مدى</p>
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                id="flexRadioDefault1">
                                         </label>
                                         <label class="form-check-label" for="flexRadioDefault2">
                                             <img src="{{asset('user/assets/images/masterCard.svg')}}" alt="">
                                             <p>فيزا وماستر كارد</p>
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                id="flexRadioDefault2">
                                         </label>
                                     </div>
                                     <div class="form-check">
                                         <label class="form-check-label" for="flexRadioDefault3">
                                             <img src="{{asset('user/assets/images/apple-pay.svg')}}" alt="">
                                             <p>آبل باي</p>
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                id="flexRadioDefault3">
                                         </label>
                                     </div>
                                 </div>
@@ -6156,7 +6927,8 @@
                                     <div class="row mt-1 justify-content-center">
                                         <div class="col-md-8">
                                             <label class="form-label dot">سبب الرفض</label>
-                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="  الوصف هنا"></textarea>
+                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"
+                                                placeholder="  الوصف هنا"></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -6172,27 +6944,36 @@
                                             <div class="row final two justify-content-center text-center">
                                                 <div class="col-auto">
                                                     <div class="dateTime small">{{@$public->created_at}}</div>
-                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
+                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}"
+                                                        alt="green-circle">
                                                     <div>
                                                         <p>رفع الطلب</p>
                                                     </div>
                                                 </div>
-                                                <img src="{{asset('user/assets/icons/redline.svg')}}" class="single" alt="">
+                                                <img src="{{asset('user/assets/icons/redline.svg')}}" class="single"
+                                                    alt="">
                                                 <div class="col-auto">
-                                                    <div class="dateTime small text-white">{{@$public->created_at}}</div>
+                                                    <div class="dateTime small text-white">{{@$public->created_at}}
+                                                    </div>
                                                     @if(@$public->status == 2)
-                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle"> @else
-                                                    <img src="{{asset('user/assets/icons/red-circle.svg')}}" alt="red-circle"> @endif
+                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}"
+                                                        alt="green-circle"> @else
+                                                    <img src="{{asset('user/assets/icons/red-circle.svg')}}"
+                                                        alt="red-circle"> @endif
                                                     <div>
                                                         <p>عرض سعر</p>
                                                     </div>
                                                 </div>
-                                                <img src="{{asset('user/assets/icons/redline.svg')}}" class="single" alt="">
+                                                <img src="{{asset('user/assets/icons/redline.svg')}}" class="single"
+                                                    alt="">
                                                 <div class="col-auto">
-                                                    <div class="dateTime small text-white">{{@$public->created_at}}</div>
+                                                    <div class="dateTime small text-white">{{@$public->created_at}}
+                                                    </div>
                                                     @if(@$public->status == 2)
-                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle"> @else
-                                                    <img src="{{asset('user/assets/icons/red-circle.svg')}}" alt="red-circle"> @endif
+                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}"
+                                                        alt="green-circle"> @else
+                                                    <img src="{{asset('user/assets/icons/red-circle.svg')}}"
+                                                        alt="red-circle"> @endif
                                                     <div>
                                                         <p>الدفع</p>
                                                     </div>
@@ -6216,29 +6997,38 @@
                                                 </div>
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
+                                            <div
+                                                class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
                                                 <label class="form-label">الكمية</label>
-                                                <input type="text" class="form-control" placeholder=".. رقم الهاتف هنا" readonly="" value="03084875508">
+                                                <input type="text" class="form-control" placeholder=".. رقم الهاتف هنا"
+                                                    readonly="" value="03084875508">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                 <label class="form-label">المقاسات</label>
-                                                <input type="text" class="form-control" placeholder=".. الايميل هنا" readonly="" value="asimali7056@gmail.com">
+                                                <input type="text" class="form-control" placeholder=".. الايميل هنا"
+                                                    readonly="" value="asimali7056@gmail.com">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                 <label class="form-label">شكل الطباعة</label>
-                                                <input type="text" class="form-control" placeholder=".. التخصص هنا" readonly="" value="رقم الهاتف هنا">
+                                                <input type="text" class="form-control" placeholder=".. التخصص هنا"
+                                                    readonly="" value="رقم الهاتف هنا">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
+                                            <div
+                                                class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
                                                 <label class="form-label">تقنية الطباعة</label>
-                                                <input type="text" class="form-control" placeholder=".. الجنس هنا" readonly="" value="male">
+                                                <input type="text" class="form-control" placeholder=".. الجنس هنا"
+                                                    readonly="" value="male">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 zhd-product-visit">
+                                            <div
+                                                class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 zhd-product-visit">
 
                                                 <button class="btn btn-sky invert">
-                                                    زيارة المنتج <img src="{{ asset('/user/assets/icons/arrow-right.svg')}}" alt="arrow-right">
+                                                    زيارة المنتج <img
+                                                        src="{{ asset('/user/assets/icons/arrow-right.svg')}}"
+                                                        alt="arrow-right">
                                                 </button>
                                             </div>
                                         </div>
@@ -6246,13 +7036,15 @@
                                             <div class="col-md-12">
                                                 <div class="designer-text mt-4">
                                                     <label class="form-label dot">الملاحظات</label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="   الملاحظات .."></textarea>
+                                                    <textarea class="form-control" id="exampleFormControlTextarea1"
+                                                        rows="4" placeholder="   الملاحظات .."></textarea>
                                                 </div>
                                             </div>
                                         </div>
 
                                         <div class="row">
-                                            <h1 class="title text-center mt-5 no-border conditional-blur zhd-quote">معلومات المصمم</h1>
+                                            <h1 class="title text-center mt-5 no-border conditional-blur zhd-quote">
+                                                معلومات المصمم</h1>
                                             <div class="col-md-12">
                                                 <div class="row justify-content-center">
                                                     <div class="col-md-12 ">
@@ -6260,7 +7052,8 @@
                                                         <div class="wrapper al-center jst-btw mb-5">
                                                             <div class="profile tag-profile designer-order">
                                                                 <a href="#profile">
-                                                                    <img src="{{ asset('/user/assets/icons/avatar.svg')}}" alt="avatar"> </a>
+                                                                    <img src="{{ asset('/user/assets/icons/avatar.svg')}}"
+                                                                        alt="avatar"> </a>
                                                                 <div class="star-profile-txt">
                                                                     <span>مصمم</span>
                                                                     <h4> أسم المصمم</h4>
@@ -6274,23 +7067,33 @@
                                                                 </div>
                                                             </div>
                                                             <button class="btn btn-sky invert">
-                                                                زيارة المنتج <img src="{{ asset('/user/assets/icons/arrow-right.svg')}}" alt="arrow-right">
+                                                                زيارة المنتج <img
+                                                                    src="{{ asset('/user/assets/icons/arrow-right.svg')}}"
+                                                                    alt="arrow-right">
                                                             </button>
                                                         </div>
                                                         {{-- user- req --}}
-                                                        <div class="row mb-2 justify-content-between mb-5 conditional-blur">
+                                                        <div
+                                                            class="row mb-2 justify-content-between mb-5 conditional-blur">
                                                             <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
                                                                 <label class="form-label">تكلفة تنفيذ الخدمة</label>
-                                                                <input type="text" class="form-control" placeholder="كتابة القيمة هنا .." readonly value="{{@$public->print_type}}">
-                                                                <p class="user-req-p">شامل رسوم الخدمة + قيمة الضريبة المضافة</p>
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="كتابة القيمة هنا .." readonly
+                                                                    value="{{@$public->print_type}}">
+                                                                <p class="user-req-p">شامل رسوم الخدمة + قيمة الضريبة
+                                                                    المضافة</p>
                                                             </div>
                                                             <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
                                                                 <label class="form-label">تاريخ البداية</label>
-                                                                <input type="text" class="form-control" placeholder="تحديد التاريخ هنا .." readonly value="{{@$public->print_color}}">
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="تحديد التاريخ هنا .." readonly
+                                                                    value="{{@$public->print_color}}">
                                                             </div>
                                                             <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
                                                                 <label class="form-label">تاريخ التسليم</label>
-                                                                <input type="text" class="form-control" placeholder="تحديد التاريخ هنا .. " readonly value="{{@$public->print_resolution}}">
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="تحديد التاريخ هنا .. " readonly
+                                                                    value="{{@$public->print_resolution}}">
                                                             </div>
                                                         </div>
                                                         <div class="prog-box mb-5">
@@ -6298,38 +7101,62 @@
                                                             <div class="prog-outer prog-outer--b wrapper al-center">
                                                                 <div class="prog-inner"></div>
                                                             </div>
-                                                            <p class="prog-box__para">متبقي على تسليم الطلب 24 يوم 35 دقيقة 13 ثانية</p>
+                                                            <p class="prog-box__para">متبقي على تسليم الطلب 24 يوم 35
+                                                                دقيقة 13 ثانية</p>
                                                         </div>
                                                         <div class="bill-click-show">
                                                             <div class="row">
                                                                 <div class="col-md-12">
-                                                                    <label class="form-label dot">عموم الحاله الصحية</label>
+                                                                    <label class="form-label dot">عموم الحاله
+                                                                        الصحية</label>
                                                                 </div>
                                                                 <div class="col-md-6">
-                                                                    <textarea class="form-control text-area-input" id="exampleFormControlTextarea1" rows="4" placeholder="  ..الوصف هنا" readonly=""></textarea>
+                                                                    <textarea class="form-control text-area-input"
+                                                                        id="exampleFormControlTextarea1" rows="4"
+                                                                        placeholder="  ..الوصف هنا"
+                                                                        readonly=""></textarea>
                                                                 </div>
                                                                 <div class="col-md-6">
                                                                     <div class="upload-btn-wrapper designer-upload">
-                                                                        <button class="btn btn-upload-designer health"><img src="{{ asset('/user/assets/icons/upload-img.svg')}}" alt="upload-img"></button>
-                                                                        <input type="file" id="health-file" required="" name="myfile">
+                                                                        <button
+                                                                            class="btn btn-upload-designer health"><img
+                                                                                src="{{ asset('/user/assets/icons/upload-img.svg')}}"
+                                                                                alt="upload-img"></button>
+                                                                        <input type="file" id="health-file" required=""
+                                                                            name="myfile">
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div class="almuntjat-form-error almuntjat-form-error-2">
-                                                            <img src="{{ asset('/user/assets/images/warning.png')}}" alt="" class="almuntjat-form-error__img"> بعد إضافة المنتج سيذهب الى الإدارة للمراجعة للقبول أو الرفض
+                                                            <img src="{{ asset('/user/assets/images/warning.png')}}"
+                                                                alt="" class="almuntjat-form-error__img"> بعد إضافة
+                                                            المنتج سيذهب الى الإدارة للمراجعة للقبول أو الرفض
                                                         </div>
 
-                                                        <div class="wrapper jst-center userReq-btn-box userReq-btn-box--a bill-click-hide">
-                                                            <button class="userReq-btn-box__btn userReq-btn-box__btn--d bill-btn">الفاتورة</button>
-                                                            <button class="userReq-btn-box__btn userReq-btn-box__btn--e mgl-0" data-bs-toggle="modal" data-bs-target="#user4RequestModal">تقديم بلاغ</button>
+                                                        <div
+                                                            class="wrapper jst-center userReq-btn-box userReq-btn-box--a bill-click-hide">
+                                                            <button
+                                                                class="userReq-btn-box__btn userReq-btn-box__btn--d bill-btn">الفاتورة</button>
+                                                            <button
+                                                                class="userReq-btn-box__btn userReq-btn-box__btn--e mgl-0"
+                                                                data-bs-toggle="modal"
+                                                                data-bs-target="#user4RequestModal">تقديم بلاغ</button>
                                                         </div>
-                                                        <div class="wrapper jst-center userReq-btn-box userReq-btn-box--a bill-click-show">
-                                                            <button class="userReq-btn-box__btn userReq-btn-box__btn--d">انهاء الخدمة</button>
-                                                            <button class="userReq-btn-box__btn userReq-btn-box__btn--d orange-bg">الفاتورة</button>
-                                                            <button class="userReq-btn-box__btn userReq-btn-box__btn--e mgl-0" data-bs-toggle="modal" data-bs-target="#user6RequestModal">تقديم بلاغ</button>
+                                                        <div
+                                                            class="wrapper jst-center userReq-btn-box userReq-btn-box--a bill-click-show">
+                                                            <button
+                                                                class="userReq-btn-box__btn userReq-btn-box__btn--d">انهاء
+                                                                الخدمة</button>
+                                                            <button
+                                                                class="userReq-btn-box__btn userReq-btn-box__btn--d orange-bg">الفاتورة</button>
+                                                            <button
+                                                                class="userReq-btn-box__btn userReq-btn-box__btn--e mgl-0"
+                                                                data-bs-toggle="modal"
+                                                                data-bs-target="#user6RequestModal">تقديم بلاغ</button>
                                                         </div>
-                                                        <p class="userreqFormBtn-box__text userreqFormBtn-box__text--a">تمت عملية الدفع بنجاح</p>
+                                                        <p class="userreqFormBtn-box__text userreqFormBtn-box__text--a">
+                                                            تمت عملية الدفع بنجاح</p>
                                                     </div>
 
                                                 </div>
@@ -6354,11 +7181,13 @@
                         <div class="col-md-12 p-0">
                             <div class="modal-header border-0">
                                 <div class="zhd-center-close">
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
                                 </div>
                                 <div class="zhd-center-hdng" style="margin-top: 1%;">
                                     <span class="outline dot">اهلاً وسهلاً بكم</span>
-                                    <h1 class="modal-title right"><span class="btm-line d-flex">طلباتي<span class="inner-line"></span></span>
+                                    <h1 class="modal-title right"><span class="btm-line d-flex">طلباتي<span
+                                                class="inner-line"></span></span>
                                     </h1>
                                 </div>
                                 <div class="profile zhd-box">
@@ -6370,7 +7199,8 @@
                                     </a>
                                     @else
                                     <a href="#profile">
-                                        <img src="{{ asset( auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
+                                        <img src="{{ asset( auth()->user()->profile) }}"
+                                            style="height:40px; width:40px; border-radius: 50%">
                                     </a> @endif
                                 </div>
                             </div>
@@ -6380,19 +7210,22 @@
                                         <label class="form-check-label" for="flexRadioDefault1">
                                             <img src="{{asset('user/assets/images/mada-logo.svg')}}" alt="">
                                             <p>مدى</p>
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                id="flexRadioDefault1">
                                         </label>
                                         <label class="form-check-label" for="flexRadioDefault2">
                                             <img src="{{asset('user/assets/images/masterCard.svg')}}" alt="">
                                             <p>فيزا وماستر كارد</p>
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                id="flexRadioDefault2">
                                         </label>
                                     </div>
                                     <div class="form-check">
                                         <label class="form-check-label" for="flexRadioDefault3">
                                             <img src="{{asset('user/assets/images/apple-pay.svg')}}" alt="">
                                             <p>آبل باي</p>
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                id="flexRadioDefault3">
                                         </label>
                                     </div>
                                 </div>
@@ -6400,7 +7233,8 @@
                                     <div class="row mt-1 justify-content-center">
                                         <div class="col-md-8">
                                             <label class="form-label dot">سبب الرفض</label>
-                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="  الوصف هنا"></textarea>
+                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"
+                                                placeholder="  الوصف هنا"></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -6416,27 +7250,36 @@
                                             <div class="row final two justify-content-center text-center">
                                                 <div class="col-auto">
                                                     <div class="dateTime small">{{@$public->created_at}}</div>
-                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
+                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}"
+                                                        alt="green-circle">
                                                     <div>
                                                         <p>رفع الطلب</p>
                                                     </div>
                                                 </div>
-                                                <img src="{{asset('user/assets/icons/redline.svg')}}" class="single" alt="">
+                                                <img src="{{asset('user/assets/icons/redline.svg')}}" class="single"
+                                                    alt="">
                                                 <div class="col-auto">
-                                                    <div class="dateTime small text-white">{{@$public->created_at}}</div>
+                                                    <div class="dateTime small text-white">{{@$public->created_at}}
+                                                    </div>
                                                     @if(@$public->status == 2)
-                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle"> @else
-                                                    <img src="{{asset('user/assets/icons/red-circle.svg')}}" alt="red-circle"> @endif
+                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}"
+                                                        alt="green-circle"> @else
+                                                    <img src="{{asset('user/assets/icons/red-circle.svg')}}"
+                                                        alt="red-circle"> @endif
                                                     <div>
                                                         <p>عرض سعر</p>
                                                     </div>
                                                 </div>
-                                                <img src="{{asset('user/assets/icons/redline.svg')}}" class="single" alt="">
+                                                <img src="{{asset('user/assets/icons/redline.svg')}}" class="single"
+                                                    alt="">
                                                 <div class="col-auto">
-                                                    <div class="dateTime small text-white">{{@$public->created_at}}</div>
+                                                    <div class="dateTime small text-white">{{@$public->created_at}}
+                                                    </div>
                                                     @if(@$public->status == 2)
-                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle"> @else
-                                                    <img src="{{asset('user/assets/icons/red-circle.svg')}}" alt="red-circle"> @endif
+                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}"
+                                                        alt="green-circle"> @else
+                                                    <img src="{{asset('user/assets/icons/red-circle.svg')}}"
+                                                        alt="red-circle"> @endif
                                                     <div>
                                                         <p>الدفع</p>
                                                     </div>
@@ -6460,29 +7303,39 @@
                                                 </div>
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
+                                            <div
+                                                class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
                                                 <label class="form-label">الكمية</label>
-                                                <input type="text" class="form-control" placeholder=".. رقم الهاتف هنا" readonly="" value="03084875508">
+                                                <input type="text" class="form-control" placeholder=".. رقم الهاتف هنا"
+                                                    readonly="" value="03084875508">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                 <label class="form-label">المقاسات</label>
-                                                <input type="text" class="form-control" placeholder=".. الايميل هنا" readonly="" value="asimali7056@gmail.com">
+                                                <input type="text" class="form-control" placeholder=".. الايميل هنا"
+                                                    readonly="" value="asimali7056@gmail.com">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                 <label class="form-label">شكل الطباعة</label>
-                                                <input type="text" class="form-control" placeholder=".. التخصص هنا" readonly="" value="رقم الهاتف هنا">
+                                                <input type="text" class="form-control" placeholder=".. التخصص هنا"
+                                                    readonly="" value="رقم الهاتف هنا">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
+                                            <div
+                                                class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
                                                 <label class="form-label">تقنية الطباعة</label>
-                                                <input type="text" class="form-control" placeholder=".. الجنس هنا" readonly="" value="male">
+                                                <input type="text" class="form-control" placeholder=".. الجنس هنا"
+                                                    readonly="" value="male">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 zhd-product-visit">
+                                            <div
+                                                class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 zhd-product-visit">
 
-                                                <button class="btn btn-sky invert" data-bs-toggle="modal" data-bs-target="#user5RequestModal">
-                                                    زيارة المنتج <img src="{{ asset('/user/assets/icons/arrow-right.svg')}}" alt="arrow-right">
+                                                <button class="btn btn-sky invert" data-bs-toggle="modal"
+                                                    data-bs-target="#user5RequestModal">
+                                                    زيارة المنتج <img
+                                                        src="{{ asset('/user/assets/icons/arrow-right.svg')}}"
+                                                        alt="arrow-right">
                                                 </button>
                                             </div>
                                         </div>
@@ -6490,20 +7343,24 @@
                                             <div class="col-md-12">
                                                 <div class="designer-text mt-4">
                                                     <label class="form-label dot">الملاحظات</label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="   الملاحظات .."></textarea>
+                                                    <textarea class="form-control" id="exampleFormControlTextarea1"
+                                                        rows="4" placeholder="   الملاحظات .."></textarea>
                                                 </div>
                                             </div>
                                         </div>
 
                                         <div class="row">
-                                            <h1 class="title text-center mt-5 no-border conditional-blur zhd-quote">معلومات المصمم</h1>
+                                            <h1 class="title text-center mt-5 no-border conditional-blur zhd-quote">
+                                                معلومات المصمم</h1>
                                             <div class="col-md-12   userreq-blur">
                                                 <!-- blur -->
                                                 <div class="blur-star blur-bg blur-bg--a d-block" id="star-blur-scroll">
                                                     <div class="blur-star-inner">
                                                         <div class="review-text">
                                                             <label class="form-label">تقييم المصمم</label>
-                                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="  الوصف "></textarea>
+                                                            <textarea class="form-control"
+                                                                id="exampleFormControlTextarea1" rows="4"
+                                                                placeholder="  الوصف "></textarea>
 
                                                             <div class="rating">
 
@@ -6527,7 +7384,8 @@
                                                         <div class="wrapper al-center jst-btw mb-5">
                                                             <div class="profile tag-profile designer-order">
                                                                 <a href="#profile">
-                                                                    <img src="{{ asset('/user/assets/icons/avatar.svg')}}" alt="avatar"> </a>
+                                                                    <img src="{{ asset('/user/assets/icons/avatar.svg')}}"
+                                                                        alt="avatar"> </a>
                                                                 <div class="star-profile-txt">
                                                                     <span>مصمم</span>
                                                                     <h4> أسم المصمم</h4>
@@ -6541,34 +7399,47 @@
                                                                 </div>
                                                             </div>
                                                             <button class="btn btn-sky invert">
-                                                                زيارة المنتج <img src="{{ asset('/user/assets/icons/arrow-right.svg')}}" alt="arrow-right">
+                                                                زيارة المنتج <img
+                                                                    src="{{ asset('/user/assets/icons/arrow-right.svg')}}"
+                                                                    alt="arrow-right">
                                                             </button>
                                                         </div>
                                                         {{-- user- req --}}
-                                                        <div class="row mb-2 justify-content-between mb-5 conditional-blur">
+                                                        <div
+                                                            class="row mb-2 justify-content-between mb-5 conditional-blur">
                                                             <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
                                                                 <label class="form-label">تكلفة تنفيذ الخدمة</label>
-                                                                <input type="text" class="form-control" placeholder="كتابة القيمة هنا .." readonly value="{{@$public->print_type}}">
-                                                                <p class="user-req-p">شامل رسوم الخدمة + قيمة الضريبة المضافة</p>
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="كتابة القيمة هنا .." readonly
+                                                                    value="{{@$public->print_type}}">
+                                                                <p class="user-req-p">شامل رسوم الخدمة + قيمة الضريبة
+                                                                    المضافة</p>
                                                             </div>
                                                             <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
                                                                 <label class="form-label">تاريخ البداية</label>
-                                                                <input type="text" class="form-control" placeholder="تحديد التاريخ هنا .." readonly value="{{@$public->print_color}}">
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="تحديد التاريخ هنا .." readonly
+                                                                    value="{{@$public->print_color}}">
                                                             </div>
                                                             <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
                                                                 <label class="form-label">تاريخ التسليم</label>
-                                                                <input type="text" class="form-control" placeholder="تحديد التاريخ هنا .. " readonly value="{{@$public->print_resolution}}">
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="تحديد التاريخ هنا .. " readonly
+                                                                    value="{{@$public->print_resolution}}">
                                                             </div>
                                                         </div>
                                                         <div class="almuntjat-form-error almuntjat-form-error-2">
-                                                            <img src="{{ asset('/user/assets/images/warning.png')}}" alt="" class="almuntjat-form-error__img"> بعد إضافة المنتج سيذهب الى الإدارة للمراجعة للقبول أو الرفض
+                                                            <img src="{{ asset('/user/assets/images/warning.png')}}"
+                                                                alt="" class="almuntjat-form-error__img"> بعد إضافة
+                                                            المنتج سيذهب الى الإدارة للمراجعة للقبول أو الرفض
                                                         </div>
                                                     </div>
                                                     <div class="userreqFormBtn-box">
                                                         <button class="btn btn-form paying-off-btn">
                                                             ارسال
                                                         </button>
-                                                        <p class="userreqFormBtn-box__text">هل انت متأكد من تقديم بلاغ ؟</p>
+                                                        <p class="userreqFormBtn-box__text">هل انت متأكد من تقديم بلاغ ؟
+                                                        </p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -6591,11 +7462,13 @@
                         <div class="col-md-12 p-0">
                             <div class="modal-header border-0">
                                 <div class="zhd-center-close">
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
                                 </div>
                                 <div class="zhd-center-hdng" style="margin-top: 1%;">
                                     <span class="outline dot">اهلاً وسهلاً بكم</span>
-                                    <h1 class="modal-title right"><span class="btm-line d-flex">طلباتي<span class="inner-line"></span></span></h1>
+                                    <h1 class="modal-title right"><span class="btm-line d-flex">طلباتي<span
+                                                class="inner-line"></span></span></h1>
                                 </div>
                                 <div class="profile zhd-box">
                                     <button class="btn btn-sky profile-btn invert">
@@ -6607,7 +7480,8 @@
                                     </a>
                                     @else
                                     <a href="#profile">
-                                        <img src="{{ asset(auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
+                                        <img src="{{ asset(auth()->user()->profile) }}"
+                                            style="height:40px; width:40px; border-radius: 50%">
                                     </a>
                                     @endif
                                 </div>
@@ -6618,19 +7492,22 @@
                                         <label class="form-check-label" for="flexRadioDefault1">
                                             <img src="{{asset('user/assets/images/mada-logo.svg')}}" alt="">
                                             <p>مدى</p>
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                id="flexRadioDefault1">
                                         </label>
                                         <label class="form-check-label" for="flexRadioDefault2">
                                             <img src="{{asset('user/assets/images/masterCard.svg')}}" alt="">
                                             <p>فيزا وماستر كارد</p>
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                id="flexRadioDefault2">
                                         </label>
                                     </div>
                                     <div class="form-check">
                                         <label class="form-check-label" for="flexRadioDefault3">
                                             <img src="{{asset('user/assets/images/apple-pay.svg')}}" alt="">
                                             <p>آبل باي</p>
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                id="flexRadioDefault3">
                                         </label>
                                     </div>
                                 </div>
@@ -6638,7 +7515,8 @@
                                     <div class="row mt-1 justify-content-center">
                                         <div class="col-md-8">
                                             <label class="form-label dot">سبب الرفض</label>
-                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="  الوصف هنا"></textarea>
+                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"
+                                                placeholder="  الوصف هنا"></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -6654,28 +7532,37 @@
                                             <div class="row final two justify-content-center text-center">
                                                 <div class="col-auto">
                                                     <div class="dateTime small">{{@$public->created_at}}</div>
-                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
+                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}"
+                                                        alt="green-circle">
                                                     <div>
                                                         <p>رفع الطلب</p>
                                                     </div>
                                                 </div>
-                                                <img src="{{asset('user/assets/icons/redline.svg')}}" class="single" alt="">
+                                                <img src="{{asset('user/assets/icons/redline.svg')}}" class="single"
+                                                    alt="">
                                                 <div class="col-auto">
-                                                    <div class="dateTime small text-white">{{@$public->created_at}}</div>
+                                                    <div class="dateTime small text-white">{{@$public->created_at}}
+                                                    </div>
                                                     @if(@$public->status == 2)
-                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle"> @else
-                                                    <img src="{{asset('user/assets/icons/red-circle.svg')}}" alt="red-circle"> @endif
+                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}"
+                                                        alt="green-circle"> @else
+                                                    <img src="{{asset('user/assets/icons/red-circle.svg')}}"
+                                                        alt="red-circle"> @endif
                                                     <div>
                                                         <p>عرض سعر</p>
                                                     </div>
                                                 </div>
-                                                <img src="{{asset('user/assets/icons/redline.svg')}}" class="single" alt="">
+                                                <img src="{{asset('user/assets/icons/redline.svg')}}" class="single"
+                                                    alt="">
                                                 <div class="col-auto">
-                                                    <div class="dateTime small text-white">{{@$public->created_at}}</div>
+                                                    <div class="dateTime small text-white">{{@$public->created_at}}
+                                                    </div>
                                                     @if(@$public->status == 2)
-                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
+                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}"
+                                                        alt="green-circle">
                                                     @else
-                                                    <img src="{{asset('user/assets/icons/red-circle.svg')}}" alt="red-circle">
+                                                    <img src="{{asset('user/assets/icons/red-circle.svg')}}"
+                                                        alt="red-circle">
                                                     @endif
                                                     <div>
                                                         <p>الدفع</p>
@@ -6688,7 +7575,8 @@
                                             <div class="col-md-12 ">
                                                 <div class="profile tag-profile designer-order">
                                                     <a href="#profile">
-                                                        <img src="{{ asset('/user/assets/icons/avatar.svg')}}" alt="avatar"> </a>
+                                                        <img src="{{ asset('/user/assets/icons/avatar.svg')}}"
+                                                            alt="avatar"> </a>
                                                     <div class="star-profile-txt">
                                                         <span>مصمم</span>
                                                         <h4> أسم المصمم</h4>
@@ -6729,30 +7617,39 @@
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
 
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
+                                            <div
+                                                class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
                                                 <label class="form-label">الكمية</label>
-                                                <input type="text" class="form-control" placeholder=".. رقم الهاتف هنا" readonly="" value="03084875508">
+                                                <input type="text" class="form-control" placeholder=".. رقم الهاتف هنا"
+                                                    readonly="" value="03084875508">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                 <label class="form-label">المقاسات</label>
-                                                <input type="text" class="form-control" placeholder=".. الايميل هنا" readonly="" value="asimali7056@gmail.com">
+                                                <input type="text" class="form-control" placeholder=".. الايميل هنا"
+                                                    readonly="" value="asimali7056@gmail.com">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                 <label class="form-label">شكل الطباعة</label>
-                                                <input type="text" class="form-control" placeholder=".. التخصص هنا" readonly="" value="رقم الهاتف هنا">
+                                                <input type="text" class="form-control" placeholder=".. التخصص هنا"
+                                                    readonly="" value="رقم الهاتف هنا">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
+                                            <div
+                                                class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
                                                 <label class="form-label">تقنية الطباعة</label>
-                                                <input type="text" class="form-control" placeholder=".. الجنس هنا" readonly="" value="male">
+                                                <input type="text" class="form-control" placeholder=".. الجنس هنا"
+                                                    readonly="" value="male">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 zhd-product-visit">
+                                            <div
+                                                class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 zhd-product-visit">
 
 
                                                 <button class="btn btn-sky invert">
-                                                    زيارة المنتج <img src="{{ asset('/user/assets/icons/arrow-right.svg')}}" alt="arrow-right">
+                                                    زيارة المنتج <img
+                                                        src="{{ asset('/user/assets/icons/arrow-right.svg')}}"
+                                                        alt="arrow-right">
                                                 </button>
                                             </div>
                                             <!-- <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
@@ -6768,7 +7665,8 @@
                                             <div class="col-md-12">
                                                 <div class="designer-text mt-4">
                                                     <label class="form-label dot">الملاحظات</label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="   الملاحظات .."></textarea>
+                                                    <textarea class="form-control" id="exampleFormControlTextarea1"
+                                                        rows="4" placeholder="   الملاحظات .."></textarea>
                                                 </div>
                                             </div>
                                         </div>
@@ -6776,7 +7674,8 @@
                                             <div class="col-md-12">
                                                 <div class="review-text review-text-tog">
                                                     <label class="form-label">تقييم المصمم</label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="  الوصف "></textarea>
+                                                    <textarea class="form-control" id="exampleFormControlTextarea1"
+                                                        rows="4" placeholder="  الوصف "></textarea>
                                                     <div class="rating">
                                                         <div class="star-reating">
                                                             <i class="fa-solid fa-star"></i>
@@ -6790,7 +7689,8 @@
                                             </div>
                                         </div>
                                         <div class="row">
-                                            <h1 class="title text-center mt-5 no-border conditional-blur zhd-quote">معلومات المصمم</h1>
+                                            <h1 class="title text-center mt-5 no-border conditional-blur zhd-quote">
+                                                معلومات المصمم</h1>
                                             <div class="col-md-12">
                                                 <div class="row justify-content-center">
                                                     <div class="col-md-12">
@@ -6798,7 +7698,9 @@
                                                             <div class="blur-star-inner">
                                                                 <div class="review-text">
                                                                     <label class="form-label">تقييم المصمم</label>
-                                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="  الوصف "></textarea>
+                                                                    <textarea class="form-control"
+                                                                        id="exampleFormControlTextarea1" rows="4"
+                                                                        placeholder="  الوصف "></textarea>
 
                                                                     <div class="rating">
 
@@ -6812,7 +7714,8 @@
 
                                                                     </div>
                                                                     <div class="blur-star-bottom-btn">
-                                                                        <a href="javascript:void(0);" class="btn btn-form mx-3 with-arrow mt-4">ارسال</a>
+                                                                        <a href="javascript:void(0);"
+                                                                            class="btn btn-form mx-3 with-arrow mt-4">ارسال</a>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -6820,15 +7723,21 @@
                                                         <div class="row mb-5 justify-content-between conditional-blur">
                                                             <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
                                                                 <label class="form-label">تكلفة تنفيذ الخدمة</label>
-                                                                <input type="text" class="form-control" placeholder="كتابة القيمة هنا .." readonly value="{{@$public->print_type}}">
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="كتابة القيمة هنا .." readonly
+                                                                    value="{{@$public->print_type}}">
                                                             </div>
                                                             <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
                                                                 <label class="form-label">تاريخ البداية</label>
-                                                                <input type="text" class="form-control" placeholder="تحديد التاريخ هنا .." readonly value="{{@$public->print_color}}">
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="تحديد التاريخ هنا .." readonly
+                                                                    value="{{@$public->print_color}}">
                                                             </div>
                                                             <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
                                                                 <label class="form-label">تاريخ التسليم</label>
-                                                                <input type="text" class="form-control" placeholder="تحديد التاريخ هنا .. " readonly value="{{@$public->print_resolution}}">
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="تحديد التاريخ هنا .. " readonly
+                                                                    value="{{@$public->print_resolution}}">
                                                             </div>
 
                                                         </div>
@@ -6840,35 +7749,45 @@
                                                             <p class="prog-box__para">تم التسليم من قبل المصمم</p>
                                                         </div>
                                                         <!-- <div class="row conditional-blur">
-                                               <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
-                                                   <label class="form-label">رفع ملف المجسم</label>
-                                                   <div class="upload-btn-wrapper">
-                                                       <a class="btn btn-upload" href="{{ asset( @$public->print_img) }}" download=" {{ @$public->print_img }}"><img src="{{asset('user/assets/icons/uploaded-img.svg')}}" alt="upload-img"></a>
-                                                   </div>
-                                               </div>
-                                               </div> -->
+                                                            <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
+                                                                <label class="form-label">رفع ملف المجسم</label>
+                                                                <div class="upload-btn-wrapper">
+                                                                    <a class="btn btn-upload" href="{{ asset( @$public->print_img) }}" download=" {{ @$public->print_img }}"><img src="{{asset('user/assets/icons/uploaded-img.svg')}}" alt="upload-img"></a>
+                                                                </div>
+                                                            </div>
+                                                        </div> -->
                                                         <div class="row mb-4">
                                                             <div class="col-md-12">
                                                                 <label class="form-label dot">ملاحظات</label>
                                                             </div>
                                                             <div class="col-md-6">
-                                                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="  ..الوصف هنا" readonly>{{@$ss->discription}}</textarea>
+                                                                <textarea class="form-control"
+                                                                    id="exampleFormControlTextarea1" rows="4"
+                                                                    placeholder="  ..الوصف هنا"
+                                                                    readonly>{{@$ss->discription}}</textarea>
                                                             </div>
                                                             <div class="col-md-6">
                                                                 <div class="upload-btn-wrapper designer-upload">
-                                                                    <button class="btn btn-upload-designer health"><img src="{{asset('user/assets/icons/upload-img.svg')}}" alt="upload-img"></button>
-                                                                    <input type="file" id="health-file" required name="myfile" />
+                                                                    <button class="btn btn-upload-designer health"><img
+                                                                            src="{{asset('user/assets/icons/upload-img.svg')}}"
+                                                                            alt="upload-img"></button>
+                                                                    <input type="file" id="health-file" required
+                                                                        name="myfile" />
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div class="row mb-4">
                                                             <div class="col-md-12">
                                                                 <div class="review-text without-label review-text-tog">
-                                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="  الوصف "></textarea>
+                                                                    <textarea class="form-control"
+                                                                        id="exampleFormControlTextarea1" rows="4"
+                                                                        placeholder="  الوصف "></textarea>
                                                                     <div class="mb-3">
 
-                                                                        <div class="rating rating2  wrapper al-center jst-btw ">
-                                                                            <h6 class="prog-box__heading">تقييم المستخدم</h6>
+                                                                        <div
+                                                                            class="rating rating2  wrapper al-center jst-btw ">
+                                                                            <h6 class="prog-box__heading">تقييم المستخدم
+                                                                            </h6>
                                                                             <div class="star-reating">
                                                                                 <i class="fa-solid fa-star"></i>
                                                                                 <i class="fa-solid fa-star"></i>
@@ -6883,9 +7802,11 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <h1 class="title text-center mt-5 no-border conditional-blur starbluerModal-btn-hide">
+                                                    <h1
+                                                        class="title text-center mt-5 no-border conditional-blur starbluerModal-btn-hide">
                                                         <div class="zhd-finished">
-                                                            <button class="btn btn-form btn-sky mx-3 with-arrow uplod-rev-btn mt-10">الفاتورة</button>
+                                                            <button
+                                                                class="btn btn-form btn-sky mx-3 with-arrow uplod-rev-btn mt-10">الفاتورة</button>
                                                             <p class="mt-4">تمت عملية الدفع بنجاح</p>
                                                         </div>
                                                     </h1>
@@ -6915,11 +7836,13 @@
                         <div class="col-md-12 p-0">
                             <div class="modal-header border-0">
                                 <div class="zhd-center-close">
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
                                 </div>
                                 <div class="zhd-center-hdng" style="margin-top: 1%;">
                                     <span class="outline dot">اهلاً وسهلاً بكم</span>
-                                    <h1 class="modal-title right"><span class="btm-line d-flex">طلباتي<span class="inner-line"></span></span>
+                                    <h1 class="modal-title right"><span class="btm-line d-flex">طلباتي<span
+                                                class="inner-line"></span></span>
                                     </h1>
                                 </div>
                                 <div class="profile zhd-box">
@@ -6931,7 +7854,8 @@
                                     </a>
                                     @else
                                     <a href="#profile">
-                                        <img src="{{ asset( auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
+                                        <img src="{{ asset( auth()->user()->profile) }}"
+                                            style="height:40px; width:40px; border-radius: 50%">
                                     </a> @endif
                                 </div>
                             </div>
@@ -6941,19 +7865,22 @@
                                         <label class="form-check-label" for="flexRadioDefault1">
                                             <img src="{{asset('user/assets/images/mada-logo.svg')}}" alt="">
                                             <p>مدى</p>
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                id="flexRadioDefault1">
                                         </label>
                                         <label class="form-check-label" for="flexRadioDefault2">
                                             <img src="{{asset('user/assets/images/masterCard.svg')}}" alt="">
                                             <p>فيزا وماستر كارد</p>
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                id="flexRadioDefault2">
                                         </label>
                                     </div>
                                     <div class="form-check">
                                         <label class="form-check-label" for="flexRadioDefault3">
                                             <img src="{{asset('user/assets/images/apple-pay.svg')}}" alt="">
                                             <p>آبل باي</p>
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                id="flexRadioDefault3">
                                         </label>
                                     </div>
                                 </div>
@@ -6961,7 +7888,8 @@
                                     <div class="row mt-1 justify-content-center">
                                         <div class="col-md-8">
                                             <label class="form-label dot">سبب الرفض</label>
-                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="  الوصف هنا"></textarea>
+                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"
+                                                placeholder="  الوصف هنا"></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -6977,27 +7905,36 @@
                                             <div class="row final two justify-content-center text-center">
                                                 <div class="col-auto">
                                                     <div class="dateTime small">{{@$public->created_at}}</div>
-                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
+                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}"
+                                                        alt="green-circle">
                                                     <div>
                                                         <p>رفع الطلب</p>
                                                     </div>
                                                 </div>
-                                                <img src="{{asset('user/assets/icons/redline.svg')}}" class="single" alt="">
+                                                <img src="{{asset('user/assets/icons/redline.svg')}}" class="single"
+                                                    alt="">
                                                 <div class="col-auto">
-                                                    <div class="dateTime small text-white">{{@$public->created_at}}</div>
+                                                    <div class="dateTime small text-white">{{@$public->created_at}}
+                                                    </div>
                                                     @if(@$public->status == 2)
-                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle"> @else
-                                                    <img src="{{asset('user/assets/icons/red-circle.svg')}}" alt="red-circle"> @endif
+                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}"
+                                                        alt="green-circle"> @else
+                                                    <img src="{{asset('user/assets/icons/red-circle.svg')}}"
+                                                        alt="red-circle"> @endif
                                                     <div>
                                                         <p>عرض سعر</p>
                                                     </div>
                                                 </div>
-                                                <img src="{{asset('user/assets/icons/redline.svg')}}" class="single" alt="">
+                                                <img src="{{asset('user/assets/icons/redline.svg')}}" class="single"
+                                                    alt="">
                                                 <div class="col-auto">
-                                                    <div class="dateTime small text-white">{{@$public->created_at}}</div>
+                                                    <div class="dateTime small text-white">{{@$public->created_at}}
+                                                    </div>
                                                     @if(@$public->status == 2)
-                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle"> @else
-                                                    <img src="{{asset('user/assets/icons/red-circle.svg')}}" alt="red-circle"> @endif
+                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}"
+                                                        alt="green-circle"> @else
+                                                    <img src="{{asset('user/assets/icons/red-circle.svg')}}"
+                                                        alt="red-circle"> @endif
                                                     <div>
                                                         <p>الدفع</p>
                                                     </div>
@@ -7021,29 +7958,38 @@
                                                 </div>
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
+                                            <div
+                                                class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
                                                 <label class="form-label">الكمية</label>
-                                                <input type="text" class="form-control" placeholder=".. رقم الهاتف هنا" readonly="" value="03084875508">
+                                                <input type="text" class="form-control" placeholder=".. رقم الهاتف هنا"
+                                                    readonly="" value="03084875508">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                 <label class="form-label">المقاسات</label>
-                                                <input type="text" class="form-control" placeholder=".. الايميل هنا" readonly="" value="asimali7056@gmail.com">
+                                                <input type="text" class="form-control" placeholder=".. الايميل هنا"
+                                                    readonly="" value="asimali7056@gmail.com">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                 <label class="form-label">شكل الطباعة</label>
-                                                <input type="text" class="form-control" placeholder=".. التخصص هنا" readonly="" value="رقم الهاتف هنا">
+                                                <input type="text" class="form-control" placeholder=".. التخصص هنا"
+                                                    readonly="" value="رقم الهاتف هنا">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
+                                            <div
+                                                class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
                                                 <label class="form-label">تقنية الطباعة</label>
-                                                <input type="text" class="form-control" placeholder=".. الجنس هنا" readonly="" value="male">
+                                                <input type="text" class="form-control" placeholder=".. الجنس هنا"
+                                                    readonly="" value="male">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 zhd-product-visit">
+                                            <div
+                                                class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 zhd-product-visit">
 
                                                 <button class="btn btn-sky invert">
-                                                    زيارة المنتج <img src="{{ asset('/user/assets/icons/arrow-right.svg')}}" alt="arrow-right">
+                                                    زيارة المنتج <img
+                                                        src="{{ asset('/user/assets/icons/arrow-right.svg')}}"
+                                                        alt="arrow-right">
                                                 </button>
                                             </div>
                                         </div>
@@ -7051,13 +7997,15 @@
                                             <div class="col-md-12">
                                                 <div class="designer-text mt-4">
                                                     <label class="form-label dot">الملاحظات</label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="   الملاحظات .."></textarea>
+                                                    <textarea class="form-control" id="exampleFormControlTextarea1"
+                                                        rows="4" placeholder="   الملاحظات .."></textarea>
                                                 </div>
                                             </div>
                                         </div>
 
                                         <div class="row">
-                                            <h1 class="title text-center mt-5 no-border conditional-blur zhd-quote">معلومات المصمم</h1>
+                                            <h1 class="title text-center mt-5 no-border conditional-blur zhd-quote">
+                                                معلومات المصمم</h1>
                                             <div class="col-md-12">
                                                 <div class="row justify-content-center">
                                                     <div class="col-md-12">
@@ -7066,7 +8014,8 @@
                                                         <div class="wrapper al-center jst-btw mb-5">
                                                             <div class="profile tag-profile designer-order">
                                                                 <a href="#profile">
-                                                                    <img src="{{ asset('/user/assets/icons/avatar.svg')}}" alt="avatar"> </a>
+                                                                    <img src="{{ asset('/user/assets/icons/avatar.svg')}}"
+                                                                        alt="avatar"> </a>
                                                                 <div class="star-profile-txt">
                                                                     <span>مصمم</span>
                                                                     <h4> أسم المصمم</h4>
@@ -7080,39 +8029,55 @@
                                                                 </div>
                                                             </div>
                                                             <button class="btn btn-sky invert">
-                                                                زيارة المنتج <img src="{{ asset('/user/assets/icons/arrow-right.svg')}}" alt="arrow-right">
+                                                                زيارة المنتج <img
+                                                                    src="{{ asset('/user/assets/icons/arrow-right.svg')}}"
+                                                                    alt="arrow-right">
                                                             </button>
                                                         </div>
                                                         {{-- user- req --}}
-                                                        <div class="row mb-2 justify-content-between mb-5 conditional-blur">
+                                                        <div
+                                                            class="row mb-2 justify-content-between mb-5 conditional-blur">
                                                             <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
                                                                 <label class="form-label">تكلفة تنفيذ الخدمة</label>
-                                                                <input type="text" class="form-control" placeholder="كتابة القيمة هنا .." readonly value="{{@$public->print_type}}">
-                                                                <p class="user-req-p">شامل رسوم الخدمة + قيمة الضريبة المضافة</p>
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="كتابة القيمة هنا .." readonly
+                                                                    value="{{@$public->print_type}}">
+                                                                <p class="user-req-p">شامل رسوم الخدمة + قيمة الضريبة
+                                                                    المضافة</p>
                                                             </div>
                                                             <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
                                                                 <label class="form-label">تاريخ البداية</label>
-                                                                <input type="text" class="form-control" placeholder="تحديد التاريخ هنا .." readonly value="{{@$public->print_color}}">
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="تحديد التاريخ هنا .." readonly
+                                                                    value="{{@$public->print_color}}">
                                                             </div>
                                                             <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
                                                                 <label class="form-label">تاريخ التسليم</label>
-                                                                <input type="text" class="form-control" placeholder="تحديد التاريخ هنا .. " readonly value="{{@$public->print_resolution}}">
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="تحديد التاريخ هنا .. " readonly
+                                                                    value="{{@$public->print_resolution}}">
                                                             </div>
                                                         </div>
                                                         <div class="wrapper jst-center userReq-btn-box">
-                                                            <button class="userReq-btn-box__btn userReq-btn-box__btn--a" data-bs-toggle="modal" data-bs-target="">قبول</button>
-                                                            <button class="userReq-btn-box__btn userReq-btn-box__btn--b" data-bs-toggle="modal" data-bs-target="">رفض</button>
-                                                            <button class="userReq-btn-box__btn userReq-btn-box__btn--c mgl-0">عرض السعر</button>
+                                                            <button class="userReq-btn-box__btn userReq-btn-box__btn--a"
+                                                                data-bs-toggle="modal" data-bs-target="">قبول</button>
+                                                            <button class="userReq-btn-box__btn userReq-btn-box__btn--b"
+                                                                data-bs-toggle="modal" data-bs-target="">رفض</button>
+                                                            <button
+                                                                class="userReq-btn-box__btn userReq-btn-box__btn--c mgl-0">عرض
+                                                                السعر</button>
                                                         </div>
                                                     </div>
                                                     <div class="userreqFormBtn-box">
                                                         <button class="btn btn-form">
                                                             طلباتي
                                                         </button>
-                                                        <button class="btn btn-form error-red-bg" data-bs-toggle="modal" data-bs-target="#user7RequestModal">
+                                                        <button class="btn btn-form error-red-bg" data-bs-toggle="modal"
+                                                            data-bs-target="#user7RequestModal">
                                                             تقديم بلاغ
                                                         </button>
-                                                        <p class="userreqFormBtn-box__text">سيتم تحديث حالة الطلب من قبل المصمم</p>
+                                                        <p class="userreqFormBtn-box__text">سيتم تحديث حالة الطلب من قبل
+                                                            المصمم</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -7139,11 +8104,13 @@
                         <div class="col-md-12 p-0">
                             <div class="modal-header border-0">
                                 <div class="zhd-center-close">
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
                                 </div>
                                 <div class="zhd-center-hdng" style="margin-top: 1%;">
                                     <span class="outline dot">اهلاً وسهلاً بكم</span>
-                                    <h1 class="modal-title right"><span class="btm-line d-flex">طلباتي<span class="inner-line"></span></span>
+                                    <h1 class="modal-title right"><span class="btm-line d-flex">طلباتي<span
+                                                class="inner-line"></span></span>
                                     </h1>
                                 </div>
                                 <div class="profile zhd-box">
@@ -7155,12 +8122,13 @@
                                     </a>
                                     @else
                                     <a href="#profile">
-                                        <img src="{{ asset(  auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
+                                        <img src="{{ asset(  auth()->user()->profile) }}"
+                                            style="height:40px; width:40px; border-radius: 50%">
                                     </a> @endif
                                 </div>
                             </div>
                             <div class="modal-body designer-bdy">
-                                
+
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-top">
@@ -7173,27 +8141,36 @@
                                             <div class="row final two justify-content-center text-center">
                                                 <div class="col-auto">
                                                     <div class="dateTime small">{{@$public->created_at}}</div>
-                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
+                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}"
+                                                        alt="green-circle">
                                                     <div>
                                                         <p>رفع الطلب</p>
                                                     </div>
                                                 </div>
-                                                <img src="{{asset('user/assets/icons/redline.svg')}}" class="single" alt="">
+                                                <img src="{{asset('user/assets/icons/redline.svg')}}" class="single"
+                                                    alt="">
                                                 <div class="col-auto">
-                                                    <div class="dateTime small text-white">{{@$public->created_at}}</div>
+                                                    <div class="dateTime small text-white">{{@$public->created_at}}
+                                                    </div>
                                                     @if(@$public->status == 2)
-                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle"> @else
-                                                    <img src="{{asset('user/assets/icons/red-circle.svg')}}" alt="red-circle"> @endif
+                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}"
+                                                        alt="green-circle"> @else
+                                                    <img src="{{asset('user/assets/icons/red-circle.svg')}}"
+                                                        alt="red-circle"> @endif
                                                     <div>
                                                         <p>عرض سعر</p>
                                                     </div>
                                                 </div>
-                                                <img src="{{asset('user/assets/icons/redline.svg')}}" class="single" alt="">
+                                                <img src="{{asset('user/assets/icons/redline.svg')}}" class="single"
+                                                    alt="">
                                                 <div class="col-auto">
-                                                    <div class="dateTime small text-white">{{@$public->created_at}}</div>
+                                                    <div class="dateTime small text-white">{{@$public->created_at}}
+                                                    </div>
                                                     @if(@$public->status == 2)
-                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle"> @else
-                                                    <img src="{{asset('user/assets/icons/red-circle.svg')}}" alt="red-circle"> @endif
+                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}"
+                                                        alt="green-circle"> @else
+                                                    <img src="{{asset('user/assets/icons/red-circle.svg')}}"
+                                                        alt="red-circle"> @endif
                                                     <div>
                                                         <p>الدفع</p>
                                                     </div>
@@ -7217,29 +8194,38 @@
                                                 </div>
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
+                                            <div
+                                                class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
                                                 <label class="form-label">الكمية</label>
-                                                <input type="text" class="form-control" placeholder=".. رقم الهاتف هنا" readonly="" value="03084875508">
+                                                <input type="text" class="form-control" placeholder=".. رقم الهاتف هنا"
+                                                    readonly="" value="03084875508">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                 <label class="form-label">المقاسات</label>
-                                                <input type="text" class="form-control" placeholder=".. الايميل هنا" readonly="" value="asimali7056@gmail.com">
+                                                <input type="text" class="form-control" placeholder=".. الايميل هنا"
+                                                    readonly="" value="asimali7056@gmail.com">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                 <label class="form-label">شكل الطباعة</label>
-                                                <input type="text" class="form-control" placeholder=".. التخصص هنا" readonly="" value="رقم الهاتف هنا">
+                                                <input type="text" class="form-control" placeholder=".. التخصص هنا"
+                                                    readonly="" value="رقم الهاتف هنا">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
+                                            <div
+                                                class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
                                                 <label class="form-label">تقنية الطباعة</label>
-                                                <input type="text" class="form-control" placeholder=".. الجنس هنا" readonly="" value="male">
+                                                <input type="text" class="form-control" placeholder=".. الجنس هنا"
+                                                    readonly="" value="male">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 zhd-product-visit">
+                                            <div
+                                                class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 zhd-product-visit">
 
                                                 <button class="btn btn-sky invert">
-                                                    زيارة المنتج <img src="{{ asset('/user/assets/icons/arrow-right.svg')}}" alt="arrow-right">
+                                                    زيارة المنتج <img
+                                                        src="{{ asset('/user/assets/icons/arrow-right.svg')}}"
+                                                        alt="arrow-right">
                                                 </button>
                                             </div>
                                         </div>
@@ -7247,7 +8233,8 @@
                                             <div class="col-md-12">
                                                 <div class="designer-text mt-4">
                                                     <label class="form-label dot">الملاحظات</label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="   الملاحظات .."></textarea>
+                                                    <textarea class="form-control" id="exampleFormControlTextarea1"
+                                                        rows="4" placeholder="   الملاحظات .."></textarea>
                                                 </div>
                                             </div>
                                         </div>
@@ -7257,35 +8244,42 @@
                                             <h1 class="title text-center mt-5 no-border zhd-quote">معلومات المصمم</h1>
                                             <div class="col-md-12 ">
                                                 <div class="row justify-content-center">
-                                                     <!-- payment blur -->
-                                        <div class="payment pay credit-payment d-block" id="payment">
-                                                    <div class="form-check">
-                                                        <label class="form-check-label" for="flexRadioDefault1">
-                                                            <img src="{{ asset('user/assets/images/mada-logo.svg') }}" alt="">
-                                                            <p>مدى</p>
-                                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                                        </label>
-                                                        <label class="form-check-label" for="flexRadioDefault2">
-                                                            <img src="{{ asset('user/assets/images/masterCard.svg') }}" alt="">
-                                                            <p>فيزا وماستر كارد</p>
-                                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
-                                                        </label>
+                                                    <!-- payment blur -->
+                                                    <div class="payment pay credit-payment d-block" id="payment">
+                                                        <div class="form-check">
+                                                            <label class="form-check-label" for="flexRadioDefault1">
+                                                                <img src="{{ asset('user/assets/images/mada-logo.svg') }}"
+                                                                    alt="">
+                                                                <p>مدى</p>
+                                                                <input class="form-check-input" type="radio"
+                                                                    name="flexRadioDefault" id="flexRadioDefault1">
+                                                            </label>
+                                                            <label class="form-check-label" for="flexRadioDefault2">
+                                                                <img src="{{ asset('user/assets/images/masterCard.svg') }}"
+                                                                    alt="">
+                                                                <p>فيزا وماستر كارد</p>
+                                                                <input class="form-check-input" type="radio"
+                                                                    name="flexRadioDefault" id="flexRadioDefault2">
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <label class="form-check-label" for="flexRadioDefault3">
+                                                                <img src="{{ asset('user/assets/images/apple-pay.svg') }}"
+                                                                    alt="">
+                                                                <p>آبل باي</p>
+                                                                <input class="form-check-input" type="radio"
+                                                                    name="flexRadioDefault" id="flexRadioDefault3">
+                                                            </label>
+                                                        </div>
                                                     </div>
-                                                    <div class="form-check">
-                                                        <label class="form-check-label" for="flexRadioDefault3">
-                                                            <img src="{{ asset('user/assets/images/apple-pay.svg') }}" alt="">
-                                                            <p>آبل باي</p>
-                                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
-                                                        </label>
-                                                    </div>
-                                                </div>
                                                     <div class="col-md-12 blur">
 
                                                         {{-- user- req --}}
                                                         <div class="wrapper al-center jst-btw mb-5">
                                                             <div class="profile tag-profile designer-order">
                                                                 <a href="#profile">
-                                                                    <img src="{{ asset('/user/assets/icons/avatar.svg')}}" alt="avatar"> </a>
+                                                                    <img src="{{ asset('/user/assets/icons/avatar.svg')}}"
+                                                                        alt="avatar"> </a>
                                                                 <div class="star-profile-txt">
                                                                     <span>مصمم</span>
                                                                     <h4> أسم المصمم</h4>
@@ -7299,32 +8293,44 @@
                                                                 </div>
                                                             </div>
                                                             <button class="btn btn-sky invert">
-                                                                زيارة المنتج <img src="{{ asset('/user/assets/icons/arrow-right.svg')}}" alt="arrow-right">
+                                                                زيارة المنتج <img
+                                                                    src="{{ asset('/user/assets/icons/arrow-right.svg')}}"
+                                                                    alt="arrow-right">
                                                             </button>
                                                         </div>
                                                         {{-- user- req --}}
-                                                        <div class="row mb-2 justify-content-between mb-5 conditional-blur">
+                                                        <div
+                                                            class="row mb-2 justify-content-between mb-5 conditional-blur">
                                                             <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
                                                                 <label class="form-label">تكلفة تنفيذ الخدمة</label>
-                                                                <input type="text" class="form-control" placeholder="كتابة القيمة هنا .." readonly value="{{@$public->print_type}}">
-                                                                <p class="user-req-p">شامل رسوم الخدمة + قيمة الضريبة المضافة</p>
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="كتابة القيمة هنا .." readonly
+                                                                    value="{{@$public->print_type}}">
+                                                                <p class="user-req-p">شامل رسوم الخدمة + قيمة الضريبة
+                                                                    المضافة</p>
                                                             </div>
                                                             <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
                                                                 <label class="form-label">تاريخ البداية</label>
-                                                                <input type="text" class="form-control" placeholder="تحديد التاريخ هنا .." readonly value="{{@$public->print_color}}">
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="تحديد التاريخ هنا .." readonly
+                                                                    value="{{@$public->print_color}}">
                                                             </div>
                                                             <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
                                                                 <label class="form-label">تاريخ التسليم</label>
-                                                                <input type="text" class="form-control" placeholder="تحديد التاريخ هنا .. " readonly value="{{@$public->print_resolution}}">
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="تحديد التاريخ هنا .. " readonly
+                                                                    value="{{@$public->print_resolution}}">
                                                             </div>
                                                         </div>
 
                                                     </div>
                                                     <div class="userreqFormBtn-box">
-                                                        <button class="btn btn-form" data-bs-toggle="modal" data-bs-target="#user8RequestModal">
+                                                        <button class="btn btn-form" data-bs-toggle="modal"
+                                                            data-bs-target="#user8RequestModal">
                                                             طلباتي
                                                         </button>
-                                                        <p class="userreqFormBtn-box__text">سيتم تحديث حالة الطلب من قبل المصمم</p>
+                                                        <p class="userreqFormBtn-box__text">سيتم تحديث حالة الطلب من قبل
+                                                            المصمم</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -7351,11 +8357,13 @@
                         <div class="col-md-12 p-0">
                             <div class="modal-header border-0">
                                 <div class="zhd-center-close">
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
                                 </div>
                                 <div class="zhd-center-hdng" style="margin-top: 1%;">
                                     <span class="outline dot">اهلاً وسهلاً بكم</span>
-                                    <h1 class="modal-title right"><span class="btm-line d-flex">طلباتي<span class="inner-line"></span></span>
+                                    <h1 class="modal-title right"><span class="btm-line d-flex">طلباتي<span
+                                                class="inner-line"></span></span>
                                     </h1>
                                 </div>
                                 <div class="profile zhd-box">
@@ -7367,7 +8375,8 @@
                                     </a>
                                     @else
                                     <a href="#profile">
-                                        <img src="{{ asset(  auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
+                                        <img src="{{ asset(  auth()->user()->profile) }}"
+                                            style="height:40px; width:40px; border-radius: 50%">
                                     </a> @endif
                                 </div>
                             </div>
@@ -7377,19 +8386,22 @@
                                         <label class="form-check-label" for="flexRadioDefault1">
                                             <img src="{{asset('user/assets/images/mada-logo.svg')}}" alt="">
                                             <p>مدى</p>
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                id="flexRadioDefault1">
                                         </label>
                                         <label class="form-check-label" for="flexRadioDefault2">
                                             <img src="{{asset('user/assets/images/masterCard.svg')}}" alt="">
                                             <p>فيزا وماستر كارد</p>
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                id="flexRadioDefault2">
                                         </label>
                                     </div>
                                     <div class="form-check">
                                         <label class="form-check-label" for="flexRadioDefault3">
                                             <img src="{{asset('user/assets/images/apple-pay.svg')}}" alt="">
                                             <p>آبل باي</p>
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                id="flexRadioDefault3">
                                         </label>
                                     </div>
                                 </div>
@@ -7397,7 +8409,8 @@
                                     <div class="row mt-1 justify-content-center">
                                         <div class="col-md-8">
                                             <label class="form-label dot">سبب الرفض</label>
-                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="  الوصف هنا"></textarea>
+                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"
+                                                placeholder="  الوصف هنا"></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -7413,27 +8426,36 @@
                                             <div class="row final two justify-content-center text-center">
                                                 <div class="col-auto">
                                                     <div class="dateTime small">{{@$public->created_at}}</div>
-                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
+                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}"
+                                                        alt="green-circle">
                                                     <div>
                                                         <p>رفع الطلب</p>
                                                     </div>
                                                 </div>
-                                                <img src="{{asset('user/assets/icons/redline.svg')}}" class="single" alt="">
+                                                <img src="{{asset('user/assets/icons/redline.svg')}}" class="single"
+                                                    alt="">
                                                 <div class="col-auto">
-                                                    <div class="dateTime small text-white">{{@$public->created_at}}</div>
+                                                    <div class="dateTime small text-white">{{@$public->created_at}}
+                                                    </div>
                                                     @if(@$public->status == 2)
-                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle"> @else
-                                                    <img src="{{asset('user/assets/icons/red-circle.svg')}}" alt="red-circle"> @endif
+                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}"
+                                                        alt="green-circle"> @else
+                                                    <img src="{{asset('user/assets/icons/red-circle.svg')}}"
+                                                        alt="red-circle"> @endif
                                                     <div>
                                                         <p>عرض سعر</p>
                                                     </div>
                                                 </div>
-                                                <img src="{{asset('user/assets/icons/redline.svg')}}" class="single" alt="">
+                                                <img src="{{asset('user/assets/icons/redline.svg')}}" class="single"
+                                                    alt="">
                                                 <div class="col-auto">
-                                                    <div class="dateTime small text-white">{{@$public->created_at}}</div>
+                                                    <div class="dateTime small text-white">{{@$public->created_at}}
+                                                    </div>
                                                     @if(@$public->status == 2)
-                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle"> @else
-                                                    <img src="{{asset('user/assets/icons/red-circle.svg')}}" alt="red-circle"> @endif
+                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}"
+                                                        alt="green-circle"> @else
+                                                    <img src="{{asset('user/assets/icons/red-circle.svg')}}"
+                                                        alt="red-circle"> @endif
                                                     <div>
                                                         <p>الدفع</p>
                                                     </div>
@@ -7457,29 +8479,38 @@
                                                 </div>
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
+                                            <div
+                                                class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
                                                 <label class="form-label">الكمية</label>
-                                                <input type="text" class="form-control" placeholder=".. رقم الهاتف هنا" readonly="" value="03084875508">
+                                                <input type="text" class="form-control" placeholder=".. رقم الهاتف هنا"
+                                                    readonly="" value="03084875508">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                 <label class="form-label">المقاسات</label>
-                                                <input type="text" class="form-control" placeholder=".. الايميل هنا" readonly="" value="asimali7056@gmail.com">
+                                                <input type="text" class="form-control" placeholder=".. الايميل هنا"
+                                                    readonly="" value="asimali7056@gmail.com">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                 <label class="form-label">شكل الطباعة</label>
-                                                <input type="text" class="form-control" placeholder=".. التخصص هنا" readonly="" value="رقم الهاتف هنا">
+                                                <input type="text" class="form-control" placeholder=".. التخصص هنا"
+                                                    readonly="" value="رقم الهاتف هنا">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
+                                            <div
+                                                class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
                                                 <label class="form-label">تقنية الطباعة</label>
-                                                <input type="text" class="form-control" placeholder=".. الجنس هنا" readonly="" value="male">
+                                                <input type="text" class="form-control" placeholder=".. الجنس هنا"
+                                                    readonly="" value="male">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 zhd-product-visit">
+                                            <div
+                                                class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 zhd-product-visit">
 
                                                 <button class="btn btn-sky invert">
-                                                    زيارة المنتج <img src="{{ asset('/user/assets/icons/arrow-right.svg')}}" alt="arrow-right">
+                                                    زيارة المنتج <img
+                                                        src="{{ asset('/user/assets/icons/arrow-right.svg')}}"
+                                                        alt="arrow-right">
                                                 </button>
                                             </div>
                                         </div>
@@ -7487,13 +8518,15 @@
                                             <div class="col-md-12">
                                                 <div class="designer-text mt-4">
                                                     <label class="form-label dot">الملاحظات</label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="   الملاحظات .."></textarea>
+                                                    <textarea class="form-control" id="exampleFormControlTextarea1"
+                                                        rows="4" placeholder="   الملاحظات .."></textarea>
                                                 </div>
                                             </div>
                                         </div>
 
                                         <div class="row">
-                                            <h1 class="title text-center mt-5 no-border conditional-blur zhd-quote">معلومات المصمم</h1>
+                                            <h1 class="title text-center mt-5 no-border conditional-blur zhd-quote">
+                                                معلومات المصمم</h1>
                                             <div class="col-md-12">
                                                 <div class="row justify-content-center">
                                                     <div class="col-md-12">
@@ -7502,7 +8535,8 @@
                                                         <div class="wrapper al-center jst-btw mb-5">
                                                             <div class="profile tag-profile designer-order">
                                                                 <a href="#profile">
-                                                                    <img src="{{ asset('/user/assets/icons/avatar.svg')}}" alt="avatar"> </a>
+                                                                    <img src="{{ asset('/user/assets/icons/avatar.svg')}}"
+                                                                        alt="avatar"> </a>
                                                                 <div class="star-profile-txt">
                                                                     <span>مصمم</span>
                                                                     <h4> أسم المصمم</h4>
@@ -7516,28 +8550,39 @@
                                                                 </div>
                                                             </div>
                                                             <button class="btn btn-sky invert">
-                                                                زيارة المنتج <img src="{{ asset('/user/assets/icons/arrow-right.svg')}}" alt="arrow-right">
+                                                                زيارة المنتج <img
+                                                                    src="{{ asset('/user/assets/icons/arrow-right.svg')}}"
+                                                                    alt="arrow-right">
                                                             </button>
                                                         </div>
                                                         {{-- user- req --}}
-                                                        <div class="row mb-2 justify-content-between mb-5 conditional-blur">
+                                                        <div
+                                                            class="row mb-2 justify-content-between mb-5 conditional-blur">
                                                             <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
                                                                 <label class="form-label">تكلفة تنفيذ الخدمة</label>
-                                                                <input type="text" class="form-control" placeholder="كتابة القيمة هنا .." readonly value="{{@$public->print_type}}">
-                                                                <p class="user-req-p">شامل رسوم الخدمة + قيمة الضريبة المضافة</p>
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="كتابة القيمة هنا .." readonly
+                                                                    value="{{@$public->print_type}}">
+                                                                <p class="user-req-p">شامل رسوم الخدمة + قيمة الضريبة
+                                                                    المضافة</p>
                                                             </div>
                                                             <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
                                                                 <label class="form-label">تاريخ البداية</label>
-                                                                <input type="text" class="form-control" placeholder="تحديد التاريخ هنا .." readonly value="{{@$public->print_color}}">
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="تحديد التاريخ هنا .." readonly
+                                                                    value="{{@$public->print_color}}">
                                                             </div>
                                                             <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
                                                                 <label class="form-label">تاريخ التسليم</label>
-                                                                <input type="text" class="form-control" placeholder="تحديد التاريخ هنا .. " readonly value="{{@$public->print_resolution}}">
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="تحديد التاريخ هنا .. " readonly
+                                                                    value="{{@$public->print_resolution}}">
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="userreqFormBtn-box">
-                                                        <button class="btn btn-form" data-bs-toggle="modal" data-bs-target="#user9RequestModal">
+                                                        <button class="btn btn-form" data-bs-toggle="modal"
+                                                            data-bs-target="#user9RequestModal">
                                                             طلباتي
                                                         </button>
                                                         <p class="userreqFormBtn-box__text">تم رفض عرض السعر</p>
@@ -7565,10 +8610,12 @@
                     <div class="row">
                         <div class="col-md-12 p-0">
                             <div class="modal-header border-0">
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
                                 <div>
                                     <span class="outline dot">أكثر 20 خدمة مختلفة</span>
-                                    <h1 class="modal-title right"><span class="btm-line"><span class="inner-line"></span>الخدمات العامة
+                                    <h1 class="modal-title right"><span class="btm-line"><span
+                                                class="inner-line"></span>الخدمات العامة
                                         </span>
                                     </h1>
                                 </div>
@@ -7581,7 +8628,8 @@
                                     </a>
                                     @else
                                     <a href="#profile">
-                                        <img src="{{ asset(  auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
+                                        <img src="{{ asset(  auth()->user()->profile) }}"
+                                            style="height:40px; width:40px; border-radius: 50%">
                                     </a> @endif
                                 </div>
                             </div>
@@ -7600,19 +8648,23 @@
 
                                                     <h1>406</h1>
 
-                                                    <p><img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle"> رفع الطلب</p>
-                                                    <p><img src="{{asset('user/assets/icons/red-circle.svg')}}" alt="green-circle">رفض عرض السعر</p>
+                                                    <p><img src="{{asset('user/assets/icons/green-circle.svg')}}"
+                                                            alt="green-circle"> رفع الطلب</p>
+                                                    <p><img src="{{asset('user/assets/icons/red-circle.svg')}}"
+                                                            alt="green-circle">رفض عرض السعر</p>
                                                     <!-- <span>سيتم تحديث حالة الطلب من قبل الإدارة</span> -->
                                                 </div>
                                             </div>
                                             <div class="col-md-7">
-                                                <img src="{{ asset('user/assets/images/mujtmah-box__image.png') }}" class="mujtmah-box__image">
+                                                <img src="{{ asset('user/assets/images/mujtmah-box__image.png') }}"
+                                                    class="mujtmah-box__image">
 
                                             </div>
                                             <div class="col-md-12">
                                                 <div class="form-action designer-btn">
                                                     <!-- data-bs-toggle="modal" data-bs-target="#publicServiesFinalModal"  / carousel-next-icon-show-->
-                                                    <button class="btn btn-form mx-3 with-arrow carousel-next-icon-show" type="submit">تفاصيل الطلب</button>
+                                                    <button class="btn btn-form mx-3 with-arrow carousel-next-icon-show"
+                                                        type="submit">تفاصيل الطلب</button>
                                                     <p>تم رفع الطلب بنجاح</p>
                                                 </div>
                                             </div>
@@ -7734,21 +8786,21 @@
 
     @if(!empty(Session::get('error_code')) && Session::get('error_code') == 5)
     <script>
-        $(function() {
+        $(function () {
             $('#healthServicesFinalModal').modal('show');
         });
     </script>
     @endif
     @if(!empty(Session::get('error_code')) && Session::get('error_code') == 4)
     <script>
-        $(function() {
+        $(function () {
             $('#publicPaymentModal').modal('show');
         });
     </script>
     @endif
     @if(!empty(Session::get('error_code')) && Session::get('error_code') == 6)
     <script>
-        $(function() {
+        $(function () {
             $('#publicServiesFinalModal').modal('show');
         });
     </script>
@@ -7757,28 +8809,28 @@
     <!-- JQuery -->
 
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             var a = 0;
-            $(window).scroll(function() {
+            $(window).scroll(function () {
                 var oTop = $('.counter').offset().top - window.innerHeight;
                 if (a == 0 && $(window).scrollTop() > 300) {
-                    $('.client-counter').each(function() {
+                    $('.client-counter').each(function () {
                         var $this = $(this),
                             countTo = $this.attr('data-count');
                         $({
                             countNum: $this.text()
                         }).animate({
-                                countNum: countTo
-                            },
+                            countNum: countTo
+                        },
 
                             {
 
                                 duration: 2000,
                                 easing: 'swing',
-                                step: function() {
+                                step: function () {
                                     $this.text(Math.floor(this.countNum));
                                 },
-                                complete: function() {
+                                complete: function () {
                                     $this.text(this.countNum);
                                     //alert('finished');
                                 }
@@ -7795,7 +8847,7 @@
         })
     </script>
     <script>
-        $(document).on('click', '.editProduct', function(e) {
+        $(document).on('click', '.editProduct', function (e) {
             const btn = $(e.currentTarget);
             rowid = btn.attr('data-id');
             var url = '{{ route("vieworder", ":id") }}';
@@ -7803,7 +8855,7 @@
             $.ajax({
                 url: url,
                 type: "GET",
-                success: function(response) {
+                success: function (response) {
 
                     console.log(response);
                     const modal = $('#allRequestsResultModal');
@@ -7827,7 +8879,7 @@
                     $('#requestsModal').modal('hide');
                     // $('.modal-backdrop').remove();
                 },
-                error: function(errorThrown, errResponse) {
+                error: function (errorThrown, errResponse) {
                     console.log(errorThrown, errResponse);
                 }
             });
@@ -7837,9 +8889,13 @@
     <!-- Slick -->
     <script src="{{ asset('user/assets/js/slick.min.js') }}"></script>
     <!-- Scripts -->
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script> 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js" integrity="sha512-Tn2m0TIpgVyTzzvmxLNuqbSJH3JP8jm+Cy3hvHrW7ndTDcJ1w5mBiksqDBb8GpE2ksktFvDB/ykZ0mDpsZj20w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"
+        integrity="sha512-Tn2m0TIpgVyTzzvmxLNuqbSJH3JP8jm+Cy3hvHrW7ndTDcJ1w5mBiksqDBb8GpE2ksktFvDB/ykZ0mDpsZj20w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="{{ asset('user/assets/js/scripts.js') }}"></script>
