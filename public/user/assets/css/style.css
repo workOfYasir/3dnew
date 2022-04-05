@@ -2331,9 +2331,17 @@ textarea {
     color: #215099 !important;
 }
 
+.form-control.field-blue {
+    color: #215099 !important;
+}
+
 .field-red {
     border-color: #D83554 !important;
     box-shadow: unset !important;
+    /* color: #D83554 !important; */
+}
+
+.form-control.field-red {
     color: #D83554 !important;
 }
 
@@ -3103,5 +3111,9 @@ input[type=number] {
     }
     .map .btn {
         width: 160px;
+    }
+
+    #designinnerModal .designer-sec-1::after{
+        background: -webkit-linear-gradient(360deg, rgba(255, 255, 255, 100%), transparent) !important;
     }
 }

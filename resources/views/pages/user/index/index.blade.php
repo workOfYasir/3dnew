@@ -999,7 +999,7 @@
                                 الحروف التى يولدها التطبيق.
                             </p>
                             <div class="mujtmah-box-btn-wrapper wrapper al-center">
-                                <button class="m-btn mujtmah-box-btn btn-white-1" data-bs-toggle="modal"
+                                <button class="m-btn mujtmah-box-btn reg-des btn-white-1" data-bs-toggle="modal"
                                     data-bs-target="#registerModal">
                                     <img src="{{ asset('user/assets/images/arrow-8.png') }}"
                                         class="mujtmah-box-btn__img"> سجل الان
@@ -1743,16 +1743,18 @@
                                                 </div>
                                                 <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 mt-4">
                                                     <label class="form-label dot">الكمية</label>
-                                                    <select class="form-select gender" required name="gender"
+                                                    <select class="form-select" required name=""
                                                         aria-label="Default select example">
-                                                        <option selected>1</option>
+                                                        <option></option>
+                                                        <option>1</option>
                                                     </select>
                                                 </div>
                                                 <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 mt-4">
                                                     <label class="form-label dot">المقاسات</label>
-                                                    <select class="form-select gender" required name="gender"
+                                                    <select class="form-select" required name=""
                                                         aria-label="Default select example">
-                                                        <option selected>اختيار المقاس</option>
+                                                        <option></option>
+                                                        <option>اختيار المقاس</option>
 
                                                     </select>
                                                 </div>
@@ -1765,7 +1767,8 @@
                                                     <label class="form-label dot">شكل الطباعة</label>
                                                     <select class="form-select gender" required name="gender"
                                                         aria-label="Default select example">
-                                                        <option selected>الاشكال هنا</option>
+                                                        <option></option>
+                                                        <option>الاشكال هنا</option>
 
                                                     </select>
                                                 </div>
@@ -1773,7 +1776,8 @@
                                                     <label class="form-label dot">تقنية الطباعة</label>
                                                     <select class="form-select gender" required name="gender"
                                                         aria-label="Default select example">
-                                                        <option selected> التقنية الأولي</option>
+                                                        <option></option>
+                                                        <option> التقنية الأولي</option>
                                                     </select>
                                                 </div>
                                                 <div class="col-md-2">
@@ -5978,8 +5982,8 @@
                                                     <!-- <input type="text" placeholder="كلمة المرور هنا .." class="almuntjat-form__input">
                                                     <img src="assets/images/arrow-5.png" alt="" class="input-holder__img"> -->
                                                     <select class="form-select a" required name="">
-                                                        <option selected>اختيار التقنية</option>
-                                                        <option>A</option>
+                                                        <option></option>
+                                                        <option>اختيار التقنية</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -5993,8 +5997,8 @@
                                                     <!-- <input type="text" placeholder="اختيار التقنية" class="almuntjat-form__input">
                                                     <img src="assets/images/arrow-5.png" alt="" class="input-holder__img"> -->
                                                     <select class="form-select b" required name="">
-                                                        <option selected>اختيار التقنية</option>
-                                                        <option>A</option>
+                                                        <option></option>
+                                                        <option>اختيار التقنية</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -6008,8 +6012,8 @@
                                                     <!-- <input type="text" placeholder="اختاير البرامج المستخدمة" class="almuntjat-form__input">
                                                     <img src="assets/images/arrow-5.png" alt="" class="input-holder__img"> -->
                                                     <select class="form-select c" required name="">
-                                                        <option selected>اختاير البرامج المستخدمة</option>
-                                                        <option>A</option>
+                                                        <option></option>
+                                                        <option>اختاير البرامج المستخدمة</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -6023,8 +6027,8 @@
                                                     <!-- <input type="text" placeholder="اختاير البرامج المستخدمة" class="almuntjat-form__input">
                                                     <img src="assets/images/arrow-5.png" alt="" class="input-holder__img"> -->
                                                     <select class="form-select d" required name="">
-                                                        <option selected>اختاير البرامج المستخدمة</option>
-                                                        <option>A</option>
+                                                        <option></option>
+                                                        <option>اختاير البرامج المستخدمة</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -6162,7 +6166,7 @@
                                                 <p class="sub-heading-box__heading sub-heading-box__heading--b">العنوان
                                                 </p>
                                             </div>
-                                            <input type="text" class="almuntjat-form__input" placeholder="الاسم هنا ..">
+                                            <input type="text" class="almuntjat-form__input form-control" placeholder="الاسم هنا ..">
                                         </div>
                                         <!-- alunwan end -->
                                         <div class="almuntjat-form__input-wrapper">
@@ -6173,8 +6177,7 @@
                                             </div>
                                             <!-- <label for="almuntjat-form__wasaf" class="almuntjat-form__wasaf-label"></label> -->
                                             <textarea placeholder="الوصف هنا .." name="almuntjat-form__wasaf"
-                                                id="almuntjat-form__wasaf" class="almuntjat-form__wasaf-input">
-                                                </textarea>
+                                                id="almuntjat-form__wasaf" class="almuntjat-form__wasaf-input form-control"></textarea>
                                         </div>
                                         <div class="form-inner-wrapper wrapper jst-btw">
                                             <div class="almuntjat-form__box ">
@@ -6183,11 +6186,13 @@
                                                     <p class="sub-heading-box__heading sub-heading-box__heading--b">
                                                         تقنية الطباعة</p>
                                                 </div>
+
                                                 <div class="input-holder">
-                                                    <input type="text" placeholder="كلمة المرور هنا .."
-                                                        class="almuntjat-form__input">
-                                                    <img src="assets/images/arrow-5.png" alt=""
-                                                        class="input-holder__img">
+                                                    <select class="form-select gender" required name="gender"
+                                                        aria-label="Default select example">
+                                                        <option></option>
+                                                        <option>اختايرالبرامج المستخدمة</option>
+                                                    </select>
                                                 </div>
                                             </div>
                                             <div class="almuntjat-form__box">
@@ -6197,10 +6202,11 @@
                                                         البرامج المستخدم</p>
                                                 </div>
                                                 <div class="input-holder">
-                                                    <input type="text" placeholder="اختيار التقنية"
-                                                        class="almuntjat-form__input">
-                                                    <img src="assets/images/arrow-5.png" alt=""
-                                                        class="input-holder__img">
+                                                    <select class="form-select" required name=""
+                                                        aria-label="Default select example">
+                                                        <option></option>
+                                                        <option>اختاير البرامج المستخدمة</option>
+                                                    </select>
                                                 </div>
                                             </div>
                                             <div class="almuntjat-form__box">
@@ -6210,10 +6216,11 @@
                                                         الألوان</p>
                                                 </div>
                                                 <div class="input-holder">
-                                                    <input type="text" placeholder="اختاير البرامج المستخدمة"
-                                                        class="almuntjat-form__input">
-                                                    <img src="assets/images/arrow-5.png" alt=""
-                                                        class="input-holder__img">
+                                                    <select class="form-select" required name=""
+                                                        aria-label="Default select example">
+                                                        <option></option>
+                                                        <option>اختايرالبرامج المستخدمة</option>
+                                                    </select>
                                                 </div>
                                             </div>
                                             <div class="almuntjat-form__box">
@@ -6223,10 +6230,11 @@
                                                         المقاسات</p>
                                                 </div>
                                                 <div class="input-holder">
-                                                    <input type="text" placeholder="اختاير البرامج المستخدمة"
-                                                        class="almuntjat-form__input">
-                                                    <img src="assets/images/arrow-5.png" alt=""
-                                                        class="input-holder__img">
+                                                    <select class="form-select" required name=""
+                                                        aria-label="Default select example">
+                                                        <option></option>
+                                                        <option>اختاير البرامج المستخدمة</option>
+                                                    </select>
                                                 </div>
                                             </div>
 
