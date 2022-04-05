@@ -58,37 +58,44 @@ class LogoController extends Controller
 
         ]);
         if (isset($request->logo1) && !empty($request->logo1)) {
+            $image1 = $request->logo1->move(storage_path('app/upload/'), $request->logo1);
             $image1 = Storage::disk('public')->put('upload/', $request->logo1);
         } else {
             $image1 = null;
         }
         if (isset($request->logo2) && !empty($request->logo2)) {
+            $image2 = $request->logo2->move(storage_path('app/upload/'), $request->logo2);
             $image2 = Storage::disk('public')->put('upload/', $request->logo2);
         } else {
             $image2 = null;
         }
         if (isset($request->logo3) && !empty($request->logo3)) {
+            $image3 = $request->logo3->move(storage_path('app/upload/'), $request->logo3);
             $image3 = Storage::disk('public')->put('upload/', $request->logo3);
         } else {
             $image3 = null;
         }
         if (isset($request->logo4) && !empty($request->logo4)) {
+            $image4 = $request->logo4->move(storage_path('app/upload/'), $request->logo4);
             $image4 = Storage::disk('public')->put('upload/', $request->logo4);
         } else {
             $image4 = null;
         }
         if (isset($request->logo5) && !empty($request->logo5)) {
+            $image5 = $request->logo5->move(storage_path('app/upload/'), $request->logo5);
             $image5 = Storage::disk('public')->put('upload/', $request->logo5);
         } else {
             $image5 = null;
         }
         if (isset($request->logo6) && !empty($request->logo6)) {
+            $image6 = $request->logo6->move(storage_path('app/upload/'), $request->logo6);
             $image6 = Storage::disk('public')->put('upload/', $request->logo6);
         } else {
             $image6 = null;
         }
 
         if (isset($request->logo7) && !empty($request->logo7)) {
+            $image7 = $request->logo7->move(storage_path('app/upload/'), $request->logo7);
             $image7 = Storage::disk('public')->put('upload/', $request->logo7);
         } else {
             $image7 = null;
@@ -96,6 +103,7 @@ class LogoController extends Controller
 
 
         if (isset($request->logo8) && !empty($request->logo8)) {
+            $image8 = $request->logo8->move(storage_path('app/upload/'), $request->logo8);
             $image8 = Storage::disk('public')->put('upload/', $request->logo8);
         } else {
             $image8 = null;

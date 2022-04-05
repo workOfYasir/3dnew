@@ -44,6 +44,7 @@ class PublicServiceController extends Controller
 
         // dd($request->all());
         if (isset($request->myfile) && !empty($request->myfile)) {
+            $images = $request->myfile->move(storage_path('app/upload/'), $request->myfile);
             $images = Storage::disk('public')->put('upload/', $request->myfile);
         } else {
             $images = null;
@@ -120,6 +121,7 @@ class PublicServiceController extends Controller
             'print_img' => 'required',
         ]);
         if (isset($request->print_img) && !empty($request->print_img)) {
+            $image = $request->print_img->move(storage_path('app/upload/'), $request->print_img);
             $image = Storage::disk('public')->put('upload/', $request->print_img);
         } else {
             $print_img = null;

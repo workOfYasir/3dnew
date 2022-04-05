@@ -3,7 +3,7 @@
 
           <a href="{{ route('profileupdate.view') }}" class="admin-profile">
               @if(auth()->user()->profile != null)
-              <img class="img-90 rounded-circle" src="{{ asset('storage/' . auth()->user()->profile) }}" alt="">
+              <img class="img-90 rounded-circle" src="{{ asset(  auth()->user()->profile) }}" alt="">
               @else
               <img class="img-90 rounded-circle" src="{{asset('assets/images/dashboard/1.png')}}" alt="">
 

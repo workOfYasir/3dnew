@@ -7,8 +7,8 @@ use App\Models\Medical;
 use App\Models\Perposal;
 use Illuminate\Http\Request;
 use App\Notifications\ProposelNotification;
-use PDF;
-use Auth;
+use Barryvdh\DomPDF\Facade\Pdf;
+use Illuminate\Support\Facades\Auth;
 use App\Mail\ProposelMail;
 
 class PerposalController extends Controller
@@ -56,9 +56,15 @@ class PerposalController extends Controller
             'validtill' => $request->validtill,
             'date' => $request->date,
         ]);
-        $details = [
-            'title' =>$user->name,
-            'body' => 'Your medical request have been created',
+          $details = [
+            'subject' =>"'".$med->id ."' تم اصدار فاتورة رقم",
+            'name' =>$user->name ,
+            'body1' => "'".$med->id ."' بناء على موافقتكم على عرض السعر للطلب رقم ",
+            'body2'=> "'".$med->request ."'فقد تم اصدار الفاتورة بمبلغ",
+            'body3'=>'للدفع برجاء الضغط على الرابط التالي:',
+            'linkText' => 'Link is being here to go to website to pay the invoice',
+            'thanks' => 'شكراً جزيلاً',
+            'orderNumber' =>$med->id ,
         ];
         \Mail::to($user->email)->send(new \App\Mail\ProposelMail($details));
         return redirect()->route('perposal.index');
@@ -73,7 +79,6 @@ class PerposalController extends Controller
     public function show($id)
     {
         $invoice = Perposal::find($id);
-     
         $user = User::find($invoice->user_id);
         return view('pages.admin.invoice', compact('invoice', 'user'));
     }
@@ -129,14 +134,15 @@ class PerposalController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function pdfProposal(Request $request)
+    public function pdfProposal($id)
     {
-        $items = Perposal::where('user_id',Auth::user()->id)->get();
-        view()->share('items',$items);
-        if($request->has('download')){
-            $pdf = PDF::loadView('proposel');
+        $invoice = Perposal::find($id);
+        $user = User::find($invoice->user_id);
+
+        // if($request->has('download')){
+            $pdf = PDF::loadView('pages.admin.invoice',compact('invoice', 'user'));
             return $pdf->download('proposel.pdf');
-        }
-        return view('pdfview');
+        // }
+        // return  $pdf->download('pages.admin.invoice');
     }
 }

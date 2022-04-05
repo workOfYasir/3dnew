@@ -44,6 +44,13 @@ class HomeController extends Controller
 
             return view('pages.admin.dashboard.dashboard', compact('title'));
         } else {
+            // $user = User::where('id',Auth::user()->id)->with('invoices')->first();
+            $user =  User::where('id',Auth::user()->id)->with(['invoices' => function ($query) { 
+                return $query->orderBy('id', 'desc')->limit(1);
+              }])->with(['purposals' => function ($query) { 
+                return $query->orderBy('id', 'desc')->limit(1);
+              }])->first();
+           
             $about = AboutUs::first();
             $con = ContactUs::first();
             $tech = Tech::first();
@@ -58,7 +65,7 @@ class HomeController extends Controller
             $map = Mapimage::first();
             $links = Youtubeurl::first();
             $counter = Counter::first();
-            return view('pages.user.index.index', compact('counter', 'links', 'about', 'con', 'tech', 'profile', 'order', 'side', 'orders', 'logos', 'public', 'publics', 'title', 'map'));
+            return view('pages.user.index.index', compact('counter', 'links', 'about', 'con', 'tech', 'profile', 'order', 'side', 'orders', 'logos', 'public', 'publics', 'title', 'map','user'));
         }
     }
     public function vieworder($id)
@@ -94,8 +101,10 @@ class HomeController extends Controller
         if ($request->hasFile('profile')) {
             if (isset($request->profile) && !empty($request->profile)) {
                 if (!empty(auth()->user()->profile)) {
+
                     Storage::disk('public')->delete(auth()->user()->profile);
                 }
+                $profile = $request->profile->move(storage_path('app/upload/'), $request->profile);
                 $profile  = Storage::disk('public')->put('upload/', $request->profile);
             }
         } else {

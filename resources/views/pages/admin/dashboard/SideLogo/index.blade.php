@@ -32,7 +32,7 @@
                                 @foreach ($sides as $side)
                                 <tr>
 
-                                    <td><img src="{{ asset('storage/' . $side->side_image)
+                                    <td><img src="{{ asset(  $side->side_image)
                                         }}" style="height:60px;width:60px;">
                                     </td>
                                     <td>{{$side->heading }}

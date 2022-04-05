@@ -8,7 +8,8 @@ use App\Models\Medical;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Notifications\InvoiceNotification;
-use Barryvdh\DomPDF\PDF;
+use Barryvdh\DomPDF\Facade\Pdf ;
+// use PDF;
 use App\Mail\InvoiceMail;
 
 class InvoiceController extends Controller
@@ -136,14 +137,14 @@ class InvoiceController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function pdfInvoice(Request $request)
+    public function pdfInvoice($id)
     {
-        $items = Invoice::where('user_id',Auth::user()->id)->get();
-        $users = Invoice::where('id',Auth::user()->id)->get();
-        if($request->has('download')){
-            $pdf = PDF::loadView('invoice',array('items'=>$items,'users'=>$users));
+        $invoice = Invoice::find($id);
+        $user = User::find($invoice->user_id);
+        // if($request->has('download')){
+            $pdf = PDF::loadView('pages.admin.invoice',compact('invoice', 'user'));
             return $pdf->download('invoice.pdf');
-        }
-        return $pdf->stream();
+        // }
+        // return $pdf->stream();
     }
 }

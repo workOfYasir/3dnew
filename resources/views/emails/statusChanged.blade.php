@@ -6,7 +6,6 @@
     <!-- <link rel="shortcut icon" href="{{ asset('assets/images/logo/logo-favicon.png') }}" type="image/x-icon"> -->
     <title>3D Organs</title>
 </head>
-
 <body>
     <img src="{{ asset('assets/images/logo/logo-favicon.png') }}" alt="">
     <h1>أهلا{{ $details['title'] }}</h1>

@@ -8,7 +8,6 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 use Spatie\Permission\Traits\HasRoles;
-
 class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable, HasRoles;
@@ -54,6 +53,16 @@ class User extends Authenticatable
     public function messages(){
 
         return $this->hasMany(Chat::class);
+        
+    }
+    public function invoices(){
+
+        return $this->hasOne(Invoice::class);
+        
+    }
+    public function purposals(){
+
+        return $this->hasOne(Perposal::class);
         
     }
 }
