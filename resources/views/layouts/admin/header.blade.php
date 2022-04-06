@@ -33,7 +33,7 @@
             <li class="noti-primary">
               <div class="media"><span class="notification-bg bg-light-primary"><i data-feather="activity"> </i></span>
                 <div class="media-body">
-                  <p>{{$notification->data['data']}} </p><span>{{$notification->created_at->format('H:i:s')}}</span>
+                  <p>{{$notification}} </p><span>{{$notification->created_at->format('H:i:s')}}</span>
                 </div>
               </div>
             </li>
@@ -42,32 +42,11 @@
             <li class="noti-primary">
               <div class="media"><span class="notification-bg bg-light-primary"><i data-feather="activity"> </i></span>
                 <div class="media-body">
-                  <p>{{$notification->data['data']}} </p><span>{{$notification->created_at->format('H:i:s')}}</span>
+                  <p>{{$notification}} </p><span>{{$notification->created_at->format('H:i:s')}}</span>
                 </div>
               </div>
             </li>
             @endforeach
-            <!-- <li class="noti-secondary">
-                    <div class="media"><span class="notification-bg bg-light-secondary"><i data-feather="check-circle"> </i></span>
-                      <div class="media-body">
-                        <p>Order Complete</p><span></span>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="noti-success">
-                    <div class="media"><span class="notification-bg bg-light-success"><i data-feather="file-text"> </i></span>
-                      <div class="media-body">
-                        <p>Tickets Generated</p><span>3 hour ago</span>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="noti-danger">
-                    <div class="media"><span class="notification-bg bg-light-danger"><i data-feather="user-check"> </i></span>
-                      <div class="media-body">
-                        <p>Delivery Complete</p><span>6 hour ago</span>
-                      </div>
-                    </div>
-                  </li> -->
           </ul>
         </li>
         <!-- notifications -->

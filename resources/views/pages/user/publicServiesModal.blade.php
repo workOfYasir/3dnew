@@ -33,7 +33,7 @@
                                     <form class="gy-4 gx-5" action="{{route('publics.store')}}" method="post"
                                         enctype="multipart/form-data">
                                         @csrf
-                                        <div class="carousel-item one " data-bs-interval="100000">
+                                        <div class="carousel-item one active" data-bs-interval="100000">
                                             <div class="row justify-content-center">
                                                 <div class="col-md-12 col-xl-9 col-xxl-9">
                                                     <div class="row mb-2">
