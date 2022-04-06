@@ -42,14 +42,17 @@ class MapimageController extends Controller
 
         ]);
         if (isset($request->map_image) && !empty($request->map_image)) {
-            $image1 = $request->map_image->move(storage_path('app/upload/'), $request->map_image);
-            $image1 = Storage::disk('public')->put('upload/', $request->map_image);
+            $map_image = $request->map_image->getClientOriginalName();
+            $image1 = $request->map_image->move(public_path('upload/'), $map_image);
+            $path ='upload/'.$map_image;
+            // $image1 = Storage::disk('public')->put('upload/', $request->map_image);
         } else {
+            $path = null;
             $image1 = null;
         }
-
+ 
         Mapimage::create([
-            'map_image' => $image1,
+            'map_image' => $path,
         ]);
         return redirect()->route('map.index');
     }
@@ -88,11 +91,14 @@ class MapimageController extends Controller
     {
         $input = $request->all();
         if (isset($request->map_image) && !empty($request->map_image)) {
-            $profile = $request->map_image->move(storage_path('app/upload/'), $request->map_image);
-            $profile = Storage::disk('public')->put('upload/', $request->map_image);
+            $map_image =  $request->map_image->getClientOriginalName();
+            $profile = $request->map_image->move(public_path('app/upload/'), $request->map_image);
+            $path = 'upload/'.$request->map_image;
+            // $profile = Storage::disk('public')->put('upload/', $request->map_image);
 
-            $input['map_image'] = "$profile";
+            $input['map_image'] = "$path";
         } else {
+            $path = null;
             unset($input['map_image']);
         }
         Mapimage::find($id)->update($input);

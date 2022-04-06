@@ -82,7 +82,8 @@ Auth::routes();
         Route::resource('perposal', PerposalController::class);
 Route::group(['middleware' => 'auth', 'varify','cors'], function () {
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
+    Route::resource('medical', MedicalController::class);
+    Route::resource('publics', PublicServiceController::class);
     //Resource Route
     Route::group(['middleware' =>  'role:user'], function () {
         Route::get('/vieworder/{id}', [App\Http\Controllers\HomeController::class, 'vieworder'])->name('vieworder');
@@ -91,16 +92,17 @@ Route::group(['middleware' => 'auth', 'varify','cors'], function () {
         Route::get('perposal/{id}', [PerposalController::class,'show'])->name('purposal');    
         Route::get('invoices/pdf/{id}', [InvoiceController::class,'pdfInvoice'])->name('invoice.pdf');
         Route::get('perposal/pdf/{id}', [PerposalController::class,'pdfProposal'])->name('purposal.pdf');           
+        
     });
     Route::group(['middleware' =>  'role:admin'], function () {
         Route::resource('about', AboutUsController::class);
         Route::resource('contact', ContactControllers::class);
         Route::resource('client', ClientController::class);
         Route::resource('image', ImageSlideController::class);
-        Route::resource('publics', PublicServiceController::class);
+
         Route::resource('social', SocialMediaController::class);
         Route::resource('tech', TechController::class);
-        Route::resource('medical', MedicalController::class);
+
         Route::resource('title', TitleController::class);
         Route::resource('map', MapimageController::class);
         Route::resource('youtubeurl', YoutubeurlController::class);

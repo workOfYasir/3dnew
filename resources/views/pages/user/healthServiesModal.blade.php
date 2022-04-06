@@ -202,7 +202,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="form-action">
-                                                        <button class="btn btn-form disabled mx-3 with-arrow" data-bs-target="#carouselHealthIndicators" data-bs-slide="next"><img src="{{asset('user/assets/icons/arrow-right.svg')}}" alt="">&nbsp; التالي</button>
+                                                        <button class="btn btn-form  mx-3 with-arrow" data-bs-target="#carouselHealthIndicators" data-bs-slide="next"><img src="{{asset('user/assets/icons/arrow-right.svg')}}" alt="">&nbsp; التالي</button>
                                                         <p>اختيار نوع الخدمة المطلوبة</p>
                                                     </div>
 
