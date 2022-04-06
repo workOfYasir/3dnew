@@ -90,6 +90,7 @@ class MedicalController extends Controller
         ]);
         $user = User::find($order->user_id);
         $notification = auth()->user()->notifications()->where('type', 'App\Notifications\MedicalNotification')->latest()->first();
+        dd($notification);
         if ($notification) {
             $notification->markAsRead();
         }
