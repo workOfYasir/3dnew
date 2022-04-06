@@ -410,50 +410,7 @@
                                 
                             </div>
                         </div>
-                        <!-- Modal -->
-                        {{-- <div class="modal fade" id="exampleModal" tabindex="-1"
-                            aria-labelledby="exampleModalLabel"
-                            aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title"
-                                            id="exampleModalLabel">إرسال الاستعلام</h5>
-                                        <button type="button" class="btn-close send-query-cross"
-                                            data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <form>
 
-                                            <div class="col-12">
-                                                <label class="form-label">بريد الالكتروني</label>
-                                                <input type="text"
-                                                    class="form-control"
-                                                    name="email"
-                                                    value="{{$user->email}}"
-                                                readonly>
-                                            </div>
-                                            <div class="col-12">
-                                                <label class="form-label">سؤال</label>
-                                                <textarea class="form-control"
-                                                    id="question"
-                                                    name="question"></textarea>
-                                            </div>
-                                        </form>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn
-                                            btn-secondary"
-                                            data-bs-dismiss="modal">يغلق</button>
-                                        <button type="submit" class="btn
-                                            btn-primary btn-submit"
-                                            data-bs-dismiss="modal"
-                                            aria-label="Send">إرسال</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> --}}
                        
                     </div>
                 </div>

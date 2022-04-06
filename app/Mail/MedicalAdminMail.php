@@ -31,6 +31,6 @@ class MedicalAdminMail extends Mailable
      */
     public function build()
     {
-        return $this->$this->from($this->details['from'],$this->details['name'])->subject($this->detail['adminSubject'])->view('emails.medicalAdmin');
+        return $this->from($this->details['from'],$this->details['name'])->subject($this->details['adminSubject'])->view('emails.medicalAdmin');
     }
 }

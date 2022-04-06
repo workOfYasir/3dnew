@@ -44,8 +44,9 @@ class SideImageController extends Controller
 			
         ]);
         if (isset($request->side_image) && !empty($request->side_image)) {
-            $image1 = $request->side_image->move(storage_path('app/upload/'), $request->side_image);
-            $image1 = Storage::disk('public')->put('upload/', $request->side_image);
+            $images = $request->side_image->move(public_path('upload/'), $request->side_image);
+            $image1 = 'upload/'.$images;
+            // $image1 = Storage::disk('public')->put('upload/', $request->side_image);
         } else {
             $image1 = null;
         }
@@ -93,9 +94,11 @@ class SideImageController extends Controller
     {
         $input = $request->all();
         if (isset($request->side_image) && !empty($request->side_image)) {
-            $profile = $request->side_image->move(storage_path('app/upload/'), $request->side_image);
-            $profile = Storage::disk('public')->put('upload/', $request->side_image);
+            $fprofile = $request->side_image->getClientOriginalName();
 
+            $request->side_image->move(public_path('upload/'), $fprofile);
+            // $profile = Storage::disk('public')->put('upload/', $request->side_image);
+            $profile ='upload/'.$fprofile;
             $input['side_image'] = "$profile";
         } else {
             unset($input['side_image']);

@@ -58,69 +58,91 @@ class LogoController extends Controller
 
         ]);
         if (isset($request->logo1) && !empty($request->logo1)) {
-            $image1 = $request->logo1->move(storage_path('app/upload/'), $request->logo1);
-            $image1 = Storage::disk('public')->put('upload/', $request->logo1);
+            $logo1 = $request->logo1->getClientOriginalName();
+            $image1 = $request->logo1->move(public_path('upload/'), $logo1);
+            $path1 ='upload/'.$logo1;
+            // $image1 = Storage::disk('public')->put('upload/', $request->logo1);
         } else {
+            $path1 = null;
             $image1 = null;
         }
         if (isset($request->logo2) && !empty($request->logo2)) {
-            $image2 = $request->logo2->move(storage_path('app/upload/'), $request->logo2);
-            $image2 = Storage::disk('public')->put('upload/', $request->logo2);
+            $logo2 = $request->logo2->getClientOriginalName();
+            $image2 = $request->logo2->move(public_path('upload/'), $logo2);
+            $path2 ='upload/'.$logo2;
+            // $image2 = Storage::disk('public')->put('upload/', $request->logo2);
         } else {
+            $path2 = null;
             $image2 = null;
         }
         if (isset($request->logo3) && !empty($request->logo3)) {
-            $image3 = $request->logo3->move(storage_path('app/upload/'), $request->logo3);
-            $image3 = Storage::disk('public')->put('upload/', $request->logo3);
+            $logo3 = $request->logo3->getClientOriginalName();
+            $image3 = $request->logo3->move(public_path('upload/'), $logo3);
+            $path3 ='upload/'.$logo3;
+            // $image3 = Storage::disk('public')->put('upload/', $request->logo3);
         } else {
+            $path3 = null;
             $image3 = null;
         }
         if (isset($request->logo4) && !empty($request->logo4)) {
-            $image4 = $request->logo4->move(storage_path('app/upload/'), $request->logo4);
-            $image4 = Storage::disk('public')->put('upload/', $request->logo4);
+            $logo4 = $request->logo4->getClientOriginalName();
+            $image4 = $request->logo4->move(public_path('upload/'), $logo4);
+            $path4 ='upload/'.$logo4;
+            // $image4 = Storage::disk('public')->put('upload/', $request->logo4);
         } else {
+            $path4 = null;
             $image4 = null;
         }
         if (isset($request->logo5) && !empty($request->logo5)) {
-            $image5 = $request->logo5->move(storage_path('app/upload/'), $request->logo5);
-            $image5 = Storage::disk('public')->put('upload/', $request->logo5);
+            $logo5 = $request->logo5->getClientOriginalName();
+            $image5 = $request->logo5->move(public_path('upload/'), $logo5);
+            $path5 ='upload/'.$logo5;
+            // $image5 = Storage::disk('public')->put('upload/', $request->logo5);
         } else {
+            $path5 = null;
             $image5 = null;
         }
         if (isset($request->logo6) && !empty($request->logo6)) {
-            $image6 = $request->logo6->move(storage_path('app/upload/'), $request->logo6);
-            $image6 = Storage::disk('public')->put('upload/', $request->logo6);
+            $logo6 = $request->logo6->getClientOriginalName();
+            $image6 = $request->logo6->move(public_path('upload/'), $logo6);
+            $path6 ='upload/'.$logo6;
+            // $image6 = Storage::disk('public')->put('upload/', $request->logo6);
         } else {
+            $path6 = null;
             $image6 = null;
         }
 
         if (isset($request->logo7) && !empty($request->logo7)) {
-            $image7 = $request->logo7->move(storage_path('app/upload/'), $request->logo7);
-            $image7 = Storage::disk('public')->put('upload/', $request->logo7);
+            $logo7 = $request->logo7->getClientOriginalName();
+            $image7 = $request->logo7->move(public_path('upload/'), $logo7);
+            $path7 ='upload/'.$logo7;
+            // $image7 = Storage::disk('public')->put('upload/', $request->logo7);
         } else {
+            $path7=null;
             $image7 = null;
         }
 
 
         if (isset($request->logo8) && !empty($request->logo8)) {
-            $image8 = $request->logo8->move(storage_path('app/upload/'), $request->logo8);
-            $image8 = Storage::disk('public')->put('upload/', $request->logo8);
+            $logo8 = $request->logo8->getClientOriginalName();  
+            $image8 = $request->logo8->move(public_path('upload/'), $logo8);
+            $path8 ='upload/'.$logo8;
+            // $image8 = Storage::disk('public')->put('upload/', $request->logo8);
         } else {
+            $path8 = null;
             $image8 = null;
         }
 
 
-
-
         Logo::create([
-            'logo1' => $image1,
-            'logo2' => $image2,
-            'logo3' => $image3,
-            'logo4' => $image4,
-            'logo5' => $image5,
-            'logo6' => $image6,
-            'logo7' => $image7,
-            'logo8' => $image8,
+            'logo1' => $path1,
+            'logo2' => $path2,
+            'logo3' => $path3,
+            'logo4' => $path4,
+            'logo5' => $path5,
+            'logo6' => $path6,
+            'logo7' => $path7,
+            'logo8' => $path8,
 
         ]);
         return redirect()->route('logo.index');

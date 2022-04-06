@@ -21,15 +21,19 @@ class MedicalController extends Controller
 {
     public function store(Request $request)
     {
+ 
         if ($request->hasFile('myfile')) {
-            $myfile = $request->myfile->move(storage_path('app/upload/'), $request->myfile);
-            $myfile  = Storage::disk('public')->put('upload/', $request->myfile);
+            $myfile =  $request->myfile->getClientOriginalName();
+            $request->myfile->move(public_path('upload/'), $request->myfile);
+            $path ='upload/'.$myfile;
+            // $myfile  = Storage::disk('public')->put('upload/', $request->myfile);
         } else {
-            $myfile  = null;
+            $path  = null;
         }
+       
         $med = Medical::create([
             'user_id' => Auth::id(),
-            'myfile' => $myfile,
+            'myfile' => $path,
             'procedure' => $request->procedure,
             'parts' => $request->parts,
             'discription' => $request->discription,
