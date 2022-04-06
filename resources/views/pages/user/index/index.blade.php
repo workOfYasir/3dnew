@@ -190,9 +190,9 @@
                 </div>
                 @else
                 <div class="left-side">
-                    <a href="#login" data-bs-toggle="modal" class="register-icon" data-bs-target="#loginModal">تسجيل
+                    <a href="#login" data-bs-toggle="modal" class="register-icon border-bottom" data-bs-target="#loginModal">تسجيل
                         دخول</a>
-                    <a href="#register" class="ms-auto register-icon" data-bs-toggle="modal"
+                    <a href="#register" class="ms-auto register-icon border-bottom" data-bs-toggle="modal"
                         data-bs-target="#registerModal">التسجيل</a>
                     <span>
                         <a href="#"><img src="{{ asset('user/assets/icons/twitter.svg') }}" alt="twitter"></a>
@@ -5965,8 +5965,6 @@
                                                 <p class="sub-heading-box__heading sub-heading-box__heading--b">الوصف
                                                 </p>
                                             </div>
-                                            <label for="almuntjat-form__wasaf"
-                                                class="almuntjat-form__wasaf-label"></label>
                                             <textarea placeholder="الوصف هنا .." name="almuntjat-form__wasaf" value=""
                                                 id="almuntjat-form__wasaf"
                                                 class="almuntjat-form__wasaf-input form-control"></textarea>
@@ -7117,8 +7115,7 @@
                                                             المنتج سيذهب الى الإدارة للمراجعة للقبول أو الرفض
                                                         </div>
 
-                                                        <div
-                                                            class="wrapper jst-center userReq-btn-box userReq-btn-box--a bill-click-hide">
+                                                        <div class="wrapper jst-center userReq-btn-box userReq-btn-box--a bill-click-hide">
                                                             <button
                                                                 class="userReq-btn-box__btn userReq-btn-box__btn--d bill-btn">الفاتورة</button>
                                                             <button
@@ -7126,8 +7123,7 @@
                                                                 data-bs-toggle="modal"
                                                                 data-bs-target="#user4RequestModal">تقديم بلاغ</button>
                                                         </div>
-                                                        <div
-                                                            class="wrapper jst-center userReq-btn-box userReq-btn-box--a bill-click-show">
+                                                        <div class="wrapper jst-center userReq-btn-box userReq-btn-box--a bill-click-show">
                                                             <button
                                                                 class="userReq-btn-box__btn userReq-btn-box__btn--d">انهاء
                                                                 الخدمة</button>
@@ -8043,9 +8039,9 @@
                                                         </div>
                                                         <div class="wrapper jst-center userReq-btn-box">
                                                             <button class="userReq-btn-box__btn userReq-btn-box__btn--a"
-                                                                data-bs-toggle="modal" data-bs-target="">قبول</button>
+                                                                >قبول</button>
                                                             <button class="userReq-btn-box__btn userReq-btn-box__btn--b"
-                                                                data-bs-toggle="modal" data-bs-target="">رفض</button>
+                                                                >رفض</button>
                                                             <button
                                                                 class="userReq-btn-box__btn userReq-btn-box__btn--c mgl-0">عرض
                                                                 السعر</button>

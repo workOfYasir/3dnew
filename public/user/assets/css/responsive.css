@@ -567,7 +567,9 @@
     }
 
     #requestsModal .nav-tabs .nav-item, .onTab .nav-tabs .nav-item {
-        width: 100%;
+        /* width: 100%; */
+        width: 50%;
+
     }
     
     #requestsModal .nav-tabs .nav-link, .onTab .nav-tabs .nav-link {

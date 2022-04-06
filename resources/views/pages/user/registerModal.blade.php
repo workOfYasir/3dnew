@@ -53,7 +53,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="row justify-content-center">
-                                                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3">
+                                                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 mb-4">
                                                         <label class="form-label dot">الايميل</label>
                                                         <input type="email" name="email" class="form-control email" placeholder="الايميل هنا .." value="">
                                                     </div>
@@ -90,34 +90,34 @@
                                                         <input id="imgInp" type="file" class="chose" name="profile" accept="image/*" style="display: none;">
                                                     </div>
                                                 </div>
-                                                <div class="row justify-content-center">
-                                                    <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-3 mt-4">
+                                                <div class="row justify-content-center tab-justify-right">
+                                                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mt-4">
                                                         <label class="form-label dot">الاسم</label>
                                                         <input type="text" class="form-control" placeholder="الاسم هنا .." value="">
                                                     </div>
-                                                    <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-3 mt-4">
+                                                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mt-4">
                                                         <label class="form-label dot">رقم الجوال</label>
                                                         <input type="text" class="form-control " placeholder="رقم الجوال هنا .." value="">
                                                     </div>
-                                                    <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-3 mt-4">
+                                                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mt-4">
                                                         <label class="form-label dot">الايميل</label>
                                                         <input type="email" name="email" class="form-control email" placeholder="الايميل هنا ..">
                                                     </div>
                                                 </div>
-                                                <div class="row justify-content-center mb-5">
-                                                    <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-3 mt-4">
+                                                <div class="row justify-content-center mb-5 tab-justify-right">
+                                                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mt-4">
                                                         <label class="form-label dot">كلمة المرور</label>
                                                         <input type="password" name="password" class="form-control pass " placeholder="كلمة المرور هنا .." value="">
                                                     </div>
 
-                                                    <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-3 mt-4 ahs-from-box">
+                                                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mt-4 ahs-from-box">
                                                         <label class="form-label dot">تقنية الطباعة</label>
                                                         <select class="form-select" required name="" aria-label="Default select example">
                                                             <option selected>اختيار التقنية</option>
                                                             <option>اختيار</option>
                                                         </select>
                                                     </div>
-                                                    <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-3 mt-4 ahs-from-box">
+                                                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mt-4 ahs-from-box">
                                                         <label class="form-label dot">أنواع البرامج المستخدمة</label>
                                                         <select class="form-select" required name="" aria-label="Default select example">
                                                             <option selected>اختاير البرامج المستخدمة</option>

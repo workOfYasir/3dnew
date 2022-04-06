@@ -643,7 +643,8 @@
             justify-content: right;
         }
         .almuntjat-form-error{
-            font-size: 15px;
+            font-size: 13px;
+            line-height: 1.2;
         }
         /* #designinnerModal css end here */
 
@@ -747,7 +748,49 @@
         .hide-mobile{
             display: none;
         }
+
+
+        /* #registerModal modal css */
         
+        .tab-justify-right{
+            justify-content: right !important;
+        }
+         #registerModal .almuntjat-form-error__img {
+            margin-top: 0px;
+            margin-bottom: 0px!important;
+            margin-left: 20px;
+            width: 30px;
+        }
+
+        /* #registerModal modal css end */
+
+        .profile.ahs-member-model-box2{
+            text-align: left;
+        }
+        .ahs-member-model-box2 .btn{
+            margin-left: 10px !important;
+        }
+        .modal-body .ahs-form-box1 .ahs-form-img1{
+            margin-bottom: 0px!important;
+            width: 20px !important;
+            margin-right: 15px !important;
+        }
+        .membership-edit{
+            margin-top: 10px;
+            width: 91%;
+        }
+
+        .modal.page .btn-close{
+            margin-right: 10px;
+        }
+        
+        #financialOperations .ahs-member-model-box{
+            width: 100%;
+        }
+        #financialOperations2 .ahs-member-model-box2{
+            width: 100%;
+        }
+
 
     }
 
@@ -833,6 +876,40 @@
         .userReq-btn-box {
             width: 100%;
         }
+
+        /* #registerModal modal css */
+        
+        .tab-justify-right{
+            justify-content: right !important;
+        }
+         #registerModal .almuntjat-form-error__img {
+            margin-top: 0px;
+            margin-bottom: 0px!important;
+            width: 30px;
+        }
+
+        /* #registerModal modal css end */
+     
+        .profile.ahs-member-model-box2{
+            text-align: left;
+        }
+        .ahs-member-model-box2 .btn{
+            margin-left: 0px !important;
+        }
+        .membership-edit{
+            margin-top: 10px;
+            width: 60%;
+        }
+        .modal-body .ahs-form-box1 .ahs-form-img1{
+            margin-bottom: 0px!important;
+            width: 20px !important;
+            margin-right: 15px !important;
+        }
+       #financialOperations2 .membership-edit{
+        width: 57%;
+        }
+       
+
 
     }
     

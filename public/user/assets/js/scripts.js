@@ -504,8 +504,8 @@ $(document).ready(function () {
     })
 
     $(".bill-btn").click(function () {
-        $(".bill-click-hide").hide();
-        $(".bill-click-show").show();
+        $(".bill-click-hide").addClass('d-none');
+        $(".bill-click-show").addClass('d-block');
     })
 
     // Accept button click function

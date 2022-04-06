@@ -336,7 +336,7 @@ nav .left-side a:last-child {
     font-size: 16px;
     font-weight: bold;
     color: #000000;
-    padding-right: 14px;
+    padding-right: 11px;
 }
 
 .modal .form-control,
@@ -1297,7 +1297,7 @@ textarea {
 }
 
 .notification-box::after {
-    content: url(/assets/icons/arrow-right-blue.svg);
+    content: url(../icons/arrow-right-blue.svg);
     position: absolute;
     left: 0px;
     padding: 0px 30px;
