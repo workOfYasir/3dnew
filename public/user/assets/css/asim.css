@@ -322,7 +322,8 @@
         position: absolute;
         left: 0;
         right: 0;
-        top: 325px;
+        /* top: 325px; */
+        top: 0;
         z-index: 1;
     }
     .blur.blur-star-rating{
@@ -940,7 +941,11 @@
         width: 57%;
         }
        
+/* blur review modal */
 
+        /* .review-star-blur .blur-bg{
+            top: 0 !important; 
+        } */
 
     }
     

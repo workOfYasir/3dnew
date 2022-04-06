@@ -487,9 +487,11 @@ $(document).ready(function () {
         $(this).nextAll().addClass("star-active");
     })
 
-    // stat blur background
+    //#starbluerModal-btn stat blur background
 
     $(".starbluerModal-btn").click(function () {
+        
+        $(".review-blur-star-rating").addClass('blur');
         $(".blur-star").show();
         $(".review-text-tog").addClass("review-text-hide");
         $(".starbluerModal-btn-hide").hide();
