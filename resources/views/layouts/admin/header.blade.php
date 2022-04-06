@@ -33,7 +33,10 @@
             <li class="noti-primary">
               <div class="media"><span class="notification-bg bg-light-primary"><i data-feather="activity"> </i></span>
                 <div class="media-body">
-                  <p>{{$notification}} </p><span>{{$notification->created_at->format('H:i:s')}}</span>
+                  <p>{{$notification->data['data']}} </p>
+                  <a href="{{ ($notification->data['med_id']==null ||$notification->data['med_id']=="") ? route('publics.show',$notification->data['pub_id']) : route('medical.show',$notification->data['med_id']) }}"><span>{{$notification->data['msg']}}</span></a>
+                  <br>
+                  <span>{{$notification->created_at->format('H:i:s')}}</span>
                 </div>
               </div>
             </li>
@@ -42,7 +45,10 @@
             <li class="noti-primary">
               <div class="media"><span class="notification-bg bg-light-primary"><i data-feather="activity"> </i></span>
                 <div class="media-body">
-                  <p>{{$notification}} </p><span>{{$notification->created_at->format('H:i:s')}}</span>
+                  <p>{{$notification->data['data']}} </p>
+                  <a href="{{ ($notification->data['med_id']==null ||$notification->data['med_id']=="") ? route('publics.show',$notification->data['pub_id']) : route('medical.show',$notification->data['med_id']) }}"><span>{{$notification->data['msg']}}</span></a>
+                  <br>
+                  <span>{{$notification->created_at->format('H:i:s')}}</span>
                 </div>
               </div>
             </li>

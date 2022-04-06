@@ -53,7 +53,7 @@ class MedicalController extends Controller
         ]);
         $users = User::where('role', 'admin')->orwhere('id',$users->id)->first();
         $user = User::where('id',Auth::id())->first();
-        $users->notify(new MedicalNotification($users));
+        $users->notify(new MedicalNotification($users,$med));
         $details = [
             'title' =>$user->name,
             'subject'=>"#'".$med->id."'جاري تنفيذ طلب رقم",
@@ -90,7 +90,7 @@ class MedicalController extends Controller
         ]);
         $user = User::find($order->user_id);
         $notification = auth()->user()->notifications()->where('type', 'App\Notifications\MedicalNotification')->latest()->first();
-        dd($notification);
+
         if ($notification) {
             $notification->markAsRead();
         }
