@@ -48,25 +48,33 @@ class ClientController extends Controller
             'requests' => 'required',
         ]);
         if (isset($request->proposal) && !empty($request->proposal)) {
-            $image = $request->proposal->move(storage_path('app/upload/'), $request->proposal);
-            $image = Storage::disk('public')->put('upload/', $request->proposal);
+            $proposal = $request->proposal->getClientOriginalName();
+            $image = $request->proposal->move(public_path('upload/'), $proposal);
+            // $image = Storage::disk('public')->put('upload/', $request->proposal);
+            $pathproposal ='upload/'.$proposal;
         } else {
+            $pathproposal =null;
             $image = null;
         }
         if (isset($request->invoice) && !empty($request->invoice)) {
-            $image1 = $request->invoice->move(storage_path('app/upload/'), $request->invoice);
-            $image1 = Storage::disk('public')->put('upload/', $request->invoice);
+            $invoice = $request->invoice->getClientOriginalName();
+            $image1 = $request->invoice->move(public_path('upload/'), $invoice);
+            // $image1 = Storage::disk('public')->put('upload/', $request->invoice);
+            $pathinvoice ='upload/'.$invoice;
         } else {
+            $pathinvoice =null;
             $image1 = null;
         }
         // dd($request->all());
+      
+        
         Client::create([
             'inactive' => $request->inactive,
             'active' => $request->active,
             'log' => $request->log,
             'team_member' => $request->team_member,
-            'proposal' =>  $image,
-            'invoice' => $image1,
+            'proposal' =>  $pathproposal,
+            'invoice' => $pathinvoice,
             'payment' => $request->payment,
             'request' => $request->requests,
         ]);

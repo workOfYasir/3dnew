@@ -104,16 +104,20 @@ class HomeController extends Controller
 
                     Storage::disk('public')->delete(auth()->user()->profile);
                 }
-                $profile = $request->profile->move(storage_path('app/upload/'), $request->profile);
-                $profile  = Storage::disk('public')->put('upload/', $request->profile);
+                $profile = $request->profile->getClientOriginalName();
+                $request->profile->move(public_path('upload/'), $profile);
+                // $profile  = Storage::disk('public')->put('upload/', $request->profile);
+                $path ='upload/'.$profile;
             }
         } else {
+            $path =(auth()->user()->profile);
             $profile  = (auth()->user()->profile);
         }
         //  dd($request->all());
         //dd($request->all());
+       
         User::find(auth()->user()->id)->update([
-            'profile' => $profile,
+            'profile' => $path,
             'name' => $request->name,
             'email' => $request->email,
         ]);
