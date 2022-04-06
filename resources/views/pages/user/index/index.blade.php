@@ -2083,9 +2083,10 @@
                                     <div class="col-md-12">
                                         <div class="form-top">
                                             <span>رقم الطلب :</span>
-                                            <span class="id">{{@$public->id}}</span>
-                                            <div class="dateTime">{{@$public->created_at}}</div>
-                                            <!-- <div class="dateTime small">11/01/2022 - 03:00PM</div> -->
+                                            <span class="id">406</span>
+                                            <!-- <span class="id">{{@$public->id}}</span> -->
+                                            <!-- <div class="dateTime">{{@$public->created_at}}</div> -->
+                                            <div class="dateTime">11/01/2022 - 03:00PM</div>
                                         </div>
                                         <div class="">
                                             <div class="row final two justify-content-center text-center">
@@ -2349,9 +2350,10 @@
                                     <div class="col-md-12">
                                         <div class="form-top">
                                             <span>رقم الطلب :</span>
-                                            <span class="id">{{@$public->id}}</span>
-                                            <div class="dateTime">{{@$public->created_at}}</div>
-                                            <!-- <div class="dateTime small">11/01/2022 - 03:00PM</div> -->
+                                            <span class="id">406</span>
+                                            <!-- <span class="id">{{@$public->id}}</span> -->
+                                            <!-- <div class="dateTime">{{@$public->created_at}}</div> -->
+                                            <div class="dateTime">11/01/2022 - 03:00PM</div>
                                         </div>
                                         <div class="">
                                             <div class="row final two justify-content-center text-center">
@@ -2649,9 +2651,10 @@
                                     <div class="col-md-12">
                                         <div class="form-top">
                                             <span>رقم الطلب :</span>
-                                            <span class="id">{{@$public->id}}</span>
-                                            <div class="dateTime">{{@$public->created_at}}</div>
-                                            <!-- <div class="dateTime small">11/01/2022 - 03:00PM</div> -->
+                                            <span class="id">406</span>
+                                            <!-- <span class="id">{{@$public->id}}</span> -->
+                                            <!-- <div class="dateTime">{{@$public->created_at}}</div> -->
+                                            <div class="dateTime">11/01/2022 - 03:00PM</div>
                                         </div>
                                         <div class="">
                                             <div class="row final two justify-content-center text-center">
@@ -3026,9 +3029,10 @@
                                     <div class="col-md-12">
                                         <div class="form-top">
                                             <span>رقم الطلب :</span>
-                                            <span class="id">{{@$public->id}}</span>
-                                            <div class="dateTime">{{@$public->created_at}}</div>
-                                            <!-- <div class="dateTime small">11/01/2022 - 03:00PM</div> -->
+                                            <span class="id">406</span>
+                                            <!-- <span class="id">{{@$public->id}}</span> -->
+                                            <!-- <div class="dateTime">{{@$public->created_at}}</div> -->
+                                            <div class="dateTime">11/01/2022 - 03:00PM</div>
                                         </div>
                                         <div class="">
                                             <div class="row final two justify-content-center text-center">
@@ -3292,9 +3296,10 @@
                                     <div class="col-md-12">
                                         <div class="form-top">
                                             <span>رقم الطلب :</span>
-                                            <span class="id">{{@$public->id}}</span>
-                                            <div class="dateTime">{{@$public->created_at}}</div>
-                                            <!-- <div class="dateTime small">11/01/2022 - 03:00PM</div> -->
+                                            <span class="id">406</span>
+                                            <!-- <span class="id">{{@$public->id}}</span> -->
+                                            <!-- <div class="dateTime">{{@$public->created_at}}</div> -->
+                                            <div class="dateTime">11/01/2022 - 03:00PM</div>
                                         </div>
                                         <div class="">
                                             <div class="row final two justify-content-center text-center">
@@ -3561,9 +3566,10 @@
                                     <div class="col-md-12">
                                         <div class="form-top">
                                             <span>رقم الطلب :</span>
-                                            <span class="id">{{@$public->id}}</span>
-                                            <div class="dateTime">{{@$public->created_at}}</div>
-                                            <!-- <div class="dateTime small">11/01/2022 - 03:00PM</div> -->
+                                            <span class="id">406</span>
+                                            <!-- <span class="id">{{@$public->id}}</span> -->
+                                            <!-- <div class="dateTime">{{@$public->created_at}}</div> -->
+                                            <div class="dateTime">11/01/2022 - 03:00PM</div>
                                         </div>
                                         <div class="">
                                             <div class="row final two justify-content-center text-center">
@@ -3815,9 +3821,10 @@
                                     <div class="col-md-12">
                                         <div class="form-top">
                                             <span>رقم الطلب :</span>
-                                            <span class="id">{{@$public->id}}</span>
-                                            <div class="dateTime">{{@$public->created_at}}</div>
-                                            <!-- <div class="dateTime small">11/01/2022 - 03:00PM</div> -->
+                                            <span class="id">406</span>
+                                            <!-- <span class="id">{{@$public->id}}</span> -->
+                                            <!-- <div class="dateTime">{{@$public->created_at}}</div> -->
+                                            <div class="dateTime">11/01/2022 - 03:00PM</div>
                                         </div>
                                         <div class="">
                                             <div class="row final two justify-content-center text-center">
@@ -6553,9 +6560,10 @@
                                     <div class="col-md-12">
                                         <div class="form-top">
                                             <span>رقم الطلب :</span>
-                                            <span class="id">{{@$public->id}}</span>
-                                            <div class="dateTime">{{@$public->created_at}}</div>
-                                            <!-- <div class="dateTime small">11/01/2022 - 03:00PM</div> -->
+                                            <span class="id">406</span>
+                                            <!-- <span class="id">{{@$public->id}}</span> -->
+                                            <!-- <div class="dateTime">{{@$public->created_at}}</div> -->
+                                            <div class="dateTime ">11/01/2022 - 03:00PM</div>
                                         </div>
                                         <div class="">
                                             <div class="row final two justify-content-center text-center">
@@ -6603,6 +6611,9 @@
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
                                                 <label class="form-label dot">اختيار اللون</label>
                                                 <div class="color-circle-main">
+                                                <div class="blue-text">
+                                                            <span> أبيض</span>
+                                                        </div>
                                                     <div class="color-circle blue-border">
                                                     </div>
                                                     <div class="color-circle  gray-bg">
@@ -6922,9 +6933,10 @@
                                     <div class="col-md-12">
                                         <div class="form-top">
                                             <span>رقم الطلب :</span>
-                                            <span class="id">{{@$public->id}}</span>
-                                            <div class="dateTime">{{@$public->created_at}}</div>
-                                            <!-- <div class="dateTime small">11/01/2022 - 03:00PM</div> -->
+                                            <span class="id">406</span>
+                                            <!-- <span class="id">{{@$public->id}}</span> -->
+                                            <!-- <div class="dateTime">{{@$public->created_at}}</div> -->
+                                            <div class="dateTime ">11/01/2022 - 03:00PM</div>
                                         </div>
                                         <div class="">
                                             <div class="row final two justify-content-center text-center">
@@ -6972,6 +6984,9 @@
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
                                                 <label class="form-label dot">اختيار اللون</label>
                                                 <div class="color-circle-main">
+                                                <div class="blue-text">
+                                                            <span> أبيض</span>
+                                                        </div>
                                                     <div class="color-circle blue-border">
                                                     </div>
                                                     <div class="color-circle  gray-bg">
@@ -7227,9 +7242,10 @@
                                     <div class="col-md-12">
                                         <div class="form-top">
                                             <span>رقم الطلب :</span>
-                                            <span class="id">{{@$public->id}}</span>
-                                            <div class="dateTime">{{@$public->created_at}}</div>
-                                            <!-- <div class="dateTime small">11/01/2022 - 03:00PM</div> -->
+                                            <span class="id">406</span>
+                                            <!-- <span class="id">{{@$public->id}}</span> -->
+                                            <!-- <div class="dateTime">{{@$public->created_at}}</div> -->
+                                            <div class="dateTime ">11/01/2022 - 03:00PM</div>
                                         </div>
                                         <div class="">
                                             <div class="row final two justify-content-center text-center">
@@ -7277,6 +7293,9 @@
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
                                                 <label class="form-label dot">اختيار اللون</label>
                                                 <div class="color-circle-main">
+                                                <div class="blue-text">
+                                                            <span> أبيض</span>
+                                                        </div>
                                                     <div class="color-circle blue-border">
                                                     </div>
                                                     <div class="color-circle  gray-bg">
@@ -7509,9 +7528,10 @@
                                     <div class="col-md-12">
                                         <div class="form-top">
                                             <span>رقم الطلب :</span>
-                                            <span class="id">{{@$public->id}}</span>
-                                            <div class="dateTime">{{@$public->created_at}}</div>
-                                            <!-- <div class="dateTime small">11/01/2022 - 03:00PM</div> -->
+                                            <span class="id">406</span>
+                                            <!-- <span class="id">{{@$public->id}}</span> -->
+                                            <!-- <div class="dateTime">{{@$public->created_at}}</div> -->
+                                            <div class="dateTime ">11/01/2022 - 03:00PM</div>
                                         </div>
                                         <div class="">
                                             <div class="row final two justify-content-center text-center">
@@ -7882,9 +7902,10 @@
                                     <div class="col-md-12">
                                         <div class="form-top">
                                             <span>رقم الطلب :</span>
-                                            <span class="id">{{@$public->id}}</span>
-                                            <div class="dateTime">{{@$public->created_at}}</div>
-                                            <!-- <div class="dateTime small">11/01/2022 - 03:00PM</div> -->
+                                            <span class="id">406</span>
+                                            <!-- <span class="id">{{@$public->id}}</span> -->
+                                            <!-- <div class="dateTime">{{@$public->created_at}}</div> -->
+                                            <div class="dateTime ">11/01/2022 - 03:00PM</div>
                                         </div>
                                         <div class="">
                                             <div class="row final two justify-content-center text-center">
@@ -7932,6 +7953,9 @@
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
                                                 <label class="form-label mt-4">اختيار اللون</label>
                                                 <div class="color-circle-main">
+                                                <div class="blue-text">
+                                                            <span> أبيض</span>
+                                                        </div>
                                                     <div class="color-circle blue-border">
                                                     </div>
                                                     <div class="color-circle  gray-bg">
@@ -8118,9 +8142,10 @@
                                     <div class="col-md-12">
                                         <div class="form-top">
                                             <span>رقم الطلب :</span>
-                                            <span class="id">{{@$public->id}}</span>
-                                            <div class="dateTime">{{@$public->created_at}}</div>
-                                            <!-- <div class="dateTime small">11/01/2022 - 03:00PM</div> -->
+                                            <span class="id">406</span>
+                                            <!-- <span class="id">{{@$public->id}}</span>
+                                            <div class="dateTime">{{@$public->created_at}}</div> -->
+                                            <div class="dateTime ">11/01/2022 - 03:00PM</div>
                                         </div>
                                         <div class="">
                                             <div class="row final two justify-content-center text-center">
@@ -8168,6 +8193,9 @@
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
                                                 <label class="form-label dot">اختيار اللون</label>
                                                 <div class="color-circle-main">
+                                                <div class="blue-text">
+                                                            <span> أبيض</span>
+                                                        </div>
                                                     <div class="color-circle blue-border">
                                                     </div>
                                                     <div class="color-circle  gray-bg">
@@ -8403,9 +8431,10 @@
                                     <div class="col-md-12">
                                         <div class="form-top">
                                             <span>رقم الطلب :</span>
-                                            <span class="id">{{@$public->id}}</span>
-                                            <div class="dateTime">{{@$public->created_at}}</div>
-                                            <!-- <div class="dateTime small">11/01/2022 - 03:00PM</div> -->
+                                            <span class="id">406</span>
+                                            <!-- <span class="id">{{@$public->id}}</span>
+                                            <div class="dateTime">{{@$public->created_at}}</div> -->
+                                            <div class="dateTime ">11/01/2022 - 03:00PM</div>
                                         </div>
                                         <div class="">
                                             <div class="row final two justify-content-center text-center">
@@ -8453,6 +8482,9 @@
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
                                                 <label class="form-label dot">اختيار اللون</label>
                                                 <div class="color-circle-main">
+                                                <div class="blue-text">
+                                                            <span> أبيض</span>
+                                                        </div>
                                                     <div class="color-circle blue-border">
                                                     </div>
                                                     <div class="color-circle  gray-bg">
