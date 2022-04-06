@@ -4,6 +4,7 @@ namespace App\Http\Livewire;
 use App\Models\Chat;
 use App\Models\User;
 use Livewire\Component;
+use Illuminate\Http\Request;
 use Livewire\WithFileUploads;
 
 class Chats extends Component
@@ -13,27 +14,37 @@ class Chats extends Component
 	public $allmessages;
 	public $sender;
     public $user_id;
+    public $request_id;
+    public $request_type;
     public $photo;
     public function render()
     {
     	$users=User::all();
+        $request_id = $this->request_id;
+        $request_type = $this->request_type;
     	$sender=$this->sender;
+        $photo=$this->photo;
     	$this->allmessages;
-        
-        return view('livewire.chats',compact('users','sender'));
+
+        return view('livewire.chats',compact('users','sender','request_id','request_type'));
     }
     public function mountdata()
     {
+       
        $this->getUser();
         if(isset($this->sender->id))
         {
-              $this->allmessages=Chat::where('user_id',auth()->id())->where('reciever_id',$this->sender->id)->orWhere('user_id',$this->sender->id)->where('reciever_id',auth()->id())->orderBy('id','desc')->get();
-
-               $not_seen= Chat::where('user_id',$this->sender->id)->where('reciever_id',auth()->id());
-               $not_seen->update(['is_seen'=> true]);
+            $this->allmessages=Chat::where('user_id',auth()->id())->where('reciever_id',$this->sender->id)->where('request_id',$this->request_id)->where('request_type',$this->request_type)->orWhere('user_id',$this->sender->id)->where('reciever_id',auth()->id())->where('request_id',$this->request_id)->where('request_type',$this->request_type)->orderBy('id','desc')->get();
+            $not_seen= Chat::where('user_id',$this->sender->id)->where('reciever_id',auth()->id())->where('request_id',$this->request_id)->where('request_type',$this->request_type);
+            $not_seen->update(['is_seen'=> true]);
         }
 
     }
+    // public function mount($request_id,$request_type)
+    // {
+    //     $this->request_type = $request_type;
+    //     $this->request_id = $request_id;      
+    // }
     public function resetForm()
     {
     	$this->message='';
@@ -41,10 +52,7 @@ class Chats extends Component
 
     public function SendMessage()
     {
-        // $this->validate([
-        //     'photo' => 'image|max:1024', // 1MB Max
-        // ]);
- 
+        
     	$data=new Chat;
     	$msg = 'chatImg=&msg='.$this->message;
         $data->message=$msg;
@@ -61,8 +69,10 @@ class Chats extends Component
             $photoMsg = 'chatImg='.$name.'&msg=';
             $data->message = $photoMsg;
             $data->photo = $name;
+
         }
-      
+        $data->request_id=$this->request_id;
+        $data->request_type=$this->request_type;
         $data->save();
     	$this->resetForm();
 
@@ -73,20 +83,22 @@ class Chats extends Component
         
         if(auth()->user()->role=='admin'){
             $userId=$this->user_id;
+            $requestId=$this->request_id;
+            $requestType=$this->request_type;
             $user=User::find($userId);
             $this->sender=$user;
-            $this->allmessages=Chat::where('user_id',auth()->id())->where('reciever_id',$userId)->orWhere('user_id',$userId)->where('reciever_id',auth()->id())->orderBy('id','desc')->get();
+            $this->allmessages=Chat::where('user_id',auth()->id())->where('reciever_id',$userId)->where('request_id',$requestId)->where('request_type',$requestType)->orWhere('user_id',$userId)->where('reciever_id',auth()->id())->where('request_id',$requestId)->where('request_type',$requestType)->orderBy('id','desc')->get();
         }else{
+            $requestId=$this->request_id;
+            $requestType=$this->request_type;
+  
             $user=User::find($userId);
             $this->sender=$user;
-            $this->allmessages=Chat::where('user_id',auth()->id())->where('reciever_id',$userId)->orWhere('user_id',$userId)->where('reciever_id',auth()->id())->orderBy('id','desc')->get();
+            $this->allmessages=Chat::where('user_id',auth()->id())->where('reciever_id',$userId)->where('request_id',$requestId)->where('request_type',$requestType)->orWhere('user_id',$userId)->where('reciever_id',auth()->id())->where('request_id',$requestId)->where('request_type',$requestType)->orderBy('id','desc')->get();
+      
         }
-       
      
     }
-    public function savePhoto()
-    {
-       
-    }
+ 
 
 }

@@ -49,7 +49,7 @@ class PublicServiceController extends Controller
         } else {
             $path = null;
         }
-        PublicService::create([
+        $pub = PublicService::create([
             'status' => 1,
             'user_id' => Auth::id(),
             'full_name' => $request->name,
@@ -63,7 +63,7 @@ class PublicServiceController extends Controller
             'print_img' => $path,
         ]);
         $users = User::where('role','admin')->first();
-        $users->notify(new PublicNotification($users));
+        $users->notify(new PublicNotification($users,$pub));
         return redirect()->route('home')->with('error_code', 6);
     }
 
