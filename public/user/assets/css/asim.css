@@ -315,8 +315,8 @@
     
     .blur-bg {
         margin: auto;
-        background-color: rgb(255 255 255 / 0%);
-        backdrop-filter: blur(8px);
+        /* background-color: rgb(255 255 255 / 0%);
+        backdrop-filter: blur(8px); */
         width: 100%;
         height: 662px;
         position: absolute;
@@ -325,7 +325,9 @@
         top: 325px;
         z-index: 1;
     }
-    
+    .blur.blur-star-rating{
+        padding: 0px 25px;
+    }
     .blur-star-inner {
         display: flex;
         width: 500px;

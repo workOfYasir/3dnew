@@ -546,6 +546,12 @@ $(document).ready(function () {
         $('#myTabContent .tab-pane:last-child').addClass('active show');
     })
 
+    $(".send-btn").click(function () {
+        $(".blur-star").removeClass('d-block');
+        $(".blur-star").addClass('d-none');
+        $(".blur-star-rating").removeClass('blur');
+    })
+
 });
 $(".userreq-blur-bg").click(function () {
     $(".userreq-blur-bg").css('display', 'none');
