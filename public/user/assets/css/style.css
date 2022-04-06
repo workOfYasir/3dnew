@@ -62,7 +62,7 @@ nav .nav-link {
     padding-left: 0px !important;
     border-bottom: 2px solid transparent;
 }
-li.nav-item {
+.navbar li.nav-item {
     padding-left: 0.7rem;
     padding-right: 0.7rem;
 }

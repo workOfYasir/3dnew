@@ -29,6 +29,26 @@ $(document).ready(function () {
             $(this).addClass('field-red');
         }
     })
+
+    function loginModal2LoginValidateEmail(email) {
+        var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+        if ($('#userloginModal2 .email').val().length === 0) {
+            $('#userloginModal2 .email').removeClass('field-blue');
+            $('#userloginModal2 .email').removeClass('field-red');
+            $('#userloginModal2 .btn-form').addClass('disabled');
+        }
+        else if (!emailReg.test(email)) {
+            $('#userloginModal2 .email').removeClass('field-blue');
+            $('#userloginModal2 .email').addClass('field-red');
+            $('#userloginModal2 .btn-form').addClass('disabled');
+        } else {
+            $('#userloginModal2 .email').addClass('field-blue');
+            $('#userloginModal2 .email').removeClass('field-red');
+            $('#userloginModal2 .btn-form').removeClass('disabled');
+            // $('#publicServiesModal .carousel-item.one .btn-form').removeClass('disabled');
+        }
+    }
+
     var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
 
     // Email Validation Methods
@@ -158,6 +178,22 @@ $(document).ready(function () {
             $('.email-error').addClass('d-none');
             $('#healthServiesModal .carousel-item.one .email').addClass('field-blue');
             $('#healthServiesModal .carousel-item.one .email').removeClass('field-red');
+            // $('#publicServiesModal .carousel-item.one .btn-form').removeClass('disabled');
+        }
+    }
+
+    function userProfileValidateEmail(email) {
+        var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+        if ($('#memberModal .email').val().length === 0) {
+            $('#memberModal .email').removeClass('field-blue');
+            $('#memberModal .email').removeClass('field-red');
+        }
+        else if (!emailReg.test(email)) {
+            $('#memberModal .email').removeClass('field-blue');
+            $('#memberModal .email').addClass('field-red');
+        } else {
+            $('#memberModal .email').addClass('field-blue');
+            $('#memberModal .email').removeClass('field-red');
             // $('#publicServiesModal .carousel-item.one .btn-form').removeClass('disabled');
         }
     }
@@ -299,36 +335,11 @@ $(document).ready(function () {
     })
     // /* Designer Login Validation
 
-    // $('#userloginModal2 .form-control').each(function() {
-    //     $(this).keyup(function() {
-    //         if ($(this).val().length != 0) {
-    //             $('#userloginModal2 .btn-form').removeClass('disabled');
-    //         } else {
-    //             $('#userloginModal2 .btn-form').addClass('disabled');
-    //         }
-    //     })
-    // })
-
-    // $('#userloginModal2 .email').keyup(function() {
-    //     var email = $(this).val();
-    //     if ($('#userloginModal2 .pass').val().length > 0) {
-    //         $('#userloginModal2 .btn-form').removeClass('disabled');
-    //     } else {
-    //         $('#userloginModal2 .btn-form').addClass('disabled');
-    //     }
-    //     loginModal2LoginValidateEmail(email)
-    // })
-
-    // $('#designerloginModal .email').keyup(function() {
-    //     var email = $(this).val();
-    //     if ($('#designerloginModal .pass').val().length > 0) {
-    //         $('#designerloginModal .btn-form').removeClass('disabled');
-    //     } else {
-    //         $('#designerloginModal .btn-form').addClass('disabled');
-    //     }
-    //     desLoginValidateEmail(email)
-    // })
-
+    $('#memberModal .email').keyup(function () {
+        var email = $(this).val();
+        userProfileValidateEmail(email);
+    })
+    
     $('#healthServiesModal .email').keyup(function () {
         var email = $(this).val();
         if ($('#healthServiesModal .carousel-item.one .name').val().length > 1 && $(this).hasClass('field-blue') &&

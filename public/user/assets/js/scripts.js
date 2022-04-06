@@ -296,7 +296,7 @@ $(function () {
 
     // Edit Profile
     $('.edit-profile').click(function () {
-        $('#memberModal .form-control').removeClass('disabled');
+        $('#memberModal .form-control, #memberModal .form-select').removeClass('disabled');
         $('#memberModal .form-action').find('.disabled').removeClass('disabled');
         $(this).addClass('disabled').css('transition', '.6s')
     })
