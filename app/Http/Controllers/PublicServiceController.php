@@ -40,16 +40,15 @@ class PublicServiceController extends Controller
      */
     public function store(Request $request)
     {
-        // dd($request->all());
-
-        // dd($request->all());
+      dd($request->all());
         if (isset($request->myfile) && !empty($request->myfile)) {
-            $images = $request->myfile->move(storage_path('app/upload/'), $request->myfile);
-            $images = Storage::disk('public')->put('upload/', $request->myfile);
+            $myfile = $request->myfile->getClientOriginalName();
+            $images = $request->myfile->move(public_path('upload/'), $request->myfile);
+            $path = 'upload/'.$myfile;
+            // $images = Storage::disk('public')->put('upload/', $request->myfile);
         } else {
-            $images = null;
+            $path = null;
         }
-
         PublicService::create([
             'status' => 1,
             'user_id' => Auth::id(),
@@ -61,7 +60,7 @@ class PublicServiceController extends Controller
             'print_type' => $request->pr_type,
             'print_color' => $request->pr_clr,
             'print_resolution' => $request->pr_res,
-            'print_img' => $images,
+            'print_img' => $path,
         ]);
         $users = User::where('role','admin')->first();
         $users->notify(new PublicNotification($users));
@@ -121,11 +120,14 @@ class PublicServiceController extends Controller
             'print_img' => 'required',
         ]);
         if (isset($request->print_img) && !empty($request->print_img)) {
-            $image = $request->print_img->move(storage_path('app/upload/'), $request->print_img);
-            $image = Storage::disk('public')->put('upload/', $request->print_img);
+            $print_img =  $request->print_img->getClientOriginalName();
+            $image = $request->print_img->move(public_path('upload/'), $request->print_img);
+            $path1 = 'upload/'.$print_img;
+            // $image = Storage::disk('public')->put('upload/', $request->print_img);
         } else {
-            $print_img = null;
+            $path1 = null;
         }
+        
         PublicService::find($id)->update([
             'full_name' => $request->full_name,
             'phone_num' => $request->phone_num,
@@ -135,7 +137,7 @@ class PublicServiceController extends Controller
             'print_type' => $request->print_type,
             'print_color' => $request->print_color,
             'print_resolution' => $request->print_resolution,
-            'print_img' => $image,
+            'print_img' => $path1,
         ]);
         return redirect()->route('public.index');
     }

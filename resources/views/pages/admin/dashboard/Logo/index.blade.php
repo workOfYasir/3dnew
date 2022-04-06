@@ -36,28 +36,28 @@
                                 @foreach ($logos as $logo)
                                 <tr>
 
-                                    <td><img src="{{ asset(  $logo->logo1)
+                                    <td><img src="{{ asset( $logo->logo1)
                                         }}" style="height:60px;width:60px;">
                                     </td>
-                                    <td><img src="{{ asset(  $logo->logo2)
+                                    <td><img src="{{ asset( $logo->logo2)
                                         }}" style="height:60px;width:60px;">
                                     </td>
-                                    <td><img src="{{ asset(  $logo->logo3)
+                                    <td><img src="{{ asset( $logo->logo3)
                                         }}" style="height:60px;width:60px;">
                                     </td>
-                                    <td><img src="{{ asset(  $logo->logo4)
+                                    <td><img src="{{ asset( $logo->logo4)
                                         }}" style="height:60px;width:60px;">
                                     </td>
-                                    <td><img src="{{ asset(  $logo->logo5)
+                                    <td><img src="{{ asset( $logo->logo5)
                                         }}" style="height:60px;width:60px;">
                                     </td>
-                                    <td><img src="{{ asset(  $logo->logo6)
+                                    <td><img src="{{ asset( $logo->logo6)
                                         }}" style="height:60px;width:60px;">
                                     </td>
-                                    <td><img src="{{ asset(  $logo->logo7)
+                                    <td><img src="{{ asset( $logo->logo7)
                                         }}" style="height:60px;width:60px;">
                                     </td>
-                                    <td><img src="{{ asset(  $logo->logo8)
+                                    <td><img src="{{ asset( $logo->logo8)
                                         }}" style="height:60px;width:60px;">
                                     </td>
 

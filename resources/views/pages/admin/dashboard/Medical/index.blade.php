@@ -89,11 +89,7 @@
     </div>
 
 </div>
-<div id="app">
-<div class="container">
-    <chat-component :user="{{ auth()->user() }}"></chat-component>
-</div>
-</div>
+
 @endsection
 @push('scripts')
 <script src="{{ asset('js/app.js') }}"></script>
