@@ -7305,7 +7305,7 @@
 
                                         <div class="row  p-xs-0  conditional-blur">
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
-                                                <label class="form-label dot">اختيار اللون</label>
+                                                <label class="form-label">اختيار اللون</label>
                                                 <div class="color-circle-main">
                                                 <div class="blue-text">
                                                             <span> أبيض</span>
@@ -7360,7 +7360,7 @@
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="designer-text mt-4">
-                                                    <label class="form-label dot">الملاحظات</label>
+                                                    <label class="form-label">الملاحظات</label>
                                                     <textarea class="form-control" id="exampleFormControlTextarea1"
                                                         rows="4" placeholder="   الملاحظات .."></textarea>
                                                 </div>
@@ -7370,8 +7370,10 @@
                                         <div class="row">
                                             <h1 class="title text-center mt-5 no-border conditional-blur zhd-quote">
                                                 معلومات المصمم</h1>
-                                            <div class="col-md-12   userreq-blur">
+                                        
+                                            <div class="col-md-12  userreq-blur">
                                                 <!-- blur -->
+
                                                 <div class="blur-star blur-bg blur-bg--a d-block" id="star-blur-scroll">
                                                     <div class="blur-star-inner">
                                                         <div class="review-text">
@@ -7396,7 +7398,7 @@
                                                 </div>
                                                 <!-- blur  -->
                                                 <div class="row justify-content-center">
-                                                    <div class="col-md-12">
+                                                    <div class="col-md-12 blur blur-star-rating">
 
                                                         {{-- user- req --}}
                                                         <div class="wrapper al-center jst-btw mb-5">
@@ -7453,7 +7455,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="userreqFormBtn-box">
-                                                        <button class="btn btn-form paying-off-btn">
+                                                        <button class="btn btn-form send-btn">
                                                             ارسال
                                                         </button>
                                                         <p class="userreqFormBtn-box__text">هل انت متأكد من تقديم بلاغ ؟
