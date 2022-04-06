@@ -2814,7 +2814,7 @@
                                                 قيد التنفيذ</h1>
                                             <div class="col-md-12">
                                                 <div class="row justify-content-center">
-                                                    <div class="col-md-12">
+                                                    <div class="col-md-12 userreq-blur">
                                                         <div class="blur-star blur-bg" id="star-blur-scroll">
                                                             <div class="blur-star-inner">
                                                                 <div class="review-text">
@@ -5677,7 +5677,10 @@
 
                                         <button class="ahs-profile-plus-btn plus-bton circle-plus-icon" data-bs-toggle="modal"
                                             data-bs-target="#productaddModal">
-                                            <i class="fa-solid fa-circle-plus"></i>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle-fill svg-plus-icon" viewBox="0 0 16 16">
+                                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+                                              </svg>
+                                            <!-- <i class="fa-solid fa-circle-plus"></i> -->
                                             <!-- <i class="fa fa-plus-circle fa-lg ahs-profile-plus"></i> -->
                                             <span class="hide-mobile">إضافة منتج</span>
                                         </button>
@@ -5934,7 +5937,9 @@
 
                                         </div>
                                         <button class="ahs-profile-plus-btn disabled circle-plus-icon">
-                                            <i class="fa-solid fa-circle-plus"></i>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle-fill svg-plus-icon" viewBox="0 0 16 16">
+                                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+                                              </svg>
                                             <!-- <i class="fa fa-plus-circle fa-lg ahs-profile-plus"></i> -->
                                             <span>
                                             إضافة منتج
@@ -6609,7 +6614,7 @@
 
                                         <div class="row  p-xs-0  conditional-blur">
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
-                                                <label class="form-label dot">اختيار اللون</label>
+                                                <label class="form-label">اختيار اللون</label>
                                                 <div class="color-circle-main">
                                                 <div class="blue-text">
                                                             <span> أبيض</span>
@@ -6663,7 +6668,7 @@
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="designer-text mt-4">
-                                                    <label class="form-label dot">الملاحظات</label>
+                                                    <label class="form-label">الملاحظات</label>
                                                     <textarea class="form-control" id="exampleFormControlTextarea1"
                                                         rows="4" placeholder="   الملاحظات .."></textarea>
                                                 </div>
@@ -7132,9 +7137,7 @@
                                                         </div>
                                                         <div class="almuntjat-form-error almuntjat-form-error-2">
                                                             <img src="{{ asset('/user/assets/images/warning.png')}}"
-                                                                alt="" class="almuntjat-form-error__img"> بعد إضافة
-                                                            المنتج سيذهب الى الإدارة للمراجعة للقبول أو الرفض
-                                                        </div>
+                                                                alt="" class="almuntjat-form-error__img">في حال حدم التزام المصمم بالخدمة المقدمة لك، الرجاء تقديم بلاغ .. </div>
 
                                                         <div class="wrapper jst-center userReq-btn-box userReq-btn-box--a bill-click-hide">
                                                             <button

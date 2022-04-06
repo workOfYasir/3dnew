@@ -524,6 +524,27 @@
     height: 30px;
     font-size: 14px;
 }
+
+.blur .userReq-btn-box__btn {
+    z-index: -1;
+}
+.blur input {
+    cursor: pointer !important;
+}
+.svg-plus-icon{
+    color: #1EA9D4;
+    width: 40px;
+    height: 40px;
+    margin-left: 7px;
+    border-radius: 50%;
+    box-shadow: 0 12px 12px rgb(0 0 0 / 16%);
+    opacity: 1;
+    font-size: 12px;
+}
+.disabled svg{
+    color: #E3E9EC;
+    background: #fff;
+}
     /* styling end here */
 
 

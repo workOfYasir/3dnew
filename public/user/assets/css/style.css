@@ -1481,7 +1481,7 @@ textarea {
 
 .blur {
     filter: blur(8px);
-    padding: 0px 20px;
+    padding: 0px 25px;
 }
 
 #publicPaymentModal .payment {

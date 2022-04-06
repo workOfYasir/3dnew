@@ -300,6 +300,7 @@ mujtmah-almusmamen section start
 .user-req-p {
     font-size: 10px;
     color: #58595B;
+    text-align: center;
 }
 
 .userReq-btn-box {
@@ -691,6 +692,7 @@ almuntjat section start
 
 .userreq-blur {
     position: relative;
+    padding: 0px 25px;
 }
 
 .userreq-blur-bg {
