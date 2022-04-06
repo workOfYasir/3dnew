@@ -1,4 +1,4 @@
-<!-- <div class="modal fade page register" id="memberModal" tabindex="-1" aria-labelledby="memberModalLabel" aria-hidden="true">
+<div class="modal fade page register" id="memberModal" tabindex="-1" aria-labelledby="memberModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-fullscreen">
             <div class="modal-content">
                 <div class="container">
@@ -69,9 +69,9 @@
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
 <!-- designer pro update  start-->
-<div class="modal fade page register" id="memberModal" tabindex="-1" aria-labelledby="memberModalLabel" aria-hidden="true">
+<!-- <div class="modal fade page register" id="memberModal" tabindex="-1" aria-labelledby="memberModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-fullscreen">
         <div class="modal-content">
             <div class="container">
@@ -168,6 +168,6 @@
             </div>
         </div>
     </div>
-</div>
-</div>
+</div> -->
+
 <!-- designer pro update end -->
