@@ -58,9 +58,13 @@ p {
 
 nav .nav-link {
     color: #1EA9D4 !important;
-    padding-right: 0.7rem !important;
-    padding-left: 0.7rem !important;
+    padding-right: 0px !important;
+    padding-left: 0px !important;
     border-bottom: 2px solid transparent;
+}
+li.nav-item {
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
 }
 
 nav .nav-item.active a {
