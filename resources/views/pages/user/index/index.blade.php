@@ -1945,7 +1945,7 @@
                             </div>
 
                             <div class="modal-body">
-                                <div id="carouselIndicators" class="carousel slide" data-bs-ride="carousel">
+                                <div>
 
                                     <div class="carousel-inner">
 
@@ -6803,7 +6803,7 @@
                             </div>
 
                             <div class="modal-body">
-                                <div id="carouselIndicators" class="carousel slide" data-bs-ride="carousel">
+                                <div>
 
                                     <div class="carousel-inner">
 
@@ -8618,7 +8618,7 @@
                             </div>
 
                             <div class="modal-body">
-                                <div id="carouselIndicators" class="carousel slide" data-bs-ride="carousel">
+                                <div>
 
                                     <div class="carousel-inner">
 
