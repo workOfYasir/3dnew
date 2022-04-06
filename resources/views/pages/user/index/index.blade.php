@@ -1733,7 +1733,7 @@
 
                                         <div class="form form-clean">
                                             <div class="row zhd-form-clean">
-                                                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 mt-4">
+                                                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mt-4">
                                                     <label class="form-label dot">اختيار اللون</label>
 
                                                     <div class="color-circle-main">
@@ -1746,7 +1746,7 @@
                                                         <div class="color-circle"></div>
                                                     </div>
                                                 </div>
-                                                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 mt-4">
+                                                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mt-4">
                                                     <label class="form-label dot">الكمية</label>
                                                     <select class="form-select" required name=""
                                                         aria-label="Default select example">
@@ -1754,7 +1754,7 @@
                                                         <option>1</option>
                                                     </select>
                                                 </div>
-                                                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 mt-4">
+                                                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mt-4">
                                                     <label class="form-label dot">المقاسات</label>
                                                     <select class="form-select" required name=""
                                                         aria-label="Default select example">
