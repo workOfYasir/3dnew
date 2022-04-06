@@ -3109,6 +3109,10 @@ input[type=number] {
     background-color: #1F5098 !important;
 }
 
+#financialOperations .request-box::after {
+    display: none;
+}
+
 /* Safari */
 @media screen and (-webkit-min-device-pixel-ratio:0) {
     .mujtmah-heading-box {

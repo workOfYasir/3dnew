@@ -764,6 +764,10 @@ almuntjat section start
     margin-right: 10px;
     transform: rotate(180deg);
 }
+.ahs-stars i{
+    font-size: 30px !important;
+
+}
 
 
 /* ******************************

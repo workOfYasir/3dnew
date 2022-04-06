@@ -20,8 +20,10 @@
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <!-- StyleSheet -->
     <link rel="stylesheet" href="{{ asset('user/assets/css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/chat.css') }}">
     <!-- Responsive Sheet -->
     <link rel="stylesheet" href="{{ asset('user/assets/css/responsive.css') }}">
+    @livewireStyles
     <style>
         #public-order {
             display: block;
@@ -189,6 +191,9 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="row">
+                                            @livewire('chats',['user_id' => $public->user_id,'request_id'=>$public->id,'request_type'=>'App\Models\PublicService'])
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -212,7 +217,7 @@
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script src="{{ asset('user/assets/js/scripts.js') }}"></script>
-
+    @livewireScripts
 
 </body>
 

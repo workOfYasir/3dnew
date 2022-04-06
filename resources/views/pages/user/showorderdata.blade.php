@@ -296,7 +296,7 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    @livewire('chats',['user_id' => $order->user_id])
+                                    @livewire('chats',['user_id' => $order->user_id,'request_id'=>$order->id,'request_type'=>'App\Models\Medical'])
                                 </div>
                             </div>
                             <!-- <div class="modal-footer mt-10">

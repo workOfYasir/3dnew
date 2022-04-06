@@ -76,7 +76,7 @@
                                                     <a href="#" class="terms-link">الشروط والأحكام</a>
                                                 </div>
                                                 <div class="form-action ahs-from-action">
-                                                    <button class="btn btn-form mx-3 with-arrow disabled" type="submit">دخول</button>
+                                                    <button class="btn btn-form mx-3 with-arrow disabled" type="submit">تسجيل</button>
                                                     <p>بيانات التسجيل</p>
                                                 </div>
                                             </form>
@@ -139,7 +139,7 @@
                                                     <a href="#" class="terms-link">الشروط والأحكام</a>
                                                 </div>
                                                 <div class="form-action ahs-from-action">
-                                                    <button class="btn btn-form mx-3 with-arrow disabled" type="submit">دخول</button>
+                                                    <button class="btn btn-form mx-3 with-arrow disabled" type="submit">تسجيل</button>
                                                     <p>بيانات التسجيل</p>
                                                 </div>
                                             </form>
