@@ -1160,6 +1160,11 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
+                                    <a class="nav-link" href="#about-us">
+                                    ماهي تقنية الـ 3D
+                                    </a>
+                                </li>
+                                <li class="nav-item">
                                     <a class="nav-link" href="#services-section">الخدمات</a>
                                 </li>
                                 <li class="nav-item">
@@ -1777,7 +1782,7 @@
                                                     <select class="form-select gender" required name="gender"
                                                         aria-label="Default select example">
                                                         <option></option>
-                                                        <option> التقنية الأولي</option>
+                                                        <option>+ 35 ريال التقنية الأولي</option>
                                                     </select>
                                                 </div>
                                                 <div class="col-md-2">
@@ -1923,7 +1928,7 @@
                                     aria-label="Close"></button>
                                 <div>
                                     <span class="outline dot">أكثر 20 خدمة مختلفة</span>
-                                    <h1 class="modal-title right"><span class="btm-line"><span
+                                    <h1 class="modal-title right centr-main-title"><span class="btm-line"><span
                                                 class="inner-line"></span>الخدمات العامة
                                         </span></h1>
                                 </div>
@@ -2146,7 +2151,7 @@
                                         <div class="row p-4 conditional-blur justify-content-between">
 
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
-                                                <label class="form-label dot">اختيار اللون</label>
+                                                <label class="form-label">اختيار اللون</label>
                                                 <div class="color-circle-main">
                                                     <div class="blue-text">
                                                         <span> أبيض</span>
@@ -2407,7 +2412,7 @@
                                         <div class="row  p-xs-0  conditional-blur">
 
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
-                                                <label class="form-label dot">اختيار اللون</label>
+                                                <label class="form-label">اختيار اللون</label>
                                                 <div class="color-circle-main">
                                                     <div class="blue-text">
                                                         <span> أبيض</span>
@@ -2707,7 +2712,7 @@
                                         <div class="row  p-xs-0  conditional-blur">
 
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
-                                                <label class="form-label dot">اختيار اللون</label>
+                                                <label class="form-label">اختيار اللون</label>
                                                 <div class="color-circle-main">
 
                                                     <div class="blue-text">
@@ -3087,7 +3092,7 @@
                                         <div class="row  p-xs-0  conditional-blur">
 
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
-                                                <label class="form-label dot">اختيار اللون</label>
+                                                <label class="form-label">اختيار اللون</label>
                                                 <div class="color-circle-main">
                                                     <div class="blue-text">
                                                         <span> أبيض</span>
@@ -3350,7 +3355,7 @@
                                         <div class="row  p-xs-0  conditional-blur">
 
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
-                                                <label class="form-label dot">اختيار اللون</label>
+                                                <label class="form-label">اختيار اللون</label>
                                                 <div class="color-circle-main">
 
                                                     <div class="blue-text">
@@ -6525,7 +6530,7 @@
                                 </div>
                                 <div class="zhd-center-hdng" style="margin-top: 1%;">
                                     <span class="outline dot">اهلاً وسهلاً بكم</span>
-                                    <h1 class="modal-title right"><span class="btm-line d-flex">طلباتي<span
+                                    <h1 class="modal-title right centr-main-title"><span class="btm-line d-flex">طلباتي<span
                                                 class="inner-line"></span></span>
                                     </h1>
                                 </div>
@@ -6780,7 +6785,7 @@
                                     aria-label="Close"></button>
                                 <div>
                                     <span class="outline dot">أكثر 20 خدمة مختلفة</span>
-                                    <h1 class="modal-title right"><span class="btm-line"><span
+                                    <h1 class="modal-title right centr-main-title"><span class="btm-line"><span
                                                 class="inner-line"></span>الخدمات العامة
                                         </span>
                                     </h1>
@@ -6861,7 +6866,7 @@
                                 </div>
                                 <div class="zhd-center-hdng" style="margin-top: 1%;">
                                     <span class="outline dot">اهلاً وسهلاً بكم</span>
-                                    <h1 class="modal-title right"><span class="btm-line d-flex">طلباتي<span
+                                    <h1 class="modal-title right centr-main-title"><span class="btm-line d-flex">طلباتي<span
                                                 class="inner-line"></span></span>
                                     </h1>
                                 </div>
@@ -7101,8 +7106,9 @@
                                                                     <div class="upload-btn-wrapper designer-upload">
                                                                         <button
                                                                             class="btn btn-upload-designer health"><img
-                                                                                src="{{ asset('/user/assets/icons/upload-img.svg')}}"
-                                                                                alt="upload-img"></button>
+                                                                            src="{{asset('user/assets/icons/download-attachments.png')}}"
+                                                                            alt="upload-img">
+                                                                        <h5>تحميل المرفقات</h5></button>
                                                                         <input type="file" id="health-file" required=""
                                                                             name="myfile">
                                                                     </div>
@@ -7820,7 +7826,7 @@
                                 </div>
                                 <div class="zhd-center-hdng" style="margin-top: 1%;">
                                     <span class="outline dot">اهلاً وسهلاً بكم</span>
-                                    <h1 class="modal-title right"><span class="btm-line d-flex">طلباتي<span
+                                    <h1 class="modal-title right centr-main-title"><span class="btm-line d-flex">طلباتي<span
                                                 class="inner-line"></span></span>
                                     </h1>
                                 </div>
