@@ -2497,6 +2497,9 @@
                                                                 <input type="text" class="form-control"
                                                                     placeholder="كتابة القيمة هنا .." readonly
                                                                     value="{{@$public->print_type}}">
+                                                                    <div class="service-fee-text text-center">
+                                                        <span>شامل رسوم الخدمة + قيمة الضريبة المضافة</span>
+                                                    </div>
                                                             </div>
                                                             <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
                                                                 <label class="form-label">تاريخ البداية</label>
@@ -2509,6 +2512,7 @@
                                                                 <input type="text" class="form-control"
                                                                     placeholder="تحديد التاريخ هنا .. " readonly
                                                                     value="{{@$public->print_resolution}}">
+                                                                    
                                                             </div>
                                                             <div class="prog-outer wrapper al-center">
                                                                 <div class="prog-inner"></div>
@@ -2715,7 +2719,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="row  p-xs-0  conditional-blur">
+                                        <div class="row align-items-end p-xs-0  conditional-blur">
 
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
                                                 <label class="form-label">اختيار اللون</label>
@@ -3097,7 +3101,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="row  p-xs-0  conditional-blur">
+                                        <div class="row align-items-end p-xs-0  conditional-blur">
 
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
                                                 <label class="form-label">اختيار اللون</label>
@@ -3362,7 +3366,7 @@
                                  </div>
                               </div>
                            </div> -->
-                                        <div class="row  p-xs-0  conditional-blur">
+                                        <div class="row align-items-end p-xs-0  conditional-blur">
 
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
                                                 <label class="form-label">اختيار اللون</label>
@@ -3633,7 +3637,7 @@
                                  </div>
                               </div>
                            </div> -->
-                                        <div class="row  p-xs-0  conditional-blur">
+                                        <div class="row align-items-end p-xs-0  conditional-blur">
 
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
                                                 <label class="form-label dot">اختيار اللون</label>
@@ -3892,7 +3896,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="row  p-xs-0  conditional-blur">
+                                        <div class="row align-items-end p-xs-0  conditional-blur">
 
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
                                                 <label class="form-label dot">اختيار اللون</label>
