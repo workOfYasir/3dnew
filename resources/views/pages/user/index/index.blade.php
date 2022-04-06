@@ -2023,7 +2023,8 @@
                         <div class="col-md-12 p-0">
                             <div class="modal-header border-0">
                                 <div class="zhd-center-close">
-                                    <a href="{{route('home')}}" type="button" class="btn-close" aria-label="Close"></a>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
                                 </div>
                                 <div class="zhd-center-hdng" style="margin-top: 1%;">
                                     <span class="outline dot">اهلاً وسهلاً بكم</span>
@@ -2149,7 +2150,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="row p-4 conditional-blur justify-content-between">
+                                        <div class="row align-items-end py-4 conditional-blur justify-content-between">
 
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
                                                 <label class="form-label">اختيار اللون</label>
@@ -2188,7 +2189,7 @@
                                                     readonly="" value="asimali7056@gmail.com">
                                             </div>
                                         </div>
-                                        <div class="row p-xs-0 conditional-blur justify-content-between">
+                                        <div class="row align-items-end p-xs-0 conditional-blur justify-content-between">
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                 <label class="form-label">شكل الطباعة</label>
                                                 <input type="text" class="form-control" placeholder=".. التخصص هنا"
@@ -2290,7 +2291,8 @@
                         <div class="col-md-12 p-0">
                             <div class="modal-header border-0">
                                 <div class="zhd-center-close">
-                                    <a href="{{route('home')}}" type="button" class="btn-close" aria-label="Close"></a>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
                                 </div>
                                 <div class="zhd-center-hdng" style="margin-top: 1%;">
                                     <span class="outline dot">اهلاً وسهلاً بكم</span>
@@ -2411,7 +2413,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="row  p-xs-0  conditional-blur">
+                                        <div class="row align-items-end p-xs-0  conditional-blur">
 
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
                                                 <label class="form-label">اختيار اللون</label>
@@ -2449,14 +2451,14 @@
                                                 <input type="text" class="form-control" placeholder=".. الايميل هنا"
                                                     readonly="" value="asimali7056@gmail.com">
                                             </div>
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
+                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-5">
                                                 <label class="form-label">شكل الطباعة</label>
                                                 <input type="text" class="form-control" placeholder=".. التخصص هنا"
                                                     readonly="" value="رقم الهاتف هنا">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div
-                                                class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
+                                                class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-5 quantity-m-50">
                                                 <label class="form-label">تقنية الطباعة</label>
                                                 <input type="text" class="form-control" placeholder=".. الجنس هنا"
                                                     readonly="" value="male">
@@ -2590,7 +2592,8 @@
                         <div class="col-md-12 p-0">
                             <div class="modal-header border-0">
                                 <div class="zhd-center-close">
-                                    <a href="{{route('home')}}" type="button" class="btn-close" aria-label="Close"></a>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
                                 </div>
                                 <div class="zhd-center-hdng" style="margin-top: 1%;">
                                     <span class="outline dot">اهلاً وسهلاً بكم</span>
@@ -2968,7 +2971,8 @@
                         <div class="col-md-12 p-0">
                             <div class="modal-header border-0">
                                 <div class="zhd-center-close">
-                                    <a href="{{route('home')}}" type="button" class="btn-close" aria-label="Close"></a>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
                                 </div>
                                 <div class="zhd-center-hdng" style="margin-top: 1%;">
                                     <span class="outline dot">اهلاً وسهلاً بكم</span>
@@ -3235,7 +3239,8 @@
                         <div class="col-md-12 p-0">
                             <div class="modal-header border-0">
                                 <div class="zhd-center-close">
-                                    <a href="{{route('home')}}" type="button" class="btn-close" aria-label="Close"></a>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
                                 </div>
                                 <div class="zhd-center-hdng" style="margin-top: 1%;">
                                     <span class="outline dot">اهلاً وسهلاً بكم</span>
@@ -3505,7 +3510,8 @@
                         <div class="col-md-12 p-0">
                             <div class="modal-header border-0">
                                 <div class="zhd-center-close">
-                                    <a href="{{route('home')}}" type="button" class="btn-close" aria-label="Close"></a>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
                                 </div>
                                 <div class="zhd-center-hdng" style="margin-top: 1%;">
                                     <span class="outline dot">اهلاً وسهلاً بكم</span>
@@ -3760,7 +3766,8 @@
                         <div class="col-md-12 p-0">
                             <div class="modal-header border-0">
                                 <div class="zhd-center-close">
-                                    <a href="{{route('home')}}" type="button" class="btn-close" aria-label="Close"></a>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
                                 </div>
                                 <div class="zhd-center-hdng" style="margin-top: 1%;">
                                     <span class="outline dot">اهلاً وسهلاً بكم</span>
@@ -6607,7 +6614,7 @@
                                         </div>
                                         <h1 class="title text-center no-border conditional-blur">معلومات الطلب</h1>
 
-                                        <div class="row  p-xs-0  conditional-blur">
+                                        <div class="row  p-xs-0 align-items-end  conditional-blur">
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
                                                 <label class="form-label dot">اختيار اللون</label>
                                                 <div class="color-circle-main">
@@ -6637,7 +6644,7 @@
                                                 <input type="text" class="form-control" placeholder=".. الايميل هنا"
                                                     readonly="" value="asimali7056@gmail.com">
                                             </div>
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
+                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mtop-">
                                                 <label class="form-label">شكل الطباعة</label>
                                                 <input type="text" class="form-control" placeholder=".. التخصص هنا"
                                                     readonly="" value="رقم الهاتف هنا">
