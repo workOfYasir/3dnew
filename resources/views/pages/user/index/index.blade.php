@@ -819,7 +819,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="main dot-txt-main" data-aos="fade-up">
+                        <div class="main dot-txt-main kadam-talab" data-aos="fade-up">
                             <span class="outline dot center">إختيار نوع الخدمة</span>
                             <h1 class="title"><span class="btm-line"><span class="inner-line"></span>
                                     قدم طلبك
@@ -6137,7 +6137,7 @@
                                                 </div>
                                                 <div class="col-auto">
                                                     <div class="product-add-upload">
-                                                        <img src="{{ asset('user/assets/images/cleancard2.png') }}"
+                                                        <img src="{{ asset('user/assets/images/cleancard3.png') }}"
                                                             class="img-fluid" alt="">
                                                         <!-- <p class="">إضافة</p> -->
                                                         <span class="camera-icon upload-cross-red"><i
@@ -6546,35 +6546,6 @@
                                 </div>
                             </div>
                             <div class="modal-body designer-bdy">
-                                <!-- <div class="payment d-none" id="payment">
-                                    <div class="form-check">
-                                        <label class="form-check-label" for="flexRadioDefault1">
-                                            <img src="{{asset('user/assets/images/mada-logo.svg')}}" alt="">
-                                            <p>مدى</p>
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                        </label>
-                                        <label class="form-check-label" for="flexRadioDefault2">
-                                            <img src="{{asset('user/assets/images/masterCard.svg')}}" alt="">
-                                            <p>فيزا وماستر كارد</p>
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <label class="form-check-label" for="flexRadioDefault3">
-                                            <img src="{{asset('user/assets/images/apple-pay.svg')}}" alt="">
-                                            <p>آبل باي</p>
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="reject-reason d-none" id="reject-reason">
-                                    <div class="row mt-1 justify-content-center">
-                                        <div class="col-md-8">
-                                            <label class="form-label dot">سبب الرفض</label>
-                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="  الوصف هنا"></textarea>
-                                        </div>
-                                    </div>
-                                </div> -->
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-top">
@@ -6718,7 +6689,7 @@
                                                 معلومات المصمم</h1>
                                             <div class="col-md-12">
                                                 <div class="row justify-content-center">
-                                                    <div class="col-md-12 conditional-blur design-payment-blur">
+                                                    <div class="col-md-12 conditional-blur design-payment-blur blur">
                                                         {{-- user- req --}}
                                                         <div class="wrapper al-center jst-btw mb-5">
                                                             <div class="profile tag-profile designer-order">
@@ -7957,7 +7928,7 @@
 
                                         <div class="row  p-xs-0  conditional-blur">
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
-                                                <label class="form-label dot">اختيار اللون</label>
+                                                <label class="form-label mt-4">اختيار اللون</label>
                                                 <div class="color-circle-main">
                                                     <div class="color-circle blue-border">
                                                     </div>

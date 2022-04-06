@@ -913,13 +913,18 @@
     }
 
     .request .dot-txt-main-left .outline {
-        left: 0;
+        left: 11px !important;
     }
-
+    .dot.left::before{
+        right: -140px;
+    }
     .request .dot-txt-main .outline {
-        left: 0;
+        left: 0 !important;
     }
-
+    .kadam-talab .outline {
+        left: -3px !important;
+        transform: translate(7px);
+    } 
     .fly-desktop {
         display: none!important;
     }
