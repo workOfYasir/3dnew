@@ -13,14 +13,16 @@ class MedicalNotification extends Notification
     use Queueable;
  
     public $user;
+    public $med;
     /**
      * Create a new notification instance.
      *
      * @return void
      */
-    public function __construct($user)
+    public function __construct($user,$med)
     {
        $this->user = $user;
+       $this->med = $med;
     }
 
     /**
@@ -58,6 +60,9 @@ class MedicalNotification extends Notification
     {
         return [
             'data' => $this->user->name,
+            'msg' =>'New Medical Request Added',
+            'med_id'=>$this->med->id,
+            'pub_id'=>null,
         ];
     }
 }

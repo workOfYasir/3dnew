@@ -14,14 +14,16 @@ class PublicNotification extends Notification
     use Queueable;
 
     public $user;
+    public $pub;
     /**
      * Create a new notification instance.
      *
      * @return void
      */
-    public function __construct($user)
+    public function __construct($user,$pub)
     {
        $this->user = $user;
+       $this->pub = $pub;
     }
 
     /**
@@ -58,6 +60,9 @@ class PublicNotification extends Notification
     {
         return [
             'data' => $this->user->name,
+            'msg' => 'New Public Request is Added',
+            'pub_id'=> $this->pub->id,
+            'med_id'=>null,
         ];
     }
 }
