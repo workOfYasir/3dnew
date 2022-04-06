@@ -2190,21 +2190,21 @@
                                             </div>
                                         </div>
                                         <div class="row align-items-end p-xs-0 conditional-blur justify-content-between">
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
+                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-5">
                                                 <label class="form-label">شكل الطباعة</label>
                                                 <input type="text" class="form-control" placeholder=".. التخصص هنا"
                                                     readonly="" value="رقم الهاتف هنا">
                                             </div>
                                             <!-- <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div> -->
                                             <div
-                                                class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
+                                                class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-5 quantity-m-50">
                                                 <label class="form-label">تقنية الطباعة</label>
                                                 <input type="text" class="form-control" placeholder=".. الجنس هنا"
                                                     readonly="" value="male">
                                             </div>
                                             <!-- <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div> -->
                                             <div
-                                                class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 zhd-product-visit">
+                                                class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-5 zhd-product-visit">
 
 
                                                 <button class="btn btn-sky invert">
@@ -2216,7 +2216,7 @@
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-md-12">
+                                        <div class="col-md-12 mt-5">
                                             <div class="designer-text">
                                                 <label class="form-label dot">الملاحظات</label>
                                                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"
@@ -2757,14 +2757,14 @@
                                                 <input type="text" class="form-control" placeholder=".. الايميل هنا"
                                                     readonly="" value="asimali7056@gmail.com">
                                             </div>
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
+                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-5">
                                                 <label class="form-label">شكل الطباعة</label>
                                                 <input type="text" class="form-control" placeholder=".. التخصص هنا"
                                                     readonly="" value="رقم الهاتف هنا">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div
-                                                class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
+                                                class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-5 quantity-m-50">
                                                 <label class="form-label">تقنية الطباعة</label>
                                                 <input type="text" class="form-control" placeholder=".. الجنس هنا"
                                                     readonly="" value="male">
@@ -2791,7 +2791,7 @@
 
                                         <div class="row">
                                             <div class="col-md-12">
-                                                <div class="designer-text mt-4">
+                                                <div class="designer-text mt-5">
                                                     <label class="form-label dot">الملاحظات</label>
                                                     <textarea class="form-control" id="exampleFormControlTextarea1"
                                                         rows="4" placeholder="   الملاحظات .."></textarea>
@@ -3139,14 +3139,14 @@
                                                 <input type="text" class="form-control" placeholder=".. الايميل هنا"
                                                     readonly="" value="asimali7056@gmail.com">
                                             </div>
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
+                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-5">
                                                 <label class="form-label">شكل الطباعة</label>
                                                 <input type="text" class="form-control" placeholder=".. التخصص هنا"
                                                     readonly="" value="رقم الهاتف هنا">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div
-                                                class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
+                                                class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-5 quantity-m-50">
                                                 <label class="form-label">تقنية الطباعة</label>
                                                 <input type="text" class="form-control" placeholder=".. الجنس هنا"
                                                     readonly="" value="male">
@@ -3167,7 +3167,7 @@
 
                                         <div class="row">
                                             <div class="col-md-12">
-                                                <div class="designer-text mt-4">
+                                                <div class="designer-text mt-5">
                                                     <label class="form-label dot">الملاحظات</label>
                                                     <textarea class="form-control" id="exampleFormControlTextarea1"
                                                         rows="4" placeholder="   الملاحظات .."></textarea>
@@ -3404,14 +3404,14 @@
                                                 <input type="text" class="form-control" placeholder=".. الايميل هنا"
                                                     readonly="" value="asimali7056@gmail.com">
                                             </div>
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
+                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-5">
                                                 <label class="form-label">شكل الطباعة</label>
                                                 <input type="text" class="form-control" placeholder=".. التخصص هنا"
                                                     readonly="" value="رقم الهاتف هنا">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div
-                                                class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
+                                                class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-5 quantity-m-50">
                                                 <label class="form-label">تقنية الطباعة</label>
                                                 <input type="text" class="form-control" placeholder=".. الجنس هنا"
                                                     readonly="" value="male">
@@ -3432,7 +3432,7 @@
 
                                         <div class="row">
                                             <div class="col-md-12">
-                                                <div class="designer-text mt-4">
+                                                <div class="designer-text mt-5">
                                                     <label class="form-label dot">الملاحظات</label>
                                                     <textarea class="form-control" id="exampleFormControlTextarea1"
                                                         rows="4" placeholder="   الملاحظات .."></textarea>
@@ -3675,14 +3675,14 @@
                                                 <input type="text" class="form-control" placeholder=".. الايميل هنا"
                                                     readonly="" value="asimali7056@gmail.com">
                                             </div>
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
+                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-5">
                                                 <label class="form-label">شكل الطباعة</label>
                                                 <input type="text" class="form-control" placeholder=".. التخصص هنا"
                                                     readonly="" value="رقم الهاتف هنا">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div
-                                                class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
+                                                class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-5 quantity-m-50">
                                                 <label class="form-label">تقنية الطباعة</label>
                                                 <input type="text" class="form-control" placeholder=".. الجنس هنا"
                                                     readonly="" value="male">
@@ -3703,7 +3703,7 @@
 
                                         <div class="row">
                                             <div class="col-md-12">
-                                                <div class="designer-text mt-4">
+                                                <div class="designer-text mt-5">
                                                     <label class="form-label dot">الملاحظات</label>
                                                     <textarea class="form-control" id="exampleFormControlTextarea1"
                                                         rows="4" placeholder="   الملاحظات .."></textarea>
@@ -3934,14 +3934,14 @@
                                                 <input type="text" class="form-control" placeholder=".. الايميل هنا"
                                                     readonly="" value="asimali7056@gmail.com">
                                             </div>
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
+                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-5">
                                                 <label class="form-label">شكل الطباعة</label>
                                                 <input type="text" class="form-control" placeholder=".. التخصص هنا"
                                                     readonly="" value="رقم الهاتف هنا">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div
-                                                class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
+                                                class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-5 quantity-m-50">
                                                 <label class="form-label">تقنية الطباعة</label>
                                                 <input type="text" class="form-control" placeholder=".. الجنس هنا"
                                                     readonly="" value="male">
@@ -3962,7 +3962,7 @@
 
                                         <div class="row">
                                             <div class="col-md-12">
-                                                <div class="designer-text mt-4">
+                                                <div class="designer-text mt-5">
                                                     <label class="form-label dot">الملاحظات</label>
                                                     <textarea class="form-control" id="exampleFormControlTextarea1"
                                                         rows="4" placeholder="   الملاحظات .."></textarea>
