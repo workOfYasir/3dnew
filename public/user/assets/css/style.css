@@ -1481,7 +1481,7 @@ textarea {
 
 .blur {
     filter: blur(8px);
-    padding: 0px 20px;
+    padding: 0px 25px;
 }
 
 #publicPaymentModal .payment {
@@ -3107,6 +3107,10 @@ input[type=number] {
 
 .blue-bg {
     background-color: #1F5098 !important;
+}
+
+#financialOperations .request-box::after {
+    display: none;
 }
 
 /* Safari */

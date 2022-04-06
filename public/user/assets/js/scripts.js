@@ -500,7 +500,7 @@ $(document).ready(function () {
         $(".credit-log").show();
     })
     $(".paying-off-btn").click(function () {
-        $(".credit-log").hide();
+        $(".credit-log").addClass('d-none');
     })
 
     $(".bill-btn").click(function () {
