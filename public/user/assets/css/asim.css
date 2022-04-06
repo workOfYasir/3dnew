@@ -516,6 +516,14 @@
     width: 17px;
     height: 17px;
 }
+
+
+.modal-header .profile.zhd-box .btn-sky.invert{
+    padding: 0px !important;
+    width: 96px;
+    height: 30px;
+    font-size: 14px;
+}
     /* styling end here */
 
 
