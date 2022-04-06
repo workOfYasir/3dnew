@@ -919,11 +919,11 @@
         right: -140px;
     }
     .request .dot-txt-main .outline {
-        left: 0 !important;
+        left: -4px !important
     }
-    .kadam-talab .outline {
-        left: -3px !important;
-        transform: translate(7px);
+    .kadam-talab .outline.dot {
+        left: 0px !important;
+        transform: translate(7px) !important;
     } 
     .fly-desktop {
         display: none!important;
