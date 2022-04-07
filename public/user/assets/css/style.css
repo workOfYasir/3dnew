@@ -3127,8 +3127,5 @@ input[type=number] {
     #designinnerModal .designer-sec-1::after{
         background: -webkit-linear-gradient(360deg, rgba(255, 255, 255, 100%), transparent) !important;
     }
-
-    .btm-line {
-        position: static;
-    }
+    
 }
