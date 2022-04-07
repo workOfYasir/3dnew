@@ -993,9 +993,20 @@
        
 /* blur review modal */
 
-        /* .review-star-blur .blur-bg{
-            top: 0 !important; 
-        } */
+      /* clean short modal */
+      #cleanshotModal #page-content-wrapper{
+        position: relative;
+    }
+      .cleanshot-row{
+        align-content: flex-end !important;
+      } 
+
+    .adobe-icon{
+        margin-top: 30px;   
+        float: right;
+    }
+
+
 
     }
     

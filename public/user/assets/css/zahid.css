@@ -62,10 +62,12 @@
     margin-left: 30px;
 }
 .small-card .designer-8 {
-    height: 128px;
+    height: 100%;
+    width: 100%;
+    /* height: 128px;
     width: 128px;
     border: 4px solid #1EA9D4;
-    border-radius: 10px;
+    border-radius: 10px; */
 }
 .head-clean{
     margin-top: 23px;
@@ -298,15 +300,26 @@ opacity: 0 !important;
     height:128px;
     z-index:0;
     margin-left: 30px;
+    border: 4px solid #1EA9D4;
+    border-radius: 10px;
+
 }
 .small-card__images-box-shadow{
-    position: absolute;
+    /* position: absolute;
     width: 94%;
     height: 95%;
     top: 4px;
     left: 4px;
     z-index: 9;
-    /* margin-left: 30px !important; */
+    background: #000;
+    opacity: .5;
+    border-radius: 10px; */
+    position: absolute;
+    right: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 9;
     background: #000;
     opacity: .5;
     border-radius: 10px;
