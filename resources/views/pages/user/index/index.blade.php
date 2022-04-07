@@ -2552,8 +2552,8 @@
                                                                     name="myfile" />
                                                             </div>
                                                         </div>
-                                                        <p class="mt-3" style="    text-align: center;
-                                          ">متبقي على تسليم الطلب 24 يوم 35 دقيقة 13 ثانية</p>
+                                                        <!-- <p class="mt-3" style="    text-align: center;
+                                          ">متبقي على تسليم الطلب 24 يوم 35 دقيقة 13 ثانية</p> -->
                                                     </div>
                                                     <h1 class="title text-center mt-5 no-border conditional-blur">
                                                         <div class="">
@@ -6513,29 +6513,29 @@
                             <div class="modal-body">
                                 <form class="gy-4 gx-5" method="post">
                                     <div class="row justify-content-center">
-                                        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-3 mt-4">
+                                        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4 mt-4">
                                             <label class="form-label dot">المبلغ المطلوب</label>
                                             <input type="text" class="form-control  " placeholder="المبلغ .." value="">
                                         </div>
-                                        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-3 mt-4">
+                                        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4 mt-4">
                                             <label class="form-label dot">اسم صاحب الحساب</label>
                                             <input type="text" class="form-control "
                                                 placeholder="اسم صاحب الحساب هنا .." value="">
                                         </div>
-                                        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-3 mt-4">
+                                        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4 mt-4">
                                             <label class="form-label dot">اسم البنك</label>
                                             <input type="text" name="" class="form-control  " placeholder="اسم البنك .."
                                                 value="">
                                         </div>
                                     </div>
                                     <div class="row  mb-5">
-                                        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-3 mt-4">
+                                        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4 mt-4">
                                             <label class="form-label dot">الآيبان</label>
                                             <input type="text" name="" class="form-control  " placeholder="الآيبان"
                                                 value="">
                                         </div>
 
-                                        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-3 mt-4 ahs-from-box">
+                                        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4 mt-4 ahs-from-box">
                                             <label class="form-label dot">رقم الجوال</label>
                                             <input type="" name="" class="form-control " placeholder="رقم الجوال هنا .."
                                                 value="">
