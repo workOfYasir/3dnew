@@ -1073,8 +1073,9 @@
                     </div>
                 </div>
             </div>
-    </div>
-    </section>
+
+        </section>
+
     <!-- ahsan html end here -->
 
 
@@ -1206,7 +1207,6 @@
         </footer>
         </div>
     </section>
-    </div>
     @php
     $request = Session::get('req');
     @endphp
