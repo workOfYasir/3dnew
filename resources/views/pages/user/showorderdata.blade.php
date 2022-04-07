@@ -62,7 +62,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="modal-header border-0">
-                                <a href="{{route('home')}}" type="button" class="btn-close"></a>
+                                <a href="{{route('home')}}" class="btn-close"></a>
                                 <div style="margin-top: 1%;">
                                     <span class="outline dot">اهلاً وسهلاً بكم</span>
                                     <h1 class="modal-title">طلباتي</h1>
