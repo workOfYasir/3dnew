@@ -905,7 +905,29 @@
                 padding: 0px !important;
             }
 
+            /* request modal */
 
+            #requestsModal .nav-tabs .nav-item, .onTab .nav-tabs .nav-item{
+                width: 100% !important;
+            }
+           
+            .designer-bdy .btn-upload-designer, .designer-bdy .red-btn{
+                margin-top: 30px;
+            }
+            .zhd-finished .btn{
+                margin-left: 0px !important;
+                margin-right: 0px !important;
+            }
+            #designer-review-upload .blur {
+                padding: 0px !important;
+            }
+
+            #designer-bid-submission .red-btn{
+                margin-top: 0px !important;
+            }
+            #designer-submit-quote .blur-bg{
+                bottom: 300px !important;
+            }
 
     }
 
@@ -1047,8 +1069,15 @@
     #designerPublicServiesModal .submitted-data p {
         font-size: 17px;
     }
+    #designer-order-upload .designer-text{
+        margin-top: 30px;
+    }
+    #designer-review-upload .review-text{
+        margin-top: 50px;
+    }
 
 
+    
     }
     
     /* ////////////////////////////////////////// Large landscape responsive //////////////////////////////////////////////////////// */
