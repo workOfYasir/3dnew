@@ -1657,8 +1657,10 @@
                                             </div>
                                             <div class="row cleanshot-row align-items-end">
 
-                                                <div class="col-md-8">
+                                                <div class="col-md-12 col-lg-9 col-xl-8">
                                                     <div class="small-card wrapper al-center">
+                                                        <div class="row">
+                                                            <div class="col-auto p-0 card-img-main">
                                                         <div class="small-card__images-box">
                                                             <div class="small-card__images-box-shadow"></div>
                                                             <img class="designer-8"
@@ -1671,15 +1673,26 @@
                                                                 <p>تكبير الصور </p>
                                                             </div>
                                                         </div>
+                                                    </div>
+                                                    <div class="col-auto p-0 card-img-main">
+
                                                         <img src="{{ asset('user/assets/images/cleancard.png') }}"
                                                             alt="">
+                                                            </div>
+                                                            <div class="col-auto p-0">
+
                                                         <img src="{{ asset('user/assets/images/cleancard2.png') }}"
                                                             alt="">
+                                                            </div>
+                                                            <div class="col-auto p-0">
+
                                                         <img src="{{ asset('user/assets/images/cleancard3.png') }}"
                                                             alt="">
+                                                        </div>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-4">
+                                                <div class="col-md-12 col-lg-3 col-xl-4">
                                                     <div class="adobe-icon">
                                                         <h6>البرمج المستخدمة</h6>
                                                         <img src="{{ asset('user/assets/images/ai.png') }}" alt="">
@@ -1788,7 +1801,7 @@
 
 
                                             <div class="row zhd-textarea-clean">
-                                                <div class="col-md-12">
+                                                <div class="col-md-12 textarea-clean-short">
                                                     <label class="form-label dot">الملاحظات</label>
                                                     <textarea class="form-control" id="exampleFormControlTextarea1"
                                                         rows="4" placeholder="   الملاحظات .."></textarea>
