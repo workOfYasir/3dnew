@@ -855,6 +855,11 @@
             width: 100%;
         }
 
+        .ps-lr-0{
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+
 
     }
 
@@ -973,9 +978,10 @@
             width: 20px !important;
             margin-right: 15px !important;
         }
-       #financialOperations2 .membership-edit{
+        
+       /* #financialOperations2 .membership-edit{
         width: 57%;
-        }
+        } */
        
 /* blur review modal */
 

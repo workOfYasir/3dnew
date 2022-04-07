@@ -5688,7 +5688,7 @@
                         <div class="col-md-12 p-0">
 
                             <div class="modal-body">
-                                <div class="container ">
+                                <div class="container ps-lr-0">
                                     <div class="modal-header border-0">
 
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
