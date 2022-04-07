@@ -867,6 +867,44 @@
             padding-left: 0px;
             padding-right: 0px;
         }
+/* cleanshort modal */
+
+  /* clean short modal */
+        #cleanshotModal #page-content-wrapper{
+            position: relative;
+        }
+
+        .cleanshot-row{
+            align-content: flex-end !important;
+            padding-bottom: 25px;
+        } 
+
+            .adobe-icon{
+                margin-top: 30px;   
+                float: right !important;
+            }
+            .card-img-main{
+                margin-bottom: 30px;
+            }
+            .personal-pro {
+                float: right !important;
+            }
+            .clean-headings h3 {
+                font-size: 33px;
+            }
+            .color-circle-main {
+                margin-bottom: 20px;
+            }
+            .color-circle-main .blue-border{
+                margin-right: 0px;
+            }
+            .zhd-textarea-clean{
+                width: 100%;
+            }
+            #cleanshotModal .zhd-form-clean, .textarea-clean-short, #cleanshotModal .footer-clean{
+                padding: 0px !important;
+            }
+
 
 
     }
@@ -1006,6 +1044,9 @@
         float: right;
     }
 
+    #designerPublicServiesModal .submitted-data p {
+        font-size: 17px;
+    }
 
 
     }
