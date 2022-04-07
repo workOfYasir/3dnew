@@ -1741,8 +1741,8 @@
                                                             <span> أبيض</span>
                                                         </div>
                                                         <div class="color-circle blue-border"></div>
-                                                        <div class="color-circle orange"></div>
                                                         <div class="color-circle yellow"></div>
+                                                        <div class="color-circle orange"></div>
                                                         <div class="color-circle"></div>
                                                     </div>
                                                 </div>
@@ -1765,16 +1765,14 @@
                                                 </div>
                                             </div>
 
-                                            <div class="row circle-bottom">
-                                                <div class="col-md-2">
-                                                </div>
+                                            <div class="row circle-bottom justify-content-center">
+                                                
                                                 <div class="col-md-4 mt-5">
                                                     <label class="form-label dot">شكل الطباعة</label>
                                                     <select class="form-select gender" required name="gender"
                                                         aria-label="Default select example">
                                                         <option></option>
                                                         <option>الاشكال هنا</option>
-
                                                     </select>
                                                 </div>
                                                 <div class="col-md-4 mt-5">
@@ -1785,8 +1783,7 @@
                                                         <option>+ 35 ريال التقنية الأولي</option>
                                                     </select>
                                                 </div>
-                                                <div class="col-md-2">
-                                                </div>
+                                               
                                             </div>
 
 
@@ -2266,10 +2263,11 @@
                                                     <a href="#"
                                                         class="btn btn-form mx-3 with-arrow mt-10 red-btn ">رفض</a>
 
-                                                    <p class="mt-4">سيتم ارسال تفاصيل تنفيذ المهمة الى المستخدم للقبول
-                                                        او الرفض</p>
+                                                  
                                                 </div>
                                             </h1>
+                                            <p class="mt-4 modal-bottom-txt">سيتم ارسال تفاصيل تنفيذ المهمة الى المستخدم للقبول
+                                                او الرفض</p>
                                         </div>
                                     </div>
                                 </div>
@@ -3604,7 +3602,7 @@
                                                 <img src="{{asset('user/assets/icons/redline.svg')}}" class="single"
                                                     alt="">
                                                 <div class="col-auto">
-                                                    <div class="dateTime small">{{@$public->created_at}}</div>
+                                                    <!-- <div class="dateTime small">{{@$public->created_at}}</div> -->
                                                     <img src="{{asset('user/assets/icons/red-circle.svg')}}"
                                                         alt="red-circle">
                                                     <div>
@@ -3984,9 +3982,8 @@
                                             <h1 class="title text-center mt-5 no-border conditional-blur zhd-quote">تم
                                                 تقديم عرض السعر</h1>
 
-                                            <div class="row mb-2 justify-content-between conditional-blur">
-                                                <div class="blur-star blur-bg submit-quote-review" id="star-blur-scroll"
-                                                    style="display: block;">
+                                                <!-- blur -->
+                                                <div class="blur-star blur-bg submit-quote-review d-block" id="star-blur-scroll">
                                                     <div class="blur-star-inner">
                                                         <div class="review-text">
                                                             <label class="form-label">تقييم المصمم</label>
@@ -4011,6 +4008,10 @@
                                                         </div>
                                                     </div>
                                                 </div>
+                                                <!-- blur -->
+
+                                            <div class="row mb-2 justify-content-between conditional-blur blur">
+                                               
                                                 <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
                                                     <label class="form-label">تكلفة تنفيذ الخدمة</label>
                                                     <input type="text" class="form-control"
