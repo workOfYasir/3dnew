@@ -1741,8 +1741,8 @@
                                                             <span> أبيض</span>
                                                         </div>
                                                         <div class="color-circle blue-border"></div>
-                                                        <div class="color-circle orange"></div>
                                                         <div class="color-circle yellow"></div>
+                                                        <div class="color-circle orange"></div>
                                                         <div class="color-circle"></div>
                                                     </div>
                                                 </div>
@@ -1765,16 +1765,14 @@
                                                 </div>
                                             </div>
 
-                                            <div class="row circle-bottom">
-                                                <div class="col-md-2">
-                                                </div>
+                                            <div class="row circle-bottom justify-content-center">
+                                                
                                                 <div class="col-md-4 mt-5">
                                                     <label class="form-label dot">شكل الطباعة</label>
                                                     <select class="form-select gender" required name="gender"
                                                         aria-label="Default select example">
                                                         <option></option>
                                                         <option>الاشكال هنا</option>
-
                                                     </select>
                                                 </div>
                                                 <div class="col-md-4 mt-5">
@@ -1785,8 +1783,7 @@
                                                         <option>+ 35 ريال التقنية الأولي</option>
                                                     </select>
                                                 </div>
-                                                <div class="col-md-2">
-                                                </div>
+                                               
                                             </div>
 
 
