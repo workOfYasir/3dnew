@@ -2177,13 +2177,13 @@
                                                 class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
                                                 <label class="form-label">الكمية</label>
                                                 <input type="text" class="form-control" placeholder=".. رقم الهاتف هنا"
-                                                    readonly="" value="03084875508">
+                                                    readonly="" value="1">
                                             </div>
                                             <!-- <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div> -->
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                 <label class="form-label">المقاسات</label>
                                                 <input type="text" class="form-control" placeholder=".. الايميل هنا"
-                                                    readonly="" value="asimali7056@gmail.com">
+                                                    readonly="" value="اختيار المقاس">
                                             </div>
                                         </div>
                                         <div class="row align-items-end p-xs-0 conditional-blur justify-content-between">
@@ -2441,13 +2441,13 @@
                                                 class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
                                                 <label class="form-label">الكمية</label>
                                                 <input type="text" class="form-control" placeholder=".. رقم الهاتف هنا"
-                                                    readonly="" value="03084875508">
+                                                    readonly="" value="1">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                 <label class="form-label">المقاسات</label>
                                                 <input type="text" class="form-control" placeholder=".. الايميل هنا"
-                                                    readonly="" value="asimali7056@gmail.com">
+                                                    readonly="" value="اختيار المقاس">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-5">
                                                 <label class="form-label">شكل الطباعة</label>
@@ -2780,13 +2780,13 @@
                                                 class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
                                                 <label class="form-label">الكمية</label>
                                                 <input type="text" class="form-control" placeholder=".. رقم الهاتف هنا"
-                                                    readonly="" value="03084875508">
+                                                    readonly="" value="1">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                 <label class="form-label">المقاسات</label>
                                                 <input type="text" class="form-control" placeholder=".. الايميل هنا"
-                                                    readonly="" value="asimali7056@gmail.com">
+                                                    readonly="" value="اختيار المقاس">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-5">
                                                 <label class="form-label">شكل الطباعة</label>
@@ -3140,13 +3140,13 @@
                                                 class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
                                                 <label class="form-label">الكمية</label>
                                                 <input type="text" class="form-control" placeholder=".. رقم الهاتف هنا"
-                                                    readonly="" value="03084875508">
+                                                    readonly="" value="1">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                 <label class="form-label">المقاسات</label>
                                                 <input type="text" class="form-control" placeholder=".. الايميل هنا"
-                                                    readonly="" value="asimali7056@gmail.com">
+                                                    readonly="" value="اختيار المقاس">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-5">
                                                 <label class="form-label">شكل الطباعة</label>
@@ -3404,13 +3404,13 @@
                                                 class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
                                                 <label class="form-label">الكمية</label>
                                                 <input type="text" class="form-control" placeholder=".. رقم الهاتف هنا"
-                                                    readonly="" value="03084875508">
+                                                    readonly="" value="1">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                 <label class="form-label">المقاسات</label>
                                                 <input type="text" class="form-control" placeholder=".. الايميل هنا"
-                                                    readonly="" value="asimali7056@gmail.com">
+                                                    readonly="" value="اختيار المقاس">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-5">
                                                 <label class="form-label">شكل الطباعة</label>
@@ -3676,13 +3676,13 @@
                                                 class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
                                                 <label class="form-label">الكمية</label>
                                                 <input type="text" class="form-control" placeholder=".. رقم الهاتف هنا"
-                                                    readonly="" value="03084875508">
+                                                    readonly="" value="1">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                 <label class="form-label">المقاسات</label>
                                                 <input type="text" class="form-control" placeholder=".. الايميل هنا"
-                                                    readonly="" value="asimali7056@gmail.com">
+                                                    readonly="" value="اختيار المقاس">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-5">
                                                 <label class="form-label">شكل الطباعة</label>
@@ -3936,13 +3936,13 @@
                                                 class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
                                                 <label class="form-label">الكمية</label>
                                                 <input type="text" class="form-control" placeholder=".. رقم الهاتف هنا"
-                                                    readonly="" value="03084875508">
+                                                    readonly="" value="1">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                 <label class="form-label">المقاسات</label>
                                                 <input type="text" class="form-control" placeholder=".. الايميل هنا"
-                                                    readonly="" value="asimali7056@gmail.com">
+                                                    readonly="" value="اختيار المقاس">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-5">
                                                 <label class="form-label">شكل الطباعة</label>
@@ -6659,13 +6659,13 @@
                                                 class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
                                                 <label class="form-label">الكمية</label>
                                                 <input type="text" class="form-control" placeholder=".. رقم الهاتف هنا"
-                                                    readonly="" value="03084875508">
+                                                    readonly="" value="1">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                 <label class="form-label">المقاسات</label>
                                                 <input type="text" class="form-control" placeholder=".. الايميل هنا"
-                                                    readonly="" value="asimali7056@gmail.com">
+                                                    readonly="" value="اختيار المقاس">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-5 mtop-">
                                                 <label class="form-label">شكل الطباعة</label>
@@ -7032,13 +7032,13 @@
                                                 class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
                                                 <label class="form-label">الكمية</label>
                                                 <input type="text" class="form-control" placeholder=".. رقم الهاتف هنا"
-                                                    readonly="" value="03084875508">
+                                                    readonly="" value="1">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                 <label class="form-label">المقاسات</label>
                                                 <input type="text" class="form-control" placeholder=".. الايميل هنا"
-                                                    readonly="" value="asimali7056@gmail.com">
+                                                    readonly="" value="اختيار المقاس">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-5">
                                                 <label class="form-label">شكل الطباعة</label>
@@ -7339,13 +7339,13 @@
                                                 class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
                                                 <label class="form-label">الكمية</label>
                                                 <input type="text" class="form-control" placeholder=".. رقم الهاتف هنا"
-                                                    readonly="" value="03084875508">
+                                                    readonly="" value="1">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                 <label class="form-label">المقاسات</label>
                                                 <input type="text" class="form-control" placeholder=".. الايميل هنا"
-                                                    readonly="" value="asimali7056@gmail.com">
+                                                    readonly="" value="اختيار المقاس">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-5">
                                                 <label class="form-label">شكل الطباعة</label>
@@ -7656,13 +7656,13 @@
                                                 class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
                                                 <label class="form-label">الكمية</label>
                                                 <input type="text" class="form-control" placeholder=".. رقم الهاتف هنا"
-                                                    readonly="" value="03084875508">
+                                                    readonly="" value="1">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                 <label class="form-label">المقاسات</label>
                                                 <input type="text" class="form-control" placeholder=".. الايميل هنا"
-                                                    readonly="" value="asimali7056@gmail.com">
+                                                    readonly="" value="اختيار المقاس">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                 <label class="form-label">شكل الطباعة</label>
@@ -8001,13 +8001,13 @@
                                                 class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
                                                 <label class="form-label">الكمية</label>
                                                 <input type="text" class="form-control" placeholder=".. رقم الهاتف هنا"
-                                                    readonly="" value="03084875508">
+                                                    readonly="" value="1">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                 <label class="form-label">المقاسات</label>
                                                 <input type="text" class="form-control" placeholder=".. الايميل هنا"
-                                                    readonly="" value="asimali7056@gmail.com">
+                                                    readonly="" value="اختيار المقاس">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-5">
                                                 <label class="form-label">شكل الطباعة</label>
@@ -8241,13 +8241,13 @@
                                                 class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
                                                 <label class="form-label">الكمية</label>
                                                 <input type="text" class="form-control" placeholder=".. رقم الهاتف هنا"
-                                                    readonly="" value="03084875508">
+                                                    readonly="" value="1">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                 <label class="form-label">المقاسات</label>
                                                 <input type="text" class="form-control" placeholder=".. الايميل هنا"
-                                                    readonly="" value="asimali7056@gmail.com">
+                                                    readonly="" value="اختيار المقاس">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-5">
                                                 <label class="form-label">شكل الطباعة</label>
@@ -8530,13 +8530,13 @@
                                                 class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
                                                 <label class="form-label">الكمية</label>
                                                 <input type="text" class="form-control" placeholder=".. رقم الهاتف هنا"
-                                                    readonly="" value="03084875508">
+                                                    readonly="" value="1">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                 <label class="form-label">المقاسات</label>
                                                 <input type="text" class="form-control" placeholder=".. الايميل هنا"
-                                                    readonly="" value="asimali7056@gmail.com">
+                                                    readonly="" value="اختيار المقاس">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-5">
                                                 <label class="form-label">شكل الطباعة</label>
