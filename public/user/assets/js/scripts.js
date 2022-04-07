@@ -405,7 +405,11 @@ $(function () {
 
     // }, 2000);
 
-    $('#publicServiesModal .carousel, #healthServiesModal .carousel').carousel({
+    $('#publicServiesModal .carousel').carousel({
+        interval: false,
+    });
+
+    $('#healthServiesModal .carousel').carousel({
         interval: false,
     });
 

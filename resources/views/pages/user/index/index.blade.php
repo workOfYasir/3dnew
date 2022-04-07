@@ -3603,7 +3603,7 @@
                                                 <img src="{{asset('user/assets/icons/redline.svg')}}" class="single"
                                                     alt="">
                                                 <div class="col-auto">
-                                                    <!-- <div class="dateTime small">{{@$public->created_at}}</div> -->
+                                                    <div class="dateTime small text-white">{{@$public->created_at}}</div>
                                                     <img src="{{asset('user/assets/icons/red-circle.svg')}}"
                                                         alt="red-circle">
                                                     <div>
