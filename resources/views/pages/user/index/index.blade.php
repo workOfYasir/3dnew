@@ -3603,7 +3603,7 @@
                                                 <img src="{{asset('user/assets/icons/redline.svg')}}" class="single"
                                                     alt="">
                                                 <div class="col-auto">
-                                                    <div class="dateTime small">{{@$public->created_at}}</div>
+                                                    <!-- <div class="dateTime small">{{@$public->created_at}}</div> -->
                                                     <img src="{{asset('user/assets/icons/red-circle.svg')}}"
                                                         alt="red-circle">
                                                     <div>
@@ -3983,9 +3983,8 @@
                                             <h1 class="title text-center mt-5 no-border conditional-blur zhd-quote">تم
                                                 تقديم عرض السعر</h1>
 
-                                            <div class="row mb-2 justify-content-between conditional-blur">
-                                                <div class="blur-star blur-bg submit-quote-review" id="star-blur-scroll"
-                                                    style="display: block;">
+                                                <!-- blur -->
+                                                <div class="blur-star blur-bg submit-quote-review d-block" id="star-blur-scroll">
                                                     <div class="blur-star-inner">
                                                         <div class="review-text">
                                                             <label class="form-label">تقييم المصمم</label>
@@ -4010,6 +4009,10 @@
                                                         </div>
                                                     </div>
                                                 </div>
+                                                <!-- blur -->
+
+                                            <div class="row mb-2 justify-content-between conditional-blur blur">
+                                               
                                                 <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
                                                     <label class="form-label">تكلفة تنفيذ الخدمة</label>
                                                     <input type="text" class="form-control"
