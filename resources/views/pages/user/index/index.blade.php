@@ -3600,7 +3600,7 @@
                                                 <img src="{{asset('user/assets/icons/redline.svg')}}" class="single"
                                                     alt="">
                                                 <div class="col-auto">
-                                                    <div class="dateTime small">{{@$public->created_at}}</div>
+                                                    <!-- <div class="dateTime small">{{@$public->created_at}}</div> -->
                                                     <img src="{{asset('user/assets/icons/red-circle.svg')}}"
                                                         alt="red-circle">
                                                     <div>
@@ -3980,9 +3980,8 @@
                                             <h1 class="title text-center mt-5 no-border conditional-blur zhd-quote">تم
                                                 تقديم عرض السعر</h1>
 
-                                            <div class="row mb-2 justify-content-between conditional-blur">
-                                                <div class="blur-star blur-bg submit-quote-review" id="star-blur-scroll"
-                                                    style="display: block;">
+                                                <!-- blur -->
+                                                <div class="blur-star blur-bg submit-quote-review d-block" id="star-blur-scroll">
                                                     <div class="blur-star-inner">
                                                         <div class="review-text">
                                                             <label class="form-label">تقييم المصمم</label>
@@ -4007,6 +4006,10 @@
                                                         </div>
                                                     </div>
                                                 </div>
+                                                <!-- blur -->
+
+                                            <div class="row mb-2 justify-content-between conditional-blur blur">
+                                               
                                                 <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
                                                     <label class="form-label">تكلفة تنفيذ الخدمة</label>
                                                     <input type="text" class="form-control"
@@ -7032,14 +7035,14 @@
                                                 <input type="text" class="form-control" placeholder=".. الايميل هنا"
                                                     readonly="" value="asimali7056@gmail.com">
                                             </div>
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
+                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-5">
                                                 <label class="form-label">شكل الطباعة</label>
                                                 <input type="text" class="form-control" placeholder=".. التخصص هنا"
                                                     readonly="" value="رقم الهاتف هنا">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div
-                                                class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
+                                                class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-5 quantity-m-50">
                                                 <label class="form-label">تقنية الطباعة</label>
                                                 <input type="text" class="form-control" placeholder=".. الجنس هنا"
                                                     readonly="" value="male">
