@@ -3,7 +3,7 @@
          <div class="modal-content">
              <div class="container-fluid">
                  <div class="row">
-                     <div class="col-md-12 requests-position">
+                     <div class="col-md-12">
                          <div class="modal-header border-0">
                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                              <div class="dropdown">

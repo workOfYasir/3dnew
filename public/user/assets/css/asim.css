@@ -563,8 +563,11 @@
 
 
 .requests-position{
-    position: relative;
     padding-bottom: 100px;
+}
+
+#requestsModal .modal-footer {
+    position: relative !important;
 }
     /* styling end here */
 
