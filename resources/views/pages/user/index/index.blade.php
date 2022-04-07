@@ -6358,7 +6358,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-12 wrapper jst-center">
-                                        <div class="star-reating">
+                                        <div class="star-reating star-s-30">
                                             <i class="fa-solid fa-star star-active  ahs-star"></i>
                                             <i class="fa-solid fa-star star-active ahs-star"></i>
                                             <i class="fa-solid fa-star star-active ahs-star"></i>
@@ -6495,7 +6495,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-12 wrapper jst-center">
-                                        <div class="star-reating">
+                                        <div class="star-reating star-s-30">
                                             <i class="fa-solid fa-star star-active  ahs-star"></i>
                                             <i class="fa-solid fa-star star-active ahs-star"></i>
                                             <i class="fa-solid fa-star star-active ahs-star"></i>
