@@ -31,7 +31,7 @@
                                         <span class="ahs-form-head1"> الرصيد الحالي</span>
                                         <span class="ahs-form-head2">750 ريال</span>
                                     </div>
-                                    <div class="star-reating text-center">
+                                    <div class="star-reating star-s-30 text-center">
                                         <i class="fa-solid fa-star"></i>
                                         <i class="fa-solid fa-star"></i>
                                         <i class="fa-solid fa-star"></i>
@@ -107,7 +107,7 @@
                                 <img src="{{ asset('user/assets/images/ar.png') }}" alt="" class="ahs-form-img1">
                             </div>
                             <div class="ff">
-                                <div class="star-reating">
+                                <div class="star-reating star-s-30">
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
