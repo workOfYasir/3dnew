@@ -600,7 +600,9 @@
         }
 
         /* end home page */
-
+        .btn-list .blur-part{
+            display: none;
+        }
         .designer-sec {
             padding-top: 150px;
             margin-top: 60px;
@@ -835,6 +837,10 @@
             margin-top: 10px;
             width: 91%;
         }
+        #financialOperations2 .membership-edit {
+            width: 81%;
+        }
+        
 
         .modal.page .btn-close{
             margin-right: 10px;
@@ -879,6 +885,10 @@
         }
         .btn-list .btn-blue{
             margin-bottom: 30px;
+        }
+
+        .btn-list .blur-part{
+            display: none;
         }
 
         #designinnerModal .designer-sec::before{
