@@ -2266,10 +2266,11 @@
                                                     <a href="#"
                                                         class="btn btn-form mx-3 with-arrow mt-10 red-btn ">رفض</a>
 
-                                                    <p class="mt-4">سيتم ارسال تفاصيل تنفيذ المهمة الى المستخدم للقبول
-                                                        او الرفض</p>
+                                                  
                                                 </div>
                                             </h1>
+                                            <p class="mt-4 modal-bottom-txt">سيتم ارسال تفاصيل تنفيذ المهمة الى المستخدم للقبول
+                                                او الرفض</p>
                                         </div>
                                     </div>
                                 </div>
