@@ -2197,7 +2197,7 @@
                                                 class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-5 quantity-m-50">
                                                 <label class="form-label">تقنية الطباعة</label>
                                                 <input type="text" class="form-control" placeholder=".. الجنس هنا"
-                                                    readonly="" value="male">
+                                                    readonly="" value="التقنية الأولي + 35 ريال">
                                             </div>
                                             <!-- <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1"></div> -->
                                             <div
@@ -2459,7 +2459,7 @@
                                                 class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-5 quantity-m-50">
                                                 <label class="form-label">تقنية الطباعة</label>
                                                 <input type="text" class="form-control" placeholder=".. الجنس هنا"
-                                                    readonly="" value="male">
+                                                    readonly="" value="التقنية الأولي + 35 ريال">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div
@@ -2798,7 +2798,7 @@
                                                 class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-5 quantity-m-50">
                                                 <label class="form-label">تقنية الطباعة</label>
                                                 <input type="text" class="form-control" placeholder=".. الجنس هنا"
-                                                    readonly="" value="male">
+                                                    readonly="" value="التقنية الأولي + 35 ريال">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div
@@ -3158,7 +3158,7 @@
                                                 class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-5 quantity-m-50">
                                                 <label class="form-label">تقنية الطباعة</label>
                                                 <input type="text" class="form-control" placeholder=".. الجنس هنا"
-                                                    readonly="" value="male">
+                                                    readonly="" value="التقنية الأولي + 35 ريال">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div
@@ -3422,7 +3422,7 @@
                                                 class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-5 quantity-m-50">
                                                 <label class="form-label">تقنية الطباعة</label>
                                                 <input type="text" class="form-control" placeholder=".. الجنس هنا"
-                                                    readonly="" value="male">
+                                                    readonly="" value="التقنية الأولي + 35 ريال">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div
@@ -3694,7 +3694,7 @@
                                                 class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-5 quantity-m-50">
                                                 <label class="form-label">تقنية الطباعة</label>
                                                 <input type="text" class="form-control" placeholder=".. الجنس هنا"
-                                                    readonly="" value="male">
+                                                    readonly="" value="التقنية الأولي + 35 ريال">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div
@@ -3954,7 +3954,7 @@
                                                 class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-5 quantity-m-50">
                                                 <label class="form-label">تقنية الطباعة</label>
                                                 <input type="text" class="form-control" placeholder=".. الجنس هنا"
-                                                    readonly="" value="male">
+                                                    readonly="" value="التقنية الأولي + 35 ريال">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div
@@ -6677,7 +6677,7 @@
                                                 class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-5 quantity-m-50">
                                                 <label class="form-label">تقنية الطباعة</label>
                                                 <input type="text" class="form-control" placeholder=".. الجنس هنا"
-                                                    readonly="" value="male">
+                                                    readonly="" value="التقنية الأولي + 35 ريال">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div
@@ -7050,7 +7050,7 @@
                                                 class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-5 quantity-m-50">
                                                 <label class="form-label">تقنية الطباعة</label>
                                                 <input type="text" class="form-control" placeholder=".. الجنس هنا"
-                                                    readonly="" value="male">
+                                                    readonly="" value="التقنية الأولي + 35 ريال">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div
@@ -7357,7 +7357,7 @@
                                                 class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-5 quantity-m-50">
                                                 <label class="form-label">تقنية الطباعة</label>
                                                 <input type="text" class="form-control" placeholder=".. الجنس هنا"
-                                                    readonly="" value="male">
+                                                    readonly="" value="التقنية الأولي + 35 ريال">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div
@@ -7674,7 +7674,7 @@
                                                 class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4 quantity-m-50">
                                                 <label class="form-label">تقنية الطباعة</label>
                                                 <input type="text" class="form-control" placeholder=".. الجنس هنا"
-                                                    readonly="" value="male">
+                                                    readonly="" value="التقنية الأولي + 35 ريال">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div
@@ -8019,7 +8019,7 @@
                                                 class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-5 quantity-m-50">
                                                 <label class="form-label">تقنية الطباعة</label>
                                                 <input type="text" class="form-control" placeholder=".. الجنس هنا"
-                                                    readonly="" value="male">
+                                                    readonly="" value="التقنية الأولي + 35 ريال">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div
@@ -8259,7 +8259,7 @@
                                                 class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-5 quantity-m-50">
                                                 <label class="form-label">تقنية الطباعة</label>
                                                 <input type="text" class="form-control" placeholder=".. الجنس هنا"
-                                                    readonly="" value="male">
+                                                    readonly="" value="التقنية الأولي + 35 ريال">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div
@@ -8548,7 +8548,7 @@
                                                 class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-5 quantity-m-50">
                                                 <label class="form-label">تقنية الطباعة</label>
                                                 <input type="text" class="form-control" placeholder=".. الجنس هنا"
-                                                    readonly="" value="male">
+                                                    readonly="" value="التقنية الأولي + 35 ريال">
                                             </div>
                                             <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 col-xxl-1 hide-tab"></div>
                                             <div
