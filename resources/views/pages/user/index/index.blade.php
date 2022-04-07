@@ -2089,7 +2089,7 @@
                                         <div class="">
                                             <div class="row final two justify-content-center text-center">
                                                 <div class="col-auto">
-                                                    <div class="dateTime small">{{@$public->created_at}}</div>
+                                                    <div class="dateTime small">11/01/2022 - 03:00PM</div>
                                                     <img src="{{asset('user/assets/icons/green-circle.svg')}}"
                                                         alt="green-circle">
                                                     <div>
@@ -2099,7 +2099,7 @@
                                                 <img src="{{asset('user/assets/icons/green-line.svg')}}" class="single"
                                                     alt="">
                                                 <div class="col-auto">
-                                                    <div class="dateTime small">{{@$public->created_at}}</div>
+                                                    <div class="dateTime small text-white">11/01/2022 - 03:00PM</div>
                                                     <img src="{{asset('user/assets/icons/red-circle.svg')}}"
                                                         alt="red-circle">
                                                     <div>
@@ -2109,7 +2109,7 @@
                                                 <img src="{{asset('user/assets/icons/redline.svg')}}" class="single"
                                                     alt="">
                                                 <div class="col-auto">
-                                                    <div class="dateTime small text-white">{{@$public->created_at}}
+                                                    <div class="dateTime small text-white">11/01/2022 - 03:00PM
                                                     </div>
                                                     @if(@$public->status == 2)
                                                     <img src="{{asset('user/assets/icons/green-circle.svg')}}"
@@ -2358,7 +2358,7 @@
                                         <div class="">
                                             <div class="row final two justify-content-center text-center">
                                                 <div class="col-auto">
-                                                    <div class="dateTime small">{{@$public->created_at}}</div>
+                                                    <div class="dateTime small">11/01/2022 - 03:00PM</div>
                                                     <img src="{{asset('user/assets/icons/green-circle.svg')}}"
                                                         alt="green-circle">
                                                     <div>
@@ -2368,7 +2368,7 @@
                                                 <img src="{{asset('user/assets/icons/green-line.svg')}}" class="single"
                                                     alt="">
                                                 <div class="col-auto">
-                                                    <div class="dateTime small">{{@$public->created_at}}</div>
+                                                    <div class="dateTime small">11/01/2022 - 03:00PM</div>
                                                     <img src="{{asset('user/assets/icons/green-circle.svg')}}"
                                                         alt="green-circle">
                                                     <div>
@@ -2378,7 +2378,7 @@
                                                 <img src="{{asset('user/assets/icons/green-line.svg')}}" class="single"
                                                     alt="">
                                                 <div class="col-auto">
-                                                    <div class="dateTime small text-white">{{@$public->created_at}}
+                                                    <div class="dateTime small ">11/01/2022 - 03:00PM
                                                     </div>
 
                                                     <img src="{{asset('user/assets/icons/green-circle.svg')}}"
@@ -2665,7 +2665,7 @@
                                         <div class="">
                                             <div class="row final two justify-content-center text-center">
                                                 <div class="col-auto">
-                                                    <div class="dateTime small">{{@$public->created_at}}</div>
+                                                    <div class="dateTime small">11/01/2022 - 03:00PM</div>
                                                     <img src="{{asset('user/assets/icons/green-circle.svg')}}"
                                                         alt="green-circle">
                                                     <div>
@@ -2675,7 +2675,7 @@
                                                 <img src="{{asset('user/assets/icons/green-line.svg')}}" class="single"
                                                     alt="">
                                                 <div class="col-auto">
-                                                    <div class="dateTime small">{{@$public->created_at}}</div>
+                                                    <div class="dateTime small">11/01/2022 - 03:00PM</div>
                                                     <img src="{{asset('user/assets/icons/green-circle.svg')}}"
                                                         alt="green-circle">
                                                     <div>
@@ -2685,7 +2685,7 @@
                                                 <img src="{{asset('user/assets/icons/green-line.svg')}}" class="single"
                                                     alt="">
                                                 <div class="col-auto">
-                                                    <div class="dateTime small text-white">{{@$public->created_at}}
+                                                    <div class="dateTime small">11/01/2022 - 03:00PM
                                                     </div>
 
                                                     <img src="{{asset('user/assets/icons/green-circle.svg')}}"
@@ -3054,7 +3054,7 @@
                                         <div class="">
                                             <div class="row final two justify-content-center text-center">
                                                 <div class="col-auto">
-                                                    <div class="dateTime small">{{@$public->created_at}}</div>
+                                                    <div class="dateTime small">11/01/2022 - 03:00PM</div>
                                                     <img src="{{asset('user/assets/icons/green-circle.svg')}}"
                                                         alt="green-circle">
                                                     <div>
@@ -3064,7 +3064,7 @@
                                                 <img src="{{asset('user/assets/icons/green-line.svg')}}" class="single"
                                                     alt="">
                                                 <div class="col-auto">
-                                                    <div class="dateTime small">{{@$public->created_at}}</div>
+                                                    <div class="dateTime small">11/01/2022 - 03:00PM</div>
                                                     <img src="{{asset('user/assets/icons/green-circle.svg')}}"
                                                         alt="green-circle">
                                                     <div>
@@ -3074,7 +3074,7 @@
                                                 <img src="{{asset('user/assets/icons/redline.svg')}}" class="single"
                                                     alt="">
                                                 <div class="col-auto">
-                                                    <div class="dateTime small text-white">{{@$public->created_at}}
+                                                    <div class="dateTime small text-white">11/01/2022 - 03:00PM
                                                     </div>
                                                     @if(@$public->status == 2)
                                                     <img src="{{asset('user/assets/icons/green-circle.svg')}}"
@@ -3321,7 +3321,7 @@
                                         <div class="">
                                             <div class="row final two justify-content-center text-center">
                                                 <div class="col-auto">
-                                                    <div class="dateTime small">{{@$public->created_at}}</div>
+                                                    <div class="dateTime small">11/01/2022 - 03:00PM</div>
                                                     <img src="{{asset('user/assets/icons/green-circle.svg')}}"
                                                         alt="green-circle">
                                                     <div>
@@ -3331,7 +3331,7 @@
                                                 <img src="{{asset('user/assets/icons/redline.svg')}}" class="single"
                                                     alt="">
                                                 <div class="col-auto">
-                                                    <div class="dateTime small">{{@$public->created_at}}</div>
+                                                    <div class="dateTime small text-white">11/01/2022 - 03:00PM</div>
                                                     <img src="{{asset('user/assets/icons/red-circle.svg')}}"
                                                         alt="red-circle">
                                                     <div>
@@ -3341,7 +3341,7 @@
                                                 <img src="{{asset('user/assets/icons/redline.svg')}}" class="single"
                                                     alt="">
                                                 <div class="col-auto">
-                                                    <div class="dateTime small text-white">{{@$public->created_at}}
+                                                    <div class="dateTime small text-white">11/01/2022 - 03:00PM
                                                     </div>
 
 
@@ -3603,7 +3603,7 @@
                                                 <img src="{{asset('user/assets/icons/redline.svg')}}" class="single"
                                                     alt="">
                                                 <div class="col-auto">
-                                                    <div class="dateTime small text-white">{{@$public->created_at}}</div>
+                                                    <div class="dateTime small text-white">11/01/2022 - 03:00PM</div>
                                                     <img src="{{asset('user/assets/icons/red-circle.svg')}}"
                                                         alt="red-circle">
                                                     <div>
@@ -3613,7 +3613,7 @@
                                                 <img src="{{asset('user/assets/icons/redline.svg')}}" class="single"
                                                     alt="">
                                                 <div class="col-auto">
-                                                    <div class="dateTime small text-white">{{@$public->created_at}}
+                                                    <div class="dateTime small text-white">11/01/2022 - 03:00PM
                                                     </div>
 
 
@@ -3850,7 +3850,7 @@
                                         <div class="">
                                             <div class="row final two justify-content-center text-center">
                                                 <div class="col-auto">
-                                                    <div class="dateTime small">{{@$public->created_at}}</div>
+                                                    <div class="dateTime small">11/01/2022 - 03:00PM</div>
                                                     <img src="{{asset('user/assets/icons/green-circle.svg')}}"
                                                         alt="green-circle">
                                                     <div>
@@ -3860,7 +3860,7 @@
                                                 <img src="{{asset('user/assets/icons/green-line.svg')}}" class="single"
                                                     alt="">
                                                 <div class="col-auto">
-                                                    <div class="dateTime small">{{@$public->created_at}}</div>
+                                                    <div class="dateTime small text-white">11/01/2022 - 03:00PM</div>
                                                     <img src="{{asset('user/assets/icons/red-circle.svg')}}"
                                                         alt="green-circle">
                                                     <div>
@@ -3870,7 +3870,7 @@
                                                 <img src="{{asset('user/assets/icons/redline.svg')}}" class="single"
                                                     alt="">
                                                 <div class="col-auto">
-                                                    <div class="dateTime small text-white">{{@$public->created_at}}
+                                                    <div class="dateTime small text-white">11/01/2022 - 03:00PM
                                                     </div>
                                                     @if(@$public->status == 2)
                                                     <img src="{{asset('user/assets/icons/green-circle.svg')}}"
