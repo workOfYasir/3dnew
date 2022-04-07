@@ -1813,7 +1813,7 @@
                                                         <div class="form-action requests">
                                                             <button class="btn-form designer-btn clean-btn"
                                                                 data-bs-toggle="modal"
-                                                                data-bs-target="#designerPublicServiesModal">
+                                                                data-bs-target="#cleanshotModal-readonly">
                                                                 تقديم طلب </button>
                                                             <!-- <p>يتطلب تسجيل للتسجيل اضغط هنا </p> -->
                                                         </div>
@@ -1924,6 +1924,570 @@
 
 
     <!-- ///////////////////////////////////// cleanshot Modal end here ////////////////////////////////-->
+
+
+
+
+
+    <!-- ///////////////////////////////////// read-only-cleanshot Modal  start here ////////////////////////////////-->
+
+    <div class="modal fade page" id="cleanshotModal-readonly" tabindex="-1" aria-labelledby="cleanshotLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12 p-0">
+
+                            <div class="modal-body">
+
+
+                                <!-- header designer start here -->
+                                <div class="toggle-overlay"></div>
+                                <div class="content-wrapper hide-on-load">
+                                    <nav class="navbar navbar-expand-lg navbar-light desktop-nav">
+                                        <div class="container-fluid">
+                                            <a class="navbar-brand" href="#">
+                                                <img src="{{ asset('user/assets/icons/logo.svg') }}" alt="3dOrgans-logo"
+                                                    width="150" class="d-inline-block align-text-top">
+                                            </a>
+                                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#navbarNav" aria-controls="navbarNav"
+                                                aria-expanded="false" aria-label="Toggle navigation">
+                                                <span class="navbar-toggler-icon"></span>
+                                            </button>
+                                            <div class="collapse navbar-collapse" id="navbarNav">
+                                                <ul class="navbar-nav">
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" aria-current="page" href="#">الرئيسية</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="#about-us">
+                                                            من نحن
+                                                        </a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a href="#" class="nav-link">ماهي
+                                                            تقنية الـ 3D</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a href="#services-section" class="nav-link">الخدمات</a>
+                                                    </li>
+                                                    <li class="nav-item active">
+                                                        <a class="nav-link" href="#">مجتمع المصممين</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link close-modal" href="#contact-us">اتصل بنا</a>
+                                                    </li>
+                                                    <li class="mobile-menu">
+                                                        <div class="left-side">
+                                                            <a href="#membership" class="m-0" data-bs-toggle="modal"
+                                                                data-bs-target="#memberModal"><img
+                                                                    src="{{ asset('user/assets/icons/avatar.svg') }}"
+                                                                    class="profile-img" alt="avatar"></a>
+                                                            @auth
+                                                            <a href="#membership" class="dot m-0 border-bottom"
+                                                                data-bs-toggle="modal" data-bs-target="#memberModal">{{
+                                                                auth()->user()->name }}!</a>
+                                                            @endauth
+                                                            <a href="#requests" class="ms-auto dot border-bottom "
+                                                                data-bs-toggle="modal"
+                                                                data-bs-target="#requestsModal">طلباتي</a>
+                                                            <span>
+                                                                <a href="#"><img
+                                                                        src="{{ asset('user/assets/icons/twitter.svg') }}"
+                                                                        alt="twitter"></a>
+                                                                <a href="#"><img
+                                                                        src="{{ asset('user/assets/icons/instagram.svg') }}"
+                                                                        alt="instagram"></a>
+                                                            </span>
+                                                        </div>
+                                                    </li>
+
+                                                </ul>
+                                            </div>
+                                            @auth
+                                            <div class="left-side desktop-menu">
+
+                                                <a href="#membership" class="m-0" data-bs-toggle="modal"
+                                                    data-bs-target="#memberModal">
+                                                    {{-- @if (auth()->user()->profile != null)
+                                                    @if (@auth()->user()->profile == null)
+                                                    <div class="profile-img">
+                                                        <img src="{{ asset('assets/images/dashboard/1.png') }}" alt="">
+                                                    </div>
+                                                    @else
+                                                    <div class="profile-img">
+                                                        <img src="{{ asset('storage/' . auth()->user()->profile) }}"
+                                                            style="height:40px; width:40px; border-radius: 50%">
+
+                                                    </div>
+                                                    @endif
+                                                    <a href="#membership" class="dot m-0 border-bottom"
+                                                        data-bs-toggle="modal" data-bs-target="#memberModal">{{
+                                                        auth()->user()->name }}</a>
+                                                    --}}
+                                                    <a href="javascript:void(0);" class="m-0" data-bs-toggle="modal"
+                                                        data-bs-target="#memberModal2">
+                                                        {{-- @if (auth()->user()->profile != null) --}}
+                                                        @if (@auth()->user()->profile == null)
+                                                        <div class="profile profile-icon">
+                                                            <img src="{{ asset('assets/images/dashboard/1.png') }}"
+                                                                alt="">
+                                                        </div>
+                                                        @else
+                                                        <img class="" style="width:30px;height:30px;" alt=""
+                                                            src="{{ asset(Auth::user()->profile) }}">
+                                                        @endif
+
+                                                        <a href="#membership" class="dot ms-auto border-bottom"
+                                                            data-bs-toggle="modal" data-bs-target="#memberModal">{{
+                                                            auth()->user()->name }}</a>
+
+                                                        <a href="#requests" class="ms-auto dot border-bottom "
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target="#requestsModal">طلباتي</a>
+
+
+                                                        <a href="{{route('logout')}}" onclick="return logout(event);"
+                                                            class="ms-auto dot border-bottom"
+                                                            class="dot m-0 border-bottom">
+                                                            تسجيل خروج
+                                                        </a>
+                                                        <script type="text/javascript">
+                                                            function logout(event) {
+                                                                event.preventDefault();
+                                                                var check = confirm("هل تريد حقا الخروج؟");
+                                                                if (check) {
+                                                                    document.getElementById('logout-form').submit();
+                                                                }
+                                                            }
+                                                        </script>
+                                                        <form id="logout-form" action="{{ route('logout') }}"
+                                                            method="POST">
+                                                            @csrf
+
+                                                            <button hidden type="submit" class=" sub-slide-item"
+                                                                style=" color:red; background-color: Transparent; background-repeat:no-repeat; border: none; cursor:pointer; overflow: hidden; outline:none;">Log
+                                                                Out</button>
+
+                                                        </form>
+                                                        <span>
+
+                                                            <a href="#"><img
+                                                                    src="{{ asset('user/assets/icons/twitter.svg') }}"
+                                                                    alt="twitter"></a>
+                                                            <a href="#"><img
+                                                                    src="{{ asset('user/assets/icons/instagram.svg') }}"
+                                                                    alt="instagram"></a>
+                                                        </span>
+                                            </div>
+                                            @else
+                                            <div class="left-side">
+                                                <a href="#login" data-bs-toggle="modal" class="register-icon"
+                                                    data-bs-target="#loginModal">تسجيل دخول</a>
+                                                <a href="#register" class="ms-auto register-icon" data-bs-toggle="modal"
+                                                    data-bs-target="#registerModal">التسجيل</a>
+                                                <span>
+                                                    <a href="#"><img src="{{ asset('user/assets/icons/twitter.svg') }}"
+                                                            alt="twitter"></a>
+                                                    <a href="#"><img
+                                                            src="{{ asset('user/assets/icons/instagram.svg') }}"
+                                                            alt="instagram"></a>
+                                                </span>
+                                            </div>
+                                            @endauth
+                                        </div>
+                                    </nav>
+
+                                    <div id="wrapper" class="mobile-nav">
+                                        <div id="sidebar-wrapper">
+                                            <div class="area-brand">
+                                                <a class="" href="#">
+                                                    <img src="{{ asset('user/assets/icons/logo.svg') }}"
+                                                        alt="3dOrgans-logo" width="150"
+                                                        class="d-inline-block align-text-top">
+                                                </a>
+                                            </div>
+                                            <div class="mmnue">
+                                                <ul class="sidebar-nav">
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" aria-current="page" href="#">الرئيسية</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="#about-us">
+                                                            من نحن
+                                                        </a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a href="#" class="nav-link">ماهي
+                                                            تقنية الـ 3D</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a href="#services-section" class="nav-link">الخدمات</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="#">مجتمع المصممين</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link close-modal" href="#contact-us">اتصل بنا</a>
+                                                    </li>
+                                                    @if(Auth::user())
+                                                    <li class="nav-item pt-0"> <a href="#requests"
+                                                            class="nav-link ms-auto dot " data-bs-toggle="modal"
+                                                            data-bs-target="#requestsModal">طلباتي</a></li>
+                                                    <li class="nav-item pt-0">
+                                                        <a class="nav-link dot" href="{{ route('logout') }} "
+                                                            onclick="event.preventDefault(); document.getElementById('frm-logout').submit();"><i
+                                                                data-feather="log-out"></i>تسجيل الخروج</a>
+                                                        <form id="frm-logout" action="{{ route('logout') }}"
+                                                            method="POST" style="display: none;">
+                                                            @csrf
+                                                        </form>
+                                                    </li>
+                                                    @else
+                                                    <li class="nav-item">
+
+                                                        <a href="#login" class="nav-link dot" data-bs-toggle="modal"
+                                                            data-bs-target="#loginModal">تسجيل دخول</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a href="#register" class="nav-link dot" data-bs-toggle="modal"
+                                                            data-bs-target="#registerModal">التسجيل</a>
+
+                                                    </li>
+                                                    @endif
+                                                    <li class="">
+                                                        <div class="mobile-social-icon">
+
+                                                            <a href="#"><img
+                                                                    src="{{ asset('user/assets/icons/twitter.svg') }}"
+                                                                    alt="twitter"></a>
+                                                            <a href="#"><img
+                                                                    src="{{ asset('user/assets/icons/instagram.svg') }}"
+                                                                    alt="instagram"></a>
+
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div id="page-content-wrapper">
+                                            <div class="container-fluid">
+                                                <div class="row">
+                                                    <div class="col-md-6 col-sm-3 mobile-logo">
+
+                                                        <div class="area-brand">
+                                                            <a class="" href="#">
+                                                                <img src="{{ asset('user/assets/icons/logo.svg') }}"
+                                                                    alt="3dOrgans-logo" width="150"
+                                                                    class="d-inline-block align-text-top">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-sm-9 mobile-pro-icon">
+                                                        <button class="btn mob-tog-btn" id="menu-toggle"><i
+                                                                class="fa-solid fa-bars"></i></button>
+
+                                                        <div class="mobile-profile">
+
+
+                                                            <a href="#" class="m-0" data-bs-toggle="modal"
+                                                                data-bs-target="#memberModal"><img
+                                                                    src="{{(@Auth::user()->profile == null) ?  asset('user/assets/icons/avatar.svg'): asset(Auth::user()->profile) }}"
+                                                                    class="profile-img" alt="avatar"></a>
+                                                            @if(Auth::user())
+                                                            <a href="#" class="dot m-0 border-bottom"
+                                                                data-bs-toggle="modal" data-bs-target="#memberModal">{{
+                                                                Auth::user()->name }}!</a>
+                                                            @endif
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- zahid page modal start here -->
+
+
+                                    <section class="cleanshot">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-md-12 cleanshot-close-btn">
+                                                    <button type="button" class="btn-close " data-bs-dismiss="modal"
+                                                        aria-label="Close"></button>
+                                                </div>
+                                            </div>
+                                            <div class="row cleanshot-row align-items-end">
+
+                                                <div class="col-md-12 col-lg-9 col-xl-8">
+                                                    <div class="small-card wrapper al-center">
+                                                        <div class="row">
+                                                            <div class="col-auto p-0 card-img-main">
+                                                        <div class="small-card__images-box">
+                                                            <div class="small-card__images-box-shadow"></div>
+                                                            <img class="designer-8"
+                                                                src="{{ asset('user/assets/images/design-8.png') }}"
+                                                                alt="">
+                                                            <div class="small-card__images-text al-center">
+
+                                                                <img src="{{ asset('user/assets/images/exp.png') }}"
+                                                                    alt="" class="small-card__images-img">
+                                                                <p>تكبير الصور </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-auto p-0 card-img-main">
+
+                                                        <img src="{{ asset('user/assets/images/cleancard.png') }}"
+                                                            alt="">
+                                                            </div>
+                                                            <div class="col-auto p-0">
+
+                                                        <img src="{{ asset('user/assets/images/cleancard2.png') }}"
+                                                            alt="">
+                                                            </div>
+                                                            <div class="col-auto p-0">
+
+                                                        <img src="{{ asset('user/assets/images/cleancard3.png') }}"
+                                                            alt="">
+                                                        </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12 col-lg-3 col-xl-4">
+                                                    <div class="adobe-icon">
+                                                        <h6>البرمج المستخدمة</h6>
+                                                        <img src="{{ asset('user/assets/images/ai.png') }}" alt="">
+                                                        <img src="{{ asset('user/assets/images/dn.png') }}" alt="">
+                                                        <img src="{{ asset('user/assets/images/in.png') }}" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <section class="container head-clean">
+                                        <div class="row align-items-center">
+                                            <div class="col-md-6 ">
+                                                <div class="profile tag-profile">
+                                                    <a href="#profile">
+                                                        <img src="{{ asset('/user/assets/icons/avatar.svg')}}"
+                                                            alt="avatar"> </a>
+                                                    <div class="star-profile-txt">
+                                                        <span>مصمم</span>
+                                                        <h4> أسم المصمم</h4>
+                                                        <div class="star-reating">
+                                                            <i class="fa-solid fa-star"></i>
+                                                            <i class="fa-solid fa-star"></i>
+                                                            <i class="fa-solid fa-star"></i>
+                                                            <i class="fa-solid fa-star"></i>
+                                                            <i class="fa-solid fa-star"></i>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <button class="btn btn-sky invert personal-pro zhd-product-visit">
+                                                    الملف الشخصي
+
+                                                </button>
+                                            </div>
+
+
+                                        </div>
+                                        <div class="row clean-headings">
+                                            <div class="col-md-12">
+                                                <h3>عنوان التصميم يكتب هنا ويستوعب سطرين كحد اقصى ..</h3>
+                                                <h6>27 ديسمبر 2021</h6>
+
+                                                <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا
+                                                    النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد
+                                                    من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="form form-clean">
+                                            <div class="row zhd-form-clean">
+                                                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mt-4">
+                                                    <label class="form-label dot">اختيار اللون</label>
+
+                                                    <div class="color-circle-main">
+                                                        <div class="blue-text">
+                                                            <span> أبيض</span>
+                                                        </div>
+                                                        <div class="color-circle blue-border"></div>
+                                                        <div class="color-circle yellow"></div>
+                                                        <div class="color-circle orange"></div>
+                                                        <div class="color-circle"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mt-4">
+                                                    <label class="form-label dot">الكمية</label>
+                                                    <select class="form-select" required name=""
+                                                        aria-label="Default select example">
+                                                        <option></option>
+                                                        <option>1</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mt-4">
+                                                    <label class="form-label dot">المقاسات</label>
+                                                    <select class="form-select" required name=""
+                                                        aria-label="Default select example">
+                                                        <option></option>
+                                                        <option>اختيار المقاس</option>
+
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="row circle-bottom justify-content-center">
+                                                
+                                                <div class="col-md-4 mt-5">
+                                                    <label class="form-label dot">شكل الطباعة</label>
+                                                    <select class="form-select gender" required name="gender"
+                                                        aria-label="Default select example">
+                                                        <option></option>
+                                                        <option>الاشكال هنا</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-4 mt-5">
+                                                    <label class="form-label dot">تقنية الطباعة</label>
+                                                    <select class="form-select gender" required name="gender"
+                                                        aria-label="Default select example">
+                                                        <option></option>
+                                                        <option>+ 35 ريال التقنية الأولي</option>
+                                                    </select>
+                                                </div>
+                                               
+                                            </div>
+
+
+                                            <div class="row zhd-textarea-clean">
+                                                <div class="col-md-12 textarea-clean-short">
+                                                    <label class="form-label dot">الملاحظات</label>
+                                                    <textarea class="form-control" id="exampleFormControlTextarea1"
+                                                        rows="4" placeholder="   الملاحظات .."></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer footer-clean">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="form-action requests">
+                                                            <button class="btn-form designer-btn clean-btn"
+                                                                data-bs-toggle="modal"
+                                                                data-bs-target="#designerPublicServiesModal">ارسال </button>
+                                                                <button class="ahs-profile-plus-btn productadd-top-btn show-bg-pink">
+                                            تعديل
+                                        </button>
+                                                         
+                                                        </div>
+                                                       <div class="text-center mt-4">
+                                                       <p>هل أنت متأكد من ارسال الطلب ؟</p>
+                                                       </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                </div>
+
+                                </section>
+
+                                <!-- zahid page modal end here -->
+
+                                <!-- design footer start here -->
+                                <section class="contact design-footer design-1-footer">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <ul class="footer-nav">
+                                                            <li class="nav-item">
+                                                                <a class="nav-link active" aria-current="page"
+                                                                    href="index.html">الرئيسية</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" href="#about-us">
+                                                                    من نحن
+                                                                </a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" href="#">
+                                                                    ماهي تقنية الـ 3D
+                                                                </a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" href="#services-section">الخدمات</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" href="#">مجتمع المصممين</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" href="#contact-us">اتصل بنا</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container-fluid">
+                                        <footer>
+                                            <div class="row">
+                                                <div class="col-md-4 col-xl-4">
+                                                    <div class="right">
+                                                        <p>تصميم وتطوير شركة تيلرز</p>
+                                                        <a href="https://tellers.sa/"><img
+                                                                src="{{ asset('user/assets/icons/tellers-logo.png') }}"
+                                                                alt="tellers-logo"></a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-5 col-xl-4">
+                                                    <p>جميع الحقوق محفوظة لـ &nbsp;+3D&nbsp; لعام 2022</p>
+                                                </div>
+                                                <div class="col-md-3 col-xl-4">
+                                                    <div class="social">
+                                                        <a href="#"><img
+                                                                src="{{ asset('user/assets/icons/twitter.png') }}"
+                                                                alt="twitter"></a>
+                                                        <a href="#"><img
+                                                                src="{{ asset('user/assets/icons/instagram.png') }}"
+                                                                alt="instagram"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </footer>
+                                    </div>
+                            </div>
+                            </footer>
+                        </div>
+                        </section>
+
+
+                        <!-- design footer end here -->
+
+
+
+
+                        <!-- disign section end here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <!-- header cleanshot end here ///////////////////////////////////////////////////-->
+
+
+    <!-- ///////////////////////////////////// read-only-cleanshot Modal end here ////////////////////////////////-->
     <!-- zahid-page2 start -->
 
     <div class="modal fade page form animate__animated animate__fadeInLeft animate__fast"

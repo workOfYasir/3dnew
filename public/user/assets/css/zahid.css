@@ -382,3 +382,6 @@ opacity: 0 !important;
     background-color: unset !important;
     pointer-events:auto !important;
 }
+#cleanshotModal-readonly .form-action{
+    position:relative !important;
+}
