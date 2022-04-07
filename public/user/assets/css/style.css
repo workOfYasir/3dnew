@@ -229,7 +229,7 @@ nav .left-side a:last-child {
 */
 
 .btm-line {
-    /* position: relative; */
+    position: relative;
     text-align: right;
 }
 
@@ -240,6 +240,8 @@ nav .left-side a:last-child {
     width: 60px;
     box-shadow: 0 6px 6px rgb(0 0 0 / 16%);
     bottom: -7px;
+    left: 0;
+    right: 0;
 }
 
 .footer-white-heading .inner-line {
@@ -3124,5 +3126,9 @@ input[type=number] {
 
     #designinnerModal .designer-sec-1::after{
         background: -webkit-linear-gradient(360deg, rgba(255, 255, 255, 100%), transparent) !important;
+    }
+
+    .btm-line {
+        position: static;
     }
 }
