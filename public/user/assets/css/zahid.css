@@ -365,3 +365,7 @@ opacity: 0 !important;
     /* z-index: 1; */
     bottom: 170px !important;
 }
+.uplod-txt .form-control{
+    background-color: unset !important;
+    pointer-events:auto !important;
+}

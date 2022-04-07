@@ -2221,13 +2221,13 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="row justify-content-between conditional-blur">
+                                    <div class="row justify-content-between conditional-blur uplod-txt">
                                         <h1 class="title text-center mt-5 no-border conditional-blur zhd-quote">تقديم
                                             عرض سعر</h1>
                                         <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 service-fee-zhd">
                                             <label class="form-label">تكلفة تنفيذ الخدمة</label>
                                             <input type="text" class="form-control" placeholder="كتابة القيمة هنا .."
-                                                readonly value="{{@$public->print_type}}">
+                                                 value="{{@$public->print_type}}">
                                             <div class="service-fee-text">
                                                 <span> سيتم اضافة رسوم الخدمة 10% وقيمة الضريبة المضافة 15%
                                                     تلقائياً</span>
@@ -2237,12 +2237,12 @@
                                         <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
                                             <label class="form-label">تاريخ البداية</label>
                                             <input type="text" class="form-control" placeholder="تحديد التاريخ هنا .."
-                                                readonly value="{{@$public->print_color}}">
+                                                 value="{{@$public->print_color}}">
                                         </div>
                                         <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
                                             <label class="form-label">تاريخ التسليم</label>
                                             <input type="text" class="form-control" placeholder="تحديد التاريخ هنا .. "
-                                                readonly value="{{@$public->print_resolution}}">
+                                                value="{{@$public->print_resolution}}">
                                         </div>
                                         <!-- <div class="row conditional-blur">
                                           <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
