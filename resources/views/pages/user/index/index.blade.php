@@ -2566,10 +2566,11 @@
                                                             <a href="#"
                                                                 class="btn btn-form mx-3 with-arrow mt-10 red-btn">رفض</a>
 
-                                                            <p class="mt-4">الرجاء التأكد من ارسال كافة الملفات لتجنب
-                                                                تقديم بلاغ عليك</p>
+                                                           
                                                         </div>
                                                     </h1>
+                                                    <p class="mt-4  modal-bottom-txt">الرجاء التأكد من ارسال كافة الملفات لتجنب
+                                                                تقديم بلاغ عليك</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -2935,10 +2936,10 @@
                                                         <div class="zhd-finished">
                                                             <a href="#star-blur-scroll"
                                                                 class="btn btn-form mx-3 with-arrow uplod-rev-btn mt-10 starbluerModal-btn">منتهي</a>
-                                                            <p class="mt-4">الرجاء التأكد من ارسال كافة الملفات لتجنب
-                                                                تقديم بلاغ عليك</p>
+                                                           
                                                         </div>
                                                     </h1>
+                                                    
                                                     <h1
                                                         class="title text-center mt-5 no-border conditional-blur show-footer-btns">
                                                         <div class="zhd-finished">
@@ -3193,7 +3194,7 @@
                                                     <input type="text" class="form-control"
                                                         placeholder="كتابة القيمة هنا .." readonly
                                                         value="{{@$public->print_type}}">
-                                                    <div class="service-fee-text">
+                                                    <div class="service-fee-text text-center">
                                                         <span>شامل رسوم الخدمة + قيمة الضريبة المضافة</span>
                                                     </div>
                                                 </div>
@@ -3218,14 +3219,13 @@
                                                         class="btn btn-form mx-3 with-arrow uplod-rev-btn mt-10"
                                                         data-bs-toggle="modal"
                                                         data-bs-target="#designer-submit-quote">ارسال</a>
-                                                    <a href="javascript:void(0);"
-                                                        class="btn btn-form mx-3 with-arrow mt-10 red-btn"
-                                                        data-bs-toggle="modal" data-bs-target="#">رفض</a>
+                                                    <a href="#" class="btn btn-form mx-3 with-arrow mt-10 red-btn">رفض</a>
 
-                                                    <p class="mt-4">سيتم ارسال تفاصيل تنفيذ المهمة الى المستخدم للقبول
-                                                        او الرفض</p>
+                                                    
                                                 </div>
                                             </h1>
+                                            <p class="mt-4  modal-bottom-txt">سيتم ارسال تفاصيل تنفيذ المهمة الى المستخدم للقبول
+                                                        او الرفض</p>
                                         </div>
                                     </div>
                                 </div>
@@ -3467,7 +3467,7 @@
                                                     <input type="text" class="form-control"
                                                         placeholder="كتابة القيمة هنا .." readonly
                                                         value="{{@$public->print_type}}">
-                                                    <div class="service-fee-text">
+                                                    <div class="service-fee-text text-center">
                                                         <span>شامل رسوم الخدمة + قيمة الضريبة المضافة</span>
                                                     </div>
                                                 </div>
@@ -3492,9 +3492,10 @@
                                                         class="btn btn-form mx-3 with-arrow mt-10"
                                                         data-bs-toggle="modal"
                                                         data-bs-target="#designer-information">طلباتي</a>
-                                                    <p class="mt-4">طلب مرفوض من قبل المستخدم</p>
+                                                    
                                                 </div>
                                             </h1>
+                                            <p class="mt-4  modal-bottom-txt">طلب مرفوض من قبل المستخدم</p>
                                         </div>
                                     </div>
                                 </div>
@@ -3751,9 +3752,10 @@
                                             <h1 class="title text-center mt-5 no-border conditional-blur">
                                                 <div class="zhd-finished">
                                                     <a href="#" class="btn btn-form mx-3 with-arrow mt-10">طلباتي</a>
-                                                    <p class="mt-4">طلب مرفوض من قبل المصمم</p>
+                                                   
                                                 </div>
                                             </h1>
+                                            <p class="mt-4  modal-bottom-txt">طلب مرفوض من قبل المصمم</p>
                                         </div>
                                     </div>
                                 </div>
@@ -4046,10 +4048,11 @@
                                                         data-bs-toggle="modal"
                                                         data-bs-target="#designer-bid-rejected">رفض</a>
 
-                                                    <p class="mt-4">سيتم ارسال تفاصيل تنفيذ المهمة الى المستخدم للقبول
-                                                        او الرفض</p>
+                                                   
                                                 </div>
                                             </h1>
+                                            <p class="mt-4  modal-bottom-txt">سيتم ارسال تفاصيل تنفيذ المهمة الى المستخدم للقبول
+                                                        او الرفض</p>
                                         </div>
                                     </div>
                                 </div>
