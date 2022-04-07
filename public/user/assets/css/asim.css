@@ -455,7 +455,8 @@
 #designinnerModal .designer-sec-1::after{
     content: "";
     position: absolute;
-    background: linear-gradient(360deg, rgba(255, 255, 255, 100%), transparent) !important;
+    background: linear-gradient(360deg, rgba(255, 255, 255, 100%), rgba(255, 255, 255, 0)) !important;
+    /* background: linear-gradient(360deg, rgba(255, 255, 255, 100%), transparent) !important; */
     /* background: -webkit-linear-gradient(360deg, rgba(255, 255, 255, 100%), transparent) !important; */
     background-repeat: no-repeat;
     top: 320px;
@@ -464,6 +465,7 @@
     width: 100%;
     height: 130px;
     z-index: -1;
+
 }
 
 #userRequestModal .modal-header {
@@ -600,7 +602,9 @@
         }
 
         /* end home page */
-
+        .btn-list .blur-part{
+            display: none;
+        }
         .designer-sec {
             padding-top: 150px;
             margin-top: 60px;
@@ -835,6 +839,10 @@
             margin-top: 10px;
             width: 91%;
         }
+        #financialOperations2 .membership-edit {
+            width: 81%;
+        }
+        
 
         .modal.page .btn-close{
             margin-right: 10px;
@@ -879,6 +887,10 @@
         }
         .btn-list .btn-blue{
             margin-bottom: 30px;
+        }
+
+        .btn-list .blur-part{
+            display: none;
         }
 
         #designinnerModal .designer-sec::before{
