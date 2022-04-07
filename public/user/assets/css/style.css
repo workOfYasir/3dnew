@@ -242,6 +242,7 @@ nav .left-side a:last-child {
     bottom: -7px;
     left: 0;
     right: 0;
+    margin-right: 2px; 
 }
 
 .footer-white-heading .inner-line {
