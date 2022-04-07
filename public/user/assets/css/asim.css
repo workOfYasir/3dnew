@@ -568,6 +568,7 @@
 
 #requestsModal .modal-footer {
     position: relative !important;
+    padding-top: 50px;
 }
     /* styling end here */
 
