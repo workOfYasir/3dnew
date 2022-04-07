@@ -2948,16 +2948,17 @@
                                                                 class="btn btn-form mx-3 with-arrow uplod-rev-btn mt-10 starbluerModal-btn">تم
                                                                 الارسال</a>
                                                             <a href="javascript:void(0);"
-                                                                class="btn btn-form mx-3 with-arrow red-btn mt-10 starbluerModal-btn">الفاتورة</a>
+                                                                class="btn btn-form mx-3 with-arrow pink-btn-bg mt-10 starbluerModal-btn">الفاتورة</a>
+                                                            <a href="javascript:void(0);"
+                                                                class="btn btn-form mx-3 with-arrow red-btn mt-10 starbluerModal-btn" data-bs-toggle="modal"
+                                                                data-bs-target="#designer-bid-submission">تقديم بلاغ</a>
                                                             <!-- <a href="javascript:void(0);" class="btn btn-form mx-3 with-arrow mt-10 starbluerModal-btn"  data-bs-toggle="modal" data-bs-target="#designer-bid-submission">تقديم بلاغ</a> -->
-                                                            <button class="btn-form designer-btn clean-btn"
-                                                                data-bs-toggle="modal"
-                                                                data-bs-target="#designer-bid-submission"> تقديم
-                                                                بلاغ</button>
-                                                            <p class="mt-4">الرجاء التأكد من ارسال كافة الملفات لتجنب
-                                                                تقديم بلاغ عليك</p>
+                                                         
+                                                           
                                                         </div>
                                                     </h1>
+                                                    <p class="mt-4 modal-bottom-txt">الرجاء التأكد من ارسال كافة الملفات لتجنب
+                                                                تقديم بلاغ عليك</p>
                                                 </div>
                                             </div>
                                         </div>
