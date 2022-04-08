@@ -469,6 +469,36 @@ $(document).ready(function () {
 
     })
 
+    // designModal mobile navbar script start
+    $("#designModal #menu-toggle").click(function (e) {
+        e.preventDefault();
+        $("#designModal #wrapper").toggleClass("menuDisplayed");
+        $("#designModal .sec-main").toggleClass("sec-main-pos");
+        $("#designModal .toggle-overlay").toggleClass("overlay");
+
+    });
+
+    $('#designModal #wrapper .nav-item').click(function () {
+        $("#designModal #wrapper").toggleClass("menuDisplayed");
+    })
+    const menudesignModal = $('#designModal #menu-toggle');
+    $('#designModal').click(function (e) {
+        // $("#wrapper").removeClass("menuDisplayed");
+        if (!menudesignModal.is(e.target) // if the target of the click isn't the container...
+            &&
+            menudesignModal.has(e.target).length === 0) // ... nor a descendant of the container
+        {
+            $("#designModal #wrapper").removeClass("menuDisplayed");
+
+            $("#designModal .toggle-overlay").removeClass("overlay");
+        }
+
+    })
+
+
+    // designModal mobile navbar script end
+
+
     // navbar active class
 
     $("#navbarNav .nav-item").click(function () {

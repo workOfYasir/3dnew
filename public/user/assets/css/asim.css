@@ -935,6 +935,50 @@
                 bottom: 300px !important;
             }
 
+
+            
+            /* membermodal */
+            #memberModal .profile.ahs-member-model-box{
+                text-align: left;
+            }
+            #memberModal .member-cross-btn{
+                width: 200px;
+            }
+            #memberModal .ahs-member-model-box .btn{
+                margin-left: 0px;
+            }
+            #memberModal #blah1{
+                width: 100%;
+            }
+            #memberModal .ahs-img-uploder-cam{
+                width: 34px;
+                bottom: 0;
+            }
+
+            #memberModal .almuntjat-form-error__img{
+                margin: 0px !important;
+                width: 30px;
+                margin-left: 20px !important;
+            }
+
+/* designModal */
+
+           #designModal #page-content-wrapper{
+                position: relative;
+            }
+            #designModal #sidebar-wrapper{
+                right: 0;
+            }
+            #designModal #wrapper.menuDisplayed #sidebar-wrapper {
+                right: 0;
+            }
+            #designModal .toggle-overlay.overlay{
+                z-index: 9999;
+            }
+
+
+
+            
     }
 
     /* ////////////////////////////////////////// mobile landscape responsive //////////////////////////////////////////////////////// */
@@ -1082,6 +1126,26 @@
         margin-top: 50px;
     }
 
+    /* membermodal */
+    #memberModal .profile.ahs-member-model-box{
+        text-align: left;
+    }
+    #memberModal .ahs-member-model-box .btn{
+        margin-left: 0px;
+    }
+    #memberModal #blah1{
+        width: 100%;
+    }
+    #memberModal .ahs-img-uploder-cam{
+        width: 34px;
+    }
+    
+    #memberModal .almuntjat-form-error__img{
+        margin: 0px !important;
+        width: 30px;
+        margin-left: 20px !important;
+    }
+    
 
     
     }
