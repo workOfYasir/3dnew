@@ -8017,10 +8017,10 @@
                                                         </div>
                                                         <div class="wrapper jst-center userReq-btn-box userReq-btn-box--a bill-click-show">
                                                             <button
-                                                                class="userReq-btn-box__btn userReq-btn-box__btn--d">انهاء
+                                                                class="userReq-btn-box__btn userReq-btn-box__btn--d orange-bg">انهاء
                                                                 الخدمة</button>
                                                             <button
-                                                                class="userReq-btn-box__btn userReq-btn-box__btn--d orange-bg">الفاتورة</button>
+                                                                class="userReq-btn-box__btn userReq-btn-box__btn--d ">الفاتورة</button>
                                                             <button
                                                                 class="userReq-btn-box__btn userReq-btn-box__btn--e mgl-0"
                                                                 data-bs-toggle="modal"
