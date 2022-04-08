@@ -385,3 +385,6 @@ opacity: 0 !important;
 #cleanshotModal-readonly .form-action{
     position:relative !important;
 }
+.mob-margin .mt-5{
+    margin-top: 1.5rem!important;
+}

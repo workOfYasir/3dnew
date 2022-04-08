@@ -2763,7 +2763,7 @@
                                                     readonly="" value="اختيار المقاس">
                                             </div>
                                         </div>
-                                        <div class="row align-items-end p-xs-0 conditional-blur justify-content-between">
+                                        <div class="row align-items-end p-xs-0 conditional-blur justify-content-between mob-margin">
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-5">
                                                 <label class="form-label">شكل الطباعة</label>
                                                 <input type="text" class="form-control" placeholder=".. التخصص هنا"
@@ -2994,7 +2994,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="row align-items-end py-4 conditional-blur justify-content-between">
+                                        <div class="row align-items-end py-4 conditional-blur justify-content-between mob-margin">
 
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
                                                 <label class="form-label">اختيار اللون</label>
@@ -3256,7 +3256,7 @@
                                         </div>
                                         <div class="row align-items-end p-xs-0  conditional-blur">
 
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mob-margin">
                                                 <label class="form-label">اختيار اللون</label>
                                                 <div class="color-circle-main">
                                                     <div class="blue-text">
@@ -3593,7 +3593,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="row align-items-end p-xs-0  conditional-blur">
+                                        <div class="row align-items-end p-xs-0  conditional-blur mob-margin">
 
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
                                                 <label class="form-label">اختيار اللون</label>
@@ -3953,7 +3953,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="row align-items-end p-xs-0  conditional-blur">
+                                        <div class="row align-items-end p-xs-0  conditional-blur mob-margin">
 
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
                                                 <label class="form-label">اختيار اللون</label>
@@ -4217,7 +4217,7 @@
                                  </div>
                               </div>
                            </div> -->
-                                        <div class="row align-items-end p-xs-0  conditional-blur">
+                                        <div class="row align-items-end p-xs-0  conditional-blur mob-margin">
 
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
                                                 <label class="form-label">اختيار اللون</label>
@@ -4489,7 +4489,7 @@
                                  </div>
                               </div>
                            </div> -->
-                                        <div class="row align-items-end p-xs-0  conditional-blur">
+                                        <div class="row align-items-end p-xs-0  conditional-blur mob-margin">
 
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
                                                 <label class="form-label dot">اختيار اللون</label>
@@ -4749,7 +4749,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="row align-items-end p-xs-0  conditional-blur">
+                                        <div class="row align-items-end p-xs-0  conditional-blur mob-margin">
 
                                             <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
                                                 <label class="form-label dot">اختيار اللون</label>

@@ -88,7 +88,8 @@
                                 </h1>
                             </div>
                             <div class="profile ahs-member-model-box">
-                                <button class="btn btn-sky edit-profile--ahs">المنتجات</button>
+                                <button  class="btn btn-sky edit-profile--ahs"   data-bs-toggle="modal"
+                                                        data-bs-target="#productdesignModal">المنتجات</button>
                                 <button class="btn btn-sky edit-profile membership-edit">تعديل</button>
                             </div>
                         </div>
