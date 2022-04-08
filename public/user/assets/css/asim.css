@@ -596,6 +596,16 @@
             width: 40px !important;
 
         }
+        #productaddformModal .change-zhd{
+            margin: 0px;
+            padding: 0px;
+            width: 110px;
+        }
+        #productaddformModal .modal-header{
+            padding-left: 0 !important;
+            padding-right: 0!important;
+
+        }
         .dot-txt-main .dot.center::before {
             right: -113px !important;
         }

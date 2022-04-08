@@ -6961,7 +6961,7 @@
                                                         class="inner-line"></span></span></h1>
 
                                         </div>
-                                        <button class="ahs-profile-plus-btn productadd-top-btn show-bg-pink">
+                                        <button class="ahs-profile-plus-btn productadd-top-btn show-bg-pink change-zhd">
                                             تعديل
                                         </button>
 
