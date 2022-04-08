@@ -5063,9 +5063,9 @@
                                         </div>
                                         @else
                                         <div class="left-side">
-                                            <a href="#login" data-bs-toggle="modal" class="register-icon"
+                                            <a href="#login" data-bs-toggle="modal" class="register-icon border-bottom"
                                                 data-bs-target="#loginModal">تسجيل دخول</a>
-                                            <a href="#register" class="ms-auto register-icon" data-bs-toggle="modal"
+                                            <a href="#register" class="ms-auto register-icon border-bottom" data-bs-toggle="modal"
                                                 data-bs-target="#registerModal">التسجيل</a>
                                             <span>
                                                 <a href="#"><img src="{{ asset('user/assets/icons/twitter.svg') }}"

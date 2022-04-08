@@ -572,7 +572,10 @@
     /* styling end here */
 
 
-
+#designModal nav .left-side .border-bottom, #designinnerModal nav .left-side .border-bottom, #cleanshotModal nav .left-side .border-bottom{
+    border-bottom-color: #58595B !important;
+    padding-bottom: 2px;
+}
 
 
 
