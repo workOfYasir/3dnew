@@ -885,6 +885,7 @@
 
         .modal.page .btn-close{
             margin-right: 10px;
+            margin-bottom: 0px;
         }
         
         #financialOperations .ahs-member-model-box{
