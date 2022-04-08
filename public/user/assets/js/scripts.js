@@ -474,8 +474,7 @@ $(document).ready(function () {
         e.preventDefault();
         $("#designModal #wrapper").toggleClass("menuDisplayed");
         $("#designModal .sec-main").toggleClass("sec-main-pos");
-        $("#designModal .toggle-overlay").toggleClass("overlay");
-
+        $("#designModal .toggle-overlay").addClass("overlay-modal");
     });
 
     $('#designModal #wrapper .nav-item').click(function () {
@@ -490,7 +489,7 @@ $(document).ready(function () {
         {
             $("#designModal #wrapper").removeClass("menuDisplayed");
 
-            $("#designModal .toggle-overlay").removeClass("overlay");
+            $("#designModal .toggle-overlay").removeClass("overlay-modal");
         }
 
     })
@@ -498,7 +497,57 @@ $(document).ready(function () {
 
     // designModal mobile navbar script end
 
+    // designinnerModal mobile navbar script start
+    $("#designinnerModal #menu-toggle").click(function (e) {
+        e.preventDefault();
+        $("#designinnerModal #wrapper").toggleClass("menuDisplayed");
+        $("#designinnerModal .sec-main").toggleClass("sec-main-pos");
+        $("#designinnerModal .toggle-overlay").addClass("overlay-modal");
+    });
 
+    $('#designinnerModal #wrapper .nav-item').click(function () {
+        $("#designinnerModal #wrapper").toggleClass("menuDisplayed");
+    })
+    const menudesigninnerModal = $('#designinnerModal #menu-toggle');
+    $('#designinnerModal').click(function (e) {
+        // $("#wrapper").removeClass("menuDisplayed");
+        if (!menudesigninnerModal.is(e.target) // if the target of the click isn't the container...
+            &&
+            menudesigninnerModal.has(e.target).length === 0) // ... nor a descendant of the container
+        {
+            $("#designinnerModal #wrapper").removeClass("menuDisplayed");
+
+            $("#designinnerModal .toggle-overlay").removeClass("overlay-modal");
+        }
+
+    })
+    // designinnerModal mobile navbar script end
+     // cleanshotModal mobile navbar script start
+     $("#cleanshotModal #menu-toggle").click(function (e) {
+        e.preventDefault();
+        $("#cleanshotModal #wrapper").toggleClass("menuDisplayed");
+        $("#cleanshotModal .sec-main").toggleClass("sec-main-pos");
+        $("#cleanshotModal .toggle-overlay").addClass("overlay-modal");
+    });
+
+    $('#cleanshotModal #wrapper .nav-item').click(function () {
+        $("#cleanshotModal #wrapper").toggleClass("menuDisplayed");
+    })
+    const menucleanshotModal = $('#cleanshotModal #menu-toggle');
+    $('#cleanshotModal').click(function (e) {
+        // $("#wrapper").removeClass("menuDisplayed");
+        if (!menucleanshotModal.is(e.target) // if the target of the click isn't the container...
+            &&
+            menucleanshotModal.has(e.target).length === 0) // ... nor a descendant of the container
+        {
+            $("#cleanshotModal #wrapper").removeClass("menuDisplayed");
+
+            $("#cleanshotModal .toggle-overlay").removeClass("overlay-modal");
+        }
+
+    })
+    // cleanshotModal mobile navbar script end
+    
     // navbar active class
 
     $("#navbarNav .nav-item").click(function () {

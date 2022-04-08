@@ -5889,7 +5889,7 @@
                                 <div class="toggle-overlay"></div>
                                 <div class="content-wrapper hide-on-load">
                                     <nav class="navbar navbar-expand-lg navbar-light desktop-nav">
-                                        <div class="container-fluid">
+                                        <div class="container-fluid mob-p-0">
                                             <a class="navbar-brand" href="#">
                                                 <img src="{{ asset('user/assets/icons/logo.svg') }}" alt="3dOrgans-logo"
                                                     width="150" class="d-inline-block align-text-top">
@@ -6985,7 +6985,7 @@
                                             <div class="row">
                                                 <div class="col-auto">
                                                     <div class="product-add-upload uplod-img-active">
-                                                        <div class="overlay"></div>
+                                                        <div class="product-overlay"></div>
                                                         <img src="{{ asset('user/assets/images/design-8.png') }}"
                                                             class="img-fluid" alt="">
                                                         <p class="">الغلاف</p>

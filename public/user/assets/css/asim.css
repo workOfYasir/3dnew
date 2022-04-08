@@ -217,7 +217,7 @@
     /* #productaddModal .red-dot , #productaddformModal .red-dot{
         transform: translate(0px);
     } */
-    .overlay{
+    .product-overlay{
         position: absolute;
         content: '';
         left: 0;
@@ -624,6 +624,10 @@
         }
 
         /* end home page */
+
+        .mob-p-0{
+            padding: 0px;
+        }
         .btn-list .blur-part{
             display: none;
         }
@@ -705,6 +709,14 @@
             padding-top: 140px;
             padding-right: 20px;
         }
+        #designinnerModal #menu-toggle{
+            left: 25px !important;
+            top: 35px !important;
+        }
+        #designinnerModal #page-content-wrapper{
+            padding-right: 0px !important;
+        }
+        
 
         #productaddModal .almuntjat-form{
             padding: 0px !important;
@@ -859,8 +871,10 @@
         }
         .membership-edit{
             margin-top: 10px;
-            width: 91%;
+            /* width: 91%; */
+            padding: 4px 35px!important;
         }
+    
         #financialOperations2 .membership-edit {
             width: 81%;
         }
@@ -974,6 +988,9 @@
                 width: 30px;
                 margin-left: 20px !important;
             }
+            #memberModal .edit-profile.membership-edit{
+                padding: 4px 33px !important;
+            }
 
 /* designModal */
 
@@ -986,9 +1003,18 @@
             #designModal #wrapper.menuDisplayed #sidebar-wrapper {
                 right: 0;
             }
-            #designModal .toggle-overlay.overlay{
-                z-index: 9999;
+            #designinnerModal #wrapper.menuDisplayed #sidebar-wrapper {
+                right: 0;
+                top: 0;
             }
+            #designinnerModal #wrapper.mobile-nav #sidebar-wrapper{
+                right: 0;
+                top: 0;
+            }
+            #cleanshotModal #wrapper.menuDisplayed #sidebar-wrapper {
+                right: 0;
+            }
+
 
 
 
@@ -1004,6 +1030,9 @@
     /* ////////////////////////////////////////// tab landscape responsive //////////////////////////////////////////////////////// */
 
     @media (min-width: 768px) and (max-width: 991px) {
+        .designer-sec::before, .designer-sec::after, #designinnerModal .designer-sec-1::after, #designinnerModal .designer-sec::before{
+            display: none;
+        }
         .notification-box.notification-box-wdt{
             width: 300px;
         }
@@ -1033,6 +1062,13 @@
         #designinnerModal .designer-sec::before{
             width: 1220px;
             bottom: 500px;
+        }
+        #designinnerModal  #wrapper.menuDisplayed #sidebar-wrapper {
+            right: 0;
+        }
+        #designinnerModal .modal-header {
+            padding-top: 140px;
+            padding-right: 20px;
         }
         #productdesignModal .btn-close{
             transform: translate(10px);
@@ -1129,7 +1165,7 @@
         margin-top: 30px;   
         float: right;
     }
-
+ 
     #designerPublicServiesModal .submitted-data p {
         font-size: 17px;
     }
@@ -1160,6 +1196,9 @@
         margin-left: 20px !important;
     }
     
+    #designModal #page-content-wrapper{
+        position: relative;
+    }
 
     
     }

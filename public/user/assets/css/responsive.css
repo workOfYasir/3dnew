@@ -21,6 +21,21 @@
     z-index: 1000;
     transition: all .3s;
 }
+.overlay-modal{
+    position: absolute;
+    content: '';
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    opacity: 0.6;
+    visibility: visible;
+    background: #333;
+    z-index: 10000;
+    transition: all .3s;
+}
+
+
 .mob-profile-heading{
     display: block;
     position: absolute;
@@ -1168,7 +1183,19 @@
         z-index: 1000;
         transition: all .3s;
     }
-
+    .overlay-modal{
+        position: absolute;
+        content: '';
+        left: 0px;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        opacity: 0.6;
+        visibility: visible;
+        background: #333;
+        z-index: 10000;
+        transition: all .3s;
+    }
 
     /* */
     .mobile-nav .nav-item.active a {
