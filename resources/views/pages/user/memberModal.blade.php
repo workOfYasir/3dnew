@@ -78,10 +78,10 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="modal-header border-0">
-                            <div class=" ahs-member-model-box">
+                            <div class="ahs-member-model-box member-cross-btn">
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
-                            <div class=" ahs-member-model-box">
+                            <div class="ahs-member-model-box">
                                 <span class="outline dot">اهلاً وسهلاً بكم</span>
                                 <h1 class="modal-title right" style="color: black;">
                                     <span class="btm-line"></span><span class="inner-line"></span> معلومات العضوية
