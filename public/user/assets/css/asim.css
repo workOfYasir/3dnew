@@ -911,8 +911,14 @@
                 width: 100% !important;
             }
            
-            .designer-bdy .btn-upload-designer, .designer-bdy .red-btn{
+            .designer-bdy .btn-upload-designer, .designer-bdy .red-btn, .btn-form{
                 margin-top: 30px;
+                margin-left: 0px !important;
+                margin-right: 0px !important;
+            }
+
+            #designer-bid-submission .btn-form {
+                margin-top: 0px !important;
             }
             .zhd-finished .btn{
                 margin-left: 0px !important;
