@@ -2370,7 +2370,7 @@
                                                 <div class="col-md-12 textarea-clean-short">
                                                     <label class="form-label dot">الملاحظات</label>
                                                     <textarea class="form-control" id="exampleFormControlTextarea1"
-                                                        rows="4" placeholder="   الملاحظات .."></textarea>
+                                                        rows="4" readonly placeholder="   الملاحظات .."></textarea>
                                                 </div>
                                             </div>
                                             <div class="modal-footer footer-clean">
