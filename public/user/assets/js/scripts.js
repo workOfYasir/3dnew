@@ -497,6 +497,7 @@ $(document).ready(function () {
 
     // designModal mobile navbar script end
 
+
     // designinnerModal mobile navbar script start
     $("#designinnerModal #menu-toggle").click(function (e) {
         e.preventDefault();
@@ -548,6 +549,32 @@ $(document).ready(function () {
     })
     // cleanshotModal mobile navbar script end
     
+    // cleanshotModal-readonly mobile navbar script start
+    $("#cleanshotModal-readonly #menu-toggle").click(function (e) {
+        e.preventDefault();
+        $("#cleanshotModal-readonly #wrapper").toggleClass("menuDisplayed");
+        $("#cleanshotModal-readonly .sec-main").toggleClass("sec-main-pos");
+        $("#cleanshotModal-readonly .toggle-overlay").addClass("overlay-modal");
+    });
+
+    $('#cleanshotModal-readonly #wrapper .nav-item').click(function () {
+        $("#cleanshotModal-readonly #wrapper").toggleClass("menuDisplayed");
+    })
+    const menucleanshotModalreadonly = $('#cleanshotModal-readonly #menu-toggle');
+    $('#cleanshotModal-readonly').click(function (e) {
+        // $("#wrapper").removeClass("menuDisplayed");
+        if (!menucleanshotModalreadonly.is(e.target) // if the target of the click isn't the container...
+            &&
+            menucleanshotModalreadonly.has(e.target).length === 0) // ... nor a descendant of the container
+        {
+            $("#cleanshotModal-readonly #wrapper").removeClass("menuDisplayed");
+
+            $("#cleanshotModal-readonly .toggle-overlay").removeClass("overlay-modal");
+        }
+
+    })
+    // cleanshotModal-readonly mobile navbar script end
+
     // navbar active class
 
     $("#navbarNav .nav-item").click(function () {

@@ -2380,9 +2380,13 @@
                                                             <button class="btn-form designer-btn clean-btn"
                                                                 data-bs-toggle="modal"
                                                                 data-bs-target="#designerPublicServiesModal">ارسال </button>
-                                                                <button class="ahs-profile-plus-btn productadd-top-btn show-bg-pink">
+
+                                                            <button class="btn-form designer-btn clean-btn disabled tadile-btn">
+                                                                تعديل 
+                                                            </button>
+                                                                <!-- <button class="ahs-profile-plus-btn productadd-top-btn show-bg-pink">
                                             تعديل
-                                        </button>
+                                        </button> -->
                                                          
                                                         </div>
                                                        <div class="text-center mt-4">
@@ -6550,7 +6554,7 @@
                                               </svg>
                                             <!-- <i class="fa-solid fa-circle-plus"></i> -->
                                             <!-- <i class="fa fa-plus-circle fa-lg ahs-profile-plus"></i> -->
-                                            <span class="hide-mobile">إضافة منتج</span>
+                                            <span>إضافة منتج</span>
                                         </button>
                                         <!-- <div class="add-btn">
                                             <button type="button" class="btn-add" data-bs-toggle="modal" data-bs-target="#productaddModal">
@@ -6809,7 +6813,7 @@
                                                 <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
                                               </svg>
                                             <!-- <i class="fa fa-plus-circle fa-lg ahs-profile-plus"></i> -->
-                                            <span class="hide-mobile">
+                                            <span>
                                             إضافة منتج
                                         </span>
                                      </button>

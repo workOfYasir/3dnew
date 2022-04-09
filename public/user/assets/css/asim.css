@@ -512,6 +512,9 @@
 .circle-plus-icon{
     display: flex;
     align-items: center;
+    flex-direction: column;
+    margin-right: 0px;
+    margin-top: auto;
 }
 .circle-plus-icon i{
     font-size: 43px;
@@ -568,6 +571,10 @@
 
 #requestsModal .modal-footer {
     position: relative !important;
+}
+.disabled.tadile-btn{
+    box-shadow: none !important;
+    background-color: #E0E0DE;
 }
     /* styling end here */
 
@@ -714,7 +721,7 @@
         }
         #designinnerModal #menu-toggle{
             left: 25px !important;
-            top: 35px !important;
+            /* top: 35px !important; */
         }
         #designinnerModal #page-content-wrapper{
             padding-right: 0px !important;
@@ -830,7 +837,7 @@
 
         }
         #user3RequestModal .userReq-btn-box{
-            width: 50%;
+            width: 33.33%;
         }
         #user3RequestModal .userReq-btn-box__btn{
             margin-top: 30px;
@@ -872,16 +879,10 @@
             width: 20px !important;
             margin-right: 15px !important;
         }
-        .membership-edit{
+        .modal.register .modal-header .membership-edit{
             margin-top: 10px;
-            /* width: 91%; */
-            padding: 4px 35px!important;
-        }
-    
-        #financialOperations2 .membership-edit {
-            width: 81%;
-        }
-        
+            padding: 4px 34px !important;
+        }        
 
         .modal.page .btn-close{
             margin-right: 10px;
@@ -905,7 +906,10 @@
         #cleanshotModal #page-content-wrapper{
             position: relative;
         }
-
+        #cleanshotModal-readonly #page-content-wrapper{
+            position: relative;
+        }
+        
         .cleanshot-row{
             align-content: flex-end !important;
             padding-bottom: 25px;
@@ -936,6 +940,10 @@
             #cleanshotModal .zhd-form-clean, .textarea-clean-short, #cleanshotModal .footer-clean{
                 padding: 0px !important;
             }
+            #cleanshotModal-readonly .zhd-form-clean, #cleanshotModal-readonly .footer-clean{
+                padding: 0px !important;
+            }
+
 
             /* request modal */
 
@@ -1015,8 +1023,20 @@
                 right: 0;
                 top: 0;
             }
-            #cleanshotModal #wrapper.menuDisplayed #sidebar-wrapper {
+            #cleanshotModal #wrapper.menuDisplayed #sidebar-wrapper, #cleanshotModal-readonly #wrapper.menuDisplayed #sidebar-wrapper{
                 right: 0;
+            }
+            #cleanshotModal #sidebar-wrapper, #cleanshotModal-readonly #sidebar-wrapper{
+                right: 0;
+            }
+            #cleanshotModal-readonly .modal-body{
+                padding: 0px;
+            }
+            #cleanshotModal-readonly .small-card__images-box{
+                margin-left: 20px;
+            }
+            #cleanshotModal-readonly .small-card img{
+                margin-left: 20px;
             }
 
 
@@ -1160,6 +1180,12 @@
       /* clean short modal */
       #cleanshotModal #page-content-wrapper{
         position: relative;
+    }
+    #cleanshotModal-readonly #page-content-wrapper{
+        position: relative;
+    }
+    #cleanshotModal-readonly .modal-body{
+        padding: 0px !important;
     }
       .cleanshot-row{
         align-content: flex-end !important;
