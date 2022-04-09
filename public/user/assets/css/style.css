@@ -2819,7 +2819,7 @@ input[type=number] {
     width: 100%;
     height: 262px;
     border-radius: 10px;
-    margin-top: 20px;
+    /* margin-top: 20px; */
 }
 .design-card-body .design-img{
     height: 100%;

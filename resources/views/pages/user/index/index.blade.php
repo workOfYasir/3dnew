@@ -6256,7 +6256,7 @@
                                                     <div class="col-md-4">
                                                         <div class="design-card-inner">
 
-                                                            <a href="javascript:void(0);" type="button" class=""
+                                                            <a href="javascript:void(0);"
                                                                 data-bs-toggle="modal"
                                                                 data-bs-target="#productdesignModal">
                                                                 <div class="design-card-body">
@@ -6376,7 +6376,7 @@
                                                     <div class="col-md-4">
                                                         <div class="design-card-inner">
 
-                                                            <a href="javascript:void(0);" type="button" class=""
+                                                            <a href="javascript:void(0);"
                                                                 data-bs-toggle="modal"
                                                                 data-bs-target="#productdesignModal">
 
