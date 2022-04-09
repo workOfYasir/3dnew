@@ -611,9 +611,9 @@ $(document).ready(function () {
     $(".credit-btn-blur-show").click(function () {
         $(".credit-log").show();
     })
-    $(".paying-off-btn").click(function () {
-        $(".credit-log").addClass('d-none');
-    })
+    // $(".paying-off-btn").click(function () {
+    //     $(".credit-log").addClass('d-none');
+    // })
 
     $(".bill-btn").click(function () {
         $(".bill-click-hide").addClass('d-none');
@@ -634,7 +634,13 @@ $(document).ready(function () {
         $(".payment.credit-payment").addClass('d-none');
     })
 
+    // hide d-none class default
+        $("#user7RequestModal .payment.credit-payment").removeClass('d-none');
 
+        
+    $("#userRequestModal .btn-close").click(function () {
+        $(".conditional-blur.design-payment-blur").addClass('blur');
+    })
     // product-save-btn change icon, color etc
 
     $(".product-save-btn").click(function () {
