@@ -634,10 +634,7 @@ $(document).ready(function () {
         $(".payment.credit-payment").addClass('d-none');
     })
 
-    // hide d-none class default
-        $("#user7RequestModal .payment.credit-payment").removeClass('d-none');
 
-        
     $("#userRequestModal .btn-close").click(function () {
         $(".conditional-blur.design-payment-blur").addClass('blur');
     })

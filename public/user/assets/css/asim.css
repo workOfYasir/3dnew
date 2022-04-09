@@ -576,6 +576,13 @@
     box-shadow: none !important;
     background-color: #E0E0DE;
 }
+
+ /* /////////////////////////////////////// user7RequestModal hide d-none class default /////////////////////////////////////// */
+       #user7RequestModal .modal-body .payment.credit-payment.d-block{
+        display: block !important;
+        }
+
+        
     /* styling end here */
 
 
