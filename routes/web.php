@@ -74,12 +74,8 @@ Route::group(['prefix' => 'artisan'], function () {
     });
 });
 
-Route::get('userRegister',[App\Http\Controllers\Auth\LoginController::class,'showRegistrationForm'])->name('userRegister');
-Route::get('register_profile',[App\Http\Controllers\Auth\LoginController::class,'register_profile'])->name('register_profile');
-Route::post('register',[App\Http\Controllers\Auth\LoginController::class,'register'])->name('register');
 Route::get('/', [RegisterController::class, 'homepage'])->name('/');
-Route::post('login',[App\Http\Controllers\Auth\LoginController::class,'login'])->name('login');
-//Auth::routes();
+Auth::routes();
 
         Route::resource('invoicess', InvoiceController::class);
         Route::resource('perposal', PerposalController::class);
