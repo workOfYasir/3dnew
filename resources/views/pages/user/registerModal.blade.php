@@ -38,27 +38,27 @@
                                                 @csrf
                                                 <input type="hidden" name="role" value="{{Crypt::encrypt('user')}}">
                                                 <div class="row justify-content-center">
-                                                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 mt-4">
+                                                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mt-4">
                                                         <img id="blah" src="https://zen-boyd.161-97-115-110.plesk.page/3dorgans/public/user/assets/icons/edit-avatar.svg" class="mx-auto d-block imageupload" width="100" alt="avatar" style="clip-path: circle() !important ;height: 100% !important;">
                                                         <input id="imgInp" type="file" class="chose" name="profile" accept="image/*" style="display: none;">
                                                     </div>
                                                 </div>
                                                 <div class="row justify-content-center mb-4">
-                                                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 mt-4">
+                                                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mt-4">
                                                         <label class="form-label dot">الاسم</label>
                                                         <input type="text" name="name" class="form-control " placeholder=".. الاسم هنا" value="">
                                                     </div>
-                                                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 mt-4">
+                                                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mt-4">
                                                         <label class="form-label dot">رقم الجوال</label>
                                                         <input type="text" name="field" class="form-control " placeholder="الجهة هنا .." value="">
                                                     </div>
                                                 </div>
                                                 <div class="row justify-content-center">
-                                                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 mb-4">
+                                                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mb-4">
                                                         <label class="form-label dot">الايميل</label>
                                                         <input type="email" name="email" class="form-control email" placeholder="الايميل هنا .." value="">
                                                     </div>
-                                                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 mb-4">
+                                                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mb-4">
                                                         <label class="form-label dot">كلمة المرور</label>
                                                         <input type="password" name="password" class="form-control pass" placeholder="كلمة المرور هنا .." value="">
                                                     </div>
@@ -77,7 +77,7 @@
                                                     <a href="#" class="terms-link">الشروط والأحكام</a>
                                                 </div>
                                                 <div class="form-action ahs-from-action">
-                                                    <button class="btn btn-form mx-3 with-arrow disabled" type="submit">دخول</button>
+                                                    <button class="btn btn-form mx-3 with-arrow disabled" type="submit">تسجيل</button>
                                                     <p>بيانات التسجيل</p>
                                                 </div>
                                             </form>
@@ -87,7 +87,7 @@
                                                 @csrf
                                                 <input type="hidden" name="role" value="{{Crypt::encrypt('admin')}}">
                                                 <div class="row justify-content-center">
-                                                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 mt-4">
+                                                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mt-4">
                                                         <img id="blah" src="https://zen-boyd.161-97-115-110.plesk.page/3dorgans/public/user/assets/icons/edit-avatar.svg" class="mx-auto d-block imageupload" width="100" alt="avatar" style="clip-path: circle() !important ;height: 100% !important;">
                                                         <input id="imgInp" type="file" class="chose" name="profile" accept="image/*" style="display: none;">
                                                     </div>
@@ -141,7 +141,7 @@
                                                     <a href="#" class="terms-link">الشروط والأحكام</a>
                                                 </div>
                                                 <div class="form-action ahs-from-action">
-                                                    <button class="btn btn-form mx-3 with-arrow disabled" type="submit">دخول</button>
+                                                    <button class="btn btn-form mx-3 with-arrow disabled" type="submit">تسجيل</button>
                                                     <p>بيانات التسجيل</p>
                                                 </div>
                                             </form>

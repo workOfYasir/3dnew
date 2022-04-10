@@ -229,7 +229,7 @@ nav .left-side a:last-child {
 */
 
 .btm-line {
-    /* position: relative; */
+    position: relative;
     text-align: right;
 }
 
@@ -240,6 +240,9 @@ nav .left-side a:last-child {
     width: 60px;
     box-shadow: 0 6px 6px rgb(0 0 0 / 16%);
     bottom: -7px;
+    left: 0;
+    right: 0;
+    margin-right: 2px; 
 }
 
 .footer-white-heading .inner-line {
@@ -2724,9 +2727,11 @@ input[type=number] {
 }
 
 .design-card-main {
-    padding-top: 20px;
+    padding-top: 80px;
 }
-
+#designinnerModal .design-card-main {
+    padding-top: 64px;
+}
 .star-profile {
     display: flex;
     align-items: center;
@@ -2816,7 +2821,7 @@ input[type=number] {
     width: 100%;
     height: 262px;
     border-radius: 10px;
-    margin-top: 20px;
+    /* margin-top: 20px; */
 }
 .design-card-body .design-img{
     height: 100%;
@@ -3109,6 +3114,10 @@ input[type=number] {
     background-color: #1F5098 !important;
 }
 
+#financialOperations .request-box::after {
+    display: none;
+}
+
 /* Safari */
 @media screen and (-webkit-min-device-pixel-ratio:0) {
     .mujtmah-heading-box {
@@ -3121,4 +3130,5 @@ input[type=number] {
     #designinnerModal .designer-sec-1::after{
         background: -webkit-linear-gradient(360deg, rgba(255, 255, 255, 100%), transparent) !important;
     }
+    
 }

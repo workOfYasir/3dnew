@@ -217,7 +217,7 @@
     /* #productaddModal .red-dot , #productaddformModal .red-dot{
         transform: translate(0px);
     } */
-    .overlay{
+    .product-overlay{
         position: absolute;
         content: '';
         left: 0;
@@ -283,7 +283,6 @@
     
     .switch p {
         color: #9FA5B2;
-        font-family: 'JannaLT-bold';
         margin-bottom: 14px;
         font-weight: 300;
     }
@@ -315,17 +314,20 @@
     
     .blur-bg {
         margin: auto;
-        background-color: rgb(255 255 255 / 0%);
-        backdrop-filter: blur(8px);
+        /* background-color: rgb(255 255 255 / 0%);
+        backdrop-filter: blur(8px); */
         width: 100%;
         height: 662px;
         position: absolute;
         left: 0;
         right: 0;
-        top: 325px;
+        /* top: 325px; */
+        top: 0;
         z-index: 1;
     }
-    
+    .blur.blur-star-rating{
+        padding: 0px 25px;
+    }
     .blur-star-inner {
         display: flex;
         width: 500px;
@@ -452,7 +454,8 @@
 #designinnerModal .designer-sec-1::after{
     content: "";
     position: absolute;
-    background: linear-gradient(360deg, rgba(255, 255, 255, 100%), transparent) !important;
+    background: linear-gradient(360deg, rgba(255, 255, 255, 100%), rgba(255, 255, 255, 0)) !important;
+    /* background: linear-gradient(360deg, rgba(255, 255, 255, 100%), transparent) !important; */
     /* background: -webkit-linear-gradient(360deg, rgba(255, 255, 255, 100%), transparent) !important; */
     background-repeat: no-repeat;
     top: 320px;
@@ -461,6 +464,7 @@
     width: 100%;
     height: 130px;
     z-index: -1;
+
 }
 
 #userRequestModal .modal-header {
@@ -507,6 +511,9 @@
 .circle-plus-icon{
     display: flex;
     align-items: center;
+    flex-direction: column;
+    margin-right: 0px;
+    margin-top: auto;
 }
 .circle-plus-icon i{
     font-size: 43px;
@@ -545,7 +552,53 @@
     color: #E3E9EC;
     background: #fff;
 }
+
+.modal-bottom-txt{
+    text-align: center;
+    color: #58595B;
+    font-family: 'JannaRegular';
+}
+
+.star-s-30 i{
+    font-size: 30px !important;
+}
+
+
+#requestsModal .requests-position{
+    padding-bottom: 100px;
+}
+
+#requestsModal .modal-footer {
+    position: relative !important;
+}
+.disabled.tadile-btn{
+    box-shadow: none !important;
+    background-color: #E0E0DE;
+}
+
+ /* /////////////////////////////////////// user7RequestModal hide d-none class default /////////////////////////////////////// */
+       #user7RequestModal .modal-body .payment.credit-payment.d-block{
+        display: block !important;
+        }
+
+        
     /* styling end here */
+
+
+#designModal nav .left-side .border-bottom, #designinnerModal nav .left-side .border-bottom, #cleanshotModal nav .left-side .border-bottom{
+    border-bottom-color: #58595B !important;
+    padding-bottom: 2px;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -555,6 +608,20 @@
     
     @media (min-width: 360px) and (max-width: 767px) {
         /* home page */
+        .error-red-bg img{
+            width: 40px !important;
+
+        }
+        #productaddformModal .change-zhd{
+            margin: 0px;
+            padding: 0px;
+            width: 110px;
+        }
+        #productaddformModal .modal-header{
+            padding-left: 0 !important;
+            padding-right: 0!important;
+
+        }
         .dot-txt-main .dot.center::before {
             right: -113px !important;
         }
@@ -574,6 +641,12 @@
 
         /* end home page */
 
+        .mob-p-0{
+            padding: 0px;
+        }
+        .btn-list .blur-part{
+            display: none;
+        }
         .designer-sec {
             padding-top: 150px;
             margin-top: 60px;
@@ -652,6 +725,14 @@
             padding-top: 140px;
             padding-right: 20px;
         }
+        #designinnerModal #menu-toggle{
+            left: 25px !important;
+            /* top: 35px !important; */
+        }
+        #designinnerModal #page-content-wrapper{
+            padding-right: 0px !important;
+        }
+        
 
         #productaddModal .almuntjat-form{
             padding: 0px !important;
@@ -762,7 +843,7 @@
 
         }
         #user3RequestModal .userReq-btn-box{
-            width: 50%;
+            width: 33.33%;
         }
         #user3RequestModal .userReq-btn-box__btn{
             margin-top: 30px;
@@ -804,13 +885,14 @@
             width: 20px !important;
             margin-right: 15px !important;
         }
-        .membership-edit{
+        .modal.register .modal-header .membership-edit{
             margin-top: 10px;
-            width: 91%;
-        }
+            padding: 4px 34px !important;
+        }        
 
         .modal.page .btn-close{
             margin-right: 10px;
+            margin-bottom: 0px;
         }
         
         #financialOperations .ahs-member-model-box{
@@ -820,7 +902,153 @@
             width: 100%;
         }
 
+        .ps-lr-0{
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+/* cleanshort modal */
 
+  /* clean short modal */
+        #cleanshotModal #page-content-wrapper{
+            position: relative;
+        }
+        #cleanshotModal-readonly #page-content-wrapper{
+            position: relative;
+        }
+        
+        .cleanshot-row{
+            align-content: flex-end !important;
+            padding-bottom: 25px;
+        } 
+
+            .adobe-icon{
+                margin-top: 30px;   
+                float: right !important;
+            }
+            .card-img-main{
+                margin-bottom: 30px;
+            }
+            .personal-pro {
+                float: right !important;
+            }
+            .clean-headings h3 {
+                font-size: 33px;
+            }
+            .color-circle-main {
+                margin-bottom: 20px;
+            }
+            .color-circle-main .blue-border{
+                margin-right: 0px;
+            }
+            .zhd-textarea-clean{
+                width: 100%;
+            }
+            #cleanshotModal .zhd-form-clean, .textarea-clean-short, #cleanshotModal .footer-clean{
+                padding: 0px !important;
+            }
+            #cleanshotModal-readonly .zhd-form-clean, #cleanshotModal-readonly .footer-clean{
+                padding: 0px !important;
+            }
+
+
+            /* request modal */
+
+            #requestsModal .nav-tabs .nav-item, .onTab .nav-tabs .nav-item{
+                width: 100% !important;
+            }
+           
+            .designer-bdy .btn-upload-designer, .designer-bdy .red-btn, .btn-form{
+                margin-top: 30px;
+                margin-left: 0px !important;
+                margin-right: 0px !important;
+            }
+
+            #designer-bid-submission .btn-form {
+                margin-top: 0px !important;
+            }
+            .zhd-finished .btn{
+                margin-left: 0px !important;
+                margin-right: 0px !important;
+            }
+            #designer-review-upload .blur {
+                padding: 0px !important;
+            }
+
+            #designer-bid-submission .red-btn{
+                margin-top: 0px !important;
+            }
+            #designer-submit-quote .blur-bg{
+                bottom: 300px !important;
+            }
+
+
+            
+            /* membermodal */
+            #memberModal .profile.ahs-member-model-box{
+                text-align: left;
+            }
+            #memberModal .member-cross-btn{
+                width: 200px;
+            }
+            #memberModal .ahs-member-model-box .btn{
+                margin-left: 0px;
+            }
+            #memberModal #blah1{
+                width: 100%;
+            }
+            #memberModal .ahs-img-uploder-cam{
+                width: 34px;
+                bottom: 0;
+            }
+
+            #memberModal .almuntjat-form-error__img{
+                margin: 0px !important;
+                width: 30px;
+                margin-left: 20px !important;
+            }
+            #memberModal .edit-profile.membership-edit{
+                padding: 4px 33px !important;
+            }
+
+/* designModal */
+
+           #designModal #page-content-wrapper{
+                position: relative;
+            }
+            #designModal #sidebar-wrapper{
+                right: 0;
+            }
+            #designModal #wrapper.menuDisplayed #sidebar-wrapper {
+                right: 0;
+            }
+            #designinnerModal #wrapper.menuDisplayed #sidebar-wrapper {
+                right: 0;
+                top: 0;
+            }
+            #designinnerModal #wrapper.mobile-nav #sidebar-wrapper{
+                right: 0;
+                top: 0;
+            }
+            #cleanshotModal #wrapper.menuDisplayed #sidebar-wrapper, #cleanshotModal-readonly #wrapper.menuDisplayed #sidebar-wrapper{
+                right: 0;
+            }
+            #cleanshotModal #sidebar-wrapper, #cleanshotModal-readonly #sidebar-wrapper{
+                right: 0;
+            }
+            #cleanshotModal-readonly .modal-body{
+                padding: 0px;
+            }
+            #cleanshotModal-readonly .small-card__images-box{
+                margin-left: 20px;
+            }
+            #cleanshotModal-readonly .small-card img{
+                margin-left: 20px;
+            }
+
+
+
+
+            
     }
 
     /* ////////////////////////////////////////// mobile landscape responsive //////////////////////////////////////////////////////// */
@@ -832,6 +1060,9 @@
     /* ////////////////////////////////////////// tab landscape responsive //////////////////////////////////////////////////////// */
 
     @media (min-width: 768px) and (max-width: 991px) {
+        .designer-sec::before, .designer-sec::after, #designinnerModal .designer-sec-1::after, #designinnerModal .designer-sec::before{
+            display: none;
+        }
         .notification-box.notification-box-wdt{
             width: 300px;
         }
@@ -854,9 +1085,20 @@
             margin-bottom: 30px;
         }
 
+        .btn-list .blur-part{
+            display: none;
+        }
+
         #designinnerModal .designer-sec::before{
             width: 1220px;
             bottom: 500px;
+        }
+        #designinnerModal  #wrapper.menuDisplayed #sidebar-wrapper {
+            right: 0;
+        }
+        #designinnerModal .modal-header {
+            padding-top: 140px;
+            padding-right: 20px;
         }
         #productdesignModal .btn-close{
             transform: translate(10px);
@@ -934,12 +1176,67 @@
             width: 20px !important;
             margin-right: 15px !important;
         }
-       #financialOperations2 .membership-edit{
+
+       /* #financialOperations2 .membership-edit{
         width: 57%;
-        }
+        } */
        
+/* blur review modal */
 
+      /* clean short modal */
+      #cleanshotModal #page-content-wrapper{
+        position: relative;
+    }
+    #cleanshotModal-readonly #page-content-wrapper{
+        position: relative;
+    }
+    #cleanshotModal-readonly .modal-body{
+        padding: 0px !important;
+    }
+      .cleanshot-row{
+        align-content: flex-end !important;
+      } 
 
+    .adobe-icon{
+        margin-top: 30px;   
+        float: right;
+    }
+ 
+    #designerPublicServiesModal .submitted-data p {
+        font-size: 17px;
+    }
+    #designer-order-upload .designer-text{
+        margin-top: 30px;
+    }
+    #designer-review-upload .review-text{
+        margin-top: 50px;
+    }
+
+    /* membermodal */
+    #memberModal .profile.ahs-member-model-box{
+        text-align: left;
+    }
+    #memberModal .ahs-member-model-box .btn{
+        margin-left: 0px;
+    }
+    #memberModal #blah1{
+        width: 100%;
+    }
+    #memberModal .ahs-img-uploder-cam{
+        width: 34px;
+    }
+    
+    #memberModal .almuntjat-form-error__img{
+        margin: 0px !important;
+        width: 30px;
+        margin-left: 20px !important;
+    }
+    
+    #designModal #page-content-wrapper{
+        position: relative;
+    }
+
+    
     }
     
     /* ////////////////////////////////////////// Large landscape responsive //////////////////////////////////////////////////////// */

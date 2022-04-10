@@ -405,7 +405,11 @@ $(function () {
 
     // }, 2000);
 
-    $('#publicServiesModal .carousel, #healthServiesModal .carousel').carousel({
+    $('#publicServiesModal .carousel').carousel({
+        interval: false,
+    });
+
+    $('#healthServiesModal .carousel').carousel({
         interval: false,
     });
 
@@ -465,6 +469,112 @@ $(document).ready(function () {
 
     })
 
+    // designModal mobile navbar script start
+    $("#designModal #menu-toggle").click(function (e) {
+        e.preventDefault();
+        $("#designModal #wrapper").toggleClass("menuDisplayed");
+        $("#designModal .sec-main").toggleClass("sec-main-pos");
+        $("#designModal .toggle-overlay").addClass("overlay-modal");
+    });
+
+    $('#designModal #wrapper .nav-item').click(function () {
+        $("#designModal #wrapper").toggleClass("menuDisplayed");
+    })
+    const menudesignModal = $('#designModal #menu-toggle');
+    $('#designModal').click(function (e) {
+        // $("#wrapper").removeClass("menuDisplayed");
+        if (!menudesignModal.is(e.target) // if the target of the click isn't the container...
+            &&
+            menudesignModal.has(e.target).length === 0) // ... nor a descendant of the container
+        {
+            $("#designModal #wrapper").removeClass("menuDisplayed");
+
+            $("#designModal .toggle-overlay").removeClass("overlay-modal");
+        }
+
+    })
+
+
+    // designModal mobile navbar script end
+
+
+    // designinnerModal mobile navbar script start
+    $("#designinnerModal #menu-toggle").click(function (e) {
+        e.preventDefault();
+        $("#designinnerModal #wrapper").toggleClass("menuDisplayed");
+        $("#designinnerModal .sec-main").toggleClass("sec-main-pos");
+        $("#designinnerModal .toggle-overlay").addClass("overlay-modal");
+    });
+
+    $('#designinnerModal #wrapper .nav-item').click(function () {
+        $("#designinnerModal #wrapper").toggleClass("menuDisplayed");
+    })
+    const menudesigninnerModal = $('#designinnerModal #menu-toggle');
+    $('#designinnerModal').click(function (e) {
+        // $("#wrapper").removeClass("menuDisplayed");
+        if (!menudesigninnerModal.is(e.target) // if the target of the click isn't the container...
+            &&
+            menudesigninnerModal.has(e.target).length === 0) // ... nor a descendant of the container
+        {
+            $("#designinnerModal #wrapper").removeClass("menuDisplayed");
+
+            $("#designinnerModal .toggle-overlay").removeClass("overlay-modal");
+        }
+
+    })
+    // designinnerModal mobile navbar script end
+     // cleanshotModal mobile navbar script start
+     $("#cleanshotModal #menu-toggle").click(function (e) {
+        e.preventDefault();
+        $("#cleanshotModal #wrapper").toggleClass("menuDisplayed");
+        $("#cleanshotModal .sec-main").toggleClass("sec-main-pos");
+        $("#cleanshotModal .toggle-overlay").addClass("overlay-modal");
+    });
+
+    $('#cleanshotModal #wrapper .nav-item').click(function () {
+        $("#cleanshotModal #wrapper").toggleClass("menuDisplayed");
+    })
+    const menucleanshotModal = $('#cleanshotModal #menu-toggle');
+    $('#cleanshotModal').click(function (e) {
+        // $("#wrapper").removeClass("menuDisplayed");
+        if (!menucleanshotModal.is(e.target) // if the target of the click isn't the container...
+            &&
+            menucleanshotModal.has(e.target).length === 0) // ... nor a descendant of the container
+        {
+            $("#cleanshotModal #wrapper").removeClass("menuDisplayed");
+
+            $("#cleanshotModal .toggle-overlay").removeClass("overlay-modal");
+        }
+
+    })
+    // cleanshotModal mobile navbar script end
+    
+    // cleanshotModal-readonly mobile navbar script start
+    $("#cleanshotModal-readonly #menu-toggle").click(function (e) {
+        e.preventDefault();
+        $("#cleanshotModal-readonly #wrapper").toggleClass("menuDisplayed");
+        $("#cleanshotModal-readonly .sec-main").toggleClass("sec-main-pos");
+        $("#cleanshotModal-readonly .toggle-overlay").addClass("overlay-modal");
+    });
+
+    $('#cleanshotModal-readonly #wrapper .nav-item').click(function () {
+        $("#cleanshotModal-readonly #wrapper").toggleClass("menuDisplayed");
+    })
+    const menucleanshotModalreadonly = $('#cleanshotModal-readonly #menu-toggle');
+    $('#cleanshotModal-readonly').click(function (e) {
+        // $("#wrapper").removeClass("menuDisplayed");
+        if (!menucleanshotModalreadonly.is(e.target) // if the target of the click isn't the container...
+            &&
+            menucleanshotModalreadonly.has(e.target).length === 0) // ... nor a descendant of the container
+        {
+            $("#cleanshotModal-readonly #wrapper").removeClass("menuDisplayed");
+
+            $("#cleanshotModal-readonly .toggle-overlay").removeClass("overlay-modal");
+        }
+
+    })
+    // cleanshotModal-readonly mobile navbar script end
+
     // navbar active class
 
     $("#navbarNav .nav-item").click(function () {
@@ -487,9 +597,11 @@ $(document).ready(function () {
         $(this).nextAll().addClass("star-active");
     })
 
-    // stat blur background
+    //#starbluerModal-btn stat blur background
 
     $(".starbluerModal-btn").click(function () {
+        
+        $(".review-blur-star-rating").addClass('blur');
         $(".blur-star").show();
         $(".review-text-tog").addClass("review-text-hide");
         $(".starbluerModal-btn-hide").hide();
@@ -499,9 +611,9 @@ $(document).ready(function () {
     $(".credit-btn-blur-show").click(function () {
         $(".credit-log").show();
     })
-    $(".paying-off-btn").click(function () {
-        $(".credit-log").addClass('d-none');
-    })
+    // $(".paying-off-btn").click(function () {
+    //     $(".credit-log").addClass('d-none');
+    // })
 
     $(".bill-btn").click(function () {
         $(".bill-click-hide").addClass('d-none');
@@ -523,6 +635,9 @@ $(document).ready(function () {
     })
 
 
+    $("#userRequestModal .btn-close").click(function () {
+        $(".conditional-blur.design-payment-blur").addClass('blur');
+    })
     // product-save-btn change icon, color etc
 
     $(".product-save-btn").click(function () {
@@ -544,6 +659,12 @@ $(document).ready(function () {
         $('#myTab .nav-item:last-child .nav-link').addClass('active');
         $('#myTabContent .tab-pane').removeClass('active show');
         $('#myTabContent .tab-pane:last-child').addClass('active show');
+    })
+
+    $(".send-btn").click(function () {
+        $(".blur-star").removeClass('d-block');
+        $(".blur-star").addClass('d-none');
+        $(".blur-star-rating").removeClass('blur');
     })
 
 });

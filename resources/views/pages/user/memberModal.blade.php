@@ -31,7 +31,7 @@
                                         <span class="ahs-form-head1"> الرصيد الحالي</span>
                                         <span class="ahs-form-head2">750 ريال</span>
                                     </div>
-                                    <div class="star-reating text-center">
+                                    <div class="star-reating star-s-30 text-center">
                                         <i class="fa-solid fa-star"></i>
                                         <i class="fa-solid fa-star"></i>
                                         <i class="fa-solid fa-star"></i>
@@ -78,17 +78,18 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="modal-header border-0">
-                            <div class=" ahs-member-model-box">
+                            <div class="ahs-member-model-box member-cross-btn">
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
-                            <div class=" ahs-member-model-box">
+                            <div class="ahs-member-model-box">
                                 <span class="outline dot">اهلاً وسهلاً بكم</span>
                                 <h1 class="modal-title right" style="color: black;">
                                     <span class="btm-line"></span><span class="inner-line"></span> معلومات العضوية
                                 </h1>
                             </div>
                             <div class="profile ahs-member-model-box">
-                                <button class="btn btn-sky edit-profile--ahs">المنتجات</button>
+                                <button  class="btn btn-sky edit-profile--ahs"   data-bs-toggle="modal"
+                                                        data-bs-target="#productdesignModal">المنتجات</button>
                                 <button class="btn btn-sky edit-profile membership-edit">تعديل</button>
                             </div>
                         </div>
@@ -107,7 +108,7 @@
                                 <img src="{{ asset('user/assets/images/ar.png') }}" alt="" class="ahs-form-img1">
                             </div>
                             <div class="ff">
-                                <div class="star-reating">
+                                <div class="star-reating star-s-30">
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>

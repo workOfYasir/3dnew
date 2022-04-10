@@ -608,6 +608,7 @@ almuntjat section start
     font-size: 20px;
     font-weight: 600;
     color: #1EA9D4;
+    padding-left: 5px;
 }
 
 .ahs-form-head2 {
@@ -763,6 +764,10 @@ almuntjat section start
 .mujtmah-box-btn__img2 {
     margin-right: 10px;
     transform: rotate(180deg);
+}
+.ahs-stars i{
+    font-size: 30px !important;
+
 }
 
 

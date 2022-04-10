@@ -14,4 +14,4 @@ yarn-error.log
 /.idea
 /.vscode
 /config/livewire
-resources/views/livewire/chats.blade.php
+
