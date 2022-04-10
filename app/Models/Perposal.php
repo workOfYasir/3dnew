@@ -14,8 +14,15 @@ class Perposal extends Model
         'price_design',
         'qty_model',
         'user_id',
+        'order_id',
         'qty_design',
         'validtill',
+        'address',
+        'concept_design',
+        'manufacturing',
+        'deliverable_design',
+        'deliverable_model',
+        'image',
         'date'
     ];
 }

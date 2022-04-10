@@ -36,6 +36,7 @@
                                         <div class="tab-pane fade active show" id="userloginModal2" role="tabpanel">
                                             <form class="row gy-4 gx-5" action="{{route('register')}}" method="post" style="padding-top: 20px;">
                                                 @csrf
+                                                <input type="hidden" name="role" value="{{Crypt::encrypt('user')}}">
                                                 <div class="row justify-content-center">
                                                     <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 mt-4">
                                                         <img id="blah" src="https://zen-boyd.161-97-115-110.plesk.page/3dorgans/public/user/assets/icons/edit-avatar.svg" class="mx-auto d-block imageupload" width="100" alt="avatar" style="clip-path: circle() !important ;height: 100% !important;">
@@ -82,8 +83,9 @@
                                             </form>
                                         </div>
                                         <div class="tab-pane fade " id="designerloginModal2" role="tabpanel" aria-labelledby="profile-tab">
-                                            <form class="row gy-4 gx-5" method="post" style="padding-top: 20px;">
+                                            <form class="row gy-4 gx-5" method="get" style="padding-top: 20px;">
                                                 @csrf
+                                                <input type="hidden" name="role" value="{{Crypt::encrypt('admin')}}">
                                                 <div class="row justify-content-center">
                                                     <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 mt-4">
                                                         <img id="blah" src="https://zen-boyd.161-97-115-110.plesk.page/3dorgans/public/user/assets/icons/edit-avatar.svg" class="mx-auto d-block imageupload" width="100" alt="avatar" style="clip-path: circle() !important ;height: 100% !important;">

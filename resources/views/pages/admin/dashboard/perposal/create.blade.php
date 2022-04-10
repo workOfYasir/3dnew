@@ -119,9 +119,73 @@
                                             text-muted"></small>
                                     </div>
                                 </div>
-
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Deliverable Design</label>
+                                        <input type="text" class="form-control
+                                            invoice-field" required
+                                            name="deliverable_design" id=""
+                                            aria-describedby=""
+                                            placeholder="أدخل كمية النموذج ثلاثي الأبعاد">
+                                        <small id="" class="form-text
+                                            text-muted"></small>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Deliverable Model
+                                        </label>
+                                        <input type="text" class="form-control
+                                            invoice-field" required name="deliverable_model"
+                                            id="" aria-describedby=""
+                                            placeholder="أدخل معدل ضريبة القيمة المضافة">
+                                        <small id="" class="form-text
+                                            text-muted"></small>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Address
+                                        </label>
+                                        <input type="text" class="form-control
+                                            invoice-field-12" required name="address"
+                                            id="" aria-describedby=""
+                                            placeholder="">
+                                        <small id="" class="form-text
+                                            text-muted"></small>
+                                    </div>
+                                </div>
+                                <div class="invoice-field-12 justify-content-center d-flex">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Image
+                                        </label>
+                                        <input type="file" class="form-control
+                                            invoice-field" required name="image"
+                                            id="" aria-describedby=""
+                                            placeholder="">
+                                        <small id="" class="form-text
+                                            text-muted"></small>
+                                    </div>
+                                </div>
                             </div>
-
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label for="exampleInputEmail1"> Concept Design
+                                    </label>
+                                    <textarea name="concept_design" class="form-control invoice-field-12" id="concept_design" cols="30" rows="10"></textarea>
+                                    <small id="" class="form-text
+                                    text-muted"></small>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label for="exampleInputEmail1"> Manufacturing
+                                    </label>
+                                    <textarea name="manufacturing" class="form-control invoice-field-12" id="manufacturing" cols="30" rows="10"></textarea>
+                                    <small id="" class="form-text
+                                    text-muted"></small>
+                                </div>                                
+                            </div>
                             <button type="submit" class="btn btn-primary">يقدم</button>
                         </form>
                     </div>

@@ -3,8 +3,8 @@
 use App\Models\Invoice;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Storage;
 use App\Http\Controllers\ChatController;
 use App\Http\Controllers\HomeController;
@@ -36,7 +36,7 @@ use App\Http\Controllers\PublicServiceController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::get('userLogin', 'Auth\LoginController@showLoginForm');
 Route::group(['prefix' => 'artisan'], function () {
     Route::get('clear', function () {
         Artisan::call('view:clear');
@@ -74,9 +74,12 @@ Route::group(['prefix' => 'artisan'], function () {
     });
 });
 
+Route::get('userRegister',[App\Http\Controllers\Auth\LoginController::class,'showRegistrationForm'])->name('userRegister');
+Route::get('register_profile',[App\Http\Controllers\Auth\LoginController::class,'register_profile'])->name('register_profile');
+Route::post('register',[App\Http\Controllers\Auth\LoginController::class,'register'])->name('register');
 Route::get('/', [RegisterController::class, 'homepage'])->name('/');
-
-Auth::routes();
+Route::post('login',[App\Http\Controllers\Auth\LoginController::class,'login'])->name('login');
+//Auth::routes();
 
         Route::resource('invoicess', InvoiceController::class);
         Route::resource('perposal', PerposalController::class);
@@ -156,4 +159,8 @@ Route::get('mark/read',function(){
   return redirect()->back();
 })->name('mark.read');
 
+Route::get('/clear-cache', function() {
+    Artisan::call('cache:clear');
+    return "Cache is cleared";
+});
 

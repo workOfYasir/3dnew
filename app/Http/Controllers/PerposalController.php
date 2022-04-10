@@ -44,6 +44,9 @@ class PerposalController extends Controller
      */
     public function store(Request $request)
     {
+        $image = $request->image->getClientOriginalName();
+        $request->image->move(public_path('upload/'), $image);
+        $pathimage ='upload/'.$image;
         $med = Medical::find($request->order_id);
         $user = User::find($med->user_id);
         Perposal::create([
@@ -51,7 +54,14 @@ class PerposalController extends Controller
             'price_model' => $request->price_model,
             'price_design' => $request->price_design,
             'qty_model' => $request->qty_model,
+            'order_id' => $request->order_id,
+            'manufacturing' => $request->manufacturing,
+            'concept_design' => $request->concept_design,
             'user_id' => $user->id,
+            'image'=> $pathimage,
+            'address' =>$request->address,
+            'deliverable_model'=>$request->deliverable_model,
+            'deliverable_design'=>$request->deliverable_design,
             'qty_design' => $request->qty_design,
             'validtill' => $request->validtill,
             'date' => $request->date,
