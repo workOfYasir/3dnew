@@ -30,7 +30,7 @@ class statuschanged extends Mailable
      */
     public function build()
     {
-        return $this->$this->from(config('mail.from.address'),config('mail.from.name'))->subject($this->details['subject'])
+        return $this->from(config('mail.from.address'),config('mail.from.name'))->subject($this->details['subject'])
             ->view('emails.statusChanged');
     }
 }
