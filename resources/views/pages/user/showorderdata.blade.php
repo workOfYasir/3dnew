@@ -65,14 +65,20 @@
                                 <a href="{{route('home')}}" class="btn-close"></a>
                                 <div style="margin-top: 1%;">
                                     <span class="outline dot">اهلاً وسهلاً بكم</span>
-                                    <h1 class="modal-title">طلباتي</h1>
+                                    <h1 class="modal-title">طلباتي <span class="inner-line"></span></h1>
                                 </div>
                                 <div class="profile">
                                     @if(@auth()->user()->profile == null)
+                                    <button class="btn btn-sky profile-btn invert">
+                                    المصمم
+                                    </button>
                                     <a href="#profile">
                                         <img src="{{asset('user/assets/icons/avatar.svg')}}" alt="avatar">
                                     </a>
                                     @else
+                                    <button class="btn btn-sky profile-btn invert">
+                                    المصمم
+                                    </button>
                                     <a href="#profile">
                                         <img src="{{ asset(auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
                                     </a>

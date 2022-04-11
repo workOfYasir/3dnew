@@ -6,7 +6,7 @@
                      <div class="col-md-12 requests-position">
                          <div class="modal-header border-0">
                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                             <div class="dropdown">
+                             <div class="dropdown register-pdf">
                                 <button class="btn bg-light dropdown" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                     <i class="fas fa-file-pdf" style="color:#1F5098; font-size:35px"></i>
                                 </button>
@@ -59,23 +59,24 @@
                                      <ul class="nav nav-tabs designer-tabs" id="myTab" role="tablist">
                                          <li class="nav-item" role="presentation">
                                              @auth
-                                             <button class="nav-link active" id="medical-tab tab tab1" data-bs-toggle="tab" data-bs-target="#medical-services" type="button" role="tab" aria-selected="true"><span class="notification">{{$orders->count()}}</span> الخدمات الطبية</button>
+                                             <button class="nav-link active" id="medical-tab tab tab1" data-bs-toggle="tab" data-bs-target="#medical-service" type="button" role="tab" aria-controls="medical" aria-selected="true"><span class="notification">{{$orders->count()}}</span> الخدمات الطبية</button>
                                              @else
-                                             <button class="nav-link active" id="medical-tab tab tab1" data-bs-toggle="tab" data-bs-target="#medical-services" type="button" role="tab" aria-selected="true"><span class="notification">0</span> الخدمات الطبية</button>
+                                             <button class="nav-link active" id="medical-tab tab tab1" data-bs-toggle="tab" data-bs-target="#medical-service" type="button" role="tab" aria-selected="true"><span class="notification">0</span> الخدمات الطبية</button>
                                              @endauth
                                          </li>
+                    
                                          <li class="nav-item" role="presentation">
                                              @auth
-                                             <button class="nav-link" id="public-tab tab tab2" data-bs-toggle="tab" data-bs-target="#public-services" type="button" role="tab" aria-controls="profile" aria-selected="false"><span class="notification">{{$publics->count()}}</span>الخدمات العامة</button>
+                                             <button class="nav-link" id="public-tab tab tab2" data-bs-toggle="tab" data-bs-target="#public-services" type="button" role="tab" aria-controls="public" aria-selected="false"><span class="notification">{{$publics->count()}}</span>الخدمات العامة</button>
                                              @else
-                                             <button class="nav-link active" id="medical-tab tab tab2" data-bs-toggle="tab" data-bs-target="#public-services" type="button" role="tab" aria-selected="true"><span class="notification">0</span> الخدمات العامة</button>
+                                             <button class="nav-link active" id="public-tab tab tab2" data-bs-toggle="tab" data-bs-target="#public-services" type="button" role="tab" aria-selected="true"><span class="notification">0</span> الخدمات العامة</button>
                                              @endauth
 
                                          </li>
                                          <!-- designer -->
                                          <li class="nav-item" role="presentation">
                                              @auth
-                                             <button class="nav-link" id="designer-tab tab tab3" data-bs-toggle="tab" data-bs-target="#designer-services" type="button" role="tab" aria-controls="profile" aria-selected="false"><span class="notification">2</span>مجتمع المصممين</button>
+                                             <button class="nav-link" id="designer-tab tab tab3" data-bs-toggle="tab" data-bs-target="#designer-services" type="button" role="tab" aria-controls="designer" aria-selected="false"><span class="notification">2</span>مجتمع المصممين</button>
                                              @else
                                              <button class="nav-link active" id="designer-tab tab tab3" data-bs-toggle="tab" data-bs-target="#designer-services" type="button" role="tab" aria-selected="true"><span class="notification">0</span>  مجتمع المصممين</button>
                                              @endauth
@@ -84,7 +85,7 @@
                                          <!-- designer-end -->
                                      </ul>
                                      <div class="tab-content" id="myTabContent">
-                                         <div class="tab-pane fade show active" id="medical-services" role="tabpanel">
+                                         <div class="tab-pane fade show active" id="medical-service" role="tabpanel" aria-labelledby="medical-tab">
                                              <div class="row">
                                                  @foreach($orders as $orde)
                                                  <a class="nav-link" href="{{route('vieworder',$orde->id)}}">
@@ -109,9 +110,9 @@
                                                  </a>
                                                  @endforeach
                                              </div>
-
                                          </div>
-                                         <div class="tab-pane fade" id="public-services" role="tabpanel" aria-labelledby="profile-tab">
+                                        
+                                         <div class="tab-pane fade" id="public-services" role="tabpanel" aria-labelledby="public-tab">
                                              <div class="row">
                                                  @foreach($publics as $orde)
                                                  <a class="nav-link" href="{{route('vieworderpublic',$orde->id)}}">
@@ -135,7 +136,7 @@
                                                  @endforeach
                                              </div>
                                          </div>
-                                         <div class="tab-pane fade" id="designer-services" role="tabpanel" aria-labelledby="profile-tab">
+                                         <div class="tab-pane fade" id="designer-services" role="tabpanel" aria-labelledby="designer-tab">
                                              <div class="row">
                                                  
                                                  <a class="nav-link" href="#">

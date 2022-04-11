@@ -575,7 +575,10 @@
     box-shadow: none !important;
     background-color: #E0E0DE;
 }
-
+.register-pdf{
+    position: absolute;
+    right: 140px;
+}
  /* /////////////////////////////////////// user7RequestModal hide d-none class default /////////////////////////////////////// */
        #user7RequestModal .modal-body .payment.credit-payment.d-block{
         display: block !important;
@@ -607,6 +610,18 @@
     /* //////////////////////////////////// responsive start here ////////////////////////////////////////////////*/
     
     @media (min-width: 360px) and (max-width: 767px) {
+
+        .register-pdf {
+            position: absolute;
+            right: 40px;
+            top: 90px;
+        }
+        .register-pdf .btn{
+            padding: 3px 6px;
+        }
+        #requestsModal .modal-body{
+            margin-top: 50px;
+        }
         /* home page */
         .error-red-bg img{
             width: 40px !important;
