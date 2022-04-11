@@ -64,8 +64,8 @@ class Chats extends Component
     	if($this->photo!=null){
             $name = 'ChatImg-'.time(). time().'.'.$this->photo->getClientOriginalExtension();
             
-            $this->photo->storeAs('chat',$name);
-            // $this->photo->move(storage_path('app/chat/'), $name);
+            // $this->photo->storeAs('chat',$name);
+            $this->photo->move(public_path('upload/chat/'), $name);
             $photoMsg = 'chatImg='.$name.'&msg=';
             $data->message = $photoMsg;
             $data->photo = $name;
