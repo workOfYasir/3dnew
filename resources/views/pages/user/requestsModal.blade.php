@@ -75,7 +75,7 @@
                                          <!-- designer -->
                                          <li class="nav-item" role="presentation">
                                              @auth
-                                             <button class="nav-link" id="designer-tab tab tab3" data-bs-toggle="tab" data-bs-target="#designer-services" type="button" role="tab" aria-controls="profile" aria-selected="false"><span class="notification">{{$publics->count()}}</span>مجتمع المصممين</button>
+                                             <button class="nav-link" id="designer-tab tab tab3" data-bs-toggle="tab" data-bs-target="#designer-services" type="button" role="tab" aria-controls="profile" aria-selected="false"><span class="notification">2</span>مجتمع المصممين</button>
                                              @else
                                              <button class="nav-link active" id="designer-tab tab tab3" data-bs-toggle="tab" data-bs-target="#designer-services" type="button" role="tab" aria-selected="true"><span class="notification">0</span>  مجتمع المصممين</button>
                                              @endauth
@@ -157,7 +157,6 @@
                                                      </div>
                                                  </a>
                                              </div>
-                                         </div>
                                              <div class="row">
                                                  
                                                  <a class="nav-link" href="#">
@@ -179,6 +178,8 @@
                                                      </div>
                                                  </a>
                                              </div>
+                                         </div>
+                                            
                                          </div>
                                      </div>
 

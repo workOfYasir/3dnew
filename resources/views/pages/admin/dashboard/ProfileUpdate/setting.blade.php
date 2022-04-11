@@ -1,15 +1,31 @@
 @extends('layouts.admin.app')
 @section('content')
+<div class="content-main">
+ <h3>ملفي</h3>
+    <div class="breadcrumb-main">
+        <ol class="breadcrumb">
+            <!-- <li><a href="{{route('home')}}">الصفحة الرئيسية</a></li>
 
+            <li><a href="#">صفحات الموقع</a></li>
+            <li><a  href="{{ route('contact.index') }}">اتصل بنا</a></li> -->
+
+        </ol>
+    </div>
+
+    <div class="container-fluid p-0">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card medical-card">
+           
 <div class="card-body">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-sm-3 col-lg-3">
-            </div>
+            <!-- <div class="col-sm-3 col-lg-3">
+            </div> -->
             <div class="col-sm-6 col-lg-6">
-                <div class="card">
+                <div>
                     <div class="card-header pb-0">
-                        <h4 class="card-title mb-0">ملفي</h4>
+                        <!-- <h4 class="card-title mb-0">ملفي</h4> -->
                         <div class="card-options"><a class="card-options-collapse" href="#" data-bs-toggle="card-collapse"><i class="fe fe-chevron-up"></i></a><a class="card-options-remove" href="#" data-bs-toggle="card-remove"><i class="fe fe-x"></i></a></div>
                     </div>
                     <div class="card-body">
@@ -64,5 +80,11 @@
         </div>
     </div>
 </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
 
 @endsection
