@@ -14,10 +14,16 @@
                             </div>
                             <div class="profile">
                                 @if(@auth()->user()->profile == null)
+                                 <button class="btn btn-sky profile-btn invert">
+                                    المصمم
+                                    </button>
                                 <a href="#profile">
                                     <img src="{{asset('user/assets/icons/avatar.svg')}}" alt="avatar">
                                 </a>
                                 @else
+                                 <button class="btn btn-sky profile-btn invert">
+                                    المصمم
+                                    </button>
                                 <a href="#profile">
                                     <img src="{{ asset(  auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
                                 </a>
@@ -202,7 +208,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="form-action">
-                                                        <button class="btn btn-form  mx-3 with-arrow" data-bs-target="#carouselHealthIndicators" data-bs-slide="next"><img src="{{asset('user/assets/icons/arrow-right.svg')}}" alt="">&nbsp; التالي</button>
+                                                        <button class="btn btn-form disabled  mx-3 with-arrow" data-bs-target="#carouselHealthIndicators" data-bs-slide="next"><img src="{{asset('user/assets/icons/arrow-right.svg')}}" alt="">&nbsp; التالي</button>
                                                         <p>اختيار نوع الخدمة المطلوبة</p>
                                                     </div>
 

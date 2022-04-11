@@ -3390,12 +3390,12 @@
                                                         </div>
                                                         <div class="col-md-6">
                                                             <div class="upload-btn-wrapper designer-upload">
-                                                                <button class="btn btn-upload-designer health"><img
+                                                                <button class="btn btn-upload-designer "><img
                                                                         src="{{asset('user/assets/icons/upload-atachment.png')}}"
                                                                         alt="upload-img">
                                                                     <p>صور بصيغة STL,PNG,JPG</p>
                                                                 </button>
-                                                                <input type="file" id="health-file" required
+                                                                <input type="file" id="" required
                                                                     name="myfile" />
                                                             </div>
                                                         </div>
@@ -3749,12 +3749,12 @@
                                                             </div>
                                                             <div class="col-md-6">
                                                                 <div class="upload-btn-wrapper designer-upload">
-                                                                    <button class="btn btn-upload-designer health"><img
+                                                                    <button class="btn btn-upload-designer "><img
                                                                             src="{{asset('user/assets/icons/download-attachments.png')}}"
                                                                             alt="upload-img">
                                                                         <h5>تحميل المرفقات</h5>
                                                                     </button>
-                                                                    <input type="file" id="health-file" required
+                                                                    <input type="file" id="" required
                                                                         name="myfile" />
                                                                 </div>
                                                             </div>
@@ -7997,11 +7997,11 @@
                                                                 <div class="col-md-6">
                                                                     <div class="upload-btn-wrapper designer-upload">
                                                                         <button
-                                                                            class="btn btn-upload-designer health"><img
+                                                                            class="btn btn-upload-designer"><img
                                                                             src="{{asset('user/assets/icons/download-attachments.png')}}"
                                                                             alt="upload-img">
                                                                         <h5>تحميل المرفقات</h5></button>
-                                                                        <input type="file" id="health-file" required=""
+                                                                        <input type="file" id="" required=""
                                                                             name="myfile">
                                                                     </div>
                                                                 </div>
@@ -8650,10 +8650,10 @@
                                                             </div>
                                                             <div class="col-md-6">
                                                                 <div class="upload-btn-wrapper designer-upload">
-                                                                    <button class="btn btn-upload-designer health"><img
+                                                                    <button class="btn btn-upload-designer "><img
                                                                             src="{{asset('user/assets/icons/upload-img.svg')}}"
                                                                             alt="upload-img"></button>
-                                                                    <input type="file" id="health-file" required
+                                                                    <input type="file" id="" required
                                                                         name="myfile" />
                                                                 </div>
                                                             </div>
