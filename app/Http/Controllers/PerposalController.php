@@ -44,14 +44,11 @@ class PerposalController extends Controller
      */
     public function store(Request $request)
     {
-
-    
+        $image = $request->image->getClientOriginalName();
+        $request->image->move(public_path('upload/'), $image);
+        $pathimage ='upload/'.$image;
         $med = Medical::find($request->order_id);
         $user = User::find($med->user_id);
-        $image = 'PurPosal-'.$request->order_id;
-        $request->image->move(public_path('upload/'), $request->image);
-        $pathimage ='upload/'.$image;
-        
         Perposal::create([
             'tax' => $request->tax,
             'price_model' => $request->price_model,
