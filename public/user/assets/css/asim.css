@@ -1076,7 +1076,13 @@
             }
 
 
+            #productaddModal .modal-header{
+                padding-top: 30px !important;
+            }
 
+            .video iframe{
+                width: 255px;
+            }
 
             
     }
@@ -1104,14 +1110,15 @@
             top: 140px;
         }
         .btn-white {
-            margin-left: 10px;
+            margin-left: 13px;
             margin-bottom: 30px;
         }
         .btn-trans {
-            margin-left: 10px;
+            margin-left: 13px;
             margin-bottom: 30px;
         }
         .btn-list .btn-blue{
+            margin-left: 13px;
             margin-bottom: 30px;
         }
 
@@ -1265,6 +1272,23 @@
     #designModal #page-content-wrapper{
         position: relative;
     }
+
+    .search-form {
+        padding: 0px 30px;
+    }
+    .search-form .ps-0{
+        padding-left: 12px !important;
+    }
+    .designer-sec .search-form .sort-btn:first-child .btn{
+        text-align: right;
+    }
+    .btn-list {
+        padding-top: 40px;
+        margin-bottom: 52px;
+        padding-right: 30px;
+    }
+
+
 
     
     }
