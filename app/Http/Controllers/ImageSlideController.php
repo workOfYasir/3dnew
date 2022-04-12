@@ -38,10 +38,6 @@ class ImageSlideController extends Controller
     public function store(Request $request)
     {
         $this->validate($request,[
-            'speed'       => 'required',
-            'number'      => 'required',
-            'heading'     => 'required',
-            'sub_heading' => 'required',
             'images'      => 'required|image|mimes:jpeg,png,jpg,gif,svg',
         ]);
         $image = $request->images->getClientOriginalName();

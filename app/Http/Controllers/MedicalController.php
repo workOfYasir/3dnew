@@ -113,7 +113,7 @@ class MedicalController extends Controller
             ];
             \Mail::to($user->email)->send(new \App\Mail\statuschanged($details));
         }
-        if ($request->status =2) {
+        else if ($request->status =2) {
             $order->status = 2;
             $order->save();
             $details = [
@@ -124,7 +124,7 @@ class MedicalController extends Controller
             ];
             \Mail::to($user->email)->send(new \App\Mail\statuschanged($details));
         }
-       if ($request->status =3 ) {
+       else if ($request->status =3 ) {
             $order->status = 3;
             $order->save();
             $details = [
@@ -135,7 +135,7 @@ class MedicalController extends Controller
             ];
             \Mail::to($user->email)->send(new \App\Mail\statuschanged($details));
         }
-        if ($request->status =4) {
+        else if ($request->status =4) {
             $order->status = 4;
             $order->save();
             $details = [
@@ -145,7 +145,7 @@ class MedicalController extends Controller
             ];
             \Mail::to($user->email)->send(new \App\Mail\statuschanged($details));
         }
-        if ($request->status=5) {
+        else if ($request->status=5) {
             $order->status = 5;
             $order->save();
             $details = [
@@ -156,7 +156,7 @@ class MedicalController extends Controller
             ];
             \Mail::to($user->email)->send(new \App\Mail\statuschanged($details));
         }
-       if ($request->status =6) {
+       else if ($request->status =6) {
             $order->status = 6;
             $order->save();
             $details = [
@@ -166,7 +166,7 @@ class MedicalController extends Controller
             ];
             \Mail::to($user->email)->send(new \App\Mail\statuschanged($details));
         }
-        if  ($request->status =7)  {
+        else if  ($request->status =7)  {
             $order->status = 7;
             $order->save();
             $details = [
@@ -182,12 +182,14 @@ class MedicalController extends Controller
             'subject'=>  $order->status,
             'body' => $order->status,
         ];
-        \Mail::to($user->email)->send(new \App\Mail\statuschanged($details));
+        // \Mail::to($user->email)->send(new \App\Mail\statuschanged($details));
         return redirect()->route('home');
     }
     public function updatedpublic(Request $request)
     {
+
         $order = PublicService::find($request->id);
+      
         $user = User::find($order->user_id);
         if ($request->has('checkbox2')) {
             $order->status = 4;
