@@ -48,6 +48,7 @@ class Chats extends Component
     public function resetForm()
     {
     	$this->message='';
+        $this->photo='';
     }
 
     public function SendMessage()
@@ -75,7 +76,6 @@ class Chats extends Component
         $data->request_type=$this->request_type;
         $data->save();
     	$this->resetForm();
-
 
     }
     public function getUser($userId=1)
