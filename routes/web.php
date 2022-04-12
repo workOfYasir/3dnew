@@ -115,7 +115,7 @@ Route::group(['middleware' => 'auth', 'varify','cors'], function () {
         Route::get('medi/index', [MedicalController::class, 'index'])->name('medi.index');
         Route::get('medi/show/{id}', [MedicalController::class, 'show'])->name('medi.show');
         Route::post('updated.status', [MedicalController::class, 'updated'])->name('updated.status');
-        Route::post('public/updated/status', [MedicalController::class, 'updatedpublic'])->name('public.updated.status');
+        Route::post('public.updated.status', [MedicalController::class, 'updatedpublic'])->name('public.updated.status');
         Route::post('password/updates', [HomeController::class, 'password_updates'])->name('password_updates');
         Route::resource('side', SideImageController::class);
     

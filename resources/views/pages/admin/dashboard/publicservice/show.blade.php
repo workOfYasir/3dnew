@@ -24,7 +24,8 @@
                                             method="POST">
                                             @csrf
                                             <br>
-                                            <select name="" id=""
+                                            <input type="hidden" name="id" value="{{ $order->id }}">
+                                            <select name="status" 
                                                 class="form-control">
                                                 <option value="1"> رفع الطلب</option>
                                                 <option value="2"> الدفع</option>
@@ -404,7 +405,7 @@
                                     <div class="modal-body">
                                   
                                             <div class="row">
-                                                @livewire('chats',['user_id' => $order->user_id,'request_id'=>$order->id,'request_type'=>'App\Models\Medical']])
+                                                @livewire('chats',['user_id' => $order->user_id,'request_id'=>$order->id,'request_type'=>'App\Models\Medical']))
                                             </div>
                                               
                                     </div>
