@@ -12,14 +12,14 @@
                                 </button>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                                   
-                                    @if(count($user->purposals==0))
+                                    @if(count($user->purposals)==0)
                                     <li>
                                         <a class="dropdown-item" href="{{ route('purposal.pdf',@$user->purposals->id) }}" >
                                         New Purposal
                                         </a>
                                     </li>
                                  @endif
-                                 @if(count($user->invoices==0))
+                                 @if(count($user->invoices)==0)
                                  <li>
                                      <a class="dropdown-item" href="{{ route('invoice.pdf',@$user->purposals->id) }}">
                                          New Invoice
