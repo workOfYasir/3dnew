@@ -49,7 +49,7 @@ class Chats extends Component
     public function resetForm()
     {
     	$this->message='';
-        $this->photo='';
+        $this->photo=null;
     }
 
     public function SendMessage()
