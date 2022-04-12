@@ -222,7 +222,7 @@
                                                     <div class="submitted-data">
                                                         <h6>رقم الطلب</h6>
                                                         @auth
-                                                        <h1>{{@$order->id +1}}</h1>
+                                                        <h1>{{@$order->id+1 }}</h1>
                                                         @else<h1>244</h1>
                                                         @endauth
                                                         <div class="">
