@@ -45,12 +45,13 @@ class InvoiceController extends Controller
      */
     public function store(Request $request)
     {
-        $img = $request->file('image');
-        $image = $img->getClientOriginalName();
-        $request->image->move(public_path('upload/'), $image);
-        $pathimage ='upload/'.$image;
+     
+       
         $med = Medical::find($request->order_id);
         $user = User::find($med->user_id);
+        $image = 'Invoice-'.$request->order_id;
+        $request->image->move(public_path('upload/'), $image);
+        $pathimage ='upload/'.$image;
         $invoices = Invoice::create([
             'tax' => $request->tax,
             'price_model' => $request->price_model,
