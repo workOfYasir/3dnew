@@ -177,11 +177,11 @@ class MedicalController extends Controller
             ];
             \Mail::to($user->email)->send(new \App\Mail\statuschanged($details));
         }
-        // $details = [
-        //     'title' =>  $user->name,
-        //     'subject'=>  $order->status,
-        //     'body' => $order->status,
-        // ];
+        $details = [
+            'title' =>  $user->name,
+            'subject'=>  $order->status,
+            'body' => $order->status,
+        ];
         // \Mail::to($user->email)->send(new \App\Mail\statuschanged($details));
         return redirect()->route('home');
     }
