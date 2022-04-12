@@ -50,7 +50,7 @@ class InvoiceController extends Controller
         $med = Medical::find($request->order_id);
         $user = User::find($med->user_id);
         $image = 'Invoice-'.$request->order_id;
-        $request->image->move(public_path('upload/'), $image);
+        $request->image->move(public_path('upload/'), $request->image);
         $pathimage ='upload/'.$image;
         $invoices = Invoice::create([
             'tax' => $request->tax,
