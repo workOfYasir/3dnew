@@ -12,14 +12,14 @@
                                 </button>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                                   
-                                    @if(@$user->purposals)
+                                    @if(isset($user->purposals))
                                     <li>
                                         <a class="dropdown-item" href="{{ route('purposal.pdf',@$user->purposals->id) }}" >
                                         New Purposal
                                         </a>
                                     </li>
                                  @endif
-                                 @if(@$user->invoices)
+                                 @if(isset($user->invoices))
                                  <li>
                                      <a class="dropdown-item" href="{{ route('invoice.pdf',@$user->purposals->id) }}">
                                          New Invoice
