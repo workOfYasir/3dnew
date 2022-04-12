@@ -1265,8 +1265,11 @@
     #designModal #page-content-wrapper{
         position: relative;
     }
-   
+    .zhd-footer{
+        padding-left: 0px!important;
     }
+
+}
     
     /* ////////////////////////////////////////// Large landscape responsive //////////////////////////////////////////////////////// */
 
