@@ -14,14 +14,14 @@
                                   
                                     @if(@$user->purposals)
                                     <li>
-                                        <a class="dropdown-item" href="{{ route('purposal.pdf',$user->purposals->id) }}" >
+                                        <a class="dropdown-item" href="{{ route('purposal.pdf',@$user->purposals->id) }}" >
                                         New Purposal
                                         </a>
                                     </li>
                                  @endif
                                  @if(@$user->invoices)
                                  <li>
-                                     <a class="dropdown-item" href="{{ route('invoice.pdf',$user->purposals->id) }}">
+                                     <a class="dropdown-item" href="{{ route('invoice.pdf',@$user->purposals->id) }}">
                                          New Invoice
                                          </a>
                                 </li>

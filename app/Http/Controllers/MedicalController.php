@@ -99,7 +99,6 @@ class MedicalController extends Controller
 
     public function updated(Request $request)
     {
-      
         $order = Medical::find($request->id);
         $user = User::find($order->user_id);
         if ($request->status = 1) {
