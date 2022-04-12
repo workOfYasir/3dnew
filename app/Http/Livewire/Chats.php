@@ -51,7 +51,6 @@ class Chats extends Component
     	$this->message='';
         $this->photo=null;
     }
-
     public function SendMessage()
     {
         
