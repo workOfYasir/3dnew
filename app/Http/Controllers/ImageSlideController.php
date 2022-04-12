@@ -44,8 +44,8 @@ class ImageSlideController extends Controller
             'sub_heading' => 'required',
             'images'      => 'required|image|mimes:jpeg,png,jpg,gif,svg',
         ]);
-        $image = $request->image->getClientOriginalName();
-        $request->image->move(public_path('upload/'), $image);
+        $image = $request->images->getClientOriginalName();
+        $request->images->move(public_path('upload/'), $image);
         $pathimage ='upload/'.$image;
         // $imageName        = time().'.'.$request->images->extension();  
         // $request->images->storeAs('upload',$imageName);
