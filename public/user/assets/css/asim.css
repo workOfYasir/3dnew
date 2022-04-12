@@ -707,6 +707,12 @@
             width: 50%;
         }
 
+        #designinnerModal .btn-white, #designinnerModal .btn-blue {
+            margin-left: 0px;
+        }
+        #designinnerModal .btn-trans {
+            margin-left: 0px;
+        }
 
 
         #designinnerModal .designer-sec::before {
