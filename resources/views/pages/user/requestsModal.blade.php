@@ -19,7 +19,7 @@
                                         </a>
                                     </li>
                                  @endif
-                                 @if(($user->invoices)==0null
+                                 @if(($user->invoices)==null)
                                  <li>
                                      <a class="dropdown-item" href="{{ route('invoice.pdf',@$user->purposals->id) }}">
                                          New Invoice
