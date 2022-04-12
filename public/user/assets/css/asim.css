@@ -1288,11 +1288,37 @@
         padding-right: 30px;
     }
 
-
+    .design-card-main {
+        padding-top: 0px !important;
+    }
+    .designer-title {
+        padding-bottom: 30px;
+    }
+    .designer-profile .btn {
+        margin-bottom: 15px;
+    }
+    #designinnerModal .designer-sec {
+        padding-top: 0px;
+    }
+    footer .social a {
+        margin-right: 0px;
+    }
+    footer .social a:last-child {
+        margin: 0px;
+    }
+    .switch .form-check {
+        padding-left: 10px;
+    }
+    .message-error-icon{
+        margin: 0px !important;
+        width: 30px;
+        margin-left: 20px !important;
+    }
     .zhd-footer{
         padding-left: 0px!important;
-    
     }
+
+
 
 }
     

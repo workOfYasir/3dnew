@@ -5833,7 +5833,7 @@
                                         <div class="container-fluid">
                                             <footer>
                                                 <div class="row">
-                                                    <div class="col-md-4 col-xl-4">
+                                                    <div class="col-md-5 col-xl-4">
                                                         <div class="right">
                                                             <p>تصميم وتطوير شركة تيلرز</p>
                                                             <a href="https://tellers.sa/"><img
@@ -5844,7 +5844,7 @@
                                                     <div class="col-md-5 col-xl-4">
                                                         <p>جميع الحقوق محفوظة لـ &nbsp;+3D&nbsp; لعام 2022</p>
                                                     </div>
-                                                    <div class="col-md-3 col-xl-4">
+                                                    <div class="col-md-2 col-xl-4">
                                                         <div class="social">
                                                             <a href="#"><img
                                                                     src="{{ asset('user/assets/icons/twitter-white.svg') }}"
@@ -6253,7 +6253,7 @@
                                             <div class="design-card-main">
 
                                                 <div class="row padd-30">
-                                                    <div class="col-md-4">
+                                                    <div class="col-md-6 col-lg-4">
                                                         <div class="design-card-inner">
 
                                                             <a href="javascript:void(0);"
@@ -6286,7 +6286,7 @@
                                                         </div>
 
                                                     </div>
-                                                    <div class="col-md-4">
+                                                    <div class="col-md-6 col-lg-4">
                                                         <div class="design-card-inner">
 
                                                             <div class="design-card-body">
@@ -6314,7 +6314,7 @@
                                                         </div>
 
                                                     </div>
-                                                    <div class="col-md-4">
+                                                    <div class="col-md-6 col-lg-4">
                                                         <div class="design-card-inner">
 
                                                             <div class="design-card-body">
@@ -6342,10 +6342,8 @@
                                                         </div>
 
                                                     </div>
-                                                </div>
 
-                                                <div class="row padd-30">
-                                                    <div class="col-md-4">
+                                                    <div class="col-md-6 col-lg-4">
                                                         <div class="design-card-inner">
 
                                                             <div class="design-card-body">
@@ -6373,7 +6371,7 @@
                                                         </div>
 
                                                     </div>
-                                                    <div class="col-md-4">
+                                                    <div class="col-md-6 col-lg-4">
                                                         <div class="design-card-inner">
 
                                                             <a href="javascript:void(0);"
@@ -6406,7 +6404,7 @@
                                                         </div>
 
                                                     </div>
-                                                    <div class="col-md-4">
+                                                    <div class="col-md-6 col-lg-4">
                                                         <div class="design-card-inner">
 
                                                             <div class="design-card-body">
@@ -6481,7 +6479,7 @@
                                         <div class="container-fluid">
                                             <footer>
                                                 <div class="row">
-                                                    <div class="col-md-4 col-xl-4">
+                                                    <div class="col-md-5 col-xl-4">
                                                         <div class="right">
                                                             <p>تصميم وتطوير شركة تيلرز</p>
                                                             <a href="https://tellers.sa/"><img
@@ -6492,7 +6490,7 @@
                                                     <div class="col-md-5 col-xl-4">
                                                         <p>جميع الحقوق محفوظة لـ &nbsp;+3D&nbsp; لعام 2022</p>
                                                     </div>
-                                                    <div class="col-md-3 col-xl-4">
+                                                    <div class="col-md-2 col-xl-4">
                                                         <div class="social">
                                                             <a href="#"><img
                                                                     src="{{ asset('user/assets/icons/twitter.png') }}"
@@ -6579,7 +6577,7 @@
 
                                                     <div class="row padd-30">
 
-                                                        <div class="col-md-4">
+                                                        <div class="col-md-6 col-lg-4">
                                                             <div class="design-card-inner">
 
                                                                 <div class="design-card-body">
@@ -6610,7 +6608,7 @@
                                                             </div>
 
                                                         </div>
-                                                        <div class="col-md-4">
+                                                        <div class="col-md-6 col-lg-4">
                                                             <div class="design-card-inner">
 
                                                                 <div class="design-card-body">
@@ -6641,7 +6639,7 @@
                                                             </div>
 
                                                         </div>
-                                                        <div class="col-md-4">
+                                                        <div class="col-md-6 col-lg-4">
                                                             <div class="design-card-inner">
 
                                                                 <div class="design-card-body">
@@ -6672,10 +6670,7 @@
                                                             </div>
 
                                                         </div>
-                                                    </div>
-
-                                                    <div class="row padd-30">
-                                                        <div class="col-md-4">
+                                                        <div class="col-md-6 col-lg-4">
                                                             <div class="design-card-inner">
 
                                                                 <div class="design-card-body">
@@ -6706,7 +6701,7 @@
                                                             </div>
 
                                                         </div>
-                                                        <div class="col-md-4">
+                                                        <div class="col-md-6 col-lg-4">
                                                             <div class="design-card-inner">
 
                                                                 <div class="design-card-body">
@@ -6737,7 +6732,7 @@
                                                             </div>
 
                                                         </div>
-                                                        <div class="col-md-4">
+                                                        <div class="col-md-6 col-lg-4">
                                                             <div class="design-card-inner">
 
                                                                 <div class="design-card-body">
