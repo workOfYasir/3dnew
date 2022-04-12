@@ -25,7 +25,7 @@
                                       <?php  }
                                         
                                     ?>
-                                 
+                          
                                     <br><small class="text-muted w-100">Sent <em>{{$mgs->created_at}}</em></small>
                                 </div>
 

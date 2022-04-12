@@ -64,7 +64,7 @@
                                                         <label class="form-label" for="vehicle3"> التوصيل واتمام الطلب</label>
                                                         @endif  -->
                                                         <select name="status"
-                                                            id=""
+                                                            id="status"
                                                             class="form-control">
                                                             <option value="1">
                                                                 اجتماع الخطة
@@ -88,13 +88,13 @@
                                                         </select>
                                                         <br>
                                                       
-                                                        <button type="button"
+                                                        {{-- <button type="button"
                                                             class="btn
-                                                            btn-primary"
+                                                            btn-primary modalBtn"
                                                             data-bs-toggle="modal"
                                                             data-bs-target="#exampleModal">
                                                             إرسال الاستعلام
-                                                        </button>
+                                                        </button> --}}
                                                         <button class="btn
                                                             btn-primary"
                                                             type="submit"> حفظ</button>
@@ -355,9 +355,12 @@
                                             data-bs-dismiss="modal"
                                             aria-label="Close"></button>
                                     </div>
-                                    <div class="modal-body">
-                                        <form>
-
+                                    <div class="modal-body"
+                                        action="{{route('updated.status')}}"
+                                        method="POST">
+                                        @csrf
+                                            <input type="hidden" name="status" id="query_status">
+                                            <input type="hidden" name="query" id="query">
                                             <div class="col-12">
                                                 <label class="form-label">بريد الالكتروني</label>
                                                 <input type="text"
@@ -443,5 +446,10 @@
             });
     
         });
+    $('.modalBtn').click(function (){
+        var status = $('#status').val();
+        $('#query_status').val(status);
+        $('#query').val(1);
+    })
     </script>
 @endpush

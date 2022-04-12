@@ -28,7 +28,7 @@
                                             select example">
                                             <option selected disabled>اختر طلبا</option>
                                             @foreach($orders as $order)
-                                            <option value="{{$order->id}}">{{$order->pa_name}}</option>
+                                            <option value="{{$order->id}}">{{$order->id}}</option>
                                             @endforeach
                                         </select>
                                     </div>

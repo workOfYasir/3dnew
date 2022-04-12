@@ -107,6 +107,8 @@ class MedicalController extends Controller
             $order->save();
             $details = [
                 'title' =>  $user->name,
+                'subject'=> 'اجتماع الخطة
+                العلاجية',
                 'body' => $order->status,
             ];
             \Mail::to($user->email)->send(new \App\Mail\statuschanged($details));
@@ -116,6 +118,8 @@ class MedicalController extends Controller
             $order->save();
             $details = [
                 'title' =>  $user->name,
+                'subject'=> 'اجتماع النموذج
+                الأول',
                 'body' => $order->status,
             ];
             \Mail::to($user->email)->send(new \App\Mail\statuschanged($details));
@@ -125,6 +129,8 @@ class MedicalController extends Controller
             $order->save();
             $details = [
                 'title' =>  $user->name,
+                'subject'=> 'اجتماع النموذج
+                النهائي',
                 'body' => $order->status,
             ];
             \Mail::to($user->email)->send(new \App\Mail\statuschanged($details));
@@ -134,6 +140,7 @@ class MedicalController extends Controller
             $order->save();
             $details = [
                 'title' =>  $user->name,
+                'subject'=> 'الدفع',
                 'body' => $order->status,
             ];
             \Mail::to($user->email)->send(new \App\Mail\statuschanged($details));
@@ -143,6 +150,8 @@ class MedicalController extends Controller
             $order->save();
             $details = [
                 'title' =>  $user->name,
+                'subject'=> 'الطباعة ثلاثية
+                الأبعاد',
                 'body' => $order->status,
             ];
             \Mail::to($user->email)->send(new \App\Mail\statuschanged($details));
@@ -152,6 +161,7 @@ class MedicalController extends Controller
             $order->save();
             $details = [
                 'title' =>  $user->name,
+                'subject'=> 'اختبار الجودة',
                 'body' => $order->status,
             ];
             \Mail::to($user->email)->send(new \App\Mail\statuschanged($details));
@@ -161,12 +171,15 @@ class MedicalController extends Controller
             $order->save();
             $details = [
                 'title' =>  $user->name,
+                'subject'=>'التوصيل واتمام
+                الطلب',
                 'body' => $order->status,
             ];
             \Mail::to($user->email)->send(new \App\Mail\statuschanged($details));
         }
         $details = [
             'title' =>  $user->name,
+            'subject'=>  $order->status,
             'body' => $order->status,
         ];
         \Mail::to($user->email)->send(new \App\Mail\statuschanged($details));
@@ -182,6 +195,7 @@ class MedicalController extends Controller
         }
         $details = [
             'title' =>  $user->name,
+            'subject'=> '',
             'body' => $order->status,
         ];
 
