@@ -76,10 +76,10 @@ class PerposalController extends Controller
             'thanks' => 'شكراً جزيلاً',
             'orderNumber' =>$med->id ,
         ];
-        $perposal = Perposal::where('id',$perposals->id)->get()->first();
-        $user = User::find($perposal->user_id);
+        $invoice = Perposal::where('id',$perposals->id)->get()->first();
+        $user = User::find($invoice->user_id);
         // if($request->has('download')){
-            $pdf = PDF::loadView('pages.admin.proposel',compact('perposal', 'user'));
+            $pdf = PDF::loadView('pages.admin.invoice',compact('invoice', 'user'));
 
         \Mail::send('emails.invoice', $details, function($message)use($details,$user, $pdf) {
             $message->to($user->email)

@@ -47,8 +47,9 @@
                                        <img src="{{asset('user/assets/icons/green-line.svg')}}" alt="">
                                        <input type="text" id="status" name="status" hidden>
                                        <div class="col-sm-12 col-lg col-xxl">
-                                           <div id="date" class="dateTime small">{{@$ss->created_at}}</div>
+                                           
                                            @if( request()->input('status')>= 2 || @$ss->status >= 2)
+                                           <div id="date" class="dateTime small">{{@$ss->created_at}}</div>
                                            <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
                                            @else
                                            <img src="{{asset('user/assets/icons/red-circle.svg')}}" class="red-circle" alt="red-circle">
@@ -64,8 +65,9 @@
                                        @endif
 
                                        <div class="col-sm-12 col-lg col-xxl">
-                                           <div id="date" class="dateTime small">{{@$ss->created_at}}</div>
+                                       
                                            @if( @$ss->status >= 3)
+                                           <div id="date" class="dateTime small">{{@$ss->created_at}}</div>
                                            <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
                                            @else
                                            <img src="{{asset('user/assets/icons/red-circle.svg')}}" class="red-circle" alt="red-circle">
@@ -80,8 +82,9 @@
                                        <img src="{{asset('user/assets/icons/redline.svg')}}" alt="">
                                        @endif
                                        <div class="col-sm-12 col-lg col-xxl">
-                                           <div id="date" class="dateTime small">{{@$ss->created_at}}</div>
+                                           
                                            @if( @$ss->status >= 4)
+                                           <div id="date" class="dateTime small">{{@$ss->created_at}}</div>
                                            <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
                                            @else
                                            <img src="{{asset('user/assets/icons/red-circle.svg')}}" class="red-circle" alt="red-circle">
@@ -96,8 +99,9 @@
                                        <img src="{{asset('user/assets/icons/redline.svg')}}" alt="">
                                        @endif
                                        <div class="col-sm-12 col-lg col-xxl">
-                                           <div id="date" class="dateTime small">{{@$ss->created_at}}</div>
+                                        
                                            @if( @$ss->status >= 5)
+                                           <div id="date" class="dateTime small">{{@$ss->created_at}}</div>
                                            <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
                                            @else
                                            <img src="{{asset('user/assets/icons/red-circle.svg')}}" class="red-circle" alt="red-circle">
@@ -107,13 +111,15 @@
                                            </div>
                                        </div>
                                        @if( @$ss->status >= 5)
+                                       <div id="date" class="dateTime small">{{@$ss->created_at}}</div>
                                        <img src="{{asset('user/assets/icons/green-line.svg')}}" alt="">
                                        @else
                                        <img src="{{asset('user/assets/icons/redline.svg')}}" alt="">
                                        @endif
                                        <div class="col-sm-12 col-lg col-xxl">
-                                           <div id="date" class="dateTime small">{{@$ss->created_at}}</div>
+                                           
                                            @if( @$ss->status >= 6)
+                                           <div id="date" class="dateTime small">{{@$ss->created_at}}</div>
                                            <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
                                            @else
                                            <img src="{{asset('user/assets/icons/red-circle.svg')}}" class="red-circle" alt="red-circle">
@@ -128,8 +134,9 @@
                                        <img src="{{asset('user/assets/icons/redline.svg')}}" alt="">
                                        @endif
                                        <div class="col-sm-12 col-lg col-xxl">
-                                           <div id="date" class="dateTime small">{{@$ss->created_at}}</div>
+                                     
                                            @if( @$ss->status >= 7)
+                                           <div id="date" class="dateTime small">{{@$ss->created_at}}</div>
                                            <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
                                            @else
                                            <img src="{{asset('user/assets/icons/red-circle.svg')}}" class="red-circle" alt="red-circle">
@@ -144,8 +151,9 @@
                                        <img src="{{asset('user/assets/icons/redline.svg')}}" alt="">
                                        @endif
                                        <div class="col-sm-12 col-lg col-xxl">
-                                           <div id="dateTime" class="dateTime small">{{@$ss->created_at}}</div>
+                                         
                                            @if( @$ss->status >= 8)
+                                           <div id="dateTime" class="dateTime small">{{@$ss->created_at}}</div>
                                            <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
                                            @else
                                            <img src="{{asset('user/assets/icons/red-circle.svg')}}" class="red-circle" alt="red-circle">
