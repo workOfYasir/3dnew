@@ -1780,7 +1780,7 @@
 
                                             <div class="row circle-bottom justify-content-center">
                                                 
-                                                <div class="col-md-4 mt-5">
+                                                <div class="col-md-6 col-lg-4 mt-5">
                                                     <label class="form-label dot">شكل الطباعة</label>
                                                     <select class="form-select gender" required name="gender"
                                                         aria-label="Default select example">
@@ -1788,7 +1788,7 @@
                                                         <option>الاشكال هنا</option>
                                                     </select>
                                                 </div>
-                                                <div class="col-md-4 mt-5">
+                                                <div class="col-md-6 col-lg-4 mt-5">
                                                     <label class="form-label dot">تقنية الطباعة</label>
                                                     <select class="form-select gender" required name="gender"
                                                         aria-label="Default select example">

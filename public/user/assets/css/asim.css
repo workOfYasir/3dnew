@@ -1232,6 +1232,7 @@
     }
       .cleanshot-row{
         align-content: flex-end !important;
+        min-height: 430px;
       } 
 
     .adobe-icon{
@@ -1318,7 +1319,16 @@
         padding-left: 0px!important;
     }
 
-
+    .small-card img {
+        width: 115px;
+    }
+    .small-card__images-box{
+        width: 115px;
+        height: 115px;
+    }
+    .small-card__images-img{
+        width: auto !important;
+    }
 
 }
     
