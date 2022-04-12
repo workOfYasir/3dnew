@@ -44,17 +44,20 @@ class ImageSlideController extends Controller
             'sub_heading' => 'required',
             'images'      => 'required|image|mimes:jpeg,png,jpg,gif,svg',
         ]);
-        $imageName        = time().'.'.$request->images->extension();  
-        $request->images->storeAs('upload',$imageName);
-        $image            = $request->images->move(storage_path('app/upload/'), $imageName);
-        $filePath         =  'upload/'.$imageName;
+        $image = $request->images->getClientOriginalName();
+        $request->images->move(public_path('upload/'), $image);
+        $pathimage ='upload/'.$image;
+        // $imageName        = time().'.'.$request->images->extension();  
+        // $request->images->storeAs('upload',$imageName);
+        // $image            = $request->images->move(storage_path('app/upload/'), $imageName);
+        // $filePath         =  'upload/'.$imageName;
         $sliders          =  ImageSlider::create([
             'speed'       => $request->speed,
             'number'      => $request->number,
             'heading'     => $request->heading,
             'sub_heading' => $request->sub_heading,
             'body_text'   => $request->body_text,
-            'images'      => $filePath,
+            'images'      => $pathimage,
         ]);
        if($sliders){
             return redirect()->route('image.index');

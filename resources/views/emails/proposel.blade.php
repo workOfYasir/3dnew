@@ -8,11 +8,11 @@
 </head>
 
 <body>
-<h3>جاري تنفيذ طلب رقم  :{{ $details['subject'] }} </h3><br>
+<h3>جاري تنفيذ طلب رقم  :{{ $subject }} </h3><br>
 <p>Body : </p>
   
-عزيزي :<span>{{$details['name']}}</span><br>
-<span>جاري العمل على طلبكم رقم :{{ $details['subject'] }}</span><br>
+عزيزي :<span>{{$name}}</span><br>
+<span>جاري العمل على طلبكم رقم :{{ $subject }}</span><br>
 <span>شكراً جزيلاً</span>
   <img src="{{ asset('assets/images/logo/logo-favicon.png') }}" alt=""><br>
 </body>
