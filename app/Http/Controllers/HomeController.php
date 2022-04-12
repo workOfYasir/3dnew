@@ -55,8 +55,8 @@ class HomeController extends Controller
             $con = ContactUs::first();
             $tech = Tech::first();
             $profile = ImageSlider::all();
-            $order = Medical::find(auth()->user()->order_id);
-            $public = PublicService::orderBy('id', 'DESC')->first();
+            $order = Medical::where('user_id',auth()->user()->id)->orderBy('id','desc')->first();
+            $public = PublicService::where('user_id',auth()->user()->id)->orderBy('id','desc')->first();
             $side = SideLogo::first();
             $logos = Logo::first();
             $orders = Medical::where('user_id', Auth::id())->get();
@@ -65,6 +65,7 @@ class HomeController extends Controller
             $map = Mapimage::first();
             $links = Youtubeurl::first();
             $counter = Counter::first();
+        
             return view('pages.user.index.index', compact('counter', 'links', 'about', 'con', 'tech', 'profile', 'order', 'side', 'orders', 'logos', 'public', 'publics', 'title', 'map','user'));
         }
     }
