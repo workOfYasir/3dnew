@@ -508,13 +508,13 @@
     margin-bottom: 0px !important;
     margin-left: 20px;
 }
-.circle-plus-icon{
+/* .circle-plus-icon{
     display: flex;
     align-items: center;
     flex-direction: column;
     margin-right: 0px;
     margin-top: auto;
-}
+} */
 .circle-plus-icon i{
     font-size: 43px;
     margin-left: 5px;
@@ -575,13 +575,19 @@
     box-shadow: none !important;
     background-color: #E0E0DE;
 }
-
+.register-pdf{
+    position: absolute;
+    right: 140px;
+}
+/* #productdesignModal .modal-header .circle-plus-icon, #productaddModal .modal-header .circle-plus-icon {
+    flex-direction: row !important;
+    margin-top: 0px !important;
+} */
  /* /////////////////////////////////////// user7RequestModal hide d-none class default /////////////////////////////////////// */
        #user7RequestModal .modal-body .payment.credit-payment.d-block{
         display: block !important;
         }
 
-        
     /* styling end here */
 
 
@@ -607,6 +613,18 @@
     /* //////////////////////////////////// responsive start here ////////////////////////////////////////////////*/
     
     @media (min-width: 360px) and (max-width: 767px) {
+
+        .register-pdf {
+            position: absolute;
+            right: 35px;
+            top: 90px;
+        }
+        .register-pdf .btn{
+            padding: 3px 6px;
+        }
+        #requestsModal .modal-body{
+            margin-top: 50px;
+        }
         /* home page */
         .error-red-bg img{
             width: 40px !important;
@@ -675,20 +693,26 @@
             text-align: center;
         }
         .btn-white, .btn-blue {
-            margin-left: 10px;
+            margin-left: 15px;
             margin-bottom: 30px;
         }
         .btn-trans {
-            margin-left: 10px;
+            margin-left: 15px;
             margin-bottom: 30px;
         }
         .btn-list .btn-trans:nth-child(even) {
-            margin-left: 10px !important;
+            margin-left: 0px !important;
         }
         .design-card-inner .row:first-child .col-md-6 {
             width: 50%;
         }
 
+        #designinnerModal .btn-white, #designinnerModal .btn-blue {
+            margin-left: 0px;
+        }
+        #designinnerModal .btn-trans {
+            margin-left: 0px;
+        }
 
 
         #designinnerModal .designer-sec::before {
@@ -733,7 +757,13 @@
             padding-right: 0px !important;
         }
         
-
+        .circle-plus-icon{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin-right: 0px;
+            margin-top: 30px;
+        }
         #productaddModal .almuntjat-form{
             padding: 0px !important;
         }

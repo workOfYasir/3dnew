@@ -1155,9 +1155,9 @@ textarea {
     margin-bottom: 15px;
 }
 
-#healthServiesModal .profile img {
+/* #healthServiesModal .profile img {
     margin-bottom: 15px;
-}
+} */
 
 #healthServiesModal .modal-header {
     align-items: end;
@@ -2682,7 +2682,7 @@ input[type=number] {
     /* font-family: almarai regular; */
     font-weight: bold;
     padding: 0px;
-    width: 133px;
+    width: 140px;
     height: 40px;
     margin-left: 20px;
 }
@@ -2711,7 +2711,7 @@ input[type=number] {
     padding: 0px;
     /* font-family: almarai regular; */
     font-weight: bold;
-    width: 133px;
+    width: 140px;
     height: 40px;
     margin-left: 30px;
 }
@@ -3023,7 +3023,7 @@ input[type=number] {
     padding: 0px;
     /* font-family: almarai regular; */
     font-weight: bold;
-    width: 133px;
+    width: 140px;
     height: 40px;
     margin-left: 30px;
 }

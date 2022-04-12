@@ -15,10 +15,16 @@
                             </div>
                             <div class="profile">
                                 @if(@auth()->user()->profile == null)
+                                <button class="btn btn-sky profile-btn invert">
+                                    المصمم
+                                    </button>
                                 <a href="#profile">
                                     <img src="{{asset('user/assets/icons/avatar.svg')}}" alt="avatar">
                                 </a>
                                 @else
+                                <button class="btn btn-sky profile-btn invert">
+                                    المصمم
+                                    </button>
                                 <a href="#profile">
                                     <img src="{{ asset(  auth()->user()->profile) }}"
                                         style="height:40px; width:40px; border-radius: 50%">
