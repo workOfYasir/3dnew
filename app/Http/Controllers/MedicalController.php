@@ -199,7 +199,7 @@ class MedicalController extends Controller
             'body' => $order->status,
         ];
 
-        \Mail::to($user->email)->send(new \App\Mail\statuschanged($details));
+        // \Mail::to($user->email)->send(new \App\Mail\statuschanged($details));
         return redirect()->route('home');
     }
     public function askQuestion(Request $request)
