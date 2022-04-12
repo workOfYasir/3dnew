@@ -805,6 +805,7 @@
         }
         .jst-btw{
             flex-direction: column;
+            text-align: center;
         }
         .design-card-inner {
             width: 100%;
@@ -1083,6 +1084,17 @@
             .video iframe{
                 width: 255px;
             }
+            .mujtmah-almusmamen-wrapper .mujtmah-box-btn-wrapper, .mujtmah-box__content .mujtmah-box-btn-wrapper{
+                justify-content: center;
+                align-items: center;
+            }
+            .mujtmah-box__content .mujtmah-box-btn-wrapper button:last-child{
+                margin-left: 0px;
+            }
+            .actions .btn:last-child{
+                margin-left: 0px !important;
+            }
+            
 
             
     }
@@ -1180,6 +1192,7 @@
         }
         #user3RequestModal .userReq-btn-box{
             width: 80%;
+            text-align: center;
         }
         .userReq-btn-box {
             width: 100%;
@@ -1311,9 +1324,14 @@
         padding-left: 10px;
     }
     .message-error-icon{
+        width: 30px !important;
         margin: 0px !important;
-        width: 30px;
+        margin-bottom: 0px !important;
         margin-left: 20px !important;
+    }
+    
+    #productaddformModal .message-error-icon{
+        margin-bottom: 0px !important;
     }
     .zhd-footer{
         padding-left: 0px!important;
@@ -1329,6 +1347,23 @@
     .small-card__images-img{
         width: auto !important;
     }
+    .footer-white-heading .dot.center {
+        right: -10px !important;
+    }
+  
+    .final .col-auto:first-child .dateTime:first-child{
+        padding-top: 50px !important;
+    }
+    #userRequestModal .dateTime.small.padd-t-40{
+        padding-top: 40px !important;
+    }
+    .zhd-form-clean{
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+    .zhd-textarea-clean{
+        width: 100% !important;
+    }
 
 }
     
@@ -1336,6 +1371,25 @@
 
 
     @media (min-width:992px) and (max-width: 1199px) {
+
+        /* navbar */
+        .navbar {
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+        .social-icons{
+            /* display: flex;
+            align-items: center; */
+            display: none;
+        }
+        /* .social-icons a{
+         margin: 0px 7px !important;
+        }
+        nav .left-side a:last-child {
+            margin-left: 0 !important;
+        } */
+
+        /* navbar end */
         .notification-box.notification-box-wdt{
             width: 300px;
         }

@@ -181,7 +181,7 @@
                                     Out</button>
 
                             </form>
-                            <span>
+                            <span class="social-icons">
 
                                 <a href="#"><img src="{{ asset('user/assets/icons/twitter.svg') }}" alt="twitter"></a>
                                 <a href="#"><img src="{{ asset('user/assets/icons/instagram.svg') }}"
@@ -194,7 +194,7 @@
                         دخول</a>
                     <a href="#register" class="ms-auto register-icon border-bottom" data-bs-toggle="modal"
                         data-bs-target="#registerModal">التسجيل</a>
-                    <span>
+                    <span class="social-icons">
                         <a href="#"><img src="{{ asset('user/assets/icons/twitter.svg') }}" alt="twitter"></a>
                         <a href="#"><img src="{{ asset('user/assets/icons/instagram.svg') }}" alt="instagram"></a>
                     </span>
@@ -1505,7 +1505,7 @@
                                                                 Out</button>
 
                                                         </form>
-                                                        <span>
+                                                        <span class="social-icons">
 
                                                             <a href="#"><img
                                                                     src="{{ asset('user/assets/icons/twitter.svg') }}"
@@ -1521,7 +1521,7 @@
                                                     data-bs-target="#loginModal">تسجيل دخول</a>
                                                 <a href="#register" class="ms-auto register-icon border-bottom" data-bs-toggle="modal"
                                                     data-bs-target="#registerModal">التسجيل</a>
-                                                <span>
+                                                <span class="social-icons">
                                                     <a href="#"><img src="{{ asset('user/assets/icons/twitter.svg') }}"
                                                             alt="twitter"></a>
                                                     <a href="#"><img
@@ -1746,7 +1746,7 @@
 
                                         <div class="form form-clean">
                                             <div class="row zhd-form-clean">
-                                                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mt-4">
+                                                <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4 mt-4">
                                                     <label class="form-label dot">اختيار اللون</label>
 
                                                     <div class="color-circle-main">
@@ -2071,7 +2071,7 @@
                                                                 Out</button>
 
                                                         </form>
-                                                        <span>
+                                                        <span class="social-icons">
 
                                                             <a href="#"><img
                                                                     src="{{ asset('user/assets/icons/twitter.svg') }}"
@@ -2087,7 +2087,7 @@
                                                     data-bs-target="#loginModal">تسجيل دخول</a>
                                                 <a href="#register" class="ms-auto register-icon" data-bs-toggle="modal"
                                                     data-bs-target="#registerModal">التسجيل</a>
-                                                <span>
+                                                <span class="social-icons">
                                                     <a href="#"><img src="{{ asset('user/assets/icons/twitter.svg') }}"
                                                             alt="twitter"></a>
                                                     <a href="#"><img
@@ -2312,7 +2312,7 @@
 
                                         <div class="form form-clean">
                                             <div class="row zhd-form-clean">
-                                                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mt-4">
+                                                <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4 mt-4">
                                                     <label class="form-label dot">اختيار اللون</label>
 
                                                     <div class="color-circle-main">
@@ -2346,7 +2346,7 @@
 
                                             <div class="row circle-bottom justify-content-center">
                                                 
-                                                <div class="col-md-4 mt-5">
+                                                <div class="col-md-12 col-lg-4 mt-5">
                                                     <label class="form-label dot">شكل الطباعة</label>
                                                     <select class="form-select gender" required name="gender"
                                                         aria-label="Default select example">
@@ -2354,7 +2354,7 @@
                                                         <option>الاشكال هنا</option>
                                                     </select>
                                                 </div>
-                                                <div class="col-md-4 mt-5">
+                                                <div class="col-md-12 col-lg-4 mt-5">
                                                     <label class="form-label dot">تقنية الطباعة</label>
                                                     <select class="form-select gender" required name="gender"
                                                         aria-label="Default select example">
@@ -5055,7 +5055,7 @@
                                                             Out</button>
 
                                                     </form>
-                                                    <span>
+                                                    <span class="social-icons">
 
                                                         <a href="#"><img
                                                                 src="{{ asset('user/assets/icons/twitter.svg') }}"
@@ -5071,7 +5071,7 @@
                                                 data-bs-target="#loginModal">تسجيل دخول</a>
                                             <a href="#register" class="ms-auto register-icon border-bottom" data-bs-toggle="modal"
                                                 data-bs-target="#registerModal">التسجيل</a>
-                                            <span>
+                                            <span class="social-icons">
                                                 <a href="#"><img src="{{ asset('user/assets/icons/twitter.svg') }}"
                                                         alt="twitter"></a>
                                                 <a href="#"><img src="{{ asset('user/assets/icons/instagram.svg') }}"
@@ -6019,7 +6019,7 @@
                                                                 Out</button>
 
                                                         </form>
-                                                        <span>
+                                                        <span class="social-icons">
 
                                                             <a href="#"><img
                                                                     src="{{ asset('user/assets/icons/twitter.svg') }}"
@@ -6035,7 +6035,7 @@
                                                     data-bs-target="#loginModal">تسجيل دخول</a>
                                                 <a href="#register" class="ms-auto register-icon border-bottom" data-bs-toggle="modal"
                                                     data-bs-target="#registerModal">التسجيل</a>
-                                                <span>
+                                                <span class="social-icons">
                                                     <a href="#"><img src="{{ asset('user/assets/icons/twitter.svg') }}"
                                                             alt="twitter"></a>
                                                     <a href="#"><img
@@ -7258,8 +7258,7 @@
                                                         <div class="col-md-12">
                                                             <div data-id='' class="request-box editProduct">
                                                                 <div class="heading">
-                                                                    <i
-                                                                        class="fa-solid fa-circle-plus heading__plus"></i>
+                                                                    <i class="fa-solid fa-circle-plus heading__plus"></i>
                                                                     <h5>رقم الطلب:</h5>
                                                                     <span>304</span>
                                                                 </div>
@@ -7440,7 +7439,7 @@
                                         <div class="">
                                             <div class="row final two justify-content-center text-center">
                                                 <div class="col-auto">
-                                                    <div class="dateTime small">{{@$public->created_at}}</div>
+                                                    <div class="dateTime small padd-t-40"> {{@$public->created_at}} </div>
                                                     <img src="{{asset('user/assets/icons/green-circle.svg')}}"
                                                         alt="green-circle">
                                                     <div>
@@ -7813,7 +7812,7 @@
                                         <div class="">
                                             <div class="row final two justify-content-center text-center">
                                                 <div class="col-auto">
-                                                    <div class="dateTime small">{{@$public->created_at}}</div>
+                                                    <div class="dateTime small padd-t-40"></div>
                                                     <img src="{{asset('user/assets/icons/green-circle.svg')}}"
                                                         alt="green-circle">
                                                     <div>
@@ -8782,7 +8781,7 @@
                                         <div class="">
                                             <div class="row final two justify-content-center text-center">
                                                 <div class="col-auto">
-                                                    <div class="dateTime small">{{@$public->created_at}}</div>
+                                                    <div class="dateTime small padd-t-40">{{@$public->created_at}}</div>
                                                     <img src="{{asset('user/assets/icons/green-circle.svg')}}"
                                                         alt="green-circle">
                                                     <div>
