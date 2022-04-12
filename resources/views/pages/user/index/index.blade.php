@@ -1843,7 +1843,7 @@
                                             <div class="col-md-12">
                                                 <div class="row">
                                                     <div class="col-md-12">
-                                                        <ul class="footer-nav">
+                                                        <ul class="footer-nav zhd-footer">
                                                             <li class="nav-item">
                                                                 <a class="nav-link active" aria-current="page"
                                                                     href="index.html">الرئيسية</a>
@@ -2411,7 +2411,7 @@
                                             <div class="col-md-12">
                                                 <div class="row">
                                                     <div class="col-md-12">
-                                                        <ul class="footer-nav">
+                                                        <ul class="footer-nav zhd-footer">
                                                             <li class="nav-item">
                                                                 <a class="nav-link active" aria-current="page"
                                                                     href="index.html">الرئيسية</a>
@@ -5798,7 +5798,7 @@
                                                 <div class="col-md-12">
                                                     <div class="row">
                                                         <div class="col-md-12">
-                                                            <ul class="footer-nav">
+                                                            <ul class="footer-nav zhd-footer">
                                                                 <li class="nav-item">
                                                                     <a class="nav-link active" aria-current="page"
                                                                         href="index.html">الرئيسية</a>
