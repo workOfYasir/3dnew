@@ -38,7 +38,8 @@
                                             <td>{{$slider->sub_heading}}</td>
                                         <td>{{$slider->heading}}</td>
                                        
-                                        <td>{{$slider->body_text}}</td>
+                                        <td>
+                                            {!!html_entity_decode($slider->body_text)!!}</td>
                                         <td><a href="{{route('view',$slider->id)}}"
                                                 class="btn btn-primary">رأي</a>
                                             </td>

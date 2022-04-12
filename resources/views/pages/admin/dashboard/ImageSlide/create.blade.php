@@ -96,7 +96,7 @@
                                     </label>
                                     <input type="file" class="form-control"
                                         name="images" id="" accept="image/*"
-                                        type="file"
+                                        
                                         id="download-cv-file-name" name="images"
                                         id="images" aria-describedby=""
                                         placeholder="Enter sub heading">
