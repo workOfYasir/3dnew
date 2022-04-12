@@ -6,6 +6,7 @@ use App\Models\User;
 use Livewire\Component;
 use Illuminate\Http\Request;
 use Livewire\WithFileUploads;
+Use \Carbon\Carbon;
 
 class Chats extends Component
 {
@@ -72,8 +73,10 @@ class Chats extends Component
             $data->photo = $name;
 
         }
+       
         $data->request_id=$this->request_id;
         $data->request_type=$this->request_type;
+       
         $data->save();
     	$this->resetForm();
 
