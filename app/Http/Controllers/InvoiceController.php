@@ -77,7 +77,18 @@ class InvoiceController extends Controller
             'thanks' => 'شكراً جزيلاً',
             'orderNumber' =>$invoices->id ,
         ];
-        \Mail::to($user->email)->send(new \App\Mail\InvoiceMail($details));
+        
+        $invoice = Invoice::where('id',$invoices->id)->get()->first();
+        $user = User::find($invoice->user_id);
+        // if($request->has('download')){
+            $pdf = PDF::loadView('pages.admin.invoice',compact('invoice', 'user'));
+
+        \Mail::send('emails.invoice', $details, function($message)use($details,$user, $pdf) {
+            $message->to($user->email)
+                    ->subject($details["subject"])
+                    ->attachData($pdf->output(), "invoice.pdf");
+        });
+        // \Mail::to($user->email)->send(new \App\Mail\InvoiceMail($details));
         return redirect()->route('invoicess.index');
     }
 
