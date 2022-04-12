@@ -30,12 +30,12 @@
                                                 <option value="2"> الدفع</option>
                                             </select>
                                             <br>
-                                            <button type="button" class="btn
+                                            {{-- <button type="button" class="btn
                                                 btn-primary"
                                                 data-bs-toggle="modal"
                                                 data-bs-target="#exampleModal">
                                                 إرسال الاستعلام
-                                            </button>
+                                            </button> --}}
                                             <button class="btn btn-primary"
                                                 type="submit"> حفظ</button>
                                         </form>
