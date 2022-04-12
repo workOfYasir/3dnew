@@ -45,7 +45,8 @@ class InvoiceController extends Controller
      */
     public function store(Request $request)
     {
-        $image = $request->image->getClientOriginalName();
+        $img = $request->file('image');
+        $image = $img->getClientOriginalName();
         $request->image->move(public_path('upload/'), $image);
         $pathimage ='upload/'.$image;
         $med = Medical::find($request->order_id);
