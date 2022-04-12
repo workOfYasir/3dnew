@@ -13,6 +13,7 @@
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                                   
                                     @if(($user->purposals)!=null)
+                                    
                                     <li>
                                         <a class="dropdown-item" href="{{ route('purposal.pdf',@$user->purposals->id) }}" >
                                         New Purposal
@@ -21,7 +22,7 @@
                                  @endif
                                  @if(($user->invoices)!=null)
                                  <li>
-                                     <a class="dropdown-item" href="{{ route('invoice.pdf',@$user->purposals->id) }}">
+                                     <a class="dropdown-item" href="{{ route('invoice.pdf',@$user->invoices->id) }}">
                                          New Invoice
                                          </a>
                                 </li>
