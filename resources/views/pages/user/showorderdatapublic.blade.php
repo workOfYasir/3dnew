@@ -111,6 +111,7 @@
                                                     <div class="dateTime small">{{@$public->created_at}}</div>
                                                     <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
                                                     @else
+                                                    <div class="dateTime small text-white">{{@$public->created_at}}</div>
                                                     <img src="{{asset('user/assets/icons/red-circle.svg')}}" alt="green-circle">
                                                     @endif
                                                     <div>
