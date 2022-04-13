@@ -63,7 +63,7 @@
                         <div class="col-md-12">
                             <div class="modal-header border-0">
                                 <a href="{{route('home')}}" class="btn-close"></a>
-                                <div style="margin-top: 1%;">
+                                <div class="view-order-heading">
                                     <span class="outline dot">اهلاً وسهلاً بكم</span>
                                     <h1 class="modal-title">طلباتي <span class="inner-line"></span></h1>
                                 </div>
