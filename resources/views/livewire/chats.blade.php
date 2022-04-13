@@ -2,7 +2,7 @@
 	<div class="container">
         <div class="row justify-content-center">
             <div class="col-md-12">
-                <div class="card mb-3">
+                <div class="card chat-card mb-3">
                     <div class="card-header">
                         @if(isset($sender)) {{$sender->name}}   @endif
     
@@ -53,7 +53,9 @@
                                 <button class="btn btn-sky chat-img-upload mt-4">
                                     دقت قلب          
                                     <img src="{{ asset('/user/assets/icons/arrow-right.svg')}}" alt="arrow-right">
+                                    <input type="file" wire:model="photo" id="photo-{{ $i }}">
                                 </button>
+                                
                             </div>
                         </form>
 
