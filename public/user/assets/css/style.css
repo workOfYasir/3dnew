@@ -3141,12 +3141,13 @@ input[type=number] {
 
 /* chat styling */
 /* view-order */
-#view-order .view-order-heading{
-    margin-right: 110px;
+#view-order .view-order-heading, #public-order .view-order-heading{
+    margin-right: 130px;
 }
-#view-order .modal-body{
+#view-order .modal-body, #public-order .modal-body{
     padding: 0 4rem !important;
 }
+
 .chat-submit-btn{
     width: 100%;
 }

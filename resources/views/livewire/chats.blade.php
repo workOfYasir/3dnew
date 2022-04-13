@@ -50,7 +50,7 @@
                             </div>
                             <div class="col-md-12">
                                 <!-- <input type="file" wire:model="photo" id="photo-{{ $i }}"> -->
-                                <button class="btn btn-sky chat-img-upload mt-4">
+                                <button type="button" class="btn btn-sky chat-img-upload mt-4">
                                     دقت قلب          
                                     <img src="{{ asset('/user/assets/icons/arrow-right.svg')}}" alt="arrow-right">
                                     <input type="file" wire:model="photo" id="photo-{{ $i }}">
