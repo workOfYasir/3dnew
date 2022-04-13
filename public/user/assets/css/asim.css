@@ -579,6 +579,7 @@
     position: absolute;
     right: 140px;
 }
+
 /* #productdesignModal .modal-header .circle-plus-icon, #productaddModal .modal-header .circle-plus-icon {
     flex-direction: row !important;
     margin-top: 0px !important;
@@ -666,8 +667,8 @@
             display: none;
         }
         .designer-sec {
-            padding-top: 80px;
-            margin-top: 60px;
+            padding-top: 50px;
+            margin-top: 0px;
         }
         .designer-sec::before {
             background-size: cover;
@@ -675,8 +676,12 @@
             max-height: 150px;
             background: none !important;
         }
+        .design-txt {
+            padding-bottom: 30px;
+        }
         .designer-title {
             font-size: 36px;
+            padding-bottom: 20px;
         }
         .search-form {
             padding: 0px;
@@ -691,6 +696,13 @@
         .btn-list {
             padding: 0px;
             text-align: center;
+            margin-bottom: 0px;
+        }
+        .mob-center{
+            text-align: center;
+        }
+        .sort-btn {
+           margin-bottom: 10px;
         }
         .btn-white, .btn-blue {
             margin-left: 15px;
@@ -1379,8 +1391,11 @@
     .mujtmah-box__content .mujtmah-box__wrapper{
         justify-content: center;
     }
+    .p-t-70{
+        padding-top: 70px !important;
+    }
 
-    
+
 }
     
     /* ////////////////////////////////////////// Large landscape responsive //////////////////////////////////////////////////////// */

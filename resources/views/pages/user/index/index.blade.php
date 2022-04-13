@@ -748,7 +748,7 @@
                                     </div>
                                     @endif
                                 </div>
-                                <div class="row pt-5 mt-5 align-items-end" dir="rtl">
+                                <div class="row pt-5 mt-5 align-items-end p-t-70" dir="rtl">
                                     <div class="col-md-9 col-lg-7 res-width-64">
                                         <div class="about-content" id="about-us" data-aos="fade-up">
                                             <!-- <span class="outline dot right-center">+3D</span> -->
@@ -815,7 +815,7 @@
                     </div>
         </section>
 
-        <section class="request section" id="services-section">
+        <section class="request section p-t-70" id="services-section">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -5231,13 +5231,13 @@
                                                     <div class="search-form">
                                                         <form action="#" method="">
                                                             <div class="row">
-                                                                <div class="col-md-3 col-lg-2">
+                                                                <div class="col-6 col-md-3 col-lg-2 mob-center">
                                                                     <div class="sort-btn">
                                                                         <button class="btn"> الترتيب حسب <i
                                                                                 class="fa-solid fa-arrow-down"></i></button>
                                                                     </div>
                                                                 </div>
-                                                                <div class="col-md-3 col-lg-2">
+                                                                <div class="col-6 col-md-3 col-lg-2 mob-center">
 
                                                                     <div class="sort-btn">
                                                                         <button class="btn"> تقنية الطباعة <i
