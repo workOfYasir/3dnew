@@ -1358,7 +1358,15 @@
     .zhd-textarea-clean{
         width: 100% !important;
     }
+    
+    .modal.page.show .modal-header {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
 
+    .zhd-box {
+        width: 150px;
+    }
 }
     
     /* ////////////////////////////////////////// Large landscape responsive //////////////////////////////////////////////////////// */
