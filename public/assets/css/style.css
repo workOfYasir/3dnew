@@ -1474,6 +1474,9 @@ a:hover {
   color:#148eeb;
 }
 /* end login zahid */
+.form-select{
+  padding-right:10px !important;
+}
 .btn-blue {
   background-color: #148eeb;
   color: #fff;
