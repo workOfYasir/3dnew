@@ -3147,6 +3147,7 @@ input[type=number] {
 #view-order .modal-body, #public-order .modal-body{
     padding: 0 4rem !important;
 }
+
 .chat-submit-btn{
     width: 100%;
 }
