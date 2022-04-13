@@ -8,9 +8,11 @@
     
                     </div>
                     <div class="card-body message-box" wire:poll="mountdata" >
+                        <?php
+                            $i=0; ?>
                     @if(filled($allmessages))
-                        @foreach($allmessages as $mgs)
-
+                        @foreach($allmessages as $key => $mgs)
+<?php $i++ ?>
                                 <div class="single-message @if($mgs->user_id == auth()->id()) sent @else received @endif">
                                     <p class="font-weight-bolder my-0">{{$mgs->user->name}}</p>
                                   
@@ -40,13 +42,12 @@
                                 <div class="col-md-8">
                                     <input wire:model="message" style="pointer-events: unset" class="form-control input shadow-none w-100 d-inline-block" id="message" placeholder="Type a message" >
                                 </div>
-                             
                                 <div class="col-md-4">
                                     <button type="submit" class="btn btn-primary d-inline-block w-100"><i class="far fa-paper-plane"></i> Send</button>
                                 </div>
                             </div>
                             <div class="col-md-12">
-                                <input type="file" wire:model="photo">
+                                <input type="file" wire:model="photo" id="photo-{{ $i }}">
                             </div>
                         </form>
 
