@@ -197,7 +197,9 @@ class MedicalController extends Controller
         $order = PublicService::find($request->id);
       
         $user = User::find($order->user_id);
-        if ($request->has('checkbox2')) {
+
+        if ($request->status ==2) {
+     
             $order->status = 4;
             $order->update([
                 'status' => $order->status,
