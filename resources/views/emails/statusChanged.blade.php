@@ -9,7 +9,7 @@
 <body>
     <img src="{{ asset('assets/images/logo/logo-favicon.png') }}" alt="">
     <h1>أهلا{{ $details['title'] }}</h1>
-    <p>تمت الموافقة على طلبك وانتقل إلى الخطوة التالية
+    <p> # {{ $details['id'] }} تمت الموافقة على طلبك وانتقل إلى الخطوة التالية
         @if( $details['body'] == 1)
         اجتماع الخطة العلاجية
         @endif

@@ -41,11 +41,7 @@ class Chats extends Component
         }
 
     }
-    // public function mount($request_id,$request_type)
-    // {
-    //     $this->request_type = $request_type;
-    //     $this->request_id = $request_id;      
-    // }
+  
     public function resetForm()
     {
     	$this->message='';
@@ -70,7 +66,7 @@ class Chats extends Component
             $photoMsg = 'chatImg='.$name.'&msg=';
             $data->message = $photoMsg;
             $data->photo = $name;
-
+            
         }
        
         $data->request_id=$this->request_id;
