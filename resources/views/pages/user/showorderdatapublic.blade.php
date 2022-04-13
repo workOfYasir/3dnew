@@ -43,7 +43,7 @@
 
                                 <div style="margin-top: 1%;">
                                     <span class="outline dot">اهلاً وسهلاً بكم</span>
-                                    <h1 class="modal-title">طلباتي</h1>
+                                    <h1 class="modal-title">طلباتي<span class="inner-line"></span></h1>
                                 </div>
                                 <div class="profile">
                                     @if(@auth()->user()->profile == null)
