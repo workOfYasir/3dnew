@@ -93,7 +93,7 @@
 
             </div>
 
-            <table class="table table-bordered table-striped" style="width: 700px;table-layout:fixed;">
+            <table class="table table-bordered table-striped" style="width: 700px;table-layout:fixed; border:1px solid black">
                 <thead>
                     <tr>
                         <th scope="col" style="width:50%">Description</th>

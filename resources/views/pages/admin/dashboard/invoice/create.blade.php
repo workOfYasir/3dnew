@@ -154,7 +154,7 @@
                                             text-muted"></small>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="invoice-field-12 col-md-6">
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">عنوان
                                         </label>
