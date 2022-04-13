@@ -3134,3 +3134,17 @@ input[type=number] {
     }
     
 }
+
+
+
+
+
+/* chat styling */
+.chat-submit-btn{
+    width: 100%;
+}
+.chat-img-upload img {
+    margin-left: 5px;
+    transform: rotate(270deg);
+    margin-right: 5px;
+}
