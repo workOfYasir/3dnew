@@ -616,6 +616,10 @@
 .form.p-l-0{
     padding-left: 0px !important;
 }
+.form .padd-l-0{
+    padding-left: 0px !important;
+
+}
         .register-pdf {
             position: absolute;
             right: 35px;
