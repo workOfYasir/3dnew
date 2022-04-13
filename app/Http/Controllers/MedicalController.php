@@ -184,6 +184,7 @@ class MedicalController extends Controller
         }
         $details = [
             'title' =>  $user->name,
+            'id'=>$request->id,
             'subject'=>  $order->status,
             'body' =>  $order->status.'#'.$request->id
         ];
@@ -205,6 +206,7 @@ class MedicalController extends Controller
         $details = [
             'title' =>  $user->name,
             'subject'=> '',
+            'id'=>$request->id,
             'body' => $order->status,
         ];
 
