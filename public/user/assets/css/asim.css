@@ -1378,9 +1378,10 @@
             padding-right: 0px;
         }
         .social-icons{
-            /* display: flex;
-            align-items: center; */
             display: none;
+        }
+        nav .left-side a {
+            margin: 0px 17px;
         }
         /* .social-icons a{
          margin: 0px 7px !important;
@@ -1402,18 +1403,24 @@
             padding-right: 28px;
         }
         .btn-white {
-            margin-left: 10px;
+            margin-left: 28px;
+            margin-top: 20px;
         }
         .btn-trans {
-            margin-left: 10px;
+            margin-left: 28px;
+            margin-top: 20px;
         }
         .btn-blue{
-            margin-left: 10px;
+            margin-left: 28px;
+            margin-top: 20px;
         }
-
+        .design-card-main {
+            padding-top: 0px;
+        }
         .btn-list .blur-part {
             width: 250px;
             right: 700px;
+            display: none;
         }
 
         #designinnerModal .designer-sec::before {
