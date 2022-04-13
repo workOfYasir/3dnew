@@ -3140,11 +3140,19 @@ input[type=number] {
 
 
 /* chat styling */
+/* view-order */
+#view-order .view-order-heading{
+    margin-right: 110px;
+}
+#view-order .modal-body{
+    padding: 0 4rem !important;
+}
 .chat-submit-btn{
     width: 100%;
 }
 .chat-img-upload{
     position: relative;
+    cursor: pointer;
 }
 .chat-img-upload img {
     margin-left: 5px;
