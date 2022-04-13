@@ -1109,7 +1109,37 @@
             .design-card-main {
                 padding-top: 0px;
             }
-            
+            #page-content-wrapper{
+                padding-left: 0;
+                padding-right: 0;
+            }
+            .almuntjat-form-error__img{
+                width: 20px;
+                margin-left: 20px;
+            }
+            .small-card img {
+                width: 90px;
+            }
+            .small-card__images-box {
+                width: 90px;
+                height: 90px;
+            }
+            #cleanshotModal .mujtmah-box__link1{
+                margin-right: 0;
+            }
+            .map-cap {
+                bottom: 0;
+                padding-right: 21px;
+                margin-bottom: 15px;
+            }
+            #page-content-wrapper{
+                padding-bottom: 0;
+            }
+            .user-req-p{
+                text-align: right;
+                margin-top: 15px;
+                padding-right: 10px;
+            }
     }
     
     /* ////////////////////////////////////////// tab landscape responsive //////////////////////////////////////////////////////// */
@@ -1119,7 +1149,10 @@
             display: none;
         }
         .notification-box.notification-box-wdt{
-            width: 300px;
+            width: 325px;
+            height: 90px;
+            display: flex;
+            align-items: center;
         }
         .designer-sec {
             padding-top: 50px;
@@ -1397,6 +1430,37 @@
     #user3RequestModal .bill-click-show{
         margin-bottom: 40px;
     }
+    /* ahsan */
+    .cleanshot-row {
+        min-height: 392px;
+    }
+    .small-card img {
+        width: 90px;
+    }
+    .small-card__images-box {
+        width: 90px;
+        height: 90px;
+    }
+    .small-card__images-text p {
+        font-size: 8px;
+    }
+    #user9RequestModal .modal-header,
+    #designerPublicServiesModal .modal-header{
+        padding: 1rem 25px !important;
+    }
+    .mujtmah-box__link1,.mujtmah-box__link2{
+        font-size: 16px;
+    }
+    .mujtmah-almusmamen{
+        padding-bottom: 80px;
+    }
+    .ad{
+        margin-top: 0 !important;
+    }
+    .acf{
+        margin-bottom: 30px;
+    }
+    /* ahsan */
 
 }
     
@@ -1425,7 +1489,10 @@
 
         /* navbar end */
         .notification-box.notification-box-wdt{
-            width: 300px;
+            width: 360px;
+            height: 90px;
+            display: flex;
+            align-items: center;
         }
         .search-form {
             padding: 0px 7px;
@@ -1499,8 +1566,91 @@
         #user2RequestModal .modal-header , #user4RequestModal .modal-header{
             padding: 1rem 0rem !important;
         }
-     
-           
+        /* ahsan */
+        .left-side{
+            padding-left: 25px;
+        }
+        #main-effect{
+            margin-bottom: 6px;
+        }
+        .actions .btn:first-child {
+            margin-right: 12px;
+        }
+        footer .right p{
+            padding-right: 10px;
+        }
+        .details p{
+            width: 100%;
+        }
+        .designer-sec::before{
+            width: 100%;
+            height: auto;
+            top: 50px;
+        }
+        .navbar{
+            padding-bottom: 0;
+        }
+        .designer-sec{
+            padding-top: 150px;
+        }
+        #designinnerModal .designer-sec::before {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            height: auto;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+        #designinnerModal .btn-blue {
+            margin-left: 0px;
+        }
+        .star-reating{
+            margin: 20px 0;
+        }
+        .search-form{
+            padding-bottom: 35px;
+        }
+        .btn-list{
+            margin-bottom: 20px;
+        }
+        #designinnerModal .navbar{
+            padding-bottom: 0;
+        }
+        .btn-list .btn-blue{
+            margin-left: 20px !important;
+        }
+        .color-circle-main .color-circle {
+            margin-right: 15px;
+        }
+        .mujtmah-almusmamen{
+            padding-bottom: 80px;
+        }
+        .zhd-box{
+            display: flex;
+            align-items: center;
+        }
+        .zhd-box .profile-btn{
+            margin-right: auto;
+            margin-left: 20px;
+        }
+        .navbar li.nav-item {
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+        }
+        /* ahsan */
+        #user2RequestModal .modal-header{
+            padding: 0 25px !important;
+        }
+        #user2RequestModal{
+            padding-top: 40px;
+        }
+        .bill-click-show{
+            margin-bottom: 30px;
+        }
+        .zhd-quote{
+            margin-bottom: 60px !important;
+        }
     }
     
 

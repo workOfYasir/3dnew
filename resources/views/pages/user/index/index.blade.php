@@ -1746,7 +1746,7 @@
 
                                         <div class="form form-clean">
                                             <div class="row zhd-form-clean">
-                                                <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4 mt-4">
+                                                <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4 mt-4 acf">
                                                     <label class="form-label dot">اختيار اللون</label>
 
                                                     <div class="color-circle-main">
@@ -1780,7 +1780,7 @@
 
                                             <div class="row circle-bottom justify-content-center">
                                                 
-                                                <div class="col-md-6 col-lg-4 mt-5">
+                                                <div class="col-md-6 col-lg-4 mt-5 ad">
                                                     <label class="form-label dot">شكل الطباعة</label>
                                                     <select class="form-select gender" required name="gender"
                                                         aria-label="Default select example">
@@ -1788,7 +1788,7 @@
                                                         <option>الاشكال هنا</option>
                                                     </select>
                                                 </div>
-                                                <div class="col-md-6 col-lg-4 mt-5">
+                                                <div class="col-md-6 col-lg-4 mt-5 ad">
                                                     <label class="form-label dot">تقنية الطباعة</label>
                                                     <select class="form-select gender" required name="gender"
                                                         aria-label="Default select example">
