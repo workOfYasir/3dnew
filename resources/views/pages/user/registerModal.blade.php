@@ -34,7 +34,7 @@
                                     </ul>
                                     <div class="tab-content" id="myTabContent">
                                         <div class="tab-pane fade active show" id="userloginModal2" role="tabpanel">
-                                            <form class="row gy-4 gx-5" action="{{route('register')}}" method="post" style="padding-top: 20px;">
+                                            <form class="row gy-4 gx-5 p-l-0" action="{{route('register')}}" method="post" style="padding-top: 20px;">
                                                 @csrf
                                                 <input type="hidden" name="role" value="{{Crypt::encrypt('user')}}">
                                                 <div class="row justify-content-center">
