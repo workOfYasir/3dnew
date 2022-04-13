@@ -11,22 +11,40 @@
     <!-- Bootstrap css -->
     <link rel="stylesheet" href="{{ asset('user/assets/css/bootstrap.min.css') }}">
 
+    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" type="text/css" href="{{ asset('user/assets/css/fonts.css') }}">
     <!-- Slick -->
     <link rel="stylesheet" href="{{ asset('user/assets/css/slick.css') }}">
     <link rel="stylesheet" href="{{ asset('user/assets/css/slick-theme.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <script src="{{asset('user/assets/js/jquery.min.js')}}"></script>
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    
     <!-- StyleSheet -->
     <link rel="stylesheet" href="{{ asset('user/assets/css/style.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/chat.css') }}">
     <!-- Responsive Sheet -->
     <link rel="stylesheet" href="{{ asset('user/assets/css/responsive.css') }}">
     @livewireStyles
-    <style>
-        #public-order {
+    
+    <style type="text/css">
+          #public-order {
             display: block;
+        }
+
+
+        @font-face {
+            font-family: JannaRegular;
+            src: url("{{ asset('assets/fonts/JannaLTRegular.ttf') }}");
+        }
+        @font-face {
+            font-family: JannaBold;
+            src: url("{{ asset('assets/fonts/NotoSans-Bold.ttf') }}");
+        }
+
+        body {
+            font-family: 'JannaRegular';
         }
     </style>
 </head>
@@ -46,6 +64,9 @@
                                     <h1 class="modal-title">طلباتي<span class="inner-line"></span></h1>
                                 </div>
                                 <div class="profile">
+                                    <button class="btn btn-sky profile-btn invert">
+                                        المصمم
+                                    </button>
                                     @if(@auth()->user()->profile == null)
                                     <a href="#profile">
                                         <img src="{{asset('user/assets/icons/avatar.svg')}}" alt="avatar">
