@@ -282,10 +282,9 @@
         right: 119px;
         top: 271px;
     }
-    .description{
+    /* .description{
         text-align: justify !important;
-
-    }
+    } */
     /* Navbar */
     .navbar {
         padding: 1rem 0;
@@ -395,7 +394,7 @@
 
     /* Contact */
     .section {
-        padding-top: 30px;
+        padding-top: 50px;
         padding-bottom: 30px;
     }
 
@@ -1615,9 +1614,9 @@
         right: 300px;
     }
 
-    .tab-content .data {
+    /* .tab-content .data {
         overflow: auto;
-    }
+    } */
 
     .request-box::after {
         padding: 0px 10px;

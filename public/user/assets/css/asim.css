@@ -666,7 +666,7 @@
             display: none;
         }
         .designer-sec {
-            padding-top: 150px;
+            padding-top: 80px;
             margin-top: 60px;
         }
         .designer-sec::before {
@@ -1095,7 +1095,9 @@
                 margin-left: 0px !important;
             }
             
-
+            .design-card-main {
+                padding-top: 0px;
+            }
             
     }
     
@@ -1367,6 +1369,18 @@
     .zhd-box {
         width: 150px;
     }
+
+    #designinnerModal .design-card-main {
+        padding-top: 0px;
+    }
+    #designinnerModal .design-card-main .padd-30{
+        padding-top: 0px;
+    }
+    .mujtmah-box__content .mujtmah-box__wrapper{
+        justify-content: center;
+    }
+
+    
 }
     
     /* ////////////////////////////////////////// Large landscape responsive //////////////////////////////////////////////////////// */
