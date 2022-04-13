@@ -70,6 +70,7 @@ class InvoiceController extends Controller
         $details = [
             'subject' =>"'".$invoices->id ."' تم اصدار فاتورة رقم",
             'name' =>$user->name ,
+            'id' =>$invoices->id,
             'body1' => "'".$invoices->id ."' بناء على موافقتكم على عرض السعر للطلب رقم ",
             'body2'=> "'".$invoices->request ."'فقد تم اصدار الفاتورة بمبلغ",
             'body3'=>'للدفع برجاء الضغط على الرابط التالي:',

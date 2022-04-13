@@ -133,7 +133,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Deliverable Model
+                                        <label for="exampleInputEmail1">نموذج التسليم
                                         </label>
                                         <input type="text" class="form-control
                                             invoice-field" required name="deliverable_model"
@@ -145,7 +145,7 @@
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Address
+                                        <label for="exampleInputEmail1">عنوان
                                         </label>
                                         <input type="text" class="form-control
                                             invoice-field-12" required name="address"
@@ -157,7 +157,7 @@
                                 </div>
                                 <div class="invoice-field-12 justify-content-center d-flex">
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Image
+                                        <label for="exampleInputEmail1">صورة
                                         </label>
                                         <input type="file" class="form-control
                                             invoice-field" required name="image"
@@ -169,17 +169,16 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-md-12">
-                                    <label for="exampleInputEmail1"> Concept Design
+                                <div class="col-md-6 ">
+                                    <label for="exampleInputEmail1"> مفهوم التصميم
                                     </label>
                                     <textarea name="concept_design" class="form-control invoice-field-12" id="concept_design" cols="30" rows="10"></textarea>
                                     <small id="" class="form-text
                                     text-muted"></small>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <label for="exampleInputEmail1"> Manufacturing
+                          
+                                <div class="col-md-6">
+                                    <label for="exampleInputEmail1"> تصنيع
                                     </label>
                                     <textarea name="manufacturing" class="form-control invoice-field-12" id="manufacturing" cols="30" rows="10"></textarea>
                                     <small id="" class="form-text

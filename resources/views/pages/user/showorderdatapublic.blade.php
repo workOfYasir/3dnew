@@ -106,8 +106,9 @@
                                                 </div>
                                                 <img src="{{asset('user/assets/icons/redline.svg')}}" class="single" alt="">
                                                 <div class="col-auto">
-                                                    <div class="dateTime small text-white">{{@$public->created_at}}</div>
-                                                    @if(@$public->status == 2)
+                                                   
+                                                    @if(@$public->status == 4)
+                                                    <div class="dateTime small">{{@$public->created_at}}</div>
                                                     <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
                                                     @else
                                                     <img src="{{asset('user/assets/icons/red-circle.svg')}}" alt="green-circle">
