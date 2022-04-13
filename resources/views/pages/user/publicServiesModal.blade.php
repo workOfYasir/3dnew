@@ -124,7 +124,7 @@
                                                             class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4 mt-4">
                                                             <label class="form-label dot">دقة الطباعة (صورة
                                                                 كمثال)</label>
-                                                            <input type="text" class="form-control"
+                                                            <input type="text" class="form-control print-resolution"
                                                                 placeholder=".. الايميل هنا" value="" 
                                                                 name="pr_res">
                                                         </div>
