@@ -6224,7 +6224,7 @@
 
                                                                     </div>
                                                                 </div>
-                                                                <div class="col-md-6 col-lg-6">
+                                                                <div class="col-md-6 col-lg-7 col-xl-6">
 
                                                                     <div class="search-input">
                                                                         <input type="text" class="form-control"
