@@ -1122,8 +1122,8 @@
             width: 300px;
         }
         .designer-sec {
-            padding-top: 170px;
-            margin-top: 60px;
+            padding-top: 50px;
+            margin-top: 0px;
         }
         .designer-sec::before {
             top: 140px;
@@ -1305,7 +1305,7 @@
     }
     .btn-list {
         padding-top: 40px;
-        margin-bottom: 52px;
+        margin-bottom: 20px;
         padding-right: 30px;
     }
 
@@ -1388,12 +1388,15 @@
         padding-top: 0px;
     }
     .mujtmah-box__content .mujtmah-box__wrapper{
-        justify-content: center;
+        justify-content: right;
     }
     .p-t-70{
         padding-top: 70px !important;
     }
 
+    #user3RequestModal .bill-click-show{
+        margin-bottom: 40px;
+    }
 
 }
     
