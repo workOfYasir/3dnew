@@ -79,7 +79,7 @@ class MedicalController extends Controller
     }
     public function index()
     {
-        $medical = Medical::orderBy('id', 'DESC')->get();
+        $medical = Medical::orderBy('id', 'desc')->get();
         return view('pages.admin.dashboard.Medical.index', compact('medical'));
     }
     public function show($id)
@@ -99,12 +99,15 @@ class MedicalController extends Controller
 
     public function updated(Request $request)
     {
-      
         $order = Medical::find($request->id);
+       
+        $order->update([
+            'status' => $request->status,
+        ]);
         $user = User::find($order->user_id);
         if ($request->status = 1) {
             $order->status = 1;
-            $order->save();
+           
             $details = [
                 'title' =>  $user->name,
                 'subject'=> 'اجتماع الخطة
@@ -115,7 +118,7 @@ class MedicalController extends Controller
         }
         else if ($request->status =2) {
             $order->status = 2;
-            $order->save();
+           
             $details = [
                 'title' =>  $user->name,
                 'subject'=> 'اجتماع النموذج
@@ -126,7 +129,7 @@ class MedicalController extends Controller
         }
        else if ($request->status =3 ) {
             $order->status = 3;
-            $order->save();
+           
             $details = [
                 'title' =>  $user->name,
                 'subject'=> 'اجتماع النموذج
@@ -137,7 +140,7 @@ class MedicalController extends Controller
         }
         else if ($request->status =4) {
             $order->status = 4;
-            $order->save();
+           
             $details = [
                 'title' =>  $user->name,
                 'subject'=> 'الدفع',
@@ -147,7 +150,7 @@ class MedicalController extends Controller
         }
         else if ($request->status=5) {
             $order->status = 5;
-            $order->save();
+           
             $details = [
                 'title' =>  $user->name,
                 'subject'=> 'الطباعة ثلاثية
@@ -158,7 +161,7 @@ class MedicalController extends Controller
         }
        else if ($request->status =6) {
             $order->status = 6;
-            $order->save();
+           
             $details = [
                 'title' =>  $user->name,
                 'subject'=> 'اختبار الجودة',
@@ -168,7 +171,7 @@ class MedicalController extends Controller
         }
         else if  ($request->status =7)  {
             $order->status = 7;
-            $order->save();
+           
             $details = [
                 'title' =>  $user->name,
                 'subject'=>'التوصيل واتمام
@@ -193,7 +196,9 @@ class MedicalController extends Controller
         $user = User::find($order->user_id);
         if ($request->has('checkbox2')) {
             $order->status = 4;
-            $order->save();
+            $order->update([
+                'status' => $order->status,
+            ]);
         }
         $details = [
             'title' =>  $user->name,
