@@ -110,9 +110,9 @@ class MedicalController extends Controller
            
             $details = [
                 'title' =>  $user->name,
-                'subject'=> 'اجتماع الخطة
-                العلاجية',
-                'body' => $order->status,
+                'subject'=> '#'.$request->id.' اجتماع الخطةالعلاجية',
+                'id'=>$request->id,
+                'body' => $order->status.'#'.$request->id,
             ];
             \Mail::to($user->email)->send(new \App\Mail\statuschanged($details));
         }
@@ -121,9 +121,9 @@ class MedicalController extends Controller
            
             $details = [
                 'title' =>  $user->name,
-                'subject'=> 'اجتماع النموذج
-                الأول',
-                'body' => $order->status,
+                'subject'=> '#'.$request->id.' اجتماع النموذج الأول',
+                'id'=>$request->id,
+                'body' =>  $order->status.'#'.$request->id
             ];
             \Mail::to($user->email)->send(new \App\Mail\statuschanged($details));
         }
@@ -132,9 +132,9 @@ class MedicalController extends Controller
            
             $details = [
                 'title' =>  $user->name,
-                'subject'=> 'اجتماع النموذج
-                النهائي',
-                'body' => $order->status,
+                'subject'=> '#'.$request->id.' اجتماع النموذج النهائي',
+                'id'=>$request->id,
+                'body' =>  $order->status.'#'.$request->id
             ];
             \Mail::to($user->email)->send(new \App\Mail\statuschanged($details));
         }
@@ -143,8 +143,9 @@ class MedicalController extends Controller
            
             $details = [
                 'title' =>  $user->name,
-                'subject'=> 'الدفع',
-                'body' => $order->status,
+                'subject'=> '#'.$request->id.' الدفع',
+                'id'=>$request->id,
+                'body' =>  $order->status.'#'.$request->id
             ];
             \Mail::to($user->email)->send(new \App\Mail\statuschanged($details));
         }
@@ -153,9 +154,9 @@ class MedicalController extends Controller
            
             $details = [
                 'title' =>  $user->name,
-                'subject'=> 'الطباعة ثلاثية
-                الأبعاد',
-                'body' => $order->status,
+                'subject'=> '#'.$request->id.' الطباعة ثلاثية الأبعاد',
+                'id'=>$request->id,
+                'body' => $order->status.'#'.$request->id
             ];
             \Mail::to($user->email)->send(new \App\Mail\statuschanged($details));
         }
@@ -164,8 +165,9 @@ class MedicalController extends Controller
            
             $details = [
                 'title' =>  $user->name,
-                'subject'=> 'اختبار الجودة',
-                'body' => $order->status,
+                'subject'=> '#'.$request->id.' اختبار الجودة',
+                'id'=>$request->id,
+                'body' =>  $order->status.'#'.$request->id
             ];
             \Mail::to($user->email)->send(new \App\Mail\statuschanged($details));
         }
@@ -174,16 +176,16 @@ class MedicalController extends Controller
            
             $details = [
                 'title' =>  $user->name,
-                'subject'=>'التوصيل واتمام
-                الطلب',
-                'body' => $order->status,
+                'subject'=>'#'.$request->id.' التوصيل واتمام الطلب',
+                'id'=>$request->id,
+                'body' =>  $order->status.'#'.$request->id
             ];
             \Mail::to($user->email)->send(new \App\Mail\statuschanged($details));
         }
         $details = [
             'title' =>  $user->name,
             'subject'=>  $order->status,
-            'body' => $order->status,
+            'body' =>  $order->status.'#'.$request->id
         ];
         // \Mail::to($user->email)->send(new \App\Mail\statuschanged($details));
         return redirect()->route('home');

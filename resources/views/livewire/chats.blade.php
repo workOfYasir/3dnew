@@ -8,9 +8,11 @@
     
                     </div>
                     <div class="card-body message-box" wire:poll="mountdata" >
+                        <?php
+                            $i=0; ?>
                     @if(filled($allmessages))
-                        @foreach($allmessages as $mgs)
-
+                        @foreach($allmessages as $key => $mgs)
+<?php $i++ ?>
                                 <div class="single-message @if($mgs->user_id == auth()->id()) sent @else received @endif">
                                     <p class="font-weight-bolder my-0">{{$mgs->user->name}}</p>
                                   
@@ -47,7 +49,7 @@
                                 </div>
                             </div>
                             <div class="col-md-12">
-                                <!-- <input type="file" wire:model="photo"> -->
+                                <!-- <input type="file" wire:model="photo" id="photo-{{ $i }}"> -->
                                 <button class="btn btn-sky chat-img-upload mt-4">
                                     دقت قلب          
                                     <img src="{{ asset('/user/assets/icons/arrow-right.svg')}}" alt="arrow-right">
