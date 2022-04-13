@@ -31331,7 +31331,12 @@ margin-left: 20px;
 
 
 /* chat style */
-
+.upload-btn-wrapper{
+  border: 1px solid #ced4da;
+}
+#message{
+  padding: 9px;
+}
 .chat-submit-btn{
   width: 100%;
 }
