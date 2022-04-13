@@ -62,8 +62,22 @@ class PublicServiceController extends Controller
             'print_resolution' => $request->pr_res,
             'print_img' => $path,
         ]);
+        
         $users = User::where('role','admin')->first();
         $users->notify(new PublicNotification($users,$pub));
+        $user = User::find(Auth::user()->id);
+        $details = [
+            'title' =>$user->name,
+            'id' => $pub->id,
+            'subject'=>"#'".$pub->id."'جاري تنفيذ طلب رقم",
+            'from' => 'contact@einnovention.co.uk',
+            'adminSubject' => "#'".$pub->id."' تم استلام طلب رقم ",
+            'adminBody' => "#'".$pub->id."' تم استلام طلبكم رقم ",
+            'adminBody2' => 'وسيتم التواصل بكم قريباً',
+            'userBody' => "'".$pub->id."'جاري العمل على طلبكم رقم ",
+            'thanks' => 'شكراً جزيلاً',
+        ];
+        \Mail::to($user->email)->send(new \App\Mail\MedicalMail($details));
         return redirect()->route('home')->with('error_code', 6);
     }
 

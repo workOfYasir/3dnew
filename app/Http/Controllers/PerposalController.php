@@ -68,6 +68,7 @@ class PerposalController extends Controller
         ]);
           $details = [
             'subject' =>"'".$med->id ."' تم اصدار فاتورة رقم",
+            'id' =>$med->id,
             'name' =>$user->name ,
             'body1' => "'".$med->id ."' بناء على موافقتكم على عرض السعر للطلب رقم ",
             'body2'=> "'".$med->request ."'فقد تم اصدار الفاتورة بمبلغ",

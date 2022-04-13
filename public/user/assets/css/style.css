@@ -3162,25 +3162,30 @@ input[type=number] {
 
 .chat-card .card-header{
     background-color: #fff;
+    padding: 25px 12px;
 }
+
+
+
 /* width */
 .message-box::-webkit-scrollbar {
-    width: 5px;
+    width: 10px;
+    height: 10px;
   }
   
   /* Track */
   .message-box::-webkit-scrollbar-track {
     background: #f1f1f1; 
-    border-radius: 10px;
+    /* border-radius: 10px; */
   }
    
   /* Handle */
   .message-box::-webkit-scrollbar-thumb {
-    background: #859ed9 ; 
+    background: #1F5098;
     border-radius: 10px;
   }
   
   /* Handle on hover */
   .message-box::-webkit-scrollbar-thumb:hover {
-    background: #20418f; 
+    background: #1f4f98b0; 
   }
