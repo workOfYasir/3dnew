@@ -1476,6 +1476,12 @@ a:hover {
 /* end login zahid */
 .form-select{
   padding-right:10px !important;
+  font-weight:300 !important;
+  font-size:12px !important;
+}
+.form-control{
+  font-weight:300 !important;
+  font-size:12px !important;
 }
 .btn-blue {
   background-color: #148eeb;
