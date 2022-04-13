@@ -84,6 +84,7 @@ class HomeController extends Controller
 
         $public = PublicService::find($id);
         $publics = PublicService::where('user_id', Auth::id())->get();
+        
         return view('pages.user.showorderdatapublic', compact('public',  'publics'));
     }
     public function viewSetting()
