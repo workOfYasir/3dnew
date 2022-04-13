@@ -19,7 +19,7 @@
                             enctype="multipart/form-data">
                             @csrf
                             <div class="row">
-                                <div class="col-md-6">
+                                <!-- <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">سرعة
                                         </label>
@@ -46,7 +46,7 @@
                                             text-muted">
                                         </small>
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="col-md-6">
 
                                     <div class="form-group">
@@ -96,7 +96,7 @@
                                     </label>
                                     <input type="file" class="form-control"
                                         name="images" id="" accept="image/*"
-                                        type="file"
+                                        
                                         id="download-cv-file-name" name="images"
                                         id="images" aria-describedby=""
                                         placeholder="Enter sub heading">

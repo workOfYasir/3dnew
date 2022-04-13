@@ -8,17 +8,17 @@
 </head>
 
 <body>
-  {{ $details['name'] }} عزيزي 
+  {{ $name }} عزيزي 
   <br>
-  {{ $details['body1'] }}
+  {{ $body1 }}
   <br>
-  {{ $details['body2'] }}
+  {{ $body2 }}
   <br>
-  {{ $details['body3'] }}
+  {{ $body3 }}
   <br>
-  <a href="#">{{ $details['linkText'] }}</a>
+  <a href="#">{{ $linkText }}</a>
   <br>
-  {{ $details['thanks'] }}
+  {{ $thanks }}
   <img src="{{ asset('assets/images/logo/logo-favicon.png') }}" alt=""><br>
 </body>
 </html>	

@@ -16,7 +16,7 @@
                 <div class="card medical-card">
                     <div class="card-body p-0">
                         <form method="POST" action="{{ route('perposal.store')
-                            }}">
+                            }}"enctype="multipart/form-data">
                             @csrf
                             <div class="row">
                                 <div class="col-md-6">

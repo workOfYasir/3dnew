@@ -49,7 +49,7 @@ class PerposalController extends Controller
         $pathimage ='upload/'.$image;
         $med = Medical::find($request->order_id);
         $user = User::find($med->user_id);
-        Perposal::create([
+        $perposals = Perposal::create([
             'tax' => $request->tax,
             'price_model' => $request->price_model,
             'price_design' => $request->price_design,
@@ -76,7 +76,17 @@ class PerposalController extends Controller
             'thanks' => 'شكراً جزيلاً',
             'orderNumber' =>$med->id ,
         ];
-        \Mail::to($user->email)->send(new \App\Mail\ProposelMail($details));
+        $invoice = Perposal::where('id',$perposals->id)->get()->first();
+        $user = User::find($invoice->user_id);
+        // if($request->has('download')){
+            $pdf = PDF::loadView('pages.admin.invoice',compact('invoice', 'user'));
+
+        \Mail::send('emails.invoice', $details, function($message)use($details,$user, $pdf) {
+            $message->to($user->email)
+                    ->subject($details["subject"])
+                    ->attachData($pdf->output(), "Propsal.pdf");
+        });
+        // \Mail::to($user->email)->send(new \App\Mail\ProposelMail($details));
         return redirect()->route('perposal.index');
     }
 

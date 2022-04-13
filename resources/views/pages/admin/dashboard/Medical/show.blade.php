@@ -35,34 +35,7 @@
                                                             name="id"
                                                             value="{{@$order->id}}"
                                                         hidden>
-                                                        <!-- @if(@$order->status == 1)
-                                                        <input type="checkbox" id="vehicle1" name="checkbox1" value="1">
-                                                        <label class="form-label" for="vehicle1"> اجتماع الخطة العلاجية</label>
-                                                        @endif
-                                                        @if(@$order->status == 2)
-                                                        <input type="checkbox" id="vehicle2" name="checkbox2" value="2">
-                                                        <label class="form-label" for="vehicle2"> اجتماع النموذج الأول</label>
-                                                        @endif
-                                                        @if(@$order->status == 3)
-                                                        <input type="checkbox" id="vehicle3" name="checkbox3" value="3">
-                                                        <label class="form-label" for="vehicle3"> اجتماع النموذج النهائي</label>
-                                                        @endif
-                                                        @if(@$order->status == 4)
-                                                        <input type="checkbox" id="vehicle3" name="checkbox4" value="4">
-                                                        <label class="form-label" for="vehicle3"> الدفع</label>
-                                                        @endif
-                                                        @if(@$order->status == 5)
-                                                        <input type="checkbox" id="vehicle3" name="checkbox5" value="5">
-                                                        <label class="form-label" for="vehicle3"> الطباعة ثلاثية الأبعاد</label>
-                                                        @endif
-                                                        @if(@$order->status == 6)
-                                                        <input type="checkbox" id="vehicle3" name="checkbox6" value="6">
-                                                        <label class="form-label" for="vehicle3"> اختبار الجودة</label>
-                                                        @endif
-                                                        @if(@$order->status == 7)
-                                                        <input type="checkbox" id="vehicle3" name="checkbox7" value="7">
-                                                        <label class="form-label" for="vehicle3"> التوصيل واتمام الطلب</label>
-                                                        @endif  -->
+                                                   
                                                         <select name="status"
                                                             id="status"
                                                             class="form-control">
@@ -88,13 +61,7 @@
                                                         </select>
                                                         <br>
                                                       
-                                                        {{-- <button type="button"
-                                                            class="btn
-                                                            btn-primary modalBtn"
-                                                            data-bs-toggle="modal"
-                                                            data-bs-target="#exampleModal">
-                                                            إرسال الاستعلام
-                                                        </button> --}}
+                                                      
                                                         <button class="btn
                                                             btn-primary"
                                                             type="submit"> حفظ</button>
@@ -356,11 +323,10 @@
                                             aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body"
-                                        action="{{route('updated.status')}}"
+                                      
                                         method="POST">
                                         @csrf
-                                            <input type="hidden" name="status" id="query_status">
-                                            <input type="hidden" name="query" id="query">
+                                       
                                             <div class="col-12">
                                                 <label class="form-label">بريد الالكتروني</label>
                                                 <input type="text"
@@ -446,10 +412,10 @@
             });
     
         });
-    $('.modalBtn').click(function (){
-        var status = $('#status').val();
-        $('#query_status').val(status);
-        $('#query').val(1);
-    })
+    // $('.modalBtn').change(function (){
+    //     var status = $('#status').val();
+    //     $('#query_status').val(status);
+    //     $('#query').val(1);
+    // })
     </script>
 @endpush

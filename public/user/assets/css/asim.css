@@ -805,6 +805,7 @@
         }
         .jst-btw{
             flex-direction: column;
+            text-align: center;
         }
         .design-card-inner {
             width: 100%;
@@ -1083,14 +1084,19 @@
             .video iframe{
                 width: 255px;
             }
+            .mujtmah-almusmamen-wrapper .mujtmah-box-btn-wrapper, .mujtmah-box__content .mujtmah-box-btn-wrapper{
+                justify-content: center;
+                align-items: center;
+            }
+            .mujtmah-box__content .mujtmah-box-btn-wrapper button:last-child{
+                margin-left: 0px;
+            }
+            .actions .btn:last-child{
+                margin-left: 0px !important;
+            }
+            
 
             
-    }
-
-    /* ////////////////////////////////////////// mobile landscape responsive //////////////////////////////////////////////////////// */
-
-    @media (min-width: 576px) and (max-width: 767px) {
-
     }
     
     /* ////////////////////////////////////////// tab landscape responsive //////////////////////////////////////////////////////// */
@@ -1180,6 +1186,7 @@
         }
         #user3RequestModal .userReq-btn-box{
             width: 80%;
+            text-align: center;
         }
         .userReq-btn-box {
             width: 100%;
@@ -1232,6 +1239,7 @@
     }
       .cleanshot-row{
         align-content: flex-end !important;
+        min-height: 430px;
       } 
 
     .adobe-icon{
@@ -1310,22 +1318,81 @@
         padding-left: 10px;
     }
     .message-error-icon{
+        width: 30px !important;
         margin: 0px !important;
-        width: 30px;
+        margin-bottom: 0px !important;
         margin-left: 20px !important;
+    }
+    
+    #productaddformModal .message-error-icon{
+        margin-bottom: 0px !important;
     }
     .zhd-footer{
         padding-left: 0px!important;
     }
 
+    .small-card img {
+        width: 115px;
+    }
+    .small-card__images-box{
+        width: 115px;
+        height: 115px;
+    }
+    .small-card__images-img{
+        width: auto !important;
+    }
+    .footer-white-heading .dot.center {
+        right: -10px !important;
+    }
+  
+    .final .col-auto:first-child .dateTime:first-child{
+        padding-top: 50px !important;
+    }
+    #userRequestModal .dateTime.small.padd-t-40{
+        padding-top: 40px !important;
+    }
+    .zhd-form-clean{
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+    .zhd-textarea-clean{
+        width: 100% !important;
+    }
+    
+    .modal.page.show .modal-header {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
 
-
+    .zhd-box {
+        width: 150px;
+    }
 }
     
     /* ////////////////////////////////////////// Large landscape responsive //////////////////////////////////////////////////////// */
 
 
     @media (min-width:992px) and (max-width: 1199px) {
+
+        /* navbar */
+        .navbar {
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+        .social-icons{
+            display: none;
+        }
+        nav .left-side a {
+            margin: 0px 17px;
+        }
+        /* .social-icons a{
+         margin: 0px 7px !important;
+        }
+        nav .left-side a:last-child {
+            margin-left: 0 !important;
+        } */
+
+        /* navbar end */
         .notification-box.notification-box-wdt{
             width: 300px;
         }
@@ -1338,30 +1405,51 @@
             padding-right: 28px;
         }
         .btn-white {
-            margin-left: 10px;
+            margin-left: 24px;
+            margin-top: 20px;
         }
         .btn-trans {
-            margin-left: 10px;
+            margin-left: 24px;
+            margin-top: 20px;
         }
         .btn-blue{
-            margin-left: 10px;
+            margin-left: 24px;
+            margin-top: 20px;
         }
-
+        .design-card-main {
+            padding-top: 0px;
+        }
         .btn-list .blur-part {
             width: 250px;
             right: 700px;
+            display: none;
+        }
+        #designinnerModal  .btn-white {
+            margin-left: 20px;
+        }
+        #designinnerModal .btn-trans {
+            margin-left: 20px;
+        }
+        #designinnerModal .btn-blue{
+            margin-left: 20px;
+        }
+        #designinnerModal .modal-header .btn-close {
+            margin-right: 90px;
         }
 
         #designinnerModal .designer-sec::before {
             top: 0;
             bottom: 370px;
             left: 0;
-            right: -336px;
+            right: -30px;
             display: block;
             margin: auto;
             max-height: unset;
-            height: 1020px;
-            width: 1650px;
+            height: 1010px;
+            width: 1180px;
+        }
+        #designinnerModal .design-card-main {
+            padding-top: 0px;
         }
 
         #productdesignModal .btn-close{
@@ -1380,9 +1468,7 @@
         #user2RequestModal .modal-header , #user4RequestModal .modal-header{
             padding: 1rem 0rem !important;
         }
-
-           /* productaddformModal style */
-
+     
            
     }
     

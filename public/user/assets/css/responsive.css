@@ -1268,7 +1268,7 @@
 .mobile-profile{
     padding: 0px;
     position: absolute;
-    left: 10px;
+    left: 30px;
     top: 30px;
     display: flex;
     margin: auto;
@@ -1338,7 +1338,8 @@
       transition:all .3s;
       font-size:1em;
       z-index: 2;
-      top: 30px ;
+      top: 30px;
+      padding-left: 30px;
   }
   /* Change the width of the sidebar to display it*/
   #wrapper.menuDisplayed #sidebar-wrapper{
@@ -1445,12 +1446,12 @@
 
     /* Form */
     .form-action {
-        padding: 5rem 0;
+        padding: 0px;
     }
 
     /* Contact */
     .section {
-        padding-top: 30px;
+        padding-top: 40px;
         padding-bottom: 30px;
     }
 
@@ -1713,7 +1714,7 @@
     }
 
     .details {
-        padding: 0px 100px;
+        padding: 0px 70px;
     }
 
     .final img {
@@ -2060,7 +2061,7 @@
     }
     
     footer .social {
-        padding: 0 30px;
+        padding: 0px;
     }
 }
 
