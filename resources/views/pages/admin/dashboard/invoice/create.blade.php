@@ -64,7 +64,7 @@
                                             invoice-field" required
                                             name="qty_design" id=""
                                             aria-describedby=""
-                                            placeholder="أدخل كمية التصميم ثلاثي الأبعاد">
+                                            placeholder="كمية التصميم ثلاثي الأبعاد">
                                         <small id="" class="form-text
                                             text-muted"></small>
                                     </div>
@@ -76,7 +76,7 @@
                                             invoice-field" required
                                             name="price_design" id=""
                                             aria-describedby=""
-                                            placeholder="أدخل كمية التصميم ثلاثي الأبعاد">
+                                            placeholder="سعر / وحدة تصميم ثلاثي الأبعاد">
                                         <small id="" class="form-text
                                             text-muted"></small>
                                     </div>
@@ -88,7 +88,7 @@
                                             invoice-field" required
                                             name="qty_model" id=""
                                             aria-describedby=""
-                                            placeholder="أدخل كمية النموذج ثلاثي الأبعاد">
+                                            placeholder=" كمية النموذج ثلاثي الأبعاد">
                                         <small id="" class="form-text
                                             text-muted"></small>
                                     </div>
@@ -100,7 +100,7 @@
                                             invoice-field" required
                                             name="price_model" id=""
                                             aria-describedby=""
-                                            placeholder="أدخل كمية النموذج ثلاثي الأبعاد">
+                                            placeholder="سعر النموذج ثلاثي الأبعاد / الوحدة">
                                         <small id="" class="form-text
                                             text-muted"></small>
                                     </div>
@@ -112,31 +112,31 @@
                                         <input type="number" class="form-control
                                             invoice-field" required name="tax"
                                             id="" aria-describedby=""
-                                            placeholder="أدخل معدل ضريبة القيمة المضافة">
+                                            placeholder="قيمة الضريبة">
                                         <small id="" class="form-text
                                             text-muted"></small>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Deliverable Design</label>
+                                        <label for="exampleInputEmail1">تصميم التسليم</label>
                                         <input type="text" class="form-control
                                             invoice-field" required
                                             name="deliverable_design" id=""
                                             aria-describedby=""
-                                            placeholder="أدخل كمية النموذج ثلاثي الأبعاد">
+                                            placeholder="تصميم التسليم">
                                         <small id="" class="form-text
                                             text-muted"></small>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Deliverable Model
+                                        <label for="exampleInputEmail1"> نموذج التسليم
                                         </label>
                                         <input type="text" class="form-control
                                             invoice-field" required name="deliverable_model"
                                             id="" aria-describedby=""
-                                            placeholder="أدخل معدل ضريبة القيمة المضافة">
+                                            placeholder="نموذج التسليم">
                                         <small id="" class="form-text
                                             text-muted"></small>
                                     </div>
@@ -154,12 +154,12 @@
                                             text-muted"></small>
                                     </div>
                                 </div>
-                                <div class="col-md-12">
+                                <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">عنوان
                                         </label>
                                         <input type="text" class="form-control
-                                            invoice-field-12" required name="address"
+                                          " required name="address"
                                             id="" aria-describedby=""
                                             placeholder="">
                                         <small id="" class="form-text
@@ -168,10 +168,10 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-md-6">
+                                <div class="col-md-6 mb-4">
                                     <label for="exampleInputEmail1"> مفهوم التصميم
                                     </label>
-                                    <textarea name="concept_design" class="form-control invoice-field-12" id="concept_design" cols="30" rows="10"></textarea>
+                                    <textarea name="concept_design" class="form-control" id="concept_design" cols="30" rows="10"></textarea>
                                     <small id="" class="form-text
                                     text-muted"></small>
                                 </div>
@@ -179,7 +179,7 @@
                                 <div class="col-md-6 mb-4">
                                     <label for="exampleInputEmail1"> تصنيع
                                     </label>
-                                    <textarea name="manufacturing" class="form-control invoice-field-12" id="manufacturing" cols="30" rows="10"></textarea>
+                                    <textarea name="manufacturing" class="form-control" id="manufacturing" cols="30" rows="10"></textarea>
                                     <small id="" class="form-text
                                     text-muted"></small>
                                 </div>                                
