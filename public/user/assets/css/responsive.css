@@ -376,6 +376,7 @@
     .submitted-data div p {
         padding-right: 0;
         font-size: 13px;
+        text-align: right;
     }
 
     .flying-man {

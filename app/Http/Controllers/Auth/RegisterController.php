@@ -14,6 +14,7 @@ use App\Models\SideLogo;
 use App\Models\ContactUs;
 use App\Models\Youtubeurl;
 use App\Models\ImageSlider;
+use Illuminate\Http\Request;
 use App\Models\PublicService;
 use Spatie\Permission\Models\Role;
 use App\Http\Controllers\Controller;
@@ -150,5 +151,27 @@ class RegisterController extends Controller
    
        $user->assignRole($roleData);
         return $user;
+    }
+    protected function createDesigner(Request $data)
+    {
+        
+        $roleData = Crypt::decrypt($data->role);
+        if (isset($data->profile) && !empty($data->profile)) {
+            $fdata = ($data->profile)->getClientOriginalName();
+            $data->profile->move(public_path('upload/'), $fdata);
+            $datas = 'upload/'.$fdata;
+        } else {
+            $datas = null;
+        }
+
+            $user = User::create([
+                'name' => $data->name,
+                'email' => $data->email,
+                'password' => Hash::make($data->password),
+                'role' => 'designer',
+                'profile' => $datas,
+            ]);
+        $user->assignRole($roleData);
+        return redirect()->back();
     }
 }

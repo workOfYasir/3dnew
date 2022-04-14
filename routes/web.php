@@ -75,8 +75,9 @@ Route::group(['prefix' => 'artisan'], function () {
 });
 
 Route::get('/', [RegisterController::class, 'homepage'])->name('/');
+Route::post('createDesigner', [RegisterController::class, 'createDesigner'])->name('createDesigner');
 Auth::routes();
-
+Route::get('logout', [App\Http\Controllers\Auth\LoginController::class, 'logout']);
         Route::resource('invoicess', InvoiceController::class);
         Route::resource('perposal', PerposalController::class);
 Route::group(['middleware' => 'auth', 'varify','cors'], function () {
@@ -120,7 +121,7 @@ Route::group(['middleware' => 'auth', 'varify','cors'], function () {
         Route::resource('side', SideImageController::class);
     
         Route::resource('logo', LogoController::class);
-        Route::get('logout', [App\Http\Controllers\Auth\LoginController::class, 'logout']);
+
         Route::post('edituser_profile/{id}', [HomeController::class, 'edituser'])->name('edituser_profile');
         Route::get('view/{id}', [ImageSlideController::class, 'view'])->name('view');
         Route::get('register_profile', [HomeController::class, 'register_profile'])->name('register_profile');

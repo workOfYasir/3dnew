@@ -6,14 +6,19 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="modal-header border-0">
+                        <div class="zhd-center-close">
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
                             <div>
+                            <div class="zhd-center-hdng public-hd" style="margin-top: 1%;">
                                 <span class="outline dot">أكثر 20 خدمة مختلفة</span>
                                 <h1 class="modal-title right"><span class="btm-line"><span
                                             class="inner-line"></span>الخدمات العامة
                                     </span></h1>
                             </div>
+                            </div>
                             <div class="profile">
+                            <div class="profile zhd-box">
                                 @if(@auth()->user()->profile == null)
                                 <button class="btn btn-sky profile-btn invert">
                                     المصمم
@@ -30,6 +35,7 @@
                                         style="height:40px; width:40px; border-radius: 50%">
                                 </a>
                                 @endif
+                            </div>
                             </div>
                         </div>
                         <div class="modal-body">
