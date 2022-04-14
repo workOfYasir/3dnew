@@ -1474,6 +1474,18 @@ a:hover {
   color:#148eeb;
 }
 /* end login zahid */
+.zhd-addres{
+  height: 50px!important;
+}
+.form-select{
+  padding-right:10px !important;
+  font-weight:300 !important;
+  font-size:12px !important;
+}
+.form-control{
+  font-weight:300 !important;
+  font-size:12px !important;
+}
 .btn-blue {
   background-color: #148eeb;
   color: #fff;
@@ -31317,4 +31329,64 @@ margin-left: 20px;
 
 .notification-left-side li{
   direction: rtl;
+}
+
+
+
+/* chat style */
+.upload-btn-wrapper{
+  border: 1px solid #ced4da;
+}
+#message{
+  padding: 9px;
+}
+.chat-submit-btn{
+  width: 100%;
+}
+.chat-img-upload{
+  position: relative;
+  cursor: pointer;
+}
+.chat-img-upload img {
+  margin-left: 5px;
+  transform: rotate(270deg);
+  margin-right: 5px;
+}
+.chat-img-upload input{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0;
+}
+
+.chat-card .card-header{
+  background-color: #fff;
+  padding: 25px 12px;
+}
+
+
+
+/* width */
+.message-box::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Track */
+.message-box::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+  /* border-radius: 10px; */
+}
+ 
+/* Handle */
+.message-box::-webkit-scrollbar-thumb {
+  background: #1F5098;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.message-box::-webkit-scrollbar-thumb:hover {
+  background: #1f4f98b0; 
 }

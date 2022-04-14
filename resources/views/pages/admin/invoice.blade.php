@@ -20,7 +20,12 @@
   background-color: #e6e6e6;
 
   color: rgb(75, 74, 74);
+
 }
+
+
+
+
     </style>
 </head>
 
@@ -93,7 +98,7 @@
 
             </div>
 
-            <table class="table table-bordered table-striped" style="width: 700px;table-layout:fixed;">
+            <table class="table table-bordered table-striped" style="width: 700px;table-layout:fixed; border:1px solid #dee2e6">
                 <thead>
                     <tr>
                         <th scope="col" style="width:50%">Description</th>

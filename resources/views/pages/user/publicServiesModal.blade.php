@@ -124,7 +124,7 @@
                                                             class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4 mt-4">
                                                             <label class="form-label dot">دقة الطباعة (صورة
                                                                 كمثال)</label>
-                                                            <input type="text" class="form-control email"
+                                                            <input type="text" class="form-control print-resolution"
                                                                 placeholder=".. الايميل هنا" value="" 
                                                                 name="pr_res">
                                                         </div>
@@ -144,7 +144,7 @@
                                                     </div>
                                                     <div class="form-action">
                                                         <button
-                                                            class="btn btn-grey invert btn-form mx-3 with-arrow disabled"
+                                                            class="btn invert btn-form mx-3 with-arrow disabled"
                                                             data-bs-target="#carouselIndicators"
                                                             data-bs-slide="next"><img
                                                                 src="{{asset('user/assets/icons/arrow-right.svg')}}"
