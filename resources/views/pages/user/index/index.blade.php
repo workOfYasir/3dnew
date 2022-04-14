@@ -2730,7 +2730,7 @@
                                         </div>
                                         <div class="row align-items-end py-4 conditional-blur justify-content-between">
 
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                            <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3">
                                                 <label class="form-label">اختيار اللون</label>
                                                 <div class="color-circle-main">
                                                     <div class="blue-text">
@@ -3000,7 +3000,7 @@
                                         </div>
                                         <div class="row align-items-end py-4 conditional-blur justify-content-between mob-margin">
 
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                            <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3">
                                                 <label class="form-label">اختيار اللون</label>
                                                 <div class="color-circle-main">
                                                     <div class="blue-text">
@@ -3260,7 +3260,7 @@
                                         </div>
                                         <div class="row align-items-end p-xs-0  conditional-blur">
 
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mob-margin">
+                                            <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3 mob-margin">
                                                 <label class="form-label">اختيار اللون</label>
                                                 <div class="color-circle-main">
                                                     <div class="blue-text">
@@ -3599,7 +3599,7 @@
                                         </div>
                                         <div class="row align-items-end p-xs-0  conditional-blur mob-margin">
 
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                            <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3">
                                                 <label class="form-label">اختيار اللون</label>
                                                 <div class="color-circle-main">
 
@@ -3959,7 +3959,7 @@
                                         </div>
                                         <div class="row align-items-end p-xs-0  conditional-blur mob-margin">
 
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                            <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3">
                                                 <label class="form-label">اختيار اللون</label>
                                                 <div class="color-circle-main">
                                                     <div class="blue-text">
@@ -4223,7 +4223,7 @@
                            </div> -->
                                         <div class="row align-items-end p-xs-0  conditional-blur mob-margin">
 
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                            <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3">
                                                 <label class="form-label">اختيار اللون</label>
                                                 <div class="color-circle-main">
 
@@ -4495,7 +4495,7 @@
                            </div> -->
                                         <div class="row align-items-end p-xs-0  conditional-blur mob-margin">
 
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                            <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3">
                                                 <label class="form-label dot">اختيار اللون</label>
                                                 <div class="color-circle-main">
                                                     <div class="blue-text">
@@ -4755,7 +4755,7 @@
                                         </div>
                                         <div class="row align-items-end p-xs-0  conditional-blur mob-margin">
 
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                            <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3">
                                                 <label class="form-label dot">اختيار اللون</label>
                                                 <div class="color-circle-main">
                                                     <div class="blue-text">
@@ -7479,7 +7479,7 @@
                                         <h1 class="title text-center no-border conditional-blur">معلومات الطلب</h1>
 
                                         <div class="row  p-xs-0 align-items-end  conditional-blur">
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                            <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3">
                                                 <label class="form-label">اختيار اللون</label>
                                                 <div class="color-circle-main">
                                                 <div class="blue-text">
@@ -7852,7 +7852,7 @@
                                         <h1 class="title text-center no-border conditional-blur">معلومات الطلب</h1>
 
                                         <div class="row align-items-end  p-xs-0  conditional-blur">
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                            <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3">
                                                 <label class="form-label dot">اختيار اللون</label>
                                                 <div class="color-circle-main">
                                                 <div class="blue-text">
@@ -8159,7 +8159,7 @@
                                         <h1 class="title text-center no-border conditional-blur">معلومات الطلب</h1>
 
                                         <div class="row  p-xs-0  conditional-blur">
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                            <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3">
                                                 <label class="form-label">اختيار اللون</label>
                                                 <div class="color-circle-main">
                                                 <div class="blue-text">
@@ -8469,7 +8469,7 @@
                                         </div>
                                         <div class="row  p-xs-0  conditional-blur">
 
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                            <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3">
                                                 <label class="form-label dot">اختيار اللون</label>
                                                 <div class="color-circle-main">
 
@@ -8821,7 +8821,7 @@
                                         <h1 class="title text-center no-border conditional-blur">معلومات الطلب</h1>
 
                                         <div class="row  p-xs-0  conditional-blur">
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                            <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3">
                                                 <label class="form-label mt-4">اختيار اللون</label>
                                                 <div class="color-circle-main">
                                                 <div class="blue-text">
@@ -9061,7 +9061,7 @@
                                         <h1 class="title text-center no-border conditional-blur">معلومات الطلب</h1>
 
                                         <div class="row  p-xs-0  conditional-blur">
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                            <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3">
                                                 <label class="form-label dot">اختيار اللون</label>
                                                 <div class="color-circle-main">
                                                 <div class="blue-text">
@@ -9350,7 +9350,7 @@
                                         <h1 class="title text-center no-border conditional-blur">معلومات الطلب</h1>
 
                                         <div class="row  p-xs-0  conditional-blur">
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                            <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3">
                                                 <label class="form-label dot">اختيار اللون</label>
                                                 <div class="color-circle-main">
                                                 <div class="blue-text">

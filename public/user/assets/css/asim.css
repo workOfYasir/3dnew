@@ -597,21 +597,22 @@
 }
 
 
-
-
-
-
-
-
-
-
-
+.view-order-heading{
+    margin-right: 150px;
+}
 
 
 
     /* //////////////////////////////////// responsive start here ////////////////////////////////////////////////*/
     
     @media (min-width: 360px) and (max-width: 767px) {
+
+        .view-order-heading{
+            margin-right: 0px;
+        }
+        #view-order .view-order-heading, #public-order .view-order-heading{
+            margin-right: 0px;
+        }
         form.p-l-0{
             padding-left: 0px !important;
         }
@@ -1468,6 +1469,10 @@
     }
     /* ahsan */
 
+    .form-top{
+        padding-top: 30px;
+    }
+
 }
     
     /* ////////////////////////////////////////// Large landscape responsive //////////////////////////////////////////////////////// */
@@ -1656,6 +1661,17 @@
         }
         .zhd-quote{
             margin-bottom: 60px !important;
+        }
+
+        #requestsModal .modal-body {
+            padding: 0 3rem !important;
+        }
+        #requestsModal .modal-header {
+            padding: 3rem 0rem !important;
+        }
+
+        .form-top{
+            padding-top: 30px;
         }
     }
     
