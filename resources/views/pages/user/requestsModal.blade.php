@@ -5,35 +5,35 @@
                  <div class="row">
                      <div class="col-md-12 requests-position">
                          <div class="modal-header border-0">
-                         <div class="zhd-center-close">
-                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-
+                            <div class="zhd-center-close">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
                              <div class="dropdown register-pdf d-none">
 
 
                                 <button class="btn bg-light dropdown" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                     <i class="fas fa-file-pdf" style="color:#1F5098; font-size:35px"></i>
                                 </button>
-                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                  
-                                    @if((@$user->purposals)!=null)
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                                     
+                                        @if((@$user->purposals)!=null)
+                                        
+                                        <li>
+                                            <a class="dropdown-item" href="{{ route('purposal.pdf',@$user->purposals->id) }}" >
+                                            New Purposal
+                                            </a>
+                                        </li>
+                                        @else
+                                    @endif
+                                    @if((@$user->invoices)!=null)
                                     <li>
-                                        <a class="dropdown-item" href="{{ route('purposal.pdf',@$user->purposals->id) }}" >
-                                        New Purposal
-                                        </a>
+                                        <a class="dropdown-item" href="{{ route('invoice.pdf',@$user->invoices->id) }}">
+                                            New Invoice
+                                            </a>
                                     </li>
-                                    @else
-                                 @endif
-                                 @if((@$user->invoices)!=null)
-                                 <li>
-                                     <a class="dropdown-item" href="{{ route('invoice.pdf',@$user->invoices->id) }}">
-                                         New Invoice
-                                         </a>
-                                </li>
-                              @endif
+                                @endif
 
-                                </ul>
+                                    </ul>
                               </div>
                             
 
