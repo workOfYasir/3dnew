@@ -190,6 +190,10 @@
                 </div>
                 @else
                 <div class="left-side">
+                    <a href="#" class="m-0">
+                         <img src="{{ asset('user/assets/icons/avatar.svg') }}" class="profile-img" alt="avatar">
+                    </a>
+
                     <a href="#login" data-bs-toggle="modal" class="register-icon border-bottom" data-bs-target="#loginModal">تسجيل
                         دخول</a>
                     <a href="#register" class="ms-auto register-icon border-bottom" data-bs-toggle="modal"
