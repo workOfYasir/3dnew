@@ -83,7 +83,7 @@
                                             </form>
                                         </div>
                                         <div class="tab-pane fade " id="designerloginModal2" role="tabpanel" aria-labelledby="profile-tab">
-                                            <form class="row gy-4 gx-5" method="get" style="padding-top: 20px;">
+                                            <form class="row gy-4 gx-5 p-l-0" method="get" style="padding-top: 20px;">
                                                 @csrf
                                                 <input type="hidden" name="role" value="{{Crypt::encrypt('admin')}}">
                                                 <div class="row justify-content-center">
@@ -92,7 +92,7 @@
                                                         <input id="imgInp" type="file" class="chose" name="profile" accept="image/*" style="display: none;">
                                                     </div>
                                                 </div>
-                                                <div class="row justify-content-center tab-justify-right">
+                                                <div class="row justify-content-center tab-justify-right padd-l-0">
                                                     <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mt-4">
                                                         <label class="form-label dot">الاسم</label>
                                                         <input type="text" class="form-control" placeholder="الاسم هنا .." value="">
@@ -127,7 +127,7 @@
                                                         </select>
                                                     </div>
                                                 </div>
-                                                <div class="row justify-content-center">
+                                                <div class="row justify-content-center padd-l-0">
                                                     <div class="container container-x">
                                                         <div class="almuntjat-form-error almuntjat-form-error-2">
                                                             <img src="{{ asset('user/assets/images/warning.png') }}" alt="" class="almuntjat-form-error__img"> بعد إضافة المنتج سيذهب الى الإدارة للمراجعة للقبول أو الرفض
