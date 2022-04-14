@@ -609,7 +609,9 @@
     padding: 2rem 0rem !important;
 }
 
-
+#healthServiesModal .profile.zhd-box{
+    text-align: left;
+}
 
 
 
