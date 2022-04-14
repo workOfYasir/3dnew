@@ -14,4 +14,12 @@ class PublicService extends Model
         'status', 'user_id', 'full_name', 'phone_num', 'email', 'specialization',
         'gender', 'print_type', 'print_color', 'print_resolution', 'print_img', 'seen',
     ];
+    public function InvoicePDF()
+    {
+        return $this->hasOne(Invoice::class,'order_id','id');
+    }
+    public function PerposalPDF()
+    {
+        return $this->hasOne(Perposal::class,'order_id','id');
+    }
 }

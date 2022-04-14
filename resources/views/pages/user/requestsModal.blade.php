@@ -7,8 +7,10 @@
                          <div class="modal-header border-0">
                          <div class="zhd-center-close">
                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-</div>
-                             <div class="dropdown register-pdf">
+
+                             <div class="dropdown register-pdf d-none">
+
+
                                 <button class="btn bg-light dropdown" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                     <i class="fas fa-file-pdf" style="color:#1F5098; font-size:35px"></i>
                                 </button>
@@ -92,8 +94,8 @@
                                          <div class="tab-pane fade show active" id="medical-service" role="tabpanel" aria-labelledby="medical-tab">
                                              <div class="row">
                                                  @foreach($orders as $orde)
-                                                 <a class="nav-link" href="{{route('vieworder',$orde->id)}}">
-                                                     <div class="col-md-12">
+                                                     <div class="col-md-11">
+                                                       <a class="nav-link" href="{{route('vieworder',$orde->id)}}">
                                                          <div data-id='{{$orde->id}}' class="request-box editProduct">
                                                              <div class="heading">
                                                                  <h5>رقم الطلب:</h5>
@@ -108,10 +110,43 @@
                                                                  <span> {{$orde->dr_name}}</span>
                                                                  <p>تاريخ الطلب:</p>
                                                                  <span class="dateTime">{{$orde->created_at}}</span>
-                                                             </div>
+                                                            </div>
                                                          </div>
+                                                        </a>
+                                                        
                                                      </div>
-                                                 </a>
+                                                     
+                                                     <div class="col">
+                                                        @if((@$order->PerposalPDF)!=null||(@$order->InvoicePDF)!=null)
+                                                        <div class="dropdown  pt-4">
+                                                            <button class="btn bg-light dropdown" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                <i class="fas fa-file-pdf" style="color:#1F5098; font-size:35px"></i>
+                                                            </button>
+                                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                              
+                                                                @if((@$order->PerposalPDF)!=null)
+                                                                
+                                                                <li>
+                                                                    <a class="dropdown-item" href="{{ route('purposal.pdf',@$order->PerposalPDF->id) }}" >
+                                                                    New Purposal
+                                                                    </a>
+                                                                </li>
+                                                                @else
+                                                             @endif
+                                                             @if((@$order->InvoicePDF)!=null)
+                                                             <li>
+                                                                 <a class="dropdown-item" href="{{ route('invoice.pdf',@$order->InvoicePDF->id) }}">
+                                                                     New Invoice
+                                                                     </a>
+                                                            </li>
+                                                          @endif
+                            
+                                                            </ul>
+                                                          </div>
+                                                          @endif
+                                                        </div>
+                                                   
+                                              
                                                  @endforeach
                                              </div>
                                          </div>
@@ -119,24 +154,55 @@
                                          <div class="tab-pane fade" id="public-services" role="tabpanel" aria-labelledby="public-tab">
                                              <div class="row">
                                                  @foreach($publics as $orde)
-                                                 <a class="nav-link" href="{{route('vieworderpublic',$orde->id)}}">
-                                                     <div class="col-md-12">
-                                                         <div class="request-box" data-bs-toggle="modal" data-bs-target="#publicServiesFinalModal">
-                                                             <div class="heading">
-                                                                 <h5>رقم الطلب:</h5>
-                                                                 <span>{{$orde->id}}</span>
-                                                             </div>
-                                                             <div class="data">
-                                                                 <p>حالة الطلب:</p>
-                                                                 <span> عرض السعر</span>
-                                                                 <p>الاسم كامل:</p>
-                                                                 <span> {{$orde->full_name}}</span>
-                                                                 <p>التخصص:</p>
-                                                                 <span> {{$orde->specialization}}</span>
-                                                             </div>
-                                                         </div>
-                                                     </div>
-                                                 </a>
+                                                 <div class="col-11">
+                                                    <a class="nav-link" href="{{route('vieworderpublic',$orde->id)}}">
+                                                        <div class="col-md-12">
+                                                            <div class="request-box" data-bs-toggle="modal" data-bs-target="#publicServiesFinalModal">
+                                                                <div class="heading">
+                                                                    <h5>رقم الطلب:</h5>
+                                                                    <span>{{$orde->id}}</span>
+                                                                </div>
+                                                                <div class="data">
+                                                                    <p>حالة الطلب:</p>
+                                                                    <span> عرض السعر</span>
+                                                                    <p>الاسم كامل:</p>
+                                                                    <span> {{$orde->full_name}}</span>
+                                                                    <p>التخصص:</p>
+                                                                    <span> {{$orde->specialization}}</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                 <div class="col">
+                                                    @if((@$order->PerposalPDF)!=null||(@$order->InvoicePDF)!=null)
+                                                    <div class="dropdown  pt-4">
+                                                        <button class="btn bg-light dropdown" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <i class="fas fa-file-pdf" style="color:#1F5098; font-size:35px"></i>
+                                                        </button>
+                                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                          
+                                                            @if((@$order->PerposalPDF)!=null)
+                                                            
+                                                            <li>
+                                                                <a class="dropdown-item" href="{{ route('purposal.pdf',@$order->PerposalPDF->id) }}" >
+                                                                New Purposal
+                                                                </a>
+                                                            </li>
+                                                            @else
+                                                         @endif
+                                                         @if((@$order->InvoicePDF)!=null)
+                                                         <li>
+                                                             <a class="dropdown-item" href="{{ route('invoice.pdf',@$order->InvoicePDF->id) }}">
+                                                                 New Invoice
+                                                                 </a>
+                                                        </li>
+                                                      @endif
+                        
+                                                        </ul>
+                                                      </div>
+                                                      @endif
+                                                    </div>
                                                  @endforeach
                                              </div>
                                          </div>
