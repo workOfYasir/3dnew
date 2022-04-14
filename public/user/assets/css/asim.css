@@ -605,7 +605,7 @@
 }
 
 #designer-order .modal-header , #designer-order-upload .modal-header , #designer-review-upload .modal-header,
-#designer-bid-submission .modal-header,#designer-submit-quote  .modal-header, #designer-bid-rejected  .modal-header , #designer-information  .modal-header , #designer-order-submitted .modal-header{
+#designer-bid-submission .modal-header,#designer-submit-quote  .modal-header, #designer-bid-rejected  .modal-header , #designer-information  .modal-header , #designer-order-submitted .modal-header , #healthServiesModal .modal-header{
     padding: 2rem 0rem !important;
 }
 

@@ -1,7 +1,7 @@
 <div class="modal fade page form animate__animated animate__fadeInRight animate__fast" id="healthServiesModal" tabindex="-1" aria-labelledby="healthServiesModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-fullscreen">
         <div class="modal-content">
-            <div class="container-fluid">
+            <div class="container">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="modal-header border-0">
