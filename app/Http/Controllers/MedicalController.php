@@ -204,13 +204,21 @@ class MedicalController extends Controller
             $order->update([
                 'status' => $order->status,
             ]);
+            $details = [
+                'title' =>  $user->name,
+                'subject'=>$order->id. ' الدفع',
+                'id'=>$request->id,
+                'body' => $order->status,
+            ];
+        }else{
+            $details = [
+                'title' =>  $user->name,
+                'subject'=>$order->id. '  رفع الطلب',
+                'id'=>$request->id,
+                'body' => $order->status,
+            ];
         }
-        $details = [
-            'title' =>  $user->name,
-            'subject'=> '',
-            'id'=>$request->id,
-            'body' => $order->status,
-        ];
+       
 
         \Mail::to($user->email)->send(new \App\Mail\statuschanged($details));
         return redirect()->route('home');
