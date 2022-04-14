@@ -83,7 +83,7 @@
                                             </form>
                                         </div>
                                         <div class="tab-pane fade " id="designerloginModal2" role="tabpanel" aria-labelledby="profile-tab">
-                                            <form class="row gy-4 gx-5" method="get" style="padding-top: 20px;">
+                                            <form class="row gy-4 gx-5" action="{{route('createDesigner')}}" method="post" style="padding-top: 20px;">
                                                 @csrf
                                                 <input type="hidden" name="role" value="{{Crypt::encrypt('admin')}}">
                                                 <div class="row justify-content-center">
@@ -95,11 +95,11 @@
                                                 <div class="row justify-content-center tab-justify-right">
                                                     <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mt-4">
                                                         <label class="form-label dot">الاسم</label>
-                                                        <input type="text" class="form-control" placeholder="الاسم هنا .." value="">
+                                                        <input type="text" class="form-control" name="name" placeholder="الاسم هنا .." value="">
                                                     </div>
                                                     <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mt-4">
                                                         <label class="form-label dot">رقم الجوال</label>
-                                                        <input type="text" class="form-control " placeholder="رقم الجوال هنا .." value="">
+                                                        <input type="text" class="form-control "  name="field" placeholder="رقم الجوال هنا .." value="">
                                                     </div>
                                                     <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mt-4">
                                                         <label class="form-label dot">الايميل</label>
@@ -114,14 +114,14 @@
 
                                                     <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mt-4 ahs-from-box">
                                                         <label class="form-label dot">تقنية الطباعة</label>
-                                                        <select class="form-select" required name="" aria-label="Default select example">
+                                                        <select class="form-select" required name="select1" aria-label="Default select example">
                                                             <option selected>اختيار التقنية</option>
                                                             <option>اختيار</option>
                                                         </select>
                                                     </div>
                                                     <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mt-4 ahs-from-box">
                                                         <label class="form-label dot">أنواع البرامج المستخدمة</label>
-                                                        <select class="form-select" required name="" aria-label="Default select example">
+                                                        <select class="form-select" required name="select2" aria-label="Default select example">
                                                             <option selected>اختاير البرامج المستخدمة</option>
                                                             <option>اختاير البرامج</option>
                                                         </select>

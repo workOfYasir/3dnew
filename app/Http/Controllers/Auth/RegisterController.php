@@ -151,4 +151,27 @@ class RegisterController extends Controller
        $user->assignRole($roleData);
         return $user;
     }
+    protected function createDesigner(array $data)
+    {
+        
+        $roleData = Crypt::decrypt($data['role']);
+        if (isset($data['profile']) && !empty($data['profile'])) {
+            $fdata = ($data['profile'])->getClientOriginalName();
+            $data['profile']->move(public_path('upload/'), $fdata);
+            $datas = 'upload/'.$fdata;
+            // $datas = Storage::disk('public')->put('upload/', $data['profile']);
+        } else {
+            $datas = null;
+        }
+
+            $user = User::create([
+                'name' => $data['name'],
+                'email' => $data['email'],
+                'password' => Hash::make($data['password']),
+                'role' => $roleData,
+                'profile' => $datas,
+            ]);
+        $user->assignRole($roleData);
+        return $user;
+    }
 }
