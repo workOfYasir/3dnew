@@ -106,7 +106,8 @@
                                             </div>
                                             <img src="{{asset('user/assets/icons/green-line.svg')}}" alt="">
                                             <div class="col-sm-12 col-lg col-xxl">
-                                                @if($order->status >= 2)
+                                              
+                                                @if($order->status == 1 ||$order->status>1)
                                                 <div class="dateTime small">{{$order->created_at}}</div>
                                                 <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
                                                 @else
@@ -117,14 +118,14 @@
                                                     <p>اجتماع الخطة العلاجية</p>
                                                 </div>
                                             </div>
-                                            @if($order->status >= 2)
+                                            @if($order->status == 1||$order->status>1)
                                             <img src="{{asset('user/assets/icons/green-line.svg')}}" alt="">
                                             @else
                                             <img src="{{asset('user/assets/icons/redline.svg')}}" alt="">
                                             @endif
 
                                             <div class="col-sm-12 col-lg col-xxl">
-                                                @if($order->status >= 3)
+                                                @if($order->status == 2||$order->status>2)
                                                 <div class="dateTime small">{{$order->created_at}}</div>
                                                 <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
                                                 @else
@@ -135,13 +136,13 @@
                                                     <p>اجتماع النموذج الأول</p>
                                                 </div>
                                             </div>
-                                            @if($order->status >= 3)
+                                            @if($order->status == 2||$order->status>2)
                                             <img src="{{asset('user/assets/icons/green-line.svg')}}" alt="">
                                             @else
                                             <img src="{{asset('user/assets/icons/redline.svg')}}" alt="">
                                             @endif
                                             <div class="col-sm-12 col-lg col-xxl">
-                                                @if($order->status >= 4)
+                                                @if($order->status == 3||$order->status>3)
                                                 <div class="dateTime small">{{$order->created_at}}</div>
                                                 <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
                                                 @else
@@ -152,48 +153,48 @@
                                                     <p>اجتماع النموذج النهائي</p>
                                                 </div>
                                             </div>
-                                            @if($order->status >= 4)
+                                            @if($order->status == 3||$order->status>3)
                                             <img src="{{asset('user/assets/icons/green-line.svg')}}" alt="">
                                             @else
                                             <img src="{{asset('user/assets/icons/redline.svg')}}" alt="">
                                             @endif
                                             <div class="col-sm-12 col-lg col-xxl">
-                                                @if($order->status >= 5)
-                                                <div class="dateTime small text-white">{{$order->created_at}}</div>
+                                                @if($order->status == 4||$order->status>4)
+                                                <div class="dateTime small ">{{$order->created_at}}</div>
                                                 <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
                                                 @else
-                                                <div class="dateTime small">تاريخ</div>
+                                                <div class="dateTime small ">تاريخ</div>
                                                 <img src="{{asset('user/assets/icons/red-circle.svg')}}" class="red-circle" alt="red-circle">
                                                 @endif
                                                 <div>
                                                     <p>الدفع</p>
                                                 </div>
                                             </div>
-                                            @if($order->status >= 5)
+                                            @if($order->status == 4||$order->status>4)
                                             <img src="{{asset('user/assets/icons/green-line.svg')}}" alt="">
                                             @else
                                             <img src="{{asset('user/assets/icons/redline.svg')}}" alt="">
                                             @endif
                                             <div class="col-sm-12 col-lg col-xxl">
-                                                @if($order->status >= 6)
-                                                <div class="dateTime small text-white">{{$order->created_at}}</div>
+                                                @if($order->status == 5||$order->status>5)
+                                                <div class="dateTime small ">{{$order->created_at}}</div>
                                                 <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
                                                 @else
-                                                <div class="dateTime small">تاريخ</div>
+                                                <div class="dateTime small ">تاريخ</div>
                                                 <img src="{{asset('user/assets/icons/red-circle.svg')}}" class="red-circle" alt="red-circle">
                                                 @endif
                                                 <div>
                                                     <p>الطباعة ثلاثية الأبعاد</p>
                                                 </div>
                                             </div>
-                                            @if($order->status >= 6)
+                                            @if($order->status == 5||$order->status>5)
                                             <img src="{{asset('user/assets/icons/green-line.svg')}}" alt="">
                                             @else
                                             <img src="{{asset('user/assets/icons/redline.svg')}}" alt="">
                                             @endif
                                             <div class="col-sm-12 col-lg col-xxl">
-                                                @if($order->status >= 7)
-                                                <div class="dateTime small text-white">{{$order->created_at}}</div>
+                                                @if($order->status == 6||$order->status>6)
+                                                <div class="dateTime small ">{{$order->created_at}}</div>
                                                 <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
                                                 @else
                                                 <div class="dateTime small">تاريخ</div>
@@ -203,14 +204,14 @@
                                                     <p>اختبار الجودة</p>
                                                 </div>
                                             </div>
-                                            @if($order->status >= 7)
+                                            @if($order->status == 6||$order->status>6)
                                             <img src="{{asset('user/assets/icons/green-line.svg')}}" alt="">
                                             @else
                                             <img src="{{asset('user/assets/icons/redline.svg')}}" alt="">
                                             @endif
                                             <div class="col-sm-12 col-lg col-xxl">
-                                                @if($order->status >= 8)
-                                                <div class="dateTime small text-white">{{$order->created_at}}</div>
+                                                @if($order->status == 7||$order->status>7)
+                                                <div class="dateTime small ">{{$order->created_at}}</div>
                                                 <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
                                                 @else
                                                 <div class="dateTime small">تاريخ</div>
