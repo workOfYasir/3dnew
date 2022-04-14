@@ -114,25 +114,26 @@
                                                     </div>
                                                     
                                                     <div class="col">
-                                                       @if((@$order->PerposalPDF)!=null||(@$order->InvoicePDF)!=null)
+                                                        
                                                        <div class="dropdown  pt-4">
                                                            <button class="btn bg-light dropdown" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                                                <i class="fas fa-file-pdf" style="color:#1F5098; font-size:35px"></i>
                                                            </button>
                                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                                             
-                                                               @if((@$order->PerposalPDF)!=null)
+                                                          
+                                                               @if((@$orde->PerposalPDF)!=null)
                                                                
                                                                <li>
-                                                                   <a class="dropdown-item" href="{{ route('purposal.pdf',@$order->PerposalPDF->id) }}" >
+                                                                   <a class="dropdown-item" href="{{ route('purposal.pdf',@$orde->PerposalPDF->id) }}" >
                                                                    New Purposal
                                                                    </a>
                                                                </li>
-                                                               @else
+                                                              
                                                             @endif
-                                                            @if((@$order->InvoicePDF)!=null)
+                                                     
+                                                            @if((@$orde->InvoicePDF)!=null)
                                                             <li>
-                                                                <a class="dropdown-item" href="{{ route('invoice.pdf',@$order->InvoicePDF->id) }}">
+                                                                <a class="dropdown-item" href="{{ route('invoice.pdf',@$orde->InvoicePDF->id) }}">
                                                                     New Invoice
                                                                     </a>
                                                            </li>
@@ -140,7 +141,7 @@
                            
                                                            </ul>
                                                          </div>
-                                                         @endif
+                                                         
                                                        </div>
                                                   
                                              
