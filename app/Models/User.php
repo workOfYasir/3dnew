@@ -24,7 +24,8 @@ class User extends Authenticatable
         'profile',
         'password',
         'field',
-        'order_id'
+        'order_id',
+        'approve'
     ];
 
     /**

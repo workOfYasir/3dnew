@@ -77,6 +77,10 @@ Route::group(['prefix' => 'artisan'], function () {
 Route::get('/', [RegisterController::class, 'homepage'])->name('/');
 Route::post('createDesigner', [RegisterController::class, 'createDesigner'])->name('createDesigner');
 Auth::routes();
+// Route::get('approval/{id}',function(){
+//     dd('ok');
+// });
+Route::get('approval/{id}', [HomeController::class, 'approval'])->name('approval');
 Route::get('logout', [App\Http\Controllers\Auth\LoginController::class, 'logout']);
         Route::resource('invoicess', InvoiceController::class);
         Route::resource('perposal', PerposalController::class);

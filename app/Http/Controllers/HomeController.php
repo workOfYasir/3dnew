@@ -173,4 +173,11 @@ class HomeController extends Controller
         
        
     }
+    public function approval($id)
+    {
+       User::find($id)->update([
+            'approve' => 1,
+        ]);
+        return 'approved';
+    }
 }
