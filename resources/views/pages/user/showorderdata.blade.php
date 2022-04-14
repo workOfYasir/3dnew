@@ -65,9 +65,9 @@
                         <div class="col-md-12">
                             <div class="modal-header border-0">
                                 <a href="{{route('home')}}" class="btn-close"></a>
-                                <div class="view-order-heading">
+                                <div class="view-order-heading centr-main-title">
                                     <span class="outline dot">اهلاً وسهلاً بكم</span>
-                                    <h1 class="modal-title">طلباتي <span class="inner-line"></span></h1>
+                                    <h1 class="modal-title centr-main-title">طلباتي <span class="inner-line"></span></h1>
                                 </div>
                                 <div class="profile zhd-box">
                                     @if(@auth()->user()->profile == null)
