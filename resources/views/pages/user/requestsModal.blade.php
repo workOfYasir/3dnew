@@ -114,7 +114,6 @@
                                                     </div>
                                                     
                                                     <div class="col">
-                                                       @if((@$order->PerposalPDF)!=null||(@$order->InvoicePDF)!=null)
                                                        <div class="dropdown  pt-4">
                                                            <button class="btn bg-light dropdown" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                                                <i class="fas fa-file-pdf" style="color:#1F5098; font-size:35px"></i>
@@ -140,7 +139,7 @@
                            
                                                            </ul>
                                                          </div>
-                                                         @endif
+                                                         
                                                        </div>
                                                   
                                              
