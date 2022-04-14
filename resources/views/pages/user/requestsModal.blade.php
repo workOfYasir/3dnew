@@ -5,8 +5,12 @@
                  <div class="row">
                      <div class="col-md-12 requests-position">
                          <div class="modal-header border-0">
+                         <div class="zhd-center-close">
                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
                              <div class="dropdown register-pdf d-none">
+
+
                                 <button class="btn bg-light dropdown" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                     <i class="fas fa-file-pdf" style="color:#1F5098; font-size:35px"></i>
                                 </button>
@@ -35,12 +39,12 @@
 
                          
                        
-                             <div>
+                             <div class="zhd-center-hdng">
                                  <span class="outline dot">اهلاً وسهلاً بكم</span>
                                  <h1 class="modal-title right centr-main-title"><span class="btm-line d-flex">طلباتي<span class="inner-line"></span></span></h1>
                              </div>
                      
-                             <div class="profile">
+                             <div class="profile zhd-box">
                                     <button class="btn btn-sky profile-btn invert">
                                     المصمم
                                     </button>

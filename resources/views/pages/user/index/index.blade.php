@@ -181,7 +181,7 @@
                                     Out</button>
 
                             </form>
-                            <span>
+                            <span class="social-icons">
 
                                 <a href="#"><img src="{{ asset('user/assets/icons/twitter.svg') }}" alt="twitter"></a>
                                 <a href="#"><img src="{{ asset('user/assets/icons/instagram.svg') }}"
@@ -194,7 +194,7 @@
                         دخول</a>
                     <a href="#register" class="ms-auto register-icon border-bottom" data-bs-toggle="modal"
                         data-bs-target="#registerModal">التسجيل</a>
-                    <span>
+                    <span class="social-icons">
                         <a href="#"><img src="{{ asset('user/assets/icons/twitter.svg') }}" alt="twitter"></a>
                         <a href="#"><img src="{{ asset('user/assets/icons/instagram.svg') }}" alt="instagram"></a>
                     </span>
@@ -748,7 +748,7 @@
                                     </div>
                                     @endif
                                 </div>
-                                <div class="row pt-5 mt-5 align-items-end" dir="rtl">
+                                <div class="row pt-5 mt-5 align-items-end p-t-70" dir="rtl">
                                     <div class="col-md-9 col-lg-7 res-width-64">
                                         <div class="about-content" id="about-us" data-aos="fade-up">
                                             <!-- <span class="outline dot right-center">+3D</span> -->
@@ -815,7 +815,7 @@
                     </div>
         </section>
 
-        <section class="request section" id="services-section">
+        <section class="request section p-t-70" id="services-section">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -1505,7 +1505,7 @@
                                                                 Out</button>
 
                                                         </form>
-                                                        <span>
+                                                        <span class="social-icons">
 
                                                             <a href="#"><img
                                                                     src="{{ asset('user/assets/icons/twitter.svg') }}"
@@ -1521,7 +1521,7 @@
                                                     data-bs-target="#loginModal">تسجيل دخول</a>
                                                 <a href="#register" class="ms-auto register-icon border-bottom" data-bs-toggle="modal"
                                                     data-bs-target="#registerModal">التسجيل</a>
-                                                <span>
+                                                <span class="social-icons">
                                                     <a href="#"><img src="{{ asset('user/assets/icons/twitter.svg') }}"
                                                             alt="twitter"></a>
                                                     <a href="#"><img
@@ -1746,7 +1746,7 @@
 
                                         <div class="form form-clean">
                                             <div class="row zhd-form-clean">
-                                                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mt-4">
+                                                <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4 mt-4 acf">
                                                     <label class="form-label dot">اختيار اللون</label>
 
                                                     <div class="color-circle-main">
@@ -1780,7 +1780,7 @@
 
                                             <div class="row circle-bottom justify-content-center">
                                                 
-                                                <div class="col-md-4 mt-5">
+                                                <div class="col-md-6 col-lg-4 mt-5 ad">
                                                     <label class="form-label dot">شكل الطباعة</label>
                                                     <select class="form-select gender" required name="gender"
                                                         aria-label="Default select example">
@@ -1788,7 +1788,7 @@
                                                         <option>الاشكال هنا</option>
                                                     </select>
                                                 </div>
-                                                <div class="col-md-4 mt-5">
+                                                <div class="col-md-6 col-lg-4 mt-5 ad">
                                                     <label class="form-label dot">تقنية الطباعة</label>
                                                     <select class="form-select gender" required name="gender"
                                                         aria-label="Default select example">
@@ -1843,7 +1843,7 @@
                                             <div class="col-md-12">
                                                 <div class="row">
                                                     <div class="col-md-12">
-                                                        <ul class="footer-nav">
+                                                        <ul class="footer-nav zhd-footer">
                                                             <li class="nav-item">
                                                                 <a class="nav-link active" aria-current="page"
                                                                     href="index.html">الرئيسية</a>
@@ -2071,7 +2071,7 @@
                                                                 Out</button>
 
                                                         </form>
-                                                        <span>
+                                                        <span class="social-icons">
 
                                                             <a href="#"><img
                                                                     src="{{ asset('user/assets/icons/twitter.svg') }}"
@@ -2087,7 +2087,7 @@
                                                     data-bs-target="#loginModal">تسجيل دخول</a>
                                                 <a href="#register" class="ms-auto register-icon" data-bs-toggle="modal"
                                                     data-bs-target="#registerModal">التسجيل</a>
-                                                <span>
+                                                <span class="social-icons">
                                                     <a href="#"><img src="{{ asset('user/assets/icons/twitter.svg') }}"
                                                             alt="twitter"></a>
                                                     <a href="#"><img
@@ -2312,7 +2312,7 @@
 
                                         <div class="form form-clean">
                                             <div class="row zhd-form-clean">
-                                                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mt-4">
+                                                <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4 mt-4">
                                                     <label class="form-label dot">اختيار اللون</label>
 
                                                     <div class="color-circle-main">
@@ -2346,7 +2346,7 @@
 
                                             <div class="row circle-bottom justify-content-center">
                                                 
-                                                <div class="col-md-4 mt-5">
+                                                <div class="col-md-12 col-lg-4 mt-5">
                                                     <label class="form-label dot">شكل الطباعة</label>
                                                     <select class="form-select gender" required name="gender"
                                                         aria-label="Default select example">
@@ -2354,7 +2354,7 @@
                                                         <option>الاشكال هنا</option>
                                                     </select>
                                                 </div>
-                                                <div class="col-md-4 mt-5">
+                                                <div class="col-md-12 col-lg-4 mt-5">
                                                     <label class="form-label dot">تقنية الطباعة</label>
                                                     <select class="form-select gender" required name="gender"
                                                         aria-label="Default select example">
@@ -2411,7 +2411,7 @@
                                             <div class="col-md-12">
                                                 <div class="row">
                                                     <div class="col-md-12">
-                                                        <ul class="footer-nav">
+                                                        <ul class="footer-nav zhd-footer">
                                                             <li class="nav-item">
                                                                 <a class="nav-link active" aria-current="page"
                                                                     href="index.html">الرئيسية</a>
@@ -2730,7 +2730,7 @@
                                         </div>
                                         <div class="row align-items-end py-4 conditional-blur justify-content-between">
 
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                            <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3">
                                                 <label class="form-label">اختيار اللون</label>
                                                 <div class="color-circle-main">
                                                     <div class="blue-text">
@@ -3000,7 +3000,7 @@
                                         </div>
                                         <div class="row align-items-end py-4 conditional-blur justify-content-between mob-margin">
 
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                            <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3">
                                                 <label class="form-label">اختيار اللون</label>
                                                 <div class="color-circle-main">
                                                     <div class="blue-text">
@@ -3260,7 +3260,7 @@
                                         </div>
                                         <div class="row align-items-end p-xs-0  conditional-blur">
 
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mob-margin">
+                                            <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3 mob-margin">
                                                 <label class="form-label">اختيار اللون</label>
                                                 <div class="color-circle-main">
                                                     <div class="blue-text">
@@ -3599,7 +3599,7 @@
                                         </div>
                                         <div class="row align-items-end p-xs-0  conditional-blur mob-margin">
 
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                            <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3">
                                                 <label class="form-label">اختيار اللون</label>
                                                 <div class="color-circle-main">
 
@@ -3959,7 +3959,7 @@
                                         </div>
                                         <div class="row align-items-end p-xs-0  conditional-blur mob-margin">
 
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                            <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3">
                                                 <label class="form-label">اختيار اللون</label>
                                                 <div class="color-circle-main">
                                                     <div class="blue-text">
@@ -4223,7 +4223,7 @@
                            </div> -->
                                         <div class="row align-items-end p-xs-0  conditional-blur mob-margin">
 
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                            <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3">
                                                 <label class="form-label">اختيار اللون</label>
                                                 <div class="color-circle-main">
 
@@ -4495,7 +4495,7 @@
                            </div> -->
                                         <div class="row align-items-end p-xs-0  conditional-blur mob-margin">
 
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                            <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3">
                                                 <label class="form-label dot">اختيار اللون</label>
                                                 <div class="color-circle-main">
                                                     <div class="blue-text">
@@ -4755,7 +4755,7 @@
                                         </div>
                                         <div class="row align-items-end p-xs-0  conditional-blur mob-margin">
 
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                            <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3">
                                                 <label class="form-label dot">اختيار اللون</label>
                                                 <div class="color-circle-main">
                                                     <div class="blue-text">
@@ -5055,7 +5055,7 @@
                                                             Out</button>
 
                                                     </form>
-                                                    <span>
+                                                    <span class="social-icons">
 
                                                         <a href="#"><img
                                                                 src="{{ asset('user/assets/icons/twitter.svg') }}"
@@ -5071,7 +5071,7 @@
                                                 data-bs-target="#loginModal">تسجيل دخول</a>
                                             <a href="#register" class="ms-auto register-icon border-bottom" data-bs-toggle="modal"
                                                 data-bs-target="#registerModal">التسجيل</a>
-                                            <span>
+                                            <span class="social-icons">
                                                 <a href="#"><img src="{{ asset('user/assets/icons/twitter.svg') }}"
                                                         alt="twitter"></a>
                                                 <a href="#"><img src="{{ asset('user/assets/icons/instagram.svg') }}"
@@ -5231,13 +5231,13 @@
                                                     <div class="search-form">
                                                         <form action="#" method="">
                                                             <div class="row">
-                                                                <div class="col-md-3 col-lg-2">
+                                                                <div class="col-6 col-md-3 col-lg-2 mob-center">
                                                                     <div class="sort-btn">
                                                                         <button class="btn"> الترتيب حسب <i
                                                                                 class="fa-solid fa-arrow-down"></i></button>
                                                                     </div>
                                                                 </div>
-                                                                <div class="col-md-3 col-lg-2">
+                                                                <div class="col-6 col-md-3 col-lg-2 mob-center">
 
                                                                     <div class="sort-btn">
                                                                         <button class="btn"> تقنية الطباعة <i
@@ -5798,7 +5798,7 @@
                                                 <div class="col-md-12">
                                                     <div class="row">
                                                         <div class="col-md-12">
-                                                            <ul class="footer-nav">
+                                                            <ul class="footer-nav zhd-footer">
                                                                 <li class="nav-item">
                                                                     <a class="nav-link active" aria-current="page"
                                                                         href="index.html">الرئيسية</a>
@@ -5833,7 +5833,7 @@
                                         <div class="container-fluid">
                                             <footer>
                                                 <div class="row">
-                                                    <div class="col-md-4 col-xl-4">
+                                                    <div class="col-md-5 col-xl-4">
                                                         <div class="right">
                                                             <p>تصميم وتطوير شركة تيلرز</p>
                                                             <a href="https://tellers.sa/"><img
@@ -5844,7 +5844,7 @@
                                                     <div class="col-md-5 col-xl-4">
                                                         <p>جميع الحقوق محفوظة لـ &nbsp;+3D&nbsp; لعام 2022</p>
                                                     </div>
-                                                    <div class="col-md-3 col-xl-4">
+                                                    <div class="col-md-2 col-xl-4">
                                                         <div class="social">
                                                             <a href="#"><img
                                                                     src="{{ asset('user/assets/icons/twitter-white.svg') }}"
@@ -6019,7 +6019,7 @@
                                                                 Out</button>
 
                                                         </form>
-                                                        <span>
+                                                        <span class="social-icons">
 
                                                             <a href="#"><img
                                                                     src="{{ asset('user/assets/icons/twitter.svg') }}"
@@ -6035,7 +6035,7 @@
                                                     data-bs-target="#loginModal">تسجيل دخول</a>
                                                 <a href="#register" class="ms-auto register-icon border-bottom" data-bs-toggle="modal"
                                                     data-bs-target="#registerModal">التسجيل</a>
-                                                <span>
+                                                <span class="social-icons">
                                                     <a href="#"><img src="{{ asset('user/assets/icons/twitter.svg') }}"
                                                             alt="twitter"></a>
                                                     <a href="#"><img
@@ -6224,7 +6224,7 @@
 
                                                                     </div>
                                                                 </div>
-                                                                <div class="col-md-6 col-lg-6">
+                                                                <div class="col-md-6 col-lg-7 col-xl-6">
 
                                                                     <div class="search-input">
                                                                         <input type="text" class="form-control"
@@ -6253,7 +6253,7 @@
                                             <div class="design-card-main">
 
                                                 <div class="row padd-30">
-                                                    <div class="col-md-4">
+                                                    <div class="col-md-6 col-lg-4">
                                                         <div class="design-card-inner">
 
                                                             <a href="javascript:void(0);"
@@ -6286,7 +6286,7 @@
                                                         </div>
 
                                                     </div>
-                                                    <div class="col-md-4">
+                                                    <div class="col-md-6 col-lg-4">
                                                         <div class="design-card-inner">
 
                                                             <div class="design-card-body">
@@ -6314,7 +6314,7 @@
                                                         </div>
 
                                                     </div>
-                                                    <div class="col-md-4">
+                                                    <div class="col-md-6 col-lg-4">
                                                         <div class="design-card-inner">
 
                                                             <div class="design-card-body">
@@ -6342,10 +6342,8 @@
                                                         </div>
 
                                                     </div>
-                                                </div>
 
-                                                <div class="row padd-30">
-                                                    <div class="col-md-4">
+                                                    <div class="col-md-6 col-lg-4">
                                                         <div class="design-card-inner">
 
                                                             <div class="design-card-body">
@@ -6373,7 +6371,7 @@
                                                         </div>
 
                                                     </div>
-                                                    <div class="col-md-4">
+                                                    <div class="col-md-6 col-lg-4">
                                                         <div class="design-card-inner">
 
                                                             <a href="javascript:void(0);"
@@ -6406,7 +6404,7 @@
                                                         </div>
 
                                                     </div>
-                                                    <div class="col-md-4">
+                                                    <div class="col-md-6 col-lg-4">
                                                         <div class="design-card-inner">
 
                                                             <div class="design-card-body">
@@ -6481,7 +6479,7 @@
                                         <div class="container-fluid">
                                             <footer>
                                                 <div class="row">
-                                                    <div class="col-md-4 col-xl-4">
+                                                    <div class="col-md-5 col-xl-4">
                                                         <div class="right">
                                                             <p>تصميم وتطوير شركة تيلرز</p>
                                                             <a href="https://tellers.sa/"><img
@@ -6492,7 +6490,7 @@
                                                     <div class="col-md-5 col-xl-4">
                                                         <p>جميع الحقوق محفوظة لـ &nbsp;+3D&nbsp; لعام 2022</p>
                                                     </div>
-                                                    <div class="col-md-3 col-xl-4">
+                                                    <div class="col-md-2 col-xl-4">
                                                         <div class="social">
                                                             <a href="#"><img
                                                                     src="{{ asset('user/assets/icons/twitter.png') }}"
@@ -6579,7 +6577,7 @@
 
                                                     <div class="row padd-30">
 
-                                                        <div class="col-md-4">
+                                                        <div class="col-md-6 col-lg-4">
                                                             <div class="design-card-inner">
 
                                                                 <div class="design-card-body">
@@ -6610,7 +6608,7 @@
                                                             </div>
 
                                                         </div>
-                                                        <div class="col-md-4">
+                                                        <div class="col-md-6 col-lg-4">
                                                             <div class="design-card-inner">
 
                                                                 <div class="design-card-body">
@@ -6641,7 +6639,7 @@
                                                             </div>
 
                                                         </div>
-                                                        <div class="col-md-4">
+                                                        <div class="col-md-6 col-lg-4">
                                                             <div class="design-card-inner">
 
                                                                 <div class="design-card-body">
@@ -6672,10 +6670,7 @@
                                                             </div>
 
                                                         </div>
-                                                    </div>
-
-                                                    <div class="row padd-30">
-                                                        <div class="col-md-4">
+                                                        <div class="col-md-6 col-lg-4">
                                                             <div class="design-card-inner">
 
                                                                 <div class="design-card-body">
@@ -6706,7 +6701,7 @@
                                                             </div>
 
                                                         </div>
-                                                        <div class="col-md-4">
+                                                        <div class="col-md-6 col-lg-4">
                                                             <div class="design-card-inner">
 
                                                                 <div class="design-card-body">
@@ -6737,7 +6732,7 @@
                                                             </div>
 
                                                         </div>
-                                                        <div class="col-md-4">
+                                                        <div class="col-md-6 col-lg-4">
                                                             <div class="design-card-inner">
 
                                                                 <div class="design-card-body">
@@ -7263,8 +7258,7 @@
                                                         <div class="col-md-12">
                                                             <div data-id='' class="request-box editProduct">
                                                                 <div class="heading">
-                                                                    <i
-                                                                        class="fa-solid fa-circle-plus heading__plus"></i>
+                                                                    <i class="fa-solid fa-circle-plus heading__plus"></i>
                                                                     <h5>رقم الطلب:</h5>
                                                                     <span>304</span>
                                                                 </div>
@@ -7445,7 +7439,7 @@
                                         <div class="">
                                             <div class="row final two justify-content-center text-center">
                                                 <div class="col-auto">
-                                                    <div class="dateTime small">{{@$public->created_at}}</div>
+                                                    <div class="dateTime small padd-t-40"> {{@$public->created_at}} </div>
                                                     <img src="{{asset('user/assets/icons/green-circle.svg')}}"
                                                         alt="green-circle">
                                                     <div>
@@ -7485,7 +7479,7 @@
                                         <h1 class="title text-center no-border conditional-blur">معلومات الطلب</h1>
 
                                         <div class="row  p-xs-0 align-items-end  conditional-blur">
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                            <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3">
                                                 <label class="form-label">اختيار اللون</label>
                                                 <div class="color-circle-main">
                                                 <div class="blue-text">
@@ -7818,7 +7812,7 @@
                                         <div class="">
                                             <div class="row final two justify-content-center text-center">
                                                 <div class="col-auto">
-                                                    <div class="dateTime small">{{@$public->created_at}}</div>
+                                                    <div class="dateTime small padd-t-40"></div>
                                                     <img src="{{asset('user/assets/icons/green-circle.svg')}}"
                                                         alt="green-circle">
                                                     <div>
@@ -7858,7 +7852,7 @@
                                         <h1 class="title text-center no-border conditional-blur">معلومات الطلب</h1>
 
                                         <div class="row align-items-end  p-xs-0  conditional-blur">
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                            <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3">
                                                 <label class="form-label dot">اختيار اللون</label>
                                                 <div class="color-circle-main">
                                                 <div class="blue-text">
@@ -8165,7 +8159,7 @@
                                         <h1 class="title text-center no-border conditional-blur">معلومات الطلب</h1>
 
                                         <div class="row  p-xs-0  conditional-blur">
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                            <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3">
                                                 <label class="form-label">اختيار اللون</label>
                                                 <div class="color-circle-main">
                                                 <div class="blue-text">
@@ -8475,7 +8469,7 @@
                                         </div>
                                         <div class="row  p-xs-0  conditional-blur">
 
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                            <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3">
                                                 <label class="form-label dot">اختيار اللون</label>
                                                 <div class="color-circle-main">
 
@@ -8787,7 +8781,7 @@
                                         <div class="">
                                             <div class="row final two justify-content-center text-center">
                                                 <div class="col-auto">
-                                                    <div class="dateTime small">{{@$public->created_at}}</div>
+                                                    <div class="dateTime small padd-t-40">{{@$public->created_at}}</div>
                                                     <img src="{{asset('user/assets/icons/green-circle.svg')}}"
                                                         alt="green-circle">
                                                     <div>
@@ -8827,7 +8821,7 @@
                                         <h1 class="title text-center no-border conditional-blur">معلومات الطلب</h1>
 
                                         <div class="row  p-xs-0  conditional-blur">
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                            <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3">
                                                 <label class="form-label mt-4">اختيار اللون</label>
                                                 <div class="color-circle-main">
                                                 <div class="blue-text">
@@ -9067,7 +9061,7 @@
                                         <h1 class="title text-center no-border conditional-blur">معلومات الطلب</h1>
 
                                         <div class="row  p-xs-0  conditional-blur">
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                            <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3">
                                                 <label class="form-label dot">اختيار اللون</label>
                                                 <div class="color-circle-main">
                                                 <div class="blue-text">
@@ -9356,7 +9350,7 @@
                                         <h1 class="title text-center no-border conditional-blur">معلومات الطلب</h1>
 
                                         <div class="row  p-xs-0  conditional-blur">
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                            <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3">
                                                 <label class="form-label dot">اختيار اللون</label>
                                                 <div class="color-circle-main">
                                                 <div class="blue-text">

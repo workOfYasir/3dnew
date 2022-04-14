@@ -2,7 +2,7 @@
 	<div class="container">
         <div class="row justify-content-center">
             <div class="col-md-12">
-                <div class="card">
+                <div class="card chat-card mb-3">
                     <div class="card-header">
                         @if(isset($sender)) {{$sender->name}}   @endif
     
@@ -39,15 +39,24 @@
                     <div class="card-footer">
                         <form wire:submit.prevent="SendMessage">
                             <div class="row">
-                                <div class="col-md-8">
-                                    <input wire:model="message" style="pointer-events: unset" class="form-control input shadow-none w-100 d-inline-block" id="message" placeholder="Type a message" >
+                                <div class="col-md-9">
+                                    <input wire:model="message" style="pointer-events: unset" class="form-control input shadow-none w-100 d-inline-block" id="message" placeholder="اكتب رسالة
+" >
                                 </div>
-                                <div class="col-md-4">
-                                    <button type="submit" class="btn btn-primary d-inline-block w-100"><i class="far fa-paper-plane"></i> Send</button>
+                             
+                                <div class="col-md-3">
+                                    <!-- <button type="submit" class="btn btn-primary d-inline-block w-100"><i class="far fa-paper-plane"></i> Send</button> -->
+                                    <button type="submit" class="btn btn-form btn-primary chat-submit-btn"><i class="fa fa-paper-plane"></i> يرسل</button>
                                 </div>
                             </div>
                             <div class="col-md-12">
-                                <input type="file" wire:model="photo" id="photo-{{ $i }}">
+                                <!-- <input type="file" wire:model="photo" id="photo-{{ $i }}"> -->
+                                <button type="button" class="btn btn-sky btn-primary chat-img-upload mt-4">
+                                    دقت قلب          
+                                    <img src="{{ asset('/user/assets/icons/arrow-right.svg')}}" alt="arrow-right">
+                                    <input type="file" wire:model="photo" id="photo-{{ $i }}">
+                                </button>
+                                
                             </div>
                         </form>
 
