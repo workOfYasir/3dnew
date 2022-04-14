@@ -45,7 +45,7 @@ class MedicalController extends Controller
             'dr_email' => $request->dr_email,
             'dr_spec' => $request->dr_spec,
             'dr_name' => $request->dr_name,
-            'status' => 1,
+            'status' => 0,
         ]);
         $users = User::find(Auth::id());
         $users->update([
@@ -204,13 +204,21 @@ class MedicalController extends Controller
             $order->update([
                 'status' => $order->status,
             ]);
+            $details = [
+                'title' =>  $user->name,
+                'subject'=>$order->id. ' الدفع',
+                'id'=>$request->id,
+                'body' => $order->status,
+            ];
+        }else{
+            $details = [
+                'title' =>  $user->name,
+                'subject'=>$order->id. '  رفع الطلب',
+                'id'=>$request->id,
+                'body' => $order->status,
+            ];
         }
-        $details = [
-            'title' =>  $user->name,
-            'subject'=> '',
-            'id'=>$request->id,
-            'body' => $order->status,
-        ];
+       
 
         \Mail::to($user->email)->send(new \App\Mail\statuschanged($details));
         return redirect()->route('home');

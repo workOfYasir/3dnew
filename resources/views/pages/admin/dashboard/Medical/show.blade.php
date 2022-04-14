@@ -35,7 +35,6 @@
                                                             name="id"
                                                             value="{{@$order->id}}"
                                                         hidden>
-                                                   
                                                         <select name="status"
                                                             id="status"
                                                             class="form-control">
