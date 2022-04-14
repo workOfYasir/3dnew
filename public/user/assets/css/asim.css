@@ -580,10 +580,9 @@
     right: 140px;
 }
 
-/* #productdesignModal .modal-header .circle-plus-icon, #productaddModal .modal-header .circle-plus-icon {
-    flex-direction: row !important;
-    margin-top: 0px !important;
-} */
+#user3RequestModal .almuntjat-form-error-2{
+ margin-top: 50px;   
+}
  /* /////////////////////////////////////// user7RequestModal hide d-none class default /////////////////////////////////////// */
        #user7RequestModal .modal-body .payment.credit-payment.d-block{
         display: block !important;
@@ -613,13 +612,14 @@
     /* //////////////////////////////////// responsive start here ////////////////////////////////////////////////*/
     
     @media (min-width: 360px) and (max-width: 767px) {
-.form.p-l-0{
-    padding-left: 0px !important;
-}
-.form .padd-l-0{
-    padding-left: 0px !important;
+        form.p-l-0{
+            padding-left: 0px !important;
+        }
+        form .padd-l-0{
+            padding-left: 0px !important;
+            padding-right: 20px;
 
-}
+        }
         .register-pdf {
             position: absolute;
             right: 35px;
