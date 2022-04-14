@@ -142,7 +142,7 @@
                                     </div>
                                 </div>
                               
-                                <div class="invoice-field-12  d-flex">
+                                <div class=" d-flex">
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">صورة
                                         </label>
@@ -154,14 +154,14 @@
                                             text-muted"></small>
                                     </div>
                                 </div>
-                                <div class="invoice-field-12 col-md-6">
+                                <div class=" col-md-6">
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">عنوان
                                         </label>
-                                        <input type="text" class="form-control
+                                        <input type="text" class="form-control zhd-addres
                                           " required name="address"
                                             id="" aria-describedby=""
-                                            placeholder="">
+                                            placeholder="" >
                                         <small id="" class="form-text
                                             text-muted"></small>
                                     </div>
