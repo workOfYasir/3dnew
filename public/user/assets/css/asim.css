@@ -597,9 +597,10 @@
 }
 
 
-.view-order-heading{
+/* .view-order-heading{
     margin-right: 150px;
-}
+} 
+*/
 
 
 
@@ -607,12 +608,13 @@
     
     @media (min-width: 360px) and (max-width: 767px) {
 
-        .view-order-heading{
+        /* .view-order-heading{
             margin-right: 0px;
         }
+        
         #view-order .view-order-heading, #public-order .view-order-heading{
             margin-right: 0px;
-        }
+        } */
         form.p-l-0{
             padding-left: 0px !important;
         }

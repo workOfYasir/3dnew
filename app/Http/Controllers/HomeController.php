@@ -59,8 +59,8 @@ class HomeController extends Controller
             $public = PublicService::where('user_id',auth()->user()->id)->orderBy('id','desc')->first();
             $side = SideLogo::first();
             $logos = Logo::first();
-            $orders = Medical::where('user_id', Auth::id())->orderBy('id','desc')->get();
-            $publics = PublicService::where('user_id', Auth::id())->orderBy('id','desc')->get();
+            $orders = Medical::where('user_id', Auth::id())->orderBy('id','desc')->with('InvoicePDF')->with('PerposalPDF')->get();
+            $publics = PublicService::where('user_id', Auth::id())->orderBy('id','desc')->with('InvoicePDF')->with('PerposalPDF')->get();
             $title = Title::first();
             $map = Mapimage::first();
             $links = Youtubeurl::first();

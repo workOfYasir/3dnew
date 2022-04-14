@@ -60,7 +60,7 @@
                                             </form>
                                         </div>
                                         <div class="tab-pane fade designerModel" id="designerloginModal" role="tabpanel" aria-labelledby="profile-tab">
-                                            <form class="row gy-4 gx-5" method="post">
+                                            <form action="{{route('login')}}" class="row gy-4 gx-5" method="post">
                                                 @csrf
                                                 <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
                                                     <label class="form-label dot">الايميل</label>

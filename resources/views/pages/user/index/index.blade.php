@@ -288,7 +288,7 @@
                             <div class="mobile-profile">
 
 
-                                <a href="#" class="m-0" data-bs-toggle="modal" data-bs-target="#memberModal"><img
+                                <a href="#" class="m-0"><img
                                         src="{{(@Auth::user()->profile == null) ?  asset('user/assets/icons/avatar.svg'): asset(Auth::user()->profile) }}"
                                         class="profile-img" alt="avatar"></a>
                                 @if(Auth::user())
@@ -1626,8 +1626,7 @@
                                                         <div class="mobile-profile">
 
 
-                                                            <a href="#" class="m-0" data-bs-toggle="modal"
-                                                                data-bs-target="#memberModal"><img
+                                                            <a href="#" class="m-0"><img
                                                                     src="{{(@Auth::user()->profile == null) ?  asset('user/assets/icons/avatar.svg'): asset(Auth::user()->profile) }}"
                                                                     class="profile-img" alt="avatar"></a>
                                                             @if(Auth::user())
@@ -2192,8 +2191,7 @@
                                                         <div class="mobile-profile">
 
 
-                                                            <a href="#" class="m-0" data-bs-toggle="modal"
-                                                                data-bs-target="#memberModal"><img
+                                                            <a href="#" class="m-0"><img
                                                                     src="{{(@Auth::user()->profile == null) ?  asset('user/assets/icons/avatar.svg'): asset(Auth::user()->profile) }}"
                                                                     class="profile-img" alt="avatar"></a>
                                                             @if(Auth::user())
@@ -5174,8 +5172,7 @@
                                                     <div class="mobile-profile">
 
 
-                                                        <a href="#" class="m-0" data-bs-toggle="modal"
-                                                            data-bs-target="#memberModal"><img
+                                                        <a href="#" class="m-0"><img
                                                                 src="{{(@Auth::user()->profile == null) ?  asset('user/assets/icons/avatar.svg'): asset(Auth::user()->profile) }}"
                                                                 class="profile-img" alt="avatar"></a>
                                                         @if(Auth::user())
@@ -6140,8 +6137,7 @@
                                                         <div class="mobile-profile">
 
 
-                                                            <a href="#" class="m-0" data-bs-toggle="modal"
-                                                                data-bs-target="#memberModal"><img
+                                                            <a href="#" class="m-0"><img
                                                                     src="{{(@Auth::user()->profile == null) ?  asset('user/assets/icons/avatar.svg'): asset(Auth::user()->profile) }}"
                                                                     class="profile-img" alt="avatar"></a>
                                                             @if(Auth::user())
