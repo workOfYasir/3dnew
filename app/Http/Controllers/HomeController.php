@@ -41,8 +41,11 @@ class HomeController extends Controller
     {
         if (auth()->user()->role == 'admin') {
             $title = Title::first();
-
-            return view('pages.admin.dashboard.dashboard', compact('title'));
+            $medical = Medical::orderBy('id','desc')->paginate(5);
+           
+            $public = PublicService::orderBy('id','desc')->paginate(5);
+            //  dd($public);
+            return view('pages.admin.dashboard.dashboard', compact('title','medical','public'));
         } else {
             // $user = User::where('id',Auth::user()->id)->with('invoices')->first();
             $user =  User::where('id',Auth::user()->id)->with(['invoices' => function ($query) { 
