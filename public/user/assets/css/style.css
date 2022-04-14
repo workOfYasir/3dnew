@@ -1155,14 +1155,6 @@ textarea {
     margin-bottom: 15px;
 }
 
-/* #healthServiesModal .profile img {
-    margin-bottom: 15px;
-} */
-
-#healthServiesModal .modal-header {
-    align-items: end;
-}
-
 #healthServiesModal .pointer.head p {
     left: -20px;
     bottom: 8px;

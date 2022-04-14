@@ -2,6 +2,31 @@
 
 @media only screen and (min-width: 360px) and (max-width: 767px) {
 /* asim */
+.view-order-check-main p{
+    font-size: 14px;
+}
+.view-order-check-main .line-img{
+    display: none;
+}
+.message-box {
+    height: 50vh !important;
+}
+.chat-container{
+    width: 100%;
+    padding: 0px;
+}
+#view-order .modal-body, #public-order .modal-body{
+    padding: 2rem 1rem !important;
+}
+#view-order .card-footer .btn-primary, #public-order .card-footer .btn-primary {
+    width: 100%;
+}
+.m-r-30{
+    margin-right: 0px;
+}
+.view-order-heading{
+    margin-right: 0px !important;
+}
 .profile-img {
     margin-left: 50px !important;
 }
@@ -652,7 +677,7 @@
     }
 
     .notification-box {
-        width: 100%;
+        width: 100% !important;
         margin-right: 0;
     }
 
@@ -1143,6 +1168,7 @@
         bottom: 169px;
         right: 213px !important;
     }
+  
 
 }
 
@@ -1162,7 +1188,30 @@
 
 /* Tabs */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+
     /* asim */
+    #view-order .view-order-heading, #public-order .view-order-heading {
+        margin-right: 130px !important;
+    }
+    #view-order .modal-header {
+        padding: 1rem 2rem;
+    }
+    #view-order .modal-body, #public-order .modal-body {
+        padding: 0 2rem !important;
+    }
+    .view-order-check-main .line-img-tab{
+        display: none;
+    }
+    .last-line-img{
+        margin: auto 20px !important;
+    }
+    .m-r-30{
+        margin-right: 0px;
+    }
+    .view-order-heading{
+        margin-right: 0px !important;
+    }
+    
     .dot.right-center{
         right: 61px;
     }
