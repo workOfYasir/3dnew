@@ -31,4 +31,12 @@ class Medical extends Model
     {
         return $this->belongsTo(User::class);
     }
+    public function InvoicePDF()
+    {
+        return $this->hasOne(Invoice::class,'order_id','id');
+    }
+    public function PerposalPDF()
+    {
+        return $this->hasOne(Perposal::class,'order_id','id');
+    }
 }
