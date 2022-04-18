@@ -265,6 +265,8 @@
     .switch .form-check-input {
         width: 40px;
         height: 23px;
+    }
+    .switch .form-check-input:checked{
         background-color: #02BB84;
         border-color: #02BB84;
     }

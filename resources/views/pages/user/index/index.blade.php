@@ -1046,12 +1046,12 @@
                                 الحروف التى يولدها التطبيق.
                             </p>
                             <div class="mujtmah-box-btn-wrapper wrapper al-center mb-3">
-                                <button data-bs-toggle="modal" data-bs-target="#financialOperations2"
+                                <button 
                                     class="m-btn mujtmah-box-btn ml-3">
                                     <img src="{{ asset('user/assets/images/video.png') }}"
                                         class="mujtmah-box-btn__img2">فيديو تعريفي
                                 </button>
-                                <button data-bs-toggle="modal" data-bs-target="#financialOperations"
+                                <button 
                                     class="m-btn mujtmah-box-btn btn-white-1">
                                     أطلب الان
                                     <img src="{{ asset('user/assets/images/arrow-8.png') }}"
@@ -7200,7 +7200,10 @@
                                 <div class="wrapper al-center ahs-form-box1">
                                     <span class="ahs-form-head1"> الرصيد الحالي </span>
                                     <span class="ahs-form-head2"> 750 ريال </span>
-                                    <img src="{{asset('user/assets/images/ar.png')}}" alt="" class="ahs-form-img1">
+                                    <button data-bs-toggle="modal" data-bs-target="#financialOperations2"
+                                        class="m-btn mujtmah-box-btn ml-3 d-contents">
+                                        <img src="{{asset('user/assets/images/ar.png')}}" alt="" class="ahs-form-img1">
+                                    </button>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-12 wrapper jst-center">
