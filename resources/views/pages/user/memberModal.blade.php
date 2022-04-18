@@ -105,7 +105,10 @@
                             <div class="wrapper al-center ahs-form-box1">
                                 <span class="ahs-form-head1"> الرصيد الحالي </span>
                                 <span class="ahs-form-head2"> 750 ريال </span>
-                                <img src="{{ asset('user/assets/images/ar.png') }}" alt="" class="ahs-form-img1">
+                                <button data-bs-toggle="modal" data-bs-target="#financialOperations"
+                                    class="m-btn mujtmah-box-btn btn-white-1 d-contents">
+                                    <img src="{{ asset('user/assets/images/ar.png') }}" alt="" class="ahs-form-img1">
+                                </button>
                             </div>
                             <div class="ff">
                                 <div class="star-reating star-s-30">
