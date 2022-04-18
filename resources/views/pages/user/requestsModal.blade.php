@@ -41,7 +41,7 @@
                                 <h1 class="modal-title right centr-main-title"><span class="btm-line d-flex">طلباتي<span class="inner-line"></span></span></h1>
                             </div>
                     
-                            <div class="profile">
+                            <div class="profile zhd-box">
                                    <button class="btn btn-sky profile-btn invert">
                                    المصمم
                                    </button>
