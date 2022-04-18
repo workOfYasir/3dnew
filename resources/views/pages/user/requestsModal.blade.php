@@ -6,7 +6,9 @@
                 <div class="row">
                     <div class="col-md-12 requests-position">
                         <div class="modal-header border-0">
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <div class="zhd-center-close">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
                             <div class="dropdown register-pdf d-none">
                                <button class="btn bg-light dropdown" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                    <i class="fas fa-file-pdf" style="color:#1F5098; font-size:35px"></i>
