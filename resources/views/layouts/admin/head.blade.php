@@ -47,7 +47,6 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">
     <!-- Plugins css Ends-->
     @livewireStyles
- 
 
     <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css">
    

@@ -54,6 +54,13 @@ class PerposalController extends Controller
             'price_model' => $request->price_model,
             'price_design' => $request->price_design,
             'qty_model' => $request->qty_model,
+            'phone'=>$request->phone,
+            'status'=>$request->status,
+            'assigned'=>$request->assigned,
+            'city'=>$request->city,
+            'state'=>$request->state,
+            'country'=>$request->country,
+            'zip_code'=>$request->zip_code,
             'order_id' => $request->order_id,
             'manufacturing' => $request->manufacturing,
             'concept_design' => $request->concept_design,
@@ -101,7 +108,7 @@ class PerposalController extends Controller
     {
         $invoice = Perposal::find($id);
         $user = User::find($invoice->user_id);
-        return view('pages.admin.invoice', compact('invoice', 'user'));
+        return view('pages.admin.invoiceView', compact('invoice', 'user'));
     }
 
     /**

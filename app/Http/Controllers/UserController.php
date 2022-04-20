@@ -6,6 +6,7 @@ use App\Models\User;
 use App\Models\UserDetail;
 use Illuminate\Http\Request;
 use App\Models\TempUpdateProfile;
+use App\Models\Medical;
 
 class UserController extends Controller
 {
@@ -79,5 +80,11 @@ class UserController extends Controller
     {
         $users = TempUpdateProfile::with('userDetail')->get();
         return view('pages.admin.dashboard.ProfileUpdate.index', compact('users'));
+    }
+    public function userByOrder($id)
+    {
+        $user = Medical::with('user')->find($id);
+
+        return $user->user;
     }
 }
