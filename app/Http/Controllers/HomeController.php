@@ -9,15 +9,19 @@ use App\Models\Title;
 use App\Models\AboutUs;
 use App\Models\Counter;
 use App\Models\Medical;
+use App\Mail\UpdateUser;
 use App\Models\Mapimage;
 use App\Models\SideLogo;
 use App\Models\ContactUs;
+use App\Models\UserDetail;
 use App\Models\Youtubeurl;
 use App\Models\ImageSlider;
 use Illuminate\Http\Request;
 use App\Models\PublicService;
+use App\Models\TempUpdateProfile;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
 
 class HomeController extends Controller
@@ -181,17 +185,7 @@ class HomeController extends Controller
     }
     public function edituser(Request $request, $id)
     {
-        // if ($request->hasFile('profile')) {
-        //     if (isset($request->profile) && !empty($request->profile)) {
-        //         if (!empty(auth()->user()->profile)) {
-        //             Storage::disk('public')->delete(auth()->user()->profile);
-        //         }
-        //         $profile  = Storage::disk('public')->put('upload/', $request->profile);
-        //         $filePath = 'public/storage/upload/'.$profile;
-        //     }
-        // } else {
-        //     $profile  = (auth()->user()->profile);
-        // }
+
         $imageName = time() . '.' . $request->profile->extension();
         $request->profile->move(public_path('upload/images'), $imageName);
         $filePath = 'upload/images/' . $imageName;
@@ -204,11 +198,44 @@ class HomeController extends Controller
         ]);
         return redirect()->route('/');
     }
-    public function approval($id)
+   
+    public function updateProfileMail($user_id,$approve)
     {
-        User::find($id)->update([
-            'approve' => 1,
-        ]);
-        return 'approved';
+        if($approve==1){
+            // $user = User::where('id',$user_id)->with('userDetails')->get();
+            $user = TempUpdateProfile::where('user_id',$user_id)->get();
+            UserDetail::updateOrCreate([
+                'user_id'=>$user_id,
+                'printing_technology'=>$user->printing_technology,
+                'software_type'=>$user->software_type
+            ]);
+            //update query
+        }else{
+            $user = User::where('id',$user_id)->with('userDetails')->get();
+            //delete query
+        }
+      
+    }
+    public function profile(Request $request)
+    {
+       dd('ok');
+     $tempProfile = TempUpdateProfile::create([
+        'name' => $request->name,
+        'email' => $request->email,
+        'role' => $request,
+        'user_id'=>$request->id,
+        'printing_technology'=>$request->printing_technology,
+        'software_type'=>$request->software_type,
+    ]);
+    $details = [
+        'name' => $request->name,
+        'email' => $request->email,
+        'role' => $request,
+        'subject'=>'update profile',
+        'user_id'=>$request->id,
+        'printing_technology'=>$request->printing_technology,
+        'software_type'=>$request->software_type,
+    ];
+    // Mail::to('yasirb673@gmail.com')->send(new \App\Mail\UpdateUser($details));
     }
 }

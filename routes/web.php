@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Storage;
 use App\Http\Controllers\ChatController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LogoController;
 use App\Http\Controllers\TechController;
@@ -26,6 +27,8 @@ use App\Http\Controllers\YoutubeurlController;
 use App\Http\Controllers\SocialMediaController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\PublicServiceController;
+use Symfony\Component\HttpKernel\Profiler\Profile;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -73,10 +76,12 @@ Route::group(['prefix' => 'artisan'], function () {
         return 'Storage link successfully';
     });
 });
-
+// Route::post('profile', [HomeController::class, 'profile'])->name('profile');
 Route::get('/', [RegisterController::class, 'homepage'])->name('/');
 Route::post('createDesigner', [RegisterController::class, 'createDesigner'])->name('createDesigner');
 Auth::routes();
+Route::get('updateProfileMail', [HomeController::class, 'updateProfileMail'])->name('updateProfileMail');
+
 Route::get('approval/{id}', [HomeController::class, 'approval'])->name('approval');
 Route::get('logout', [App\Http\Controllers\Auth\LoginController::class, 'logout']);
         Route::resource('invoicess', InvoiceController::class);
@@ -86,14 +91,16 @@ Route::group(['middleware' => 'auth', 'varify','cors'], function () {
     Route::resource('medical', MedicalController::class);
     Route::resource('publics', PublicServiceController::class);
     //Resource Route
+    Route::get('profile',[UserController::class,'profileUpdate'])->name('profileUser');         
+      
     Route::group(['middleware' =>  'role:user'], function () {
         Route::get('/vieworder/{id}', [App\Http\Controllers\HomeController::class, 'vieworder'])->name('vieworder');
         Route::get('/vieworderpublic/{id}', [App\Http\Controllers\HomeController::class, 'vieworderpublic'])->name('vieworderpublic'); 
         Route::get('invoices/{id}', [InvoiceController::class,'show'])->name('invoice');
         Route::get('perposal/{id}', [PerposalController::class,'show'])->name('purposal');    
         Route::get('invoices/pdf/{id}', [InvoiceController::class,'pdfInvoice'])->name('invoice.pdf');
-        Route::get('perposal/pdf/{id}', [PerposalController::class,'pdfProposal'])->name('purposal.pdf');           
-        
+        Route::get('perposal/pdf/{id}', [PerposalController::class,'pdfProposal'])->name('purposal.pdf');  
+       
     });
     Route::group(['middleware' =>  'role:admin'], function () {
         Route::resource('about', AboutUsController::class);
@@ -108,6 +115,12 @@ Route::group(['middleware' => 'auth', 'varify','cors'], function () {
         Route::resource('map', MapimageController::class);
         Route::resource('youtubeurl', YoutubeurlController::class);
         Route::resource('counter', CounterController::class);
+        Route::prefix('user')->name('user.')->group(function (){
+            Route::get('list',[UserController::class,'index'])->name('list');
+            Route::get('approve/{id}',[UserController::class,'approval'])->name('approve');
+            Route::get('profile/list',[UserController::class,'profileList'])->name('profile.list');
+            Route::get('profile/approve/{id}',[UserController::class,'profileApprove'])->name('profile.approve');
+        });
 
     
         Route::get('payment', [MedicalController::class, 'payment'])->name('payment');

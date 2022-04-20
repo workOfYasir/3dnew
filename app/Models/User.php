@@ -66,4 +66,9 @@ class User extends Authenticatable
         return $this->hasOne(Perposal::class);
         
     }
+    public function userDetail(){
+
+        return $this->hasOne(UserDetail::class);
+        
+    }
 }

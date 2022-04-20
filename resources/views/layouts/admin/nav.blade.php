@@ -102,7 +102,7 @@
 
 
                       <li class="nav-item">
-                          <a class="nav-link " href="#" tabindex="-1" aria-disabled="true"><i class="fa fa-user"></i> قائمة المستخدمين </a>
+                          <a class="nav-link "  href="{{ route('user.list') }}" tabindex="-1" aria-disabled="true"><i class="fa fa-user"></i> قائمة المستخدمين </a>
                       </li>
                       <li class="nav-item">
                           <a class="nav-link " href="#" tabindex="-1" aria-disabled="true"><i class="fa fa-users"></i> ائمة المشرفينـ </a>

@@ -164,7 +164,10 @@ class RegisterController extends Controller
             'user_id'=>$user->id,
         ];
         $user->assignRole($roleData);
-        Mail::to($user->email)->send(new \App\Mail\Registration($details));
+        $admins = User::where('role','admin')->get();
+        foreach ($admins as $key => $admin) {
+            \Mail::to($admin->email)->send(new \App\Mail\Registration($details));
+        }
         return $user;
     }
    

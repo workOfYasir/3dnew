@@ -38,6 +38,7 @@
                                             <form action="{{route('login')}}" class="row gy-4 gx-5" method="post">
                                                 @csrf
                                                 <input type="hidden" name="role" value="user">
+                                                <input type="hidden" name="role" value="admin">
                                                 <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
                                                     <label class="form-label dot">الايميل</label>
                                                     <input type="email" name="email" class="form-control email" placeholder="الايميل هنا .." value="">
