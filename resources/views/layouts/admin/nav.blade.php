@@ -108,7 +108,7 @@
                           <a class="nav-link " href="#" tabindex="-1" aria-disabled="true"><i class="fa fa-users"></i> ائمة المشرفينـ </a>
                       </li>
                       <li class="nav-item">
-                          <a class="nav-link " href="#" tabindex="-1" aria-disabled="true"><i class="fa fa-user"></i> الإدارة </a>
+                          <a class="nav-link " href="{{ route('user.profile.approve') }}" tabindex="-1" aria-disabled="true"><i class="fa fa-user"></i> الإدارة </a>
                       </li>
 
                   </ul>
