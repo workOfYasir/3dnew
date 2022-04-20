@@ -1473,6 +1473,15 @@ a:hover {
 .login-form .form-group a{
   color:#148eeb;
 }
+.login-check{
+  display: flex;
+  align-items: baseline;
+  justify-content: right;
+  flex-direction: row-reverse;
+}
+.login-check .link{
+  margin-right: 25px;
+}
 /* end login zahid */
 .zhd-addres{
   height: 50px!important;
