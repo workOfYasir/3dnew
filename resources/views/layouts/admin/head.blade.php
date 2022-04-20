@@ -76,9 +76,23 @@
             margin-right: 290px ;
             margin-left: 0px !important
         }
-
+        @font-face {
+            font-family: JannaRegular;
+            src: url("{{ asset('assets/fonts/JannaLTRegular.ttf') }}");
+        }
+        @font-face {
+            font-family: JannaBold;
+            src: url("{{ asset('assets/fonts/NotoSans-Bold.ttf') }}");
+        }
+        
+        body {
+            font-family: 'JannaRegular' !important;
+        }
         html {
             direction: rtl !important;
+        }
+        div.dataTables_wrapper{
+            font-family: 'JannaRegular' !important;
         }
     </style>
 </head>
