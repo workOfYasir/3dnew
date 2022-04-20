@@ -159,7 +159,7 @@
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">عنوان
                                         </label>
-                                        <input type="text" class="form-control
+                                        <input type="text" class="form-control  zhd-addres
                                         " required name="address"
                                             id="" aria-describedby=""
                                             placeholder="">
@@ -170,7 +170,7 @@
                                
                             </div>
                             <div class="row">
-                                <div class="col-md-6 ">
+                                <div class="col-md-6 mb-4 ">
                                     <label for="exampleInputEmail1"> مفهوم التصميم
                                     </label>
                                     <textarea name="concept_design" class="form-control " id="concept_design" cols="30" rows="10"></textarea>
@@ -178,7 +178,7 @@
                                     text-muted"></small>
                                 </div>
                           
-                                <div class="col-md-6">
+                                <div class="col-md-6 mb-4">
                                     <label for="exampleInputEmail1"> تصنيع
                                     </label>
                                     <textarea name="manufacturing" class="form-control " id="manufacturing" cols="30" rows="10"></textarea>

@@ -24,7 +24,8 @@ class User extends Authenticatable
         'profile',
         'password',
         'field',
-        'order_id'
+        'order_id',
+        'approve'
     ];
 
     /**
@@ -63,6 +64,11 @@ class User extends Authenticatable
     public function purposals(){
 
         return $this->hasOne(Perposal::class);
+        
+    }
+    public function userDetail(){
+
+        return $this->hasOne(UserDetail::class);
         
     }
 }

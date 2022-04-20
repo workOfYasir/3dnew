@@ -190,10 +190,16 @@
                 </div>
                 @else
                 <div class="left-side">
+
+                    <a href="#" class="m-0">
+                         <img src="{{ asset('user/assets/icons/avatar.svg') }}" class="profile-img" alt="avatar">
+                    </a>
+
                     <a href="#login" data-bs-toggle="modal" class="register-icon border-bottom" data-bs-target="#loginModal">تسجيل
                         دخول</a>
                     <a href="#register" class="ms-auto register-icon border-bottom" data-bs-toggle="modal"
                         data-bs-target="#registerModal">التسجيل</a>
+                     
                     <span class="social-icons">
                         <a href="#"><img src="{{ asset('user/assets/icons/twitter.svg') }}" alt="twitter"></a>
                         <a href="#"><img src="{{ asset('user/assets/icons/instagram.svg') }}" alt="instagram"></a>
@@ -288,7 +294,7 @@
                             <div class="mobile-profile">
 
 
-                                <a href="#" class="m-0" data-bs-toggle="modal" data-bs-target="#memberModal"><img
+                                <a href="#" class="m-0"><img
                                         src="{{(@Auth::user()->profile == null) ?  asset('user/assets/icons/avatar.svg'): asset(Auth::user()->profile) }}"
                                         class="profile-img" alt="avatar"></a>
                                 @if(Auth::user())
@@ -1042,12 +1048,12 @@
                                 الحروف التى يولدها التطبيق.
                             </p>
                             <div class="mujtmah-box-btn-wrapper wrapper al-center mb-3">
-                                <button data-bs-toggle="modal" data-bs-target="#financialOperations2"
+                                <button 
                                     class="m-btn mujtmah-box-btn ml-3">
                                     <img src="{{ asset('user/assets/images/video.png') }}"
                                         class="mujtmah-box-btn__img2">فيديو تعريفي
                                 </button>
-                                <button data-bs-toggle="modal" data-bs-target="#financialOperations"
+                                <button 
                                     class="m-btn mujtmah-box-btn btn-white-1">
                                     أطلب الان
                                     <img src="{{ asset('user/assets/images/arrow-8.png') }}"
@@ -1626,8 +1632,7 @@
                                                         <div class="mobile-profile">
 
 
-                                                            <a href="#" class="m-0" data-bs-toggle="modal"
-                                                                data-bs-target="#memberModal"><img
+                                                            <a href="#" class="m-0"><img
                                                                     src="{{(@Auth::user()->profile == null) ?  asset('user/assets/icons/avatar.svg'): asset(Auth::user()->profile) }}"
                                                                     class="profile-img" alt="avatar"></a>
                                                             @if(Auth::user())
@@ -2192,8 +2197,7 @@
                                                         <div class="mobile-profile">
 
 
-                                                            <a href="#" class="m-0" data-bs-toggle="modal"
-                                                                data-bs-target="#memberModal"><img
+                                                            <a href="#" class="m-0"><img
                                                                     src="{{(@Auth::user()->profile == null) ?  asset('user/assets/icons/avatar.svg'): asset(Auth::user()->profile) }}"
                                                                     class="profile-img" alt="avatar"></a>
                                                             @if(Auth::user())
@@ -2730,7 +2734,7 @@
                                         </div>
                                         <div class="row align-items-end py-4 conditional-blur justify-content-between">
 
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                            <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3">
                                                 <label class="form-label">اختيار اللون</label>
                                                 <div class="color-circle-main">
                                                     <div class="blue-text">
@@ -3000,7 +3004,7 @@
                                         </div>
                                         <div class="row align-items-end py-4 conditional-blur justify-content-between mob-margin">
 
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                            <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3">
                                                 <label class="form-label">اختيار اللون</label>
                                                 <div class="color-circle-main">
                                                     <div class="blue-text">
@@ -3260,7 +3264,7 @@
                                         </div>
                                         <div class="row align-items-end p-xs-0  conditional-blur">
 
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mob-margin">
+                                            <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3 mob-margin">
                                                 <label class="form-label">اختيار اللون</label>
                                                 <div class="color-circle-main">
                                                     <div class="blue-text">
@@ -3599,7 +3603,7 @@
                                         </div>
                                         <div class="row align-items-end p-xs-0  conditional-blur mob-margin">
 
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                            <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3">
                                                 <label class="form-label">اختيار اللون</label>
                                                 <div class="color-circle-main">
 
@@ -3959,7 +3963,7 @@
                                         </div>
                                         <div class="row align-items-end p-xs-0  conditional-blur mob-margin">
 
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                            <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3">
                                                 <label class="form-label">اختيار اللون</label>
                                                 <div class="color-circle-main">
                                                     <div class="blue-text">
@@ -4223,7 +4227,7 @@
                            </div> -->
                                         <div class="row align-items-end p-xs-0  conditional-blur mob-margin">
 
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                            <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3">
                                                 <label class="form-label">اختيار اللون</label>
                                                 <div class="color-circle-main">
 
@@ -4495,7 +4499,7 @@
                            </div> -->
                                         <div class="row align-items-end p-xs-0  conditional-blur mob-margin">
 
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                            <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3">
                                                 <label class="form-label dot">اختيار اللون</label>
                                                 <div class="color-circle-main">
                                                     <div class="blue-text">
@@ -4755,7 +4759,7 @@
                                         </div>
                                         <div class="row align-items-end p-xs-0  conditional-blur mob-margin">
 
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                            <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3">
                                                 <label class="form-label dot">اختيار اللون</label>
                                                 <div class="color-circle-main">
                                                     <div class="blue-text">
@@ -5071,6 +5075,7 @@
                                                 data-bs-target="#loginModal">تسجيل دخول</a>
                                             <a href="#register" class="ms-auto register-icon border-bottom" data-bs-toggle="modal"
                                                 data-bs-target="#registerModal">التسجيل</a>
+                                                
                                             <span class="social-icons">
                                                 <a href="#"><img src="{{ asset('user/assets/icons/twitter.svg') }}"
                                                         alt="twitter"></a>
@@ -5174,8 +5179,7 @@
                                                     <div class="mobile-profile">
 
 
-                                                        <a href="#" class="m-0" data-bs-toggle="modal"
-                                                            data-bs-target="#memberModal"><img
+                                                        <a href="#" class="m-0"><img
                                                                 src="{{(@Auth::user()->profile == null) ?  asset('user/assets/icons/avatar.svg'): asset(Auth::user()->profile) }}"
                                                                 class="profile-img" alt="avatar"></a>
                                                         @if(Auth::user())
@@ -6140,8 +6144,7 @@
                                                         <div class="mobile-profile">
 
 
-                                                            <a href="#" class="m-0" data-bs-toggle="modal"
-                                                                data-bs-target="#memberModal"><img
+                                                            <a href="#" class="m-0"><img
                                                                     src="{{(@Auth::user()->profile == null) ?  asset('user/assets/icons/avatar.svg'): asset(Auth::user()->profile) }}"
                                                                     class="profile-img" alt="avatar"></a>
                                                             @if(Auth::user())
@@ -7200,7 +7203,10 @@
                                 <div class="wrapper al-center ahs-form-box1">
                                     <span class="ahs-form-head1"> الرصيد الحالي </span>
                                     <span class="ahs-form-head2"> 750 ريال </span>
-                                    <img src="{{asset('user/assets/images/ar.png')}}" alt="" class="ahs-form-img1">
+                                    <button data-bs-toggle="modal" data-bs-target="#financialOperations2"
+                                        class="m-btn mujtmah-box-btn ml-3 d-contents">
+                                        <img src="{{asset('user/assets/images/ar.png')}}" alt="" class="ahs-form-img1">
+                                    </button>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-12 wrapper jst-center">
@@ -7479,7 +7485,7 @@
                                         <h1 class="title text-center no-border conditional-blur">معلومات الطلب</h1>
 
                                         <div class="row  p-xs-0 align-items-end  conditional-blur">
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                            <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3">
                                                 <label class="form-label">اختيار اللون</label>
                                                 <div class="color-circle-main">
                                                 <div class="blue-text">
@@ -7852,7 +7858,7 @@
                                         <h1 class="title text-center no-border conditional-blur">معلومات الطلب</h1>
 
                                         <div class="row align-items-end  p-xs-0  conditional-blur">
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                            <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3">
                                                 <label class="form-label dot">اختيار اللون</label>
                                                 <div class="color-circle-main">
                                                 <div class="blue-text">
@@ -8159,7 +8165,7 @@
                                         <h1 class="title text-center no-border conditional-blur">معلومات الطلب</h1>
 
                                         <div class="row  p-xs-0  conditional-blur">
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                            <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3">
                                                 <label class="form-label">اختيار اللون</label>
                                                 <div class="color-circle-main">
                                                 <div class="blue-text">
@@ -8469,7 +8475,7 @@
                                         </div>
                                         <div class="row  p-xs-0  conditional-blur">
 
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                            <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3">
                                                 <label class="form-label dot">اختيار اللون</label>
                                                 <div class="color-circle-main">
 
@@ -8821,7 +8827,7 @@
                                         <h1 class="title text-center no-border conditional-blur">معلومات الطلب</h1>
 
                                         <div class="row  p-xs-0  conditional-blur">
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                            <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3">
                                                 <label class="form-label mt-4">اختيار اللون</label>
                                                 <div class="color-circle-main">
                                                 <div class="blue-text">
@@ -9061,7 +9067,7 @@
                                         <h1 class="title text-center no-border conditional-blur">معلومات الطلب</h1>
 
                                         <div class="row  p-xs-0  conditional-blur">
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                            <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3">
                                                 <label class="form-label dot">اختيار اللون</label>
                                                 <div class="color-circle-main">
                                                 <div class="blue-text">
@@ -9350,7 +9356,7 @@
                                         <h1 class="title text-center no-border conditional-blur">معلومات الطلب</h1>
 
                                         <div class="row  p-xs-0  conditional-blur">
-                                            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                            <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3">
                                                 <label class="form-label dot">اختيار اللون</label>
                                                 <div class="color-circle-main">
                                                 <div class="blue-text">

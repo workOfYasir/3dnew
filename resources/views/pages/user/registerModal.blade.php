@@ -34,7 +34,7 @@
                                     </ul>
                                     <div class="tab-content" id="myTabContent">
                                         <div class="tab-pane fade active show" id="userloginModal2" role="tabpanel">
-                                            <form class="row gy-4 gx-5" action="{{route('register')}}" method="post" style="padding-top: 20px;">
+                                            <form class="row gy-4 gx-5 p-l-0" action="{{route('register')}}" method="post" style="padding-top: 20px;">
                                                 @csrf
                                                 <input type="hidden" name="role" value="{{Crypt::encrypt('user')}}">
                                                 <div class="row justify-content-center">
@@ -43,7 +43,7 @@
                                                         <input id="imgInp" type="file" class="chose" name="profile" accept="image/*" style="display: none;">
                                                     </div>
                                                 </div>
-                                                <div class="row justify-content-center mb-4">
+                                                <div class="row justify-content-center mb-4  padd-l-0">
                                                     <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mt-4">
                                                         <label class="form-label dot">الاسم</label>
                                                         <input type="text" name="name" class="form-control " placeholder=".. الاسم هنا" value="">
@@ -53,7 +53,7 @@
                                                         <input type="text" name="field" class="form-control " placeholder="الجهة هنا .." value="">
                                                     </div>
                                                 </div>
-                                                <div class="row justify-content-center">
+                                                <div class="row justify-content-center padd-l-0">
                                                     <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mb-4">
                                                         <label class="form-label dot">الايميل</label>
                                                         <input type="email" name="email" class="form-control email" placeholder="الايميل هنا .." value="">
@@ -63,7 +63,7 @@
                                                         <input type="password" name="password" class="form-control pass" placeholder="كلمة المرور هنا .." value="">
                                                     </div>
                                                 </div>
-                                                <div class="row justify-content-center">
+                                                <div class="row justify-content-center padd-l-0">
                                                     <div class="container container-x container-x2">
                                                         <div class="almuntjat-form-error almuntjat-form-error-2">
                                                             <img src="{{ asset('user/assets/images/warning.png') }}" alt="" class="almuntjat-form-error__img"> بعد إضافة المنتج سيذهب الى الإدارة للمراجعة للقبول أو الرفض
@@ -83,23 +83,23 @@
                                             </form>
                                         </div>
                                         <div class="tab-pane fade " id="designerloginModal2" role="tabpanel" aria-labelledby="profile-tab">
-                                            <form class="row gy-4 gx-5" method="get" style="padding-top: 20px;">
+                                            <form class="row gy-4 gx-5" action="{{route('register')}}" method="post" style="padding-top: 20px;">
                                                 @csrf
-                                                <input type="hidden" name="role" value="{{Crypt::encrypt('admin')}}">
+                                                <input type="hidden" name="role" value="{{Crypt::encrypt('designer')}}">
                                                 <div class="row justify-content-center">
                                                     <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mt-4">
                                                         <img id="blah" src="https://zen-boyd.161-97-115-110.plesk.page/3dorgans/public/user/assets/icons/edit-avatar.svg" class="mx-auto d-block imageupload" width="100" alt="avatar" style="clip-path: circle() !important ;height: 100% !important;">
                                                         <input id="imgInp" type="file" class="chose" name="profile" accept="image/*" style="display: none;">
                                                     </div>
                                                 </div>
-                                                <div class="row justify-content-center tab-justify-right">
+                                                <div class="row justify-content-center tab-justify-right padd-l-0">
                                                     <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mt-4">
                                                         <label class="form-label dot">الاسم</label>
-                                                        <input type="text" class="form-control" placeholder="الاسم هنا .." value="">
+                                                        <input type="text" class="form-control" name="name" placeholder="الاسم هنا .." value="">
                                                     </div>
                                                     <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mt-4">
                                                         <label class="form-label dot">رقم الجوال</label>
-                                                        <input type="text" class="form-control " placeholder="رقم الجوال هنا .." value="">
+                                                        <input type="text" class="form-control "  name="field" placeholder="رقم الجوال هنا .." value="">
                                                     </div>
                                                     <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mt-4">
                                                         <label class="form-label dot">الايميل</label>
@@ -114,20 +114,20 @@
 
                                                     <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mt-4 ahs-from-box">
                                                         <label class="form-label dot">تقنية الطباعة</label>
-                                                        <select class="form-select" required name="" aria-label="Default select example">
+                                                        <select class="form-select" required name="printing_technology" aria-label="Default select example">
                                                             <option selected>اختيار التقنية</option>
                                                             <option>اختيار</option>
                                                         </select>
                                                     </div>
                                                     <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mt-4 ahs-from-box">
                                                         <label class="form-label dot">أنواع البرامج المستخدمة</label>
-                                                        <select class="form-select" required name="" aria-label="Default select example">
+                                                        <select class="form-select" required name="software_type" aria-label="Default select example">
                                                             <option selected>اختاير البرامج المستخدمة</option>
                                                             <option>اختاير البرامج</option>
                                                         </select>
                                                     </div>
                                                 </div>
-                                                <div class="row justify-content-center">
+                                                <div class="row justify-content-center padd-l-0">
                                                     <div class="container container-x">
                                                         <div class="almuntjat-form-error almuntjat-form-error-2">
                                                             <img src="{{ asset('user/assets/images/warning.png') }}" alt="" class="almuntjat-form-error__img"> بعد إضافة المنتج سيذهب الى الإدارة للمراجعة للقبول أو الرفض

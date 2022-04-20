@@ -265,10 +265,13 @@
     .switch .form-check-input {
         width: 40px;
         height: 23px;
+        background-color: #d3dade;
+        border-color: #d3dade;
+    }
+    .switch .form-check-input:checked{
         background-color: #02BB84;
         border-color: #02BB84;
     }
-    
     .switch .form-check-label {
         margin: 0px;
         padding-left: 10px;
@@ -580,10 +583,9 @@
     right: 140px;
 }
 
-/* #productdesignModal .modal-header .circle-plus-icon, #productaddModal .modal-header .circle-plus-icon {
-    flex-direction: row !important;
-    margin-top: 0px !important;
-} */
+#user3RequestModal .almuntjat-form-error-2{
+ margin-top: 50px;   
+}
  /* /////////////////////////////////////// user7RequestModal hide d-none class default /////////////////////////////////////// */
        #user7RequestModal .modal-body .payment.credit-payment.d-block{
         display: block !important;
@@ -598,22 +600,48 @@
 }
 
 
+.view-order-heading{
+    margin-right: 150px;
+} 
+.m-r-30{
+    margin-right: 30px;
+}
 
+#designer-order .modal-header , #designer-order-upload .modal-header , #designer-review-upload .modal-header,
+#designer-bid-submission .modal-header,#designer-submit-quote  .modal-header, #designer-bid-rejected  .modal-header , #designer-information  .modal-header , #designer-order-submitted .modal-header , #healthServiesModal .modal-header{
+    padding: 2rem 0rem !important;
+}
 
-
-
-
-
-
-
-
-
+#healthServiesModal .profile.zhd-box{
+    text-align: left;
+}
 
 
     /* //////////////////////////////////// responsive start here ////////////////////////////////////////////////*/
     
     @media (min-width: 360px) and (max-width: 767px) {
+        .notification-box.notification-box-wdt{
+            display: block !important;
+            width: 100% !important;
+        }
+        .m-r-30{
+            margin-right: 0px;
+        }
+        .view-order-heading{
+            margin-right: 0px !important;
+        }
+        
+        #view-order .view-order-heading, #public-order .view-order-heading{
+            margin-right: 0px;
+        }
+        form.p-l-0{
+            padding-left: 0px !important;
+        }
+        form .padd-l-0{
+            padding-left: 0px !important;
+            padding-right: 20px;
 
+        }
         .register-pdf {
             position: absolute;
             right: 35px;
@@ -835,6 +863,8 @@
         }
         .zhd-product-visit {
             justify-content: center;
+            margin-top: 20px;
+            margin-bottom: 30px;
         }
         .btn-sky.invert {
             margin-top: 30px;
@@ -1093,7 +1123,7 @@
             }
 
             .video iframe{
-                width: 255px;
+                width: 275px;
             }
             .mujtmah-almusmamen-wrapper .mujtmah-box-btn-wrapper, .mujtmah-box__content .mujtmah-box-btn-wrapper{
                 justify-content: center;
@@ -1145,6 +1175,46 @@
     /* ////////////////////////////////////////// tab landscape responsive //////////////////////////////////////////////////////// */
 
     @media (min-width: 768px) and (max-width: 991px) {
+        #healthServiesModal .modal-body {
+            padding: 3rem 1rem!important;
+        }
+        /* healthServiesModal */
+
+        .male-back .back {
+            right: 118px;
+            top: 67px;
+        }
+        .male-back .leftHand {
+            right: 148px;
+            top: 136px;
+        }
+
+        .male-back .rightHand {
+            right: 91px;
+            top: 136px;
+        }
+        .male-back .leftLeg {
+            right: 137px;
+            top: 190px;
+        }
+        .male-back .rightLeg {
+            right: 100px;
+            top: 190px;
+        }
+        .male-back .leftFoot {
+            bottom: 10px;
+            right: 135px;
+        }
+        .male-back .rightFoot {
+            bottom: 10px;
+            right: 105px;
+        }
+        /* healthServiesModal end */
+
+        .m-r-30{
+            margin-right: 0px;
+        } 
+
         .designer-sec::before, .designer-sec::after, #designinnerModal .designer-sec-1::after, #designinnerModal .designer-sec::before{
             display: none;
         }
@@ -1462,6 +1532,14 @@
     }
     /* ahsan */
 
+    .form-top{
+        padding-top: 30px;
+    }
+
+    .zhd-product-visit{
+        margin-top: 50px;
+    }
+
 }
     
     /* ////////////////////////////////////////// Large landscape responsive //////////////////////////////////////////////////////// */
@@ -1480,14 +1558,10 @@
         nav .left-side a {
             margin: 0px 17px;
         }
-        /* .social-icons a{
-         margin: 0px 7px !important;
-        }
-        nav .left-side a:last-child {
-            margin-left: 0 !important;
-        } */
-
         /* navbar end */
+       #requestsModal .modal-body .tab-content .nav-link{
+           padding: 0px;
+       }
         .notification-box.notification-box-wdt{
             width: 360px;
             height: 90px;
@@ -1650,6 +1724,17 @@
         }
         .zhd-quote{
             margin-bottom: 60px !important;
+        }
+
+        #requestsModal .modal-body {
+            padding: 0 3rem !important;
+        }
+        #requestsModal .modal-header {
+            padding: 3rem 0rem !important;
+        }
+
+        .form-top{
+            padding-top: 30px;
         }
     }
     

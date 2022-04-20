@@ -40,7 +40,6 @@ class PublicServiceController extends Controller
      */
     public function store(Request $request)
     {
-    //   dd($request->all());
         if (isset($request->myfile) && !empty($request->myfile)) {
             $myfile = $request->myfile->getClientOriginalName();
             $images = $request->myfile->move(public_path('upload/'), $request->myfile);
@@ -50,7 +49,7 @@ class PublicServiceController extends Controller
             $path = null;
         }
         $pub = PublicService::create([
-            'status' => 1,
+            'status' => 0,
             'user_id' => Auth::id(),
             'full_name' => $request->name,
             'phone_num' => $request->phone,
