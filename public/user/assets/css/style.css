@@ -3194,6 +3194,6 @@ input[type=number] {
   }
 
 
-  .d-contents{
+.d-contents{
     display: contents !important;
 }

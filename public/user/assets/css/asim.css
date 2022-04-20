@@ -1743,6 +1743,9 @@
         #designinnerModal .designer-sec::before {
             right: -306px;
         }
+        #healthServiesModal .modal.page .modal-header {
+            padding: 4rem 0 !important;
+        }
     }
 
     /* ////////////////////////////////////////// Extra Large landscape responsive //////////////////////////////////////////////////////// */

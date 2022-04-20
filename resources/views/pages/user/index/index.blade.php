@@ -190,6 +190,7 @@
                 </div>
                 @else
                 <div class="left-side">
+
                     <a href="#" class="m-0">
                          <img src="{{ asset('user/assets/icons/avatar.svg') }}" class="profile-img" alt="avatar">
                     </a>
@@ -198,6 +199,7 @@
                         دخول</a>
                     <a href="#register" class="ms-auto register-icon border-bottom" data-bs-toggle="modal"
                         data-bs-target="#registerModal">التسجيل</a>
+                     
                     <span class="social-icons">
                         <a href="#"><img src="{{ asset('user/assets/icons/twitter.svg') }}" alt="twitter"></a>
                         <a href="#"><img src="{{ asset('user/assets/icons/instagram.svg') }}" alt="instagram"></a>
@@ -5073,6 +5075,7 @@
                                                 data-bs-target="#loginModal">تسجيل دخول</a>
                                             <a href="#register" class="ms-auto register-icon border-bottom" data-bs-toggle="modal"
                                                 data-bs-target="#registerModal">التسجيل</a>
+                                                
                                             <span class="social-icons">
                                                 <a href="#"><img src="{{ asset('user/assets/icons/twitter.svg') }}"
                                                         alt="twitter"></a>
