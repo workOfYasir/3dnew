@@ -83,9 +83,9 @@
                                             </form>
                                         </div>
                                         <div class="tab-pane fade " id="designerloginModal2" role="tabpanel" aria-labelledby="profile-tab">
-                                            <form class="row gy-4 gx-5" action="{{route('createDesigner')}}" method="post" style="padding-top: 20px;">
+                                            <form class="row gy-4 gx-5" action="{{route('register')}}" method="post" style="padding-top: 20px;">
                                                 @csrf
-                                                <input type="hidden" name="role" value="{{Crypt::encrypt('admin')}}">
+                                                <input type="hidden" name="role" value="{{Crypt::encrypt('designer')}}">
                                                 <div class="row justify-content-center">
                                                     <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mt-4">
                                                         <img id="blah" src="https://zen-boyd.161-97-115-110.plesk.page/3dorgans/public/user/assets/icons/edit-avatar.svg" class="mx-auto d-block imageupload" width="100" alt="avatar" style="clip-path: circle() !important ;height: 100% !important;">
@@ -114,14 +114,14 @@
 
                                                     <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mt-4 ahs-from-box">
                                                         <label class="form-label dot">تقنية الطباعة</label>
-                                                        <select class="form-select" required name="select1" aria-label="Default select example">
+                                                        <select class="form-select" required name="printing_technology" aria-label="Default select example">
                                                             <option selected>اختيار التقنية</option>
                                                             <option>اختيار</option>
                                                         </select>
                                                     </div>
                                                     <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mt-4 ahs-from-box">
                                                         <label class="form-label dot">أنواع البرامج المستخدمة</label>
-                                                        <select class="form-select" required name="select2" aria-label="Default select example">
+                                                        <select class="form-select" required name="software_type" aria-label="Default select example">
                                                             <option selected>اختاير البرامج المستخدمة</option>
                                                             <option>اختاير البرامج</option>
                                                         </select>

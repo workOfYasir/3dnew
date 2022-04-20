@@ -91,8 +91,14 @@
     </script>
     @endif
     <script src="{{asset('user/assets/js/bootstrap.min.js')}}"></script>
-
-
+    <script src="{{asset('js/profileUserApproval.js')}}"></script>
+    <script src="{{asset('js/registerUserApproval.js')}}"></script>
+    <script >
+        var profileApprove = "{{route('user.profile.approve',':id')}}";
+    </script>
+    <script >
+        var reigisterApprove = "{{route('user.approve',':id')}}";
+    </script>
 
     <!-- Scripts -->
 

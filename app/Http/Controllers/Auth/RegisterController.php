@@ -12,6 +12,7 @@ use App\Models\Medical;
 use App\Models\Mapimage;
 use App\Models\SideLogo;
 use App\Models\ContactUs;
+use App\Models\UserDetail;
 use App\Models\Youtubeurl;
 use App\Models\ImageSlider;
 use Illuminate\Http\Request;
@@ -20,6 +21,7 @@ use Spatie\Permission\Models\Role;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Crypt;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Support\Facades\Storage;
@@ -130,8 +132,9 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        
+       
         $roleData = Crypt::decrypt($data['role']);
+        // dd($roleData);
         if (isset($data['profile']) && !empty($data['profile'])) {
             $fdata = ($data['profile'])->getClientOriginalName();
             $data['profile']->move(public_path('upload/'), $fdata);
@@ -140,19 +143,35 @@ class RegisterController extends Controller
         } else {
             $datas = null;
         }
-
+        
             $user = User::create([
                 'name' => $data['name'],
                 'email' => $data['email'],
-                'password' => Hash::make($data['password']),
+                'password' =>Hash::make($data['password']),
                 'role' => $roleData,
                 'profile' => $datas,
             ]);
-   
-       $user->assignRole($roleData);
+        if($roleData=='designer'){
+            UserDetail::create([
+                'user_id'=>$user->id,
+                'printing_technology'=>$data['printing_technology'],
+                'software_type'=>$data['software_type'],
+            ]);
+        }
+        $details = [
+            'subject'=> 'New User Registered',
+            'body'=> 'approve it',
+            'user_id'=>$user->id,
+        ];
+        $user->assignRole($roleData);
+        $admins = User::where('role','admin')->get();
+        foreach ($admins as $key => $admin) {
+            \Mail::to($admin->email)->send(new \App\Mail\Registration($details));
+        }
         return $user;
     }
-    protected function createDesigner(Request $data)
+   
+    public function createDesigner(Request $data)
     {
         
         $roleData = Crypt::decrypt($data->role);
