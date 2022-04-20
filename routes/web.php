@@ -84,22 +84,23 @@ Route::get('updateProfileMail', [HomeController::class, 'updateProfileMail'])->n
 
 Route::get('approval/{id}', [HomeController::class, 'approval'])->name('approval');
 Route::get('logout', [App\Http\Controllers\Auth\LoginController::class, 'logout']);
-        Route::resource('invoicess', InvoiceController::class);
-        Route::resource('perposal', PerposalController::class);
+Route::resource('invoicess', InvoiceController::class);
+Route::resource('perposal', PerposalController::class);
+Route::get('invoices/pdf/{id}', [InvoiceController::class,'pdfInvoice'])->name('invoice.pdf');
+Route::get('perposal/pdf/{id}', [PerposalController::class,'pdfProposal'])->name('purposal.pdf');  
 Route::group(['middleware' => 'auth', 'varify','cors'], function () {
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
     Route::resource('medical', MedicalController::class);
     Route::resource('publics', PublicServiceController::class);
     //Resource Route
     Route::get('profile',[UserController::class,'profileUpdate'])->name('profileUser');         
-      
+    Route::get('invoices/{id}', [InvoiceController::class,'show'])->name('invoice');
+    Route::get('perposal/{id}', [PerposalController::class,'show'])->name('purposal');    
+
     Route::group(['middleware' =>  'role:user'], function () {
         Route::get('/vieworder/{id}', [App\Http\Controllers\HomeController::class, 'vieworder'])->name('vieworder');
         Route::get('/vieworderpublic/{id}', [App\Http\Controllers\HomeController::class, 'vieworderpublic'])->name('vieworderpublic'); 
-        Route::get('invoices/{id}', [InvoiceController::class,'show'])->name('invoice');
-        Route::get('perposal/{id}', [PerposalController::class,'show'])->name('purposal');    
-        Route::get('invoices/pdf/{id}', [InvoiceController::class,'pdfInvoice'])->name('invoice.pdf');
-        Route::get('perposal/pdf/{id}', [PerposalController::class,'pdfProposal'])->name('purposal.pdf');  
+
        
     });
     Route::group(['middleware' =>  'role:admin'], function () {
@@ -140,6 +141,8 @@ Route::group(['middleware' => 'auth', 'varify','cors'], function () {
         Route::get('view/{id}', [ImageSlideController::class, 'view'])->name('view');
         Route::get('register_profile', [HomeController::class, 'register_profile'])->name('register_profile');
         Route::post('send/question', [MedicalController::class, 'askQuestion'])->name('ask.question');
+    
+        Route::get('order_id/{id}',[UserController::class,'userByOrder'])->name('userByOrder');
     });
 
     Route::get('feedback', [MedicalController::class, 'feedback'])->name('feedback');
