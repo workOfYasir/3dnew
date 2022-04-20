@@ -1155,14 +1155,6 @@ textarea {
     margin-bottom: 15px;
 }
 
-/* #healthServiesModal .profile img {
-    margin-bottom: 15px;
-} */
-
-#healthServiesModal .modal-header {
-    align-items: end;
-}
-
 #healthServiesModal .pointer.head p {
     left: -20px;
     bottom: 8px;
@@ -3200,3 +3192,8 @@ input[type=number] {
   .message-box::-webkit-scrollbar-thumb:hover {
     background: #1f4f98b0; 
   }
+
+
+  .d-contents{
+    display: contents !important;
+}

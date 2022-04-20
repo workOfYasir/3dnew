@@ -190,9 +190,11 @@
                 </div>
                 @else
                 <div class="left-side">
-                    <div class="profile profile-icon">
-                        <img src="{{ asset('assets/images/dashboard/1.png') }}" alt="">
-                    </div>
+
+                    <a href="#" class="m-0">
+                         <img src="{{ asset('user/assets/icons/avatar.svg') }}" class="profile-img" alt="avatar">
+                    </a>
+
                     <a href="#login" data-bs-toggle="modal" class="register-icon border-bottom" data-bs-target="#loginModal">تسجيل
                         دخول</a>
                     <a href="#register" class="ms-auto register-icon border-bottom" data-bs-toggle="modal"
@@ -292,7 +294,7 @@
                             <div class="mobile-profile">
 
 
-                                <a href="#" class="m-0" data-bs-toggle="modal" data-bs-target="#memberModal"><img
+                                <a href="#" class="m-0"><img
                                         src="{{(@Auth::user()->profile == null) ?  asset('user/assets/icons/avatar.svg'): asset(Auth::user()->profile) }}"
                                         class="profile-img" alt="avatar"></a>
                                 @if(Auth::user())
@@ -1046,12 +1048,12 @@
                                 الحروف التى يولدها التطبيق.
                             </p>
                             <div class="mujtmah-box-btn-wrapper wrapper al-center mb-3">
-                                <button data-bs-toggle="modal" data-bs-target="#financialOperations2"
+                                <button 
                                     class="m-btn mujtmah-box-btn ml-3">
                                     <img src="{{ asset('user/assets/images/video.png') }}"
                                         class="mujtmah-box-btn__img2">فيديو تعريفي
                                 </button>
-                                <button data-bs-toggle="modal" data-bs-target="#financialOperations"
+                                <button 
                                     class="m-btn mujtmah-box-btn btn-white-1">
                                     أطلب الان
                                     <img src="{{ asset('user/assets/images/arrow-8.png') }}"
@@ -1630,8 +1632,7 @@
                                                         <div class="mobile-profile">
 
 
-                                                            <a href="#" class="m-0" data-bs-toggle="modal"
-                                                                data-bs-target="#memberModal"><img
+                                                            <a href="#" class="m-0"><img
                                                                     src="{{(@Auth::user()->profile == null) ?  asset('user/assets/icons/avatar.svg'): asset(Auth::user()->profile) }}"
                                                                     class="profile-img" alt="avatar"></a>
                                                             @if(Auth::user())
@@ -2196,8 +2197,7 @@
                                                         <div class="mobile-profile">
 
 
-                                                            <a href="#" class="m-0" data-bs-toggle="modal"
-                                                                data-bs-target="#memberModal"><img
+                                                            <a href="#" class="m-0"><img
                                                                     src="{{(@Auth::user()->profile == null) ?  asset('user/assets/icons/avatar.svg'): asset(Auth::user()->profile) }}"
                                                                     class="profile-img" alt="avatar"></a>
                                                             @if(Auth::user())
@@ -5179,8 +5179,7 @@
                                                     <div class="mobile-profile">
 
 
-                                                        <a href="#" class="m-0" data-bs-toggle="modal"
-                                                            data-bs-target="#memberModal"><img
+                                                        <a href="#" class="m-0"><img
                                                                 src="{{(@Auth::user()->profile == null) ?  asset('user/assets/icons/avatar.svg'): asset(Auth::user()->profile) }}"
                                                                 class="profile-img" alt="avatar"></a>
                                                         @if(Auth::user())
@@ -6145,8 +6144,7 @@
                                                         <div class="mobile-profile">
 
 
-                                                            <a href="#" class="m-0" data-bs-toggle="modal"
-                                                                data-bs-target="#memberModal"><img
+                                                            <a href="#" class="m-0"><img
                                                                     src="{{(@Auth::user()->profile == null) ?  asset('user/assets/icons/avatar.svg'): asset(Auth::user()->profile) }}"
                                                                     class="profile-img" alt="avatar"></a>
                                                             @if(Auth::user())
@@ -7205,7 +7203,10 @@
                                 <div class="wrapper al-center ahs-form-box1">
                                     <span class="ahs-form-head1"> الرصيد الحالي </span>
                                     <span class="ahs-form-head2"> 750 ريال </span>
-                                    <img src="{{asset('user/assets/images/ar.png')}}" alt="" class="ahs-form-img1">
+                                    <button data-bs-toggle="modal" data-bs-target="#financialOperations2"
+                                        class="m-btn mujtmah-box-btn ml-3 d-contents">
+                                        <img src="{{asset('user/assets/images/ar.png')}}" alt="" class="ahs-form-img1">
+                                    </button>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-12 wrapper jst-center">

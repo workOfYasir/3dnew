@@ -1,18 +1,20 @@
 <div class="modal fade page form animate__animated animate__fadeInRight animate__fast" id="healthServiesModal" tabindex="-1" aria-labelledby="healthServiesModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-fullscreen">
         <div class="modal-content">
-            <div class="container-fluid">
+            <div class="container">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="modal-header border-0">
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            <div>
+                            <div class="zhd-center-close">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div> 
                                 <span class="outline dot">أكثر من 13 عضو اصطناعي</span>
                                 <h1 class="modal-title right"><span class="btm-line"><span class="inner-line"></span>
                                         الخدمات الطبية
                                     </span></h1>
                             </div>
-                            <div class="profile">
+                            <div class="profile zhd-box">
                                 @if(@auth()->user()->profile == null)
                                  <button class="btn btn-sky profile-btn invert">
                                     المصمم
@@ -55,8 +57,8 @@
                                                             <label class="form-label dot">رقم هاتف الطبيب</label>
                                                             <input type="number" pattern="\d*" name="dr_phone" class="form-control phone" placeholder="رقم الهاتف هنا" value="" required>
                                                         </div>
-                                                    </div>
-                                                    <div class="row">
+                                                    <!-- </div>
+                                                    <div class="row"> -->
                                                         <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                             <label class="form-label dot">المستشفى أو الشركة</label>
                                                             <input type="text" name="hospital" class="form-control hospital" placeholder="الجهه هنا .." value="" required>
