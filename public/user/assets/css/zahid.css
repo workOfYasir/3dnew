@@ -395,3 +395,7 @@ position: absolute;
 .mob-margin .mt-5{
     margin-top: 1.5rem!important;
 }
+/* 14/04/2022 */
+.public-hd{
+    width: 232px !important;
+}
