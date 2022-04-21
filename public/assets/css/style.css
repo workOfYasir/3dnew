@@ -1496,6 +1496,10 @@ a:hover {
   margin-right: 25px;
 } */
 /* end login zahid */
+a{
+  color:#148eeb!important;
+}
+
 .zhd-addres{
   height: 50px!important;
 }
@@ -4535,7 +4539,7 @@ table tbody .border-bottom-warning td {
       .page-main-header .main-header-right .toggle-sidebar svg {
         width: 20px;
        
-        color: #0D6EFD; }
+        color: #148eeb!important; }
       .page-main-header .main-header-right .toggle-sidebar:hover {
         background-color: rgba(36, 105, 92, 0.1); }
     .page-main-header .main-header-right .vertical-mobile-sidebar {
@@ -4545,7 +4549,7 @@ table tbody .border-bottom-warning td {
     .page-main-header .main-header-right .nav-left input:focus {
       outline: 0 !important; }
     .page-main-header .main-header-right .left-menu-header ul li i {
-      color: #0D6EFD; }
+      color: #148eeb!important; }
     .page-main-header .main-header-right .left-menu-header ul li .search-form {
       font-family: "Roboto", sans-serif; }
       .page-main-header .main-header-right .left-menu-header ul li .search-form input {
@@ -31249,10 +31253,10 @@ thead tr th:last-child, tbody tr td:last-child{
   background-color: rgba(36, 105, 92, 0.1);
 }
 #SvgjsPath1022{
-  stroke:#0d6efd !important;
+  stroke:#148eeb!important;
 }
 #SvgjsPath1026{
-  stroke:#0d6efd !important;
+  stroke:#148eeb!important;
 
 }
 #SvgjsPath1024{
@@ -31262,7 +31266,7 @@ thead tr th:last-child, tbody tr td:last-child{
   stroke:rgb(229 237 239) !important;
 }
 .apexcharts-legend-text{
-  color:#0d6efd !important;
+  color:#148eeb!important;
 }
 .latest-update-sec table tbody tr:hover {
   background-color: rgb(229 237 239) !important;
@@ -31411,4 +31415,10 @@ margin-left: 20px;
 /* Handle on hover */
 .message-box::-webkit-scrollbar-thumb:hover {
   background: #1f4f98b0; 
+}
+.btn-primary, .bg-primary {
+  background: #148eeb!important;
+}
+.card .bg-primary{
+  background: #148eeb!important;
 }
