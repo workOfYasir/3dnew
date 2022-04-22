@@ -1026,7 +1026,7 @@
                             <img src="{{ asset('user/assets/images/mujtmah-box__image.png') }}"
                                 class="mujtmah-box__image">
                             <div class="mujtmah-box__count">
-                                <h1 class="mujtmah-box__count-heading">+50</h1>
+                                <h1 class="mujtmah-box__count-heading designer-counter2" data-count="50">0</h1>
                                 <p class="mujtmah-box__count-sub-heading">مصمم</p>
                             </div>
                         </div>
@@ -1034,7 +1034,7 @@
                     <div class="mujtmah-box2">
                         <div class="mujtmah-box__media" data-aos="zoom-in" data-aos-offset="500">
                             <div class="mujtmah-box__count2">
-                                <h1 class="mujtmah-box__count-heading">+40</h1>
+                                <h1 class="mujtmah-box__count-heading designer-counter" data-count="40" >0</h1>
                                 <p class="mujtmah-box__count-sub-heading">عميل</p>
                             </div>
                             <img src="{{ asset('user/assets/images/mujtmah-box__image3.png') }}"
@@ -9703,40 +9703,82 @@
     <!-- JQuery -->
 
     <script>
-        $(document).ready(function () {
+        $(document).ready(function() {
             var a = 0;
-            $(window).scroll(function () {
-                var oTop = $('.counter').offset().top - window.innerHeight;
+            var b = 0;
+            var c = 0;
+            $(window).scroll(function() {
+                // var oTop = $('.counter').offset().top - window.innerHeight;
+                console.log($(window).scrollTop())
                 if (a == 0 && $(window).scrollTop() > 300) {
-                    $('.client-counter').each(function () {
+                    $('.client-counter').each(function() {
                         var $this = $(this),
                             countTo = $this.attr('data-count');
                         $({
                             countNum: $this.text()
                         }).animate({
-                            countNum: countTo
-                        },
-
+                                countNum: countTo
+                            },
                             {
-
                                 duration: 2000,
                                 easing: 'swing',
-                                step: function () {
+                                step: function() {
                                     $this.text(Math.floor(this.countNum));
                                 },
-                                complete: function () {
+                                complete: function() {
                                     $this.text(this.countNum);
                                     //alert('finished');
                                 }
-
                             });
                     });
                     a = 1;
                 }
-
-                // if (($(window).scrollTop() > 600)) {
-                //     $('.about-content').addClass('animate__animated animate__fadeIn animate_slowest');
-                // }
+                if (b == 0 && $(window).scrollTop() > 2800) {
+                    $('.designer-counter').each(function() {
+                        var $this = $(this),
+                            countTo = $this.attr('data-count');
+                        $({
+                            countNum: $this.text()
+                        }).animate({
+                                countNum: countTo
+                            },
+                            {
+                                duration: 2000,
+                                easing: 'swing',
+                                step: function() {
+                                    $this.text(Math.floor(this.countNum));
+                                },
+                                complete: function() {
+                                    $this.text(this.countNum);
+                                    //alert('finished');
+                                }
+                            });
+                    });
+                    b = 1;
+                }
+                if (c == 0 && $(window).scrollTop() > 3400) {
+                    $('.designer-counter2').each(function() {
+                        var $this = $(this),
+                            countTo = $this.attr('data-count');
+                        $({
+                            countNum: $this.text()
+                        }).animate({
+                                countNum: countTo
+                            },
+                            {
+                                duration: 2000,
+                                easing: 'swing',
+                                step: function() {
+                                    $this.text(Math.floor(this.countNum));
+                                },
+                                complete: function() {
+                                    $this.text(this.countNum);
+                                    //alert('finished');
+                                }
+                            });
+                    });
+                    c = 1;
+                }
             });
         })
     </script>

@@ -30,6 +30,7 @@
                                         <th>تاريخ</th>
                                         <th>ضريبة</th>
                                         <th>أجراءات</th>
+                                        <th>More</th>
                                     </tr>
                                 </thead>
                                 @foreach ($invoices as $invoice)
@@ -62,6 +63,19 @@
                                             route('perposal.show', $invoice->id)
                                             }}">فاتورة</a>
                                         </div>
+                                    </td>
+                                    <td>
+                                        {{-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#actionModal">
+                                            Launch demo modal
+                                          </button> --}}
+                                          <button type="button" class="btn
+                                                btn-primary"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#actionModal">
+                                         More
+                                            </button>
+                                          
+                                          @include('pages.admin.dashboard.perposal.actionModal')
                                     </td>
                                 </tr>
                                 @endforeach

@@ -268,7 +268,20 @@ mujtmah-almusmamen section start
     line-height: 1;
     font-weight: 700;
 }
-
+.designer-counter::before{
+    content: '+';
+    color: #fff;
+    font-size: 43px;
+    font-family: 'JannaRegular';
+    line-height: 1;
+}
+.designer-counter2::before{
+    content: '+';
+    color: #fff;
+    font-size: 43px;
+    font-family: 'JannaRegular';
+    line-height: 1;
+}
 .mujtmah-box__media {
     position: relative;
 }

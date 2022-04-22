@@ -3111,6 +3111,9 @@ input[type=number] {
 #financialOperations .request-box::after {
     display: none;
 }
+.hide-on-load{
+    opacity: 0;
+}
 
 /* Safari */
 @media screen and (-webkit-min-device-pixel-ratio:0) {
