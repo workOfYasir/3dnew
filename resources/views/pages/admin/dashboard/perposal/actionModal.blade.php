@@ -37,12 +37,13 @@
                             </div>
                         </div>
 
+                       
+                    </div>
+                    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">2
                         @if($invoice->comments==1)
                         @livewire('chats',['user_id' =>
                         $invoice->user_id,'request_id'=>$invoice->order_id,'request_type'=>'App\Models\Medical']))
                         @endif
-                    </div>
-                    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">2
                     </div>
 
                 </div>
