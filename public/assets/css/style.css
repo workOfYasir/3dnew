@@ -171,14 +171,14 @@ html {
 body {
   font-size: 14px;
   overflow-x: hidden;
-  font-family: 'JannaRegular' !important;
+ 
   color: #242934;
   background-color: #f5f7fb; 
 }
 
-  div.dataTables_wrapper{
+  /* div.dataTables_wrapper{
     font-family: 'JannaRegular' !important;
-  }
+  } */
 ul {
   padding-left: 0px;
   list-style-type: none;
@@ -1503,6 +1503,8 @@ a:hover {
   right: -16px;
   margin-left: auto !important;
 }
+
+
 /* end login zahid */
 .page-main-header .main-header-right .nav-right .notification-dropdown li .media .media-body span {
   color: #148EEB !important;
@@ -1511,12 +1513,14 @@ a:hover {
   width: 300px !important;
   padding-left: 0px;
 }
-
 .notification-left-side li:first-child{
   margin-left: 32px;
 }
+.notification-left-side a{
+  color: #000 !important;
+}
 .page-main-header .main-header-right .nav-right .notification-dropdown li .media .media-body span {
-  color: #148EEB !important;
+  color: #000 !important;
 }
 .page-main-header .main-header-right .nav-right .notification-dropdown{
   width: 300px !important;
@@ -31427,20 +31431,24 @@ margin-left: 20px;
   height: 10px;
 }
 
+.notification-left-side::-webkit-scrollbar {
+  width: 10px;
+  height: 5px !important;
+}
 /* Track */
-.message-box::-webkit-scrollbar-track {
+.message-box::-webkit-scrollbar-track, .notification-left-side::-webkit-scrollbar-track {
   background: #f1f1f1; 
   /* border-radius: 10px; */
 }
  
 /* Handle */
-.message-box::-webkit-scrollbar-thumb {
+.message-box::-webkit-scrollbar-thumb, .notification-left-side::-webkit-scrollbar-thumb {
   background: #1F5098;
   border-radius: 10px;
 }
 
 /* Handle on hover */
-.message-box::-webkit-scrollbar-thumb:hover {
+.message-box::-webkit-scrollbar-thumb:hover, .notification-left-side::-webkit-scrollbar-thumb:hover {
   background: #1f4f98b0; 
 }
 .btn-primary, .bg-primary {
