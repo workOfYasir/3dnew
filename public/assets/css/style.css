@@ -1493,7 +1493,15 @@ a:hover {
   flex-direction: row-reverse;
 }
 .login-check .link{
-  margin-right: 25px;
+  margin-right: 0px;
+}
+.login-check .checkbox label{
+  padding-right: 10px;
+  padding-left: 0px;
+}
+.login-check .checkbox label::before{
+  right: -16px;
+  margin-left: auto !important;
 }
 /* end login zahid */
 .page-main-header .main-header-right .nav-right .notification-dropdown li .media .media-body span {

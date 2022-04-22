@@ -512,10 +512,10 @@
 
         <section class="banner sample">
             <img src="{{ asset('user/assets/images/banner-bg.png') }}"
-                class="img-fluid banner-bg sample move-blue animate__animated animate__slideInRight animate__slower animate__delay-5s"
+                class="img-fluid banner-bg sample move-blue animate__animated animate__slideInRight animate__slower animate__delay-4s"
                 alt="banner-bg">
             <img src="{{ asset('user/assets/images/black-bg.png') }}"
-                class="black-bg sample move-black animate__animated animate__slideInLeft animate__slower animate__delay-5s"
+                class="black-bg sample move-black animate__animated animate__slideInLeft animate__slower animate__delay-4s"
                 alt="black-bg">
             <img src="{{ asset('user/assets/images/hands.png') }}" class="img-fluid hands sample move-hand" alt="hands">
             <div class="container">
