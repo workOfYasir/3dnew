@@ -1496,6 +1496,27 @@ a:hover {
   margin-right: 25px;
 } */
 /* end login zahid */
+.page-main-header .main-header-right .nav-right .notification-dropdown li .media .media-body span {
+  color: #148EEB !important;
+}
+.page-main-header .main-header-right .nav-right .notification-dropdown{
+  width: 300px !important;
+  padding-left: 0px;
+}
+
+.notification-left-side li:first-child{
+  margin-left: 32px;
+}
+.page-main-header .main-header-right .nav-right .notification-dropdown li .media .media-body span {
+  color: #148EEB !important;
+}
+.page-main-header .main-header-right .nav-right .notification-dropdown{
+  width: 300px !important;
+  padding-left: 0px;
+}
+.notification-left-side{
+  height: 400px;
+}
 a{
   color:#148eeb!important;
 }
