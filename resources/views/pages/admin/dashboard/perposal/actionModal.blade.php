@@ -26,7 +26,8 @@
                                 <a href="{{ route('purposal',$invoice->id) }}"  target="_blank" class="btn btn-sm btn-light">View</a>
                                 <a href="{{ route('purposal.pdf',$invoice->id) }}" class="btn btn-sm btn-light">PDF</a>
                                 <a  class="btn btn-sm btn-light">Convert</a>
-                                {{-- <a  class="btn btn-sm btn-light">Not Accepted</a> --}}
+                                <a href="{{ route('sendViaMail',$invoice->order_id) }}"  class="btn btn-sm btn-light">Mail</a>
+               
                             </div>
                             <div class="col-6">
                                 @if($invoice->status==0)
@@ -34,6 +35,7 @@
                                 @else
                                     <button type="button" class="btn btn-success">Accepted</button>
                                 @endif
+                               
                             </div>
                         </div>
 

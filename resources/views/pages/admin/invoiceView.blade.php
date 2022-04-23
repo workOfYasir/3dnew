@@ -48,10 +48,10 @@
                         <h4>Bill To</h4>
                     </div>
                     <div class="text">
-                        <p>Shuttle <br>
-                            00 (966) 551553442 <br>
-                            3685 Riyadh Front, <br>
-                            Airport Road, Building S12
+                        <p>{{ $invoice->phone }}<br>
+                            {{$invoice->address }}<br>
+                            {{ $invoice->zip_code .', '. $invoice->city  }}<br>
+                            {{ $invoice->country  }}
                         </p>
 
                     </div>
@@ -92,14 +92,9 @@
                     <tr>
                         <td class="tbox1">
                             <label>Concept Design:</label>
-                            <p class="muted"> Ideation: At this stage we will work closely with the
-                                client develop the idea of the 3D model. <br>
-                                Inspiration: At this stage we forces on the details
-                                and the story that the 3D model tells. <br>
-                                Sketch: At this stage we draft the first initial drawing
-                                of the 3D model</p>
+                            <p class="muted"> {{ $invoice->concept_design }}</p>
                         </td>
-                        <td class=>3D Design</td>
+                        <td class=>{{ $invoice->deliverable_design }}</td>
                         <td>{{$invoice->qty_design}}</td>
                         <td>{{$invoice->price_design}} SR</td>
                     </tr>
@@ -107,23 +102,13 @@
 
                         <td class="tbox1">
                             <label for="">Manufacturing:</label>
-                            <p class="muted">3D CAD: At this stage we transform the 2D sketch to
-                                3D digital model.
-                                Materials: At this stage we choose the best materials
-                                that fits the model. <br>
-                                Technology: At this stage we choose the best
-                                manufacturing method for the model. <br>
-                                Dimensions: At this stage we choose the right
-                                dimension for the model which is about 20cm X 12m
-                                X 4.5cm once adjusted, the client will be advised.
-                                Assembly: At this stage we assemble all the
-                                manufactured parts to finalized the model.</p>
+                            <p class="muted">{{ $invoice->manufacturing }}</p>
                         </td>
-                        <td>3D Model</td>
+                        <td>{{$invoice->qty_model}}</td>
                         <td>{{$invoice->qty_model}}</td>
                         <td> <span>{{$invoice->price_model}} SR</span>
                             <div class="">
-                                <img src="{{asset('invoice/assets/logo.svg')}}" alt="">
+                                <img src="{{asset($invoice->image)}}" alt="">
 
                             </div>
                         </td>

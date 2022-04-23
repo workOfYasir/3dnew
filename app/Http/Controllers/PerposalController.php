@@ -173,4 +173,23 @@ class PerposalController extends Controller
         // }
         // return  $pdf->download('pages.admin.invoice');
     }
+    public function perposalAccept(Request $request,$id)
+    {
+    
+        User::find($id)->update([
+            'approve' => $request->approve,
+        ]);
+        if($request->approve==1){
+            return 1;
+        }else{
+            return 0;
+        }
+    }
+    public function perposalAction(Request $request,$id)
+    {
+        
+        $invoice = Perposal::find($id);
+        $user = User::find($invoice->user_id);
+        return view('pages.user.perposalAction', compact('invoice', 'user'));
+    }
 }

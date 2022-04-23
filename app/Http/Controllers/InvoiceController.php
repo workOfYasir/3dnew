@@ -92,6 +92,33 @@ class InvoiceController extends Controller
         // \Mail::to($user->email)->send(new \App\Mail\InvoiceMail($details));
         return redirect()->route('invoicess.index');
     }
+    public function sendViaMail($id)
+    {
+        $med = Medical::find($id);
+        $user = User::find($med->user_id);
+        $details = [
+            'subject' =>"'".$id ."' تم اصدار فاتورة رقم",
+            'name' =>$user->name ,
+            'id' =>$id,
+            'body1' => "'".$id ."' بناء على موافقتكم على عرض السعر للطلب رقم ",
+            'body2'=> "'".$id ."'فقد تم اصدار الفاتورة بمبلغ",
+            'body3'=>'للدفع برجاء الضغط على الرابط التالي:',
+            'linkText' => 'Link is being here to go to website to pay the invoice',
+            'thanks' => 'شكراً جزيلاً',
+            'orderNumber' =>$id ,
+        ];
+        
+        $invoice = Invoice::where('id',$id)->get()->first();
+        $user = User::find($invoice->user_id);
+        // if($request->has('download')){
+            $pdf = PDF::loadView('pages.admin.invoice',compact('invoice', 'user'));
+
+        \Mail::send('emails.invoice', $details, function($message)use($details,$user, $pdf) {
+            $message->to($user->email)
+                    ->subject($details["subject"])
+                    ->attachData($pdf->output(), "invoice.pdf");
+        });
+    }
 
     /**
      * Display the specified resource.
