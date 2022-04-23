@@ -50,7 +50,7 @@ class HomeController extends Controller
                 $medical = Medical::orderBy('id', 'desc')->paginate(5);
 
                 $public = PublicService::orderBy('id', 'desc')->paginate(5);
-                //  dd($public);
+                
                 return view('pages.admin.dashboard.dashboard', compact('title', 'medical', 'public'));
             } else {
                 if(Auth::user()->approve==0){
@@ -81,7 +81,7 @@ class HomeController extends Controller
             }
         } else {
 
-            // $user = User::where('id',Auth::user()->id)->with('invoices')->first();
+            
             $user =  User::where('id', Auth::user()->id)->with(['invoices' => function ($query) {
                 return $query->orderBy('id', 'desc')->limit(1);
             }])->with(['purposals' => function ($query) {
@@ -145,29 +145,26 @@ class HomeController extends Controller
                 }
                 $profile = $request->profile->getClientOriginalName();
                 $request->profile->move(public_path('upload/'), $profile);
-                // $profile  = Storage::disk('public')->put('upload/', $request->profile);
+               
                 $path = 'upload/' . $profile;
             }
         } else {
             $path = (auth()->user()->profile);
             $profile  = (auth()->user()->profile);
         }
-        //  dd($request->all());
-        //dd($request->all());
-
+ 
         User::find(auth()->user()->id)->update([
             'profile' => $path,
             'name' => $request->name,
             'email' => $request->email,
         ]);
         return redirect()->route('home');
-        //return redirect()->route('ProfileUpdate/view');
-        //return redirect()->back();
+
 
     }
     public function password_updates(Request $request)
     {
-        // dd($request->all());
+
         $request->validate([
 
             'newpassword' => 'required',

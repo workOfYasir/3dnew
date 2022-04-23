@@ -30,7 +30,7 @@ class UserController extends Controller
     public function profileUpdate(Request $request)
     {
 
-     $tempProfile = TempUpdateProfile::create([
+    $tempProfile = TempUpdateProfile::create([
         'name' => $request->name,
         'email' => $request->email,
         'role' => $request->role,

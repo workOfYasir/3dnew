@@ -100,8 +100,10 @@ Route::group(['middleware' => 'auth', 'varify','cors'], function () {
     Route::group(['middleware' =>  'role:user'], function () {
         Route::get('/vieworder/{id}', [App\Http\Controllers\HomeController::class, 'vieworder'])->name('vieworder');
         Route::get('/vieworderpublic/{id}', [App\Http\Controllers\HomeController::class, 'vieworderpublic'])->name('vieworderpublic'); 
+        Route::get('perposal/accept/{id}',[PerposalController::class,'perposalAccept'])->name('perposalAccept');
 
-       
+        Route::get('perposal/action/view/{id}',[PerposalController::class,'perposalAction'])->name('perposalAction');
+        
     });
     Route::group(['middleware' =>  'role:admin'], function () {
         Route::resource('about', AboutUsController::class);
@@ -122,8 +124,9 @@ Route::group(['middleware' => 'auth', 'varify','cors'], function () {
             Route::get('profile/list',[UserController::class,'profileList'])->name('profile.list');
             Route::get('profile/approve/{id}',[UserController::class,'profileApprove'])->name('profile.approve');
         });
+        
+        Route::get('send/mail/{id}',[InvoiceController::class,'sendViaMail'])->name('sendViaMail');
 
-    
         Route::get('payment', [MedicalController::class, 'payment'])->name('payment');
         Route::get('ProfileUpdate/view', [HomeController::class, 'viewSetting'])->name('profileupdate.view');
         Route::post('profile/setting', [HomeController::class, 'updateprofile'])->name('profile.setting');
@@ -134,33 +137,23 @@ Route::group(['middleware' => 'auth', 'varify','cors'], function () {
         Route::post('public.updated.status', [MedicalController::class, 'updatedpublic'])->name('public.updated.status');
         Route::post('password/updates', [HomeController::class, 'password_updates'])->name('password_updates');
         Route::resource('side', SideImageController::class);
-    
         Route::resource('logo', LogoController::class);
 
         Route::post('edituser_profile/{id}', [HomeController::class, 'edituser'])->name('edituser_profile');
         Route::get('view/{id}', [ImageSlideController::class, 'view'])->name('view');
         Route::get('register_profile', [HomeController::class, 'register_profile'])->name('register_profile');
         Route::post('send/question', [MedicalController::class, 'askQuestion'])->name('ask.question');
-    
+        
         Route::get('order_id/{id}',[UserController::class,'userByOrder'])->name('userByOrder');
     });
 
     Route::get('feedback', [MedicalController::class, 'feedback'])->name('feedback');
     Route::post('feedback/store', [MedicalController::class, 'feedbackStore'])->name('feedbackStore');
 
-    // Route::get('pdf/proposal', [PerposalController::class,'pdfProposal'])->name('proposel.pdf');
-    // Route::get('pdf/invoice', [ InvoiceController::class,'pdfInvoice'])->name('invoice.pdf');
-    
-    
     Route::get('/chats', [ChatController::class,'index']);
     Route::get('/messages', [ChatController::class,'fetchAllMessages']);
     Route::post('/medi/messages',[ChatController::class,'sendMessage']);
     Route::view('chat','chat.chats')->name('messanger');
-    
-// Route::get('/chat',[MessagesController::class,'userChat'])->name('user.chat');
-// Route::post('/send/chat',[MessagesController::class,'sendMessage'])->name('send.chat');
-
-
 
 });
 

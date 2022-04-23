@@ -43,11 +43,7 @@
 
                     </div>
                     <div>
-                        <!-- <p>3Dplus.sa | Info@3Dplus.sa</p>
-                    <p>Prince Abdulaziz Ibn Musaid </p>
-                    <p>Ibn Jalawi St, St ،Riyadh 12231</p>
-                    <p>00 (966) 555855519</p>
-                    <p>CR 4030606386</p> -->
+                       
                         <p class="muted">3Dplus.sa | <u>Info@3Dplus.sa</u> <br> Prince Abdulaziz Ibn Musaid <br>
                             Ibn Jalawi St, St ,Riyadh 12231 <br>
                             00 (966) 555855519 <br>
@@ -70,7 +66,10 @@
                         <div style="     color: #4d9bd2;" >Bill To</div>
                     </div>
                     <div class="text">
-                        <p>{{$invoice->address  }}
+                        <p>{{ $invoice->phone }}<br>
+                            {{$invoice->address }}<br>
+                            {{ $invoice->zip_code .', '. $invoice->city  }}<br>
+                            {{ $invoice->country  }}
                         </p>
 
                     </div>

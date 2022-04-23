@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
- @include('layouts.admin.head')
+ @include('layouts.user.components.head')
   <body>
     <!-- Loader starts-->
     <div class="loader-wrapper">
@@ -11,17 +11,11 @@
     <!-- Loader ends-->
     <!-- page-wrapper Start-->
     <div class="page-wrapper" id="pageWrapper">
-      <!-- Page Header Start-->
-     @include('layouts.admin.header')
-      <!-- Page Header Ends                              -->
-      <!-- Page Body Start-->
+        <!-- Page Body Start-->
       <div class="page-body-wrapper horizontal-menu">
-        <!-- Page Sidebar Start-->
-        @include('layouts.admin.nav')
-        <!-- Page Sidebar Ends-->
+   
         @yield('content')
-        <!-- footer start-->
-        @include('layouts.admin.footer')
+    
       </div>
     </div>
     
@@ -45,7 +39,11 @@
     <!-- Theme js-->
     <script src="{{asset('assets/js/script.js')}}"></script>
     <script src="{{asset('assets/js/theme-customizer/customizer.js')}}"></script>
-    
+    <script src="{{asset('js/perposalAccepted.js')}}"></script>
+    <script src="{{asset('js/perposalNotAccepted.js')}}"></script>
+    <script>
+        var perposalAccepted = "{{ route('perposalAccept',':id') }}";
+    </script>
     <!-- login js-->
     <!-- Plugin used-->
   </body>
