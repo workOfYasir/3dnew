@@ -2673,7 +2673,7 @@ input[type=number] {
     color: #fff !important;
     border: 4px solid #fff;
     font-size: 15px;
-    /* font-family: almarai regular; */
+    font-family: 'JannaRegular';
     font-weight: bold;
     padding: 0px;
     width: 140px;
@@ -2703,7 +2703,7 @@ input[type=number] {
     border: 4px solid #fff;
     font-size: 15px;
     padding: 0px;
-    /* font-family: almarai regular; */
+    font-family: 'JannaRegular';
     font-weight: bold;
     width: 140px;
     height: 40px;
@@ -2894,7 +2894,7 @@ input[type=number] {
     border-radius: 20px;
     color: #fff;
     background-color: #1EA9D4;
-    font-family: Almarai regular;
+    font-family: 'JannaRegular';
     font-size: 15px;
     box-shadow: none;
 }
@@ -3015,7 +3015,7 @@ input[type=number] {
     border: 4px solid #1F5098;
     font-size: 15px;
     padding: 0px;
-    /* font-family: almarai regular; */
+    font-family: 'JannaRegular';
     font-weight: bold;
     width: 140px;
     height: 40px;
