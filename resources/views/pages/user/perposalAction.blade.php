@@ -22,7 +22,7 @@
                 <div class="col-12 d-flex">
                     <div class="col-6">
                         <h1>
-                            #P-000{{ $user->purposals->order_id }}
+                            #P-000{{ $invoice->id }}
                         </h1>
                     </div>
                     <div class="col-6 text-end">
@@ -51,7 +51,7 @@
                                             <th scope="col"class="text-light">Quantity</th>
                                             <th scope="col"class="text-light">Rate</th>
                                             <th scope="col"class="text-light">Amount</th>
-                                        </tr>
+                                        </tr>invoice
                                     </thead>
                                     <tbody>
                                         <tr>
@@ -67,8 +67,8 @@
                                             <td rowspan="4"></td>
                                             <td colspan="2">Total</td>
                                             @php
-                                            $total = ($user->purposals->price_model*$user->purposals->qty_model)+($user->purposals->price_design*$user->purposals->qty_design);
-                                            $totaltex = $total*($user->purposals->tax/100);
+                                            $total = ($invoice->price_model*$invoice->qty_model)+($invoice->price_design*$invoice->qty_design);
+                                            $totaltex = $total*($invoice->tax/100);
                                             $t = $totaltex + $total;
                                             @endphp
                                             <td> {{$total}}SR</td>
@@ -76,7 +76,7 @@
                                         </tr>
                                         <tr>
                                             <td colspan="2">VAT Rate</td>
-                                            <td>{{$user->purposals->tax}}%</td>
+                                            <td>{{$invoice->tax}}%</td>
                                         </tr>
                                         <tr>
                                             <td colspan="2">VAT Amount</td>
