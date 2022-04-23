@@ -5315,13 +5315,18 @@
                                                                 </div>
                                                                 <div class="design-card-left-bottom">
                                                                     <div class="card-icons">
-                                                                        <img src="{{ asset('user/assets/images/ai.png') }}"
+                                                                        <a href="#">
+                                                                            <img src="{{ asset('user/assets/images/ai.png') }}"
                                                                             class="img-fluid" alt="">
-                                                                        <img src="{{ asset('user/assets/images/dn.png') }}"
+                                                                        </a>
+                                                                        <a href="#">
+                                                                            <img src="{{ asset('user/assets/images/dn.png') }}"
                                                                             class="img-fluid" alt="">
-                                                                        <img src="{{ asset('user/assets/images/in.png') }}"
+                                                                        </a>
+                                                                        <a href="#">
+                                                                            <img src="{{ asset('user/assets/images/in.png') }}"
                                                                             class="img-fluid" alt="">
-
+                                                                        </a>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -5370,12 +5375,19 @@
                                                                 </div>
                                                                 <div class="design-card-left-bottom">
                                                                     <div class="card-icons">
+                                                                    
+                                                                        <a href="#">
                                                                         <img src="{{ asset('user/assets/images/ai.png') }}"
                                                                             class="img-fluid" alt="">
+                                                                            </a>
+                                                                        <a href="#">
                                                                         <img src="{{ asset('user/assets/images/dn.png') }}"
                                                                             class="img-fluid" alt="">
+                                                                            </a>
+                                                                        <a href="#">
                                                                         <img src="{{ asset('user/assets/images/in.png') }}"
                                                                             class="img-fluid" alt="">
+                                                                            </a>
 
                                                                     </div>
                                                                 </div>
@@ -5425,12 +5437,19 @@
                                                                 </div>
                                                                 <div class="design-card-left-bottom">
                                                                     <div class="card-icons">
+                                                                   
+                                                                        <a href="#">
                                                                         <img src="{{ asset('user/assets/images/ai.png') }}"
                                                                             class="img-fluid" alt="">
+                                                                             </a>
+                                                                        <a href="#">
                                                                         <img src="{{ asset('user/assets/images/dn.png') }}"
                                                                             class="img-fluid" alt="">
+                                                                             </a>
+                                                                        <a href="#">
                                                                         <img src="{{ asset('user/assets/images/in.png') }}"
                                                                             class="img-fluid" alt="">
+                                                                             </a>
 
                                                                     </div>
                                                                 </div>
@@ -5482,12 +5501,23 @@
                                                                 </div>
                                                                 <div class="design-card-left-bottom">
                                                                     <div class="card-icons">
+                                                                                                                                                 </a>
+                                                                        <a href="#">
                                                                         <img src="{{ asset('user/assets/images/ai.png') }}"
                                                                             class="img-fluid" alt="">
+                                                                            </a>                                                                        </a>
+                                                                        <a href="#">
+                                                          
                                                                         <img src="{{ asset('user/assets/images/dn.png') }}"
                                                                             class="img-fluid" alt="">
-                                                                        <img src="{{ asset('user/assets/images/in.png') }}"
+                                                                            </a>                                                                         </a>
+                                                                        <a href="#">
+                                                           
+                                                                        <img src="{{ asset('user/asset
+                                                                            s/images/in.png') }}"
                                                                             class="img-fluid" alt="">
+                                                                                                                                                     </a>
+                                                                        </a>
 
                                                                     </div>
                                                                 </div>
@@ -5537,12 +5567,19 @@
                                                                 </div>
                                                                 <div class="design-card-left-bottom">
                                                                     <div class="card-icons">
+                                                                    <a href="#">
                                                                         <img src="{{ asset('user/assets/images/ai.png') }}"
                                                                             class="img-fluid" alt="">
+                                                                        </a>
+                                                                            <a href="#">
                                                                         <img src="{{ asset('user/assets/images/dn.png') }}"
                                                                             class="img-fluid" alt="">
+                                                                            </a>
+                                                                            <a href="#">
                                                                         <img src="{{ asset('user/assets/images/in.png') }}"
                                                                             class="img-fluid" alt="">
+                                                                            </a>
+
 
                                                                     </div>
                                                                 </div>
@@ -5592,12 +5629,18 @@
                                                                 </div>
                                                                 <div class="design-card-left-bottom">
                                                                     <div class="card-icons">
+                                                                            <a href="#">
                                                                         <img src="{{ asset('user/assets/images/ai.png') }}"
                                                                             class="img-fluid" alt="">
+                                                                            </a>
+                                                                            <a href="#">
                                                                         <img src="{{ asset('user/assets/images/dn.png') }}"
                                                                             class="img-fluid" alt="">
+                                                                            </a>
+                                                                            <a href="#">
                                                                         <img src="{{ asset('user/assets/images/in.png') }}"
                                                                             class="img-fluid" alt="">
+                                                                            </a>
 
                                                                     </div>
                                                                 </div>
@@ -5648,12 +5691,18 @@
                                                                 </div>
                                                                 <div class="design-card-left-bottom">
                                                                     <div class="card-icons">
+                                                                            <a href="#">
                                                                         <img src="{{ asset('user/assets/images/ai.png') }}"
                                                                             class="img-fluid" alt="">
+                                                                            </a>
+                                                                            <a href="#">
                                                                         <img src="{{ asset('user/assets/images/dn.png') }}"
                                                                             class="img-fluid" alt="">
+                                                                            </a>
+                                                                            <a href="#">
                                                                         <img src="{{ asset('user/assets/images/in.png') }}"
                                                                             class="img-fluid" alt="">
+                                                                            </a>
 
                                                                     </div>
                                                                 </div>
@@ -5706,12 +5755,18 @@
                                                                     </div>
                                                                     <div class="design-card-left-bottom">
                                                                         <div class="card-icons">
+                                                                        <a href="#">
                                                                             <img src="{{ asset('user/assets/images/ai.png') }}"
                                                                                 class="img-fluid" alt="">
+                                                                        </a>
+                                                                        <a href="#">
                                                                             <img src="{{ asset('user/assets/images/dn.png') }}"
                                                                                 class="img-fluid" alt="">
+                                                                                </a>
+                                                                                <a href="#">
                                                                             <img src="{{ asset('user/assets/images/in.png') }}"
                                                                                 class="img-fluid" alt="">
+                                                                                </a>
 
                                                                         </div>
                                                                     </div>
@@ -5762,12 +5817,18 @@
                                                                 </div>
                                                                 <div class="design-card-left-bottom">
                                                                     <div class="card-icons">
+                                                                        <a href="#">
                                                                         <img src="{{ asset('user/assets/images/ai.png') }}"
                                                                             class="img-fluid" alt="">
+                                                                             </a>
+                                                                        <a href="#">
                                                                         <img src="{{ asset('user/assets/images/dn.png') }}"
                                                                             class="img-fluid" alt="">
+                                                                             </a>
+                                                                        <a href="#">
                                                                         <img src="{{ asset('user/assets/images/in.png') }}"
                                                                             class="img-fluid" alt="">
+                                                                             </a>
 
                                                                     </div>
                                                                 </div>
@@ -6270,12 +6331,18 @@
                                                                     </div>
                                                                     <div class="design-card-left-bottom">
                                                                         <div class="card-icons">
+                                                                        <a href="#">
                                                                             <img src="{{ asset('user/assets/images/ai.png') }}"
                                                                                 class="img-fluid" alt="">
+                                                                                 </a>
+                                                                        <a href="#">
                                                                             <img src="{{ asset('user/assets/images/dn.png') }}"
                                                                                 class="img-fluid" alt="">
+                                                                                 </a>
+                                                                        <a href="#">
                                                                             <img src="{{ asset('user/assets/images/in.png') }}"
                                                                                 class="img-fluid" alt="">
+                                                                                 </a>
 
                                                                         </div>
                                                                     </div>
@@ -6300,12 +6367,22 @@
                                                                 </div>
                                                                 <div class="design-card-left-bottom">
                                                                     <div class="card-icons">
+                                                                        <a href="#">
+
                                                                         <img src="{{ asset('user/assets/images/ai.png') }}"
                                                                             class="img-fluid" alt="">
+                                                                </a>
+                                                                        <a href="#">
+
                                                                         <img src="{{ asset('user/assets/images/dn.png') }}"
                                                                             class="img-fluid" alt="">
+                                                                </a>
+                                                                        <a href="#">
+
                                                                         <img src="{{ asset('user/assets/images/in.png') }}"
                                                                             class="img-fluid" alt="">
+                                                                </a>
+
 
                                                                     </div>
                                                                 </div>
@@ -6328,12 +6405,18 @@
                                                                 </div>
                                                                 <div class="design-card-left-bottom">
                                                                     <div class="card-icons">
+                                                                    <a href="#">
                                                                         <img src="{{ asset('user/assets/images/ai.png') }}"
                                                                             class="img-fluid" alt="">
+                                                                            </a>
+                                                                        <a href="#">
                                                                         <img src="{{ asset('user/assets/images/dn.png') }}"
                                                                             class="img-fluid" alt="">
+                                                                            </a>
+                                                                        <a href="#">
                                                                         <img src="{{ asset('user/assets/images/in.png') }}"
                                                                             class="img-fluid" alt="">
+                                                                            </a>
 
                                                                     </div>
                                                                 </div>
@@ -6357,12 +6440,18 @@
                                                                 </div>
                                                                 <div class="design-card-left-bottom">
                                                                     <div class="card-icons">
+                                                                        <a href="#">
                                                                         <img src="{{ asset('user/assets/images/ai.png') }}"
                                                                             class="img-fluid" alt="">
+                                                                            </a>
+                                                                        <a href="#">
                                                                         <img src="{{ asset('user/assets/images/dn.png') }}"
                                                                             class="img-fluid" alt="">
+                                                                            </a>
+                                                                        <a href="#">
                                                                         <img src="{{ asset('user/assets/images/in.png') }}"
                                                                             class="img-fluid" alt="">
+                                                                            </a>
 
                                                                     </div>
                                                                 </div>
@@ -6389,12 +6478,18 @@
                                                                     </div>
                                                                     <div class="design-card-left-bottom">
                                                                         <div class="card-icons">
+                                                                        <a href="#">
                                                                             <img src="{{ asset('user/assets/images/ai.png') }}"
                                                                                 class="img-fluid" alt="">
+                                                                                </a>
+                                                                        <a href="#">
                                                                             <img src="{{ asset('user/assets/images/dn.png') }}"
                                                                                 class="img-fluid" alt="">
+                                                                                </a>
+                                                                        <a href="#">
                                                                             <img src="{{ asset('user/assets/images/in.png') }}"
                                                                                 class="img-fluid" alt="">
+                                                                                </a>
 
                                                                         </div>
                                                                     </div>
@@ -6418,12 +6513,18 @@
                                                                 </div>
                                                                 <div class="design-card-left-bottom">
                                                                     <div class="card-icons">
+                                                                        <a href="#">
                                                                         <img src="{{ asset('user/assets/images/ai.png') }}"
                                                                             class="img-fluid" alt="">
+                                                                            </a>
+                                                                        <a href="#">
                                                                         <img src="{{ asset('user/assets/images/dn.png') }}"
                                                                             class="img-fluid" alt="">
+                                                                            </a>
+                                                                        <a href="#">
                                                                         <img src="{{ asset('user/assets/images/in.png') }}"
                                                                             class="img-fluid" alt="">
+                                                                            </a>
 
                                                                     </div>
                                                                 </div>
@@ -6594,12 +6695,18 @@
                                                                     </div>
                                                                     <div class="design-card-left-bottom">
                                                                         <div class="card-icons">
+                                                                        <a href="#">
                                                                             <img src="{{ asset('user/assets/images/ai.png') }}"
                                                                                 class="img-fluid" alt="">
+                                                                                </a>
+                                                                        <a href="#">
                                                                             <img src="{{ asset('user/assets/images/dn.png') }}"
                                                                                 class="img-fluid" alt="">
+                                                                                </a>
+                                                                        <a href="#">
                                                                             <img src="{{ asset('user/assets/images/in.png') }}"
                                                                                 class="img-fluid" alt="">
+                                                                                </a>
 
                                                                         </div>
                                                                     </div>
@@ -6625,12 +6732,18 @@
                                                                     </div>
                                                                     <div class="design-card-left-bottom">
                                                                         <div class="card-icons">
+                                                                        <a href="#">
                                                                             <img src="{{ asset('user/assets/images/ai.png') }}"
                                                                                 class="img-fluid" alt="">
+                                                                                </a>
+                                                                        <a href="#">
                                                                             <img src="{{ asset('user/assets/images/dn.png') }}"
                                                                                 class="img-fluid" alt="">
+                                                                                </a>
+                                                                        <a href="#">
                                                                             <img src="{{ asset('user/assets/images/in.png') }}"
                                                                                 class="img-fluid" alt="">
+                                                                                </a>
 
                                                                         </div>
                                                                     </div>
@@ -6656,12 +6769,18 @@
                                                                     </div>
                                                                     <div class="design-card-left-bottom">
                                                                         <div class="card-icons">
+                                                                        <a href="#">
                                                                             <img src="{{ asset('user/assets/images/ai.png') }}"
                                                                                 class="img-fluid" alt="">
+                                                                                </a>
+                                                                        <a href="#">
                                                                             <img src="{{ asset('user/assets/images/dn.png') }}"
                                                                                 class="img-fluid" alt="">
+                                                                                </a>
+                                                                        <a href="#">
                                                                             <img src="{{ asset('user/assets/images/in.png') }}"
                                                                                 class="img-fluid" alt="">
+                                                                                </a>
 
                                                                         </div>
                                                                     </div>
@@ -6687,12 +6806,18 @@
                                                                     </div>
                                                                     <div class="design-card-left-bottom">
                                                                         <div class="card-icons">
+                                                                        <a href="#">
                                                                             <img src="{{ asset('user/assets/images/ai.png') }}"
                                                                                 class="img-fluid" alt="">
+                                                                                </a>
+                                                                        <a href="#">
                                                                             <img src="{{ asset('user/assets/images/dn.png') }}"
                                                                                 class="img-fluid" alt="">
+                                                                                </a>
+                                                                        <a href="#">
                                                                             <img src="{{ asset('user/assets/images/in.png') }}"
                                                                                 class="img-fluid" alt="">
+                                                                                </a>
 
                                                                         </div>
                                                                     </div>
@@ -6718,12 +6843,18 @@
                                                                     </div>
                                                                     <div class="design-card-left-bottom">
                                                                         <div class="card-icons">
+                                                                        <a href="#">
                                                                             <img src="{{ asset('user/assets/images/ai.png') }}"
                                                                                 class="img-fluid" alt="">
+                                                                                </a>
+                                                                        <a href="#">
                                                                             <img src="{{ asset('user/assets/images/dn.png') }}"
                                                                                 class="img-fluid" alt="">
+                                                                                </a>
+                                                                        <a href="#">
                                                                             <img src="{{ asset('user/assets/images/in.png') }}"
                                                                                 class="img-fluid" alt="">
+                                                                                </a>
 
                                                                         </div>
                                                                     </div>
@@ -6749,12 +6880,18 @@
                                                                     </div>
                                                                     <div class="design-card-left-bottom">
                                                                         <div class="card-icons">
+                                                                        <a href="#">
                                                                             <img src="{{ asset('user/assets/images/ai.png') }}"
                                                                                 class="img-fluid" alt="">
+                                                                                </a>
+                                                                        <a href="#">
                                                                             <img src="{{ asset('user/assets/images/dn.png') }}"
                                                                                 class="img-fluid" alt="">
+                                                                                </a>
+                                                                        <a href="#">
                                                                             <img src="{{ asset('user/assets/images/in.png') }}"
                                                                                 class="img-fluid" alt="">
+                                                                                </a>
 
                                                                         </div>
                                                                     </div>
