@@ -9,20 +9,6 @@ class Perposal extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'tax',
-        'price_model',
-        'price_design',
-        'qty_model',
-        'user_id',
-        'order_id',
-        'qty_design',
-        'validtill',
-        'address',
-        'concept_design',
-        'manufacturing',
-        'deliverable_design',
-        'deliverable_model',
-        'image',
-        'date'
+         'date', 'validtill', 'qty_design', 'user_id', 'order_id', 'deliverable_design', 'deliverable_model', 'image', 'address', 'concept_design', 'manufacturing', 'qty_model', 'price_design', 'price_model', 'tax', 'created_at', 'updated_at', 'assigned', 'status', 'comments', 'phone', 'country', 'zip_code', 'city', 'state', 'subject'
     ];
 }
