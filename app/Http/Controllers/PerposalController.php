@@ -20,8 +20,10 @@ class PerposalController extends Controller
      */
     public function index()
     {
-        $invoices = Perposal::all();
-        return view('pages.admin.dashboard.perposal.index', compact('invoices'));
+        $invoices = Perposal::with('user')->get();
+        $users = User::all();
+        $medicals = Medical::all();
+        return view('pages.admin.dashboard.perposal.index', compact('invoices','users','medicals'));
     }
 
 
@@ -176,8 +178,8 @@ class PerposalController extends Controller
     public function perposalAccept(Request $request,$id)
     {
     
-        User::find($id)->update([
-            'approve' => $request->approve,
+        Perposal::find($id)->update([
+            'assigned' => $request->approve,
         ]);
         if($request->approve==1){
             return 1;
@@ -188,7 +190,7 @@ class PerposalController extends Controller
     public function perposalAction(Request $request,$id)
     {
         
-        $invoice = Perposal::find($id);
+        $invoice = Perposal::where('order_id',$id)->first();
         $user = User::find($invoice->user_id);
         return view('pages.user.perposalAction', compact('invoice', 'user'));
     }

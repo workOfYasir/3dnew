@@ -11,6 +11,7 @@ use App\Notifications\InvoiceNotification;
 use Barryvdh\DomPDF\Facade\Pdf ;
 // use PDF;
 use App\Mail\InvoiceMail;
+use App\Models\Payment;
 
 class InvoiceController extends Controller
 {
@@ -21,7 +22,8 @@ class InvoiceController extends Controller
      */
     public function index()
     {
-        $invoices = Invoice::all();
+        $invoices = Invoice::with('user')->get();
+        // dd($invoices);
         return view('pages.admin.dashboard.invoice.index', compact('invoices'));
     }
 
@@ -128,7 +130,7 @@ class InvoiceController extends Controller
      */
     public function show($id)
     {
-        $invoice = Invoice::find($id);
+        $invoice = Invoice::where('id',$id)->with('user')->get();
         $user = User::find($invoice->user_id);
         // dd($invoice);
         return view('pages.admin.invoiceView', compact('invoice', 'user'));
@@ -195,5 +197,41 @@ class InvoiceController extends Controller
             return $pdf->download('invoice.pdf');
         // }
         // return $pdf->stream();
+    }
+    public function convertToInvoice(Request $request)
+    {
+     
+        $invoice = Invoice::create([
+            'user_id' =>$request->user, 
+            'order_id' =>$request->project,  
+            'perposal_id'=>$request->invo_no, 
+            'payment' =>$request->payment, 
+            'currency' =>$request->currency, 
+            'sale_agent'=>$request->sale_agent, 
+            'admin_note'=>$request->admin_note, 
+            'concept_design'=>$request->description1, 
+            'qty_design'=>$request->qty1, 
+            'price_design'=>$request->price1, 
+            'deliverable_model'=>$request->description2, 
+            'qty_model'=>$request->qty2, 
+            'price_model'=>$request->price2, 
+            'client_note'=>$request->client_note, 
+            'terms'=>$request->terms,
+
+        ]);
+        return redirect()->back();
+    }
+    public function paymentAdded(Request $request)
+    {
+        $payment = Payment::create([
+            'payment_created_by'=>Auth::user()->id,
+            'invoice_id'=>$request->invoice_id,
+            'paid'=>$request->paid,
+            'transection_id'=>$request->transection_id,
+            'payment_mode'=>$request->payment_mode,
+            'note'=>$request->note,
+            'total_amount'=>$request->note
+        ]);
+        return redirect()->back();
     }
 }

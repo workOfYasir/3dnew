@@ -2,27 +2,19 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Invoice extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'tax',
-        'price_model',
-        'price_design',
-        'qty_model',
-        'user_id',
-        'order_id',
-        'qty_design',
-        'validtill',
-        'address',
-        'concept_design',
-        'manufacturing',
-        'deliverable_design',
-        'deliverable_model',
-        'image',
-        'date'
+        'date', 'validtill','qty_design', 'deliverable_design', 'user_id', 'order_id', 'deliverable_model', 'qty_model', 'price_design', 'price_model', 'tax', 'image', 'address', 'concept_design', 'manufacturing', 'created_at', 'updated_at', 'assigned', 'state', 'city', 'comments', 'phone', 'status', 'perposal_id', 'terms', 'payment', 'currency', 'sale_agent', 'admin_note', 'client_note' 
     ];
+    public function user(){
+
+        return $this->belongsTo(User::class);
+        
+    }
 }
