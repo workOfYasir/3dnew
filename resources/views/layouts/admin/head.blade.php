@@ -64,11 +64,9 @@
     <!-- Bootstrap css -->
     <link rel="stylesheet" href="{{asset('user/assets/css/bootstrap.min.css')}}">
 
-   <!-- 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css')}}" />
-  <link href="https://cdn.js')}}delivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css')}}" rel="stylesheet" />
-    <script src="https://cdn.js')}}delivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js')}}"></script> -->
-   
+    
+    <link rel="stylesheet" type="text/css" href="http://keith-wood.name/css/jquery.signature.css">
+
     <style>
         .page-wrapper.compact-wrapper .page-body-wrapper .page-body {
             padding-top: 30px;

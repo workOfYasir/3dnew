@@ -39,6 +39,7 @@ use Symfony\Component\HttpKernel\Profiler\Profile;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 Route::get('userLogin', 'Auth\LoginController@showLoginForm');
 Route::group(['prefix' => 'artisan'], function () {
     Route::get('clear', function () {
@@ -101,9 +102,8 @@ Route::group(['middleware' => 'auth', 'varify','cors'], function () {
         Route::get('/vieworder/{id}', [App\Http\Controllers\HomeController::class, 'vieworder'])->name('vieworder');
         Route::get('/vieworderpublic/{id}', [App\Http\Controllers\HomeController::class, 'vieworderpublic'])->name('vieworderpublic'); 
         Route::get('perposal/accept/{id}',[PerposalController::class,'perposalAccept'])->name('perposalAccept');
-
         Route::get('perposal/action/view/{id}',[PerposalController::class,'perposalAction'])->name('perposalAction');
-        
+        Route::post('identity',[UserController::class,'identity'])->name('identity');       
     });
     Route::group(['middleware' =>  'role:admin'], function () {
         Route::resource('about', AboutUsController::class);
@@ -118,6 +118,9 @@ Route::group(['middleware' => 'auth', 'varify','cors'], function () {
         Route::resource('map', MapimageController::class);
         Route::resource('youtubeurl', YoutubeurlController::class);
         Route::resource('counter', CounterController::class);
+
+        Route::post('convertToInvoice',[InvoiceController::class,'convertToInvoice'])->name('convertToInvoice');
+
         Route::prefix('user')->name('user.')->group(function (){
             Route::get('list',[UserController::class,'index'])->name('list');
             Route::get('approve/{id}',[UserController::class,'approval'])->name('approve');
@@ -126,7 +129,7 @@ Route::group(['middleware' => 'auth', 'varify','cors'], function () {
         });
         
         Route::get('send/mail/{id}',[InvoiceController::class,'sendViaMail'])->name('sendViaMail');
-
+        Route::post('payment/added',[InvoiceController::class,'paymentAdded'])->name('paymentAdded');
         Route::get('payment', [MedicalController::class, 'payment'])->name('payment');
         Route::get('ProfileUpdate/view', [HomeController::class, 'viewSetting'])->name('profileupdate.view');
         Route::post('profile/setting', [HomeController::class, 'updateprofile'])->name('profile.setting');

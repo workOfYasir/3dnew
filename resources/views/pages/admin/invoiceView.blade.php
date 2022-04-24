@@ -107,9 +107,10 @@
                         <td>{{$invoice->qty_model}}</td>
                         <td>{{$invoice->qty_model}}</td>
                         <td> <span>{{$invoice->price_model}} SR</span>
-                            <div class="">
-                                <img src="{{asset($invoice->image)}}" alt="">
-
+                            <div class="col-12 justify-content-center d-flex">
+                                <div class="col-4">
+                                    <img src="{{asset($invoice->image)}}" class="img-fluid" alt="">
+                                </div>
                             </div>
                         </td>
                     </tr>

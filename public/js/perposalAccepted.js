@@ -9,11 +9,13 @@ $(function() {
             url: perposalAcceptedURL,
             data:  {"approve": approve},
             success: function(data){
+                $('#identityModal').modal('show')
             if (approve == 1) {
                     $('.perposalAccepted').html('Accepted');
                     $('.perposalAccepted').removeClass("text-theme-6");
                     $('.perposalAccepted').addClass("text-theme-9");
                     $('.perposalAccepted').attr('checked',1);
+                    
 
             } else {
                     $('.perposalAccepted').html('Accept');

@@ -101,7 +101,42 @@
         var userByOrder = "{{route('userByOrder',':id')}}";
         var perposalAccepted = "{{ route('perposalAccept',':id') }}";
     </script>
-
+<script>
+    function panel(key) {
+        if($( ".panel_view_"+key).hasClass( "d-none" )){
+            $('.panel_view').addClass('d-none');
+            $('.panel_view').removeClass("d-block");
+            $('.panelwrapper').removeClass('col-12');
+            $('.panelwrapper').addClass('col-6');
+            $('.panel_view_'+key).removeClass("d-none");
+            $('.panel_view_'+key).addClass('d-block')
+        }else{
+            $('.panel_view_'+key).addClass('d-none');
+            $('.panelwrapper').removeClass('col-6');
+            $('.panelwrapper').addClass('col-12');
+            $('.panel_view').addClass('d-none');
+            $('.panel_view').removeClass("d-block");
+            $('.panel_view_'+key).removeClass("d-block");
+        }
+    }
+    function paymentDiv(key) {
+        if($( ".payment_add_"+key).hasClass( "d-none" )){
+            $('.payment_add_'+key).removeClass('d-none');
+            $('.payment_add_'+key).addClass('d-block')
+            $('.payment_view_'+key).removeClass("d-block");
+            $('.payment_view_'+key).addClass('d-none')
+        }else{
+            $('.payment_add_'+key).addClass('d-none');
+            $('.payment_add_'+key).removeClass('d-block');
+            $('.payment_view_'+key).addClass("d-block");
+            $('.payment_view_'+key).removeClass('d-none')
+            
+        }
+    }
+    // $('.panel').click(function () {
+    
+    // })
+</script>
     <!-- Scripts -->
 
     <script src="{{ asset('assets/js/datatable/datatables/jquery.dataTables.min.js') }}"></script>

@@ -14,7 +14,10 @@
     .nav-tabs{
         border-bottom: 0px;
     }
-</style>
+
+        .kbw-signature { width: 100%; height: 200px;}
+       
+    </style>
             <div class="container">
                 <div class="col-12 p-5">
                     <img src="{{ asset('invoice/assets/logo.svg') }}" />
@@ -22,27 +25,34 @@
                 <div class="col-12 d-flex">
                     <div class="col-6">
                         <h1>
-                            #P-000{{ $invoice->id }}
+                            {{ $invoice->order_id }}
                         </h1>
                     </div>
+                 
                     <div class="col-6 text-end">
-                        <a href="{{ route('purposal',$user->purposals->id) }}" target="_blank"
+                        <a href="{{ route('purposal',$invoice->id) }}" target="_blank"
                             class="btn btn-sm btn-light">View</a>
-                        <a href="{{ route('purposal.pdf',$user->purposals->id) }}"
+                        <a href="{{ route('purposal.pdf',$invoice->id) }}"
                             class="btn btn-sm btn-light">PDF</a>
-                        <a href="{{ route('sendViaMail',$user->purposals->id) }}"
-                            class="btn btn-sm btn-light">Mail</a>
-                            <button class="btn btn-sm btn-light perposalNotAccepted " data-id="{{$user->purposals->id}}">Declined</button>                    
-                            <button class="btn btn-sm bg-success text-light perposalAccepted " data-id="{{$user->purposals->id}}">Accept</button>
-
+                                <button class="btn btn-sm btn-light perposalNotAccepted" data-id="{{$invoice->id}}">Declined</button>     
+                           
+                                <button class="btn btn-sm bg-success text-light perposalAccepted" data-id="{{$invoice->id}}">
+                                    @if($invoice->assigned==0)               
+                                    Accept
+                                    @else
+                                    Accepted
+                                    @endif
+                                </button>
                             
+                               
                     </div>
                 </div>
+                @include('pages.user.identityModal');
                 <div class="row">
                 <div class="col-8">
                     <div class="card">
                         <div class="card-body p-4">
-                           
+                            
                             <p class="card-text">
                                 <table class="table">
                                     <thead class="bg-dark text-light ">
@@ -113,18 +123,18 @@
                             <strong>
                                 {{ $user->name }}
                             </strong><br/>
-                            <span>{{ @$user->purposals->address }}</span><br/>
-                            <span>{{ $user->purposals->city }}</span><br/>
-                            <span>{{ $user->purposals->country.', '.$user->purposals->zip_code }}</span>
+                            <span>{{ @$invoice->address }}</span><br/>
+                            <span>{{ $invoice->city }}</span><br/>
+                            <span>{{ $invoice->country.', '.$invoice->zip_code }}</span>
                             <hr>
                             <strong>
                                 Perposal Information
                                 <span>{{ $user->name }}</span><br/>
                                 <span>{{ $user->email }}</span><br/>
-                                <span>{{ $user->purposals->phone }}</span><br/>
-                                <span>{{ @$user->purposals->address }}</span><br/>
-                            <span>{{ $user->purposals->city }}</span><br/>
-                            <span>{{ $user->purposals->country.', '.$user->purposals->zip_code }}</span>
+                                <span>{{ $invoice->phone }}</span><br/>
+                                <span>{{ @$invoice->address }}</span><br/>
+                            <span>{{ $invoice->city }}</span><br/>
+                            <span>{{ $invoice->country.', '.$invoice->zip_code }}</span>
                             </strong><br/>
                             <br/>
                             @php

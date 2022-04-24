@@ -3,10 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Medical;
+use App\Models\Identity;
 use App\Models\UserDetail;
 use Illuminate\Http\Request;
 use App\Models\TempUpdateProfile;
-use App\Models\Medical;
 
 class UserController extends Controller
 {
@@ -26,6 +27,33 @@ class UserController extends Controller
         }else{
             return 0;
         }
+    }
+    public function identity(Request $request)
+    {
+       
+        $folderPath = public_path('upload/');
+	  
+	    $image_parts = explode(";base64,", $request->signed);
+	        
+	    $image_type_aux = explode("image/", $image_parts[0]);
+	      
+	    $image_type = $image_type_aux[1];
+	      
+	    $image_base64 = base64_decode($image_parts[1]);
+	      
+	    $file = $folderPath . uniqid() . '.'.$image_type;
+
+        $identity = Identity::create([
+            'invoice_id'=>$request->invoice_id,
+            'user_id'=>$request->user_id,
+            'signature'=>$file,
+            'ip'=>$request->ip()
+        ]);
+     
+	    file_put_contents($file, $image_base64);
+
+        return redirect()->back();
+        
     }
     public function profileUpdate(Request $request)
     {

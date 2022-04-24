@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Mpdf\Tag\Input;
 use App\Models\Logo;
 use App\Models\Tech;
 use App\Models\User;
@@ -19,6 +20,7 @@ use App\Models\ImageSlider;
 use Illuminate\Http\Request;
 use App\Models\PublicService;
 use App\Models\TempUpdateProfile;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
@@ -41,6 +43,7 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
+
     public function index()
     {
 
