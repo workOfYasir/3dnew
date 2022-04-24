@@ -168,7 +168,7 @@
         <img src="{{ asset('/user/assets/images/warning.png')}}" alt="" class="almuntjat-form-error__img"> بعد إضافة المنتج سيذهب الى الإدارة للمراجعة للقبول أو الرفض
     </div>
     <div class="form-action">
-        <button class="btn btn-form mx-3 with-arrow disabled" type="submit">حفظ</button>
+        <button class="btn btn-form mx-3 with-arrow member-modal-disabled disabled " type="submit">حفظ</button>
         <p>تعديل بيانات التسجيل</p>
     </div>
 </form>
