@@ -124,8 +124,8 @@
 @if(Auth::check())
 <form class="gy-4 gx-5" method="get" action="{{ route('profileUser') }}">
                                 
-    <input type="text" name="id" value="{{ Auth::user()->id }}">
-    <input type="text" name="role" value="{{ Auth::user()->role }}">
+    <!-- <input type="text" name="id" value="{{ Auth::user()->id }}">
+    <input type="text" name="role" value="{{ Auth::user()->role }}"> -->
     
     <div class="row justify-content-center">
         <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-3 mt-4">
@@ -168,7 +168,7 @@
         <img src="{{ asset('/user/assets/images/warning.png')}}" alt="" class="almuntjat-form-error__img"> بعد إضافة المنتج سيذهب الى الإدارة للمراجعة للقبول أو الرفض
     </div>
     <div class="form-action">
-        <button type="submit">حفظ</button>
+        <button class="btn btn-form mx-3 with-arrow disabled" type="submit">حفظ</button>
         <p>تعديل بيانات التسجيل</p>
     </div>
 </form>
