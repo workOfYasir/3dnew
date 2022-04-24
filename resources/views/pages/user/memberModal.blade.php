@@ -130,7 +130,7 @@
     <div class="row justify-content-center">
         <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-3 mt-4">
             <label class="form-label dot">الاسم</label>
-            <input type="text" class="form-control name " name="name" value="{{ Auth::user()->name }}" placeholder="الاسم هنا .." value="">
+            <input type="text" class="form-control name disabled" name="name" value="{{ Auth::user()->name }}" placeholder="الاسم هنا .." value="">
         </div>
         <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-3 mt-4">
             <label class="form-label dot">رقم الجوال</label>
@@ -138,13 +138,13 @@
         </div>
         <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-3 mt-4">
             <label class="form-label dot">الايميل</label>
-            <input type="text" name="email"  name="email" value="{{ Auth::user()->email }}" class="form-control email " placeholder="الايميل هنا .." value="">
+            <input type="text" name="email"  name="email" value="{{ Auth::user()->email }}" class="form-control email disabled" placeholder="الايميل هنا .." value="">
         </div>
     </div>
     <div class="row justify-content-center mb-5">
         <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-3 mt-4">
             <label class="form-label dot">كلمة المرور</label>
-            <input type="text" name="password" class="form-control pass " placeholder="كلمة المرور هنا .." value="">
+            <input type="text" name="password" class="form-control pass disabled" placeholder="كلمة المرور هنا .." value="">
         </div>
         <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-3 mt-4 ahs-from-box">
             <label class="form-label dot">تقنية الطباعة</label>
@@ -155,7 +155,7 @@
         </div>
         <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-3 mt-4 ahs-from-box">
             <label class="form-label dot">أنواع البرامج المستخدمة</label>
-            <select class="form-select "  name="software_type" aria-label="Default select example">
+            <select class="form-select disabled"  name="software_type" aria-label="Default select example">
                 <option></option>
                 <option>اختاير البرامج المستخدمة</option>
             </select>

@@ -300,6 +300,7 @@ $(function () {
         $('#memberModal .form-action').find('.disabled').removeClass('disabled');
         $(this).addClass('disabled').css('transition', '.6s')
     })
+    
 
     // Public Services
     $('.btn.public-service').click(function () {
