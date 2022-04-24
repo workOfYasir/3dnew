@@ -1006,8 +1006,7 @@
                                     <img src="{{ asset('user/assets/images/arrow-8.png') }}"
                                         class="mujtmah-box-btn__img"> سجل الان
                                 </button>
-                                <button class="m-btn mujtmah-box-btn" data-bs-toggle="modal"
-                                    data-bs-target="#userRequestModal">
+                                <button class="m-btn mujtmah-box-btn">
                                     <img src="{{ asset('user/assets/images/video.png') }}"
                                         class="mujtmah-box-btn__img2">فيديو تعريفي
                                 </button>
@@ -1044,13 +1043,11 @@
                                 الحروف التى يولدها التطبيق.
                             </p>
                             <div class="mujtmah-box-btn-wrapper wrapper al-center mb-3">
-                                <button 
-                                    class="m-btn mujtmah-box-btn ml-3">
+                                <button class="m-btn mujtmah-box-btn ml-3">
                                     <img src="{{ asset('user/assets/images/video.png') }}"
                                         class="mujtmah-box-btn__img2">فيديو تعريفي
                                 </button>
-                                <button 
-                                    class="m-btn mujtmah-box-btn btn-white-1">
+                                <button class="m-btn mujtmah-box-btn btn-white-1"  data-bs-toggle="modal" data-bs-target="#userRequestModal">
                                     أطلب الان
                                     <img src="{{ asset('user/assets/images/arrow-8.png') }}"
                                         class="mujtmah-box-btn__img mgl-0 mujtmah-box-btn__img3">
