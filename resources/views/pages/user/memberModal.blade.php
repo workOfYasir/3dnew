@@ -134,7 +134,7 @@
         </div>
         <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-3 mt-4">
             <label class="form-label dot">رقم الجوال</label>
-            <input type="text" class="form-control " name="field" value="{{ Auth::user()->field }}" placeholder="رقم الجوال هنا .." value="">
+            <input type="text" class="form-control disabled" name="field" value="{{ Auth::user()->field }}" placeholder="رقم الجوال هنا .." value="">
         </div>
         <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-3 mt-4">
             <label class="form-label dot">الايميل</label>
@@ -148,7 +148,7 @@
         </div>
         <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-3 mt-4 ahs-from-box">
             <label class="form-label dot">تقنية الطباعة</label>
-            <select class="form-select"  name="printing_technology" aria-label="Default select example">
+            <select class="form-select disabled"  name="printing_technology" aria-label="Default select example">
                 <option></option>
                 <option>اختيار التقنية</option>
             </select>
