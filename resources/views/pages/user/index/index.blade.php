@@ -5509,8 +5509,7 @@
                                                                             </a>                                                                         </a>
                                                                         <a href="#">
                                                            
-                                                                        <img src="{{ asset('user/asset
-                                                                            s/images/in.png') }}"
+                                                                        <img src="{{ asset('user/assets/images/in.png') }}"
                                                                             class="img-fluid" alt="">
                                                                                                                                                      </a>
                                                                         </a>
@@ -5844,8 +5843,7 @@
                                                     <button class="btn">المزيد</button>
                                                 </div> -->
                                             <div class="design-bottom-btn">
-                                                <button type="button" class="btn" data-bs-toggle="modal"
-                                                    data-bs-target="#designinnerModal">
+                                                <button type="button" class="btn">
                                                     المزيد
                                                 </button>
                                             </div>
@@ -7000,7 +6998,7 @@
                                                     <!-- <input type="text" placeholder="كلمة المرور هنا .." class="almuntjat-form__input">
                                                     <img src="assets/images/arrow-5.png" alt="" class="input-holder__img"> -->
                                                     <select class="form-select a" required name="">
-                                                        <option></option>
+                                                    <option selected disabled>اختيار التقنية</option>
                                                         <option>اختيار التقنية</option>
                                                     </select>
                                                 </div>
@@ -7015,7 +7013,7 @@
                                                     <!-- <input type="text" placeholder="اختيار التقنية" class="almuntjat-form__input">
                                                     <img src="assets/images/arrow-5.png" alt="" class="input-holder__img"> -->
                                                     <select class="form-select b" required name="">
-                                                        <option></option>
+                                                        <option selected disabled>اختيار التقنية</option>
                                                         <option>اختيار التقنية</option>
                                                     </select>
                                                 </div>
@@ -7030,7 +7028,7 @@
                                                     <!-- <input type="text" placeholder="اختاير البرامج المستخدمة" class="almuntjat-form__input">
                                                     <img src="assets/images/arrow-5.png" alt="" class="input-holder__img"> -->
                                                     <select class="form-select c" required name="">
-                                                        <option></option>
+                                                        <option selected disabled>اختاير البرامج المستخدمة</option>
                                                         <option>اختاير البرامج المستخدمة</option>
                                                     </select>
                                                 </div>
@@ -7045,7 +7043,7 @@
                                                     <!-- <input type="text" placeholder="اختاير البرامج المستخدمة" class="almuntjat-form__input">
                                                     <img src="assets/images/arrow-5.png" alt="" class="input-holder__img"> -->
                                                     <select class="form-select d" required name="">
-                                                        <option></option>
+                                                        <option selected disabled>اختاير البرامج المستخدمة</option>
                                                         <option>اختاير البرامج المستخدمة</option>
                                                     </select>
                                                 </div>
@@ -7169,7 +7167,7 @@
                                                     <div class="product-add-upload">
                                                         <!-- <img src="{{ asset('user/assets/images/cleancard3.png') }}" class="img-fluid" alt=""> -->
                                                         <p class="">إضافة</p>
-                                                        <span class="camera-icon"><i class="fa fa-camera"></i></span>
+                                                        <span class="camera-icon add-camera-icon"><i class="fa fa-camera"></i></span>
                                                     </div>
                                                 </div>
                                             </div>
