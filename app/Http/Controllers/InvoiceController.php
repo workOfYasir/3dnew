@@ -22,8 +22,9 @@ class InvoiceController extends Controller
      */
     public function index()
     {
-        $invoices = Invoice::with('user')->get();
-        // dd($invoices);
+        $invoices = Invoice::with('user')->with('payment')->get();
+        
+
         return view('pages.admin.dashboard.invoice.index', compact('invoices'));
     }
 
@@ -230,7 +231,8 @@ class InvoiceController extends Controller
             'transection_id'=>$request->transection_id,
             'payment_mode'=>$request->payment_mode,
             'note'=>$request->note,
-            'total_amount'=>$request->note
+            'payment_date'=>$request->payment_date,
+            'total_amount'=>$request->total_amount
         ]);
         return redirect()->back();
     }

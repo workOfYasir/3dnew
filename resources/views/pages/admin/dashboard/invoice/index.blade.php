@@ -96,12 +96,17 @@
                                         class="btn btn-sm btn-success "onclick="paymentDiv({{ $key }})">Payment</button>
                                 </div>
                                 <div class="col-6">
-                                    @if($invoice->status==0)
-                                    <button type="button" class="btn btn-danger">Not Accepted</button>
-                                    @else
-                                    <button type="button" class="btn btn-success">Accepted</button>
-                                    @endif
-
+                                    <?php
+                                        $payment = App\Models\Payment::where('invoice_id',$invoice->id)->exists();
+                                    
+                                        ?>
+@if($payment)
+<button
+    class="btn btn-sm btn-success">Paid</button>
+@else
+<button
+    class="btn btn-sm btn-danger">Un Paid</button>
+@endif
                                 </div>
 
                             </div>
@@ -208,10 +213,10 @@
                             </div>
                         </div>                        
                         <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-                            @if($invoice->comments==1)
+                            {{-- @if($invoice->comments==1) --}}
                             @livewire('chats',['user_id' =>
                             $invoice->user_id,'request_id'=>$invoice->order_id,'request_type'=>'App\Models\Medical'])
-                            @endif
+                            {{-- @endif --}}
                         </div>
                     </div>
                 </div>
@@ -223,13 +228,18 @@
                     <div class="col-12 d-flex">
                         <div class="col-6 p-1">
                             <div class="form-group">
+                                <input type="hidden" name="invoice_id" value ="{{$invoice->id}}" >
                                 <label for="exampleInput">Amount Recieved</label>
-                                <input type="text" class="form-control" id="exampleInput" placeholder="Example input placeholder">
+                                <input type="text" class="form-control" name="paid" id="exampleInput" placeholder="Example input placeholder">
                             </div>
                             <div class="form-group">
-                                <label for="exampleInput">Payment Recieved</label>
-                                <input type="text" class="form-control" id="exampleInput" placeholder="Example input placeholder">
+                            
+                                <label for="exampleInput">Payment Date</label>
+                                <input type="date" class="form-control" name="payment_date" id="exampleInput" placeholder="Example input placeholder">
                             </div>
+                           
+                                <input type="hidden" class="form-control" name="total_amount" value="{{$t}}" id="exampleInput" placeholder="Example input placeholder">
+                          
                             <div class="form-group">
                                 <label for="my-select">Payment Mode</label>
                                 <select id="my-select" class="form-control" name="payment_mode">
@@ -240,11 +250,11 @@
                         <div class="col-6 p-1">
                             <div class="form-group">
                                 <label for="exampleInput">Transection ID</label>
-                                <input type="text" class="form-control" id="exampleInput" placeholder="Example input placeholder">
+                                <input type="text" class="form-control" name="transection_id" id="exampleInput" placeholder="Example input placeholder">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInput">Leave a note</label>
-                                <textarea type="text" class="form-control" ></textarea>
+                                <textarea type="text" name="note" class="form-control" ></textarea>
                             </div>
                         </div>
                     </div>
