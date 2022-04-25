@@ -64,7 +64,7 @@
 
     <!-- Bootstrap css -->
     <link rel="stylesheet" href="{{asset('user/assets/css/bootstrap.min.css')}}">
-    <link rel="stylesheet" type="text/css" href="http://keith-wood.name/css/jquery.signature.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/jquery.signature.css') }}">
    <!-- 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css')}}" />
   <link href="https://cdn.js')}}delivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css')}}" rel="stylesheet" />
