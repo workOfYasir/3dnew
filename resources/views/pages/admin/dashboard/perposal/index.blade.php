@@ -91,11 +91,11 @@
                                         class="btn btn-sm btn-light">PDF</a>
                                     <a class="btn btn-sm btn-light"
                                         data-bs-toggle="modal"
-                                        data-bs-target="#convertModal"
+                                        data-bs-target="#convertModal_{{ $key }}"
                                         >Convert</a>
                                     <a href="{{ route('sendViaMail',$invoice->order_id) }}"
                                         class="btn btn-sm btn-light">Mail</a>
-                                  
+                                        @include('pages.admin.dashboard.perposal.convertModel')
                                 </div>
                               
                                 <div class="col-6">
@@ -108,7 +108,7 @@
                                 </div>
 
                             </div>
-                            @include('pages.admin.dashboard.perposal.convertModel')
+                            
                             <hr>
                             <div class="col-12 d-flex">
                                 <div class="col-6">
