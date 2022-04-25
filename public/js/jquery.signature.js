@@ -70,8 +70,7 @@ $(selector).signature({color: 'blue', guideline: true}) */
 		_create: function() {
 			this.element.addClass(this.widgetFullName || this.widgetBaseClass);
 			try {
-				this.canvas = $('<canvas width="' + this.element.width() + '" height="' +
-					this.element.height() + '">' + this.options.notAvailable + '</canvas>')[0];
+				this.canvas = $('<canvas>' + this.options.notAvailable + '</canvas>')[0];
 				this.element.append(this.canvas);
 			}
 			catch (e) {
