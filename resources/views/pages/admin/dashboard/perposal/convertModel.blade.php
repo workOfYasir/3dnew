@@ -1,4 +1,4 @@
-<div id="convertModal" style="direction: ltr" class="modal fade d-block" tabindex="-1" role="dialog" aria-labelledby="my-modal-title"
+<div id="convertModal_{{ $key }}" style="direction: ltr" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="my-modal-title"
     aria-hidden="true">
     <div class="modal-dialog modal-xl" role="document">
         <div class="modal-content">
