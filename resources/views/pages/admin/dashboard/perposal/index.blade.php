@@ -99,10 +99,10 @@
                                 </div>
                                 @include('pages.admin.dashboard.perposal.convertModel')
                                 <div class="col-6">
-                                    @if($invoice->status==0)
-                                    <button type="button" class="btn btn-danger">Not Accepted</button>
+                                    @if($invoice->assigned==0)
+                                    <button type="button" class="btn btn-sm btn-danger">Not Accepted</button>
                                     @else
-                                    <button type="button" class="btn btn-success">Accepted</button>
+                                    <button type="button" class="btn btn-sm btn-success">Accepted</button>
                                     @endif
 
                                 </div>
