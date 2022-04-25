@@ -1,6 +1,7 @@
 @extends('layouts.admin.app')
 @section('content')
 <div class="content-main">
+    @include('pages.admin.dashboard.perposal.convertModel')
     <h3>وضع اليد</h3>
     <div class="breadcrumb-main">
         <ol class="breadcrumb">
@@ -97,7 +98,7 @@
                                         class="btn btn-sm btn-light">Mail</a>
                                   
                                 </div>
-                                @include('pages.admin.dashboard.perposal.convertModel')
+                             
                                 <div class="col-6">
                                     @if($invoice->assigned==0)
                                     <button type="button" class="btn btn-sm btn-danger">Not Accepted</button>
