@@ -97,7 +97,7 @@
                                         class="btn btn-sm btn-light">Mail</a>
                                   
                                 </div>
-                                @include('pages.admin.dashboard.perposal.convertModel')
+                              
                                 <div class="col-6">
                                     @if($invoice->assigned==0)
                                     <button type="button" class="btn btn-sm btn-danger">Not Accepted</button>
@@ -108,6 +108,7 @@
                                 </div>
 
                             </div>
+                            @include('pages.admin.dashboard.perposal.convertModel')
                             <hr>
                             <div class="col-12 d-flex">
                                 <div class="col-6">
