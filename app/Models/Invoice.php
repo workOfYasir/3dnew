@@ -22,4 +22,8 @@ class Invoice extends Model
         return $this->hasOne(Payment::class);
         
     }
+    public function pdf()
+    {
+        return $this->hasMany(PdfItem::class,'pdf_id','id');
+    }
 }

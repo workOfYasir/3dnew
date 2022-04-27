@@ -103,7 +103,9 @@
     </script>
 <script>
     function panel(key) {
-        if($( ".panel_view_"+key).hasClass( "d-none" )){
+     
+        if($(".panel_view_"+key).hasClass( "d-none" )){
+            console.log(key);
             $('.panel_view').addClass('d-none');
             $('.panel_view').removeClass("d-block");
             $('.panelwrapper').removeClass('col-12');
@@ -111,6 +113,7 @@
             $('.panel_view_'+key).removeClass("d-none");
             $('.panel_view_'+key).addClass('d-block')
         }else{
+            console.log(key);
             $('.panel_view_'+key).addClass('d-none');
             $('.panelwrapper').removeClass('col-6');
             $('.panelwrapper').addClass('col-12');
@@ -133,14 +136,16 @@
             
         }
     }
-    // $('.panel').click(function () {
-    
-    // })
+    $(".addCustom").click(function(){
+        $(".wrapper").append('<tr class="element" id="div_"><td><div class="form-group"><input type="text" class="form-control" id="exampleInput" name="title[]"  placeholder="Description"></div></td><td><div class="form-group"><textarea  class="form-control" id="exampleInput" name="description[]"  placeholder="Description"></textarea></div></td><td><div class="form-group"><input type="number" class="form-control" id="exampleInput" name="qty[]"  placeholder="Quatntity"></div></td><td><div class="form-group"><input type="text" class="form-control" id="exampleInput" name="rate[]"  placeholder="Rate"></div></td><td><span id="remove_" class="remove"><i class="fa fa-uncheck" aria-hidden="true"></i>X</span></td>');     
+    });
+
 </script>
     <!-- Scripts -->
 
     <script src="{{ asset('assets/js/datatable/datatables/jquery.dataTables.min.js') }}"></script>
 	  <script src="{{ asset('assets/js/datatable/datatables/datatable.custom.js') }}"></script>
+	  <script src="{{ asset('js/dynamic_items.js') }}"></script>
 
     @stack('scripts')
     <script src="{{ asset('js/app.js') }}"></script>

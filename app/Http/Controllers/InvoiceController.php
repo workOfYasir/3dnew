@@ -5,13 +5,15 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use App\Models\Invoice;
 use App\Models\Medical;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use App\Notifications\InvoiceNotification;
-use Barryvdh\DomPDF\Facade\Pdf ;
-// use PDF;
-use App\Mail\InvoiceMail;
 use App\Models\Payment;
+use App\Models\PdfItem;
+use App\Mail\InvoiceMail;
+use Illuminate\Http\Request;
+// use PDF;
+use Barryvdh\DomPDF\Facade\Pdf;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
+use App\Notifications\InvoiceNotification;
 
 class InvoiceController extends Controller
 {
@@ -22,7 +24,9 @@ class InvoiceController extends Controller
      */
     public function index()
     {
-        $invoices = Invoice::with('user')->with('payment')->get();
+        $invoices = Invoice::with('user')->with('payment')->whereHas('pdf',function($q) {
+            $q->where('model','App/Models/Invoice');
+        })->with('pdf')->get();
         
 
         return view('pages.admin.dashboard.invoice.index', compact('invoices'));
@@ -54,22 +58,24 @@ class InvoiceController extends Controller
         $med = Medical::find($request->order_id);
         $user = User::find($med->user_id);
         $invoices = Invoice::create([
-            'tax' => $request->tax,
-            'price_model' => $request->price_model,
-            'price_design' => $request->price_design,
-            'qty_model' => $request->qty_model,
             'order_id' => $request->order_id,
-            'manufacturing' => $request->manufacturing,
-            'concept_design' => $request->concept_design,
             'user_id' => $user->id,
             'image'=> $pathimage,
             'address' =>$request->address,
-            'deliverable_model'=>$request->deliverable_model,
-            'deliverable_design'=>$request->deliverable_design,
-            'qty_design' => $request->qty_design,
             'validtill' => $request->validtill,
             'date' => $request->date,
         ]);
+        foreach ($request->title as $key => $title) {
+            $pdf_item = new PdfItem;
+                $pdf_item->model = 'App/Models/Invoice';
+                $pdf_item->pdf_id = $invoices->id;
+                $pdf_item->title = $title;
+                $pdf_item->description = $request->description[$key];
+                $pdf_item->quantity = $request->qty[$key];
+                $pdf_item->rate = $request->rate[$key];
+                $pdf_item->tax = $request->tax[$key];
+            $pdf_item->save();
+        }
         $details = [
             'subject' =>"'".$invoices->id ."' تم اصدار فاتورة رقم",
             'name' =>$user->name ,
@@ -91,8 +97,8 @@ class InvoiceController extends Controller
             $message->to($user->email)
                     ->subject($details["subject"])
                     ->attachData($pdf->output(), "invoice.pdf");
-        });
-        // \Mail::to($user->email)->send(new \App\Mail\InvoiceMail($details));
+        }); 
+        //  Mail::to($user->email)->send(new \App\Mail\InvoiceMail($details));
         return redirect()->route('invoicess.index');
     }
     public function sendViaMail($id)
@@ -111,29 +117,31 @@ class InvoiceController extends Controller
             'orderNumber' =>$id ,
         ];
         
-        $invoice = Invoice::where('id',$id)->get()->first();
+        $invoice = Invoice::where('order_id',$id)->get()->first();
         $user = User::find($invoice->user_id);
         // if($request->has('download')){
-            $pdf = PDF::loadView('pages.admin.invoice',compact('invoice', 'user'));
+        $pdf = PDF::loadView('pages.admin.invoice',compact('invoice', 'user'));
 
-        \Mail::send('emails.invoice', $details, function($message)use($details,$user, $pdf) {
+        Mail::send('emails.invoice', $details, function($message)use($details,$user, $pdf) {
             $message->to($user->email)
                     ->subject($details["subject"])
                     ->attachData($pdf->output(), "invoice.pdf");
         });
     }
-
-    /**
+    
+    /** 
      * Display the specified resource.
-     *
+     *  
      * @param  \App\Models\Invoice  $invoice
      * @return \Illuminate\Http\Response
-     */
+     */ 
     public function show($id)
     {
-        $invoice = Invoice::where('id',$id)->with('user')->get();
+      
+        $invoice = Invoice::where('id',$id)->with('user')->first();
+        
         $user = User::find($invoice->user_id);
-        // dd($invoice);
+  
         return view('pages.admin.invoiceView', compact('invoice', 'user'));
     }
 
@@ -209,17 +217,23 @@ class InvoiceController extends Controller
             'payment' =>$request->payment, 
             'currency' =>$request->currency, 
             'sale_agent'=>$request->sale_agent, 
-            'admin_note'=>$request->admin_note, 
-            'concept_design'=>$request->description1, 
-            'qty_design'=>$request->qty1, 
-            'price_design'=>$request->price1, 
-            'deliverable_model'=>$request->description2, 
-            'qty_model'=>$request->qty2, 
-            'price_model'=>$request->price2, 
+            'admin_note'=>$request->admin_note,  
             'client_note'=>$request->client_note, 
             'terms'=>$request->terms,
 
         ]);
+             
+        foreach ($request->title as $key => $title) {
+            $pdf_item = new PdfItem;
+                $pdf_item->model = 'App/Models/Invoice';
+                $pdf_item->pdf_id = $invoice->id;
+                $pdf_item->title = $title;
+                $pdf_item->description = $request->description[$key];
+                $pdf_item->quantity = $request->qty[$key];
+                $pdf_item->rate = $request->rate[$key];
+                $pdf_item->tax = $request->tax[$key];
+            $pdf_item->save();
+        }
         return redirect()->back();
     }
     public function paymentAdded(Request $request)

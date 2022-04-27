@@ -26,6 +26,7 @@ use App\Http\Controllers\ImageSlideController;
 use App\Http\Controllers\YoutubeurlController;
 use App\Http\Controllers\SocialMediaController;
 use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\PublicServiceController;
 use Symfony\Component\HttpKernel\Profiler\Profile;
 
@@ -146,7 +147,7 @@ Route::group(['middleware' => 'auth', 'varify','cors'], function () {
         Route::get('view/{id}', [ImageSlideController::class, 'view'])->name('view');
         Route::get('register_profile', [HomeController::class, 'register_profile'])->name('register_profile');
         Route::post('send/question', [MedicalController::class, 'askQuestion'])->name('ask.question');
-        
+        Route::get('payment',[PaymentController::class,'index'])->name('payment');
         Route::get('order_id/{id}',[UserController::class,'userByOrder'])->name('userByOrder');
     });
 
