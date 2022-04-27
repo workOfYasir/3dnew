@@ -9,11 +9,12 @@ $(function () {
     }
     var i = 0;
 
+    var loader = true;
     function move() {
         $('.main-progress').css('z-index', '999');
         $('.main-progress').removeClass('d-none');
         $('.hide-on-load').css('opacity', 0);
-        if (i == 0) {
+        if (i == 0 && loader) {
 
             i = 1;
             var elem = document.getElementById("barw");
@@ -41,6 +42,7 @@ $(function () {
 
                 }
             }
+            loader = false;
         }
     }
 
