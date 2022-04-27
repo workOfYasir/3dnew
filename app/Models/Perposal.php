@@ -17,4 +17,8 @@ class Perposal extends Model
         return $this->belongsTo(User::class);
         
     }
+    public function pdf()
+    {
+        return $this->hasMany(PdfItem::class,'pdf_id','id');
+    }
 }

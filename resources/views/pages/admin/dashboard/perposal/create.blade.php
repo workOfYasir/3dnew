@@ -88,7 +88,7 @@
                                             text-muted"></small>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                {{-- <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">كمية التصميم ثلاثي الأبعاد </label>
                                         <input type="number" class="form-control
@@ -99,8 +99,8 @@
                                         <small id="" class="form-text
                                             text-muted"></small>
                                     </div>
-                                </div>
-                                <div class="col-md-6">
+                                </div> --}}
+                                {{-- <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">سعر / وحدة تصميم ثلاثي الأبعاد </label>
                                         <input type="number" class="form-control
@@ -111,8 +111,8 @@
                                         <small id="" class="form-text
                                             text-muted"></small>
                                     </div>
-                                </div>
-                                <div class="col-md-6">
+                                </div> --}}
+                                {{-- <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">كمية النموذج ثلاثي الأبعاد </label>
                                         <input type="number" class="form-control
@@ -123,8 +123,8 @@
                                         <small id="" class="form-text
                                             text-muted"></small>
                                     </div>
-                                </div>
-                                <div class="col-md-6">
+                                </div> --}}
+                                {{-- <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">سعر النموذج ثلاثي الأبعاد / الوحدة </label>
                                         <input type="number" class="form-control
@@ -135,8 +135,8 @@
                                         <small id="" class="form-text
                                             text-muted"></small>
                                     </div>
-                                </div>
-                                <div class="col-md-6">
+                                </div> --}}
+                                {{-- <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">قيمة الضريبة
                                         </label>
@@ -147,8 +147,8 @@
                                         <small id="" class="form-text
                                             text-muted"></small>
                                     </div>
-                                </div>
-                                <div class="col-md-6">
+                                </div> --}}
+                                {{-- <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">تصميم التسليم</label>
                                         <input type="text" class="form-control
@@ -159,8 +159,8 @@
                                         <small id="" class="form-text
                                             text-muted"></small>
                                     </div>
-                                </div>
-                                <div class="col-md-6">
+                                </div> --}}
+                                {{-- <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">نموذج التسليم
                                         </label>
@@ -171,7 +171,7 @@
                                         <small id="" class="form-text
                                             text-muted"></small>
                                     </div>
-                                </div>
+                                </div> --}}
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">status
@@ -206,8 +206,6 @@
                                             text-muted"></small>
                                     </div>
                                 </div>
-                               
-                              
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">city
@@ -282,8 +280,20 @@
                                             text-muted"></small>
                                     </div>
                                 </div>
+                           
+                                <div class="col-md-6">
+                                    
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="0" name="comments" id="exampleInput">
+                                            <label class="form-check-label" for="exampleInput">
+                                                Comments
+                                            </label>
+                                        </div>
+                                        
+                                </div>
                             </div>
-                            <div class="row">
+                        </div>
+                            {{-- <div class="row">
                                 <div class="col-md-6 mb-4 ">
                                     <label for="exampleInputEmail1"> مفهوم التصميم
                                     </label>
@@ -299,7 +309,62 @@
                                     <small id="" class="form-text
                                     text-muted"></small>
                                 </div>                                
-                            </div>
+                            </div> --}}
+                            <table class="table table-light" style="direction: ltr">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th>Item</th>
+                                        <th>Description</th>
+                                        <th>Quantity</th>
+                                        <th>Rate</th>
+                                        <th>Tax</th>
+                                        <th>Amount</th>
+                                        <th>
+                                            <i class="fa fa-trash" aria-hidden="true"></i>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <span class='add'>Add Skill</span>
+                                <tbody>
+                                    <tr class='element' id='div_1'>
+                                        <td>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" id="exampleInput" name="title[]"  placeholder="Description">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group">
+                                                <textarea  class="form-control" id="exampleInput" name="description[]"  placeholder="Description">
+                                                </textarea>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group">
+                                                <input type="number" class="form-control" id="exampleInput" name="qty[]"  placeholder="Quatntity">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" id="exampleInput" name="rate[]"  placeholder="Rate">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" id="exampleInput" name="tax[]"  placeholder="Tax">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div id="amount_0">
+
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <i class="fa fa-check" aria-hidden="true"></i>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                
+                            </table>
                             <button type="submit" class="btn btn-primary">يقدم</button>
                         </form>
                     </div>

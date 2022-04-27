@@ -45,6 +45,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/prism.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/vector-map.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">
+    
     <!-- Plugins css Ends-->
     @livewireStyles
 
