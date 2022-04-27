@@ -16,127 +16,137 @@
                 <div class="card medical-card">
                     <div class="card-body p-0">
                         <form method="POST" action="{{ route('perposal.store')
-                            }}"enctype="multipart/form-data">
+                            }}"enctype="multipart/form-data" class="labels-style">
                             @csrf
                             <div class="row">
                                 <div class="col-md-6">
+                                    <div class="row">
+                                    <div class="col-md-12">
+                                
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">ترتيب
+                                    </label>
+                                    <select class="form-select
+                                        invoice-field" required
+                                        name="order_id" id="p_order_id" aria-label="Default
+                                        select example">
+                                        <option selected disabled>اختر طلبا</option>
+                                        @foreach($orders as $order)
+                                            <option value="{{$order->id}}">{{$order->id}}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+                            <input type="hidden" name="user" id="p_user_val">
+                            
+                                <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">ترتيب
+                                        <label for="exampleInputEmail1">User
                                         </label>
-                                        <select class="form-select
-                                            invoice-field" required
-                                            name="order_id" id="p_order_id" aria-label="Default
-                                            select example">
-                                            <option selected disabled>اختر طلبا</option>
-                                            @foreach($orders as $order)
-                                                <option value="{{$order->id}}">{{$order->id}}</option>
-                                            @endforeach
-                                        </select>
+                                        <input type="text" class="form-control
+                                        invoice-field"  disabled id="p_user">
                                     </div>
                                 </div>
-                                <input type="hidden" name="user" id="p_user_val">
-                                
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="exampleInputEmail1">User
-                                            </label>
-                                            <input type="text" class="form-control
-                                            invoice-field"  disabled id="p_user">
-                                        </div>
+                                <input type="hidden" name="email" id="p_email_val">
+                            
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">email
+                                        </label>
+                                        <input type="text" class="form-control
+                                        invoice-field"  disabled id="p_email">
                                     </div>
-                                    <input type="hidden" name="email" id="p_email_val">
+                                </div>
                                 
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="exampleInputEmail1">email
-                                            </label>
-                                            <input type="text" class="form-control
-                                            invoice-field"  disabled id="p_email">
-                                        </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">phone
+                                        </label>
+                                        <input type="text" class="form-control
+                                        invoice-field"  name="phone">
+                                    </div>
+                                </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">تاريخ
+                                    </label>
+                                    <input type="date" class="form-control
+                                        invoice-field" required
+                                        name="date" id=""
+                                        aria-describedby="emailHelp"
+                                        placeholder="أدخل التاريخ">
+                                    <small id="" class="form-text
+                                        text-muted"></small>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">صالح لغاية</label>
+                                    <input type="number" class="form-control
+                                        invoice-field" required
+                                        name="validtill" id=""
+                                        aria-describedby=""
+                                        placeholder="أدخل صالح حتى">
+                                    <small id="" class="form-text
+                                        text-muted"></small>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">كمية التصميم ثلاثي الأبعاد </label>
+                                    <input type="number" class="form-control
+                                        invoice-field" required
+                                        name="qty_design" id=""
+                                        aria-describedby=""
+                                        placeholder=" كمية التصميم ثلاثي الأبعاد">
+                                    <small id="" class="form-text
+                                        text-muted"></small>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">سعر / وحدة تصميم ثلاثي الأبعاد </label>
+                                    <input type="number" class="form-control
+                                        invoice-field" required
+                                        name="price_design" id=""
+                                        aria-describedby=""
+                                        placeholder="سعر / وحدة تصميم ثلاثي الأبعاد">
+                                    <small id="" class="form-text
+                                        text-muted"></small>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">كمية النموذج ثلاثي الأبعاد </label>
+                                    <input type="number" class="form-control
+                                        invoice-field" required
+                                        name="qty_model" id=""
+                                        aria-describedby=""
+                                        placeholder=" كمية النموذج ثلاثي الأبعاد">
+                                    <small id="" class="form-text
+                                        text-muted"></small>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">سعر النموذج ثلاثي الأبعاد / الوحدة </label>
+                                    <input type="number" class="form-control
+                                        invoice-field" required
+                                        name="price_model" id=""
+                                        aria-describedby=""
+                                        placeholder="سعر / وحدة تصميم ثلاثي الأبعاد">
+                                    <small id="" class="form-text
+                                        text-muted"></small>
+                                </div>
+                            </div>
+                            
+                                
                                     </div>
                                     
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="exampleInputEmail1">phone
-                                            </label>
-                                            <input type="text" class="form-control
-                                            invoice-field"  name="phone">
-                                        </div>
-                                    </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="exampleInputEmail1">تاريخ
-                                        </label>
-                                        <input type="date" class="form-control
-                                            invoice-field" required
-                                            name="date" id=""
-                                            aria-describedby="emailHelp"
-                                            placeholder="أدخل التاريخ">
-                                        <small id="" class="form-text
-                                            text-muted"></small>
-                                    </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="exampleInputEmail1">صالح لغاية</label>
-                                        <input type="number" class="form-control
-                                            invoice-field" required
-                                            name="validtill" id=""
-                                            aria-describedby=""
-                                            placeholder="أدخل صالح حتى">
-                                        <small id="" class="form-text
-                                            text-muted"></small>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="exampleInputEmail1">كمية التصميم ثلاثي الأبعاد </label>
-                                        <input type="number" class="form-control
-                                            invoice-field" required
-                                            name="qty_design" id=""
-                                            aria-describedby=""
-                                            placeholder=" كمية التصميم ثلاثي الأبعاد">
-                                        <small id="" class="form-text
-                                            text-muted"></small>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="exampleInputEmail1">سعر / وحدة تصميم ثلاثي الأبعاد </label>
-                                        <input type="number" class="form-control
-                                            invoice-field" required
-                                            name="price_design" id=""
-                                            aria-describedby=""
-                                            placeholder="سعر / وحدة تصميم ثلاثي الأبعاد">
-                                        <small id="" class="form-text
-                                            text-muted"></small>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="exampleInputEmail1">كمية النموذج ثلاثي الأبعاد </label>
-                                        <input type="number" class="form-control
-                                            invoice-field" required
-                                            name="qty_model" id=""
-                                            aria-describedby=""
-                                            placeholder=" كمية النموذج ثلاثي الأبعاد">
-                                        <small id="" class="form-text
-                                            text-muted"></small>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="exampleInputEmail1">سعر النموذج ثلاثي الأبعاد / الوحدة </label>
-                                        <input type="number" class="form-control
-                                            invoice-field" required
-                                            name="price_model" id=""
-                                            aria-describedby=""
-                                            placeholder="سعر / وحدة تصميم ثلاثي الأبعاد">
-                                        <small id="" class="form-text
-                                            text-muted"></small>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
+                                <div class="col-md-6 second-col">
+                                    <div class="row">
+                                    <div class="col-md-12">
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">قيمة الضريبة
                                         </label>
@@ -148,7 +158,7 @@
                                             text-muted"></small>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                    <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">تصميم التسليم</label>
                                         <input type="text" class="form-control
@@ -160,6 +170,7 @@
                                             text-muted"></small>
                                     </div>
                                 </div>
+                                   
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">نموذج التسليم
@@ -258,7 +269,7 @@
                                             placeholder="">
                                     </div>
                                 </div>
-                                 <div class="invoice-field-12 d-flex">
+                                 <div class="invoice-field col-md-6">
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">صورة
                                         </label>
@@ -270,6 +281,11 @@
                                             text-muted"></small>
                                     </div>
                                 </div>
+                                    </div>
+                                    
+                                </div>
+                                
+                                
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">عنوان
