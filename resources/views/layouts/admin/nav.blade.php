@@ -110,7 +110,9 @@
                       <li class="nav-item">
                           <a class="nav-link " href="{{ route('user.profile.list') }}" tabindex="-1" aria-disabled="true"><i class="fa fa-user"></i> الإدارة </a>
                       </li>
-
+                      <li class="nav-item">
+                        <a class="nav-link " href="{{ route('payment') }}" tabindex="-1" aria-disabled="true"><i class="fa fa-user"></i> Payment </a>
+                    </li>
                   </ul>
               </div>
               <div class="right-arrow" id="right-arrow"><i data-feather="arrow-right"></i></div>

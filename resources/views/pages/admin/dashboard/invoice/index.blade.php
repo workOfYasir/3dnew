@@ -45,7 +45,7 @@
                                     <td> {{ $invoice->user->name }}</td>
                                     <td>
                                         <div class="invoice-btns d-flex">
-                                            <form action="{{
+                                            {{-- <form action="{{
                                             route('invoicess.destroy', $invoice->id)
                                             }}" method="POST">
                                                 <a class="btn btn-primary" href="{{
@@ -60,7 +60,17 @@
                                             </form>
                                             <a class="btn btn-primary" href="{{
                                             route('invoicess.show', $invoice->id)
-                                            }}">فاتورة</a>
+                                            }}">فاتورة</a> --}}
+                                            <?php
+                                            $payment = App\Models\Payment::where('invoice_id',$invoice->id)->exists();                                      
+                                            ?>
+                                            @if($payment)
+                                            <button
+                                                class="btn btn-sm btn-success">Paid</button>
+                                            @else
+                                            <button
+                                                class="btn btn-sm btn-danger">Un Paid</button>
+                                            @endif
                                         </div>
                                     </td>
                                     

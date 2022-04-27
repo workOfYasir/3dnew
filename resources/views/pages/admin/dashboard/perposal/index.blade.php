@@ -30,7 +30,7 @@
                                 </thead>
                                 @foreach ($invoices as $key => $invoice)
                                 <tr>
-
+                                    <td style="cursor: pointer" onclick="panel({{ $key }})"{{ $invoice->id }}></td>
                                     <td style="cursor: pointer" onclick="panel({{ $key }})">{{$invoice->subject}}</td>
                                     <td style="cursor: pointer" onclick="panel({{ $key }})">{{$invoice->user->name}}</td>
                                     @foreach ($invoice->pdf as $key => $pdf)
@@ -44,7 +44,7 @@
                                     <td>{{ $t }}</td>
                                     <td>
                                         <div class="invoice-btns d-flex">
-                                            <form action="{{
+                                            {{-- <form action="{{
                                             route('perposal.destroy', $invoice->id)
                                             }}" method="POST">
                                                 <a class="btn btn-primary" href="{{
@@ -59,7 +59,12 @@
                                             </form>
                                             <a class="btn btn-primary" href="{{
                                             route('perposal.show', $invoice->id)
-                                            }}">فاتورة</a>
+                                            }}">فاتورة</a> --}}
+                                            @if($invoice->assigned)
+                                            <a class="btn btn-success">Accepted</a>
+                                            @else
+                                            <a class="btn btn-secondary">Open</a>
+                                            @endif
                                         </div>
                                     </td>
                                     

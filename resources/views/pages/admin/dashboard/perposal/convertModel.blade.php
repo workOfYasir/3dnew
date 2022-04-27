@@ -75,9 +75,9 @@
                                 <div class="form-group">
                                     <label for="my-select">Allowed Payment modes for this invoice</label>
                                     <select id="my-select" class="form-control" name="payment">
-                                        <option>Text</option>
-                                        <option>Text</option>
-                                        <option>Text</option>
+                                        <option value="cash on delievery">Cash on Delievery</option>
+                                        <option value="cash before delievery">Cash before Delievry</option>
+                                     
                                     </select>
                                 </div>
                             </div>
@@ -86,9 +86,9 @@
                                     <div class="form-group">
                                         <label for="my-select">Currency</label>
                                         <select id="my-select" class="form-control" name="currency">
-                                            <option>Text</option>
-                                            <option>Text</option>
-                                            <option>Text</option>
+                                            <option value="sr" selected>SR</option>
+                                            <option value="usd">USD</option>
+                                            <option value="pkr">PKR</option>
                                         </select>
                                     </div>
                                 </div>
@@ -96,9 +96,9 @@
                                     <div class="form-group">
                                         <label for="my-select">Sale Agent</label>
                                         <select id="my-select" class="form-control" name="sale_agent">
-                                            <option>Text</option>
-                                            <option>Text</option>
-                                            <option>Text</option>
+                                            <option value="0" selected>Noting to select</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
                                         </select>
                                     </div>
                                 </div>
