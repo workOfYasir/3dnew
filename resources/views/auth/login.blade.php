@@ -32,12 +32,12 @@
                             </div> -->
                         </div>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group login-check"> 
+                    <a class="link" href="{{ route('password.request') }}">  هل نسيت كلمة السر؟</a>
                         <div class="checkbox">
                             <input id="checkbox1" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }} />
                             <label class="text-muted" for="checkbox1">تذكر كلمة المرور</label>
                         </div>
-                        <a class="link" href="{{ route('password.request') }}">? هل نسيت كلمة السر</a>
                     </div>
                     <div class="form-group btan-login">
                         <button class="btn btn-blue btn-block" type="submit">
@@ -49,5 +49,5 @@
             </div>
         </div>
     </div>
-</div>
+</div> 
 @endsection

@@ -101,7 +101,6 @@ a {
     transition: all 0.3s ease-in-out;
     width: 133px;
     height: 40px;
-    font-family: 'Almarai', sans-serif;
     font-weight: 400;
     font-size: 15px;
     border: none;
@@ -192,7 +191,6 @@ mujtmah-almusmamen section start
     align-items: center;
     text-align: center;
     transition: all 0.3s ease-in-out;
-    font-family: 'Segoe UI';
 }
 
 .mujtmah-almusmamen-btn:hover {
@@ -234,7 +232,6 @@ mujtmah-almusmamen section start
     background-color: #1EA9D4;
     color: #fff;
     transition: all 0.5s ease-in-out;
-    font-family: 'Segoe UI';
 }
 
 .mujtmah-box-btn:hover {
@@ -246,7 +243,6 @@ mujtmah-almusmamen section start
     background-color: #fff;
     color: #1F5098;
     margin-left: 30px;
-    font-family: 'Almarai', sans-serif;
 }
 
 .mujtmah-box-btn__img {
@@ -270,8 +266,22 @@ mujtmah-almusmamen section start
     font-size: 43px;
     font-family: 'JannaRegular';
     line-height: 1;
+    font-weight: 700;
 }
-
+.designer-counter::before{
+    content: '+';
+    color: #fff;
+    font-size: 43px;
+    font-family: 'JannaRegular';
+    line-height: 1;
+}
+.designer-counter2::before{
+    content: '+';
+    color: #fff;
+    font-size: 43px;
+    font-family: 'JannaRegular';
+    line-height: 1;
+}
 .mujtmah-box__media {
     position: relative;
 }

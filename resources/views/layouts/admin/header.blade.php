@@ -1,3 +1,12 @@
+<style>
+
+        .srch{
+          font-family: 'JannaRegular' !important;
+        }
+        .lgout{
+          font-family: 'JannaRegular' !important;
+        }
+</style>
 <div class="page-main-header">
   <div class="main-header-right row m-0">
     <div class="main-header-left">
@@ -10,7 +19,7 @@
         <li>
           <form class="form-inline search-form">
             <div class="search-bg"><i class="fa fa-search"></i>
-              <input class="form-control-plaintext" placeholder="ابحث هنا.....">
+              <input class="form-control-plaintext srch" placeholder="ابحث هنا.....">
             </div>
           </form><span class="d-sm-none mobile-search search-bg"><i class="fa fa-search"></i></span>
         </li>
@@ -57,7 +66,7 @@
         </li>
         <!-- notifications -->
         <li class="onhover-dropdown p-0">
-          <button class="btn btn-primary" type="button"><a href="{{ route('logout') }} " onclick="event.preventDefault(); document.getElementById('frm-logout').submit();"><i data-feather="log-out"></i>تسجيل الخروج</a></button>
+          <button class="btn btn-primary lgout" type="button"><a href="{{ route('logout') }} " onclick="event.preventDefault(); document.getElementById('frm-logout').submit();"><i data-feather="log-out"></i>تسجيل الخروج</a></button>
           <form id="frm-logout" action="{{ route('logout') }}" method="POST" style="display: none;">
             @csrf
           </form>

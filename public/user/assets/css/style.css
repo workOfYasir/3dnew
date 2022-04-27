@@ -393,7 +393,7 @@ nav .left-side a:last-child {
     background-color: #E0E0DE;
     pointer-events: none;
     box-shadow: none;
-    padding: 8px 24px;
+    padding: 8px 40px;
 }
 
 .btn-sky {
@@ -2673,7 +2673,7 @@ input[type=number] {
     color: #fff !important;
     border: 4px solid #fff;
     font-size: 15px;
-    /* font-family: almarai regular; */
+    font-family: 'JannaRegular';
     font-weight: bold;
     padding: 0px;
     width: 140px;
@@ -2703,7 +2703,7 @@ input[type=number] {
     border: 4px solid #fff;
     font-size: 15px;
     padding: 0px;
-    /* font-family: almarai regular; */
+    font-family: 'JannaRegular';
     font-weight: bold;
     width: 140px;
     height: 40px;
@@ -2894,7 +2894,7 @@ input[type=number] {
     border-radius: 20px;
     color: #fff;
     background-color: #1EA9D4;
-    font-family: Almarai regular;
+    font-family: 'JannaRegular';
     font-size: 15px;
     box-shadow: none;
 }
@@ -3015,7 +3015,7 @@ input[type=number] {
     border: 4px solid #1F5098;
     font-size: 15px;
     padding: 0px;
-    /* font-family: almarai regular; */
+    font-family: 'JannaRegular';
     font-weight: bold;
     width: 140px;
     height: 40px;
@@ -3111,6 +3111,9 @@ input[type=number] {
 #financialOperations .request-box::after {
     display: none;
 }
+.hide-on-load{
+    opacity: 0;
+}
 
 /* Safari */
 @media screen and (-webkit-min-device-pixel-ratio:0) {
@@ -3194,6 +3197,6 @@ input[type=number] {
   }
 
 
-  .d-contents{
+.d-contents{
     display: contents !important;
 }

@@ -616,7 +616,6 @@
     text-align: left;
 }
 
-
     /* //////////////////////////////////// responsive start here ////////////////////////////////////////////////*/
     
     @media (min-width: 360px) and (max-width: 767px) {
@@ -1743,6 +1742,9 @@
         #designinnerModal .designer-sec::before {
             right: -306px;
         }
+        #healthServiesModal .modal.page .modal-header {
+            padding: 4rem 0 !important;
+        }
     }
 
     /* ////////////////////////////////////////// Extra Large landscape responsive //////////////////////////////////////////////////////// */
@@ -1755,3 +1757,4 @@
 
     }
     /* //////////////////////////////////// responsive end here ////////////////////////////////////////////////*/
+  
