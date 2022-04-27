@@ -57,91 +57,7 @@
                                             text-muted"></small>
                                     </div>
                                 </div>
-                                {{-- <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="exampleInputEmail1">كمية التصميم ثلاثي الأبعاد </label>
-                                        <input type="number" class="form-control
-                                            invoice-field" required
-                                            name="qty_design" id=""
-                                            aria-describedby=""
-                                            placeholder="كمية التصميم ثلاثي الأبعاد">
-                                        <small id="" class="form-text
-                                            text-muted"></small>
-                                    </div>
-                                </div> --}}
-                                {{-- <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="exampleInputEmail1">سعر / وحدة تصميم ثلاثي الأبعاد</label>
-                                        <input type="number" class="form-control
-                                            invoice-field" required
-                                            name="price_design" id=""
-                                            aria-describedby=""
-                                            placeholder="سعر / وحدة تصميم ثلاثي الأبعاد">
-                                        <small id="" class="form-text
-                                            text-muted"></small>
-                                    </div>
-                                </div> --}}
-                                {{-- <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="exampleInputEmail1">كمية النموذج ثلاثي الأبعاد </label>
-                                        <input type="number" class="form-control
-                                            invoice-field" required
-                                            name="qty_model" id=""
-                                            aria-describedby=""
-                                            placeholder=" كمية النموذج ثلاثي الأبعاد">
-                                        <small id="" class="form-text
-                                            text-muted"></small>
-                                    </div>
-                                </div> --}}
-                                {{-- <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="exampleInputEmail1">سعر النموذج ثلاثي الأبعاد / الوحدة </label>
-                                        <input type="number" class="form-control
-                                            invoice-field" required
-                                            name="price_model" id=""
-                                            aria-describedby=""
-                                            placeholder="سعر النموذج ثلاثي الأبعاد / الوحدة">
-                                        <small id="" class="form-text
-                                            text-muted"></small>
-                                    </div>
-                                </div> --}}
-                                {{-- <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="exampleInputEmail1">قيمة الضريبة
-                                        </label>
-                                        <input type="number" class="form-control
-                                            invoice-field" required name="tax"
-                                            id="" aria-describedby=""
-                                            placeholder="قيمة الضريبة">
-                                        <small id="" class="form-text
-                                            text-muted"></small>
-                                    </div>
-                                </div> --}}
-                                {{-- <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="exampleInputEmail1">تصميم التسليم</label>
-                                        <input type="text" class="form-control
-                                            invoice-field" required
-                                            name="deliverable_design" id=""
-                                            aria-describedby=""
-                                            placeholder="تصميم التسليم">
-                                        <small id="" class="form-text
-                                            text-muted"></small>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="exampleInputEmail1"> نموذج التسليم
-                                        </label>
-                                        <input type="text" class="form-control
-                                            invoice-field" required name="deliverable_model"
-                                            id="" aria-describedby=""
-                                            placeholder="نموذج التسليم">
-                                        <small id="" class="form-text
-                                            text-muted"></small>
-                                    </div>
-                                </div>
-                               --}}
+                            
                                 <div class=" d-flex">
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">صورة
@@ -167,23 +83,7 @@
                                     </div>
                                 </div>
                             </div>
-                            {{-- <div class="row">
-                                <div class="col-md-6 mb-4">
-                                    <label for="exampleInputEmail1"> مفهوم التصميم
-                                    </label>
-                                    <textarea name="concept_design" class="form-control" id="concept_design" cols="30" rows="10"></textarea>
-                                    <small id="" class="form-text
-                                    text-muted"></small>
-                                </div>
-                           
-                                <div class="col-md-6 mb-4">
-                                    <label for="exampleInputEmail1"> تصنيع
-                                    </label>
-                                    <textarea name="manufacturing" class="form-control" id="manufacturing" cols="30" rows="10"></textarea>
-                                    <small id="" class="form-text
-                                    text-muted"></small>
-                                </div>                                
-                            </div> --}}
+                        
                             <table class="table table-light" style="direction: ltr">
                                 <thead class="thead-dark">
                                     <tr>
