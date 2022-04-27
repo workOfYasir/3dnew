@@ -103,9 +103,9 @@
 /**=====================
      01. General CSS Start
 ==========================**/
-.invoice-field{
+/* .invoice-field{
   width: 290px !important;
-}
+} */
 .invoice-field-12{
   width: 748px !important;
 }
@@ -1469,6 +1469,20 @@ a:hover {
 
 /*======= Font-color css end  ======= */
 /*======= Button-color css starts  ======= */
+.labels-style .prposal-btn{
+  width:70px !important;
+  margin-right :13px !important;
+}
+.labels-style label{
+  font-weight: 400;
+  font-size: 13px;
+  color: #2d2d2d;
+  margin-bottom: 7px;
+}
+.labels-style .second-col{
+  border-right: 1px solid #f0f0f0;
+
+}
 /* login page */
 .logo-imaage{
   text-align:center;

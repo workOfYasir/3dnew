@@ -15,10 +15,12 @@
             <div class="col-sm-12">
                 <div class="card medical-card">
                     <div class="card-body p-0">
-                        <form method="POST" action="{{ route('invoicess.store')}}" enctype="multipart/form-data">
+                        <form method="POST" action="{{ route('invoicess.store')}}" enctype="multipart/form-data" class="labels-style">
                             @csrf
                             <div class="row">
                                 <div class="col-md-6">
+                                    <div class="row">
+                                    <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="exampleInputEmail1
                                             invoice-field">ترتيب </label>
@@ -93,7 +95,12 @@
                                             text-muted"></small>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                    </div>
+                                </div>
+                                <!-- 2nd col -->
+                                <div class="col-md-6 second-col">
+                                    <div class="row">
+                                    <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">سعر النموذج ثلاثي الأبعاد / الوحدة </label>
                                         <input type="number" class="form-control
@@ -154,6 +161,10 @@
                                             text-muted"></small>
                                     </div>
                                 </div>
+                                    </div>
+                                </div>
+                               
+
                                 <div class=" col-md-6">
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">عنوان
