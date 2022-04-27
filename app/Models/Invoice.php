@@ -17,4 +17,13 @@ class Invoice extends Model
         return $this->belongsTo(User::class);
         
     }
+    public function payment(){
+
+        return $this->hasOne(Payment::class);
+        
+    }
+    public function pdf()
+    {
+        return $this->hasMany(PdfItem::class,'pdf_id','id');
+    }
 }

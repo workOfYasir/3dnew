@@ -30,18 +30,21 @@
                                 </thead>
                                 @foreach ($invoices as $key => $invoice)
                                 <tr>
-
+                                    <td style="cursor: pointer" onclick="panel({{ $key }})"{{ $invoice->id }}></td>
                                     <td style="cursor: pointer" onclick="panel({{ $key }})">{{$invoice->subject}}</td>
                                     <td style="cursor: pointer" onclick="panel({{ $key }})">{{$invoice->user->name}}</td>
-                                    @php
-                                    $total = ($invoice->price_model*$invoice->qty_model)+($invoice->price_design*$invoice->qty_design);
-                                    $totaltex = $total*($invoice->tax/100);
-                                    $t = $totaltex + $total;
-                                    @endphp
+                                    @foreach ($invoice->pdf as $key => $pdf)
+                                        @php
+                                        $total = 0;
+                                            $total += ($pdf->rate*$pdf->quantity);
+                                            $totaltex = $total*($pdf->tax/100);
+                                            $t = $totaltex + $total;
+                                        @endphp
+                                    @endforeach
                                     <td>{{ $t }}</td>
                                     <td>
                                         <div class="invoice-btns d-flex">
-                                            <form action="{{
+                                            {{-- <form action="{{
                                             route('perposal.destroy', $invoice->id)
                                             }}" method="POST">
                                                 <a class="btn btn-primary" href="{{
@@ -56,7 +59,12 @@
                                             </form>
                                             <a class="btn btn-primary" href="{{
                                             route('perposal.show', $invoice->id)
-                                            }}">فاتورة</a>
+                                            }}">فاتورة</a> --}}
+                                            @if($invoice->assigned)
+                                            <a class="btn btn-success">Accepted</a>
+                                            @else
+                                            <a class="btn btn-secondary">Open</a>
+                                            @endif
                                         </div>
                                     </td>
                                     
@@ -91,23 +99,24 @@
                                         class="btn btn-sm btn-light">PDF</a>
                                     <a class="btn btn-sm btn-light"
                                         data-bs-toggle="modal"
-                                        data-bs-target="#convertModal"
+                                        data-bs-target="#convertModal_{{ $key }}"
                                         >Convert</a>
                                     <a href="{{ route('sendViaMail',$invoice->order_id) }}"
                                         class="btn btn-sm btn-light">Mail</a>
-                                  
+                                        @include('pages.admin.dashboard.perposal.convertModel')
                                 </div>
-                                @include('pages.admin.dashboard.perposal.convertModel')
+                                
                                 <div class="col-6">
-                                    @if($invoice->status==0)
-                                    <button type="button" class="btn btn-danger">Not Accepted</button>
+                                    @if($invoice->assigned==0)
+                                    <button type="button" class="btn btn-sm btn-danger">Not Accepted</button>
                                     @else
-                                    <button type="button" class="btn btn-success">Accepted</button>
+                                    <button type="button" class="btn btn-sm btn-success">Accepted</button>
                                     @endif
 
                                 </div>
 
                             </div>
+                            
                             <hr>
                             <div class="col-12 d-flex">
                                 <div class="col-6">
@@ -131,10 +140,10 @@
                             </div>
                         </div>
                         <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-                            @if($invoice->comments==1)
+                            {{-- @if($invoice->comments==1) --}}
                             @livewire('chats',['user_id' =>
                             $invoice->user_id,'request_id'=>$invoice->order_id,'request_type'=>'App\Models\Medical'])
-                            @endif
+                            {{-- @endif --}}
                         </div>
                     </div>
                 </div>

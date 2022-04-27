@@ -6,7 +6,7 @@
         <ol class="breadcrumb">
             <li><a href="{{route('home')}}">الصفحة الرئيسية</a></li>
 
-            <li><a href="{{ route('perposal.index') }}">وضع اليد</a></li>
+            <li><a href="{{ route('invoicess.index') }}">وضع اليد</a></li>
 
         </ol>
     </div>
@@ -16,12 +16,12 @@
                 <div class="card medical-card">
                     <div class="card-body p-0">
                         <a class="btn btn-primary mb-2" href="{{
-                            route('perposal.create') }}"> جديد +</a>
+                            route('invoicess.create') }}"> جديد +</a>
                         <div class="table-responsive medical-datatable">
                             <table class="display" style="width:100%" id="basic-2">
                                 <thead>
                                     <tr>
-                                        <th>Purposal</th>
+                                        <th>invoices</th>
                                         <th>Amount</th>
                                         <th>Date</th>
                                         <th>Customer</th>
@@ -31,22 +31,25 @@
                                 </thead>
                                 @foreach ($invoices as $key => $invoice)
                                 <tr>
-                                    <td>{{ $invoice->id }}</td>
-                                    @php
-                                    $total = ($invoice->price_model*$invoice->qty_model)+($invoice->price_design*$invoice->qty_design);
-                                    $totaltex = $total*($invoice->tax/100);
-                                    $t = $totaltex + $total;
-                                    @endphp
+                                    <td style="cursor: pointer" onclick="panel({{ $key }})" >{{ $invoice->id }}</td>
+                                    @foreach ($invoice->pdf as $pdf)
+                                        @php
+                                            $total = 0;
+                                            $total += ($pdf->rate*$pdf->quantity);
+                                            $totaltex = $total*($pdf->tax/100);
+                                            $t = $totaltex + $total;
+                                        @endphp
+                                    @endforeach
                                     <td style="cursor: pointer" onclick="panel({{ $key }})">{{ $t }}</td>
                                     <td style="cursor: pointer" onclick="panel({{ $key }})">{{ $invoice->date }}</td>
-                                    <td> ok</td>
+                                    <td> {{ $invoice->user->name }}</td>
                                     <td>
                                         <div class="invoice-btns d-flex">
-                                            <form action="{{
-                                            route('perposal.destroy', $invoice->id)
+                                            {{-- <form action="{{
+                                            route('invoicess.destroy', $invoice->id)
                                             }}" method="POST">
                                                 <a class="btn btn-primary" href="{{
-                                                route('perposal.edit',
+                                                route('invoicess.edit',
                                                 $invoice->id) }}">يحرر</a>
 
                                                 @csrf
@@ -56,8 +59,18 @@
                                                 btn-danger">حذف</button>
                                             </form>
                                             <a class="btn btn-primary" href="{{
-                                            route('perposal.show', $invoice->id)
-                                            }}">فاتورة</a>
+                                            route('invoicess.show', $invoice->id)
+                                            }}">فاتورة</a> --}}
+                                            <?php
+                                            $payment = App\Models\Payment::where('invoice_id',$invoice->id)->exists();                                      
+                                            ?>
+                                            @if($payment)
+                                            <button
+                                                class="btn btn-sm btn-success">Paid</button>
+                                            @else
+                                            <button
+                                                class="btn btn-sm btn-danger">Un Paid</button>
+                                            @endif
                                         </div>
                                     </td>
                                     
@@ -86,9 +99,9 @@
                             aria-labelledby="nav-home-tab">
                             <div class="col-12 d-flex">
                                 <div class="col-6">
-                                    <a href="{{ route('purposal',$invoice->id) }}" target="_blank"
+                                    <a href="{{ route('invoice',$invoice->id) }}" target="_blank"
                                         class="btn btn-sm btn-light">View</a>
-                                    <a href="{{ route('purposal.pdf',$invoice->id) }}"
+                                    <a href="{{ route('invoice.pdf',$invoice->id) }}"
                                         class="btn btn-sm btn-light">PDF</a>
                                     <a href="{{ route('sendViaMail',$invoice->order_id) }}"
                                         class="btn btn-sm btn-light">Mail</a>
@@ -96,12 +109,17 @@
                                         class="btn btn-sm btn-success "onclick="paymentDiv({{ $key }})">Payment</button>
                                 </div>
                                 <div class="col-6">
-                                    @if($invoice->status==0)
-                                    <button type="button" class="btn btn-danger">Not Accepted</button>
-                                    @else
-                                    <button type="button" class="btn btn-success">Accepted</button>
-                                    @endif
-
+                                    <?php
+                                        $payment = App\Models\Payment::where('invoice_id',$invoice->id)->exists();
+                                    
+                                        ?>
+@if($payment)
+<button
+    class="btn btn-sm btn-success">Paid</button>
+@else
+<button
+    class="btn btn-sm btn-danger">Un Paid</button>
+@endif
                                 </div>
 
                             </div>
@@ -130,63 +148,62 @@
                                 <table class="table table-light" style="direction: ltr">
                                     <thead class="thead-dark">
                                         <tr>
-                                            <th>Title</th>
+                                            <th>Item</th>
                                             <th>Description</th>
                                             <th>Quantity</th>
                                             <th>Rate</th>
+                                            <th>
+                                                <i class="fa fa-trash" aria-hidden="true"></i>
+                                            </th>
                                         </tr>
                                     </thead>
-                                    <tbody>
+    
+                                    <tbody class="wrapper">
+                                        @foreach($invoice->pdf as $pdf)
                                         <tr>
-                
-                                            <td>Concept Design</td>
-                                            <td>  {{ $invoice->concept_design }}
+    
+                                            <td>{{ $pdf->title }}</td>
+                                            <td>  {{ $pdf->description }}
                                             </td>
-                                            <td>{{ $invoice->qty_design }}</td>
-                                            <td>{{ $invoice->price_design }}</td>
-                
-                                        </tr>
-                                        <tr>
-                
-                                            <td>Manufacturing</td>
-                                            <td> {{ $invoice->manufacturing }}
+                                            <td>{{ $pdf->quantity }}
                                             </td>
-                                            <td>{{ $invoice->qty_model }}</td>
-                                            <td>{{ $invoice->price_model }}</td>
+                                            <td>{{ $pdf->rate }}
+                                            </td>
+            
                                         </tr>
+                                            @php
+                                                $total += ($pdf->rate*$pdf->quantity);
+                                                $totaltex = $total*($pdf->tax/100);
+                                                $t = $totaltex + $total;
+                                            @endphp
+            
+                                        @endforeach
                                         <tr>
                                             <td></td>
                                             <td></td>
                                             <td>Tax</td>
-                                            <td>{{ $invoice->tax }}</td>
+                                            <td>{{ @$invoice->pdf[0]->tax }}</td>
                                         </tr>
                                         <tr>
-                                            
+            
                                             <td></td>
                                             <td></td>
                                             <td>Total</td>
-                                            @php
-                                            $total = ($invoice->price_model*$invoice->qty_model)+($invoice->price_design*$invoice->qty_design);
-                                            $totaltex = $total*($invoice->tax/100);
-                                            $t = $totaltex + $total;
-                                            @endphp
-                                            <td> {{$total}}SR</td>
-                    
+                                            
+                                        <td>{{ $total }}</td>
                                         </tr>
                                         <tr>
                                             <td></td>
                                             <td></td>
                                             <td>VAT Rate</td>
-                                            <td>{{$invoice->tax}}%</td>
-                    
+                                            <td>{{@$invoice->pdf[0]->tax}}%</td>
+            
                                         </tr>
                                         <tr>
                                             <td></td>
                                             <td></td>
                                             <td>VAT Amount</td>
-                                            @php
-                    
-                                            @endphp
+                                        
                                             <td>{{$totaltex}} SR</td>
                                         </tr>
                                         <tr>
@@ -196,7 +213,7 @@
                                             <td class="total-amount"> {{$t}}SR</td>
                                         </tr>
                                     </tbody>
-                
+            
                                 </table>
 
                             </div>
@@ -208,10 +225,10 @@
                             </div>
                         </div>                        
                         <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-                            @if($invoice->comments==1)
+                            {{-- @if($invoice->comments==1) --}}
                             @livewire('chats',['user_id' =>
                             $invoice->user_id,'request_id'=>$invoice->order_id,'request_type'=>'App\Models\Medical'])
-                            @endif
+                            {{-- @endif --}}
                         </div>
                     </div>
                 </div>
@@ -223,13 +240,18 @@
                     <div class="col-12 d-flex">
                         <div class="col-6 p-1">
                             <div class="form-group">
+                                <input type="hidden" name="invoice_id" value ="{{$invoice->id}}" >
                                 <label for="exampleInput">Amount Recieved</label>
-                                <input type="text" class="form-control" id="exampleInput" placeholder="Example input placeholder">
+                                <input type="text" class="form-control" name="paid" id="exampleInput" placeholder="Example input placeholder">
                             </div>
                             <div class="form-group">
-                                <label for="exampleInput">Payment Recieved</label>
-                                <input type="text" class="form-control" id="exampleInput" placeholder="Example input placeholder">
+                            
+                                <label for="exampleInput">Payment Date</label>
+                                <input type="date" class="form-control" name="payment_date" id="exampleInput" placeholder="Example input placeholder">
                             </div>
+                           
+                                <input type="hidden" class="form-control" name="total_amount" value="{{$t}}" id="exampleInput" placeholder="Example input placeholder">
+                          
                             <div class="form-group">
                                 <label for="my-select">Payment Mode</label>
                                 <select id="my-select" class="form-control" name="payment_mode">
@@ -240,11 +262,11 @@
                         <div class="col-6 p-1">
                             <div class="form-group">
                                 <label for="exampleInput">Transection ID</label>
-                                <input type="text" class="form-control" id="exampleInput" placeholder="Example input placeholder">
+                                <input type="text" class="form-control" name="transection_id" id="exampleInput" placeholder="Example input placeholder">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInput">Leave a note</label>
-                                <textarea type="text" class="form-control" ></textarea>
+                                <textarea type="text" name="note" class="form-control" ></textarea>
                             </div>
                         </div>
                     </div>

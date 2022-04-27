@@ -82,52 +82,43 @@
             <table class="table table-bordered table-striped">
                 <thead>
                     <tr>
+                        <th scope="col">Title</th>
                         <th scope="col">Description</th>
-                        <th scope="col">Deliverable</th>
                         <th scope="col">Quantity</th>
                         <th scope="col">Price/unit</th>
                     </tr>
                 </thead>
                 <tbody>
+                    @foreach ($invoice->pdf as $key => $pdf)
                     <tr>
                         <td class="tbox1">
-                            <label>Concept Design:</label>
-                            <p class="muted"> {{ $invoice->concept_design }}</p>
+                            <label>{{ $pdf->title }}</label>
+                            <p class="muted"> {{ $pdf->description }}</p>
                         </td>
-                        <td class=>{{ $invoice->deliverable_design }}</td>
-                        <td>{{$invoice->qty_design}}</td>
-                        <td>{{$invoice->price_design}} SR</td>
-                    </tr>
-                    <tr>
 
-                        <td class="tbox1">
-                            <label for="">Manufacturing:</label>
-                            <p class="muted">{{ $invoice->manufacturing }}</p>
-                        </td>
-                        <td>{{$invoice->qty_model}}</td>
-                        <td>{{$invoice->qty_model}}</td>
-                        <td> <span>{{$invoice->price_model}} SR</span>
-                            <div class="col-12 justify-content-center d-flex">
-                                <div class="col-4">
-                                    <img src="{{asset($invoice->image)}}" class="img-fluid" alt="">
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
+                        <td>{{$pdf->quantity}}</td>
+                        <td>{{$pdf->rate}} SR</td>
+                    </tr>   
+                    
+                        @php
+                            $total=0;
+                            $total += ($pdf->rate*$pdf->quantity);
+                            $totaltex = $total*($pdf->tax/100);
+                            $t = $totaltex + $total;
+                        @endphp
+               
+                    @endforeach
+                    
                     <tr>
                         <td rowspan="4"></td>
                         <td colspan="2">Total</td>
-                        @php
-                        $total = ($invoice->price_model*$invoice->qty_model)+($invoice->price_design*$invoice->qty_design);
-                        $totaltex = $total*($invoice->tax/100);
-                        $t = $totaltex + $total;
-                        @endphp
+                       
                         <td> {{$total}}SR</td>
 
                     </tr>
                     <tr>
                         <td colspan="2">VAT Rate</td>
-                        <td>{{$invoice->tax}}%</td>
+                        <td>{{$invoice->pdf[0]->tax}}%</td>
 
                     </tr>
                     <tr>
