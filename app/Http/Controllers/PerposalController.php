@@ -4,12 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Models\Medical;
+use App\Models\PdfItem;
 use App\Models\Perposal;
+use App\Mail\ProposelMail;
 use Illuminate\Http\Request;
-use App\Notifications\ProposelNotification;
 use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Support\Facades\Auth;
-use App\Mail\ProposelMail;
+use App\Notifications\ProposelNotification;
 
 class PerposalController extends Controller
 {
@@ -20,7 +21,9 @@ class PerposalController extends Controller
      */
     public function index()
     {
-        $invoices = Perposal::with('user')->get();
+        $invoices = Perposal::with('user')->whereHas('pdf',function($q) {
+            $q->where('model','App/Models/Perposal');
+        })->with('pdf')->get();
         $users = User::all();
         $medicals = Medical::all();
         return view('pages.admin.dashboard.perposal.index', compact('invoices','users','medicals'));
@@ -46,16 +49,13 @@ class PerposalController extends Controller
      */
     public function store(Request $request)
     {
+
         $image = $request->image->getClientOriginalName();
         $request->image->move(public_path('upload/'), $image);
         $pathimage ='upload/'.$image;
         $med = Medical::find($request->order_id);
         $user = User::find($med->user_id);
         $perposals = Perposal::create([
-            'tax' => $request->tax,
-            'price_model' => $request->price_model,
-            'price_design' => $request->price_design,
-            'qty_model' => $request->qty_model,
             'phone'=>$request->phone,
             'status'=>$request->status,
             'assigned'=>$request->assigned,
@@ -64,17 +64,26 @@ class PerposalController extends Controller
             'country'=>$request->country,
             'zip_code'=>$request->zip_code,
             'order_id' => $request->order_id,
-            'manufacturing' => $request->manufacturing,
-            'concept_design' => $request->concept_design,
             'user_id' => $user->id,
+            'comments' =>$request->comments,
             'image'=> $pathimage,
             'address' =>$request->address,
-            'deliverable_model'=>$request->deliverable_model,
-            'deliverable_design'=>$request->deliverable_design,
-            'qty_design' => $request->qty_design,
             'validtill' => $request->validtill,
             'date' => $request->date,
         ]);
+     
+        foreach ($request->title as $key => $title) {
+            $pdf_item = new PdfItem;
+                $pdf_item->model = 'App/Models/Perposal';
+                $pdf_item->pdf_id = $perposals->id;
+                $pdf_item->title = $title;
+                $pdf_item->description = $request->description[$key];
+                $pdf_item->quantity = $request->qty[$key];
+                $pdf_item->rate = $request->rate[$key];
+                $pdf_item->tax = $request->tax[$key];
+            $pdf_item->save();
+        }
+     
           $details = [
             'subject' =>"'".$med->id ."' تم اصدار فاتورة رقم",
             'id' =>$med->id,

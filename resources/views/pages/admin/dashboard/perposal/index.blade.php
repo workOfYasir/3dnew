@@ -30,18 +30,21 @@
                                 </thead>
                                 @foreach ($invoices as $key => $invoice)
                                 <tr>
-
+                                    <td style="cursor: pointer" onclick="panel({{ $key }})"{{ $invoice->id }}></td>
                                     <td style="cursor: pointer" onclick="panel({{ $key }})">{{$invoice->subject}}</td>
                                     <td style="cursor: pointer" onclick="panel({{ $key }})">{{$invoice->user->name}}</td>
-                                    @php
-                                    $total = ($invoice->price_model*$invoice->qty_model)+($invoice->price_design*$invoice->qty_design);
-                                    $totaltex = $total*($invoice->tax/100);
-                                    $t = $totaltex + $total;
-                                    @endphp
+                                    @foreach ($invoice->pdf as $key => $pdf)
+                                        @php
+                                        $total = 0;
+                                            $total += ($pdf->rate*$pdf->quantity);
+                                            $totaltex = $total*($pdf->tax/100);
+                                            $t = $totaltex + $total;
+                                        @endphp
+                                    @endforeach
                                     <td>{{ $t }}</td>
                                     <td>
                                         <div class="invoice-btns d-flex">
-                                            <form action="{{
+                                            {{-- <form action="{{
                                             route('perposal.destroy', $invoice->id)
                                             }}" method="POST">
                                                 <a class="btn btn-primary" href="{{
@@ -56,7 +59,12 @@
                                             </form>
                                             <a class="btn btn-primary" href="{{
                                             route('perposal.show', $invoice->id)
-                                            }}">فاتورة</a>
+                                            }}">فاتورة</a> --}}
+                                            @if($invoice->assigned)
+                                            <a class="btn btn-success">Accepted</a>
+                                            @else
+                                            <a class="btn btn-secondary">Open</a>
+                                            @endif
                                         </div>
                                     </td>
                                     
@@ -97,7 +105,7 @@
                                         class="btn btn-sm btn-light">Mail</a>
                                         @include('pages.admin.dashboard.perposal.convertModel')
                                 </div>
-                              
+                                
                                 <div class="col-6">
                                     @if($invoice->assigned==0)
                                     <button type="button" class="btn btn-sm btn-danger">Not Accepted</button>
