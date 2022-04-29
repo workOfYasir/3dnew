@@ -225,10 +225,10 @@
                             </div>
                         </div>                        
                         <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-                            {{-- @if($invoice->comments==1) --}}
+                          
                             @livewire('chats',['user_id' =>
                             $invoice->user_id,'request_id'=>$invoice->order_id,'request_type'=>'App\Models\Medical'])
-                            {{-- @endif --}}
+                          
                         </div>
                     </div>
                 </div>
@@ -255,7 +255,7 @@
                             <div class="form-group">
                                 <label for="my-select">Payment Mode</label>
                                 <select id="my-select" class="form-control" name="payment_mode">
-                                    <option>Text</option>
+                                    <option value="cash on delievery">Cash On Delievery</option>
                                 </select>
                             </div>
                         </div>
