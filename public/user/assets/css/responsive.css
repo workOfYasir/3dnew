@@ -1027,6 +1027,9 @@
     .title.white::after {
         left: 30px;
     }
+    .mujtmah-box__media{
+        margin-bottom: 35px;
+    }
 }
 
 @media only screen and (min-width: 428px) and (max-width: 767px){
