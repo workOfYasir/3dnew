@@ -1,3 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{ public_path('assets/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{public_path('invoice/assets/css/style2.css')}}">
+    <title>3D Organs</title>
+    <style>
+        @page {
+            margin: 0px 0px 0px 0px !important;
+            padding: 0px 0px 0px 0px !important;
+            width: 960px;
+            font-size: 0.8rem;
+        }
+        </style>
+</head>
+<body>
+
 <div class="h5 p-3 text-center" >
     PAYMENT RECIEPT
 </div>
@@ -63,3 +85,6 @@
         </table>
     </div>
 </div>
+</body>
+
+</html>

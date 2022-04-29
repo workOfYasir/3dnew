@@ -207,6 +207,19 @@ class InvoiceController extends Controller
         // }
         // return $pdf->stream();
     }
+    public function pdfPayment($id)
+    {
+        // $invoice = Invoice::find($id);
+        $invoice = Invoice::with('user')->with('payment')->whereHas('pdf',function($q) {
+            $q->where('model','App/Models/Invoice');
+        })->with('pdf')->where('id',$id)->get();
+        $user = User::find($invoice->user_id);
+        // if($request->has('download')){
+            $pdf = PDF::loadView('pages.admin.dashboard.invoice.payment',compact('invoice', 'user'));
+            return $pdf->download('payment.pdf');
+        // }
+        // return $pdf->stream();
+    }
     public function convertToInvoice(Request $request)
     {
      

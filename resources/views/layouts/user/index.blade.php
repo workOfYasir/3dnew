@@ -13,7 +13,7 @@
     <div class="page-wrapper" id="pageWrapper">
         <!-- Page Body Start-->
       <div class="page-body-wrapper horizontal-menu">
-   
+        
         @yield('content')
     
       </div>
@@ -44,7 +44,7 @@
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script type="text/javascript" src="{{ asset('js/jquery.signature.js') }}"></script>
-
+   @livewireScripts
     <script>
         var perposalAccepted = "{{ route('perposalAccept',':id') }}";
     </script>
@@ -55,7 +55,7 @@
           sig.signature('clear');
           $("#signature64").val('');
       });
-    
+      $('.toast').toast('show')
   </script>
     <!-- login js-->
     <!-- Plugin used-->
