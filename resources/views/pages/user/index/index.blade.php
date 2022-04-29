@@ -524,10 +524,10 @@
 
         <section class="banner sample">
             <img src="{{ asset('user/assets/images/banner-bg.png') }}"
-                class="img-fluid banner-bg sample move-blue animate__animated animate__slideInRight animate__slower animate__delay-4s"
+                class="img-fluid banner-bg sample move-blue animate__animated animate__slideInRight animate__slower"
                 alt="banner-bg">
             <img src="{{ asset('user/assets/images/black-bg.png') }}"
-                class="black-bg sample move-black animate__animated animate__slideInLeft animate__slower animate__delay-4s"
+                class="black-bg sample move-black animate__animated animate__slideInLeft animate__slower"
                 alt="black-bg">
             <img src="{{ asset('user/assets/images/hands.png') }}" class="img-fluid hands sample move-hand" alt="hands">
             <div class="container">
@@ -767,8 +767,8 @@
                                     @endif
                                 </div>
                                 <div class="row pt-5 mt-5 align-items-end p-t-70" dir="rtl">
-                                    <div class="col-md-9 col-lg-7 res-width-64">
-                                        <div class="about-content" id="about-us" data-aos="fade-up">
+                                    <div class="col-md-9 col-lg-7 res-width-64" data-aos="fade-up">
+                                        <div class="about-content" id="about-us">
                                             <!-- <span class="outline dot right-center">+3D</span> -->
                                             @if ($about != null)
 
@@ -819,11 +819,11 @@
                                             @if (@$map->map_image != null)
 
                                             <img src="{{ asset( $map->map_image) }}" width="550" height="300"
-                                                style="border:0;" allowfullscreen="" loading="lazy"></img>
+                                                style="border:0;" allowfullscreen="" >
 
                                             @else
                                             <img src="{{ asset('user/assets/images/world-map.jpg') }}" width="550"
-                                                height="300" style="border:0;" allowfullscreen="" loading="lazy"></img>
+                                                height="300" style="border:0;" allowfullscreen="" >
                                             @endif
                                         </div>
                                     </div>
@@ -855,7 +855,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-6 dot-txt-main">
-                        <div class="image-place dot-effect" id="main-effect" data-aos="zoom-in" data-aos-offset="500">
+                        <div class="image-place dot-effect" id="main-effect" data-aos="fade-up">
                             <div class="pointer head">
                                 <p>الجمجمة</p>
                             </div>
@@ -921,7 +921,7 @@
                         </div>
                     </div>
                     <div class="col-md-6 dot-txt-main-left">
-                        <div class="image-place effect-machine" data-aos="zoom-in" data-aos-offset="500"
+                        <div class="image-place effect-machine" data-aos="zoom-in" 
                             id="main-macine">
                             <div class="pointer top">
                                 <p>مجسمات كبيرة</p>
@@ -1033,7 +1033,7 @@
                                         1</span>طلبات قائمة</p>
                             </div>
                         </div>
-                        <div class="mujtmah-box__media" data-aos="zoom-in" data-aos-offset="500">
+                        <div class="mujtmah-box__media" data-aos="zoom-in" >
                             <img src="{{ asset('user/assets/images/mujtmah-box__image.png') }}"
                                 class="mujtmah-box__image">
                             <div class="mujtmah-box__count">
@@ -1043,7 +1043,7 @@
                         </div>
                     </div>
                     <div class="mujtmah-box2">
-                        <div class="mujtmah-box__media" data-aos="zoom-in" data-aos-offset="500">
+                        <div class="mujtmah-box__media" data-aos="zoom-in">
                             <div class="mujtmah-box__count2">
                                 <h1 class="mujtmah-box__count-heading designer-counter" data-count="40" >0</h1>
                                 <p class="mujtmah-box__count-sub-heading">عميل</p>
@@ -1276,7 +1276,7 @@
                                         <div class="row">
                                             <div class="col-md-6 dot-txt-main pb-4">
                                                 <div class="image-place dot-effect" data-aos="zoom-in"
-                                                    data-aos-offset="500">
+                                                    >
                                                     <div class="pointer head">
                                                         <p>الجمجمة</p>
                                                     </div>
@@ -1320,7 +1320,7 @@
                                             </div>
                                             <div class="col-md-6 dot-txt-main-left pb-4" id="macine">
                                                 <div class="image-place effect-machine" data-aos="zoom-in"
-                                                    data-aos-offset="500">
+                                                    >
                                                     <div class="pointer top">
                                                         <p>مجسمات كبيرة</p>
                                                     </div>
