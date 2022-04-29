@@ -697,6 +697,7 @@ footer .right img {
     background-repeat: no-repeat; */
     padding-top: 100px;
     padding-bottom: 0;
+    overflow: hidden !important;
 }
 
 .banner .btn-grey img {
@@ -753,15 +754,17 @@ footer .right img {
 }
 
 .banner-bg.sample {
+    /* opacity: 0; */
     position: absolute;
     top: 136px;
     width: 1040px;
-    left: 300px;
+    right: 0px;
     margin: auto;
     display: block;
 }
 
 .black-bg.sample {
+    /* opacity: 0; */
     position: absolute;
     top: 96px;
     /* z-index: -2; */
@@ -771,7 +774,16 @@ footer .right img {
     margin: auto;
     display: block;
 }
-
+.black-bg2 {
+    background: url(/assets/images/black-bg2.png) no-repeat;
+    position: absolute;
+    top: 200px;
+    /* z-index: -2; */
+    width: 330px;
+    height: 340px;
+    background-size: 100% 100%;
+    left: 0;
+}
 .hands.sample {
     position: absolute;
     left: 700px;
@@ -3111,10 +3123,9 @@ input[type=number] {
 #financialOperations .request-box::after {
     display: none;
 }
-.hide-on-load{
+/* .hide-on-load{
     opacity: 0;
-}
-
+} */
 /* Safari */
 @media screen and (-webkit-min-device-pixel-ratio:0) {
     .mujtmah-heading-box {
@@ -3204,3 +3215,17 @@ input[type=number] {
 .animate__delay-6s {
     animation-delay: 8s!important;
 }
+/* .move-blue{
+    animation: righToright 4s linear;
+}
+.move-black{
+    animation: righToLeft 4s linear;
+}
+@keyframes righToLeft {
+    0%   {width: 0px;height: 100%;}
+    100%   {width: 920px;height: 100%;}
+}
+@keyframes righToright {
+    0%   {width: 0px;height: 100%;}
+    100%   {width: 920px;height: 100%;}
+} */
