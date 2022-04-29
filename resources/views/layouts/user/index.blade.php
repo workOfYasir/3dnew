@@ -13,7 +13,7 @@
     <div class="page-wrapper" id="pageWrapper">
         <!-- Page Body Start-->
       <div class="page-body-wrapper horizontal-menu">
-   
+        
         @yield('content')
     
       </div>
@@ -55,7 +55,7 @@
           sig.signature('clear');
           $("#signature64").val('');
       });
-    
+      $('.toast').toast('show')
   </script>
     <!-- login js-->
     <!-- Plugin used-->
