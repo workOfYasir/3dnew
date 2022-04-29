@@ -90,8 +90,7 @@
                                 </h1>
                             </div>
                             <div class="profile ahs-member-model-box">
-                                <button  class="btn btn-sky edit-profile--ahs"   data-bs-toggle="modal"
-                                                        data-bs-target="#productdesignModal">المنتجات</button>
+                                <button  class="btn btn-sky edit-profile--ahs" data-bs-toggle="modal" data-bs-target="#designinnerModal">المنتجات</button>
                                 <button class="btn btn-sky edit-profile membership-edit">تعديل</button>
                             </div>
                         </div>
@@ -124,38 +123,38 @@
 @if(Auth::check())
 <form class="gy-4 gx-5" method="get" action="{{ route('profileUser') }}">
                                 
-    <input type="text" name="id" value="{{ Auth::user()->id }}">
-    <input type="text" name="role" value="{{ Auth::user()->role }}">
+    <!-- <input type="text" name="id" value="{{ Auth::user()->id }}">
+    <input type="text" name="role" value="{{ Auth::user()->role }}"> -->
     
     <div class="row justify-content-center">
         <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-3 mt-4">
             <label class="form-label dot">الاسم</label>
-            <input type="text" class="form-control name " name="name" value="{{ Auth::user()->name }}" placeholder="الاسم هنا .." value="">
+            <input type="text" class="form-control name disabled" name="name" value="{{ Auth::user()->name }}" placeholder="الاسم هنا .." value="">
         </div>
         <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-3 mt-4">
             <label class="form-label dot">رقم الجوال</label>
-            <input type="text" class="form-control " name="field" value="{{ Auth::user()->field }}" placeholder="رقم الجوال هنا .." value="">
+            <input type="text" class="form-control disabled" name="field" value="{{ Auth::user()->field }}" placeholder="رقم الجوال هنا .." value="">
         </div>
         <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-3 mt-4">
             <label class="form-label dot">الايميل</label>
-            <input type="text" name="email"  name="email" value="{{ Auth::user()->email }}" class="form-control email " placeholder="الايميل هنا .." value="">
+            <input type="text" name="email"  name="email" value="{{ Auth::user()->email }}" class="form-control email disabled" placeholder="الايميل هنا .." value="">
         </div>
     </div>
     <div class="row justify-content-center mb-5">
         <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-3 mt-4">
             <label class="form-label dot">كلمة المرور</label>
-            <input type="text" name="password" class="form-control pass " placeholder="كلمة المرور هنا .." value="">
+            <input type="text" name="password" class="form-control pass disabled" placeholder="كلمة المرور هنا .." value="">
         </div>
         <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-3 mt-4 ahs-from-box">
             <label class="form-label dot">تقنية الطباعة</label>
-            <select class="form-select"  name="printing_technology" aria-label="Default select example">
+            <select class="form-select disabled"  name="printing_technology" aria-label="Default select example">
                 <option></option>
                 <option>اختيار التقنية</option>
             </select>
         </div>
         <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-3 mt-4 ahs-from-box">
             <label class="form-label dot">أنواع البرامج المستخدمة</label>
-            <select class="form-select "  name="software_type" aria-label="Default select example">
+            <select class="form-select disabled"  name="software_type" aria-label="Default select example">
                 <option></option>
                 <option>اختاير البرامج المستخدمة</option>
             </select>
@@ -168,7 +167,7 @@
         <img src="{{ asset('/user/assets/images/warning.png')}}" alt="" class="almuntjat-form-error__img"> بعد إضافة المنتج سيذهب الى الإدارة للمراجعة للقبول أو الرفض
     </div>
     <div class="form-action">
-        <button type="submit">حفظ</button>
+        <button class="btn btn-form mx-3 with-arrow member-modal-disabled disabled " type="submit">حفظ</button>
         <p>تعديل بيانات التسجيل</p>
     </div>
 </form>

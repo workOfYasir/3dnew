@@ -63,6 +63,14 @@
                                             invoice-field"  name="phone">
                                         </div>
                                     </div>
+								<div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Subject
+                                            </label>
+                                            <input type="text" class="form-control
+                                            invoice-field"  name="subject">
+                                        </div>
+                                    </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">تاريخ
@@ -198,16 +206,7 @@
                                     </div>
                                 </div>
                            
-                                <div class="col-md-6">
-                                    
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="0" name="comments" id="exampleInput">
-                                            <label class="form-check-label" for="exampleInput">
-                                                Comments
-                                            </label>
-                                        </div>
-                                        
-                                </div>
+                            
                             </div>
                         </div>
                            
@@ -219,13 +218,13 @@
                                         <th>Quantity</th>
                                         <th>Rate</th>
                                         <th>Tax</th>
-                                        <th>Amount</th>
+                                       
                                         <th>
                                             <i class="fa fa-trash" aria-hidden="true"></i>
                                         </th>
                                     </tr>
                                 </thead>
-                                <span class='add'>Add Skill</span>
+                                <span class='add'>Add Item</span>
                                 <tbody>
                                     <tr class='element' id='div_1'>
                                         <td>
@@ -254,11 +253,7 @@
                                                 <input type="text" class="form-control" id="exampleInput" name="tax[]"  placeholder="Tax">
                                             </div>
                                         </td>
-                                        <td>
-                                            <div id="amount_0">
-
-                                            </div>
-                                        </td>
+                                      
                                         <td>
                                             <i class="fa fa-check" aria-hidden="true"></i>
                                         </td>

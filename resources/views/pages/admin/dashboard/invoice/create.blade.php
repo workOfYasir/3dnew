@@ -98,7 +98,7 @@
                                         </th>
                                     </tr>
                                 </thead>
-                                <span class='add'>Add Skill</span>
+                                <span class='add'>Add Item</span>
                                 <tbody>
                                     <tr class='element' id='div_1'>
                                         <td>
@@ -148,3 +148,7 @@
     </div>
 </div>
 @endsection
+
+
+
+

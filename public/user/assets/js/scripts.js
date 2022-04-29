@@ -300,6 +300,7 @@ $(function () {
         $('#memberModal .form-action').find('.disabled').removeClass('disabled');
         $(this).addClass('disabled').css('transition', '.6s')
     })
+   
 
     // Public Services
     $('.btn.public-service').click(function () {
@@ -645,8 +646,19 @@ $(document).ready(function () {
         $(".show-bg-pink").addClass('pink-btn-bg');
         $("#productaddformModal .camera-icon").removeClass('d-none');
         $("#productaddformModal .camera-icon.upload-cross-red").addClass('d-none');
+        $('#productaddformModal form').find('.form-select , .form-control').addClass('disabled');
         $(this).addClass('uplod-rev-btn');
     })
+    $(".change-zhd").click(function () {
+        $(".add-red-dot").addClass('red-dot');
+        $(".show-bg-pink").removeClass('pink-btn-bg');
+        $("#productaddformModal .camera-icon").addClass('d-none');
+        $("#productaddformModal .camera-icon.add-camera-icon").removeClass('d-none').addClass('d-block');
+        $("#productaddformModal .camera-icon.upload-cross-red").removeClass('d-none');
+        $('#productaddformModal form').find('.form-select , .form-control').removeClass('disabled');
+        $(".product-save-btn").removeClass('uplod-rev-btn');
+    })
+    
 
     $(".btn-close").click(function () {
         $('.modal').modal('hide');
