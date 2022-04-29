@@ -3200,3 +3200,7 @@ input[type=number] {
 .d-contents{
     display: contents !important;
 }
+
+.animate__delay-6s {
+    animation-delay: 8s!important;
+}

@@ -1,25 +1,27 @@
 $(function () {
 
     // window.scrollTo(0, 0);
-    if ($(window).width() < 768) {
-        $('.banner-bg').removeClass('animate__slideInRight, animate__delay-2s, animate__slower');
-        $('.black-bg').removeClass('animate__slideInLeft');
-        $('.black-bg').addClass('animate__slideInUp');
-        $('.banner-bg').addClass('animate__slideInUp animate_slowest');
-    }
+    // if ($(window).width() < 768) {
+    // //     $('.banner-bg').removeClass('animate__slideInRight, animate__delay-2s, animate__slower');
+    // //     $('.black-bg').removeClass('animate__slideInLeft');
+    // //     $('.black-bg').addClass('animate__slideInUp');
+    // //     $('.banner-bg').addClass('animate__slideInUp animate_slowest');
+    // $('.banner-bg, .black-bg').removeClass('animate__delay-4s');
+    // $('.banner-bg, .black-bg').addClass('animate__delay-6s');
+    // }
     var i = 0;
 
+    var loader = true;
     function move() {
         $('.main-progress').css('z-index', '999');
         $('.main-progress').removeClass('d-none');
         $('.hide-on-load').css('opacity', 0);
-        if (i == 0) {
+        if (i == 0 && loader) {
 
             i = 1;
             var elem = document.getElementById("barw");
             var widths = 1;
-            var id = setInterval(frame, 40);
-
+            var id = setInterval(frame, 35);
             function frame() {
                 if (widths >= 100) {
                     $('.main-progress').css('z-index', '0');
@@ -30,7 +32,7 @@ $(function () {
                     $(".main-progress").fadeTo(1200, 0);
                     // $('#loading').fadeOut(1000);
                     $('.hide-on-load').fadeTo(4000, 1);
-
+                    $('.banner-bg, .black-bg').addClass('animate__delay-1s');
                 } else {
                     $('body').css('overflow', 'hidden');
                     $(".main-progress").css('display', 'block')
@@ -41,11 +43,19 @@ $(function () {
 
                 }
             }
+            loader = false;
         }
     }
 
     move();
-
+    if ($(window).width() < 768) {
+        //     $('.banner-bg').removeClass('animate__slideInRight, animate__delay-2s, animate__slower');
+        //     $('.black-bg').removeClass('animate__slideInLeft');
+        //     $('.black-bg').addClass('animate__slideInUp');
+        //     $('.banner-bg').addClass('animate__slideInUp animate_slowest');
+        $('.banner-bg, .black-bg').removeClass('animate__delay-4s');
+        $('.banner-bg, .black-bg').addClass('animate__delay-6s');
+        }
     $(".main-slide").slick({
         dots: false,
         infinite: true,

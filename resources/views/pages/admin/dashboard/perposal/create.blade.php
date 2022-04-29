@@ -63,6 +63,7 @@
                                             invoice-field"  name="phone">
                                         </div>
                                     </div>
+
 								<div class="col-md-6">
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Subject
@@ -71,6 +72,7 @@
                                             invoice-field"  name="subject">
                                         </div>
                                     </div>
+
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">تاريخ
@@ -204,6 +206,7 @@
                                         <small id="" class="form-text
                                             text-muted"></small>
                                     </div>
+
                                 </div>
                            
                             
@@ -218,13 +221,15 @@
                                         <th>Quantity</th>
                                         <th>Rate</th>
                                         <th>Tax</th>
-                                       
+
                                         <th>
                                             <i class="fa fa-trash" aria-hidden="true"></i>
                                         </th>
                                     </tr>
                                 </thead>
+
                                 <span class='add'>Add Item</span>
+
                                 <tbody>
                                     <tr class='element' id='div_1'>
                                         <td>
@@ -253,7 +258,7 @@
                                                 <input type="text" class="form-control" id="exampleInput" name="tax[]"  placeholder="Tax">
                                             </div>
                                         </td>
-                                      
+
                                         <td>
                                             <i class="fa fa-check" aria-hidden="true"></i>
                                         </td>

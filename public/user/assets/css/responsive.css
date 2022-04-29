@@ -2,6 +2,16 @@
 
 @media only screen and (min-width: 360px) and (max-width: 767px) {
 /* asim */
+.banner{overflow: hidden !important;}
+.mujtmah-box__count{
+    bottom: -30px;
+}
+.mujtmah-box__media{
+    margin-bottom: 35px;
+}
+.banner .carousel-item {
+    z-index: 99;
+}
 .view-order-check-main p{
     font-size: 14px;
 }
@@ -446,6 +456,7 @@
 
     .banner {
         padding-top: 270px;
+        overflow: hidden;
     }
 
     .banner .carousel-item p {
@@ -535,9 +546,10 @@
     .hands.sample {
         left: 0;
         width: 250px;
-        bottom: 0;
-        top: 160px;
-        right: 80px;
+        top: -100px;
+        right: 0;
+        display: block;
+        margin: auto;
     }
 
     .about-content .actions {
@@ -597,6 +609,7 @@
     .map-cap.side {
         padding-right: 40px;
         padding-top: 100px;
+        bottom: 100px!important;
     }
 
     .bottom.boxContainer .blue-box {
@@ -1022,6 +1035,9 @@
 
     .title.white::after {
         left: 30px;
+    }
+    .mujtmah-box__media{
+        margin-bottom: 35px;
     }
 }
 
