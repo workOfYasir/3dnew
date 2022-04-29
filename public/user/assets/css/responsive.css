@@ -609,6 +609,7 @@
     .map-cap.side {
         padding-right: 40px;
         padding-top: 100px;
+        bottom: 100px!important;
     }
 
     .bottom.boxContainer .blue-box {
