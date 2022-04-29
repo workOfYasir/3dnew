@@ -839,7 +839,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-6 dot-txt-main">
-                        <div class="image-place dot-effect" id="main-effect" data-aos="zoom-in" data-aos-offset="500">
+                        <div class="image-place dot-effect" id="main-effect" data-aos="zoom-in" >
                             <div class="pointer head">
                                 <p>الجمجمة</p>
                             </div>
@@ -905,7 +905,7 @@
                         </div>
                     </div>
                     <div class="col-md-6 dot-txt-main-left">
-                        <div class="image-place effect-machine" data-aos="zoom-in" data-aos-offset="500"
+                        <div class="image-place effect-machine" data-aos="zoom-in" 
                             id="main-macine">
                             <div class="pointer top">
                                 <p>مجسمات كبيرة</p>
@@ -1017,7 +1017,7 @@
                                         1</span>طلبات قائمة</p>
                             </div>
                         </div>
-                        <div class="mujtmah-box__media" data-aos="zoom-in" data-aos-offset="500">
+                        <div class="mujtmah-box__media" data-aos="zoom-in" >
                             <img src="{{ asset('user/assets/images/mujtmah-box__image.png') }}"
                                 class="mujtmah-box__image">
                             <div class="mujtmah-box__count">
@@ -1027,7 +1027,7 @@
                         </div>
                     </div>
                     <div class="mujtmah-box2">
-                        <div class="mujtmah-box__media" data-aos="zoom-in" data-aos-offset="500">
+                        <div class="mujtmah-box__media" data-aos="zoom-in" >
                             <div class="mujtmah-box__count2">
                                 <h1 class="mujtmah-box__count-heading designer-counter" data-count="40" >0</h1>
                                 <p class="mujtmah-box__count-sub-heading">عميل</p>
@@ -1260,7 +1260,7 @@
                                         <div class="row">
                                             <div class="col-md-6 dot-txt-main pb-4">
                                                 <div class="image-place dot-effect" data-aos="zoom-in"
-                                                    data-aos-offset="500">
+                                                    >
                                                     <div class="pointer head">
                                                         <p>الجمجمة</p>
                                                     </div>
@@ -1304,7 +1304,7 @@
                                             </div>
                                             <div class="col-md-6 dot-txt-main-left pb-4" id="macine">
                                                 <div class="image-place effect-machine" data-aos="zoom-in"
-                                                    data-aos-offset="500">
+                                                    >
                                                     <div class="pointer top">
                                                         <p>مجسمات كبيرة</p>
                                                     </div>
