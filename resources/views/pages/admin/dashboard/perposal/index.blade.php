@@ -80,8 +80,8 @@
                 <div class="col-12 card">
                     <nav>
                         <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                            <button class="nav-link text-black active" id="nav-home-tab" data-bs-toggle="tab"
-                                data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home"
+                            <button class="nav-link text-black active" id="nav-home-tab_{{$key}}" data-bs-toggle="tab"
+                                data-bs-target="#nav-home_{{$key}}" type="button" role="tab" aria-controls="nav-home_{{$key}}"
                                 aria-selected="true">Proposal</button>
                             <button class="nav-link text-black" id="nav-profile-tab_{{$key}}" data-bs-toggle="tab"
                                 data-bs-target="#nav-profile_{{$key}}" type="button" role="tab" aria-controls="nav-profile_{{$key}}"
@@ -89,8 +89,8 @@
                         </div>
                     </nav>
                     <div class="tab-content pt-3" id="nav-tabContent">
-                        <div class="tab-pane fade show active" id="nav-home" role="tabpanel"
-                            aria-labelledby="nav-home-tab">
+                        <div class="tab-pane fade show active" id="nav-home_{{$key}}" role="tabpanel"
+                            aria-labelledby="nav-home-tab_{{$key}}">
                             <div class="col-12 d-flex">
                                 <div class="col-6">
                                     <a href="{{ route('purposal',$invoice->id) }}" target="_blank"
