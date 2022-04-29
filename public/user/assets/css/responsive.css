@@ -538,9 +538,11 @@
     .hands.sample {
         left: 0;
         width: 250px;
-        bottom: 0;
-        top: 160px;
-        right: 80px;
+        bottom: 40px;
+        top: 0;
+        right: 0;
+        display: block;
+        margin: auto;
     }
 
     .about-content .actions {
