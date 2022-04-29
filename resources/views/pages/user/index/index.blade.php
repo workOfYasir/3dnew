@@ -508,10 +508,10 @@
 
         <section class="banner sample">
             <img src="{{ asset('user/assets/images/banner-bg.png') }}"
-                class="img-fluid banner-bg sample move-blue animate__animated animate__slideInRight animate__slower animate__delay-4s"
+                class="img-fluid banner-bg sample move-blue animate__animated animate__slideInRight animate__slower"
                 alt="banner-bg">
             <img src="{{ asset('user/assets/images/black-bg.png') }}"
-                class="black-bg sample move-black animate__animated animate__slideInLeft animate__slower animate__delay-4s"
+                class="black-bg sample move-black animate__animated animate__slideInLeft animate__slower"
                 alt="black-bg">
             <img src="{{ asset('user/assets/images/hands.png') }}" class="img-fluid hands sample move-hand" alt="hands">
             <div class="container">
@@ -905,7 +905,7 @@
                         </div>
                     </div>
                     <div class="col-md-6 dot-txt-main-left">
-                        <div class="image-place effect-machine" data-aos="zoom-in"
+                        <div class="image-place effect-machine" data-aos="zoom-in" 
                             id="main-macine">
                             <div class="pointer top">
                                 <p>مجسمات كبيرة</p>
@@ -1260,7 +1260,7 @@
                                         <div class="row">
                                             <div class="col-md-6 dot-txt-main pb-4">
                                                 <div class="image-place dot-effect" data-aos="zoom-in"
-                                                    data-aos-offset="500">
+                                                    >
                                                     <div class="pointer head">
                                                         <p>الجمجمة</p>
                                                     </div>
@@ -1304,7 +1304,7 @@
                                             </div>
                                             <div class="col-md-6 dot-txt-main-left pb-4" id="macine">
                                                 <div class="image-place effect-machine" data-aos="zoom-in"
-                                                    data-aos-offset="500">
+                                                    >
                                                     <div class="pointer top">
                                                         <p>مجسمات كبيرة</p>
                                                     </div>
