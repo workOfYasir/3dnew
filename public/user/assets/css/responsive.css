@@ -2,6 +2,9 @@
 
 @media only screen and (min-width: 360px) and (max-width: 767px) {
 /* asim */
+.banner .carousel-item {
+    z-index: 99;
+}
 .view-order-check-main p{
     font-size: 14px;
 }
