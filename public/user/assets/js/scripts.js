@@ -4,6 +4,7 @@ $(function () {
     
     var i = 0;
 
+    var loader = true;
     function move() {
         $('.main-progress').css('z-index', '999');
         $('.main-progress').removeClass('d-none');
