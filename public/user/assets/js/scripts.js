@@ -53,7 +53,7 @@ $(function () {
         dots: false,
         infinite: true,
         arrows: true,
-        speed: 500,
+        speed: 100,
         slidesToShow: 5,
         slidesToScroll: 1,
         responsive: [{
