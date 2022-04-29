@@ -2325,6 +2325,7 @@ textarea {
 
 .banner .carousel-item {
     transition: .9s ease-in-out;
+    z-index: 9999;
 }
 
 .field-blue {
