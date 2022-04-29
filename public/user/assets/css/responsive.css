@@ -2,6 +2,10 @@
 
 @media only screen and (min-width: 360px) and (max-width: 767px) {
 /* asim */
+.banner{overflow: hidden !important;}
+.mujtmah-box__count{
+    bottom: -30px;
+}
 .mujtmah-box__media{
     margin-bottom: 35px;
 }
@@ -452,6 +456,7 @@
 
     .banner {
         padding-top: 270px;
+        overflow: hidden;
     }
 
     .banner .carousel-item p {
