@@ -543,7 +543,7 @@
             {{-- <div class="move-blue2"></div> --}}
             <div class="move-blue2"></div>
             <div class="black-bg2"></div>
-            <img src="{{ asset('user/assets/images/hands.png') }}" class="img-fluid hands sample move-hand" alt="hands">
+            <img src="{{ asset('user/assets/images/hands.png') }}" class="img-fluid hands sample move-hand" alt="hands" data-aos="fade-down">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-md-12">
