@@ -143,6 +143,7 @@ Route::group(['middleware' => 'auth', 'varify','cors'], function () {
         Route::resource('side', SideImageController::class);
         Route::resource('logo', LogoController::class);
 
+        Route::get('payment/pdf/{id}', [InvoiceController::class,'pdfPayment'])->name('payment.pdf');
         Route::post('edituser_profile/{id}', [HomeController::class, 'edituser'])->name('edituser_profile');
         Route::get('view/{id}', [ImageSlideController::class, 'view'])->name('view');
         Route::get('register_profile', [HomeController::class, 'register_profile'])->name('register_profile');

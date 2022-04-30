@@ -148,7 +148,7 @@
                                 </th>
                             </tr>
                         </thead>
-                        <span class='addCustom'>Add Skill</span>
+                        <span class='addCustom'>Add Item</span>
                         <tbody class="wrapper">
                             @foreach($invoice->pdf as $key => $pdf)
                             <tr>

@@ -64,6 +64,21 @@
 </head>
 
 <body>
+   
+    <div class="toast" style="direction:ltr" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <strong class="mr-auto">Login Failed</strong>
+        <button type="button" class="ml-2 mb-1 close btn btn-sm" data-dismiss="toast" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="toast-body">
+          @foreach($errors->all() as $error)
+        {{$error}}
+        @endforeach
+      </div>
+    </div>
+ 
     <div class="toggle-overlay"></div>
     <div class="content-wrapper hide-on-load">
         <nav class="navbar navbar-expand-lg navbar-light desktop-nav">
@@ -287,6 +302,7 @@
                                 </a>
                             </div>
                         </div>
+                        
                         <div class="col-md-6 col-sm-9 mobile-pro-icon">
                             <button class="btn mob-tog-btn" id="menu-toggle"><i class="fa-solid fa-bars"></i></button>
 
@@ -310,7 +326,7 @@
         </div>
         <!-- mobile menu start here -->
 
-
+     
 
         <!-- mobile menu end here -->
         <!-- <section class="banner">
@@ -1354,12 +1370,12 @@
             </div>
         </div>
     </div>
-    <div class="main-progress">
+    {{-- <div class="main-progress">
         <img src="{{asset('user/assets/icons/logo.svg')}}" alt="logo">
         <p class='progress text-center bg-transparent d-block'>0</p>
 
         <div class="progress-bar bar-load" id="bar"></div>
-    </div>
+    </div> --}}
 
     <!--///////////////////////////////////// services model end here ////////////////////////////////////-->
 
@@ -9951,7 +9967,15 @@
             });
 
         });
+        
     </script>
+     @if(count($errors) > 0)
+     <script>
+        $(document).ready(function(){           
+            $('.toast').toast('show')
+        })  
+    </script>
+     @endif
     <!-- Slick -->
     <script src="{{ asset('user/assets/js/slick.min.js') }}"></script>
     <!-- Scripts -->
