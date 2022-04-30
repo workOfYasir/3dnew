@@ -526,8 +526,8 @@
         <section class="banner sample">
             {{-- <img src="{{ asset('user/assets/images/banner-bg.png') }}" class="img-fluid banner-bg sample move-blue animate__animated animate__fadeInRight animate__slower " alt="banner-bg">
             <img src="{{ asset('user/assets/images/black-bg.png') }}" class="black-bg sample move-black animate__animated animate__fadeInLeft animate__slower " alt="black-bg" > --}}
-            <img src="{{ asset('user/assets/images/banner-bg.png') }}" class="img-fluid banner-bg sample move-blue " alt="banner-bg">
-            <img src="{{ asset('user/assets/images/black-bg.png') }}" class="black-bg sample move-black  " alt="black-bg" >
+            <img src="{{ asset('user/assets/images/banner-bg.png') }}" class="img-fluid banner-bg sample move-blue animate__animated animate__slideInRight animate__slower" alt="banner-bg">
+            <img src="{{ asset('user/assets/images/black-bg.png') }}" class="black-bg sample move-black  animate__animated animate__slideInLeft animate__slower" alt="black-bg" >
             {{-- <div class="move-blue2"></div> --}}
             <div class="black-bg2"></div>
             <img src="{{ asset('user/assets/images/hands.png') }}" class="img-fluid hands sample move-hand" alt="hands">
@@ -9992,9 +9992,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/CSSRulePlugin.min.js"></script>
     <script>
-        gsap.from('.move-blue', {duration:1.5, delay:2, opacity:0,  x: 200});
-        gsap.from('.black-bg',  {duration:1.5, delay:3, opacity:0,  x: -200});
-        gsap.from('.black-bg2', {duration:1.5, delay:3,   backgroundPosition:'-350px 0'});
+        // gsap.from('.move-blue', {duration:1.5, delay:2, opacity:0,  x: 200});
+        // gsap.from('.black-bg',  {duration:1.5, delay:3, opacity:0,  x: -200});
+        gsap.from('.black-bg2', {duration:1.5, delay:1,   backgroundPosition:'-350px 0'});
         
     </script>
     
