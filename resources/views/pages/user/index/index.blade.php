@@ -223,7 +223,7 @@
 
                     <a href="#login" data-bs-toggle="modal" class="register-icon border-bottom" data-bs-target="#loginModal">تسجيل
                         دخول</a>
-                    <a href="#register" class="ms-auto register-icon border-bottom" data-bs-toggle="modal"
+                    <a href="#register" class="ms-auto register-icon border-bottom main-register" data-bs-toggle="modal"
                         data-bs-target="#registerModal">التسجيل</a>
                      
                     <span class="social-icons">
@@ -284,7 +284,7 @@
                                 data-bs-target="#loginModal">تسجيل دخول</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#register" class="nav-link dot" data-bs-toggle="modal"
+                            <a href="#register" class="nav-link dot main-register" data-bs-toggle="modal"
                                 data-bs-target="#registerModal">التسجيل</a>
 
                         </li>
@@ -925,7 +925,7 @@
                                         src="{{ asset('user/assets/icons/video.svg') }}" alt="video"> فيديو
                                     تعريفي</button>
                                 <p class='koib-health d-none mt-5 nav-link'><span style="color:red"> يتطلب التسجيل
-                                    </span><a href="#" data-bs-toggle="modal" data-bs-target="#loginModal"> للتسجيل اضغط
+                                    </span><a href="#" data-bs-toggle="modal" class="right-register" data-bs-target="#registerModal"> للتسجيل اضغط
                                         هنا</a></p>
                             </div>
                             @auth
@@ -980,7 +980,7 @@
                                     الخدمة</button>
 
                                 <p class='koib d-none mt-5 nav-link'><span style="color:red"> يتطلب التسجيل </span><a
-                                        href="#" data-bs-toggle="modal" data-bs-target="#loginModal"> للتسجيل اضغط
+                                        href="#" data-bs-toggle="modal" class="left-register"  data-bs-target="#registerModal"> للتسجيل اضغط
                                         هنا</a></p>
                                 @endauth
 
@@ -1151,7 +1151,8 @@
                     </div>
                     <div class="map">
                         <img src="{{ asset('user/assets/images/map.svg') }}" class="img-fluid" alt="map">
-                        <button class="btn btn-sky">الخريطة <img src="{{ asset('user/assets/icons/arrow.svg') }}"
+                        <button class="btn btn-sky"  data-bs-toggle="modal"
+                                    data-bs-target="#mapModal">الخريطة <img src="{{ asset('user/assets/icons/arrow.svg') }}"
                                 alt="arrow"></button>
                     </div>
                     <div class="row  justify-content-center">
@@ -1552,7 +1553,7 @@
                                             <div class="left-side">
                                                 <a href="#login" data-bs-toggle="modal" class="register-icon border-bottom"
                                                     data-bs-target="#loginModal">تسجيل دخول</a>
-                                                <a href="#register" class="ms-auto register-icon border-bottom" data-bs-toggle="modal"
+                                                <a href="#register" class="ms-auto register-icon border-bottom main-register" data-bs-toggle="modal"
                                                     data-bs-target="#registerModal">التسجيل</a>
                                                 <span class="social-icons">
                                                     <a href="#"><img src="{{ asset('user/assets/icons/twitter.svg') }}"
@@ -1618,7 +1619,7 @@
                                                             data-bs-target="#loginModal">تسجيل دخول</a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a href="#register" class="nav-link dot" data-bs-toggle="modal"
+                                                        <a href="#register" class="nav-link dot main-register" data-bs-toggle="modal"
                                                             data-bs-target="#registerModal">التسجيل</a>
 
                                                     </li>
@@ -2117,7 +2118,7 @@
                                             <div class="left-side">
                                                 <a href="#login" data-bs-toggle="modal" class="register-icon"
                                                     data-bs-target="#loginModal">تسجيل دخول</a>
-                                                <a href="#register" class="ms-auto register-icon" data-bs-toggle="modal"
+                                                <a href="#register" class="ms-auto register-icon main-register" data-bs-toggle="modal"
                                                     data-bs-target="#registerModal">التسجيل</a>
                                                 <span class="social-icons">
                                                     <a href="#"><img src="{{ asset('user/assets/icons/twitter.svg') }}"
@@ -2183,7 +2184,7 @@
                                                             data-bs-target="#loginModal">تسجيل دخول</a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a href="#register" class="nav-link dot" data-bs-toggle="modal"
+                                                        <a href="#register" class="nav-link dot main-register" data-bs-toggle="modal"
                                                             data-bs-target="#registerModal">التسجيل</a>
 
                                                     </li>
@@ -5100,7 +5101,7 @@
                                         <div class="left-side">
                                             <a href="#login" data-bs-toggle="modal" class="register-icon border-bottom"
                                                 data-bs-target="#loginModal">تسجيل دخول</a>
-                                            <a href="#register" class="ms-auto register-icon border-bottom" data-bs-toggle="modal"
+                                            <a href="#register" class="ms-auto register-icon border-bottom main-register" data-bs-toggle="modal"
                                                 data-bs-target="#registerModal">التسجيل</a>
                                                 
                                             <span class="social-icons">
@@ -5165,7 +5166,7 @@
                                                         data-bs-target="#loginModal">تسجيل دخول</a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a href="#register" class="nav-link dot" data-bs-toggle="modal"
+                                                    <a href="#register" class="nav-link dot main-register" data-bs-toggle="modal"
                                                         data-bs-target="#registerModal">التسجيل</a>
 
                                                 </li>
@@ -6123,7 +6124,7 @@
                                             <div class="left-side">
                                                 <a href="#login" data-bs-toggle="modal" class="register-icon border-bottom"
                                                     data-bs-target="#loginModal">تسجيل دخول</a>
-                                                <a href="#register" class="ms-auto register-icon border-bottom" data-bs-toggle="modal"
+                                                <a href="#register" class="ms-auto register-icon border-bottom main-register" data-bs-toggle="modal"
                                                     data-bs-target="#registerModal">التسجيل</a>
                                                 <span class="social-icons">
                                                     <a href="#"><img src="{{ asset('user/assets/icons/twitter.svg') }}"
@@ -6189,7 +6190,7 @@
                                                             data-bs-target="#loginModal">تسجيل دخول</a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a href="#register" class="nav-link dot" data-bs-toggle="modal"
+                                                        <a href="#register" class="nav-link dot main-register" data-bs-toggle="modal"
                                                             data-bs-target="#registerModal">التسجيل</a>
 
                                                     </li>
@@ -9737,7 +9738,38 @@
     </div>
 
     <!-- user 9 requestmodal end -->
-
+<!-- mapmodal  start start -->
+<div class="modal fade page result video" id="mapModal" tabindex="-1" aria-labelledby="mapModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="modal-header border-0">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </h1>
+                            
+                        </div>
+                        <div class="modal-body">
+                            <div class="container">
+                                <div class="row">
+                                   
+                                    <div class="col-md-12 text-center">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13606.813007965276!2d74.3235535!3d31.50483955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1651321479830!5m2!1sen!2s" width="70%" height="450" style="border:0; width:70%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                    </div>
+                                  
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- mapmodal end here -->
     <!-- About US -->
 
     @include('pages.user.aboutModal')

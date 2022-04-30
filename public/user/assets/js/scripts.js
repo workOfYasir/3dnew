@@ -454,6 +454,7 @@ $(function () {
             $('#publicVideoModal iframe').attr('src', $('#publicVideoModal iframe').attr('src'));
             $('.modal.video').modal('hide');
         }
+
     })
 })
 
@@ -691,6 +692,21 @@ $(document).ready(function () {
         $(".blur-star").removeClass('d-block');
         $(".blur-star").addClass('d-none');
         $(".blur-star-rating").removeClass('blur');
+    })
+
+    $('.right-register').click(function() {
+        $('#registerModal').removeClass('animate__fadeInRight animate__fadeInLeft');
+        $('#registerModal').addClass('animate__fadeInRight');
+    })
+
+    $('.left-register').click(function() {
+        $('#registerModal').removeClass('animate__fadeInRight animate__fadeInLeft');
+        $('#registerModal').addClass('animate__fadeInLeft');
+    })
+
+    $('.main-register').click(function() {
+        $('#registerModal').removeClass('animate__fadeInRight animate__fadeInLeft');
+        $('#registerModal').addClass('animate__fadeInRight');
     })
 
 });
