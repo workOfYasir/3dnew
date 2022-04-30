@@ -25,7 +25,7 @@
                                         <th>Amount</th>
                                         <th>Date</th>
                                         <th>Customer</th>
-                                        <th>Total</th>
+                                        <th>Status</th>
                                   
                                     </tr>
                                 </thead>
