@@ -9993,7 +9993,7 @@
     <script>
         gsap.from('.move-blue', {duration:1.5, delay:2, opacity:0,  x: 200});
         gsap.from('.black-bg',  {duration:1.5, delay:3, opacity:0,  x: -200});
-        gsap.from('.black-bg2', {duration:1.5, delay:3, opacity:0,  backgroundPosition:'-350px 0'});
+        gsap.from('.black-bg2', {duration:1.5, delay:3,   backgroundPosition:'-350px 0'});
         
     </script>
     
