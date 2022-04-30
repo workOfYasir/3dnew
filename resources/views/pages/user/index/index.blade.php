@@ -71,8 +71,9 @@
         </button>
       </div>
       <div class="toast-body">
-          @foreach($errors->all() as $error)
-        {{$error}}
+        @foreach($errors->all() as $error)
+        
+            {{$error}}
         @endforeach
       </div>
     </div>
