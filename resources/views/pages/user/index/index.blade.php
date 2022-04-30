@@ -74,17 +74,20 @@
 </head>
 
 <body>
-    {{-- <div class="se-pre-con"></div> --}}
-    <div class="toast" style="direction:ltr" role="alert" aria-live="assertive" aria-atomic="true">
+
+   
+    <div class="toast" style="direction:ltr;position:absolute; z-index:9999999" role="alert" aria-live="assertive" aria-atomic="true">
+
       <div class="toast-header">
-        <strong class="mr-auto">Login Failed</strong>
-        <button type="button" class="ml-2 mb-1 close btn btn-sm" data-dismiss="toast" aria-label="Close">
+        <strong class="mr-auto col">Login Failed</strong>
+        <button type="button" class="ml-2 mb-1 close btn btn-sm " data-dismiss="toast" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="toast-body">
-          @foreach($errors->all() as $error)
-        {{$error}}
+        @foreach($errors->all() as $error)
+        
+            {{$error}}
         @endforeach
       </div>
     </div>

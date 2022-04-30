@@ -113,9 +113,12 @@
                     <tr>
                         <td class="tbox1">
                             <label>{{ $pdf->title }}</label>
-                            <p class="muted"> {{ $pdf->descriptiom }}</p>
+                        
                         </td>
 
+                        <td >
+                            <p class="muted"> {{ $pdf->description }}</p>
+                        </td>
                         <td>{{$pdf->quantity}}</td>
                         <td>{{$pdf->rate}} SR</td>
                     </tr>
