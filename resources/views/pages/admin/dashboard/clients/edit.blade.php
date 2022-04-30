@@ -92,7 +92,7 @@
             
              
               <!-- <div class="form-group">
-              <label for="exampleInputEmail1">Proposal </label>
+              <label for="exampleInputEmail1">عرض سعر </label>
               <input type="text" class="form-control" name="proposal" value="{{$clients->proposal}}"id="" aria-describedby="" placeholder="Enter sub heading">
               <small id="" class="form-text text-muted"> </small>
             </div>

@@ -15,17 +15,17 @@
             <div class="col-12 panelwrapper">
                 <div class="card medical-card">
                     <div class="card-body p-0">
-                        <a class="btn btn-primary mb-2" href="{{
-                            route('invoicess.create') }}"> جديد +</a>
+                        {{-- <a class="btn btn-primary mb-2" href="{{
+                            route('invoicess.create') }}"> جديد +</a> --}}
                         <div class="table-responsive medical-datatable">
                             <table class="display" style="width:100%" id="basic-2">
                                 <thead>
                                     <tr>
-                                        <th>invoices</th>
-                                        <th>Amount</th>
-                                        <th>Date</th>
-                                        <th>Customer</th>
-                                        <th>Status</th>
+                                        <th>فاتورة</th>
+                                        <th>مبلغ</th>
+                                        <th>تاريخ</th>
+                                        <th>عميل</th>
+                                        <th>الحالة</th>
                                   
                                     </tr>
                                 </thead>
@@ -66,10 +66,10 @@
                                             ?>
                                             @if($payment)
                                             <button
-                                                class="btn btn-sm btn-success">Paid</button>
+                                                class="btn btn-sm btn-success">مسددة</button>
                                             @else
                                             <button
-                                                class="btn btn-sm btn-danger">Un Paid</button>
+                                                class="btn btn-sm btn-danger">غير مسددة</button>
                                             @endif
                                         </div>
                                     </td>
@@ -88,10 +88,10 @@
                         <div class="nav nav-tabs" id="nav-tab" role="tablist">
                             <button class="nav-link text-black active" id="nav-home-tab" data-bs-toggle="tab"
                                 data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home"
-                                aria-selected="true">Proposal</button>
+                                aria-selected="true">عرض سعر</button>
                             <button class="nav-link text-black" id="nav-profile-tab" data-bs-toggle="tab"
                                 data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile"
-                                aria-selected="false">Comments</button>
+                                aria-selected="false">التعليقات</button>
                         </div>
                     </nav>
                     <div class="tab-content pt-3" id="nav-tabContent">
@@ -115,10 +115,10 @@
                                         ?>
 @if($payment)
 <button
-    class="btn btn-sm btn-success">Paid</button>
+    class="btn btn-sm btn-success">مسددة</button>
 @else
 <button
-    class="btn btn-sm btn-danger">Un Paid</button>
+    class="btn btn-sm btn-danger">غير مسددة</button>
 @endif
                                 </div>
 
@@ -148,10 +148,10 @@
                                 <table class="table table-light" style="direction: ltr">
                                     <thead class="thead-dark">
                                         <tr>
-                                            <th>Item</th>
-                                            <th>Description</th>
-                                            <th>Quantity</th>
-                                            <th>Rate</th>
+                                            <th>عنصر</th>
+                                            <th>الوصف</th>
+                                            <th>الكمية</th>
+                                            <th>السعر</th>
                                             <th>
                                                 <i class="fa fa-trash" aria-hidden="true"></i>
                                             </th>
@@ -181,35 +181,35 @@
                                         <tr>
                                             <td></td>
                                             <td></td>
-                                            <td>Tax</td>
+                                            <th>الضريبة</th>
                                             <td>{{ @$invoice->pdf[0]->tax }}</td>
                                         </tr>
                                         <tr>
             
                                             <td></td>
                                             <td></td>
-                                            <td>Total</td>
+                                            <th>الاجمالي</th>
                                             
                                         <td>{{ $total }}</td>
                                         </tr>
                                         <tr>
                                             <td></td>
                                             <td></td>
-                                            <td>VAT Rate</td>
+                                            <th>السعر VAT</th>
                                             <td>{{@$invoice->pdf[0]->tax}}%</td>
             
                                         </tr>
                                         <tr>
                                             <td></td>
                                             <td></td>
-                                            <td>VAT Amount</td>
+                                            <th>مبلغ VAT</th>
                                         
                                             <td>{{$totaltex}} SR</td>
                                         </tr>
                                         <tr>
                                             <td></td>
                                             <td></td>
-                                            <td>Total Quote</td>
+                                            <td>الاجمالي مبلغ</td>
                                             <td class="total-amount"> {{$t}}SR</td>
                                         </tr>
                                     </tbody>

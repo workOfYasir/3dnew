@@ -48,7 +48,7 @@
                                 
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label for="exampleInputEmail1">email
+                                            <label for="exampleInputEmail1">بريد الكتروني
                                             </label>
                                             <input type="text" class="form-control
                                             invoice-field"  disabled id="p_email">
@@ -57,7 +57,7 @@
                                     
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label for="exampleInputEmail1">phone
+                                            <label for="exampleInputEmail1">رقم جوال
                                             </label>
                                             <input type="text" class="form-control
                                             invoice-field"  name="phone">
@@ -66,7 +66,7 @@
 
 								<div class="col-md-6">
                                         <div class="form-group">
-                                            <label for="exampleInputEmail1">Subject
+                                            <label for="exampleInputEmail1">عرض سعر
                                             </label>
                                             <input type="text" class="form-control
                                             invoice-field"  name="subject">
@@ -101,13 +101,13 @@
                                
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">status
+                                        <label for="exampleInputEmail1">الحالة
                                         </label>
                                         <select class="form-select
                                             invoice-field" required
                                             name="status" aria-label="Default
                                             select example">
-                                            <option selected disabled>select status</option>
+                                            <option selected disabled>الحالة</option>
                                             <option value="0">0</option>
                                             <option value="1">1</option>
                                             <option value="2">2</option>
@@ -118,13 +118,13 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">assigned
+                                        <label for="exampleInputEmail1">مسندة
                                         </label>
                                         <select class="form-select
                                             invoice-field" required
                                             name="assigned" aria-label="Default
                                             select example">
-                                            <option selected disabled>select assigned</option>
+                                            <option selected disabled>مسندة</option>
                                             <option value="0">0</option>
                                             <option value="1">1</option>
                                             <option value="2">2</option>
@@ -135,7 +135,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">city
+                                        <label for="exampleInputEmail1">المدينة
                                         </label>
                                         <input type="text" class="form-control invoice-field
                                         " required name="city"
@@ -147,7 +147,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">state
+                                        <label for="exampleInputEmail1">المنطقة
                                         </label>
                                         <input type="text" class="form-control invoice-field
                                         " required name="state"
@@ -159,13 +159,13 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">country
+                                        <label for="exampleInputEmail1">الدولة
                                         </label>
                                         <select class="form-select
                                             invoice-field" required
                                             name="country"  aria-label="Default
                                             select example">
-                                            <option selected disabled>select country</option>
+                                            <option selected disabled>الدولة</option>
                                            
                                                 <option value="pk">pk</option>
                                                 <option value="uk">uk</option>
@@ -175,7 +175,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">zip code
+                                        <label for="exampleInputEmail1">الرمز البريدي
                                         </label>
                                         <input type="text" class="form-control invoice-field
                                         " required name="zip_code"
@@ -216,11 +216,11 @@
                             <table class="table table-light" style="direction: ltr">
                                 <thead class="thead-dark">
                                     <tr>
-                                        <th>Item</th>
-                                        <th>Description</th>
-                                        <th>Quantity</th>
-                                        <th>Rate</th>
-                                        <th>Tax</th>
+                                        <th>عنصر</th>
+                                        <th>الوصف</th>
+                                        <th>الكمية</th>
+                                        <th>السعر</th>
+                                        <th>الضريبة</th>
 
                                         <th>
                                             <i class="fa fa-trash" aria-hidden="true"></i>
@@ -228,7 +228,7 @@
                                     </tr>
                                 </thead>
 
-                                <span class='add'>Add Item</span>
+                                <span class='add'>عنصر +</span>
 
                                 <tbody>
                                     <tr class='element' id='div_1'>

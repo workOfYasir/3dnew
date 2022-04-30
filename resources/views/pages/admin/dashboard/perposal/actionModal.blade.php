@@ -13,10 +13,10 @@
                     <div class="nav nav-tabs" id="nav-tab" role="tablist">
                         <button class="nav-link text-black active" id="nav-home-tab" data-bs-toggle="tab"
                             data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home"
-                            aria-selected="true">Proposal</button>
+                            aria-selected="true">عرض سعر</button>
                         <button class="nav-link text-black" id="nav-profile-tab" data-bs-toggle="tab"
                             data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile"
-                            aria-selected="false">Comments</button>
+                            aria-selected="false">التعليقات</button>
                     </div>
                 </nav>
                 <div class="tab-content pt-3" id="nav-tabContent">

@@ -87,10 +87,10 @@
                             <table class="table table-light" style="direction: ltr">
                                 <thead class="thead-dark">
                                     <tr>
-                                        <th>Item</th>
-                                        <th>Description</th>
-                                        <th>Quantity</th>
-                                        <th>Rate</th>
+                                        <th>عنصر</th>
+                                        <th>الوصف</th>
+                                        <th>الكمية</th>
+                                        <th>السعر</th>
                                         <th>Tax</th>
                                         <th>Amount</th>
                                         <th>
