@@ -21,11 +21,11 @@
                             <table class="display" style="width:100%" id="basic-2">
                                 <thead>
                                     <tr>
-                                        <th>Purposal</th>
-                                        <th>Subject</th>
-                                        <th>To</th>
-                                        <th>Total</th>
-                                  
+                                        <th>عرض سعر</th>
+                                        <th>العنوان</th>
+                                        <th>إلى</th>
+                                        <th>الاجمالي</th>
+                                        <th>الحالة</th>
                                     </tr>
                                 </thead>
                                 @foreach ($invoices as $key => $invoice)
@@ -61,9 +61,9 @@
                                             route('perposal.show', $invoice->id)
                                             }}">فاتورة</a> --}}
                                             @if($invoice->assigned)
-                                            <a class="btn btn-success">Accepted</a>
+                                            <a class="btn btn-success">تم الموافقة</a>
                                             @else
-                                            <a class="btn btn-secondary">Open</a>
+                                            <a class="btn btn-secondary">مفتوح</a>
                                             @endif
                                         </div>
                                     </td>
@@ -82,10 +82,10 @@
                         <div class="nav nav-tabs" id="nav-tab" role="tablist">
                             <button class="nav-link text-black active" id="nav-home-tab_{{$key}}" data-bs-toggle="tab"
                                 data-bs-target="#nav-home_{{$key}}" type="button" role="tab" aria-controls="nav-home_{{$key}}"
-                                aria-selected="true">Proposal</button>
+                                aria-selected="true">عرض سعر</button>
                             <button class="nav-link text-black" id="nav-profile-tab_{{$key}}" data-bs-toggle="tab"
                                 data-bs-target="#nav-profile_{{$key}}" type="button" role="tab" aria-controls="nav-profile_{{$key}}"
-                                aria-selected="false">Comments</button>
+                                aria-selected="false">التعليقات</button>
                         </div>
                     </nav>
                     <div class="tab-content pt-3" id="nav-tabContent">
