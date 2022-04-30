@@ -13,7 +13,12 @@ class UserController extends Controller
 {
     public function index()
     {
-        $users = User::all();
+        $users = User::where('role','user')->get();
+        return view('pages.admin.dashboard.users.index', compact('users'));
+    }
+    public function designer()
+    {
+        $users = User::where('role','designer')->get();
         return view('pages.admin.dashboard.users.index', compact('users'));
     }
     public function approval(Request $request,$id)
@@ -79,6 +84,7 @@ class UserController extends Controller
         foreach ($admins as $key => $admin) {
             \Mail::to($admin->email)->send(new \App\Mail\UpdateUser($details));
         }
+        return redirect()->back();
     }
     public function profileApprove($id)
     {

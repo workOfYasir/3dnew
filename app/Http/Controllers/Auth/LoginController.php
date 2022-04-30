@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Cookie;
 use App\Providers\RouteServiceProvider;
 use Symfony\Component\HttpFoundation\Request;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
@@ -41,7 +42,9 @@ class LoginController extends Controller
     }
     public function logout(Request $request)
     {
+        Cookie::queue('pop', '', 9999999999);
         Auth::logout();
+        
         return redirect('/');
     }
 }
