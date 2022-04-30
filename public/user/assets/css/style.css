@@ -786,6 +786,7 @@ footer .right img {
 }
 .black-bg2{
     display: none;
+    /* display: none; */
 }
 .move-blue2 {
     background: url('https://hopeful-montalcini.161-97-115-110.plesk.page/public/user/assets/images/banner-bg.png') no-repeat;
