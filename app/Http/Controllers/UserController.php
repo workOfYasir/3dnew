@@ -79,6 +79,7 @@ class UserController extends Controller
         foreach ($admins as $key => $admin) {
             \Mail::to($admin->email)->send(new \App\Mail\UpdateUser($details));
         }
+        return redirect()->back();
     }
     public function profileApprove($id)
     {
