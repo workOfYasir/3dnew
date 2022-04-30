@@ -40,9 +40,7 @@
     <link rel="stylesheet" href="{{ asset('user/assets/css/responsive.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('user/assets/css/zahid.css') }}">
     <link rel="stylesheet" href="{{ asset('user/assets/css/asim.css') }}">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/CSSRulePlugin.min.js"></script>
+    
     
     <style type="text/css">
         @font-face {
@@ -9990,6 +9988,9 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="{{ asset('user/assets/js/scripts.js') }}"></script>
     <script src="{{ asset('user/assets/js/formValidation.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/CSSRulePlugin.min.js"></script>
     <script>
         gsap.from('.move-blue', {duration:1.5, delay:2, opacity:0,  x: 200});
         gsap.from('.black-bg',  {duration:1.5, delay:3, opacity:0,  x: -200});
