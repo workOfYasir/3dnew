@@ -10019,6 +10019,22 @@
         
         
     </script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.0/jquery.cookie.min.js">
+  </script>
+  @if (Auth::check()) 
+  @role('user')
+  <script type="text/javascript">
+    $(document).ready(function() {
+        if ($.cookie('pop') == null) {
+            $('#requestsModal').modal('show');
+            $.cookie('pop', '1');
+            console.log('ok');
+        }
+        console.log('ok');
+    });
+   </script>
+   @endrole
+  @endif
     {{-- <script>
         wow = new WOW(
             {
