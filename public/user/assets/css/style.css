@@ -775,7 +775,7 @@ footer .right img {
     display: block;
 }
 .black-bg2 {
-    background: url(/assets/images/black-bg.png) no-repeat;
+    background: url('https://hopeful-montalcini.161-97-115-110.plesk.page/public/user/assets/images/black-bg.png') no-repeat;
     position: absolute;
     top: 200px;
     /* z-index: -2; */
