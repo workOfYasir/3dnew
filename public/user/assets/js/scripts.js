@@ -56,6 +56,9 @@ $(function () {
         //     $('.banner-bg').addClass('animate__slideInUp animate_slowest');
         // $('.banner-bg, .black-bg').removeClass('animate__delay-4s');
         // $('.banner-bg, .black-bg').addClass('animate__delay-6s');
+        // $(".move-hand").attr("data-aos","fade-down");
+        // $('hands').attr(["data-aos","fade-down"],["data-aos-duration","1500"],["data-aos-delay","2000"]);
+        // $('hands').attr(["data-aos","fade-down"],["data-aos-duration","1500"],["data-aos-delay","2000"]);
         }
     $(".main-slide").slick({
         dots: false,

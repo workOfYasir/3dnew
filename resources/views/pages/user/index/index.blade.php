@@ -546,8 +546,7 @@
             {{-- <div class="move-blue2"></div> --}}
             
             <div class="black-bg2"></div><div class="move-blue2"></div>
-            <img src="{{ asset('user/assets/images/hands.png') }}" class="img-fluid hands sample move-hand" alt="hands" data-aos="fade-down"
-            data-aos-duration="1500" data-aos-delay="2000">
+            <img src="{{ asset('user/assets/images/hands.png') }}" class="img-fluid hands sample move-hand" alt="hands">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-md-12">
@@ -10014,9 +10013,9 @@
     <script>
         // gsap.from('.move-blue', {duration:1.5, delay:2, opacity:0,  x: 200});
         // gsap.from('.black-bg',  {duration:1.5, delay:3, opacity:0,  x: -200});
-        gsap.from('.black-bg2', {duration:1.5, delay:0.5,   backgroundPosition:'-350px 0'});
+        gsap.from('.black-bg2', {duration:1.5,  delay:0.5, backgroundPosition:'-350px 0'});
         gsap.from('.move-blue2', {duration:1.5, delay:1,   backgroundPosition:'350px 0px'});
-        
+        gsap.from('.move-hand', {duration:1.5, delay:1.5, opacity:0,   y: -100});
         
     </script>
     {{-- <script>
