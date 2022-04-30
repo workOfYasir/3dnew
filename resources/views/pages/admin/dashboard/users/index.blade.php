@@ -1,12 +1,12 @@
 @extends('layouts.admin.app')
 @section('content')
 <div class="content-main">
-    <h3>إعدادات العنوان</h3>
+    <h3>قائمة المستخدمين</h3>
     <div class="breadcrumb-main">
         <ol class="breadcrumb">
             <li><a href="{{route('home')}}">الصفحة الرئيسية</a></li>
 
-            <li><a href="{{ route('user.list') }}">إعدادات العنوان</a></li>
+            <li><a href="{{ route('user.list') }}">قائمة المستخدمين</a></li>
         </ol>
     </div>
     <div class="container-fluid p-0">
