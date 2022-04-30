@@ -541,10 +541,10 @@
             <img src="{{ asset('user/assets/images/banner-bg.png') }}" class="img-fluid banner-bg sample move-blue animate__animated animate__slideInRight animate__slow"  alt="banner-bg">
             <img src="{{ asset('user/assets/images/black-bg.png') }}" class="black-bg sample move-black animate__animated animate__slideInLeft animate__slow"  alt="black-bg" >
             {{-- <div class="move-blue2"></div> --}}
-            <div class="move-blue2"></div>
-            <div class="black-bg2"></div>
+            
+            <div class="black-bg2"></div><div class="move-blue2"></div>
             <img src="{{ asset('user/assets/images/hands.png') }}" class="img-fluid hands sample move-hand" alt="hands" data-aos="fade-down"
-            data-aos-duration="1500" data-aos-delay="3000">
+            data-aos-duration="1500" data-aos-delay="2000">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-md-12">
@@ -10009,8 +10009,9 @@
     <script>
         // gsap.from('.move-blue', {duration:1.5, delay:2, opacity:0,  x: 200});
         // gsap.from('.black-bg',  {duration:1.5, delay:3, opacity:0,  x: -200});
+        gsap.from('.black-bg2', {duration:1.5, delay:0.5,   backgroundPosition:'-350px 0'});
         gsap.from('.move-blue2', {duration:1.5, delay:1,   backgroundPosition:'350px 0px'});
-        gsap.from('.black-bg2', {duration:1.5, delay:1,   backgroundPosition:'-350px 0'});
+        
         
     </script>
     {{-- <script>
