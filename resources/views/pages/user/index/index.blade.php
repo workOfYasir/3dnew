@@ -41,7 +41,9 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('user/assets/css/zahid.css') }}">
     <link rel="stylesheet" href="{{ asset('user/assets/css/asim.css') }}">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/CSSRulePlugin.min.js"></script>
+    
     <style type="text/css">
         @font-face {
             font-family: JannaRegular;
@@ -512,6 +514,7 @@
             <img src="{{ asset('user/assets/images/black-bg.png') }}" class="black-bg sample move-black animate__animated animate__fadeInLeft animate__slower " alt="black-bg" > --}}
             <img src="{{ asset('user/assets/images/banner-bg.png') }}" class="img-fluid banner-bg sample move-blue " alt="banner-bg">
             <img src="{{ asset('user/assets/images/black-bg.png') }}" class="black-bg sample move-black  " alt="black-bg" >
+            {{-- <div class="move-blue2"></div> --}}
             <div class="black-bg2"></div>
             <img src="{{ asset('user/assets/images/hands.png') }}" class="img-fluid hands sample move-hand" alt="hands">
             <div class="container">
@@ -9963,13 +9966,13 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="{{ asset('user/assets/js/scripts.js') }}"></script>
     <script src="{{ asset('user/assets/js/formValidation.js') }}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/CSSRulePlugin.min.js" integrity="sha512-oYnRsy+bFXYr+btXcKk2dpzfERnCUc5G4GkJ0AO/XSvomLV7Xc7tZVhTsYIz9QzOAw9qo/6qoA6JTpzaYuHUGg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-        gsap.from('.move-blue',{duration:1.5, delay:2, opacity:0,  x: 200});
-        // gsap.from('.black-bg',{duration:1.5, delay:4, opacity:0,  x: -100, y:100});
-        gsap.from('.black-bg2',{duration:1.5, delay:4, backgroundPosition:'-350px 0'});
+        gsap.from('.move-blue', {duration:1.5, delay:2, opacity:0,  x: 200});
+        gsap.from('.black-bg',  {duration:1.5, delay:3, opacity:0,  x: -200});
+        gsap.from('.black-bg2', {duration:1.5, delay:3, opacity:0,  backgroundPosition:'-350px 0'});
+        
     </script>
+    
 </body>
 
 </html>

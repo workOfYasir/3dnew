@@ -10,7 +10,13 @@
     display: none !important;
 }
 .black-bg2{
+    opacity: 1;
    display: block;
+}
+
+.move-blue2 {
+    opacity: 1;
+    display: block;
 }
 .mujtmah-box__media{
     margin-bottom: 35px;
