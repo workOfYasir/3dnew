@@ -775,7 +775,7 @@ footer .right img {
     display: block;
 }
 .black-bg2 {
-    background: url(/assets/images/black-bg2.png) no-repeat;
+    background: url(/assets/images/black-bg.png) no-repeat;
     position: absolute;
     top: 200px;
     /* z-index: -2; */
