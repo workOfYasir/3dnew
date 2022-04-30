@@ -124,6 +124,7 @@ Route::group(['middleware' => 'auth', 'varify','cors'], function () {
 
         Route::prefix('user')->name('user.')->group(function (){
             Route::get('list',[UserController::class,'index'])->name('list');
+            Route::get('designer/list',[UserController::class,'designer'])->name('designer.list');
             Route::get('approve/{id}',[UserController::class,'approval'])->name('approve');
             Route::get('profile/list',[UserController::class,'profileList'])->name('profile.list');
             Route::get('profile/approve/{id}',[UserController::class,'profileApprove'])->name('profile.approve');
