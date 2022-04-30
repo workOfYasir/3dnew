@@ -116,8 +116,8 @@
                             <p class="muted"> {{ $pdf->descriptiom }}</p>
                         </td>
 
-                        <td>{{$invoice->quantity}}</td>
-                        <td>{{$invoice->rate}} SR</td>
+                        <td>{{$pdf->quantity}}</td>
+                        <td>{{$pdf->rate}} SR</td>
                     </tr>
                     @php
                     $total=0;
