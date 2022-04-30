@@ -1035,7 +1035,7 @@
                                 الحروف التى يولدها التطبيق.
                             </p>
                             <div class="mujtmah-box-btn-wrapper wrapper al-center">
-                                <button class="m-btn mujtmah-box-btn reg-des btn-white-1" data-bs-toggle="modal"
+                                <button class="m-btn mujtmah-box-btn reg-des btn-white-1 right-register" data-bs-toggle="modal"
                                     data-bs-target="#registerModal">
                                     <img src="{{ asset('user/assets/images/arrow-8.png') }}"
                                         class="mujtmah-box-btn__img"> سجل الان
@@ -7564,7 +7564,7 @@
             </div>
         </div>
     </div>
-    <div class="modal fade page result" id="userRequestModal">
+    <div class="modal fade page result animate__animated animate__fadeInLeft" id="userRequestModal">
         <div class="modal-dialog modal-fullscreen">
             <div class="modal-content">
                 <div class="container">
