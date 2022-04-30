@@ -42,11 +42,11 @@
 <div class="h5 p-3 text-center" >
     PAYMENT RECIEPT
 </div>
-<div class="row p-3">
 
-    <div class="col-6">
+
+    <div class="col-6 p-3">
     
-        <div class="col-12">
+ 
             
         
                 
@@ -78,8 +78,7 @@
             <button class="w-100 p-3 btn bg-success"  data-bs-toggle="modal"
             data-bs-target="#convertModal" >Total {{ $t }}</button>
         </div>
-    
-    </div>
+ 
     <div class="col-12 p-3">
         <div class="h5 pt-3 pb-3" style="text-align: end">
             Payment For
@@ -104,7 +103,7 @@
         
         </table>
     </div>
-</div>
+
 </body>
 
 </html>
