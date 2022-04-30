@@ -6,6 +6,11 @@
 .mujtmah-box__count{
     bottom: -30px;
 }
+.wrapper-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .black-bg{
     display: none !important;
 }

@@ -601,11 +601,13 @@
                                                         {!!$profiles->body_text !!}
                                                     </p>
 
-
-                                                    <button class="btn btn-sky">المزيد</button>
-                                                    <a href="#services-section" class="btn btn-grey">قدم طلبك <img
-                                                            src="{{ asset('user/assets/icons/arrow-down.svg') }}"
-                                                            alt="arrow-down"></a href="#services-section">
+                                                    <div class="wrapper-btn">
+                                                        <button class="btn btn-sky">المزيد</button>
+                                                        <a href="#services-section" class="btn btn-grey">قدم طلبك <img
+                                                                src="{{ asset('user/assets/icons/arrow-down.svg') }}"
+                                                                alt="arrow-down"></a href="#services-section">
+                                                    </div>
+                                                    
                                                 </div>
                                             </div>
                                             <div class="col-md-8 col-lg-5">
