@@ -10,8 +10,7 @@
     display: none !important;
 }
 .black-bg2{
-opacity: 1;
-   display: block;
+    display: block !important;
 }
 
 .mujtmah-box__media{
