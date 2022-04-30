@@ -12,7 +12,12 @@
 .black-bg2{
     display: block !important;
 }
-
+.move-blue{
+    display: none !important;
+}
+.move-blue2{
+    display: block !important;
+}
 .mujtmah-box__media{
     margin-bottom: 35px;
 }

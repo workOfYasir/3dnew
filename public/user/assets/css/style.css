@@ -788,7 +788,7 @@ footer .right img {
     display: none;
 }
 .move-blue2 {
-    background: url(/assets/images/banner-bg.png) no-repeat;
+    background: url('https://hopeful-montalcini.161-97-115-110.plesk.page/public/user/assets/images/banner-bg.png') no-repeat;
     position: absolute;
     top: 200px;
     /* z-index: -2; */
@@ -796,7 +796,9 @@ footer .right img {
     height: 380px;
     background-size: 100% 100%;
     right: 0;
-    /* opacity: 0; */
+}
+.move-blue2{
+    display: none;
 }
 .hands.sample {
     position: absolute;
