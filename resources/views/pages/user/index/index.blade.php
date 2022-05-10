@@ -40,8 +40,20 @@
     <link rel="stylesheet" href="{{ asset('user/assets/css/responsive.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('user/assets/css/zahid.css') }}">
     <link rel="stylesheet" href="{{ asset('user/assets/css/asim.css') }}">
-
-
+    {{-- <style>
+		.no-js #loader { display: none;  }
+		.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+		.se-pre-con {
+			position: fixed;
+			left: 0px;
+			top: 0px;
+			width: 100%;
+			height: 100%;
+			z-index: 9999999;
+			background: #fff;
+		}
+	</style> --}}
+    
     <style type="text/css">
         @font-face {
             font-family: JannaRegular;
@@ -58,10 +70,28 @@
             font-family: 'JannaRegular';
         }
     </style>
-
+    
 </head>
 
 <body>
+
+   
+    <div class="toast" style="direction:ltr;position:absolute; z-index:9999999" role="alert" aria-live="assertive" aria-atomic="true">
+
+      <div class="toast-header">
+        <strong class="mr-auto col">Login Failed</strong>
+        <button type="button" class="ml-2 mb-1 close btn btn-sm " data-dismiss="toast" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="toast-body">
+        @foreach($errors->all() as $error)
+        
+            {{$error}}
+        @endforeach
+      </div>
+    </div>
+ 
     <div class="toggle-overlay"></div>
     <div class="content-wrapper hide-on-load">
         <nav class="navbar navbar-expand-lg navbar-light desktop-nav">
@@ -77,7 +107,7 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item active">
-                            <a class="nav-link" aria-current="page" href="#">الرئيسية</a>
+                            <a class="nav-link" aria-current="page" href="/">الرئيسية</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#about-us">
@@ -193,7 +223,7 @@
 
                     <a href="#login" data-bs-toggle="modal" class="register-icon border-bottom" data-bs-target="#loginModal">تسجيل
                         دخول</a>
-                    <a href="#register" class="ms-auto register-icon border-bottom" data-bs-toggle="modal"
+                    <a href="#register" class="ms-auto register-icon border-bottom main-register" data-bs-toggle="modal"
                         data-bs-target="#registerModal">التسجيل</a>
                      
                     <span class="social-icons">
@@ -216,7 +246,7 @@
                 <div class="mmnue">
                     <ul class="sidebar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#">الرئيسية</a>
+                            <a class="nav-link" aria-current="page" href="/">الرئيسية</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#about-us">
@@ -254,7 +284,7 @@
                                 data-bs-target="#loginModal">تسجيل دخول</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#register" class="nav-link dot" data-bs-toggle="modal"
+                            <a href="#register" class="nav-link dot main-register" data-bs-toggle="modal"
                                 data-bs-target="#registerModal">التسجيل</a>
 
                         </li>
@@ -274,6 +304,7 @@
 
             <div id="page-content-wrapper">
                 <div class="container-fluid">
+                    
                     <div class="row">
                         <div class="col-md-6 col-sm-3 mobile-logo">
 
@@ -284,6 +315,7 @@
                                 </a>
                             </div>
                         </div>
+                        
                         <div class="col-md-6 col-sm-9 mobile-pro-icon">
                             <button class="btn mob-tog-btn" id="menu-toggle"><i class="fa-solid fa-bars"></i></button>
 
@@ -307,7 +339,7 @@
         </div>
         <!-- mobile menu start here -->
 
-
+     
 
         <!-- mobile menu end here -->
         <!-- <section class="banner">
@@ -507,16 +539,16 @@
     </section> -->
 
         <section class="banner sample">
-            <img src="{{ asset('user/assets/images/banner-bg.png') }}"
-                class="img-fluid banner-bg sample move-blue animate__animated animate__slideInRight animate__slower animate__delay-4s"
-                alt="banner-bg">
-            <img src="{{ asset('user/assets/images/black-bg.png') }}"
-                class="black-bg sample move-black animate__animated animate__slideInLeft animate__slower animate__delay-4s"
-                alt="black-bg">
+            {{-- <img src="{{ asset('user/assets/images/banner-bg.png') }}" class="img-fluid banner-bg sample move-blue animate__animated animate__fadeInRight animate__slower " alt="banner-bg">
+            <img src="{{ asset('user/assets/images/black-bg.png') }}" class="black-bg sample move-black animate__animated animate__fadeInLeft animate__slower " alt="black-bg" > --}}
+            <img src="{{ asset('user/assets/images/banner-bg.png') }}" class="img-fluid banner-bg sample move-blue animate__animated animate__slideInRight animate__slow"  alt="banner-bg">
+            <img src="{{ asset('user/assets/images/black-bg.png') }}" class="black-bg sample move-black animate__animated animate__slideInLeft animate__slow"  alt="black-bg" >
+            {{-- <div class="move-blue2"></div> --}}
+            
+            <div class="black-bg2"></div><div class="move-blue2"></div>
             <img src="{{ asset('user/assets/images/hands.png') }}" class="img-fluid hands sample move-hand" alt="hands">
             <div class="container">
                 <div class="row justify-content-center">
-
                     <div class="col-md-12">
                         <div class="carousel-inner">
                             <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
@@ -568,11 +600,13 @@
                                                         {!!$profiles->body_text !!}
                                                     </p>
 
-
-                                                    <button class="btn btn-sky">المزيد</button>
-                                                    <a href="#services-section" class="btn btn-grey">قدم طلبك <img
-                                                            src="{{ asset('user/assets/icons/arrow-down.svg') }}"
-                                                            alt="arrow-down"></a href="#services-section">
+                                                    <div class="wrapper-btn">
+                                                        <button class="btn btn-sky">المزيد</button>
+                                                        <a href="#services-section" class="btn btn-grey">قدم طلبك <img
+                                                                src="{{ asset('user/assets/icons/arrow-down.svg') }}"
+                                                                alt="arrow-down"></a href="#services-section">
+                                                    </div>
+                                                    
                                                 </div>
                                             </div>
                                             <div class="col-md-8 col-lg-5">
@@ -751,8 +785,8 @@
                                     @endif
                                 </div>
                                 <div class="row pt-5 mt-5 align-items-end p-t-70" dir="rtl">
-                                    <div class="col-md-9 col-lg-7 res-width-64">
-                                        <div class="about-content" id="about-us" data-aos="fade-up">
+                                    <div class="col-md-9 col-lg-7 res-width-64" data-aos="fade-up">
+                                        <div class="about-content" id="about-us">
                                             <!-- <span class="outline dot right-center">+3D</span> -->
                                             @if ($about != null)
 
@@ -803,11 +837,11 @@
                                             @if (@$map->map_image != null)
 
                                             <img src="{{ asset( $map->map_image) }}" width="550" height="300"
-                                                style="border:0;" allowfullscreen="" loading="lazy"></img>
+                                                style="border:0;" allowfullscreen="" >
 
                                             @else
                                             <img src="{{ asset('user/assets/images/world-map.jpg') }}" width="550"
-                                                height="300" style="border:0;" allowfullscreen="" loading="lazy"></img>
+                                                height="300" style="border:0;" allowfullscreen="" >
                                             @endif
                                         </div>
                                     </div>
@@ -839,7 +873,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-6 dot-txt-main">
-                        <div class="image-place dot-effect" id="main-effect" data-aos="zoom-in" data-aos-offset="500">
+                        <div class="image-place dot-effect" id="main-effect" data-aos="fade-up">
                             <div class="pointer head">
                                 <p>الجمجمة</p>
                             </div>
@@ -891,7 +925,7 @@
                                         src="{{ asset('user/assets/icons/video.svg') }}" alt="video"> فيديو
                                     تعريفي</button>
                                 <p class='koib-health d-none mt-5 nav-link'><span style="color:red"> يتطلب التسجيل
-                                    </span><a href="#" data-bs-toggle="modal" data-bs-target="#loginModal"> للتسجيل اضغط
+                                    </span><a href="#" data-bs-toggle="modal" class="right-register" data-bs-target="#registerModal"> للتسجيل اضغط
                                         هنا</a></p>
                             </div>
                             @auth
@@ -905,7 +939,7 @@
                         </div>
                     </div>
                     <div class="col-md-6 dot-txt-main-left">
-                        <div class="image-place effect-machine" data-aos="zoom-in" data-aos-offset="500"
+                        <div class="image-place effect-machine" data-aos="zoom-in" 
                             id="main-macine">
                             <div class="pointer top">
                                 <p>مجسمات كبيرة</p>
@@ -946,7 +980,7 @@
                                     الخدمة</button>
 
                                 <p class='koib d-none mt-5 nav-link'><span style="color:red"> يتطلب التسجيل </span><a
-                                        href="#" data-bs-toggle="modal" data-bs-target="#loginModal"> للتسجيل اضغط
+                                        href="#" data-bs-toggle="modal" class="left-register"  data-bs-target="#registerModal"> للتسجيل اضغط
                                         هنا</a></p>
                                 @endauth
 
@@ -1001,7 +1035,7 @@
                                 الحروف التى يولدها التطبيق.
                             </p>
                             <div class="mujtmah-box-btn-wrapper wrapper al-center">
-                                <button class="m-btn mujtmah-box-btn reg-des btn-white-1" data-bs-toggle="modal"
+                                <button class="m-btn mujtmah-box-btn reg-des btn-white-1 right-register" data-bs-toggle="modal"
                                     data-bs-target="#registerModal">
                                     <img src="{{ asset('user/assets/images/arrow-8.png') }}"
                                         class="mujtmah-box-btn__img"> سجل الان
@@ -1017,7 +1051,7 @@
                                         1</span>طلبات قائمة</p>
                             </div>
                         </div>
-                        <div class="mujtmah-box__media" data-aos="zoom-in" data-aos-offset="500">
+                        <div class="mujtmah-box__media" data-aos="zoom-in" >
                             <img src="{{ asset('user/assets/images/mujtmah-box__image.png') }}"
                                 class="mujtmah-box__image">
                             <div class="mujtmah-box__count">
@@ -1027,7 +1061,7 @@
                         </div>
                     </div>
                     <div class="mujtmah-box2">
-                        <div class="mujtmah-box__media" data-aos="zoom-in" data-aos-offset="500">
+                        <div class="mujtmah-box__media" data-aos="zoom-in">
                             <div class="mujtmah-box__count2">
                                 <h1 class="mujtmah-box__count-heading designer-counter" data-count="40" >0</h1>
                                 <p class="mujtmah-box__count-sub-heading">عميل</p>
@@ -1117,7 +1151,8 @@
                     </div>
                     <div class="map">
                         <img src="{{ asset('user/assets/images/map.svg') }}" class="img-fluid" alt="map">
-                        <button class="btn btn-sky">الخريطة <img src="{{ asset('user/assets/icons/arrow.svg') }}"
+                        <button class="btn btn-sky"  data-bs-toggle="modal"
+                                    data-bs-target="#mapModal">الخريطة <img src="{{ asset('user/assets/icons/arrow.svg') }}"
                                 alt="arrow"></button>
                     </div>
                     <div class="row  justify-content-center">
@@ -1152,7 +1187,7 @@
                         <div class="col-md-12">
                             <ul class="footer-nav">
                                 <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="index.html">الرئيسية</a>
+                                    <a class="nav-link active" aria-current="page" href="/">الرئيسية</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#about-us">
@@ -1260,7 +1295,7 @@
                                         <div class="row">
                                             <div class="col-md-6 dot-txt-main pb-4">
                                                 <div class="image-place dot-effect" data-aos="zoom-in"
-                                                    data-aos-offset="500">
+                                                    >
                                                     <div class="pointer head">
                                                         <p>الجمجمة</p>
                                                     </div>
@@ -1304,7 +1339,7 @@
                                             </div>
                                             <div class="col-md-6 dot-txt-main-left pb-4" id="macine">
                                                 <div class="image-place effect-machine" data-aos="zoom-in"
-                                                    data-aos-offset="500">
+                                                    >
                                                     <div class="pointer top">
                                                         <p>مجسمات كبيرة</p>
                                                     </div>
@@ -1352,12 +1387,12 @@
             </div>
         </div>
     </div>
-    <div class="main-progress">
+    {{-- <div class="main-progress">
         <img src="{{asset('user/assets/icons/logo.svg')}}" alt="logo">
         <p class='progress text-center bg-transparent d-block'>0</p>
 
         <div class="progress-bar bar-load" id="bar"></div>
-    </div>
+    </div> --}}
 
     <!--///////////////////////////////////// services model end here ////////////////////////////////////-->
 
@@ -1391,7 +1426,7 @@
                                             <div class="collapse navbar-collapse" id="navbarNav">
                                                 <ul class="navbar-nav">
                                                     <li class="nav-item">
-                                                        <a class="nav-link" aria-current="page" href="#">الرئيسية</a>
+                                                        <a class="nav-link" aria-current="page" href="/">الرئيسية</a>
                                                     </li>
                                                     <li class="nav-item">
                                                         <a class="nav-link" href="#about-us">
@@ -1518,7 +1553,7 @@
                                             <div class="left-side">
                                                 <a href="#login" data-bs-toggle="modal" class="register-icon border-bottom"
                                                     data-bs-target="#loginModal">تسجيل دخول</a>
-                                                <a href="#register" class="ms-auto register-icon border-bottom" data-bs-toggle="modal"
+                                                <a href="#register" class="ms-auto register-icon border-bottom main-register" data-bs-toggle="modal"
                                                     data-bs-target="#registerModal">التسجيل</a>
                                                 <span class="social-icons">
                                                     <a href="#"><img src="{{ asset('user/assets/icons/twitter.svg') }}"
@@ -1544,7 +1579,7 @@
                                             <div class="mmnue">
                                                 <ul class="sidebar-nav">
                                                     <li class="nav-item">
-                                                        <a class="nav-link" aria-current="page" href="#">الرئيسية</a>
+                                                        <a class="nav-link" aria-current="page" href="/">الرئيسية</a>
                                                     </li>
                                                     <li class="nav-item">
                                                         <a class="nav-link" href="#about-us">
@@ -1584,7 +1619,7 @@
                                                             data-bs-target="#loginModal">تسجيل دخول</a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a href="#register" class="nav-link dot" data-bs-toggle="modal"
+                                                        <a href="#register" class="nav-link dot main-register" data-bs-toggle="modal"
                                                             data-bs-target="#registerModal">التسجيل</a>
 
                                                     </li>
@@ -1844,7 +1879,7 @@
                                                         <ul class="footer-nav zhd-footer">
                                                             <li class="nav-item">
                                                                 <a class="nav-link active" aria-current="page"
-                                                                    href="index.html">الرئيسية</a>
+                                                                    href="/">الرئيسية</a>
                                                             </li>
                                                             <li class="nav-item">
                                                                 <a class="nav-link" href="#about-us">
@@ -1956,7 +1991,7 @@
                                             <div class="collapse navbar-collapse" id="navbarNav">
                                                 <ul class="navbar-nav">
                                                     <li class="nav-item">
-                                                        <a class="nav-link" aria-current="page" href="#">الرئيسية</a>
+                                                        <a class="nav-link" aria-current="page" href="/">الرئيسية</a>
                                                     </li>
                                                     <li class="nav-item">
                                                         <a class="nav-link" href="#about-us">
@@ -2083,7 +2118,7 @@
                                             <div class="left-side">
                                                 <a href="#login" data-bs-toggle="modal" class="register-icon"
                                                     data-bs-target="#loginModal">تسجيل دخول</a>
-                                                <a href="#register" class="ms-auto register-icon" data-bs-toggle="modal"
+                                                <a href="#register" class="ms-auto register-icon main-register" data-bs-toggle="modal"
                                                     data-bs-target="#registerModal">التسجيل</a>
                                                 <span class="social-icons">
                                                     <a href="#"><img src="{{ asset('user/assets/icons/twitter.svg') }}"
@@ -2109,7 +2144,7 @@
                                             <div class="mmnue">
                                                 <ul class="sidebar-nav">
                                                     <li class="nav-item">
-                                                        <a class="nav-link" aria-current="page" href="#">الرئيسية</a>
+                                                        <a class="nav-link" aria-current="page" href="/">الرئيسية</a>
                                                     </li>
                                                     <li class="nav-item">
                                                         <a class="nav-link" href="#about-us">
@@ -2149,7 +2184,7 @@
                                                             data-bs-target="#loginModal">تسجيل دخول</a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a href="#register" class="nav-link dot" data-bs-toggle="modal"
+                                                        <a href="#register" class="nav-link dot main-register" data-bs-toggle="modal"
                                                             data-bs-target="#registerModal">التسجيل</a>
 
                                                     </li>
@@ -2411,7 +2446,7 @@
                                                         <ul class="footer-nav zhd-footer">
                                                             <li class="nav-item">
                                                                 <a class="nav-link active" aria-current="page"
-                                                                    href="index.html">الرئيسية</a>
+                                                                    href="/">الرئيسية</a>
                                                             </li>
                                                             <li class="nav-item">
                                                                 <a class="nav-link" href="#about-us">
@@ -4942,7 +4977,7 @@
                                         <div class="collapse navbar-collapse" id="navbarNav">
                                             <ul class="navbar-nav">
                                                 <li class="nav-item">
-                                                    <a class="nav-link" aria-current="page" href="#">الرئيسية</a>
+                                                    <a class="nav-link" aria-current="page" href="/">الرئيسية</a>
                                                 </li>
                                                 <li class="nav-item">
                                                     <a class="nav-link" href="#about-us">
@@ -5066,7 +5101,7 @@
                                         <div class="left-side">
                                             <a href="#login" data-bs-toggle="modal" class="register-icon border-bottom"
                                                 data-bs-target="#loginModal">تسجيل دخول</a>
-                                            <a href="#register" class="ms-auto register-icon border-bottom" data-bs-toggle="modal"
+                                            <a href="#register" class="ms-auto register-icon border-bottom main-register" data-bs-toggle="modal"
                                                 data-bs-target="#registerModal">التسجيل</a>
                                                 
                                             <span class="social-icons">
@@ -5091,7 +5126,7 @@
                                         <div class="mmnue">
                                             <ul class="sidebar-nav">
                                                 <li class="nav-item">
-                                                    <a class="nav-link" aria-current="page" href="#">الرئيسية</a>
+                                                    <a class="nav-link" aria-current="page" href="/">الرئيسية</a>
                                                 </li>
                                                 <li class="nav-item">
                                                     <a class="nav-link" href="#about-us">
@@ -5131,7 +5166,7 @@
                                                         data-bs-target="#loginModal">تسجيل دخول</a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a href="#register" class="nav-link dot" data-bs-toggle="modal"
+                                                    <a href="#register" class="nav-link dot main-register" data-bs-toggle="modal"
                                                         data-bs-target="#registerModal">التسجيل</a>
 
                                                 </li>
@@ -5857,7 +5892,7 @@
                                                             <ul class="footer-nav zhd-footer">
                                                                 <li class="nav-item">
                                                                     <a class="nav-link active" aria-current="page"
-                                                                        href="index.html">الرئيسية</a>
+                                                                        href="/">الرئيسية</a>
                                                                 </li>
                                                                 <li class="nav-item">
                                                                     <a class="nav-link" href="#about-us">
@@ -5962,7 +5997,7 @@
                                             <div class="collapse navbar-collapse" id="navbarNav">
                                                 <ul class="navbar-nav">
                                                     <li class="nav-item">
-                                                        <a class="nav-link" aria-current="page" href="#">الرئيسية</a>
+                                                        <a class="nav-link" aria-current="page" href="/">الرئيسية</a>
                                                     </li>
                                                     <li class="nav-item">
                                                         <a class="nav-link" href="#about-us">
@@ -6089,7 +6124,7 @@
                                             <div class="left-side">
                                                 <a href="#login" data-bs-toggle="modal" class="register-icon border-bottom"
                                                     data-bs-target="#loginModal">تسجيل دخول</a>
-                                                <a href="#register" class="ms-auto register-icon border-bottom" data-bs-toggle="modal"
+                                                <a href="#register" class="ms-auto register-icon border-bottom main-register" data-bs-toggle="modal"
                                                     data-bs-target="#registerModal">التسجيل</a>
                                                 <span class="social-icons">
                                                     <a href="#"><img src="{{ asset('user/assets/icons/twitter.svg') }}"
@@ -6115,7 +6150,7 @@
                                             <div class="mmnue">
                                                 <ul class="sidebar-nav">
                                                     <li class="nav-item">
-                                                        <a class="nav-link" aria-current="page" href="#">الرئيسية</a>
+                                                        <a class="nav-link" aria-current="page" href="/">الرئيسية</a>
                                                     </li>
                                                     <li class="nav-item">
                                                         <a class="nav-link" href="#about-us">
@@ -6155,7 +6190,7 @@
                                                             data-bs-target="#loginModal">تسجيل دخول</a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a href="#register" class="nav-link dot" data-bs-toggle="modal"
+                                                        <a href="#register" class="nav-link dot main-register" data-bs-toggle="modal"
                                                             data-bs-target="#registerModal">التسجيل</a>
 
                                                     </li>
@@ -6543,7 +6578,7 @@
                                                             <ul class="footer-nav">
                                                                 <li class="nav-item">
                                                                     <a class="nav-link active" aria-current="page"
-                                                                        href="index.html">الرئيسية</a>
+                                                                        href="/">الرئيسية</a>
                                                                 </li>
                                                                 <li class="nav-item">
                                                                     <a class="nav-link" href="#about-us">
@@ -7529,7 +7564,7 @@
             </div>
         </div>
     </div>
-    <div class="modal fade page result" id="userRequestModal">
+    <div class="modal fade page result animate__animated animate__fadeInLeft" id="userRequestModal">
         <div class="modal-dialog modal-fullscreen">
             <div class="modal-content">
                 <div class="container">
@@ -9703,7 +9738,38 @@
     </div>
 
     <!-- user 9 requestmodal end -->
-
+<!-- mapmodal  start start -->
+<div class="modal fade page result video" id="mapModal" tabindex="-1" aria-labelledby="mapModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="modal-header border-0">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </h1>
+                            
+                        </div>
+                        <div class="modal-body">
+                            <div class="container">
+                                <div class="row">
+                                   
+                                    <div class="col-md-12 text-center">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13606.813007965276!2d74.3235535!3d31.50483955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1651321479830!5m2!1sen!2s" width="70%" height="450" style="border:0; width:70%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                    </div>
+                                  
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- mapmodal end here -->
     <!-- About US -->
 
     @include('pages.user.aboutModal')
@@ -9949,7 +10015,15 @@
             });
 
         });
+        
     </script>
+     @if(count($errors) > 0)
+     <script>
+        $(document).ready(function(){           
+            $('.toast').toast('show')
+        })  
+    </script>
+     @endif
     <!-- Slick -->
     <script src="{{ asset('user/assets/js/slick.min.js') }}"></script>
     <!-- Scripts -->
@@ -9964,7 +10038,51 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="{{ asset('user/assets/js/scripts.js') }}"></script>
     <script src="{{ asset('user/assets/js/formValidation.js') }}"></script>
-
+    {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script> --}}
+    {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script> --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/CSSRulePlugin.min.js"></script> --}}
+    <script>
+        // gsap.from('.move-blue', {duration:1.5, delay:2, opacity:0,  x: 200});
+        // gsap.from('.black-bg',  {duration:1.5, delay:3, opacity:0,  x: -200});
+        gsap.from('.black-bg2', {duration:1.5,  delay:0.5, backgroundPosition:'-350px 0'});
+        gsap.from('.move-blue2', {duration:1.5, delay:1,   backgroundPosition:'350px 0px'});
+        gsap.from('.move-hand', {duration:1.5, delay:1.5, opacity:0,   y: -100});
+        
+    </script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.0/jquery.cookie.min.js">
+  </script>
+  @if (Auth::check()) 
+  @role('user')
+  <script type="text/javascript">
+    $(document).ready(function() {
+        if ($.cookie('pop') == null) {
+            $('#requestsModal').modal('show');
+            $.cookie('pop', '1');
+            console.log('ok');
+        }
+        console.log('ok');
+    });
+   </script>
+   @endrole
+  @endif
+    {{-- <script>
+        wow = new WOW(
+            {
+            boxClass:     'wow',      // default
+            animateClass: 'animated', // default
+            offset:       0,          // default
+            mobile:       true,       // default
+            live:         true        // default
+        }
+        )
+        wow.init();
+    </script> --}}
+    {{-- <script>
+        $(window).load(function() {
+        $(".se-pre-con").fadeOut("");
+    });
+    </script> --}}
 </body>
 
 </html>

@@ -139,16 +139,16 @@
                     <table class="table table-light" style="direction: ltr">
                         <thead class="thead-dark">
                             <tr>
-                                <th>Item</th>
-                                <th>Description</th>
-                                <th>Quantity</th>
-                                <th>Rate</th>
+                                <th>عنصر</th>
+                                <th>الوصف</th>
+                                <th>الكمية</th>
+                                <th>السعر</th>
                                 <th>
                                     <i class="fa fa-trash" aria-hidden="true"></i>
                                 </th>
                             </tr>
                         </thead>
-                        <span class='addCustom'>Add Skill</span>
+                        <span class='addCustom'>Add Item</span>
                         <tbody class="wrapper">
                             @foreach($invoice->pdf as $key => $pdf)
                             <tr>
@@ -174,28 +174,28 @@
                             <tr>
                                 <td></td>
                                 <td></td>
-                                <td>Tax</td>
+                                <th>الضريبة</th>
                                 <td>{{ @$invoice->pdf[0]->tax }}</td>
                             </tr>
                             <tr>
 
                                 <td></td>
                                 <td></td>
-                                <td>Total</td>
+                                <th>الاجمالي</th>
                                 
                             <td>{{ $total }}</td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td></td>
-                                <td>VAT Rate</td>
+                                <th>السعر VAT</th>
                                 <td>{{@$invoice->pdf[0]->tax}}%</td>
 
                             </tr>
                             <tr>
                                 <td></td>
                                 <td></td>
-                                <td>VAT Amount</td>
+                                <th>مبلغ VAT</th>
                             
                                 <td>{{$totaltex}} SR</td>
                             </tr>

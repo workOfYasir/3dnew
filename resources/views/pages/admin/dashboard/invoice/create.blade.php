@@ -87,10 +87,10 @@
                             <table class="table table-light" style="direction: ltr">
                                 <thead class="thead-dark">
                                     <tr>
-                                        <th>Item</th>
-                                        <th>Description</th>
-                                        <th>Quantity</th>
-                                        <th>Rate</th>
+                                        <th>عنصر</th>
+                                        <th>الوصف</th>
+                                        <th>الكمية</th>
+                                        <th>السعر</th>
                                         <th>Tax</th>
                                         <th>Amount</th>
                                         <th>
@@ -98,7 +98,9 @@
                                         </th>
                                     </tr>
                                 </thead>
-                                <span class='add'>Add Skill</span>
+
+                                <span class='add'>Add Item</span>
+
                                 <tbody>
                                     <tr class='element' id='div_1'>
                                         <td>
@@ -148,3 +150,4 @@
     </div>
 </div>
 @endsection
+

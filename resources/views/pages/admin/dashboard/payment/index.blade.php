@@ -32,7 +32,7 @@
                                         <th> Amount</th>
                                         <th> Date</th>
                                     
-                                        {{-- <th></th> --}}
+                                        <th></th>
                                         
                                     </tr>
                                 </thead>
@@ -50,12 +50,10 @@
                                         <td>{{ $pay->invoice->user->name }}</td>
                                         <td>{{ $pay->paid }}</td>
                                         <td>{{ $pay->created_at->format('Y-m-d') }}</td>
-                                        
-                                        {{-- <td>
-                                            <a class="btn btn-primary" href="{{
-                                                route('medi.show', $medi->id)
-                                                }}">رأي</a>
-                                        </td> --}}
+                                        <td>  <a class="btn btn-sm btn-primary" href="{{
+                                            route('payment.pdf', $pay->invoice->id)
+                                            }}">Download</a></td>
+                                       
 
                                     </tr>
                                     

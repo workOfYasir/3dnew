@@ -13,10 +13,10 @@
                     <div class="nav nav-tabs" id="nav-tab" role="tablist">
                         <button class="nav-link text-black active" id="nav-home-tab" data-bs-toggle="tab"
                             data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home"
-                            aria-selected="true">Proposal</button>
+                            aria-selected="true">عرض سعر</button>
                         <button class="nav-link text-black" id="nav-profile-tab" data-bs-toggle="tab"
                             data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile"
-                            aria-selected="false">Comments</button>
+                            aria-selected="false">التعليقات</button>
                     </div>
                 </nav>
                 <div class="tab-content pt-3" id="nav-tabContent">
@@ -43,10 +43,10 @@
                        
                     </div>
                     <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">2
-                        @if($invoice->comments==1)
+                        {{-- @if($invoice->comments==1) --}}
                         @livewire('chats',['user_id' =>
                         $invoice->user_id,'request_id'=>$invoice->order_id,'request_type'=>'App\Models\Medical']))
-                        @endif
+                        {{-- @endif --}}
                     </div>
 
                 </div>

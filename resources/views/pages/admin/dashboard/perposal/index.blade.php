@@ -21,16 +21,16 @@
                             <table class="display" style="width:100%" id="basic-2">
                                 <thead>
                                     <tr>
-                                        <th>Purposal</th>
-                                        <th>Subject</th>
-                                        <th>To</th>
-                                        <th>Total</th>
-                                  
+                                        <th>عرض سعر</th>
+                                        <th>العنوان</th>
+                                        <th>إلى</th>
+                                        <th>الاجمالي</th>
+                                        <th>الحالة</th>
                                     </tr>
                                 </thead>
                                 @foreach ($invoices as $key => $invoice)
                                 <tr>
-                                    <td style="cursor: pointer" onclick="panel({{ $key }})"{{ $invoice->id }}></td>
+                                    <td style="cursor: pointer" onclick="panel({{ $key }})">{{ $invoice->id }}</td>
                                     <td style="cursor: pointer" onclick="panel({{ $key }})">{{$invoice->subject}}</td>
                                     <td style="cursor: pointer" onclick="panel({{ $key }})">{{$invoice->user->name}}</td>
                                     @foreach ($invoice->pdf as $key => $pdf)
@@ -61,9 +61,9 @@
                                             route('perposal.show', $invoice->id)
                                             }}">فاتورة</a> --}}
                                             @if($invoice->assigned)
-                                            <a class="btn btn-success">Accepted</a>
+                                            <a class="btn btn-success">تم الموافقة</a>
                                             @else
-                                            <a class="btn btn-secondary">Open</a>
+                                            <a class="btn btn-secondary">مفتوح</a>
                                             @endif
                                         </div>
                                     </td>
@@ -80,17 +80,17 @@
                 <div class="col-12 card">
                     <nav>
                         <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                            <button class="nav-link text-black active" id="nav-home-tab" data-bs-toggle="tab"
-                                data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home"
-                                aria-selected="true">Proposal</button>
-                            <button class="nav-link text-black" id="nav-profile-tab" data-bs-toggle="tab"
-                                data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile"
-                                aria-selected="false">Comments</button>
+                            <button class="nav-link text-black active" id="nav-home-tab_{{$key}}" data-bs-toggle="tab"
+                                data-bs-target="#nav-home_{{$key}}" type="button" role="tab" aria-controls="nav-home_{{$key}}"
+                                aria-selected="true">عرض سعر</button>
+                            <button class="nav-link text-black" id="nav-profile-tab_{{$key}}" data-bs-toggle="tab"
+                                data-bs-target="#nav-profile_{{$key}}" type="button" role="tab" aria-controls="nav-profile_{{$key}}"
+                                aria-selected="false">التعليقات</button>
                         </div>
                     </nav>
                     <div class="tab-content pt-3" id="nav-tabContent">
-                        <div class="tab-pane fade show active" id="nav-home" role="tabpanel"
-                            aria-labelledby="nav-home-tab">
+                        <div class="tab-pane fade show active" id="nav-home_{{$key}}" role="tabpanel"
+                            aria-labelledby="nav-home-tab_{{$key}}">
                             <div class="col-12 d-flex">
                                 <div class="col-6">
                                     <a href="{{ route('purposal',$invoice->id) }}" target="_blank"
@@ -120,7 +120,7 @@
                             <hr>
                             <div class="col-12 d-flex">
                                 <div class="col-6">
-                                    <div class="col-6 p-3">
+                                    <div class="col-12 p-3">
                                         <strong>To</strong><br>
                                         <span class="text-primary">{{ $invoice->user->name }}</span><br>
                                         <span>{{ $invoice->address }}</span><br>
@@ -139,11 +139,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-                            {{-- @if($invoice->comments==1) --}}
+                        <div class="tab-pane fade" id="nav-profile_{{$key}}" role="tabpanel" aria-labelledby="nav-profile-tab_{{$key}}">
+                           
                             @livewire('chats',['user_id' =>
                             $invoice->user_id,'request_id'=>$invoice->order_id,'request_type'=>'App\Models\Medical'])
-                            {{-- @endif --}}
+                        
                         </div>
                     </div>
                 </div>

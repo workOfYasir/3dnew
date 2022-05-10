@@ -113,11 +113,14 @@
                     <tr>
                         <td class="tbox1">
                             <label>{{ $pdf->title }}</label>
-                            <p class="muted"> {{ $pdf->descriptiom }}</p>
+                        
                         </td>
 
-                        <td>{{$invoice->quantity}}</td>
-                        <td>{{$invoice->rate}} SR</td>
+                        <td >
+                            <p class="muted"> {{ $pdf->description }}</p>
+                        </td>
+                        <td>{{$pdf->quantity}}</td>
+                        <td>{{$pdf->rate}} SR</td>
                     </tr>
                     @php
                     $total=0;

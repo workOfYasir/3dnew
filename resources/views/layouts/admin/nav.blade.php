@@ -105,13 +105,16 @@
                           <a class="nav-link "  href="{{ route('user.list') }}" tabindex="-1" aria-disabled="true"><i class="fa fa-user"></i> قائمة المستخدمين </a>
                       </li>
                       <li class="nav-item">
+                        <a class="nav-link "  href="{{ route('user.designer.list') }}" tabindex="-1" aria-disabled="true"><i class="fa fa-user"></i> قائمة المصممين </a>
+                    </li>
+                      <li class="nav-item">
                           <a class="nav-link " href="#" tabindex="-1" aria-disabled="true"><i class="fa fa-users"></i> ائمة المشرفينـ </a>
                       </li>
                       <li class="nav-item">
                           <a class="nav-link " href="{{ route('user.profile.list') }}" tabindex="-1" aria-disabled="true"><i class="fa fa-user"></i> الإدارة </a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link " href="{{ route('payment') }}" tabindex="-1" aria-disabled="true"><i class="fa fa-user"></i> Payment </a>
+                        <a class="nav-link " href="{{ route('payment') }}" tabindex="-1" aria-disabled="true"><i class="fa fa-user"></i> قسط </a>
                     </li>
                   </ul>
               </div>

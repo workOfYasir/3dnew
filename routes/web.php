@@ -124,6 +124,7 @@ Route::group(['middleware' => 'auth', 'varify','cors'], function () {
 
         Route::prefix('user')->name('user.')->group(function (){
             Route::get('list',[UserController::class,'index'])->name('list');
+            Route::get('designer/list',[UserController::class,'designer'])->name('designer.list');
             Route::get('approve/{id}',[UserController::class,'approval'])->name('approve');
             Route::get('profile/list',[UserController::class,'profileList'])->name('profile.list');
             Route::get('profile/approve/{id}',[UserController::class,'profileApprove'])->name('profile.approve');
@@ -143,6 +144,7 @@ Route::group(['middleware' => 'auth', 'varify','cors'], function () {
         Route::resource('side', SideImageController::class);
         Route::resource('logo', LogoController::class);
 
+        Route::get('payment/pdf/{id}', [InvoiceController::class,'pdfPayment'])->name('payment.pdf');
         Route::post('edituser_profile/{id}', [HomeController::class, 'edituser'])->name('edituser_profile');
         Route::get('view/{id}', [ImageSlideController::class, 'view'])->name('view');
         Route::get('register_profile', [HomeController::class, 'register_profile'])->name('register_profile');

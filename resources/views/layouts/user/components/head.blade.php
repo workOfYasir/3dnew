@@ -3,6 +3,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="viho admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
+	
     <meta name="keywords" content="admin template, viho admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="pixelstrap">
     <link rel="icon" href="{{ asset('assets/images/logo/logo-favicon.png') }}" type="image/x-icon">
@@ -46,7 +47,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/vector-map.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">
     <!-- Plugins css Ends-->
-    @livewireStyles
+
 
     <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css">
    
@@ -65,6 +66,7 @@
     <!-- Bootstrap css -->
     <link rel="stylesheet" href="{{asset('user/assets/css/bootstrap.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/jquery.signature.css') }}">
+	    @livewireStyles
    <!-- 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css')}}" />
   <link href="https://cdn.js')}}delivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css')}}" rel="stylesheet" />

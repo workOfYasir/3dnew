@@ -218,7 +218,6 @@ class HomeController extends Controller
     }
     public function profile(Request $request)
     {
-       dd('ok');
      $tempProfile = TempUpdateProfile::create([
         'name' => $request->name,
         'email' => $request->email,
@@ -237,5 +236,7 @@ class HomeController extends Controller
         'software_type'=>$request->software_type,
     ];
     // Mail::to('yasirb673@gmail.com')->send(new \App\Mail\UpdateUser($details));
+    return redirect()->back();
     }
+    
 }

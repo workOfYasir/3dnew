@@ -207,6 +207,19 @@ class InvoiceController extends Controller
         // }
         // return $pdf->stream();
     }
+    public function pdfPayment($id)
+    {
+        // $invoice = Invoice::find($id);
+        $invoice = Invoice::with('user')->with('payment')->whereHas('pdf',function($q) {
+            $q->where('model','App/Models/Invoice');
+        })->with('pdf')->where('id',$id)->first();
+        $user = User::find($invoice->user_id);
+        // if($request->has('download')){
+            $pdf = PDF::loadView('pages.admin.dashboard.invoice.payment',compact('invoice', 'user'));
+            return $pdf->download('payment.pdf');
+        // }
+        // return $pdf->stream();
+    }
     public function convertToInvoice(Request $request)
     {
      
@@ -248,6 +261,13 @@ class InvoiceController extends Controller
             'payment_date'=>$request->payment_date,
             'total_amount'=>$request->total_amount
         ]);
+        $invoice = Invoice::with('user')->with('payment')->whereHas('pdf',function($q) {
+            $q->where('model','App/Models/Invoice');
+        })->with('pdf')->where('id',$request->invoice_id)->first();
+   
+        // if($request->has('download')){
+            $pdf = PDF::loadView('pages.admin.dashboard.invoice.payment',compact('invoice'));
+            return $pdf->download('payment.pdf');
         return redirect()->back();
     }
 }
