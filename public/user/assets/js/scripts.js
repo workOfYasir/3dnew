@@ -394,6 +394,14 @@ $(function () {
         $('#healthVideoModal iframe').attr('src', $('#healthVideoModal iframe').attr('src'));
     })
 
+    $('#userVideoModal .btn-close').click(function () {
+        $('#userVideoModal iframe').attr('src', $('#userVideoModal iframe').attr('src'));
+    })
+
+    $('#designerVideoModal .btn-close').click(function () {
+        $('#designerVideoModal iframe').attr('src', $('#designerVideoModal iframe').attr('src'));
+    })
+
     // asim
     $(".authmasg").click(function () {
         $(".koib").toggleClass("d-none");
@@ -452,6 +460,8 @@ $(function () {
         if ($('.modal.video').hasClass('show')) {
             $('#healthVideoModal iframe').attr('src', $('#healthVideoModal iframe').attr('src'));
             $('#publicVideoModal iframe').attr('src', $('#publicVideoModal iframe').attr('src'));
+            $('#userVideoModal iframe').attr('src', $('#publicVideoModal iframe').attr('src'));
+            $('#designerVideoModal iframe').attr('src', $('#publicVideoModal iframe').attr('src'));
             $('.modal.video').modal('hide');
         }
 
@@ -708,6 +718,46 @@ $(document).ready(function () {
         $('#registerModal').removeClass('animate__fadeInRight animate__fadeInLeft');
         $('#registerModal').addClass('animate__fadeInRight');
     })
+
+    var healthModal = document.getElementById("healthVideoModal");
+    $('.healthVideoModal').click(function(){
+        $('#healthVideoModal').modal('show')
+    })
+    window.onclick = function(event) {
+        if (event.target == healthModal) {
+            healthModal.style.display = "none";
+        }
+    }
+
+    var publicModal = document.getElementById("publicVideoModal");
+    $('.publicVideoModal').click(function(){
+        $('#publicVideoModal').modal('show')
+    })
+    window.onclick = function(event) {
+        if (event.target == publicModal) {
+            publicModal.style.display = "none";
+        }
+    }
+
+    var userModal = document.getElementById("userVideoModal");
+    $('.userVideoModal').click(function(){
+        $('#userVideoModal').modal('show')
+    })
+    window.onclick = function(event) {
+        if (event.target == userModal) {
+            userModal.style.display = "none";
+        }
+    }
+
+    var designerModal = document.getElementById("designerVideoModal");
+    $('.designerVideoModal').click(function(){
+        $('#designerVideoModal').modal('show')
+    })
+    window.onclick = function(event) {
+        if (event.target == designerModal) {
+            designerModal.style.display = "none";
+        }
+    }
 
 });
 $(".userreq-blur-bg").click(function () {
