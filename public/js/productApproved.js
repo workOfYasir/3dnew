@@ -5,9 +5,6 @@ console.log('ok');
         // var status = $(this).data('status');
         var id = $(this).data('id');
         productApproveURL = productApprove.replace(':id', id);
-        // productApproveURL2 = productApproveURL.replace(':status', status);
-        // alert('status',id);
-        // console.log('status',status);
         $.ajax({
             type: "GET",
             dataType: "json",
