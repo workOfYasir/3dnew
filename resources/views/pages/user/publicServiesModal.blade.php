@@ -45,7 +45,7 @@
                                             <div class="row justify-content-center">
                                                 <div class="col-md-12 col-xl-9 col-xxl-9">
                                                     <div class="row mb-2">
-                                                        <div
+                                                        <div 
                                                             class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4 mt-4">
                                                             <label class="form-label dot">الاسم كامل</label>
                                                             <input type="text" class="form-control name"
