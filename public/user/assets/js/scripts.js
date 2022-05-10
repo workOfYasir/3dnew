@@ -394,6 +394,14 @@ $(function () {
         $('#healthVideoModal iframe').attr('src', $('#healthVideoModal iframe').attr('src'));
     })
 
+    $('#userVideoModal .btn-close').click(function () {
+        $('#userVideoModal iframe').attr('src', $('#userVideoModal iframe').attr('src'));
+    })
+
+    $('#designerVideoModal .btn-close').click(function () {
+        $('#designerVideoModal iframe').attr('src', $('#designerVideoModal iframe').attr('src'));
+    })
+
     // asim
     $(".authmasg").click(function () {
         $(".koib").toggleClass("d-none");
@@ -452,6 +460,8 @@ $(function () {
         if ($('.modal.video').hasClass('show')) {
             $('#healthVideoModal iframe').attr('src', $('#healthVideoModal iframe').attr('src'));
             $('#publicVideoModal iframe').attr('src', $('#publicVideoModal iframe').attr('src'));
+            $('#userVideoModal iframe').attr('src', $('#publicVideoModal iframe').attr('src'));
+            $('#designerVideoModal iframe').attr('src', $('#publicVideoModal iframe').attr('src'));
             $('.modal.video').modal('hide');
         }
 
