@@ -33,7 +33,6 @@ function ImgUpload() {
             return false;
           } else {
             imgArray.push(f);
-
             var reader = new FileReader();
             reader.onload = function (e) {
               var html = "<div class='upload__img-box product-add-upload'style='margin-right:20px'><div style='background-image: url(" + e.target.result + ")' data-number='" + $(".upload__img-close").length + "' data-file='" + f.name + "' class='img-bg'> <span class='camera-icon upload-cross-red upload__img-close'></span><span class='camera-icon d-none'><i class='fa fa-camera'></i></span></div></div>";

@@ -49,7 +49,6 @@ p {
     padding: 0 10px;
     margin-bottom: 12px;
 }
-
 .upload__img-close:after {
     content: '\2716';
     font-size: 14px;
