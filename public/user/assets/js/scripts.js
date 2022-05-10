@@ -709,6 +709,46 @@ $(document).ready(function () {
         $('#registerModal').addClass('animate__fadeInRight');
     })
 
+    var healthModal = document.getElementById("healthVideoModal");
+    $('.healthVideoModal').click(function(){
+        $('#healthVideoModal').modal('show')
+    })
+    window.onclick = function(event) {
+        if (event.target == healthModal) {
+            healthModal.style.display = "none";
+        }
+    }
+
+    var publicModal = document.getElementById("publicVideoModal");
+    $('.publicVideoModal').click(function(){
+        $('#publicVideoModal').modal('show')
+    })
+    window.onclick = function(event) {
+        if (event.target == publicModal) {
+            publicModal.style.display = "none";
+        }
+    }
+
+    var userModal = document.getElementById("userVideoModal");
+    $('.userVideoModal').click(function(){
+        $('#userVideoModal').modal('show')
+    })
+    window.onclick = function(event) {
+        if (event.target == userModal) {
+            userModal.style.display = "none";
+        }
+    }
+
+    var designerModal = document.getElementById("designerVideoModal");
+    $('.designerVideoModal').click(function(){
+        $('#designerVideoModal').modal('show')
+    })
+    window.onclick = function(event) {
+        if (event.target == designerModal) {
+            designerModal.style.display = "none";
+        }
+    }
+
 });
 $(".userreq-blur-bg").click(function () {
     $(".userreq-blur-bg").css('display', 'none');

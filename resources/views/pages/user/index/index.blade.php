@@ -920,8 +920,7 @@
 
                                 @endauth
 
-                                <button class="btn btn-video" data-bs-toggle="modal"
-                                    data-bs-target="#healthVideoModal"><img
+                                <button class="btn btn-video healthVideoModal"><img
                                         src="{{ asset('user/assets/icons/video.svg') }}" alt="video"> فيديو
                                     تعريفي</button>
                                 <p class='koib-health d-none mt-5 nav-link'><span style="color:red"> يتطلب التسجيل
@@ -963,8 +962,7 @@
                                     التطبيق.</p>
                             </div>
                             <div class="actions">
-                                <button class="btn btn-video" data-bs-toggle="modal"
-                                    data-bs-target="#publicVideoModal"><img
+                                <button class="btn btn-video publicVideoModal"><img
                                         src="{{ asset('user/assets/icons/video.svg') }}" alt="video"> فيديو
                                     تعريفي</button>
                                 @auth
@@ -1040,7 +1038,7 @@
                                     <img src="{{ asset('user/assets/images/arrow-8.png') }}"
                                         class="mujtmah-box-btn__img"> سجل الان
                                 </button>
-                                <button class="m-btn mujtmah-box-btn">
+                                <button class="m-btn mujtmah-box-btn userVideoModal">
                                     <img src="{{ asset('user/assets/images/video.png') }}"
                                         class="mujtmah-box-btn__img2">فيديو تعريفي
                                 </button>
@@ -1077,7 +1075,7 @@
                                 الحروف التى يولدها التطبيق.
                             </p>
                             <div class="mujtmah-box-btn-wrapper wrapper al-center mb-3">
-                                <button class="m-btn mujtmah-box-btn ml-3">
+                                <button class="m-btn mujtmah-box-btn ml-3 designerVideoModal">
                                     <img src="{{ asset('user/assets/images/video.png') }}"
                                         class="mujtmah-box-btn__img2">فيديو تعريفي
                                 </button>
@@ -1330,8 +1328,7 @@
                                                             data-bs-target="#healthServiesModal"><img
                                                                 src="{{asset('user/assets/icons/arrow-right.svg')}}"
                                                                 alt="arrow-right"> طلب الخدمة</button>
-                                                        <button class="btn btn-video" data-bs-toggle="modal"
-                                                            data-bs-target="#healthVideoModal"><img
+                                                        <button class="btn btn-video healthVideoModal"><img
                                                                 src="{{asset('user/assets/icons/video.svg')}}"
                                                                 alt="video"> فيديو تعريفي</button>
                                                     </div>
@@ -1365,8 +1362,7 @@
                                                             عدد الحروف التى يولدها التطبيق.</p>
                                                     </div>
                                                     <div class="actions">
-                                                        <button class="btn btn-video" data-bs-toggle="modal"
-                                                            data-bs-target="#publicVideoModal"><img
+                                                        <button class="btn btn-video publicVideoModal"><img
                                                                 src="{{asset('user/assets/icons/video.svg')}}"
                                                                 alt="video"> فيديو تعريفي</button>
                                                         <button class="btn btn-grey invert" data-bs-toggle="modal"
@@ -9865,6 +9861,12 @@
 
     @include('pages.user.healthVideoModal')
     <!-- Public Video Modal -->
+
+    @include('pages.user.userVideoModal')
+    <!-- User Video Modal -->
+
+    @include('pages.user.designerVideoModal')
+    <!-- Designer Video Modal -->
 
     @include('pages.user.publicVideoModal')
     <!-- Bootstrap js -->
