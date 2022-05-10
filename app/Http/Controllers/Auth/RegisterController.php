@@ -9,6 +9,7 @@ use App\Models\Title;
 use App\Models\AboutUs;
 use App\Models\Counter;
 use App\Models\Medical;
+use App\Models\Product;
 use App\Models\Mapimage;
 use App\Models\SideLogo;
 use App\Models\ContactUs;
@@ -78,11 +79,14 @@ class RegisterController extends Controller
             $orders = [];
             $publics = [];
             $counter = Counter::first();
-            return view('pages.user.index.index', compact('counter', 'links', 'about', 'con', 'tech', 'profile', 'order', 'side', 'orders', 'logos', 'public', 'publics', 'title', 'map'));
+            $products=Product::with('gallery')->where('status',1)->get();
+            $ownProducts=[];
+            return view('pages.user.index.index', compact('counter','ownProducts','products', 'links', 'about', 'con', 'tech', 'profile', 'order', 'side', 'orders', 'logos', 'public', 'publics', 'title', 'map'));
         } elseif (auth()->user()->role == 'admin') {
             $title = Title::first();
             return view('pages.admin.dashboard.dashboard', compact('title'));
         } else {
+            $products=Product::with('gallery')->where('status',1)->get();
             $about = AboutUs::first();
             $con = ContactUs::first();
             $tech = Tech::first();
@@ -97,7 +101,7 @@ class RegisterController extends Controller
             $map = Mapimage::first();
             $links = Youtubeurl::first();
             $counter = Counter::first();
-            return view('pages.user.index.index', compact('counter','links', 'about', 'con', 'tech', 'profile', 'order', 'side', 'orders', 'logos', 'public', 'publics', 'title', 'map'));
+            return view('pages.user.index.index', compact('counter','products','links', 'about', 'con', 'tech', 'profile', 'order', 'side', 'orders', 'logos', 'public', 'publics', 'title', 'map'));
         }
     }
     /**

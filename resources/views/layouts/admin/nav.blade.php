@@ -116,6 +116,18 @@
                       <li class="nav-item">
                         <a class="nav-link " href="{{ route('payment') }}" tabindex="-1" aria-disabled="true"><i class="fa fa-user"></i> قسط </a>
                     </li>
+                    <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><i class="fa fa-gear"></i><span>Designer </span></a>
+                        <ul class="nav-submenu menu-content">
+                            <li class="nav-item">
+                                <a class="nav-link " href="{{ route('listProduct') }}" tabindex="-1" aria-disabled="true">Products</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">Order</a>
+                            </li>
+
+                        </ul>
+                    </li>
+
                   </ul>
               </div>
               <div class="right-arrow" id="right-arrow"><i data-feather="arrow-right"></i></div>

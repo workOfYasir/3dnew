@@ -92,18 +92,20 @@
     @endif
     <script src="{{asset('user/assets/js/bootstrap.min.js')}}"></script>
     <script src="{{asset('js/profileUserApproval.js')}}"></script>
+    <script src="{{asset('js/productApproved.js')}}"></script>
     <script src="{{asset('js/perposalAccepted.js')}}"></script>
     <script src="{{asset('js/registerUserApproval.js')}}"></script>
     <script src="{{asset('js/fetchUserFromOrder.js')}}"></script>
     <script >
         var profileApprove = "{{route('user.profile.approve',':id')}}";
         var reigisterApprove = "{{route('user.approve',':id')}}";
+        var productApprove = "{{route('product.approve',':id')}}";
         var userByOrder = "{{route('userByOrder',':id')}}";
         var perposalAccepted = "{{ route('perposalAccept',':id') }}";
     </script>
 <script>
     function panel(key) {
-     
+    
         if($(".panel_view_"+key).hasClass( "d-none" )){
             console.log(key);
             $('.panel_view').addClass('d-none');

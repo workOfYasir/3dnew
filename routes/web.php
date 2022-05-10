@@ -27,6 +27,7 @@ use App\Http\Controllers\YoutubeurlController;
 use App\Http\Controllers\SocialMediaController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\PaymentController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\PublicServiceController;
 use Symfony\Component\HttpKernel\Profiler\Profile;
 
@@ -91,7 +92,11 @@ Route::resource('perposal', PerposalController::class);
 Route::get('invoices/pdf/{id}', [InvoiceController::class,'pdfInvoice'])->name('invoice.pdf');
 Route::get('perposal/pdf/{id}', [PerposalController::class,'pdfProposal'])->name('purposal.pdf');  
 Route::group(['middleware' => 'auth', 'varify','cors'], function () {
+    Route::post('add/product',[ProductController::class,'addProduct'])->name('addProduct');
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('product/list',[ProductController::class,'listProduct'])->name('listProduct');
+    Route::get('product/approve/{id}',[ProductController::class,'productApproval'])->name('product.approve');
+    Route::get('product/delete/{id}',[ProductController::class,'productDelete'])->name('product.delete');
     Route::resource('medical', MedicalController::class);
     Route::resource('publics', PublicServiceController::class);
     //Resource Route

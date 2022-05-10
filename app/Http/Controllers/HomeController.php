@@ -10,6 +10,7 @@ use App\Models\Title;
 use App\Models\AboutUs;
 use App\Models\Counter;
 use App\Models\Medical;
+use App\Models\Product;
 use App\Mail\UpdateUser;
 use App\Models\Mapimage;
 use App\Models\SideLogo;
@@ -78,8 +79,10 @@ class HomeController extends Controller
                     $map = Mapimage::first();
                     $links = Youtubeurl::first();
                     $counter = Counter::first();
-
-                    return view('pages.user.index.index', compact('counter', 'links', 'about', 'con', 'tech', 'profile', 'order', 'side', 'orders', 'logos', 'public', 'publics', 'title', 'map', 'user'));
+                    $ownProducts=Product::with('gallery')->where('user_id',Auth::user()->id);
+                    $products=Product::with('gallery')->where('status',1)->get();
+                    
+                    return view('pages.user.index.index', compact('counter', 'links', 'about', 'con', 'tech', 'profile', 'order', 'side', 'orders', 'logos', 'public', 'publics', 'title', 'map', 'user','products','ownProducts'));
                 }
             }
         } else {
@@ -105,8 +108,9 @@ class HomeController extends Controller
             $map = Mapimage::first();
             $links = Youtubeurl::first();
             $counter = Counter::first();
+            $products=Product::with('gallery')->get();
 
-            return view('pages.user.index.index', compact('counter', 'links', 'about', 'con', 'tech', 'profile', 'order', 'side', 'orders', 'logos', 'public', 'publics', 'title', 'map', 'user'));
+            return view('pages.user.index.index', compact('counter', 'links', 'about', 'con', 'tech', 'profile', 'order', 'side', 'orders', 'logos', 'public', 'publics', 'products','title', 'map', 'user'));
         }
     }
     public function vieworder($id)

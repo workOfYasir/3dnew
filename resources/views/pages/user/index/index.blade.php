@@ -40,6 +40,7 @@
     <link rel="stylesheet" href="{{ asset('user/assets/css/responsive.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('user/assets/css/zahid.css') }}">
     <link rel="stylesheet" href="{{ asset('user/assets/css/asim.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/customDropzone.css')}}">
     {{-- <style>
 		.no-js #loader { display: none;  }
 		.js #loader { display: block; position: absolute; left: 100px; top: 0; }
@@ -5305,21 +5306,25 @@
 
                                             <div class="design-card-main">
                                                 <div class="row">
+                                                    @foreach($products as $product)
+                                                    
                                                     <div class="col-md-6 col-lg-4">
                                                         <div class="design-card-inner">
+                                                            <a href="javascript:void(0);" 
+                                                            data-bs-toggle="modal" data-bs-target="#cleanshotModal">
+
                                                             <div class="row">
                                                                 <div class="col-md-6">
                                                                     <div class="star-profile">
-                                                                        <a href="#" data-bs-toggle="modal"
-                                                                            data-bs-target="#">
-                                                                            <div class="star-profile-icon">
-                                                                                <img src="{{asset('assets/images/dashboard/1.png')}}"
-                                                                                    alt="">
-                                                                            </div>
-                                                                        </a>
+                                                                       
+                                                                        <div class="star-profile-icon">
+                                                                            <img src="{{asset('assets/images/dashboard/1.png')}}"
+                                                                                alt="">
+                                                                        </div>
+                                                                     
                                                                         <div class="star-profile-txt">
                                                                             <span>مصمم</span>
-                                                                            <h3>أسم المصمم</h3>
+                                                                            <h3>{{$product->user->name}}</h3>
                                                                         </div>
 
                                                                     </div>
@@ -5335,11 +5340,21 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
+                                                        
                                                             <div class="design-card-body">
-                                                                <img src="{{ asset('user/assets/images/design-1.png') }}"
+                                                                <img src="{{ asset($product->gallery[0]->image_src) }}"
                                                                     class="design-img img-fluid" alt="">
                                                                 <div class="design-card-left-top">
-                                                                    <p>تقنية الطباعة</p>
+                                                                    <p>{{$product->printing_technology}}</p>
+                                                                </div>
+                                                                <div class="design-card-right-top">
+                                                                    <p>
+                                                                        @if($product->status==0)
+                                                                            InActive
+                                                                        @else
+                                                                            Active
+                                                                        @endif
+                                                                    </p>
                                                                 </div>
                                                                 <div class="design-card-left-bottom">
                                                                     <div class="card-icons">
@@ -5358,14 +5373,17 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
+                                                            </a>
                                                             <div class="design-card-footer">
-                                                                <h4>عنوان التصميم يكتب هنا ويستوعب سطرين كحد اقصى ..
+                                                                <h4>{{ $product->address}}
                                                                 </h4>
                                                             </div>
                                                         </div>
 
                                                     </div>
-                                                    <div class="col-md-6 col-lg-4">
+                                                    @endforeach
+
+                                                    {{-- <div class="col-md-6 col-lg-4">
                                                         <div class="design-card-inner">
                                                             <div class="row">
                                                                 <div class="col-md-6">
@@ -5461,7 +5479,7 @@
                                                                 <img src="{{ asset('user/assets/images/design-3.png') }}"
                                                                     class="design-img img-fluid" alt="">
                                                                 <div class="design-card-left-top">
-                                                                    <p>تقنية الطباعة</p>
+                                                                    <p>تقنية الطباعة11</p>
                                                                 </div>
                                                                 <div class="design-card-left-bottom">
                                                                     <div class="card-icons">
@@ -5489,8 +5507,6 @@
                                                         </div>
 
                                                     </div>
-
-
                                                     <div class="col-md-6 col-lg-4">
                                                         <div class="design-card-inner">
                                                             <div class="row">
@@ -5679,7 +5695,6 @@
                                                         </div>
 
                                                     </div>
-
                                                     <div class="col-md-6 col-lg-4">
                                                         <div class="design-card-inner">
                                                             <div class="row">
@@ -5866,9 +5881,9 @@
                                                             </div>
                                                         </div>
 
-                                                    </div>
+                                                    </div> --}}
                                                 </div>
-                                                <div class="blurText"></div>
+                                                {{-- <div class="blurText"></div> --}}
                                             </div>
 
                                             <!-- <div class="design-bottom-btn">
@@ -6343,7 +6358,7 @@
                                             <div class="design-card-main">
 
                                                 <div class="row padd-30">
-                                                    <div class="col-md-6 col-lg-4">
+                                                    {{-- <div class="col-md-6 col-lg-4">
                                                         <div class="design-card-inner">
 
                                                             <a href="javascript:void(0);"
@@ -6419,34 +6434,46 @@
                                                             </div>
                                                         </div>
 
-                                                    </div>
+                                                    </div> --}}
+                                                    @foreach($ownProducts as $product)
                                                     <div class="col-md-6 col-lg-4">
                                                         <div class="design-card-inner">
-
-                                                            <div class="design-card-body">
-                                                                <img src="{{ asset('user/assets/images/design-3.png') }}"
-                                                                    class="design-img img-fluid" alt="">
-                                                                <div class="design-card-left-top">
-                                                                    <p>تقنية الطباعة</p>
-                                                                </div>
-                                                                <div class="design-card-left-bottom">
-                                                                    <div class="card-icons">
-                                                                    <a href="#">
-                                                                        <img src="{{ asset('user/assets/images/ai.png') }}"
-                                                                            class="img-fluid" alt="">
-                                                                            </a>
+                                                            <a href="javascript:void(0);"
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target="#productdesignModal">
+                                                                <div class="design-card-body">
+                                                                    <img src="{{ asset($product->gallery[0]->image_src) }}"
+                                                                        class="design-img img-fluid" alt="">
+                                                                    <div class="design-card-left-top">
+                                                                        <p>{{$product->printing_technology}}</p>   
+                                                                    </div>
+                                                                    <div class="design-card-right-top">
+                                                                        <p>
+                                                                            @if($product->status==0)
+                                                                                Active
+                                                                            @else
+                                                                                InActive
+                                                                            @endif
+                                                                        </p>
+                                                                    </div>
+                                                                    <div class="design-card-left-bottom">
+                                                                        <div class="card-icons">
                                                                         <a href="#">
-                                                                        <img src="{{ asset('user/assets/images/dn.png') }}"
-                                                                            class="img-fluid" alt="">
-                                                                            </a>
-                                                                        <a href="#">
-                                                                        <img src="{{ asset('user/assets/images/in.png') }}"
-                                                                            class="img-fluid" alt="">
-                                                                            </a>
-
+                                                                            <img src="{{ asset('user/assets/images/ai.png') }}"
+                                                                                class="img-fluid" alt="">
+                                                                                </a>
+                                                                            <a href="#">
+                                                                            <img src="{{ asset('user/assets/images/dn.png') }}"
+                                                                                class="img-fluid" alt="">
+                                                                                </a>
+                                                                            <a href="#">
+                                                                            <img src="{{ asset('user/assets/images/in.png') }}"
+                                                                                class="img-fluid" alt="">
+                                                                                </a>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
-                                                            </div>
+                                                            </a>
                                                             <div class="design-card-footer">
                                                                 <h4>عنوان التصميم يكتب هنا ويستوعب سطرين كحد اقصى ..
                                                                 </h4>
@@ -6454,8 +6481,8 @@
                                                         </div>
 
                                                     </div>
-
-                                                    <div class="col-md-6 col-lg-4">
+                                                    @endforeach
+                                                    {{-- <div class="col-md-6 col-lg-4">
                                                         <div class="design-card-inner">
 
                                                             <div class="design-card-body">
@@ -6488,8 +6515,8 @@
                                                             </div>
                                                         </div>
 
-                                                    </div>
-                                                    <div class="col-md-6 col-lg-4">
+                                                    </div> --}}
+                                                    {{-- <div class="col-md-6 col-lg-4">
                                                         <div class="design-card-inner">
 
                                                             <a href="javascript:void(0);"
@@ -6527,8 +6554,8 @@
                                                             </div>
                                                         </div>
 
-                                                    </div>
-                                                    <div class="col-md-6 col-lg-4">
+                                                    </div> --}}
+                                                    {{-- <div class="col-md-6 col-lg-4">
                                                         <div class="design-card-inner">
 
                                                             <div class="design-card-body">
@@ -6561,7 +6588,7 @@
                                                             </div>
                                                         </div>
 
-                                                    </div>
+                                                    </div> --}}
                                                 </div>
 
                                             </div>
@@ -6706,7 +6733,53 @@
                                                 <div class="design-card-main">
 
                                                     <div class="row padd-30">
+                                                        
+                                                    @foreach($ownProducts as $product)
+                                                    <div class="col-md-6 col-lg-4">
+                                                        <div class="design-card-inner">
 
+                                                            <div class="design-card-body">
+                                                                <img src="{{ asset($product->gallery[0]->image_src) }}"
+                                                                    class="design-img img-fluid" alt="">
+                                                                <div class="design-card-left-top">
+                                                                    <p>{{$product->printing_technology}}</p>
+                                                                </div>
+                                                                <div class="design-card-right-top">
+                                                                    <p>
+                                                                        @if($product->status==0)
+                                                                            InActive
+                                                                        @else
+                                                                            Active
+                                                                        @endif
+                                                                    </p>
+                                                                </div>
+                                                                <div class="design-card-left-bottom">
+                                                                    <div class="card-icons">
+                                                                    <a href="#">
+                                                                        <img src="{{ asset('user/assets/images/ai.png') }}"
+                                                                            class="img-fluid" alt="">
+                                                                            </a>
+                                                                        <a href="#">
+                                                                        <img src="{{ asset('user/assets/images/dn.png') }}"
+                                                                            class="img-fluid" alt="">
+                                                                            </a>
+                                                                        <a href="#">
+                                                                        <img src="{{ asset('user/assets/images/in.png') }}"
+                                                                            class="img-fluid" alt="">
+                                                                            </a>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="design-card-footer">
+                                                                <h4>{{$product->address}}
+                                                                </h4>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    @endforeach
+{{-- 
                                                         <div class="col-md-6 col-lg-4">
                                                             <div class="design-card-inner">
 
@@ -6791,7 +6864,7 @@
                                                                         <p class="txt-green">مفعل</p>
                                                                     </div>
                                                                     <div class="design-card-left-top">
-                                                                        <p>تقنية الطباعة</p>
+                                                                        <p>33تقنية الطباعة</p>
                                                                     </div>
                                                                     <div class="design-card-left-bottom">
                                                                         <div class="card-icons">
@@ -6928,7 +7001,7 @@
                                                                 </div>
                                                             </div>
 
-                                                        </div>
+                                                        </div> --}}
                                                     </div>
 
                                                 </div>
@@ -6967,7 +7040,6 @@
                                             <h1 class="modal-title right centr-main-title"><span
                                                     class="btm-line d-flex">المنتجات<span
                                                         class="inner-line"></span></span></h1>
-
                                         </div>
                                         <button class="ahs-profile-plus-btn disabled circle-plus-icon">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle-fill svg-plus-icon" viewBox="0 0 16 16">
@@ -6979,7 +7051,8 @@
                                         </span>
                                      </button>
                                     </div>
-                                    <form action="" class="almuntjat-form">
+                                    <form action="{{route('addProduct')}}" enctype='multipart/form-data' method="post" class="almuntjat-form">
+                                        @csrf   
                                         <div class="almuntjat-form__input-wrapper">
                                             <div class="sub-heading-box">
                                                 <div class="red-dot"></div>
@@ -6989,23 +7062,35 @@
                                             <!-- <label for="almuntjat-form__img" class="almuntjat-form__img-label">
                                                     <p class="almuntjat-form__img-label-text">إضافة</p>
                                                 </label> -->
-                                            <div class="col-md-2">
+                                            {{-- <div class="col-md-2">
                                                 <div class="product-add-upload">
                                                     <p class="">إضافة</p>
                                                     <span class="camera-icon"><i class="fa fa-camera"></i></span>
+                                                 
                                                 </div>
-                                            </div>
-
+                                            </div> --}}
+                                            <div class="upload__box d-flex" >
+                                                <div class="upload__btn-box product-add-upload">
+                                                    <p class="">إضافة</p>
+                                                  <label >
+                                                    <span class="camera-icon"><i class="fa fa-camera"></i>
+                                                    <input type="file" multiple="" name="images[]" data-max_length="20" class="upload__inputfile"></span>
+                                                  </label>
+                                                </div>
+                                                <div class="upload__img-wrap"> 
+                                                   </div>
+                                              </div>
+                                             
                                             <!-- <input type="file" name="almuntjat-form__img" id="almuntjat-form__img" class="almuntjat-form__img-input"> -->
                                         </div>
-                                        <!-- img input end -->
+                                                       <!-- img input end -->
                                         <div class="almuntjat-form__input-wrapper">
                                             <div class="sub-heading-box">
                                                 <div class="red-dot"></div>
                                                 <p class="sub-heading-box__heading sub-heading-box__heading--b">العنوان
                                                 </p>
                                             </div>
-                                            <input type="text" class="almuntjat-form__input form-control"
+                                            <input type="text" name="address" class="almuntjat-form__input form-control"
                                                 placeholder="الاسم هنا ..">
                                         </div>
                                         <!-- alunwan end -->
@@ -7015,7 +7100,7 @@
                                                 <p class="sub-heading-box__heading sub-heading-box__heading--b">الوصف
                                                 </p>
                                             </div>
-                                            <textarea placeholder="الوصف هنا .." name="almuntjat-form__wasaf" value=""
+                                            <textarea placeholder="الوصف هنا .." name="description" value=""
                                                 id="almuntjat-form__wasaf"
                                                 class="almuntjat-form__wasaf-input form-control"></textarea>
                                         </div>
@@ -7029,7 +7114,7 @@
                                                 <div class="input-holder">
                                                     <!-- <input type="text" placeholder="كلمة المرور هنا .." class="almuntjat-form__input">
                                                     <img src="assets/images/arrow-5.png" alt="" class="input-holder__img"> -->
-                                                    <select class="form-select a" required name="">
+                                                    <select class="form-select a" required name="color">
                                                     <option selected disabled>اختيار التقنية</option>
                                                         <option>اختيار التقنية</option>
                                                     </select>
@@ -7044,7 +7129,7 @@
                                                 <div class="input-holder">
                                                     <!-- <input type="text" placeholder="اختيار التقنية" class="almuntjat-form__input">
                                                     <img src="assets/images/arrow-5.png" alt="" class="input-holder__img"> -->
-                                                    <select class="form-select b" required name="">
+                                                    <select class="form-select b" required name="software_used">
                                                         <option selected disabled>اختيار التقنية</option>
                                                         <option>اختيار التقنية</option>
                                                     </select>
@@ -7059,7 +7144,7 @@
                                                 <div class="input-holder">
                                                     <!-- <input type="text" placeholder="اختاير البرامج المستخدمة" class="almuntjat-form__input">
                                                     <img src="assets/images/arrow-5.png" alt="" class="input-holder__img"> -->
-                                                    <select class="form-select c" required name="">
+                                                    <select class="form-select c" required name="printing_technology">
                                                         <option selected disabled>اختاير البرامج المستخدمة</option>
                                                         <option>اختاير البرامج المستخدمة</option>
                                                     </select>
@@ -7074,7 +7159,7 @@
                                                 <div class="input-holder">
                                                     <!-- <input type="text" placeholder="اختاير البرامج المستخدمة" class="almuntjat-form__input">
                                                     <img src="assets/images/arrow-5.png" alt="" class="input-holder__img"> -->
-                                                    <select class="form-select d" required name="">
+                                                    <select class="form-select d" required name="size">
                                                         <option selected disabled>اختاير البرامج المستخدمة</option>
                                                         <option>اختاير البرامج المستخدمة</option>
                                                     </select>
@@ -7085,8 +7170,7 @@
                                             <i class="fa-solid fa-triangle-exclamation"></i> بعد إضافة المنتج سيذهب الى
                                             الإدارة للمراجعة للقبول أو الرفض
                                         </div>
-                                        <button type="button" class="almuntjat-form__btn m-btn" data-bs-toggle="modal"
-                                            data-bs-target="#productaddformModal">
+                                        <button type="submit" class="almuntjat-form__btn m-btn" >
                                             إضافة
                                         </button>
                                         <p class="almuntjat-form__text">
@@ -7132,7 +7216,9 @@
 
                                     </div>
 
-                                    <form action="" class="almuntjat-form">
+                                    <form action="{{route('addProduct')}}" enctype='multipart/form-data' method="post" class="almuntjat-form">
+                                   @csrf     
+                         
                                         <div class="almuntjat-form-error error-red-bg">
                                             <img src="{{ asset('user/assets/icons/message-icon.png') }}"
                                                 class="message-error-icon img-fluid" alt=""> بعد إضافة المنتج سيذهب الى
@@ -10028,6 +10114,7 @@
     <script src="{{ asset('user/assets/js/slick.min.js') }}"></script>
     <!-- Scripts -->
 
+   
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
         crossorigin="anonymous"></script>
@@ -10052,6 +10139,8 @@
     </script>
       <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.0/jquery.cookie.min.js">
   </script>
+     <script src="{{ asset('js/customDropzone.js') }}"></script>
+   
   @if (Auth::check()) 
   @role('user')
   <script type="text/javascript">
