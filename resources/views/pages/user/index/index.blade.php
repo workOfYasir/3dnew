@@ -1653,7 +1653,6 @@
                                                     <div class="col-md-6 col-sm-9 mobile-pro-icon">
                                                         <button class="btn mob-tog-btn" id="menu-toggle"><i
                                                                 class="fa-solid fa-bars"></i></button>
-
                                                         <div class="mobile-profile">
 
 
@@ -1681,7 +1680,7 @@
                                         <div class="container">
                                             <div class="row">
                                                 <div class="col-md-12 cleanshot-close-btn">
-                                                    <button type="button" class="btn-close " data-bs-dismiss="modal"
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                         aria-label="Close"></button>
                                                 </div>
                                             </div>
@@ -1733,6 +1732,7 @@
                                             </div>
                                         </div>
                                     </section>
+
                                     <section class="container head-clean">
                                         <div class="row align-items-center">
                                             <div class="col-md-6 ">
@@ -5299,15 +5299,14 @@
                                                     </div>
                                                 </div>
                                             </div>
-
+{{-- //data-bs-toggle="modal" data-bs-target="#cleanshotModal" --}}
                                             <div class="design-card-main">
                                                 <div class="row">
                                                     @foreach($products as $product)
                                                     
                                                     <div class="col-md-6 col-lg-4">
                                                         <div class="design-card-inner">
-                                                            <a href="javascript:void(0);" 
-                                                            data-bs-toggle="modal" data-bs-target="#cleanshotModal">
+                                                            <span onclick="productOrder({{$product->id}})">
 
                                                             <div class="row">
                                                                 <div class="col-md-6">
@@ -5369,7 +5368,7 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            </a>
+                                                        </span>
                                                             <div class="design-card-footer">
                                                                 <h4>{{ $product->address}}
                                                                 </h4>
@@ -5381,16 +5380,17 @@
 
                                                     {{-- <div class="col-md-6 col-lg-4">
                                                         <div class="design-card-inner">
+                                                            <a href="javascript:void(0);" 
+                                                            data-bs-toggle="modal" data-bs-target="#cleanshotModal">
                                                             <div class="row">
                                                                 <div class="col-md-6">
                                                                     <div class="star-profile">
-                                                                        <a href="#" data-bs-toggle="modal"
-                                                                            data-bs-target="#">
+                                                                        
                                                                             <div class="star-profile-icon">
                                                                                 <img src="{{asset('assets/images/dashboard/1.png')}}"
                                                                                     alt="">
                                                                             </div>
-                                                                        </a>
+                                                                       
                                                                         <div class="star-profile-txt">
                                                                             <span>مصمم</span>
                                                                             <h3>أسم المصمم</h3>
@@ -5438,446 +5438,11 @@
                                                                 <h4>عنوان التصميم يكتب هنا ويستوعب سطرين كحد اقصى ..
                                                                 </h4>
                                                             </div>
-                                                        </div>
-
-                                                    </div>
-                                                    <div class="col-md-6 col-lg-4">
-                                                        <div class="design-card-inner">
-                                                            <div class="row">
-                                                                <div class="col-md-6">
-                                                                    <div class="star-profile">
-                                                                        <a href="#" data-bs-toggle="modal"
-                                                                            data-bs-target="#">
-                                                                            <div class="star-profile-icon">
-                                                                                <img src="{{asset('assets/images/dashboard/1.png')}}"
-                                                                                    alt="">
-                                                                            </div>
-                                                                        </a>
-                                                                        <div class="star-profile-txt">
-                                                                            <span>مصمم</span>
-                                                                            <h3>أسم المصمم</h3>
-                                                                        </div>
-
-                                                                    </div>
-
-                                                                </div>
-                                                                <div class="col-md-6 m-auto">
-                                                                    <div class="star-reating">
-                                                                        <i class="fa-solid fa-star"></i>
-                                                                        <i class="fa-solid fa-star"></i>
-                                                                        <i class="fa-solid fa-star"></i>
-                                                                        <i class="fa-solid fa-star"></i>
-                                                                        <i class="fa-solid fa-star"></i>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="design-card-body">
-                                                                <img src="{{ asset('user/assets/images/design-3.png') }}"
-                                                                    class="design-img img-fluid" alt="">
-                                                                <div class="design-card-left-top">
-                                                                    <p>تقنية الطباعة11</p>
-                                                                </div>
-                                                                <div class="design-card-left-bottom">
-                                                                    <div class="card-icons">
-                                                                   
-                                                                        <a href="#">
-                                                                        <img src="{{ asset('user/assets/images/ai.png') }}"
-                                                                            class="img-fluid" alt="">
-                                                                             </a>
-                                                                        <a href="#">
-                                                                        <img src="{{ asset('user/assets/images/dn.png') }}"
-                                                                            class="img-fluid" alt="">
-                                                                             </a>
-                                                                        <a href="#">
-                                                                        <img src="{{ asset('user/assets/images/in.png') }}"
-                                                                            class="img-fluid" alt="">
-                                                                             </a>
-
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="design-card-footer">
-                                                                <h4>عنوان التصميم يكتب هنا ويستوعب سطرين كحد اقصى ..
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-
-                                                    </div>
-                                                    <div class="col-md-6 col-lg-4">
-                                                        <div class="design-card-inner">
-                                                            <div class="row">
-                                                                <div class="col-md-6">
-                                                                    <div class="star-profile">
-                                                                        <a href="#" data-bs-toggle="modal"
-                                                                            data-bs-target="#">
-                                                                            <div class="star-profile-icon">
-                                                                                <img src="{{asset('assets/images/dashboard/1.png')}}"
-                                                                                    alt="">
-                                                                            </div>
-                                                                        </a>
-                                                                        <div class="star-profile-txt">
-                                                                            <span>مصمم</span>
-                                                                            <h3>أسم المصمم</h3>
-                                                                        </div>
-
-                                                                    </div>
-
-                                                                </div>
-                                                                <div class="col-md-6 m-auto">
-                                                                    <div class="star-reating">
-                                                                        <i class="fa-solid fa-star"></i>
-                                                                        <i class="fa-solid fa-star"></i>
-                                                                        <i class="fa-solid fa-star"></i>
-                                                                        <i class="fa-solid fa-star"></i>
-                                                                        <i class="fa-solid fa-star"></i>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="design-card-body">
-                                                                <img src="{{ asset('user/assets/images/design-4.png') }}"
-                                                                    class="design-img img-fluid" alt="">
-                                                                <div class="design-card-left-top">
-                                                                    <p>تقنية الطباعة</p>
-                                                                </div>
-                                                                <div class="design-card-left-bottom">
-                                                                    <div class="card-icons">
-                                                                                                                                                 </a>
-                                                                        <a href="#">
-                                                                        <img src="{{ asset('user/assets/images/ai.png') }}"
-                                                                            class="img-fluid" alt="">
-                                                                            </a>                                                                        </a>
-                                                                        <a href="#">
-                                                          
-                                                                        <img src="{{ asset('user/assets/images/dn.png') }}"
-                                                                            class="img-fluid" alt="">
-                                                                            </a>                                                                         </a>
-                                                                        <a href="#">
-                                                           
-                                                                        <img src="{{ asset('user/assets/images/in.png') }}"
-                                                                            class="img-fluid" alt="">
-                                                                                                                                                     </a>
-                                                                        </a>
-
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="design-card-footer">
-                                                                <h4>عنوان التصميم يكتب هنا ويستوعب سطرين كحد اقصى ..
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-
-                                                    </div>
-                                                    <div class="col-md-6 col-lg-4">
-                                                        <div class="design-card-inner">
-                                                            <div class="row">
-                                                                <div class="col-md-6">
-                                                                    <div class="star-profile">
-                                                                        <a href="#" data-bs-toggle="modal"
-                                                                            data-bs-target="#">
-                                                                            <div class="star-profile-icon">
-                                                                                <img src="{{asset('assets/images/dashboard/1.png')}}"
-                                                                                    alt="">
-                                                                            </div>
-                                                                        </a>
-                                                                        <div class="star-profile-txt">
-                                                                            <span>مصمم</span>
-                                                                            <h3>أسم المصمم</h3>
-                                                                        </div>
-
-                                                                    </div>
-
-                                                                </div>
-                                                                <div class="col-md-6 m-auto">
-                                                                    <div class="star-reating">
-                                                                        <i class="fa-solid fa-star"></i>
-                                                                        <i class="fa-solid fa-star"></i>
-                                                                        <i class="fa-solid fa-star"></i>
-                                                                        <i class="fa-solid fa-star"></i>
-                                                                        <i class="fa-solid fa-star"></i>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="design-card-body">
-                                                                <img src="{{ asset('user/assets/images/design-5.png') }}"
-                                                                    class="design-img img-fluid" alt="">
-                                                                <div class="design-card-left-top">
-                                                                    <p>تقنية الطباعة</p>
-                                                                </div>
-                                                                <div class="design-card-left-bottom">
-                                                                    <div class="card-icons">
-                                                                    <a href="#">
-                                                                        <img src="{{ asset('user/assets/images/ai.png') }}"
-                                                                            class="img-fluid" alt="">
-                                                                        </a>
-                                                                            <a href="#">
-                                                                        <img src="{{ asset('user/assets/images/dn.png') }}"
-                                                                            class="img-fluid" alt="">
-                                                                            </a>
-                                                                            <a href="#">
-                                                                        <img src="{{ asset('user/assets/images/in.png') }}"
-                                                                            class="img-fluid" alt="">
-                                                                            </a>
-
-
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="design-card-footer">
-                                                                <h4>عنوان التصميم يكتب هنا ويستوعب سطرين كحد اقصى ..
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-
-                                                    </div>
-                                                    <div class="col-md-6 col-lg-4">
-                                                        <div class="design-card-inner">
-                                                            <div class="row">
-                                                                <div class="col-md-6">
-                                                                    <div class="star-profile">
-                                                                        <a href="#" data-bs-toggle="modal"
-                                                                            data-bs-target="#">
-                                                                            <div class="star-profile-icon">
-                                                                                <img src="{{asset('assets/images/dashboard/1.png')}}"
-                                                                                    alt="">
-                                                                            </div>
-                                                                        </a>
-                                                                        <div class="star-profile-txt">
-                                                                            <span>مصمم</span>
-                                                                            <h3>أسم المصمم</h3>
-                                                                        </div>
-
-                                                                    </div>
-
-                                                                </div>
-                                                                <div class="col-md-6 m-auto">
-                                                                    <div class="star-reating">
-                                                                        <i class="fa-solid fa-star"></i>
-                                                                        <i class="fa-solid fa-star"></i>
-                                                                        <i class="fa-solid fa-star"></i>
-                                                                        <i class="fa-solid fa-star"></i>
-                                                                        <i class="fa-solid fa-star"></i>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="design-card-body">
-                                                                <img src="{{ asset('user/assets/images/design-6.png') }}"
-                                                                    class="design-img img-fluid" alt="">
-                                                                <div class="design-card-left-top">
-                                                                    <p>تقنية الطباعة</p>
-                                                                </div>
-                                                                <div class="design-card-left-bottom">
-                                                                    <div class="card-icons">
-                                                                            <a href="#">
-                                                                        <img src="{{ asset('user/assets/images/ai.png') }}"
-                                                                            class="img-fluid" alt="">
-                                                                            </a>
-                                                                            <a href="#">
-                                                                        <img src="{{ asset('user/assets/images/dn.png') }}"
-                                                                            class="img-fluid" alt="">
-                                                                            </a>
-                                                                            <a href="#">
-                                                                        <img src="{{ asset('user/assets/images/in.png') }}"
-                                                                            class="img-fluid" alt="">
-                                                                            </a>
-
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="design-card-footer">
-                                                                <h4>عنوان التصميم يكتب هنا ويستوعب سطرين كحد اقصى ..
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-
-                                                    </div>
-                                                    <div class="col-md-6 col-lg-4">
-                                                        <div class="design-card-inner">
-                                                            <div class="row">
-                                                                <div class="col-md-6">
-                                                                    <div class="star-profile">
-                                                                        <a href="#" data-bs-toggle="modal"
-                                                                            data-bs-target="#">
-                                                                            <div class="star-profile-icon">
-                                                                                <img src="{{asset('assets/images/dashboard/1.png')}}"
-                                                                                    alt="">
-                                                                            </div>
-                                                                        </a>
-                                                                        <div class="star-profile-txt">
-                                                                            <span>مصمم</span>
-                                                                            <h3>أسم المصمم</h3>
-                                                                        </div>
-
-                                                                    </div>
-
-                                                                </div>
-                                                                <div class="col-md-6 m-auto">
-                                                                    <div class="star-reating">
-                                                                        <i class="fa-solid fa-star"></i>
-                                                                        <i class="fa-solid fa-star"></i>
-                                                                        <i class="fa-solid fa-star"></i>
-                                                                        <i class="fa-solid fa-star"></i>
-                                                                        <i class="fa-solid fa-star"></i>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="design-card-body">
-                                                                <img src="{{ asset('user/assets/images/design-7.png') }}"
-                                                                    class="design-img img-fluid" alt="">
-                                                                <div class="design-card-left-top">
-                                                                    <p>تقنية الطباعة</p>
-                                                                </div>
-                                                                <div class="design-card-left-bottom">
-                                                                    <div class="card-icons">
-                                                                            <a href="#">
-                                                                        <img src="{{ asset('user/assets/images/ai.png') }}"
-                                                                            class="img-fluid" alt="">
-                                                                            </a>
-                                                                            <a href="#">
-                                                                        <img src="{{ asset('user/assets/images/dn.png') }}"
-                                                                            class="img-fluid" alt="">
-                                                                            </a>
-                                                                            <a href="#">
-                                                                        <img src="{{ asset('user/assets/images/in.png') }}"
-                                                                            class="img-fluid" alt="">
-                                                                            </a>
-
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="design-card-footer">
-                                                                <h4>عنوان التصميم يكتب هنا ويستوعب سطرين كحد اقصى ..
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-
-                                                    </div>
-                                                    <div class="col-md-6 col-lg-4">
-                                                        <div class="design-card-inner">
-                                                            <div class="row">
-                                                                <div class="col-md-6">
-                                                                    <div class="star-profile">
-                                                                        <a href="#" data-bs-toggle="modal"
-                                                                            data-bs-target="#">
-                                                                            <div class="star-profile-icon">
-                                                                                <img src="{{asset('assets/images/dashboard/1.png')}}"
-                                                                                    alt="">
-                                                                            </div>
-                                                                        </a>
-                                                                        <div class="star-profile-txt">
-                                                                            <span>مصمم</span>
-                                                                            <h3>أسم المصمم</h3>
-                                                                        </div>
-
-                                                                    </div>
-
-                                                                </div>
-                                                                <div class="col-md-6 m-auto">
-                                                                    <div class="star-reating">
-                                                                        <i class="fa-solid fa-star"></i>
-                                                                        <i class="fa-solid fa-star"></i>
-                                                                        <i class="fa-solid fa-star"></i>
-                                                                        <i class="fa-solid fa-star"></i>
-                                                                        <i class="fa-solid fa-star"></i>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <a href="javascript:void(0);" class=""
-                                                                data-bs-toggle="modal" data-bs-target="#cleanshotModal">
-
-                                                                <div class="design-card-body">
-                                                                    <img src="{{ asset('user/assets/images/design-8.png') }}"
-                                                                        class="design-img img-fluid" alt="">
-                                                                    <div class="design-card-left-top">
-                                                                        <p>تقنية الطباعة</p>
-                                                                    </div>
-                                                                    <div class="design-card-left-bottom">
-                                                                        <div class="card-icons">
-                                                                        <a href="#">
-                                                                            <img src="{{ asset('user/assets/images/ai.png') }}"
-                                                                                class="img-fluid" alt="">
-                                                                        </a>
-                                                                        <a href="#">
-                                                                            <img src="{{ asset('user/assets/images/dn.png') }}"
-                                                                                class="img-fluid" alt="">
-                                                                                </a>
-                                                                                <a href="#">
-                                                                            <img src="{{ asset('user/assets/images/in.png') }}"
-                                                                                class="img-fluid" alt="">
-                                                                                </a>
-
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </a>
-                                                            <div class="design-card-footer">
-                                                                <h4>عنوان التصميم يكتب هنا ويستوعب سطرين كحد اقصى ..
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-
-                                                    </div>
-                                                    <div class="col-md-6 col-lg-4">
-                                                        <div class="design-card-inner">
-                                                            <div class="row">
-                                                                <div class="col-md-6">
-                                                                    <div class="star-profile">
-                                                                        <a href="#" data-bs-toggle="modal"
-                                                                            data-bs-target="#">
-                                                                            <div class="star-profile-icon">
-                                                                                <img src="{{asset('assets/images/dashboard/1.png')}}"
-                                                                                    alt="">
-                                                                            </div>
-                                                                        </a>
-                                                                        <div class="star-profile-txt">
-                                                                            <span>مصمم</span>
-                                                                            <h3>أسم المصمم</h3>
-                                                                        </div>
-
-                                                                    </div>
-
-                                                                </div>
-                                                                <div class="col-md-6 m-auto">
-                                                                    <div class="star-reating">
-                                                                        <i class="fa-solid fa-star"></i>
-                                                                        <i class="fa-solid fa-star"></i>
-                                                                        <i class="fa-solid fa-star"></i>
-                                                                        <i class="fa-solid fa-star"></i>
-                                                                        <i class="fa-solid fa-star"></i>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="design-card-body">
-                                                                <img src="{{ asset('user/assets/images/design-9.png') }}"
-                                                                    class="design-img img-fluid" alt="">
-                                                                <div class="design-card-left-top">
-                                                                    <p>تقنية الطباعة</p>
-                                                                </div>
-                                                                <div class="design-card-left-bottom">
-                                                                    <div class="card-icons">
-                                                                        <a href="#">
-                                                                        <img src="{{ asset('user/assets/images/ai.png') }}"
-                                                                            class="img-fluid" alt="">
-                                                                             </a>
-                                                                        <a href="#">
-                                                                        <img src="{{ asset('user/assets/images/dn.png') }}"
-                                                                            class="img-fluid" alt="">
-                                                                             </a>
-                                                                        <a href="#">
-                                                                        <img src="{{ asset('user/assets/images/in.png') }}"
-                                                                            class="img-fluid" alt="">
-                                                                             </a>
-
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="design-card-footer">
-                                                                <h4>عنوان التصميم يكتب هنا ويستوعب سطرين كحد اقصى ..
-                                                                </h4>
-                                                            </div>
+                                                        </a>
                                                         </div>
 
                                                     </div> --}}
+                                                    
                                                 </div>
                                                 {{-- <div class="blurText"></div> --}}
                                             </div>
@@ -6354,89 +5919,14 @@
                                             <div class="design-card-main">
 
                                                 <div class="row padd-30">
-                                                    {{-- <div class="col-md-6 col-lg-4">
-                                                        <div class="design-card-inner">
-
-                                                            <a href="javascript:void(0);"
-                                                                data-bs-toggle="modal"
-                                                                data-bs-target="#productdesignModal">
-                                                                <div class="design-card-body">
-                                                                    <img src="{{ asset('user/assets/images/design-9.png') }}"
-                                                                        class="design-img img-fluid" alt="">
-                                                                    <div class="design-card-left-top">
-                                                                        <p>تقنية الطباعة</p>
-                                                                    </div>
-                                                                    <div class="design-card-left-bottom">
-                                                                        <div class="card-icons">
-                                                                        <a href="#">
-                                                                            <img src="{{ asset('user/assets/images/ai.png') }}"
-                                                                                class="img-fluid" alt="">
-                                                                                 </a>
-                                                                        <a href="#">
-                                                                            <img src="{{ asset('user/assets/images/dn.png') }}"
-                                                                                class="img-fluid" alt="">
-                                                                                 </a>
-                                                                        <a href="#">
-                                                                            <img src="{{ asset('user/assets/images/in.png') }}"
-                                                                                class="img-fluid" alt="">
-                                                                                 </a>
-
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </a>
-
-                                                            <div class="design-card-footer">
-                                                                <h4>عنوان التصميم يكتب هنا ويستوعب سطرين كحد اقصى ..
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-
-                                                    </div>
-                                                    <div class="col-md-6 col-lg-4">
-                                                        <div class="design-card-inner">
-
-                                                            <div class="design-card-body">
-                                                                <img src="{{ asset('user/assets/images/design-2.png') }}"
-                                                                    class="design-img img-fluid" alt="">
-                                                                <div class="design-card-left-top">
-                                                                    <p>تقنية الطباعة</p>
-                                                                </div>
-                                                                <div class="design-card-left-bottom">
-                                                                    <div class="card-icons">
-                                                                        <a href="#">
-
-                                                                        <img src="{{ asset('user/assets/images/ai.png') }}"
-                                                                            class="img-fluid" alt="">
-                                                                </a>
-                                                                        <a href="#">
-
-                                                                        <img src="{{ asset('user/assets/images/dn.png') }}"
-                                                                            class="img-fluid" alt="">
-                                                                </a>
-                                                                        <a href="#">
-
-                                                                        <img src="{{ asset('user/assets/images/in.png') }}"
-                                                                            class="img-fluid" alt="">
-                                                                </a>
-
-
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="design-card-footer">
-                                                                <h4>عنوان التصميم يكتب هنا ويستوعب سطرين كحد اقصى ..
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-
-                                                    </div> --}}
+                                                <a href="javascript:void(0);"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#productdesignModal">_
+                                                </a>
                                                     @foreach($ownProducts as $product)
                                                     <div class="col-md-6 col-lg-4">
                                                         <div class="design-card-inner">
-                                                            <a href="javascript:void(0);"
-                                                            data-bs-toggle="modal"
-                                                            data-bs-target="#productdesignModal">
+                                                           
                                                                 <div class="design-card-body">
                                                                     <img src="{{ asset($product->gallery[0]->image_src) }}"
                                                                         class="design-img img-fluid" alt="">
@@ -6469,7 +5959,7 @@
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                            </a>
+                                                          
                                                             <div class="design-card-footer">
                                                                 <h4>عنوان التصميم يكتب هنا ويستوعب سطرين كحد اقصى ..
                                                                 </h4>
@@ -6478,113 +5968,7 @@
 
                                                     </div>
                                                     @endforeach
-                                                    {{-- <div class="col-md-6 col-lg-4">
-                                                        <div class="design-card-inner">
-
-                                                            <div class="design-card-body">
-                                                                <img src="{{ asset('user/assets/images/design-4.png') }}"
-                                                                    class="design-img img-fluid" alt="">
-                                                                <div class="design-card-left-top">
-                                                                    <p>تقنية الطباعة</p>
-                                                                </div>
-                                                                <div class="design-card-left-bottom">
-                                                                    <div class="card-icons">
-                                                                        <a href="#">
-                                                                        <img src="{{ asset('user/assets/images/ai.png') }}"
-                                                                            class="img-fluid" alt="">
-                                                                            </a>
-                                                                        <a href="#">
-                                                                        <img src="{{ asset('user/assets/images/dn.png') }}"
-                                                                            class="img-fluid" alt="">
-                                                                            </a>
-                                                                        <a href="#">
-                                                                        <img src="{{ asset('user/assets/images/in.png') }}"
-                                                                            class="img-fluid" alt="">
-                                                                            </a>
-
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="design-card-footer">
-                                                                <h4>عنوان التصميم يكتب هنا ويستوعب سطرين كحد اقصى ..
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-
-                                                    </div> --}}
-                                                    {{-- <div class="col-md-6 col-lg-4">
-                                                        <div class="design-card-inner">
-
-                                                            <a href="javascript:void(0);"
-                                                                data-bs-toggle="modal"
-                                                                data-bs-target="#productdesignModal">
-
-                                                                <div class="design-card-body">
-                                                                    <img src="{{ asset('user/assets/images/design-5.png') }}"
-                                                                        class="design-img img-fluid" alt="">
-                                                                    <div class="design-card-left-top">
-                                                                        <p>تقنية الطباعة</p>
-                                                                    </div>
-                                                                    <div class="design-card-left-bottom">
-                                                                        <div class="card-icons">
-                                                                        <a href="#">
-                                                                            <img src="{{ asset('user/assets/images/ai.png') }}"
-                                                                                class="img-fluid" alt="">
-                                                                                </a>
-                                                                        <a href="#">
-                                                                            <img src="{{ asset('user/assets/images/dn.png') }}"
-                                                                                class="img-fluid" alt="">
-                                                                                </a>
-                                                                        <a href="#">
-                                                                            <img src="{{ asset('user/assets/images/in.png') }}"
-                                                                                class="img-fluid" alt="">
-                                                                                </a>
-
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </a>
-                                                            <div class="design-card-footer">
-                                                                <h4>عنوان التصميم يكتب هنا ويستوعب سطرين كحد اقصى ..
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-
-                                                    </div> --}}
-                                                    {{-- <div class="col-md-6 col-lg-4">
-                                                        <div class="design-card-inner">
-
-                                                            <div class="design-card-body">
-                                                                <img src="{{ asset('user/assets/images/design-1.png') }}"
-                                                                    class="design-img img-fluid" alt="">
-                                                                <div class="design-card-left-top">
-                                                                    <p>تقنية الطباعة</p>
-                                                                </div>
-                                                                <div class="design-card-left-bottom">
-                                                                    <div class="card-icons">
-                                                                        <a href="#">
-                                                                        <img src="{{ asset('user/assets/images/ai.png') }}"
-                                                                            class="img-fluid" alt="">
-                                                                            </a>
-                                                                        <a href="#">
-                                                                        <img src="{{ asset('user/assets/images/dn.png') }}"
-                                                                            class="img-fluid" alt="">
-                                                                            </a>
-                                                                        <a href="#">
-                                                                        <img src="{{ asset('user/assets/images/in.png') }}"
-                                                                            class="img-fluid" alt="">
-                                                                            </a>
-
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="design-card-footer">
-                                                                <h4>عنوان التصميم يكتب هنا ويستوعب سطرين كحد اقصى ..
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-
-                                                    </div> --}}
+                                                    
                                                 </div>
 
                                             </div>
@@ -6775,229 +6159,7 @@
 
                                                     </div>
                                                     @endforeach
-{{-- 
-                                                        <div class="col-md-6 col-lg-4">
-                                                            <div class="design-card-inner">
 
-                                                                <div class="design-card-body">
-                                                                    <img src="{{ asset('user/assets/images/design-9.png') }}"
-                                                                        class="design-img img-fluid" alt="">
-                                                                    <div class="design-card-right-top">
-                                                                        <p class="txt-green">مفعل</p>
-                                                                    </div>
-                                                                    <div class="design-card-left-top">
-                                                                        <p>تقنية الطباعة</p>
-                                                                    </div>
-                                                                    <div class="design-card-left-bottom">
-                                                                        <div class="card-icons">
-                                                                        <a href="#">
-                                                                            <img src="{{ asset('user/assets/images/ai.png') }}"
-                                                                                class="img-fluid" alt="">
-                                                                                </a>
-                                                                        <a href="#">
-                                                                            <img src="{{ asset('user/assets/images/dn.png') }}"
-                                                                                class="img-fluid" alt="">
-                                                                                </a>
-                                                                        <a href="#">
-                                                                            <img src="{{ asset('user/assets/images/in.png') }}"
-                                                                                class="img-fluid" alt="">
-                                                                                </a>
-
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="design-card-footer">
-                                                                    <h4>عنوان التصميم يكتب هنا ويستوعب سطرين كحد اقصى ..
-                                                                    </h4>
-                                                                </div>
-                                                            </div>
-
-                                                        </div>
-                                                        <div class="col-md-6 col-lg-4">
-                                                            <div class="design-card-inner">
-
-                                                                <div class="design-card-body">
-                                                                    <img src="{{ asset('user/assets/images/design-2.png') }}"
-                                                                        class="design-img img-fluid" alt="">
-                                                                    <div class="design-card-right-top">
-                                                                        <p class="txt-green">مفعل</p>
-                                                                    </div>
-                                                                    <div class="design-card-left-top">
-                                                                        <p>تقنية الطباعة</p>
-                                                                    </div>
-                                                                    <div class="design-card-left-bottom">
-                                                                        <div class="card-icons">
-                                                                        <a href="#">
-                                                                            <img src="{{ asset('user/assets/images/ai.png') }}"
-                                                                                class="img-fluid" alt="">
-                                                                                </a>
-                                                                        <a href="#">
-                                                                            <img src="{{ asset('user/assets/images/dn.png') }}"
-                                                                                class="img-fluid" alt="">
-                                                                                </a>
-                                                                        <a href="#">
-                                                                            <img src="{{ asset('user/assets/images/in.png') }}"
-                                                                                class="img-fluid" alt="">
-                                                                                </a>
-
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="design-card-footer">
-                                                                    <h4>عنوان التصميم يكتب هنا ويستوعب سطرين كحد اقصى ..
-                                                                    </h4>
-                                                                </div>
-                                                            </div>
-
-                                                        </div>
-                                                        <div class="col-md-6 col-lg-4">
-                                                            <div class="design-card-inner">
-
-                                                                <div class="design-card-body">
-                                                                    <img src="{{ asset('user/assets/images/design-3.png') }}"
-                                                                        class="design-img img-fluid" alt="">
-                                                                    <div class="design-card-right-top">
-                                                                        <p class="txt-green">مفعل</p>
-                                                                    </div>
-                                                                    <div class="design-card-left-top">
-                                                                        <p>33تقنية الطباعة</p>
-                                                                    </div>
-                                                                    <div class="design-card-left-bottom">
-                                                                        <div class="card-icons">
-                                                                        <a href="#">
-                                                                            <img src="{{ asset('user/assets/images/ai.png') }}"
-                                                                                class="img-fluid" alt="">
-                                                                                </a>
-                                                                        <a href="#">
-                                                                            <img src="{{ asset('user/assets/images/dn.png') }}"
-                                                                                class="img-fluid" alt="">
-                                                                                </a>
-                                                                        <a href="#">
-                                                                            <img src="{{ asset('user/assets/images/in.png') }}"
-                                                                                class="img-fluid" alt="">
-                                                                                </a>
-
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="design-card-footer">
-                                                                    <h4>عنوان التصميم يكتب هنا ويستوعب سطرين كحد اقصى ..
-                                                                    </h4>
-                                                                </div>
-                                                            </div>
-
-                                                        </div>
-                                                        <div class="col-md-6 col-lg-4">
-                                                            <div class="design-card-inner">
-
-                                                                <div class="design-card-body">
-                                                                    <img src="{{ asset('user/assets/images/design-4.png') }}"
-                                                                        class="design-img img-fluid" alt="">
-                                                                    <div class="design-card-right-top">
-                                                                        <p class="txt-red">مفعل</p>
-                                                                    </div>
-                                                                    <div class="design-card-left-top">
-                                                                        <p>تقنية الطباعة</p>
-                                                                    </div>
-                                                                    <div class="design-card-left-bottom">
-                                                                        <div class="card-icons">
-                                                                        <a href="#">
-                                                                            <img src="{{ asset('user/assets/images/ai.png') }}"
-                                                                                class="img-fluid" alt="">
-                                                                                </a>
-                                                                        <a href="#">
-                                                                            <img src="{{ asset('user/assets/images/dn.png') }}"
-                                                                                class="img-fluid" alt="">
-                                                                                </a>
-                                                                        <a href="#">
-                                                                            <img src="{{ asset('user/assets/images/in.png') }}"
-                                                                                class="img-fluid" alt="">
-                                                                                </a>
-
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="design-card-footer">
-                                                                    <h4>عنوان التصميم يكتب هنا ويستوعب سطرين كحد اقصى ..
-                                                                    </h4>
-                                                                </div>
-                                                            </div>
-
-                                                        </div>
-                                                        <div class="col-md-6 col-lg-4">
-                                                            <div class="design-card-inner">
-
-                                                                <div class="design-card-body">
-                                                                    <img src="{{ asset('user/assets/images/design-5.png') }}"
-                                                                        class="design-img img-fluid" alt="">
-                                                                    <div class="design-card-right-top">
-                                                                        <p class="txt-green">مفعل</p>
-                                                                    </div>
-                                                                    <div class="design-card-left-top">
-                                                                        <p>تقنية الطباعة</p>
-                                                                    </div>
-                                                                    <div class="design-card-left-bottom">
-                                                                        <div class="card-icons">
-                                                                        <a href="#">
-                                                                            <img src="{{ asset('user/assets/images/ai.png') }}"
-                                                                                class="img-fluid" alt="">
-                                                                                </a>
-                                                                        <a href="#">
-                                                                            <img src="{{ asset('user/assets/images/dn.png') }}"
-                                                                                class="img-fluid" alt="">
-                                                                                </a>
-                                                                        <a href="#">
-                                                                            <img src="{{ asset('user/assets/images/in.png') }}"
-                                                                                class="img-fluid" alt="">
-                                                                                </a>
-
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="design-card-footer">
-                                                                    <h4>عنوان التصميم يكتب هنا ويستوعب سطرين كحد اقصى ..
-                                                                    </h4>
-                                                                </div>
-                                                            </div>
-
-                                                        </div>
-                                                        <div class="col-md-6 col-lg-4">
-                                                            <div class="design-card-inner">
-
-                                                                <div class="design-card-body">
-                                                                    <img src="{{ asset('user/assets/images/design-9.png') }}"
-                                                                        class="design-img img-fluid" alt="">
-                                                                    <div class="design-card-right-top">
-                                                                        <p class="txt-red">مفعل</p>
-                                                                    </div>
-                                                                    <div class="design-card-left-top">
-                                                                        <p>تقنية الطباعة</p>
-                                                                    </div>
-                                                                    <div class="design-card-left-bottom">
-                                                                        <div class="card-icons">
-                                                                        <a href="#">
-                                                                            <img src="{{ asset('user/assets/images/ai.png') }}"
-                                                                                class="img-fluid" alt="">
-                                                                                </a>
-                                                                        <a href="#">
-                                                                            <img src="{{ asset('user/assets/images/dn.png') }}"
-                                                                                class="img-fluid" alt="">
-                                                                                </a>
-                                                                        <a href="#">
-                                                                            <img src="{{ asset('user/assets/images/in.png') }}"
-                                                                                class="img-fluid" alt="">
-                                                                                </a>
-
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="design-card-footer">
-                                                                    <h4>عنوان التصميم يكتب هنا ويستوعب سطرين كحد اقصى ..
-                                                                    </h4>
-                                                                </div>
-                                                            </div>
-
-                                                        </div> --}}
                                                     </div>
 
                                                 </div>
@@ -10142,6 +9304,10 @@
       <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.0/jquery.cookie.min.js">
   </script>
      <script src="{{ asset('js/customDropzone.js') }}"></script>
+     <script>
+         var productOrderURL = "{{route('productOrder',':id')}}"
+     </script>
+     <script src="{{ asset('js/productOrder.js') }}"></script>
    
   @if (Auth::check()) 
   @role('user')
@@ -10157,23 +9323,7 @@
    </script>
    @endrole
   @endif
-    {{-- <script>
-        wow = new WOW(
-            {
-            boxClass:     'wow',      // default
-            animateClass: 'animated', // default
-            offset:       0,          // default
-            mobile:       true,       // default
-            live:         true        // default
-        }
-        )
-        wow.init();
-    </script> --}}
-    {{-- <script>
-        $(window).load(function() {
-        $(".se-pre-con").fadeOut("");
-    });
-    </script> --}}
+
 </body>
 
 </html>

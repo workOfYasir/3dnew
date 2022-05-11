@@ -11,7 +11,7 @@
             <th>price_model</th>
             <th>price_design</th>
             <th>qty_model</th>
-            <th> qty_design</th>
+            <th>qty_design</th>
             <th>validtill </th>
             <th>date</th>
             <th>tax</th>

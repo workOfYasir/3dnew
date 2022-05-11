@@ -9,7 +9,7 @@ class Product extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'address', 'color', 'description', 'software_used', 'printing_technology', 'size', 
+        'address', 'color','user_id', 'description', 'software_used', 'printing_technology', 'size', 
     ];
     public function gallery()
     {

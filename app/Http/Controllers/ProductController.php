@@ -6,12 +6,13 @@ use App\Models\Gallery;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Mpdf\Tag\Q;
 
 class ProductController extends Controller
 {
     public function addProduct(Request $request)
     {
-
+        $user_id=Auth::user()->id;
         $product = Product::create([
             'address'=>$request->address,
             'description'=>$request->description,
@@ -19,7 +20,7 @@ class ProductController extends Controller
             'printing_technology'=>$request->printing_technology,
             'color'=>$request->color,
             'size'=>$request->size,
-            'user_id'=>Auth::user()->id,
+            'user_id'=>$user_id,
         ]);
         foreach ($request->images as $key => $img) {
             $myfile =  $img->getClientOriginalName();
@@ -41,8 +42,6 @@ class ProductController extends Controller
     }
     public function productApproval(Request $request,$id)
     {  
-        // dd($request->status);
-        // $status = Product::find($id)->pluck('status')->first();
         $status = (int)$request->status;
   
         if($status==1){
@@ -64,5 +63,10 @@ class ProductController extends Controller
         Product::find($id)->delete();
         Gallery::where('product_id',$id)->delete();
         return redirect()->back();
+    }
+    public function productOrder($id)
+    {
+        $product = Product::find($id)->first();
+        return $product;
     }
 }

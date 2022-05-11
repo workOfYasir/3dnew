@@ -92,6 +92,7 @@ Route::resource('perposal', PerposalController::class);
 Route::get('invoices/pdf/{id}', [InvoiceController::class,'pdfInvoice'])->name('invoice.pdf');
 Route::get('perposal/pdf/{id}', [PerposalController::class,'pdfProposal'])->name('purposal.pdf');  
 Route::group(['middleware' => 'auth', 'varify','cors'], function () {
+    Route::get('productOrder/{id}',[ProductController::class,'productOrder'])->name('productOrder');
     Route::post('add/product',[ProductController::class,'addProduct'])->name('addProduct');
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
     Route::get('product/list',[ProductController::class,'listProduct'])->name('listProduct');
